@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="256161e7-acc7-ed65-3959-c397a23153aa" revisionNumber="1" dataAlias="Rendition.UI.AutoComplete#AutoComplete.info">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction address="Intro">
+			Rendition.UI.AutoComplete#AutoComplete.info()
+			<para>The info message that appears when the state is invalid. An instance of <link xlink:href="4b391fe3-74bc-6c38-4e17-2ed6eef18295"/>.</para>
+		</introduction>
+		<definitionTable>
+			
+			
+				<definedTerm>
+					<para>Member Of</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="c3297b0d-9e44-0956-efe9-aba03ac86241"/>
+					</para>
+				</definition>
+			
+			
+				<definedTerm>
+					<para>Type</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+					</para>
+				</definition>
+			
+			
+				<definedTerm>
+					<para>Source</para>
+				</definedTerm>
+				<definition>
+					<para>
+						c:\Rendition\Rendition.Core\js\admin\UI\autocomplete.js
+					</para>
+				</definition>
+			
+		</definitionTable>
+	</developerConceptualDocument>
+</topic>

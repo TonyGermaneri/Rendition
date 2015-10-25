@@ -1,0 +1,1150 @@
+﻿<html xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+  <head>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8" />
+    <META NAME="save" CONTENT="history" />
+    <title>CutterBarStyle</title>
+    <meta name="Language" content="en-us" />
+    <meta name="Microsoft.Help.Id" content="07fe8af3-eda5-dfad-9ce9-6bfe56d71486" />
+    <meta name="Description" content="Styling for the cutterBar." />
+    <meta name="Microsoft.Help.ContentType" content="Concepts" />
+    <link rel="stylesheet" type="text/css" href="../styles/Presentation.css" />
+    <link rel="stylesheet" type="text/css" href="ms-help://Hx/HxRuntime/HxLink.css" />
+    <script type="text/javascript" src="../scripts/EventUtilities.js"> </script>
+    <script type="text/javascript" src="../scripts/SplitScreen.js"> </script>
+    <script type="text/javascript" src="../scripts/Dropdown.js"> </script>
+    <script type="text/javascript" src="../scripts/script_manifold.js"> </script>
+    <script type="text/javascript" src="../scripts/script_feedBack.js"> </script>
+    <script type="text/javascript" src="../scripts/CheckboxMenu.js"> </script>
+    <script type="text/javascript" src="../scripts/CommonUtilities.js"> </script>
+    <xml>
+      <MSHelp:Keyword Index="A" Term="07fe8af3-eda5-dfad-9ce9-6bfe56d71486" />
+      <MSHelp:Attr Name="RevisionNumber" Value="1" />
+      <MSHelp:Attr Name="AssetID" Value="07fe8af3-eda5-dfad-9ce9-6bfe56d71486" />
+      <MSHelp:Attr Name="Abstract" Value="Styling for the cutterBar." />
+      <MSHelp:Attr Name="TopicType" Value="kbArticle" />
+      <MSHelp:Attr Name="Locale" Value="en-us" />
+    </xml>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <input type="hidden" id="hiddenScrollOffset" />
+    <img id="collapseImage" style="display:none; height:0; width:0;" src="../icons/collapse_all.gif" alt="Collapse image" title="Collapse image" />
+    <img id="expandImage" style="display:none; height:0; width:0;" src="../icons/expand_all.gif" alt="Expand Image" title="Expand Image" />
+    <img id="collapseAllImage" style="display:none; height:0; width:0;" src="../icons/collapse_all.gif" />
+    <img id="expandAllImage" style="display:none; height:0; width:0;" src="../icons/expand_all.gif" />
+    <img id="dropDownImage" style="display:none; height:0; width:0;" src="../icons/dropdown.gif" />
+    <img id="dropDownHoverImage" style="display:none; height:0; width:0;" src="../icons/dropdownHover.gif" />
+    <img id="copyImage" style="display:none; height:0; width:0;" src="../icons/copycode.gif" alt="Copy image" title="Copy image" />
+    <img id="copyHoverImage" style="display:none; height:0; width:0;" src="../icons/copycodeHighlight.gif" alt="CopyHover image" title="CopyHover image" />
+    <div id="header">
+      <table id="topTable" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <span onclick="ExpandCollapseAll(toggleAllImage)" style="cursor:default;" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage, event)" tabindex="0">
+              <img ID="toggleAllImage" class="toggleAll" src="../icons/collapse_all.gif" /> <label id="collapseAllLabel" for="toggleAllImage" style="display: none;">Collapse All</label><label id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand All</label> </span>
+            <span>    </span>
+            <span id="devlangsDropdown" class="filter" tabindex="0">
+              <img id="devlangsDropdownImage" src="../icons/dropdown.gif" /> <label id="devlangsMenuAllLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: All </nobr></label><label id="devlangsMenuMultipleLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: Multiple </nobr></label><label id="devlangsMenuCSharpLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: C# </nobr></label><label id="devlangsMenuJavaScriptLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: JavaScript </nobr></label></span>
+          </td>
+        </tr>
+      </table>
+      <div id="devlangsMenu">
+        <input id="CSharpCheckbox" type="checkbox" data="CSharp,cs,'persist'" value="on" onClick="SetLanguage(this)" />
+        <label class="checkboxLabel" for="CSharpCheckbox">C#</label>
+        <br />
+        <input id="JavaScriptCheckbox" type="checkbox" data="JavaScript,cs,'persist'" value="on" onClick="SetLanguage(this)" />
+        <label class="checkboxLabel" for="JavaScriptCheckbox">JavaScript</label>
+        <br />
+      </div>
+      <table id="bottomTable" cellpadding="0" cellspacing="0">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">Rendition E-Commerce Framework</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">CutterBarStyle</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td align="left">
+            <span id="headfeedbackarea" class="feedbackhead">
+              <a href="javascript:SubmitFeedback('tonygermaneri@gmail.com','Rendition E-Commerce Framework','','1.0.0.0','','%0\dYour%20feedback%20is%20used%20to%20improve%20the%20documentation%20and%20the%20product.%20Your%20e-mail%20address%20will%20not%20be%20used%20for%20any%20other%20purpose%20and%20is%20disposed%20of%20after%20the%20issue%20you%20report%20is%20resolved.%20%20While%20working%20to%20resolve%20the%20issue%20that%20you%20report,%20you%20may%20be%20contacted%20via%20e-mail%20to%20get%20further%20details%20or%20clarification%20on%20the%20feedback%20you%20sent.%20After%20the%20issue%20you%20report%20has%20been%20addressed,%20you%20may%20receive%20an%20e-mail%20to%20let%20you%20know%20that%20your%20feedback%20has%20been%20addressed.%0\A%0\d','Customer%20Feedback');">Send Feedback</a>
+            </span>
+          </td>
+        </tr>
+      </table>
+      <table id="gradientTable">
+        <tr>
+          <td class="nsrBottom" background="../icons/gradient.gif" />
+        </tr>
+      </table>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" />
+        <span style="color: DarkGray">
+          <p style="color: #dc143c; font-size: 8.5pt; font-weight: bold;">[This is preliminary documentation and is subject to change.]</p>
+        </span>
+        <a name="Intro"> </a>
+        <div class="introduction">
+			Class Rendition.UI.CutterBarStyle
+			<p>Styling for the cutterBar.</p></div>
+        <p>
+          <dl class="authored">
+            <dt>
+              <p>Member Of</p>
+            </dt>
+            <dd>
+              <p>
+                <span sdata="link">
+                  <a href="ddee8d40-d92d-34d0-2be3-5f5d65f36f31.htm">UI</a>
+                </span>
+              </p>
+            </dd>
+            <dt>
+              <p>Source</p>
+            </dt>
+            <dd>
+              <p>
+							c:\Rendition\Rendition.Core\js\admin\UI\cutterBar.js
+						</p>
+            </dd>
+          </dl>
+        </p>
+        <a name="fields"> </a>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(sectionToggleID0ECAAA)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(sectionToggleID0ECAAA, event)" tabindex="0">
+            <img id="sectionToggleID0ECAAA" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Properties</span>
+        </h1>
+        <div id="sectionSectionID0ECAAA" class="section" name="collapseableSection" style="">
+          <div class="tableSection">
+            <table width="50%" cellspacing="2" cellpadding="5" frame="lhs">
+              <tr>
+                <th>
+                  <p />
+                </th>
+                <th>
+                  <p>Name</p>
+                </th>
+                <th>
+                  <p>Type</p>
+                </th>
+                <th>
+                  <p>Description</p>
+                </th>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="8382022f-46a1-3bcc-6151-63261b02f268.htm">contentBackground</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The CSS background property of the content area.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="4662ef6a-5b0b-e6f8-df76-71d2a9764445.htm">cutterBackground</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The CSS background property entire widget.  This cannot be seen unless the
+child DHTML elements are transparent.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="6f08fba6-dbdd-a297-9ccb-c959741eaba7.htm">downBackground</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The CSS background property of the down arrow.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="5e2eac84-cc4a-b40b-0052-8014dc0f074b.htm">downDisabledBackground</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The CSS background property of the down arrow when disabled.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="e7df4d37-f8b4-5b56-196b-47b8ad56fe93.htm">eBackground</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The CSS background property of the east element.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="202004f7-ac58-ad39-a519-f9fd4fd6fed5.htm">horizontalSpacing</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="36802977-faa0-b394-beea-eebbbc3b2d5a.htm">Integer</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Horizontal spacing between menus when a child menu spawns.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="0913c3b1-96e9-9144-783f-2bae295c93a7.htm">icons</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="feb87a09-e36a-9baa-3c23-409ea79458a9.htm">Boolean</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										When true an icon column will be present on the context menu and
+and elements with icons will have their icons displayed.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="a1b53540-0a60-6477-94d6-ee7c6c43d32e.htm">id</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The unique id of this instance.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="e3b5d6d9-f793-e64a-3c57-3e930fc3c29e.htm">leftTopBackground</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The CSS background property of the left or top element.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="bcaf4159-6283-165c-25a3-89ed2821e2ae.htm">maxerHBackground</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The CSS background property of the maximize button when in horizontal mode.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="9f698e50-c5a4-a2c0-b7e5-58b9df812bc2.htm">maxerHRect</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The height and width of the maximize button
+when in horizontal mode as a <span sdata="link"><a href="b6679c58-2336-61d4-273e-95bc23b9bfcb.htm">Rect</a></span>.
+Looks like { x: 0, y: 0, h: 25, w: 6 }.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="1f37ea38-a704-9d3b-9ba2-86fd6e351aaa.htm">maxerVBackground</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The CSS background property of the maximize button when in vertical mode.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="0d6eae43-4c0a-c80b-d85a-d1e5fae36075.htm">maxerVRect</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The height and width of the maximize button 
+when in vertical mode as a <span sdata="link"><a href="b6679c58-2336-61d4-273e-95bc23b9bfcb.htm">Rect</a></span>.
+Looks like { x: 0, y: 0, h: 6, w: 25 }.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="f98b8eb6-a09f-c222-6978-adc3cb99aa9a.htm">menuBackground</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The CSS background property of the menu area.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="78034d08-d438-73c2-f6ee-82d45b808f8e.htm">minerHBackground</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The CSS background property of the maximize button when in horizontalMode mode.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="5475f2a8-55f6-23cd-9ddd-d0011faa6792.htm">minerHRect</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The height and width of the minimize button
+when in horizontal mode as a <span sdata="link"><a href="b6679c58-2336-61d4-273e-95bc23b9bfcb.htm">Rect</a></span>.
+Looks like { x: 0, y: 0, h: 25, w: 6 }.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="5208310e-2fcd-e098-ccb3-b8cf0058ae98.htm">minerVBackground</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The CSS background property of the minimize button when in vertical mode.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="24668ac8-aae8-4ab3-7e27-07dcfc8425a0.htm">minerVRect</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The height and width of the minimize button
+when in vertical mode as a <span sdata="link"><a href="b6679c58-2336-61d4-273e-95bc23b9bfcb.htm">Rect</a></span>.
+Looks like { x: 0, y: 0, h: 25, w: 6 }.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="43ea31da-bb0a-a512-8fb9-f59b145e1048.htm">nBackground</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The CSS background property of the north element.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="4e74f2e2-444a-c9cb-54d0-2a82bc78d95b.htm">neBackground</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The CSS background property of the north east element.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="ee0c95c9-4c8b-52c3-ba2a-a1cbd4549854.htm">nwBackground</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The CSS background property of the north west element.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="d8dea325-539a-7586-79b6-b0b4c5a8efee.htm">orientation</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="36802977-faa0-b394-beea-eebbbc3b2d5a.htm">Integer</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										1 = vertical orientation, 0 = horizontal orientation.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="bed5634e-8d33-290c-b0c7-41e834a9e917.htm">rect</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Offset <span sdata="link"><a href="b6679c58-2336-61d4-273e-95bc23b9bfcb.htm">Rect</a></span>.  The widget will be drawn offset by the values provided.
+Looks like { x: 0, y: 0, h: 0, w: 0 }.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="1c4f9afa-6427-7f4f-a94c-9aed6d7a18d6.htm">rightBottomBackground</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The CSS background property of the bottom or right element.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="78c14485-dd2b-96a5-ad34-1bf991159701.htm">sBackground</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The CSS background property of the south element.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="cc69558b-28bb-8885-4121-5cc4fdf26ec8.htm">seBackground</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The CSS background property of the south east element.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="b3e7442c-ab3d-71ea-c105-f981b17cc85d.htm">sizerHBackground</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The CSS background property of the bar between the two elements when in horizontal mode.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="ed55cb73-d6c9-8ddb-273b-66337bb91b58.htm">sizerRect</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The size of the bar between the two elements as a <span sdata="link"><a href="b6679c58-2336-61d4-273e-95bc23b9bfcb.htm">Rect</a></span>.
+Looks like { x: 0, y: 0, h: 3, w: 3 }.  Only the height or the width
+of the rect are used.  The height during horizontal mode, the width during vertical mode.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="998d760c-6b09-dea4-aa11-3d67643486e0.htm">sizerVBackground</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The CSS background property of the bar between the two elements when in vertical mode.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="7fcf4cac-3ef9-d0da-74ad-51ecf8d3a5d1.htm">swBackground</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The CSS background property of the south west element.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="1e7deab0-06e6-9edf-bea5-d1509d9f13c8.htm">type</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The type of widget.  Returns RenditionCutterBarStyle.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="d848bd58-0923-1ac5-5153-5acb0050d4bc.htm">upBackground</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The CSS background property of the up arrow.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="77dcec64-f480-bc03-1e60-a08fb2d77ab3.htm">upDisabledBackground</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The CSS background property of the up arrow when disabled.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="8866af78-3c3c-abed-5a7b-75534947964b.htm">verticalSpacing</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="36802977-faa0-b394-beea-eebbbc3b2d5a.htm">Integer</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Vertical spacing between elements.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="f5d31922-8856-366b-df86-93226c1b3bee.htm">wBackground</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The CSS background property of the west element.
+									</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div id="footer">
+        <div class="footerLine">
+          <img width="100%" height="3px" src="../icons/footer.gif" alt="Footer image" title="Footer image" />
+        </div>
+        <A NAME="feedback"></A>
+        <span id="fb" class="feedbackcss"></span>
+        <p />Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:tonygermaneri%40gmail.com?Subject=Rendition E-Commerce Framework">Tony Germaneri</a><script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        var HT_mailLinkText = HT_mailLink.innerHTML;
+        HT_mailLink.href += ": " + document.title;
+        HT_mailLink.innerHTML = HT_mailLinkText;
+        </script><p />Copyright © Tony Germaneri 2011</div>
+    </div>
+  </body>
+</html>

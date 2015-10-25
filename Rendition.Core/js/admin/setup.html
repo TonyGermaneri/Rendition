@@ -1,0 +1,914 @@
+﻿<!DOCTYPE html>
+	<html lang="en">
+    <head>
+        <title>Rendition Setup</title>
+		<script type="text/javascript" src="/admin/rendition.js"></script>
+        <link rel="stylesheet" href="js/jquery/css/base/jquery-ui.css" type="text/css" media="all" />
+		<link rel="stylesheet" href="css/admin.css" type="text/css" media="all" />
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+		<script>
+			var setup = function (args) {
+				var rect = { h: 704, w: 620 };
+				var instance = {};
+				instance.authSuccessMessage = 'Authentication Successful';
+				instance.failAuthMessage = 'Authentication Failed';
+				instance.notAuthenticatedYetMessage = 'Not Authenticated';
+				instance.auth = {
+					SQL: false,
+					dir: false,
+					IIS: false
+				}
+				instance.setupVars = {
+					webSiteHostHeader: '',
+					IISServerIPAddress: '',
+					IISServerUploadPath: '',
+					IISServerHomeDirectory: '',
+					IISNTUserName: '',
+					IISNTPassword: '',
+					IISNTDomain: '',
+					IISSiteName: '',
+					newWebPassword: '',
+					SQLServerIP: '',
+					SQLServerDatabaseName: '',
+					SQLServerName: '',
+					SQLServerPassword: '',
+					emailServerIP: '',
+					authWithEmailServer: '',
+					emailLogonName: '',
+					emailPassword: '',
+					emailPort: '',
+					friendlySiteName: '',
+					localZipCode: '',
+					siteEmailAddress: '',
+					directoryUserName: '',
+					directoryPassword: '',
+					directoryDomain: '',
+					createDirectory:false,
+					overwriteDatabase:false,
+					overwriteDirectory:false,
+					installSQL:true,
+					installDirectory:true,
+					installIIS:true,
+					installWebConfig:true
+				}
+				args ? args == undefined : {};
+				instance.dialog = new rendition.ui.dialog({
+					rect: { x: document.documentElement.clientWidth / 2 - (rect.w / 2), y: 15, h: rect.h, w: rect.w },
+					title: 'Rendition Setup',
+					keepCentered: true,
+					modal: true,
+					modalCloseable: false
+				});
+				instance.step1 = function () {
+					var c = instance.dialog.content;
+					c.innerHTML = '<div style="margin:5px 0 0 10px;font-size:24px;font-famly:Trebuchet MS,arial,helvetica,sans-serif;">'+
+					'Welcome to Rendition</div>'+
+					'<div style="margin:0 0 0 10px;font-size:12px;font-famly:Trebuchet MS,arial,helvetica,sans-serif;">'+
+					'This installer will guide you through installing your first copy of rendition on '+
+					'an unsuspecting server.</div>';
+					instance.readme = document.createElement("textarea");
+					instance.readme.style.width = (c.offsetWidth-25)+'px';
+					instance.readme.style.height = (c.offsetHeight-110)+'px';
+					instance.readme.style.margin = '8px 0 12px 5px';
+					instance.readme.style.marginLeft = '10px';
+					instance.readme.style.fontFamily = 'Trebuchet MS,arial,helvetica,sans-serif';
+					instance.readme.style.fontSize = '12px';
+					instance.readme.value = rendition.ui.initData.splash;
+					instance.readme.style.border = 'inset 2px #777';
+					var next = document.createElement('button');
+					next.style.cssFloat = 'right';
+					next.innerHTML = 'Next';
+					next.style.margin = '9px 5px 0 0';
+					c.appendChild(instance.readme);
+					c.appendChild(next);
+					next.onclick = function(){
+						instance.step2();
+					}
+				}
+				instance.step2 = function () {
+					var c = instance.dialog.content;
+					c.innerHTML = '';
+					instance.form = new rendition.ui.Form({
+						groups: [
+							{
+								name: 'Web Server Details',
+								expanded: true,
+								inputs: [
+									{
+										displayName: 'Install Web Site Entry is IIS',
+										name: 'installIIS',
+										inputType: 'checkbox'
+									},
+									{
+										displayName: 'Site Name',
+										name: 'IISSiteName'
+									},
+									{
+										displayName: 'Host Header',
+										name: 'webSiteHostHeader'
+									},
+									{
+										displayName: 'IIS Server IP',
+										name: 'IISServerIPAddress'
+									},
+									{
+										displayName: 'User Name',
+										name: 'IISNTUserName'
+									},
+									{
+										displayName: 'Domain',
+										name: 'IISNTDomain'
+									},
+									{
+										displayName: 'Password',
+										name: 'IISNTPassword',
+										inputType: 'password'
+									},
+									{
+										displayName: 'Home Directory',
+										name: 'IISServerHomeDirectory'
+									}
+								]
+							},
+							{
+								name: 'Upload Directory',
+								expanded: true,
+								inputs: [
+									{
+										displayName: 'Install Site Files',
+										name: 'installDirectory',
+										inputType: 'checkbox'
+									},
+									{
+										displayName: 'Install web.config',
+										name: 'installWebConfig',
+										inputType: 'checkbox'
+									},
+									{
+										displayName: 'Directory / FTP',
+										name: 'IISServerUploadPath'
+									},
+									{
+										displayName: 'User Name',
+										name: 'directoryUserName'
+									},
+									{
+										displayName: 'Password',
+										name: 'directoryPassword',
+										inputType: 'password'
+									},
+									{
+										displayName: 'Domain',
+										name: 'directoryDomain'
+									}
+								],
+							},
+							{
+								name: 'Sql Server Details',
+								expanded: true,
+								inputs: [
+									{
+										displayName: 'Install SQL Database',
+										name: 'installSQL',
+										inputType: 'checkbox'
+									},
+									{
+										displayName: 'SQL Server IP',
+										name: 'SQLServerIP'
+									},
+									{
+										displayName: 'User Name',
+										name: 'SQLServerName'
+									},
+									{
+										displayName: 'Password',
+										name: 'SQLServerPassword',
+										inputType: 'password'
+									},
+									{
+										displayName: 'Database',
+										name: 'SQLServerDatabaseName'
+									},
+									{
+										displayName: 'Rendition Administrator Password',
+										name: 'newWebPassword',
+										inputType: 'password'
+									}
+								]
+							}
+						]
+					});
+					instance.form.appendTo(c);
+					instance.installWebConfig = instance.form.getInputByName('installWebConfig');
+					instance.installDirectory = instance.form.getInputByName('installDirectory');
+					instance.installIIS = instance.form.getInputByName('installIIS');
+					instance.installSQL = instance.form.getInputByName('installSQL');
+					instance.inputDisable = function(inName){
+						instance.form.getInputByName(inName).disabled = true;
+					}
+					instance.inputEnable = function(inName){
+						instance.form.getInputByName(inName).disabled = false;
+					}
+					instance.installIIS.onclick = function(){
+						var ls = ['IISSiteName','webSiteHostHeader','IISServerIPAddress',
+						'IISNTUserName','IISNTDomain','IISNTPassword','IISServerHomeDirectory'];
+						if(this.checked){
+							for(var x=0;ls.length>x;x++){
+								instance.inputEnable(ls[x]);
+							}
+						}else{
+							for(var x=0;ls.length>x;x++){
+								instance.inputDisable(ls[x]);
+							}
+						}
+					}
+					instance.installWebConfig.onclick = instance.installDirectory.onclick = function(){
+						var ls = ['IISServerUploadPath','directoryUserName','directoryPassword','directoryDomain'];
+						if(instance.installWebConfig.checked||instance.installDirectory.checked){
+							for(var x=0;ls.length>x;x++){
+								instance.inputEnable(ls[x]);
+							}
+						}else{
+							for(var x=0;ls.length>x;x++){
+								instance.inputDisable(ls[x]);
+							}
+						}
+					}
+					instance.installSQL.onclick = function(){
+						var ls = ['SQLServerIP','SQLServerName','SQLServerPassword','SQLServerDatabaseName','newWebPassword'];
+						if(this.checked){
+							for(var x=0;ls.length>x;x++){
+								instance.inputEnable(ls[x]);
+							}
+						}else{
+							for(var x=0;ls.length>x;x++){
+								instance.inputDisable(ls[x]);
+							}
+						}
+					}
+					if(instance.justStarted == undefined){
+						instance.installWebConfig.checked = true;
+						instance.installDirectory.checked = true;
+						instance.installIIS.checked = true;
+						instance.installSQL.checked = true;
+						instance.justStarted = false;
+					}
+
+					var authTable = document.createElement("table");
+					authTable.style.fontSize = '12px';
+					authTable.style.margin = '5px 0 0 10px';
+					var row = authTable.insertRow(0);
+					instance.SQLAuthCell = row.insertCell(0);
+					var cell = row.insertCell(0);
+					cell.innerHTML = 'SQL Server:';
+					instance.SQLAuthCell.innerHTML = instance.notAuthenticatedYetMessage;
+					var row = authTable.insertRow(0);
+					instance.IISAuthCell = row.insertCell(0);
+					var cell = row.insertCell(0);
+					cell.innerHTML = 'IIS Server:';
+					instance.IISAuthCell.innerHTML = instance.notAuthenticatedYetMessage;
+					var row = authTable.insertRow(0);
+					instance.DirectoryAuthCell = row.insertCell(0);
+					var cell = row.insertCell(0);
+					cell.innerHTML = 'Directory Server:';
+					instance.DirectoryAuthCell.innerHTML = instance.notAuthenticatedYetMessage;
+					var next = document.createElement('button');
+					var previous = document.createElement('button');
+					next.style.margin = '-17px 5px 5px 5px';
+					previous.style.margin = '-17px 5px 5px 5px';
+					next.style.cssFloat = 'right';
+					previous.style.cssFloat = 'right';
+					previous.innerHTML = 'Previous';
+					next.innerHTML = 'Next';
+					for(var i in instance.setupVars){
+						var p = instance.form.getInputByName(i);
+						if(p!=null){
+							if(p.type=="checkbox"){
+								p.checked = instance.setupVars[i];
+							}else{
+								p.value = instance.setupVars[i];
+							}
+						}
+					}
+					next.onclick = function(){
+						/* feed all form vars to instance.setupVars variables */
+						for(var i in instance.setupVars){
+							var p = instance.form.getInputByName(i);
+							if(p!=null){
+								if(p.type=="checkbox"){
+									 instance.setupVars[i] = p.checked;
+								}else{
+									instance.setupVars[i] = p.value;
+								}
+							}
+						}
+						instance.tryToAuthenticate();
+					}
+					previous.onclick = function(){
+						instance.step1();
+					}
+					c.appendChild(authTable);
+					c.appendChild(next);
+					c.appendChild(previous);
+					/* if this is init grab as many vars as possible and fill them into the form */
+					if(instance.setupVars.webSiteHostHeader==''){
+						if(rendition.ui.initData.serverVariables!==undefined){
+							instance.form.getInputByName('IISServerHomeDirectory').value =
+							rendition.ui.initData.serverVariables.APPL_PHYSICAL_PATH;
+							instance.form.getInputByName('webSiteHostHeader').value =
+							rendition.ui.initData.serverVariables.HTTP_HOST;
+							instance.form.getInputByName('IISServerIPAddress').value =
+							rendition.ui.initData.serverVariables.LOCAL_ADDR;
+							instance.form.getInputByName('IISSiteName').value =
+							rendition.ui.initData.serverVariables.HTTP_HOST;
+							instance.form.getInputByName('IISSiteName').value =
+							rendition.ui.initData.serverVariables.HTTP_HOST;
+						}
+					}
+				}
+				instance.step3 = function () {
+					var c = instance.dialog.content;
+					c.innerHTML = '<div style="margin:5px 0 0 10px;font-size:24px;font-famly:Trebuchet MS,arial,helvetica,sans-serif;">'+
+					'Optional Settings</div>'+
+					'<div style="margin:0 0 0 10px;font-size:12px;font-famly:Trebuchet MS,arial,helvetica,sans-serif;">'+
+					'The following settings can be filled in after installation or you can take the time to do it now.</div>';
+					instance.optForm = new rendition.ui.Form({
+						groups: [
+							{
+								name: 'Email Server',
+								expanded: true,
+								inputs: [
+									{
+										displayName: 'Email Server IP',
+										name: 'emailServerIP'
+									},
+									{
+										displayName: 'Authenticate With Email Server',
+										name: 'authWithEmailServer',
+										inputType: 'checkbox'
+									},
+									{
+										displayName: 'Name',
+										name: 'emailLogonName'
+									},
+									{
+										displayName: 'Password',
+										name: 'emailPassword',
+										inputType:'password'
+									},
+									{
+										displayName: 'Email Port',
+										name: 'emailPort'
+									}
+								]
+							},
+							{
+								name: 'Site and Company Info',
+								expanded: true,
+								inputs: [
+									{
+										displayName: 'Friendly Site Name',
+										name: 'friendlySiteName'
+									},
+									{
+										displayName: 'Local Zip Code',
+										name: 'localZipCode'
+									},
+									{
+										displayName: 'Email Address',
+										name: 'siteEmailAddress'
+									}
+								]
+							}
+						]
+					});
+					instance.optForm.appendTo(c);
+					var previous = document.createElement('button');
+					var next = document.createElement('button');
+					next.style.margin = '315px 5px 0 5px';
+					previous.style.margin = '315px 5px 0 5px';
+					next.style.cssFloat = 'right';
+					previous.style.cssFloat = 'right';
+					previous.innerHTML = 'Previous';
+					next.innerHTML = 'Next';
+					for(var i in instance.setupVars){
+						var p = instance.optForm.getInputByName(i);
+						if(p!=null){
+							if(p.type=="checkbox"){
+								p.checked = instance.setupVars[i];
+							}else{
+								p.value = instance.setupVars[i];
+							}
+						}
+					}
+					previous.onclick = function(){
+						instance.step2();
+					}
+					next.onclick = function(){
+						for(var i in instance.setupVars){
+							var p = instance.optForm.getInputByName(i);
+							if(p!=null){
+								if(p.type=="checkbox"){
+									instance.setupVars[i] = p.checked;
+								}else{
+									instance.setupVars[i] = p.value;
+								}
+							}
+						}
+						instance.step4();
+					}
+					c.appendChild(next);
+					c.appendChild(previous);
+				}
+				instance.step4 = function () {
+					/* review */
+					var c = instance.dialog.content;
+					c.innerHTML = '<div style="margin:5px 0 0 10px;font-size:24px;font-famly:Trebuchet MS,arial,helvetica,sans-serif;">'+
+					'Review Settings</div>'+
+					'<div style="margin:0 0 0 10px;font-size:12px;font-famly:Trebuchet MS,arial,helvetica,sans-serif;">'+
+					'Review your selections before you begin your installation.</div>';
+					instance.treeDiv = document.createElement('div');
+					instance.treeDiv.style.width = (c.offsetWidth-25)+'px';
+					instance.treeDiv.style.height = (c.offsetHeight-110)+'px';
+					instance.treeDiv.style.background = 'white';
+					instance.treeDiv.style.border = 'inset 2px #777';
+					instance.treeDiv.style.margin = '0 0 0 10px';
+					c.appendChild(instance.treeDiv);
+					instance.reviewTreeNodes = {
+						text: 'Settings',
+						value: 'root',
+						childNodes: [
+							
+						]
+					}
+					instance.reviewTreeNodes.childNodes.push({
+						text: 'Components to Install',
+						childNodes: [
+							{
+								text: 'Install IIS Web Site Entry: '+instance.setupVars.installIIS,
+								childNodes: []
+							},
+							{
+								text: 'Install web.config Configuration File: '+instance.setupVars.installWebConfig,
+								childNodes: []
+							},
+							{
+								text: 'Install SQL Database: '+instance.setupVars.installSQL,
+								childNodes: []
+							},
+							{
+								text: 'Install Web Site Source Files: '+instance.setupVars.installDirectory,
+								childNodes: []
+							}
+						]
+					});
+					if(instance.setupVars.installIIS){
+						instance.reviewTreeNodes.childNodes.push({
+							text: 'Internet Information Services (IIS) settings',
+							childNodes: [
+								{
+									text: 'Site Name: '+instance.setupVars.IISSiteName,
+									childNodes: []
+								},
+								{
+									text: 'IP Address: '+instance.setupVars.IISServerIPAddress,
+									childNodes: []
+								},
+								{
+									text: 'Home Directory: '+instance.setupVars.IISServerHomeDirectory,
+									childNodes: []
+								},
+								{
+									text: 'User Name: '+instance.setupVars.IISNTUserName,
+									childNodes: []
+								},
+								{
+									text: 'Password: ***',
+									childNodes: []
+								},
+								{
+									text: 'Domain: '+instance.setupVars.IISNTDomain,
+									childNodes: []
+								}
+							]
+						});
+					}
+					if(instance.setupVars.installWebConfig||instance.setupVars.installDirectory){
+						instance.reviewTreeNodes.childNodes.push({
+							text: 'Upload directory settings',
+							childNodes: [
+								{
+									text: 'Path: '+instance.setupVars.IISServerUploadPath,
+									childNodes: []
+								},
+								{
+									text: 'User Name: '+instance.setupVars.directoryUserName,
+									childNodes: []
+								},
+								{
+									text: 'Password: ***',
+									childNodes: []
+								},
+								{
+									text: 'Domain: '+instance.setupVars.directoryDomain,
+									childNodes: []
+								}
+							]
+						});
+					}
+					if(instance.setupVars.installSQL){
+						instance.reviewTreeNodes.childNodes.push({
+							text: 'SQL server settings',
+							childNodes: [
+								{
+									text: 'IP/Host Name: '+instance.setupVars.SQLServerIP,
+									childNodes: []
+								},
+								{
+									text: 'User Name: '+instance.setupVars.SQLServerName,
+									childNodes: []
+								},
+								{
+									text: 'Password: ***',
+									childNodes: []
+								},
+								{
+									text: 'Database Name: '+instance.setupVars.SQLServerDatabaseName,
+									childNodes: []
+								}
+							]
+						});
+						instance.reviewTreeNodes.childNodes.push({
+							text: 'Email server settings',
+							childNodes: [
+								{
+									text: 'IP/Host Name: '+instance.setupVars.emailServerIP,
+									childNodes: []
+								},
+								{
+									text: 'User Name: '+instance.setupVars.emailLogonName,
+									childNodes: []
+								},
+								{
+									text: 'Password: ***',
+									childNodes: []
+								},
+								{
+									text: 'Authenticate: '+instance.setupVars.authWithEmailServer.toString(),
+									childNodes: []
+								},
+								{
+									text: 'Port: '+instance.setupVars.emailPort,
+									childNodes: []
+								}
+							]
+						});
+						instance.reviewTreeNodes.childNodes.push({
+							text: 'Miscellaneous settings',
+							childNodes: [
+								{
+									text: 'Friendly Name: '+instance.setupVars.friendlySiteName,
+									childNodes: []
+								},
+								{
+									text: 'Local ZIP Code: '+instance.setupVars.localZipCode,
+									childNodes: []
+								},
+								{
+									text: 'Email Address: '+instance.setupVars.siteEmailAddress,
+									childNodes: []
+								}
+							]
+						});
+					}
+					instance.tree = new rendition.ui.treeView({
+						parentNode: instance.treeDiv,
+						rootNode: instance.reviewTreeNodes
+					});
+					for(var x=0;instance.tree.tree.childNodes.length>x;x++){
+						instance.tree.tree.childNodes[x].firstChild.firstChild.onclick();
+					}
+					var previous = document.createElement('button');
+					var next = document.createElement('button');
+					next.style.margin = '29px 5px 15px 10px';
+					previous.style.margin = '29px 5px 15px 10px';
+					next.style.cssFloat = 'right';
+					previous.style.cssFloat = 'right';
+					previous.onclick = function(){
+						if(instance.installSQL.checked){
+							instance.step3();
+						}else{
+							instance.step2();
+						}
+					}
+					next.onclick = function(){
+						this.disabled = true;
+						previous.disabled = true;
+						instance.runInstaller();
+					}
+					previous.innerHTML = 'Previous';
+					next.innerHTML = 'Begin Installation';
+					c.appendChild(next);
+					c.appendChild(previous);
+					
+				}
+				instance.step5 = function () {
+					/* all done, thank you etc., it's too late to go back sucker! */
+					var c = instance.dialog.content;
+					var msg = '<div style="margin:5px 0 0 10px;font-size:24px;font-famly:Trebuchet MS,arial,helvetica,sans-serif;">'+
+					'Installation Complete</div>'+
+					'<div style="margin:0 0 0 10px;font-size:12px;font-famly:Trebuchet MS,arial,helvetica,sans-serif;">Rendition has finished installing.';
+					if(instance.installIIS.checked){
+						msg=msg+'<br><br>Logon to your web site by visiting the following URL.';
+					}else{
+						msg=msg+'';
+					}
+					msg=msg+'</div>';
+					c.innerHTML = msg;
+					instance.targetAdminSiteLink = document.createElement('a');
+					var aUrl = 'http://'+instance.setupVars.webSiteHostHeader+'/admin/';
+					instance.targetAdminSiteLink.innerHTML = aUrl;
+					instance.targetAdminSiteLink.href = aUrl;
+					instance.targetAdminSiteLink.target = '_blank';
+					instance.targetAdminSiteLink.style.display = 'block';
+					instance.targetAdminSiteLink.style.margin = '10px auto 30px auto';
+					instance.targetAdminSiteLink.style.textAlign = 'center';
+					instance.ending = document.createElement('textarea');
+					instance.ending.style.width = (c.offsetWidth-25)+'px';
+					if(instance.installIIS.checked){
+						instance.ending.style.height = (c.offsetHeight-210)+'px';
+					}else{
+						instance.ending.style.height = '550px';
+					}
+					instance.ending.style.margin = '20px 5px 0 0';
+					instance.ending.style.marginLeft = '10px';
+					instance.ending.style.fontFamily = 'Trebuchet MS,arial,helvetica,sans-serif';
+					instance.ending.style.fontSize = '12px';
+					instance.ending.style.border = 'inset 2px #777';
+					instance.ending.value = rendition.ui.initData.ending;
+					instance.ending.onkeyup = instance.ending.onchange = function(){instance.ending.value=rendition.ui.initData.ending;}
+					var finish = document.createElement('button');
+					finish.style.margin = '5px';
+					finish.style.cssFloat = 'right';
+					finish.innerHTML = 'Finish';
+					finish.onclick = function(){
+						window.location = aUrl;
+					}
+					if(instance.installIIS.checked){
+						c.appendChild(instance.targetAdminSiteLink);
+					}else{
+						finish.disabled = true;
+					}
+					c.appendChild(instance.ending);
+					c.appendChild(finish);
+				}
+				instance.tryToAuthenticate = function(){
+					/* try to authenticate with all provided creds */
+					/* step 1 IIS */
+					if(instance.installIIS.checked){
+						instance.authIIS();
+					}else{
+						instance.IISAuthCell.innerHTML = 'Skipped';
+					}
+					if(instance.installDirectory.checked||instance.installWebConfig.checked){
+						instance.authDir();
+					}else{
+						instance.DirectoryAuthCell.innerHTML = 'Skipped';
+					}
+					if(instance.installSQL.checked){
+						instance.authSQL();
+					}else{
+						instance.SQLAuthCell.innerHTML = 'Skipped';
+					}
+					if(instance.installIIS.checked&&!instance.auth.IIS){
+						return;
+					}
+					if((instance.installDirectory.checked||instance.installWebConfig.checked)&&
+					!instance.auth.dir){
+						return;
+					}
+					if(instance.installSQL.checked&&!instance.auth.SQL){
+						return;
+					}
+					if(!(instance.installDirectory.checked||instance.installWebConfig.checked||
+					instance.installIIS.checked||instance.installSQL.checked)){
+						alert('Really? Install nothing? Check your form and try again.');
+						return;
+					}
+					/* if all goes well move on to step 3 */
+					if(instance.installSQL.checked){
+						instance.step3();
+					}else{
+						instance.step4();
+					}
+				}
+				instance.init = function () {
+					instance.step1();
+				}
+				instance.authSQL = function(){
+					instance.updateDialog = new rendition.ui.updateDialog({ title: 'Authenticating', subTitle: 'Authenticating', message: 'Trying to authenticate with SQL Server...', modal: true, modalCloseable: true  });
+					var req = [
+						'getSQLInfo',
+						[instance.setupVars]
+					];
+					var url = Rendition.UI.responderKeyName + '1=' + JSON.stringify(req).toURI();
+					instance.reqEval = new rendition.ui.ajax(rendition.ui.clientServerSyncURI + url, function (e) {
+						var a = JSON.parse(e.responseText);
+						instance.updateDialog.close();
+						if (a.method1.error !== undefined) {
+							alert('unknown error\nError ' + a.method1.desc);
+							return;
+						}
+						if(a.method1.getSQLInfo.authenticated){
+							instance.auth.SQL = true;
+							instance.SQLAuthCell.innerHTML = instance.authSuccessMessage;
+						}else{	
+							instance.SQLAuthCell.innerHTML = instance.failAuthMessage;
+							instance.auth.SQL = false;
+						}
+						if(a.method1.getSQLInfo.databaseExists==true&&instance.setupVars.overwriteDatabase==false){
+							/* offer to create directory */
+							var no = rendition.ui.button({ innerHTML: 'No', onclick: function (e, confirm) {
+									instance.dbExistsConfDlg.close();
+									return;
+								}
+							});
+							var yes = rendition.ui.button({ innerHTML: 'Yes', onclick: function (e, confirm) {
+									instance.dbExistsConfDlg.close();
+									/*restart the process*/
+									instance.setupVars.overwriteDatabase = true;
+									instance.tryToAuthenticate();
+									instance.SQLAuthCell.innerHTML = 'Database Already Exists -> Will be altered.';
+									return;
+								}
+							});
+							instance.dbExistsConfDlg = new rendition.ui.confirmDialog({
+								message: 'The selected databased already exists.<br>' +
+								'Click yes to alter '+instance.setupVars.SQLServerDatabaseName+'.<br>'+
+								'Click no to go back.',
+								subTitle: 'Alter existing database?',
+								title: 'Database already exists.',
+								buttons: [yes, no],
+								dialogRect: { x: (document.documentElement.clientWidth * .5) - (500 * .5), y: 75, h: 170, w: 500 },
+								autoSize: true
+							});
+							instance.SQLAuthCell.innerHTML = 'Database Already Exists';
+							return;
+						}
+					},instance,false/*sync*/);
+				}
+				instance.authDir = function(){
+					instance.updateDialog = new rendition.ui.updateDialog({ title: 'Authenticating', subTitle: 'Authenticating', message: 'Trying to authenticate with Directory Server...', modal: true, modalCloseable: true  });
+					var req = [
+						'getDirectoryInfo',
+						[instance.setupVars]
+					];
+					var url = Rendition.UI.responderKeyName + '1=' + JSON.stringify(req).toURI();
+					instance.reqEval = new rendition.ui.ajax(rendition.ui.clientServerSyncURI + url, function (e) {
+						var a = JSON.parse(e.responseText);
+						instance.updateDialog.close();
+						if (a.method1.error !== undefined) {
+							alert('unknown error\nError ' + a.method1.desc);
+							return;
+						}
+						if(a.method1.getDirectoryInfo.authenticated){
+							instance.auth.dir = true;
+							instance.DirectoryAuthCell.innerHTML = instance.authSuccessMessage;
+						}else{	
+							instance.auth.dir = false;
+							instance.DirectoryAuthCell.innerHTML = instance.failAuthMessage;
+						}
+						if(a.method1.getDirectoryInfo.directoryDoesNotExist){
+							/* offer to create directory */
+							var no = rendition.ui.button({ innerHTML: 'No', onclick: function (e, confirm) {
+									instance.dirNotExistsConfDlg.close();
+									return;
+								}
+							});
+							var yes = rendition.ui.button({ innerHTML: 'Yes', onclick: function (e, confirm) {
+									instance.dirNotExistsConfDlg.close();
+									/*restart the process*/
+									instance.setupVars.createDirectory = true;
+									instance.tryToAuthenticate();
+									return;
+								}
+							});
+							instance.dirNotExistsConfDlg = new rendition.ui.confirmDialog({
+								message: 'The target directory does not exist.  Do you want to create it?<br>' +
+								' Click yes to create the directory<br>Click no to go back.',
+								subTitle: 'Directory does not exist.',
+								title: 'Directory does not exist.',
+								buttons: [yes, no],
+								dialogRect: { x: (document.documentElement.clientWidth * .5) - (500 * .5), y: 75, h: 170, w: 500 },
+								autoSize: true
+							});
+							return;
+						}else if(instance.setupVars.overwriteDirectory!=true&&instance.setupVars.createDirectory==false
+						&&a.method1.getDirectoryInfo.authenticated){
+							/* the directory exists and I didn't create it - offer to overwrite directory */
+							var no = rendition.ui.button({ innerHTML: 'No', onclick: function (e, confirm) {
+									instance.dirExistsConfDlg.close();
+									instance.setupVars.overwriteDirectory = false;
+									instance.DirectoryAuthCell.innerHTML = 'Directory Exists -> Don\'t overwrite files';
+									return;
+								}
+							});
+							var yes = rendition.ui.button({ innerHTML: 'Yes', onclick: function (e, confirm) {
+									instance.dirExistsConfDlg.close();
+									/*restart the process*/
+									instance.setupVars.overwriteDirectory = true;
+									instance.DirectoryAuthCell.innerHTML = 'Directory Exists -> Overwrite files';
+									instance.tryToAuthenticate();
+									return;
+								}
+							});
+							instance.dirExistsConfDlg = new rendition.ui.confirmDialog({
+								message: 'The target directory already exists, are you sure you '+
+								' want to overwrite the files in this directory?<br>' +
+								' Click yes to overwrite the directory, click no to go back.',
+								subTitle: 'Directory already exists.',
+								title: 'Directory already exists.',
+								buttons: [yes, no],
+								dialogRect: { x: (document.documentElement.clientWidth * .5) - (500 * .5), y: 75, h: 170, w: 500 },
+								autoSize: true
+							});
+							return;
+						}
+						
+					},instance,false/*sync*/);
+				}
+				instance.authIIS = function(){
+					instance.updateDialog = new rendition.ui.updateDialog({ title: 'Authenticating', 
+					subTitle: 'Authenticating', message: 'Trying to authenticate with IIS Server...', 
+					modal: true, modalCloseable: true  });
+					var req = [
+						'getIISInfo',
+						[instance.setupVars]
+					];
+					var url = Rendition.UI.responderKeyName + '1=' + JSON.stringify(req).toURI();
+					instance.reqEval = new rendition.ui.ajax(rendition.ui.clientServerSyncURI + url, function (e) {
+						var a = JSON.parse(e.responseText);
+						instance.updateDialog.close();
+						if (a.method1.error !== undefined) {
+							alert('unknown error\nError ' + a.method1.desc);
+							return;
+						}
+						if(a.method1.getIISInfo.authenticated){
+							instance.auth.IIS = true;
+							instance.IISAuthCell.innerHTML = instance.authSuccessMessage;
+						}else{
+							instance.auth.IIS = false;
+							instance.IISAuthCell.innerHTML = instance.failAuthMessage;
+						}
+						
+					},instance,false/*sync*/);
+				}
+				/* big guy over here */
+				instance.runInstaller = function(){
+					instance.updateDialog = new rendition.ui.updateDialog({ title: 'Installing', 
+					subTitle: 'Installing', message: 'Begining Installation Procedure...', 
+					modal: true, modalCloseable: false });
+					/* do the install here */
+					var req = [
+						'beginInstall',
+						[instance.setupVars]
+					];
+					var url = Rendition.UI.responderKeyName + '1=' + JSON.stringify(req).toURI();
+					instance.reqEval = new rendition.ui.ajax(rendition.ui.clientServerSyncURI + url, function (e) {
+						var a = JSON.parse(e.responseText);
+						if (a.method1.error !== undefined) {
+							alert('unknown error\nError ' + a.method1.desc);
+							return;
+						}
+						instance.updateDialog.close();
+						instance.step5();
+					},instance/*async*/);
+					instance.getProgress();
+					/* begin status update loop */
+				}
+				instance.getProgress = function(){
+					var req = ['progressInfo',[]];
+					var url = Rendition.UI.responderKeyName + '1=' + JSON.stringify(req).toURI();
+					instance.reqEval = new rendition.ui.ajax(rendition.ui.clientServerSyncURI + url, function (e) {
+						var a = JSON.parse(e.responseText);
+						if (a.method1.error !== undefined) {
+							alert('unknown error\nError ' + a.method1.desc);
+							return;
+						}
+						var u = a.method1.progressInfo;
+						instance.updateDialog.groupBox.inner.style.textAlign = 'center';
+						instance.updateDialog.groupBox.inner.innerHTML = parseFloat((u.currentItemCount / u.totalItemCount)*100).toFixed(2) +
+						 '% - ' + u.currentItemName;
+						if(!u.complete){
+							setTimeout(instance.getProgress,500);/* on and on till the break of dawn */
+						}
+					},instance/*async*/);
+				}
+				instance.init();
+			}
+			$(function () { setup(); });
+		</script>
+	</head>
+	<body style="background:black;">
+	</body>
+</html>

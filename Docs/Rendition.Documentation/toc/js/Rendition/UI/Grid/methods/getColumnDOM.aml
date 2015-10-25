@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="95b9c5e6-98b7-9c6b-7449-24f30d71fefa" revisionNumber="1" dataAlias="Rendition.UI.Grid#Grid.getColumnDOM">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction address="Intro">
+			Rendition.UI.Grid#Grid.getColumnDOM(<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  columnIndex)
+			<para>Gets a column as an array of DHTML elements.</para>
+		</introduction>
+		<definitionTable>
+			
+			
+				<definedTerm>
+					<para>Member Of</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="f5f5d4d4-f415-cd77-8e8f-c01e6464006a"/>
+					</para>
+				</definition>
+			
+			
+				<definedTerm>
+					<para>Return Type</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+					</para>
+				</definition>
+			
+			
+				<definedTerm>
+					<para>Source</para>
+				</definedTerm>
+				<definition>
+					<para>
+						c:\Rendition\Rendition.Core\js\admin\UI\grid.js
+					</para>
+				</definition>
+			
+		</definitionTable>
+		<section address="parameters">
+		<title>Parameters</title>
+			<sections>
+				<table>
+					<tableHeader>
+					<row>
+						<entry><para> </para></entry>
+						<entry><para>Name</para></entry>
+						<entry><para>Description</para></entry>
+					</row>
+					</tableHeader>
+					
+						<row>
+							<entry>
+								<para>
+									
+									Required
+									columnIndex
+									<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>
+								</para>
+							</entry>
+							<entry>
+								<para>
+									The column index to fetch.
+								</para>
+							</entry>
+							<entry>
+								<para>
+									
+								</para>
+							</entry>
+						</row>
+					
+				</table>
+			</sections>
+		</section>
+	</developerConceptualDocument>
+</topic>

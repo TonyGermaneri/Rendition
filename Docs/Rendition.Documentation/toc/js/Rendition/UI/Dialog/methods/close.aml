@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="baacbe07-7445-9327-6d2b-7b93fb4d24be" revisionNumber="1" dataAlias="Rendition.UI.Dialog#Dialog.close">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction address="Intro">
+			Rendition.UI.Dialog#Dialog.close(<link xlink:href="ef3d2310-dfdb-431e-8330-0d339049abff"/>  callbackProcedure)
+			<para>Closes the dialog optionally firing a callback procedure.</para>
+		</introduction>
+		<definitionTable>
+			
+			
+				<definedTerm>
+					<para>Member Of</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="dc990744-70f0-25bd-d971-be960b7764b6"/>
+					</para>
+				</definition>
+			
+			
+			
+				<definedTerm>
+					<para>Source</para>
+				</definedTerm>
+				<definition>
+					<para>
+						c:\Rendition\Rendition.Core\js\admin\UI\dialog.js
+					</para>
+				</definition>
+			
+		</definitionTable>
+		<section address="parameters">
+		<title>Parameters</title>
+			<sections>
+				<table>
+					<tableHeader>
+					<row>
+						<entry><para> </para></entry>
+						<entry><para>Name</para></entry>
+						<entry><para>Description</para></entry>
+					</row>
+					</tableHeader>
+					
+						<row>
+							<entry>
+								<para>
+									
+									Required
+									callbackProcedure
+									<link xlink:href="ef3d2310-dfdb-431e-8330-0d339049abff"/>
+								</para>
+							</entry>
+							<entry>
+								<para>
+									The procedure to apply after the dialog has closed.
+								</para>
+							</entry>
+							<entry>
+								<para>
+									
+								</para>
+							</entry>
+						</row>
+					
+				</table>
+			</sections>
+		</section>
+	</developerConceptualDocument>
+</topic>

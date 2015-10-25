@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="9c79de0c-9c30-b0f2-92bd-9cd7ca11f49b" revisionNumber="1" dataAlias="Rendition.UI.MenuOptionStyle#MenuOptionStyle.textAlignment">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction address="Intro">
+			Rendition.UI.MenuOptionStyle#MenuOptionStyle.textAlignment()
+			<para>The CSS text-align property of the menu option.</para>
+		</introduction>
+		<definitionTable>
+			
+			
+				<definedTerm>
+					<para>Member Of</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="4e4ffaac-14fa-34ce-e801-bc0c5adfb424"/>
+					</para>
+				</definition>
+			
+			
+				<definedTerm>
+					<para>Type</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+					</para>
+				</definition>
+			
+			
+				<definedTerm>
+					<para>Source</para>
+				</definedTerm>
+				<definition>
+					<para>
+						c:\Rendition\Rendition.Core\js\admin\UI\menuOptionElement.js
+					</para>
+				</definition>
+			
+		</definitionTable>
+	</developerConceptualDocument>
+</topic>

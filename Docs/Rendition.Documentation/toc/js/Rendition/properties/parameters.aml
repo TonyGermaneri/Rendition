@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="4e90e051-28c5-900e-773b-fa9e1c31bb73" revisionNumber="1" dataAlias="Rendition#Rendition.UI.parameters">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction address="Intro">
+			Rendition#Rendition.UI.parameters()
+			<para>Startup parameters for the main Rendition class.  Altering the parametersof this property will change the startup behaviour of Rendition class.Parameters include: events: startedloading, finishedLoading, initURL, initCallbackboolean: preventDefaultStylecollection: icons e.g.: 
+{
+	text: 'Go to Admin Page',
+	src: '/admin/img/icons/cog.png',
+	message: 'Naviage to the admin',
+	proc: function (e) {
+		window.location = '/admin';
+	}
+}</para>
+		</introduction>
+		<definitionTable>
+			
+			
+				<definedTerm>
+					<para>Member Of</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="6aa67830-fc7a-c3eb-719a-722fb4fb312e"/>
+					</para>
+				</definition>
+			
+			
+				<definedTerm>
+					<para>Type</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="91bc5ebf-dc16-c081-3eff-659b35363ea6"/>
+					</para>
+				</definition>
+			
+			
+				<definedTerm>
+					<para>Source</para>
+				</definedTerm>
+				<definition>
+					<para>
+						c:\Rendition\Rendition.Core\js\admin\UI\Arrays.js
+					</para>
+				</definition>
+			
+		</definitionTable>
+	</developerConceptualDocument>
+</topic>

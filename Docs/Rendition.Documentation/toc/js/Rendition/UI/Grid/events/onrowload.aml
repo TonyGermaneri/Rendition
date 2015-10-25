@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="0d9042a9-5834-0a00-a4da-655f6cfa24c6" revisionNumber="1" dataAlias="Rendition.UI.Grid#Grid.onrowload">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction address="Intro">
+			Rendition.UI.Grid#Grid.onrowload(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  element, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  row, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  column, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  selection, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  data, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  header)	
+			<para>Occurs after the row is loaded into the DOM after data is read in.</para>
+		</introduction>
+		<definitionTable>
+			
+			
+				<definedTerm>
+					<para>Member Of</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="f5f5d4d4-f415-cd77-8e8f-c01e6464006a"/>
+					</para>
+				</definition>
+			
+			
+				<definedTerm>
+					<para>Source</para>
+				</definedTerm>
+				<definition>
+					<para>
+						c:\Rendition\Rendition.Core\js\admin\UI\grid.js
+					</para>
+				</definition>
+			
+		</definitionTable>
+		<section address="parameters">
+		<title>Event Signature</title>
+			<sections>
+				<table>
+					<tableHeader>
+					<row>
+						<entry><para> </para></entry>
+						<entry><para>Name</para></entry>
+						<entry><para>Description</para></entry>
+					</row>
+					</tableHeader>
+					
+						<row>
+							<entry>
+								<para>
+									
+									Required
+									e
+									<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+								</para>
+							</entry>
+							<entry>
+								<para>
+									Browser event object.
+								</para>
+							</entry>
+							<entry>
+								<para>
+									
+								</para>
+							</entry>
+						</row>
+					
+						<row>
+							<entry>
+								<para>
+									
+									Required
+									grid
+									<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+								</para>
+							</entry>
+							<entry>
+								<para>
+									The grid instance firing the event.
+								</para>
+							</entry>
+							<entry>
+								<para>
+									
+								</para>
+							</entry>
+						</row>
+					
+						<row>
+							<entry>
+								<para>
+									
+									Required
+									element
+									<link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>
+								</para>
+							</entry>
+							<entry>
+								<para>
+									The DOM object the event belongs to.
+								</para>
+							</entry>
+							<entry>
+								<para>
+									
+								</para>
+							</entry>
+						</row>
+					
+						<row>
+							<entry>
+								<para>
+									
+									Required
+									row
+									<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>
+								</para>
+							</entry>
+							<entry>
+								<para>
+									The row the event occured on.
+								</para>
+							</entry>
+							<entry>
+								<para>
+									
+								</para>
+							</entry>
+						</row>
+					
+						<row>
+							<entry>
+								<para>
+									
+									Required
+									column
+									<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>
+								</para>
+							</entry>
+							<entry>
+								<para>
+									The column the event occured on.
+								</para>
+							</entry>
+							<entry>
+								<para>
+									
+								</para>
+							</entry>
+						</row>
+					
+						<row>
+							<entry>
+								<para>
+									
+									Required
+									selection
+									<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+								</para>
+							</entry>
+							<entry>
+								<para>
+									A list of the selected rows/columns depending on the current selection method.
+								</para>
+							</entry>
+							<entry>
+								<para>
+									
+								</para>
+							</entry>
+						</row>
+					
+						<row>
+							<entry>
+								<para>
+									
+									Required
+									data
+									<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+								</para>
+							</entry>
+							<entry>
+								<para>
+									The rowset data of this event.
+								</para>
+							</entry>
+							<entry>
+								<para>
+									
+								</para>
+							</entry>
+						</row>
+					
+						<row>
+							<entry>
+								<para>
+									
+									Required
+									header
+									<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+								</para>
+							</entry>
+							<entry>
+								<para>
+									The rowset data of this event.
+								</para>
+							</entry>
+							<entry>
+								<para>
+									
+								</para>
+							</entry>
+						</row>
+					
+				</table>
+			</sections>
+		</section>
+		<alert class="tip">
+			<para>There are two ways to add event listeners.</para>
+		</alert>
+		<para>
+			1. You can attach to events as a parameter when you create the object.
+			<code language="javascript">
+				var foo = new object({
+					event:function(signature){
+						/* event procedure */
+					}
+				});
+			</code>
+			2. Or you can add the event after the object has been instantiated.
+			<code language="javascript">
+				var foo = new object();
+				foo.addEventListener('event',function(signature){
+					/* event procedure */
+				}, false);
+			</code>
+		</para>
+	</developerConceptualDocument>
+</topic>

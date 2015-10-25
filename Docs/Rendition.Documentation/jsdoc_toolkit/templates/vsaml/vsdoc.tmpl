@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+{!
+	var AMLIDAdd = "";
+	var classType = "";
+	if (data.isBuiltin()) {
+		classType += "Built-In ";
+	}
+	if (data.isNamespace) {
+		if (data.is('FUNCTION')) {
+			classType += "Function ";
+		}
+		classType += "Namespace ";
+		AMLIDAdd = "N";
+	} else {
+		classType += "Class ";
+	}
+	var ownEvents = data.events.filter(function($){return $.memberOf == data.alias  && !$.isNamespace}).sort(makeSortby("name"));
+	var ownMethods = data.methods.filter(function($){return $.memberOf == data.alias  && !$.isNamespace}).sort(makeSortby("name")); 
+	var ownProperties = data.properties.filter(function($){return $.memberOf == data.alias && !$.isNamespace}).sort(makeSortby("name"));
+!}
+<for each="member" in="data.methods">
+	{+member+}{+makeSignature(member.params)+}
+</for>

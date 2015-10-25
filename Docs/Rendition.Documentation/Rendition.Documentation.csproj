@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8E9C9275-395E-4BEE-BD35-FF82C6AEBA15}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Rendition</RootNamespace>
+    <AssemblyName>Rendition.Documentation</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="jsdoc_toolkit\app\frame.js" />
+    <Content Include="jsdoc_toolkit\app\frame\Chain.js" />
+    <Content Include="jsdoc_toolkit\app\frame\Dumper.js" />
+    <Content Include="jsdoc_toolkit\app\frame\Hash.js" />
+    <Content Include="jsdoc_toolkit\app\frame\Link.js" />
+    <Content Include="jsdoc_toolkit\app\frame\Namespace.js" />
+    <Content Include="jsdoc_toolkit\app\frame\Opt.js" />
+    <Content Include="jsdoc_toolkit\app\frame\Reflection.js" />
+    <Content Include="jsdoc_toolkit\app\frame\String.js" />
+    <Content Include="jsdoc_toolkit\app\frame\Testrun.js" />
+    <Content Include="jsdoc_toolkit\app\handlers\FOODOC.js" />
+    <Content Include="jsdoc_toolkit\app\handlers\XMLDOC.js" />
+    <Content Include="jsdoc_toolkit\app\handlers\XMLDOC\DomReader.js" />
+    <Content Include="jsdoc_toolkit\app\handlers\XMLDOC\XMLDoc.js" />
+    <Content Include="jsdoc_toolkit\app\handlers\XMLDOC\XMLParse.js" />
+    <Content Include="jsdoc_toolkit\app\lib\JSDOC.js" />
+    <Content Include="jsdoc_toolkit\app\lib\JSDOC\DocComment.js" />
+    <Content Include="jsdoc_toolkit\app\lib\JSDOC\DocTag.js" />
+    <Content Include="jsdoc_toolkit\app\lib\JSDOC\JsDoc.js" />
+    <Content Include="jsdoc_toolkit\app\lib\JSDOC\JsPlate.js" />
+    <Content Include="jsdoc_toolkit\app\lib\JSDOC\Lang.js" />
+    <Content Include="jsdoc_toolkit\app\lib\JSDOC\Parser.js" />
+    <Content Include="jsdoc_toolkit\app\lib\JSDOC\PluginManager.js" />
+    <Content Include="jsdoc_toolkit\app\lib\JSDOC\Symbol.js" />
+    <Content Include="jsdoc_toolkit\app\lib\JSDOC\SymbolSet.js" />
+    <Content Include="jsdoc_toolkit\app\lib\JSDOC\TextStream.js" />
+    <Content Include="jsdoc_toolkit\app\lib\JSDOC\Token.js" />
+    <Content Include="jsdoc_toolkit\app\lib\JSDOC\TokenReader.js" />
+    <Content Include="jsdoc_toolkit\app\lib\JSDOC\TokenStream.js" />
+    <Content Include="jsdoc_toolkit\app\lib\JSDOC\Util.js" />
+    <Content Include="jsdoc_toolkit\app\lib\JSDOC\Walker.js" />
+    <Content Include="jsdoc_toolkit\app\main.js" />
+    <Content Include="jsdoc_toolkit\app\plugins\commentSrcJson.js" />
+    <Content Include="jsdoc_toolkit\app\plugins\frameworkPrototype.js" />
+    <Content Include="jsdoc_toolkit\app\plugins\functionCall.js" />
+    <Content Include="jsdoc_toolkit\app\plugins\publishSrcHilite.js" />
+    <Content Include="jsdoc_toolkit\app\plugins\symbolLink.js" />
+    <Content Include="jsdoc_toolkit\app\plugins\tagParamConfig.js" />
+    <Content Include="jsdoc_toolkit\app\plugins\tagSynonyms.js" />
+    <Content Include="jsdoc_toolkit\app\run.js" />
+    <Content Include="jsdoc_toolkit\app\test.js" />
+    <Content Include="jsdoc_toolkit\app\test\addon.js" />
+    <Content Include="jsdoc_toolkit\app\test\anon_inner.js" />
+    <Content Include="jsdoc_toolkit\app\test\augments.js" />
+    <Content Include="jsdoc_toolkit\app\test\augments2.js" />
+    <Content Include="jsdoc_toolkit\app\test\borrows.js" />
+    <Content Include="jsdoc_toolkit\app\test\borrows2.js" />
+    <Content Include="jsdoc_toolkit\app\test\config.js" />
+    <Content Include="jsdoc_toolkit\app\test\constructs.js" />
+    <Content Include="jsdoc_toolkit\app\test\encoding.js" />
+    <Content Include="jsdoc_toolkit\app\test\encoding_other.js" />
+    <Content Include="jsdoc_toolkit\app\test\event.js" />
+    <Content Include="jsdoc_toolkit\app\test\exports.js" />
+    <Content Include="jsdoc_toolkit\app\test\functions_anon.js" />
+    <Content Include="jsdoc_toolkit\app\test\functions_nested.js" />
+    <Content Include="jsdoc_toolkit\app\test\global.js" />
+    <Content Include="jsdoc_toolkit\app\test\globals.js" />
+    <Content Include="jsdoc_toolkit\app\test\ignore.js" />
+    <Content Include="jsdoc_toolkit\app\test\inner.js" />
+    <Content Include="jsdoc_toolkit\app\test\jsdoc_test.js" />
+    <Content Include="jsdoc_toolkit\app\test\lend.js" />
+    <Content Include="jsdoc_toolkit\app\test\memberof.js" />
+    <Content Include="jsdoc_toolkit\app\test\memberof_constructor.js" />
+    <Content Include="jsdoc_toolkit\app\test\module.js" />
+    <Content Include="jsdoc_toolkit\app\test\name.js" />
+    <Content Include="jsdoc_toolkit\app\test\namespace_nested.js" />
+    <Content Include="jsdoc_toolkit\app\test\nocode.js" />
+    <Content Include="jsdoc_toolkit\app\test\oblit_anon.js" />
+    <Content Include="jsdoc_toolkit\app\test\overview.js" />
+    <Content Include="jsdoc_toolkit\app\test\params_optional.js" />
+    <Content Include="jsdoc_toolkit\app\test\param_inline.js" />
+    <Content Include="jsdoc_toolkit\app\test\prototype.js" />
+    <Content Include="jsdoc_toolkit\app\test\prototype_nested.js" />
+    <Content Include="jsdoc_toolkit\app\test\prototype_oblit.js" />
+    <Content Include="jsdoc_toolkit\app\test\prototype_oblit_constructor.js" />
+    <Content Include="jsdoc_toolkit\app\test\public.js" />
+    <Content Include="jsdoc_toolkit\app\test\scripts\code.js" />
+    <Content Include="jsdoc_toolkit\app\test\scripts\notcode.txt" />
+    <Content Include="jsdoc_toolkit\app\test\shared.js" />
+    <Content Include="jsdoc_toolkit\app\test\shared2.js" />
+    <Content Include="jsdoc_toolkit\app\test\shortcuts.js" />
+    <Content Include="jsdoc_toolkit\app\test\static_this.js" />
+    <Content Include="jsdoc_toolkit\app\test\synonyms.js" />
+    <Content Include="jsdoc_toolkit\app\test\tosource.js" />
+    <Content Include="jsdoc_toolkit\app\test\variable_redefine.js" />
+    <Content Include="jsdoc_toolkit\app\t\runner.js" />
+    <Content Include="jsdoc_toolkit\app\t\TestDoc.js" />
+    <Content Include="jsdoc_toolkit\changes.txt" />
+    <Content Include="jsdoc_toolkit\java\build.xml" />
+    <Content Include="jsdoc_toolkit\java\build_1.4.xml" />
+    <Content Include="jsdoc_toolkit\java\classes\js.jar" />
+    <Content Include="jsdoc_toolkit\java\src\JsDebugRun.java" />
+    <Content Include="jsdoc_toolkit\java\src\JsRun.java" />
+    <Content Include="jsdoc_toolkit\jsdebug.jar" />
+    <Content Include="jsdoc_toolkit\jsrun.jar" />
+    <Content Include="jsdoc_toolkit\README.txt" />
+    <Content Include="jsdoc_toolkit\templates\jsdoc\publish.js" />
+    <Content Include="jsdoc_toolkit\templates\jsdoc\static\default.css" />
+    <Content Include="jsdoc_toolkit\templates\jsdoc\static\header.html" />
+    <Content Include="jsdoc_toolkit\templates\jsdoc\static\index.html" />
+    <Content Include="jsdoc_toolkit\templates\outline\jsdoc-changes\app\frame\Link.js" />
+    <Content Include="jsdoc_toolkit\templates\outline\jsdoc-changes\app\plugins\publishSrcHilite.js" />
+    <Content Include="jsdoc_toolkit\templates\outline\publish.js" />
+    <Content Include="jsdoc_toolkit\templates\outline\static\code.css" />
+    <Content Include="jsdoc_toolkit\templates\outline\static\cssIEfixed.html" />
+    <Content Include="jsdoc_toolkit\templates\outline\static\default.css" />
+    <Content Include="jsdoc_toolkit\templates\outline\static\header.html" />
+    <Content Include="jsdoc_toolkit\templates\outline\static\images\bg.png" />
+    <Content Include="jsdoc_toolkit\templates\outline\static\images\classfo_obj.png" />
+    <Content Include="jsdoc_toolkit\templates\outline\static\images\class_default_obj.png" />
+    <Content Include="jsdoc_toolkit\templates\outline\static\images\class_obj.png" />
+    <Content Include="jsdoc_toolkit\templates\outline\static\images\collapsebtn.gif" />
+    <Content Include="jsdoc_toolkit\templates\outline\static\images\collapsed.png" />
+    <Content Include="jsdoc_toolkit\templates\outline\static\images\expandbtn.gif" />
+    <Content Include="jsdoc_toolkit\templates\outline\static\images\expanded.png" />
+    <Content Include="jsdoc_toolkit\templates\outline\static\images\field_default_obj.png" />
+    <Content Include="jsdoc_toolkit\templates\outline\static\images\field_private_obj.png" />
+    <Content Include="jsdoc_toolkit\templates\outline\static\images\field_protected_obj.png" />
+    <Content Include="jsdoc_toolkit\templates\outline\static\images\field_public_obj.png" />
+    <Content Include="jsdoc_toolkit\templates\outline\static\images\file_obj.png" />
+    <Content Include="jsdoc_toolkit\templates\outline\static\images\method_default_obj.png" />
+    <Content Include="jsdoc_toolkit\templates\outline\static\images\method_private_obj.png" />
+    <Content Include="jsdoc_toolkit\templates\outline\static\images\method_protected_obj.png" />
+    <Content Include="jsdoc_toolkit\templates\outline\static\images\method_public_obj.png" />
+    <Content Include="jsdoc_toolkit\templates\outline\static\images\minus.gif" />
+    <Content Include="jsdoc_toolkit\templates\outline\static\images\namespace_function_obj.png" />
+    <Content Include="jsdoc_toolkit\templates\outline\static\images\namespace_obj.png" />
+    <Content Include="jsdoc_toolkit\templates\outline\static\images\never_translate.png" />
+    <Content Include="jsdoc_toolkit\templates\outline\static\images\plus.gif" />
+    <Content Include="jsdoc_toolkit\templates\outline\static\index.html" />
+    <Content Include="jsdoc_toolkit\templates\outline\static\jproton.js" />
+    <Content Include="jsdoc_toolkit\templates\outline\static\sh.css" />
+    <Content Include="jsdoc_toolkit\templates\outline\static\sh.js" />
+    <Content Include="jsdoc_toolkit\templates\outline\static\ui.js" />
+    <Content Include="jsdoc_toolkit\templates\vsaml\publish.js" />
+    <Content Include="jsdoc_toolkit\templates\vsdoc\publish.js" />
+    <Content Include="Rendition.shfbproj" />
+    <Content Include="toc\img\privateevent.gif" />
+    <Content Include="toc\img\privatefield.gif" />
+    <Content Include="toc\img\privatemethod.gif" />
+    <Content Include="toc\img\privateproperty.gif" />
+    <Content Include="toc\img\protectedmethod.gif" />
+    <Content Include="toc\img\publicevent.gif" />
+    <Content Include="toc\img\publicextension.gif" />
+    <Content Include="toc\img\publicfield.gif" />
+    <Content Include="toc\img\publicmethod.gif" />
+    <Content Include="toc\img\publicproperty.gif" />
+    <Content Include="toc\img\static.gif" />
+    <Content Include="vsdoc\vsdoc.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="jsdoc_toolkit\build_rendition.bat" />
+    <None Include="jsdoc_toolkit\build_renditionPrivate.bat" />
+    <None Include="jsdoc_toolkit\build_rendition_vsdoc.bat" />
+    <None Include="jsdoc_toolkit\conf\sample.conf" />
+    <None Include="jsdoc_toolkit\jsrun.sh" />
+    <None Include="jsdoc_toolkit\templates\jsdoc\allclasses.tmpl" />
+    <None Include="jsdoc_toolkit\templates\jsdoc\allfiles.tmpl" />
+    <None Include="jsdoc_toolkit\templates\jsdoc\class.tmpl" />
+    <None Include="jsdoc_toolkit\templates\jsdoc\index.tmpl" />
+    <None Include="jsdoc_toolkit\templates\jsdoc\symbol.tmpl" />
+    <None Include="jsdoc_toolkit\templates\outline\allclasses.tmpl" />
+    <None Include="jsdoc_toolkit\templates\outline\allfiles.tmpl" />
+    <None Include="jsdoc_toolkit\templates\outline\class.tmpl" />
+    <None Include="jsdoc_toolkit\templates\outline\index.tmpl" />
+    <None Include="jsdoc_toolkit\templates\outline\symbol.tmpl" />
+    <None Include="jsdoc_toolkit\templates\vsaml\class.tmpl" />
+    <None Include="jsdoc_toolkit\templates\vsaml\event.tmpl" />
+    <None Include="jsdoc_toolkit\templates\vsaml\events.tmpl" />
+    <None Include="jsdoc_toolkit\templates\vsaml\method.tmpl" />
+    <None Include="jsdoc_toolkit\templates\vsaml\methods.tmpl" />
+    <None Include="jsdoc_toolkit\templates\vsaml\properties.tmpl" />
+    <None Include="jsdoc_toolkit\templates\vsaml\property.tmpl" />
+    <None Include="jsdoc_toolkit\templates\vsaml\vsdoc.tmpl" />
+    <None Include="jsdoc_toolkit\templates\vsdoc\vsdoc.tmpl" />
+    <None Include="JS_Reference_Template.aml" />
+    <None Include="toc\Sales Receipt Example.aml" />
+    <None Include="toc\toc.content" />
+    <None Include="toc\toc_commerceAppliationHelp.aml" />
+    <None Include="toc\toc_commerce\toc_commerce_categoryEditor.aml" />
+    <None Include="toc\toc_commerce\toc_commerce_changeStatus.aml" />
+    <None Include="toc\toc_commerce\toc_commerce_contextMenu.aml" />
+    <None Include="toc\toc_commerce\toc_commerce_generalLedger.aml" />
+    <None Include="toc\toc_commerce\toc_commerce_inventory.aml" />
+    <None Include="toc\toc_commerce\toc_commerce_itemEditor.aml" />
+    <None Include="toc\toc_commerce\toc_commerce_makePayment.aml" />
+    <None Include="toc\toc_commerce\toc_commerce_orderEditor.aml" />
+    <None Include="toc\toc_commerce\toc_commerce_productionAging.aml" />
+    <None Include="toc\toc_commerce\toc_commerce_productionPicklist.aml" />
+    <None Include="toc\toc_commerce\toc_commerce_salesJournal.aml" />
+    <None Include="toc\toc_commerce\toc_commerce_shipping.aml" />
+    <None Include="toc\toc_commerce\toc_commerce_userEditor.aml" />
+    <None Include="toc\toc_contentAppliationHelp.aml" />
+    <None Include="toc\toc_content\toc_content_blogEditor.aml" />
+    <None Include="toc\toc_content\toc_content_gallery.aml" />
+    <None Include="toc\toc_content\toc_content_seo.aml" />
+    <None Include="toc\toc_frontEndDesign.aml" />
+    <None Include="toc\toc_frontEndDesignQueryString.aml" />
+    <None Include="toc\toc_frontEndDesign\toc_fontEndDesign_blogaspx.aml" />
+    <None Include="toc\toc_frontEndDesign\toc_fontEndDesign_cartaspx.aml" />
+    <None Include="toc\toc_frontEndDesign\toc_fontEndDesign_checkoutaspx.aml" />
+    <None Include="toc\toc_frontEndDesign\toc_fontEndDesign_defaultaspx.aml" />
+    <None Include="toc\toc_frontEndDesign\toc_fontEndDesign_detailaspx.aml" />
+    <None Include="toc\toc_frontEndDesign\toc_fontEndDesign_fileNotFoundaspx.aml" />
+    <None Include="toc\toc_frontEndDesign\toc_fontEndDesign_headermaster.aml" />
+    <None Include="toc\toc_frontEndDesign\toc_fontEndDesign_listaspx.aml" />
+    <None Include="toc\toc_frontEndDesign\toc_fontEndDesign_myAccountaspx.aml" />
+    <None Include="toc\toc_frontEndDesign\toc_fontEndDesign_replyaspx.aml" />
+    <None Include="toc\toc_frontEndDesign\toc_fontEndDesign_robotstxt.aml" />
+    <None Include="toc\toc_frontEndDesign\toc_fontEndDesign_webconfig.aml" />
+    <None Include="toc\toc_install.aml" />
+    <None Include="toc\toc_js_commerce.aml" />
+    <None Include="toc\toc_js_json.aml" />
+    <None Include="toc\toc_js_welcome.aml" />
+    <None Include="toc\toc_manual_setup.aml" />
+    <None Include="toc\toc_pdf_authoring.aml" />
+    <None Include="toc\toc_pdf_Chart_Example.aml" />
+    <None Include="toc\toc_pdf_Packing_Slip_Example.aml" />
+    <None Include="toc\toc_pdf_Sales_Receipt_Example.aml" />
+    <None Include="toc\toc_plugins.aml" />
+    <None Include="toc\toc_plugins_authoring.aml" />
+    <None Include="toc\toc_setup.aml" />
+    <None Include="toc\toc_siteAppliationHelp.aml" />
+    <None Include="toc\toc_site\toc_site_email.aml" />
+    <None Include="toc\toc_site\toc_site_imagingTemplates.aml" />
+    <None Include="toc\toc_site\toc_site_import.aml" />
+    <None Include="toc\toc_site\toc_site_logon.aml" />
+    <None Include="toc\toc_site\toc_site_scripting.aml" />
+    <None Include="toc\toc_site\toc_site_search.aml" />
+    <None Include="toc\toc_site\toc_site_siteconfiguration.aml" />
+    <None Include="toc\toc_site\toc_site_sitestats.aml" />
+    <None Include="toc\toc_site\toc_site_urlrewrite.aml" />
+    <None Include="toc\toc_welcome.aml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="jsdoc_toolkit\out\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

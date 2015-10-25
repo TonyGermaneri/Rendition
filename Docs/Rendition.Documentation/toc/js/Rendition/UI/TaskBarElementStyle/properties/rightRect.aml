@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="9b0e20f7-60eb-df1b-1d6c-fad507f48127" revisionNumber="1" dataAlias="Rendition.UI.TaskBarElementStyle#TaskBarElementStyle.rightRect">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction address="Intro">
+			Rendition.UI.TaskBarElementStyle#TaskBarElementStyle.rightRect()
+			<para>This rect represents the height and width of the right side element.This object looks like { x: 0, y: 0, h: 20, w: 5 }.</para>
+		</introduction>
+		<definitionTable>
+			
+			
+				<definedTerm>
+					<para>Member Of</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="c345e4c0-d66f-c868-d06f-7c2052d18186"/>
+					</para>
+				</definition>
+			
+			
+				<definedTerm>
+					<para>Type</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+					</para>
+				</definition>
+			
+			
+				<definedTerm>
+					<para>Source</para>
+				</definedTerm>
+				<definition>
+					<para>
+						c:\Rendition\Rendition.Core\js\admin\UI\taskbarElement.js
+					</para>
+				</definition>
+			
+		</definitionTable>
+	</developerConceptualDocument>
+</topic>

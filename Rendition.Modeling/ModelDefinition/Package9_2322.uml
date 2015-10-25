@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="3bc11add-f3ca-4082-b4bc-d1d2df7aa540"
+  name="RegularExpressions"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="2bb53132-4208-49af-9ecd-c189a2be31c9"
+      handle="viewcode://./CodeSchema_Namespace?Namespace=System.Text.RegularExpressions"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="dc700ab5-04d9-4e61-bf0a-c1a1b1c61d91"
+        name="Regex"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="6dd53893-3949-43ff-bd92-3d74985fca95"
+            handle="viewcode://./CodeSchema_Class?Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.dll&quot; Namespace=System.Text.RegularExpressions Type=Regex"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="c76dbd19-88b9-4f91-959b-8a06af732b04"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="fdbc7f0b-3269-4ab4-98ef-cbc069a36113">
+                <propertyInstance
+                  Id="173b48a7-d47a-4270-aae8-c2d5101427a4"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e64f8044-a513-4fdd-a001-e4b73fcef81a">
+                <propertyInstance
+                  Id="52ffdf82-2e03-4d7d-8afd-d6c767de1b52"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="93492c10-40a9-40f3-a616-95a723493187">
+                <propertyInstance
+                  Id="20001029-1f49-41f2-9f5e-474975ee8ddc"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7dd46dc5-a28e-445d-a0a4-42c9cc8e914c">
+                <propertyInstance
+                  Id="f8f56413-b894-40a6-851e-1c8241a203d8"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b63d8ef1-2604-4292-b13b-589f33278256">
+                <propertyInstance
+                  Id="2eef7c84-730c-49d9-8c43-f8e706e6958c"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="9d52c262-2948-4bea-83b3-6da383c63fff"
+        name="RegexOptions"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="0f792c94-6427-443f-be58-615cbdc749f0"
+            handle="viewcode://./CodeSchema_Enum?Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.dll&quot; Namespace=System.Text.RegularExpressions Type=RegexOptions"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="4fcfcb18-888b-4359-bd5a-5c4af48f0082"
+            name="enum"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c845e0a4-eec0-4855-ab38-93951c633d66">
+                <propertyInstance
+                  Id="d429fedc-1fe4-402b-89d5-dd3370df744c"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0dda29f1-f719-485f-8c86-f7e6586014ab">
+                <propertyInstance
+                  Id="2f14bfee-d024-48db-8a18-21d38b05983a"
+                  name="BaseType"
+                  value="int" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d58b9a72-4ebe-4d90-a9f3-24f4c4957a37">
+                <propertyInstance
+                  Id="e8040ac3-4a8c-4ecd-bc8d-e40500e48c92"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </enumeration>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

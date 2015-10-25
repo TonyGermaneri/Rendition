@@ -1,0 +1,2585 @@
+﻿<html xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+  <head>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8" />
+    <META NAME="save" CONTENT="history" />
+    <title>Rendition</title>
+    <meta name="Language" content="en-us" />
+    <meta name="Microsoft.Help.Id" content="4e4d1c40-6170-f41c-0ca7-87912430cd3d" />
+    <meta name="Description" content="Rendition Javascript framework" />
+    <meta name="Microsoft.Help.ContentType" content="Concepts" />
+    <link rel="stylesheet" type="text/css" href="../styles/Presentation.css" />
+    <link rel="stylesheet" type="text/css" href="ms-help://Hx/HxRuntime/HxLink.css" />
+    <script type="text/javascript" src="../scripts/EventUtilities.js"> </script>
+    <script type="text/javascript" src="../scripts/SplitScreen.js"> </script>
+    <script type="text/javascript" src="../scripts/Dropdown.js"> </script>
+    <script type="text/javascript" src="../scripts/script_manifold.js"> </script>
+    <script type="text/javascript" src="../scripts/script_feedBack.js"> </script>
+    <script type="text/javascript" src="../scripts/CheckboxMenu.js"> </script>
+    <script type="text/javascript" src="../scripts/CommonUtilities.js"> </script>
+    <xml>
+      <MSHelp:Keyword Index="A" Term="4e4d1c40-6170-f41c-0ca7-87912430cd3d" />
+      <MSHelp:Attr Name="RevisionNumber" Value="1" />
+      <MSHelp:Attr Name="AssetID" Value="4e4d1c40-6170-f41c-0ca7-87912430cd3d" />
+      <MSHelp:Attr Name="Abstract" Value="Rendition Javascript framework" />
+      <MSHelp:Attr Name="TopicType" Value="kbArticle" />
+      <MSHelp:Attr Name="Locale" Value="en-us" />
+    </xml>
+    <link type="text/css" rel="stylesheet" href="../styles/highlight.css" />
+    <script type="text/javascript" src="../scripts/highlight.js"> </script>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <input type="hidden" id="hiddenScrollOffset" />
+    <img id="collapseImage" style="display:none; height:0; width:0;" src="../icons/collapse_all.gif" alt="Collapse image" title="Collapse image" />
+    <img id="expandImage" style="display:none; height:0; width:0;" src="../icons/expand_all.gif" alt="Expand Image" title="Expand Image" />
+    <img id="collapseAllImage" style="display:none; height:0; width:0;" src="../icons/collapse_all.gif" />
+    <img id="expandAllImage" style="display:none; height:0; width:0;" src="../icons/expand_all.gif" />
+    <img id="dropDownImage" style="display:none; height:0; width:0;" src="../icons/dropdown.gif" />
+    <img id="dropDownHoverImage" style="display:none; height:0; width:0;" src="../icons/dropdownHover.gif" />
+    <img id="copyImage" style="display:none; height:0; width:0;" src="../icons/copycode.gif" alt="Copy image" title="Copy image" />
+    <img id="copyHoverImage" style="display:none; height:0; width:0;" src="../icons/copycodeHighlight.gif" alt="CopyHover image" title="CopyHover image" />
+    <div id="header">
+      <table id="topTable" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <span onclick="ExpandCollapseAll(toggleAllImage)" style="cursor:default;" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage, event)" tabindex="0">
+              <img ID="toggleAllImage" class="toggleAll" src="../icons/collapse_all.gif" /> <label id="collapseAllLabel" for="toggleAllImage" style="display: none;">Collapse All</label><label id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand All</label> </span>
+            <span>    </span>
+            <span id="devlangsDropdown" class="filter" tabindex="0">
+              <img id="devlangsDropdownImage" src="../icons/dropdown.gif" /> <label id="devlangsMenuAllLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: All </nobr></label><label id="devlangsMenuMultipleLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: Multiple </nobr></label><label id="devlangsMenuCSharpLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: C# </nobr></label><label id="devlangsMenuJavaScriptLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: JavaScript </nobr></label></span>
+          </td>
+        </tr>
+      </table>
+      <div id="devlangsMenu">
+        <input id="CSharpCheckbox" type="checkbox" data="CSharp,cs,'persist'" value="on" onClick="SetLanguage(this)" />
+        <label class="checkboxLabel" for="CSharpCheckbox">C#</label>
+        <br />
+        <input id="JavaScriptCheckbox" type="checkbox" data="JavaScript,cs,'persist'" value="on" onClick="SetLanguage(this)" />
+        <label class="checkboxLabel" for="JavaScriptCheckbox">JavaScript</label>
+        <br />
+      </div>
+      <table id="bottomTable" cellpadding="0" cellspacing="0">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">Rendition E-Commerce Framework</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">Rendition</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td align="left">
+            <span id="headfeedbackarea" class="feedbackhead">
+              <a href="javascript:SubmitFeedback('tonygermaneri@gmail.com','Rendition E-Commerce Framework','','1.0.0.0','','%0\dYour%20feedback%20is%20used%20to%20improve%20the%20documentation%20and%20the%20product.%20Your%20e-mail%20address%20will%20not%20be%20used%20for%20any%20other%20purpose%20and%20is%20disposed%20of%20after%20the%20issue%20you%20report%20is%20resolved.%20%20While%20working%20to%20resolve%20the%20issue%20that%20you%20report,%20you%20may%20be%20contacted%20via%20e-mail%20to%20get%20further%20details%20or%20clarification%20on%20the%20feedback%20you%20sent.%20After%20the%20issue%20you%20report%20has%20been%20addressed,%20you%20may%20receive%20an%20e-mail%20to%20let%20you%20know%20that%20your%20feedback%20has%20been%20addressed.%0\A%0\d','Customer%20Feedback');">Send Feedback</a>
+            </span>
+          </td>
+        </tr>
+      </table>
+      <table id="gradientTable">
+        <tr>
+          <td class="nsrBottom" background="../icons/gradient.gif" />
+        </tr>
+      </table>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" />
+        <span style="color: DarkGray">
+          <p style="color: #dc143c; font-size: 8.5pt; font-weight: bold;">[This is preliminary documentation and is subject to change.]</p>
+        </span>
+        <a name="Intro"> </a>
+        <div class="introduction">
+			Namespace Rendition
+			<p>Rendition Javascript framework</p></div>
+        <p>
+          <dl class="authored">
+            <dt>
+              <p>Source</p>
+            </dt>
+            <dd>
+              <p>
+							c:\Rendition\Rendition.Core\js\admin\UI\UI.js
+						</p>
+            </dd>
+          </dl>
+        </p>
+        <a name="fields"> </a>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(sectionToggleID0EEAAA)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(sectionToggleID0EEAAA, event)" tabindex="0">
+            <img id="sectionToggleID0EEAAA" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Properties</span>
+        </h1>
+        <div id="sectionSectionID0EEAAA" class="section" name="collapseableSection" style="">
+          <div class="tableSection">
+            <table width="50%" cellspacing="2" cellpadding="5" frame="lhs">
+              <tr>
+                <th>
+                  <p />
+                </th>
+                <th>
+                  <p>Name</p>
+                </th>
+                <th>
+                  <p>Type</p>
+                </th>
+                <th>
+                  <p>Description</p>
+                </th>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="cc02892a-c85a-7c1a-173b-54a9708e2743.htm">aceThemes</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <span class="nolink">[472b7ba4-e5e3-1f30-82ee-1fb5a1239eec]</span>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Associative array of ace themes.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="cf1fc5df-32af-0ec2-cb8d-5d0a6e3d1834.htm">AjaxRequestRestTimeout</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="36802977-faa0-b394-beea-eebbbc3b2d5a.htm">Integer</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Numbmer of ms to wait between checking the AJAX reqest queue
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="12ce4367-6b61-f3aa-1ae4-91313636d1e6.htm">AjaxRequests</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536.htm">Array</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Array of pending AJAX requests.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="faba4a41-b525-313f-cf91-27ae8a1ecf84.htm">alpha</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <span class="nolink">[472b7ba4-e5e3-1f30-82ee-1fb5a1239eec]</span>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Array of character to px size converstions for the truncate text procedure.  Each member looks like ['a',7].
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="9cd16695-d8d2-716a-35d3-5a9f01568867.htm">android</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="feb87a09-e36a-9baa-3c23-409ea79458a9.htm">Boolean</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Detects android within the user agent string.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="e94d6c4d-f3ba-6ffd-fc75-5ee2ab9fae52.htm">autocompleteCallback</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="ef3d2310-dfdb-431e-8330-0d339049abff.htm">Function</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										This function processes the data returned from the server when the Rendition.UI.autocompleteURL
+is sent.  The type returned by this function must be a <span sdata="link"><a href="de0fdb88-125a-3606-d0af-83173204d97b.htm">DataSet</a></span>.
+The signature of the function is 
+Function(XMLHttpRequest e, <span sdata="link"><a href="c3297b0d-9e44-0956-efe9-aba03ac86241.htm">AutoComplete</a></span> autoComplete).
+The default function uses the C# Rendition.admin.dataSet method.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="a9a6b1ed-7c22-761e-e6d6-fe480b3c0a04.htm">autocompleteURL</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="ef3d2310-dfdb-431e-8330-0d339049abff.htm">Function</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The URL <span sdata="link"><a href="c3297b0d-9e44-0956-efe9-aba03ac86241.htm">AutoComplete</a></span> class uses to select data.
+The function's signature is: Function(objectName, suffix, from,
+to, searchSuffix, aggregateColumns, selectedRows, outputType, includeSchema,
+checksum, del, orderBy, orderDirection, autoComplete).
+The result will be sent to the Rendition.UI.autocompleteCallback procedure which
+must return a <span sdata="link"><a href="de0fdb88-125a-3606-d0af-83173204d97b.htm">DataSet</a></span>.
+The default function calls the C# Rendition.admin.dataSet method.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="7d6ad427-8055-3df8-aebe-f6a354651d41.htm">axis</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <span class="nolink">[472b7ba4-e5e3-1f30-82ee-1fb5a1239eec]</span>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										List of axis values. ['horizontal','Horizontal'], ['vertical','Vertical'].
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="0e8a37ee-ae3e-7745-0603-2477ad30e1d0.htm">Charts</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536.htm">Array</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										List of <span sdata="link"><a href="fce458ca-7a4b-caad-c699-ee63d754ab9a.htm">Chart</a></span> widgets.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="b1c209c1-90fb-5fa4-1c61-44a90a7d165e.htm">chats</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536.htm">Array</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										List of <span sdata="link"><a href="580bee40-6e91-84ad-dd13-8d53bfcccfc6.htm">Chat</a></span> elements.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="d088b717-bf30-5410-3da3-5b4d8bbd0eb0.htm">chrome</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="feb87a09-e36a-9baa-3c23-409ea79458a9.htm">Boolean</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Detects Chrome within the user agent string.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="444082d8-5616-59ca-a0a7-f355f708b840.htm">clientServerSyncDelay</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="36802977-faa0-b394-beea-eebbbc3b2d5a.htm">Integer</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Client server sync delay.  How long between update intervals.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="6b43d0ed-6ca6-8e71-249e-72b373b6d275.htm">clientServerSyncPublicURI</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Computed URI from Rendition.UI.clientServerSyncPublicURL. ( URL+"?" )
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="cd498e54-df36-4ecf-a025-9f2cd252c4de.htm">clientServerSyncPublicURL</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The base URL to the public responder page.  Defaults to /responder.
+This responder should respond to sessions that have yet to logon as administrators.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="d455485f-2324-5307-5f97-2bb2bc9323be.htm">clientServerSyncURI</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Computed URI from Rendition.UI.clientServerSyncURL. ( URL+"?" )
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="9574e956-6efe-75da-765a-2f436f0b4c3e.htm">clientServerSyncURL</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The base URL to the admin responder page.  Defaults to /admin/responder.
+This responder should only respond to users who authenticate as administrators.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="d075fcd3-0adf-424f-0abe-d5b0b2e01e65.htm">ContextMenuElementStyle</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Default <span sdata="link"><a href="4e4ffaac-14fa-34ce-e801-bc0c5adfb424.htm">MenuOptionStyle</a></span> for 
+<span sdata="link"><a href="a5e7dfb3-38c2-2bd7-2b10-296236596828.htm">ContextMenu</a></span><span sdata="link"><a href="c807995d-75de-b263-6de4-c0f04686a0bb.htm">MenuOptionElement</a></span> elements.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="c6924bb7-dcd9-33a4-3bb7-25e4e3814732.htm">contextMenus</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536.htm">Array</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										List of <span sdata="link"><a href="a5e7dfb3-38c2-2bd7-2b10-296236596828.htm">ContextMenu</a></span> widgets.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="429e5f84-d647-20b2-2793-c042fc6e333c.htm">contextStyle</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Default <span sdata="link"><a href="99f3223b-7968-fc9f-5485-ac052ac77c84.htm">ContextMenuStyle</a></span>.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="f82e7d77-c673-7130-8258-c18e3555277b.htm">controlInput</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0.htm">DHTMLElement</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Master key control input.  Used for shortcut keys.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="035c27b3-d343-29a9-8437-ee8eee0fd85a.htm">cutterBars</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536.htm">Array</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										List of <span sdata="link"><a href="fab5a013-d39a-f9f0-2198-075dc2427351.htm">CutterBar</a></span> widgets.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="a843e647-c964-0503-b6e0-54e2fd8193fa.htm">cutterStyle</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Default <span sdata="link"><a href="07fe8af3-eda5-dfad-9ce9-6bfe56d71486.htm">CutterBarStyle</a></span>.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="2be54271-770c-e57c-84f7-60549d312bc5.htm">dateMatchPattern</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="0e75107c-7256-d3b9-002e-9a129956fafb.htm">RegExp</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Regular Expression for dates between 1900-2199 in this format mm/dd/yyyy.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="f39b08f7-2fdd-1b07-6f61-18538c7bc2f5.htm">defaultGridStyle</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Default <span sdata="link"><a href="2508e2c4-ff9f-64fe-86b1-364162eaeba9.htm">GridStyle</a></span>.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="f30d855d-4fc2-e0b6-008d-f74f5eb0d349.htm">deskStyle</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Default <span sdata="link"><a href="480c7573-b0f0-a628-7032-fb06ee0b65ab.htm">DesktopStyle</a></span>.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="98af0ae8-c0d5-3875-96ff-e15f2f4b7a38.htm">desktops</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536.htm">Array</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										List of <span sdata="link"><a href="47c9ab93-fa61-2ae9-8378-29aa24933041.htm">Desktop</a></span> widgets.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="3bb0a567-39a6-692a-f550-8f606b11932b.htm">dialogPosition</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The default X Y position of dialogs in applications.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="74008723-0bcf-c844-ee35-c1d4da98362e.htm">dialogs</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536.htm">Array</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										List of <span sdata="link"><a href="dc990744-70f0-25bd-d971-be960b7764b6.htm">Dialog</a></span> widgets.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="e7f64495-488d-d8cc-d2a6-fe974d6706eb.htm">emptyUUID</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										An empty UUID. Looks like: 00000000-0000-0000-0000-000000000000.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="206f6ee5-eb07-ae07-cabe-b186a871fb9b.htm">firefox</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="feb87a09-e36a-9baa-3c23-409ea79458a9.htm">Boolean</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Detects Firefox within the user agent string.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="05268fef-f819-b392-cd31-363d1f071211.htm">gridDeleteCallback</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="ef3d2310-dfdb-431e-8330-0d339049abff.htm">Function</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										This function processes the data returned from the server when the Rendition.UI.gridDeleteURL
+is sent.  The object returned by this function must look like this:
+{error: &lt;Integer&gt;, description: &lt;String&gt; }.
+<p>The parameter [error] can return one of the following values:</p><div class="tableSection"><table width="50%" cellspacing="2" cellpadding="5" frame="lhs"><tr><th><p>
+						Error
+					</p></th><th><p>
+						Description
+					</p></th></tr><tr><td><p>
+					0
+				</p></td><td><p>
+					No error occured.
+				</p></td></tr><tr><td><p>
+					-1
+				</p></td><td><p>
+					Row value has changed on the server (verCol mismatch).
+				</p></td></tr><tr><td><p>
+					-2
+				</p></td><td><p>
+					Row has been deleted and cannot be updated or deleted.
+				</p></td></tr><tr><td><p>
+					Any other Integer
+				</p></td><td><p>
+					Custom error.  The [description] parameter will be displayed.
+				</p></td></tr></table></div>
+Function(XMLHttpRequest e, <span sdata="link"><a href="f5f5d4d4-f415-cd77-8e8f-c01e6464006a.htm">Grid</a></span> grid).
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="aebacbdd-da65-9a3e-6fe6-7788d5d3a2a7.htm">gridDeleteURL</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="ef3d2310-dfdb-431e-8330-0d339049abff.htm">Function</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The URL <span sdata="link"><a href="f5f5d4d4-f415-cd77-8e8f-c01e6464006a.htm">Grid</a></span> class uses to delete data.  The function's signature is
+Function(objectName, suffix, from,
+to, searchSuffix, aggregateColumns, selectedRows, outputType, includeSchema,
+checksum, del, orderBy, orderDirection, grid).
+The result will be sent to the Rendition.UI.gridDeleteCallback procedure.
+The default function uses the C# Rendition.admin.dataSet method.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="582bfed7-7a57-cff8-3bb2-da47d0e1d431.htm">gridInsertCallback</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="ef3d2310-dfdb-431e-8330-0d339049abff.htm">Function</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										This function processes the data returned from the server when the Rendition.UI.gridSelectURL
+is sent.  The object returned by this function must look like this:
+{error: &lt;Integer&gt;, description: &lt;String&gt;, primaryKey: &lt;String&gt;,verCol: &lt;Integer&gt; }.
+<p>The parameter [primaryKey] should be the primaryKey of the row inserted.</p><p>The parameter [verCol] should be the new verCol of the row.</p><p>The parameter [error] can return one of the following values:</p><div class="tableSection"><table width="50%" cellspacing="2" cellpadding="5" frame="lhs"><tr><th><p>
+						Error
+					</p></th><th><p>
+						Description
+					</p></th></tr><tr><td><p>
+					0
+				</p></td><td><p>
+					No error occured.
+				</p></td></tr><tr><td><p>
+					Any other Integer
+				</p></td><td><p>
+					Custom error.  The [description] parameter will be displayed.
+				</p></td></tr></table></div>
+The signature of the function is 
+Function(XMLHttpRequest e, <span sdata="link"><a href="f5f5d4d4-f415-cd77-8e8f-c01e6464006a.htm">Grid</a></span> grid).
+The default function uses the C# Rendition.admin.dataSet method.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="90bb03e5-dadd-441a-9b93-400713faa6c4.htm">gridInsertURL</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										This function should return the URL the grid class uses to insert into tables.
+The function's signature is
+Function(objectName, data, overwrite, grid).
+The server side function should insert the row in the table matching
+the [objectName] parameter.
+The result will be sent to the Rendition.UI.gridInsertCallback procedure which
+must return a an object that looks like this:
+{error: &lt;Integer&gt;, description: &lt;String&gt;, primaryKey: &lt;String&gt;,verCol: &lt;Integer&gt; }.
+The default function calls the C# Rendition.admin.Crud method.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="c3cade3e-b3a7-7025-86a8-ab9f5ef82f2c.htm">gridSchemaUpdateURL</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The URL the grid class uses for updating personal schema size data (column size, position etc.).
+The signature of the function is Function(objectId, headers, grid).
+This URL should update the data that is returned when the schema data is requested
+in the Rendition.UI.gridSelectURL or the Rendition.gridAutocompleteURL.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="7000fedd-b455-8be4-ed68-202f69b5a5a8.htm">gridSelectCallback</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="ef3d2310-dfdb-431e-8330-0d339049abff.htm">Function</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										This function processes the data returned from the server when the Rendition.UI.gridSelectURL
+is sent.  The type returned by this function must be a <span sdata="link"><a href="de0fdb88-125a-3606-d0af-83173204d97b.htm">DataSet</a></span>.
+The signature of the function is 
+Function(XMLHttpRequest e, <span sdata="link"><a href="f5f5d4d4-f415-cd77-8e8f-c01e6464006a.htm">Grid</a></span> grid).
+The default function uses the C# Rendition.admin.dataSet method.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="fb028478-d662-2d28-20ee-e090961b027e.htm">gridSelectURL</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="ef3d2310-dfdb-431e-8330-0d339049abff.htm">Function</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The URL <span sdata="link"><a href="f5f5d4d4-f415-cd77-8e8f-c01e6464006a.htm">Grid</a></span> class uses to select data.  The function's signature is
+Function(objectName, suffix, from,
+to, searchSuffix, aggregateColumns, selectedRows, outputType, includeSchema,
+checksum, del, orderBy, orderDirection, grid).
+The result will be sent to the Rendition.UI.gridSelectCallback procedure which
+must return a <span sdata="link"><a href="de0fdb88-125a-3606-d0af-83173204d97b.htm">DataSet</a></span>.
+The default function calls the C# Rendition.admin.dataSet method.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="b4914f7b-4498-0050-aaa1-3515a2a4b7e6.htm">gridStyleApplied</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="feb87a09-e36a-9baa-3c23-409ea79458a9.htm">Boolean</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Used globally by <span sdata="link"><a href="f5f5d4d4-f415-cd77-8e8f-c01e6464006a.htm">Grid</a></span> show 
+the dynamic grid CSS is missing until it's loaded later.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="ed783620-e4d8-efe5-8299-af648f519342.htm">gridUpdateCallback</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="ef3d2310-dfdb-431e-8330-0d339049abff.htm">Function</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										This function processes the data returned from the server when the Rendition.UI.gridSelectURL
+is sent.  The object returned by this function must look like this:
+{error: &lt;Integer&gt;, description: &lt;String&gt;, primaryKey: &lt;String&gt;,verCol: &lt;Integer&gt; }.
+<p>The parameter [primaryKey] should be the primaryKey of the row updated.</p><p>The parameter [verCol] should be the new verCol of the row.</p><p>The parameter [error] can return one of the following values:</p><div class="tableSection"><table width="50%" cellspacing="2" cellpadding="5" frame="lhs"><tr><th><p>
+						Error
+					</p></th><th><p>
+						Description
+					</p></th></tr><tr><td><p>
+					0
+				</p></td><td><p>
+					No error occured.
+				</p></td></tr><tr><td><p>
+					-1
+				</p></td><td><p>
+					Row value has changed on the server (verCol mismatch).
+				</p></td></tr><tr><td><p>
+					-2
+				</p></td><td><p>
+					Row has been deleted and cannot be updated or deleted.
+				</p></td></tr><tr><td><p>
+					Any other Integer
+				</p></td><td><p>
+					Custom error.  The [description] parameter will be displayed.
+				</p></td></tr></table></div>
+The signature of the function is 
+Function(XMLHttpRequest e, <span sdata="link"><a href="f5f5d4d4-f415-cd77-8e8f-c01e6464006a.htm">Grid</a></span> grid).
+The default function uses the C# Rendition.admin.dataSet method.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="2372a9d4-df81-0b58-1385-4892704140ca.htm">gridUpdateURL</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="ef3d2310-dfdb-431e-8330-0d339049abff.htm">Function</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										This function should return the URL the grid class uses to update tables.
+The function's signature is
+Function(objectName, data, overwrite, grid).
+The server side function should update the row in the table matching
+the [objectName] parameter where the primary key equals the [primaryKey] parameter.
+When the boolean value [overwrite] is true, the user has requested to
+overwrite existings values even if the row has changed since last update (verCol mismatch).
+If the [overwrite] parameter is false, than the user does not want to overwrite
+any records that have changed on the server since the last update (verCol mismatch).
+When this occurs, error -1 should be returned in the gridUpdateCallback object.
+When the record is deleted and cannot be updated error -2 should be returned.
+For more information see the Rendition.UI.gridUpdateCallback function documentation.
+The result will be sent to the Rendition.UI.gridUpdateCallback procedure which
+must return a an object that looks like this:
+{error: &lt;Integer&gt;, description: &lt;String&gt;, primaryKey: &lt;String&gt;,verCol: &lt;Integer&gt; }.
+The default function calls the C# Rendition.admin.Crud method.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="c55502fc-a58e-5bf7-671c-10a14949f484.htm">groupBoxes</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536.htm">Array</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										List of <span sdata="link"><a href="ff420866-3fc0-36b6-2931-86efdaa6f297.htm">GroupBox</a></span> elements.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="aff0140f-4732-4e27-0b14-8f90624c79ae.htm">HTMLColorNames</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <span class="nolink">[472b7ba4-e5e3-1f30-82ee-1fb5a1239eec]</span>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Colors for the plot program and other color driven functions.  Each member looks like ['AliceBlue','#F0F8FF'].
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="fb480619-c8c6-b96f-03c5-8362684b35ad.htm">icons</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536.htm">Array</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										List of icons.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="2435fb25-1cda-334a-1481-6fed5335fcd2.htm">id</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="36802977-faa0-b394-beea-eebbbc3b2d5a.htm">Integer</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										A random Id for this instance of Rendition UI.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="9598fad0-2d44-0273-0f8c-2f9342367987.htm">ie</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="feb87a09-e36a-9baa-3c23-409ea79458a9.htm">Boolean</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Detects IE within the user agent string.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="f496a6c0-d0bf-8df1-efc4-2d7301cb326d.htm">imageExt</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <span class="nolink">[472b7ba4-e5e3-1f30-82ee-1fb5a1239eec]</span>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										List of image extentions for use in file manage as deafult double click behaviour.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="9b1ab887-f42f-862d-4cc7-a615f349a503.htm">initURL</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="ef3d2310-dfdb-431e-8330-0d339049abff.htm">Function</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										URL to the init function on the server.  This JSON method, on callback starts the UI.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="8263596f-9372-da6c-c74b-039c2f94745d.htm">iphone</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="feb87a09-e36a-9baa-3c23-409ea79458a9.htm">Boolean</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Detects iPhone within the user agent string.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="752335b2-ce60-7553-b398-40ef4d15e1c9.htm">lastBrowsePath</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The path the file explorer program will display by default.  
+Each time the path in the fileExplorer changes, it will update this path.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="b3ff4240-3271-1ec1-35ba-dac91f45ca67.htm">logWindow</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Log window.  Instance of <span sdata="link"><a href="dc990744-70f0-25bd-d971-be960b7764b6.htm">Dialog</a></span>.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="525d0064-1309-f55e-a6a8-fff69f5a1a09.htm">maxSimultaneousAjaxRequests</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="36802977-faa0-b394-beea-eebbbc3b2d5a.htm">Integer</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Maximum number of simultaneous ajax requests (to prevent the server from choking)
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="9ac227e3-5fde-118f-71f0-4815e402e185.htm">menuBarElementStyle</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Default <span sdata="link"><a href="4e4ffaac-14fa-34ce-e801-bc0c5adfb424.htm">MenuOptionStyle</a></span> for 
+<span sdata="link"><a href="2e5cd548-e114-bc7b-38d1-14306fb354b0.htm">MenuBar</a></span><span sdata="link"><a href="c807995d-75de-b263-6de4-c0f04686a0bb.htm">MenuOptionElement</a></span> elements.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="fc351c03-a06f-c43b-45d7-2a4d2d0edc42.htm">menuBars</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536.htm">Array</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										List of <span sdata="link"><a href="2e5cd548-e114-bc7b-38d1-14306fb354b0.htm">MenuBar</a></span> widgets.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="a3460d7d-c0b9-31c2-d4d0-01a09f1b6636.htm">mobileMaxWidth</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="36802977-faa0-b394-beea-eebbbc3b2d5a.htm">Integer</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Ideal maximum width for all mobile devices.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="79635be3-8552-855f-5b70-744096f83acc.htm">movingFocus</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="feb87a09-e36a-9baa-3c23-409ea79458a9.htm">Boolean</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Used globaly by all instances of <span sdata="link"><a href="c3297b0d-9e44-0956-efe9-aba03ac86241.htm">AutoComplete</a></span> to prevent validation looping.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="a7f3acb0-224b-8909-6eb3-cd48aa53d267.htm">opera</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="feb87a09-e36a-9baa-3c23-409ea79458a9.htm">Boolean</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Detects Opera within the user agent string.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="4e90e051-28c5-900e-773b-fa9e1c31bb73.htm">parameters</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <span class="nolink">[91bc5ebf-dc16-c081-3eff-659b35363ea6]</span>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Startup parameters for the main Rendition class.  Altering the parameters
+of this property will change the startup behaviour of Rendition class.
+Parameters include: events: startedloading, finishedLoading, initURL, initCallback
+boolean: preventDefaultStyle
+collection: icons e.g.: 
+{
+	text: 'Go to Admin Page',
+	src: '/admin/img/icons/cog.png',
+	message: 'Naviage to the admin',
+	proc: function (e) {
+		window.location = '/admin';
+	}
+}
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="6990338a-35c3-6a0b-93f2-b4a1dc04906d.htm">plotColors</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <span class="nolink">[472b7ba4-e5e3-1f30-82ee-1fb5a1239eec]</span>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Colors for the plot program and other color driven functions.  Each entry looks like '#edc240'.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <span class="nolink">[8c93f27f-0303-cbf1-6966-a443eed7431b]</span>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The key name used for the responder JSON program.  The default is "method".
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="7878ed9f-09d6-e44c-7d59-347663d11296.htm">richTextEditors</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536.htm">Array</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										List of <span sdata="link"><a href="0a9e842e-a778-a2eb-5eac-ce7f79d23bbf.htm">RichTextEditor</a></span> widgets.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="98d00a54-92b9-b4c6-c957-80c1a76e4e08.htm">safari</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="feb87a09-e36a-9baa-3c23-409ea79458a9.htm">Boolean</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Detects Safari within the user agent string.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="d5c7b9c9-f976-8eff-9a14-a787e623f9e4.htm">statusColors</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <span class="nolink">[472b7ba4-e5e3-1f30-82ee-1fb5a1239eec]</span>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Status colors from green 0 to red 4.  For use with anything that might have a color status (level of importance).
+each member looks like like {background:'#00ff36',color:'#000'}.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <span class="nolink">[b6bb7d92-4a3a-ed57-3b5e-8e308fdcc672]</span>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <span class="nolink">[472b7ba4-e5e3-1f30-82ee-1fb5a1239eec]</span>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Associative array of extentions and default languages for use in ACE as default syntax type.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="aa380c71-3a03-3af0-9136-8f26c5d4188f.htm">tabBars</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536.htm">Array</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										List of <span sdata="link"><a href="889dd046-9a0f-5ce0-7b0e-20041ca87b95.htm">TabBar</a></span> widgets.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="ff22099a-18a2-b585-38df-2f8ec460717c.htm">tabBarTabs</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536.htm">Array</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										List of <span sdata="link"><a href="c3a7e221-c590-1249-dbbc-f9d5507a8365.htm">TabBarTab</a></span> widgets.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="92f54a28-aa46-514b-136d-3506e86b0668.htm">tabElementStyle</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Default <span sdata="link"><a href="aeb332a5-83ed-4ca6-3b0e-9066f318ddf7.htm">TabBarTabStyle</a></span>.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="c77defa5-d079-2bb0-839d-01a6c0642952.htm">tabStyle</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Default <span sdata="link"><a href="be66cff8-aea9-db6f-433c-4dd7a057d2a2.htm">TabBarStyle</a></span>.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="bf54c2a8-a0b2-cd55-3c95-5bd343fac5e2.htm">taskBars</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536.htm">Array</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										List of <span sdata="link"><a href="12f42c4e-04bb-e9a8-fe9f-49f0d39ec86f.htm">TaskBar</a></span> widgets.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="4fc68276-ef6c-9fc8-aa42-0ac737461e4c.htm">taskElementStyle</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Default <span sdata="link"><a href="c345e4c0-d66f-c868-d06f-7c2052d18186.htm">TaskBarElementStyle</a></span>.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="80be7a8a-4962-f3d6-00d8-f43bc23f5f3c.htm">taskStyle</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Default <span sdata="link"><a href="57ef9840-ef6b-362d-f04c-5bfb1dec81ad.htm">TaskBarStyle</a></span>.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="e74777fe-604b-3a38-a6cc-4c7eed29465f.htm">textExt</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <span class="nolink">[472b7ba4-e5e3-1f30-82ee-1fb5a1239eec]</span>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										List of text extentions for use in file manage as deafult double click behaviour.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="28947d7a-d028-dd7f-45ba-78d6a1cd8f09.htm">topId</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="36802977-faa0-b394-beea-eebbbc3b2d5a.htm">Integer</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Base ID number to start creating ID using the createId function.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="297357d2-2430-fb51-1045-b2a6ced13cab.htm">topModalzindex</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="36802977-faa0-b394-beea-eebbbc3b2d5a.htm">Integer</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Z index to start stacking modal windows from.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="2949eec7-440b-96be-7706-a8b2988ddaf3.htm">topzindex</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="36802977-faa0-b394-beea-eebbbc3b2d5a.htm">Integer</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Z index to start stacking windows from.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="9d4966b9-01fd-0739-79cf-5fd2824fa302.htm">type</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The type of object.  Returns 'Rendition'.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="40edb45b-da3c-f432-ea0b-f35bfdc3e2c2.htm">userAgent</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="feb87a09-e36a-9baa-3c23-409ea79458a9.htm">Boolean</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The user agent string.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="4d99f40f-8cda-9a5d-382b-1e97d67eb708.htm">zipPattern</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="0e75107c-7256-d3b9-002e-9a129956fafb.htm">RegExp</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Regular Expression for US ZIP codes.
+									</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <a name="methods"> </a>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(sectionToggleID0ECAAA)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(sectionToggleID0ECAAA, event)" tabindex="0">
+            <img id="sectionToggleID0ECAAA" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Methods</span>
+        </h1>
+        <div id="sectionSectionID0ECAAA" class="section" name="collapseableSection" style="">
+          <div class="tableSection">
+            <table width="50%" cellspacing="2" cellpadding="5" frame="lhs">
+              <tr>
+                <th>
+                  <p />
+                </th>
+                <th>
+                  <p>Name</p>
+                </th>
+                <th>
+                  <p>Type</p>
+                </th>
+                <th>
+                  <p>Description</p>
+                </th>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Method" src="../media/publicmethod.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="4fb8609a-4a25-c00b-b2a6-e72af798b2bd.htm">addEventListener</a>
+                    </span>(<span sdata="link"><a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a></span>  type, <span sdata="link"><a href="ef3d2310-dfdb-431e-8330-0d339049abff.htm">Function</a></span>  proc, <span sdata="link"><a href="feb87a09-e36a-9baa-3c23-409ea79458a9.htm">Boolean</a></span>  capture)
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="044fcb55-0c5f-d88f-619c-455ffb8b2600.htm">undefined</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Attach a procedure to an event.
+									</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <a name="events"> </a>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(sectionToggleID0EAAAA)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(sectionToggleID0EAAAA, event)" tabindex="0">
+            <img id="sectionToggleID0EAAAA" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Events</span>
+        </h1>
+        <div id="sectionSectionID0EAAAA" class="section" name="collapseableSection" style="">
+          <div class="tableSection">
+            <table width="50%" cellspacing="2" cellpadding="5" frame="lhs">
+              <tr>
+                <th>
+                  <p />
+                </th>
+                <th>
+                  <p>Name</p>
+                </th>
+                <th>
+                  <p>Description</p>
+                </th>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Event" src="../media/publicevent.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="29d25f87-d047-103e-dbc3-63fe564b5970.htm">onFinishedLoading</a>
+                    </span>()
+									</p>
+                </td>
+                <td>
+                  <p>
+										Occurs when Rendition is finished loading.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Event" src="../media/publicevent.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="ae6ec8b4-8a07-1e42-746f-026d6eb7e1ad.htm">onStartedLoading</a>
+                    </span>()
+									</p>
+                </td>
+                <td>
+                  <p>
+										Occurs when Rendition has started loading.
+									</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="alert">
+            <table>
+              <tr>
+                <th>
+                  <img src="../icons/alert_note.gif" title="Tip" /> <b>Tip</b></th>
+              </tr>
+              <tr>
+                <td>
+                  <p>There are two ways to add event listeners.</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <p>
+						1. You can attach to events as a parameter when you create the object.
+						<span id="cbc_1" x-lang="JavaScript" codeLanguage="JavaScript"><div class="highlight-title"><span class="highlight-copycode" onkeypress="javascript:CopyColorizedCodeCheckKey(this.parentNode, event);" tabindex="0" onmouseover="CopyCodeChangeIcon(this)" onmouseout="CopyCodeChangeIcon(this)" onclick="javascript:CopyColorizedCode(this.parentNode);"><img style="margin-right: 5px;" src="../icons/CopyCode.gif" />Copy</span>JavaScript</div><div class="code"><pre xml:space="preserve"><span class="highlight-keyword">var</span> foo = <span class="highlight-keyword">new</span> object({
+    event:<span class="highlight-keyword">function</span>(signature){
+        <span class="highlight-comment">/* event procedure */</span>
+    }
+});</pre></div></span>
+						2. Or you can add the event after the object has been instantiated.
+						<span id="cbc_2" x-lang="JavaScript" codeLanguage="JavaScript"><div class="highlight-title"><span class="highlight-copycode" onkeypress="javascript:CopyColorizedCodeCheckKey(this.parentNode, event);" tabindex="0" onmouseover="CopyCodeChangeIcon(this)" onmouseout="CopyCodeChangeIcon(this)" onclick="javascript:CopyColorizedCode(this.parentNode);"><img style="margin-right: 5px;" src="../icons/CopyCode.gif" />Copy</span>JavaScript</div><div class="code"><pre xml:space="preserve"><span class="highlight-keyword">var</span> foo = <span class="highlight-keyword">new</span> object();
+foo.addEventListener(<span class="highlight-literal">'event'</span>,<span class="highlight-keyword">function</span>(signature){
+    <span class="highlight-comment">/* event procedure */</span>
+}, <span class="highlight-keyword">false</span>);</pre></div></span></p>
+        </div>
+      </div>
+      <div id="footer">
+        <div class="footerLine">
+          <img width="100%" height="3px" src="../icons/footer.gif" alt="Footer image" title="Footer image" />
+        </div>
+        <A NAME="feedback"></A>
+        <span id="fb" class="feedbackcss"></span>
+        <p />Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:tonygermaneri%40gmail.com?Subject=Rendition E-Commerce Framework">Tony Germaneri</a><script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        var HT_mailLinkText = HT_mailLink.innerHTML;
+        HT_mailLink.href += ": " + document.title;
+        HT_mailLink.innerHTML = HT_mailLinkText;
+        </script><p />Copyright © Tony Germaneri 2011</div>
+    </div>
+  </body>
+</html>

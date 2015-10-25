@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="640047db-0265-1b54-e809-8e2b30187b99" revisionNumber="1" dataAlias="Rendition.UI.Grid#Grid.selectionData">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction address="Intro">
+			Rendition.UI.Grid#Grid.selectionData(<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>  singleRowOnly)
+			<para>Returns the row data from the selected elements as a two dimentional array of data. If the row data is not loaded a synchronous request is made to load the data before the return.</para>
+		</introduction>
+		<definitionTable>
+			
+			
+				<definedTerm>
+					<para>Member Of</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="f5f5d4d4-f415-cd77-8e8f-c01e6464006a"/>
+					</para>
+				</definition>
+			
+			
+				<definedTerm>
+					<para>Return Type</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+					</para>
+				</definition>
+			
+			
+				<definedTerm>
+					<para>Source</para>
+				</definedTerm>
+				<definition>
+					<para>
+						c:\Rendition\Rendition.Core\js\admin\UI\grid.js
+					</para>
+				</definition>
+			
+		</definitionTable>
+		<section address="parameters">
+		<title>Parameters</title>
+			<sections>
+				<table>
+					<tableHeader>
+					<row>
+						<entry><para> </para></entry>
+						<entry><para>Name</para></entry>
+						<entry><para>Description</para></entry>
+					</row>
+					</tableHeader>
+					
+						<row>
+							<entry>
+								<para>
+									
+									Required
+									singleRowOnly
+									<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+								</para>
+							</entry>
+							<entry>
+								<para>
+									When true selectionDOM will only refrence the first selected row.
+								</para>
+							</entry>
+							<entry>
+								<para>
+									
+								</para>
+							</entry>
+						</row>
+					
+				</table>
+			</sections>
+		</section>
+	</developerConceptualDocument>
+</topic>

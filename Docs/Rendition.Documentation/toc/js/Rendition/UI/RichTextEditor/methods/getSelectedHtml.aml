@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="7b2f2a3a-bfc2-b95f-ec46-8c5ab27fdd05" revisionNumber="1" dataAlias="Rendition.UI.RichTextEditor#richTextEditor.getSelectedHtml">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction address="Intro">
+			Rendition.UI.RichTextEditor#richTextEditor.getSelectedHtml()
+			<para>Gets the HTML string currently selected in the <link xlink:href="0a9e842e-a778-a2eb-5eac-ce7f79d23bbf"/>.</para>
+		</introduction>
+		<definitionTable>
+			
+			
+				<definedTerm>
+					<para>Member Of</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="0a9e842e-a778-a2eb-5eac-ce7f79d23bbf"/>
+					</para>
+				</definition>
+			
+			
+				<definedTerm>
+					<para>Return Type</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="044fcb55-0c5f-d88f-619c-455ffb8b2600"/>
+					</para>
+				</definition>
+			
+			
+				<definedTerm>
+					<para>Source</para>
+				</definedTerm>
+				<definition>
+					<para>
+						c:\Rendition\Rendition.Core\js\admin\UI\richtexteditor.js
+					</para>
+				</definition>
+			
+		</definitionTable>
+		<section address="parameters">
+		<title>Parameters</title>
+			<sections>
+				<table>
+					<tableHeader>
+					<row>
+						<entry><para> </para></entry>
+						<entry><para>Name</para></entry>
+						<entry><para>Description</para></entry>
+					</row>
+					</tableHeader>
+					
+				</table>
+			</sections>
+		</section>
+	</developerConceptualDocument>
+</topic>

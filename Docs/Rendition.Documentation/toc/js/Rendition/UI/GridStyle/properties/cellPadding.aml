@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="b9188d12-6af5-b29f-d253-23a0f9cb88e1" revisionNumber="1" dataAlias="Rendition.UI.GridStyle#GridStyle.cellPadding">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction address="Intro">
+			Rendition.UI.GridStyle#GridStyle.cellPadding()
+			<para>The padding within the cells.  <legacyBold>This is not CSS.</legacyBold>Looks like: { t: 0, r: 0, b: 0, l: 5 }.  Stands for top, right, bottom, left.</para>
+		</introduction>
+		<definitionTable>
+			
+			
+				<definedTerm>
+					<para>Member Of</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="2508e2c4-ff9f-64fe-86b1-364162eaeba9"/>
+					</para>
+				</definition>
+			
+			
+				<definedTerm>
+					<para>Type</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+					</para>
+				</definition>
+			
+			
+				<definedTerm>
+					<para>Source</para>
+				</definedTerm>
+				<definition>
+					<para>
+						c:\Rendition\Rendition.Core\js\admin\UI\grid.js
+					</para>
+				</definition>
+			
+		</definitionTable>
+	</developerConceptualDocument>
+</topic>

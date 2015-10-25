@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<topic id="cec0f827-9f52-709e-3b6a-db9381d64acb" revisionNumber="1" dataAlias="Rendition.UI.DateChart">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction address="Intro">
+			Class Rendition.UI.DateChart
+			<para>Creates a DHTML based chart with from and to date selectors.See <link xlink:href="fce458ca-7a4b-caad-c699-ee63d754ab9a"/> for more information.</para>
+		</introduction>
+		<para>
+			<definitionTable>
+				
+				
+					<definedTerm>
+						<para>Member Of</para>
+					</definedTerm>
+					<definition>
+						<para>
+							<link xlink:href="ddee8d40-d92d-34d0-2be3-5f5d65f36f31"/>
+						</para>
+					</definition>
+				
+				
+					<definedTerm>
+						<para>Source</para>
+					</definedTerm>
+					<definition>
+						<para>
+							c:\Rendition\Rendition.Core\js\admin\UI\chart.js
+						</para>
+					</definition>
+				
+			</definitionTable>
+		</para>
+	<!-- ============================== Examples ========================== -->	
+		
+			<section address="examples">
+				<title>Examples</title>
+				<sections>
+					
+						<section>
+							<title>
+								
+									 Create a tic chart 
+
+								
+							</title>
+							<content>
+								<para>
+									<code language="javascript">
+var foo = Rendition.UI.Dialog();
+foo.maximize();
+Rendition.UI.DateChart({
+	parentNode: foo.content,
+	title: 'Sessions/Hits',
+	type: 'TicChart',
+	chart: function (dateChart, chartArguments, chartOptions) {
+		var a = " declare @dayTo datetime = '" + chartArguments.toDate.value.s() + "' declare @dayFrom datetime = '" + chartArguments.fromDate.value.s() + "' declare @days table(days datetime);  " +
+				" declare @todate int;  declare @fromdate int;  set @todate = (DATEDIFF(D,@dayTo,GETDATE()))*-1; " +
+				" set @fromdate = (DATEDIFF(D,@dayFrom,GETDATE()))*-1;  while (@todate>=@fromdate)  begin " +
+				" insert into @days (days) values (DATEADD(dd,@todate,cast(convert(varchar(20),getDate(),1) as datetime))); " +
+				" set @todate = @todate -1;  end  " +
+				" select 'Hits',d.days,count(0)-1,'Navy','White',3,5 from  @days d " +
+				" left join visitorDetail v  with (nolock) on v.time between d.days and d.days+1 " +
+				" left join visitors i  with (nolock) on i.sessionId = v.sessionId group by d.days; " +
+				" select 'Sessions',d.days,count(0)-1,'Red','White',3,5 from  @days d " +
+				" left join visitors v  with (nolock) on v.addDate between d.days and d.days+1 group by d.days "
+		return a;
+	}
+});</code>
+								</para>
+							</content>
+						</section>
+					
+				</sections>
+			</section>
+		
+	<!-- ============================== parameters ========================== -->
+		
+			<section address="parameters">
+				<title>Constructor Parameters</title>
+				<content>
+					<table>
+						<tableHeader>
+							<row>
+								<entry><para> </para></entry>
+								<entry><para>Name</para></entry>
+								<entry><para>Type</para></entry>
+								<entry><para>Description</para></entry>
+							</row>
+						</tableHeader>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.title 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The title of the chart.  This appears on the chart.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.type 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Type of chart.  Can be any one of PieChart, ColumnChart, Gauge, LineChart or function.  When a function is used the signature of the function is (chartDivElement, data)
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.fromDate 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The from date.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.toDate 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The to date.  This will override the <link xlink:href="24b21d35-4ad4-bd0b-6991-c2e093b6644a"/> parameter.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.last 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Show the last n number of days counting backwards from today.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.next 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Show the next n number of days counting forwards from today.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.options 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Options for the chart.  This sets all the options of the chart a full list of chart options can be found here: https://developers.google.com/chart/.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.chart 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="89f0508f-dccd-8863-9d09-b323af88a667"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										A string containing a SQL query that produces a chart or a function that produces a SQL query.
+									</para>
+								</entry>
+							</row>
+						
+					</table>
+				</content>
+			</section>
+		
+	<!-- ============================== fields ========================== -->
+		
+			<section address="fields">
+				<title>Properties</title>
+				<content>
+					<table>
+						<tableHeader>
+							<row>
+								<entry><para> </para></entry>
+								<entry><para>Name</para></entry>
+								<entry><para>Type</para></entry>
+								<entry><para>Description</para></entry>
+							</row>
+						</tableHeader>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="f68c0b99-47c7-c93f-560a-a79801045849"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The unique id of this instance.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="6fdff00f-03a2-4674-250b-9b994d4e7bcf"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The type of object.  returns 'RenditionDateChart'
+									</para>
+								</entry>
+							</row>
+						
+					</table>
+				</content>
+			</section>
+		
+	<!-- ============================== methods ========================= -->
+		
+	<!-- ============================== events ========================= -->
+		
+	</developerConceptualDocument>
+</topic>

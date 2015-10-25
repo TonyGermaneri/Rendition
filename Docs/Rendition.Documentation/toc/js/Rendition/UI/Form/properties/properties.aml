@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="d733b158-3245-1f77-2ba4-24894948fe89" revisionNumber="1" dataAlias="Rendition.UI.Form">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		
+		<definitionTable>
+			
+				<definedTerm>
+					<para>Member Of</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="b584e6c6-2f5a-6c97-4e57-2ad4afa995cc"/>
+					</para>
+				</definition>
+			
+		</definitionTable>
+		
+			<section address="fields">
+				<title>Rendition.UI.Form Properties</title>
+				<content>
+					<table>
+						<tableHeader>
+							<row>
+								<entry><para> </para></entry>
+								<entry><para>Type</para></entry>
+								<entry><para>Name</para></entry>
+								<entry><para>Description</para></entry>
+							</row>
+						</tableHeader>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="68de270a-e804-80bf-9c05-3e9d4bc7d002"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										List of autoCompletes in this form.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="ae7c2bdc-fe20-83d7-b3c0-3cd13802f88f"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										List of codeareas in this form. Note: do not use this array to assign or get values from the form, use the [Form.getInputByName()] method instead.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="2009625c-30eb-3ff5-611d-297de28390ba"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										List of datePickers in this form. Note: do not use this array to assign or get values from the form, use the [Form.getInputByName()] method instead.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="8920278e-efb8-823b-e783-29352316f746"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										List of fileManagers in this form.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="7889c38c-9918-6fd2-caa1-b266f996bfdb"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="50d6ca56-75df-b018-dd46-cdc0aced66b0"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The main container DIV element.  This is the element that is appended to the [args.parentNode] DHTML element.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="43fd3f53-9693-b5dc-06c3-f7fcd7c00c7b"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										List of grids in this form.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="eef19164-6e9e-3dab-c115-c974cd0990bf"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										List of group boxes in this form.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="970e4ac7-23a8-ee2b-4957-c52eb877677a"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										List of infos in this form.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="fe4d3dc7-9d57-1027-ec11-91ebf02aa13c"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										List of inputs in this form.  Note: do not use this array to assign or get values from the form, use the [Form.getInputByName()] method instead.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="38f384b4-74c8-37c7-4363-939c8787272e"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										List of inputSelectButtons in this form. Note: do not use this array to assign or get values from the form, use the [Form.getInputByName()] method instead.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="d0eef78d-7ffd-eea1-8576-82f5972230f7"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										List of invalid inputs in this form.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="99e23ff5-fe98-b0f2-208a-0f34a8ff7e3f"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										List of numericupdowns in this form. Note: do not use this array to assign or get values from the form, use the [Form.getInputByName()] method instead.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="3208bb70-534b-c28c-f994-c375f65fd453"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										List of pair tables in this form.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="7c223448-2420-f8f2-3d3e-ad5322b2cf5a"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										List of resizeableBoxes in this form.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="de004a56-e1f4-14fd-5054-bf0b87c2acc1"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										List of rtes (Rich Text Editors) in this form. Note: do not use this array to assign or get values from the form, use the [Form.getInputByName()] method instead.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="aa870b0d-0929-8933-275d-94fe3433f6eb"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										List of selects in this form. Note: do not use this array to assign or get values from the form, use the [Form.getInputByName()] method instead.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="236d8813-1952-b40b-d8f1-74ca1e24eec5"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										List of textareas in this form. Note: do not use this array to assign or get values from the form, use the [Form.getInputByName()] method instead.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="f49cbaa2-ad51-b1b7-0c7a-8d4c54750703"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The type of object. Returns RenditionForm.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="5b99641a-4cd9-44fe-adf1-83598f1718a1"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Message that appears when a record is trying to be commited but there is an invalid field.
+									</para>
+								</entry>
+							</row>
+						
+					</table>
+				</content>
+			</section>
+		
+
+	</developerConceptualDocument>
+</topic>

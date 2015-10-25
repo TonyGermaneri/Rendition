@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<topic id="66057d78-fe77-cdb3-4ae1-140db754f3fb" revisionNumber="1" dataAlias="Rendition.UI.Ajax">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction address="Intro">
+			Class Rendition.UI.Ajax
+			<para>Main AJAX function. Requests the URL from the server, executes a procedure when the server responds.You provide the closure to execute the procedure in, if it's synchronous or asynchronous, and if the request should be delayed.</para>
+		</introduction>
+		<para>
+			<definitionTable>
+				
+				
+					<definedTerm>
+						<para>Member Of</para>
+					</definedTerm>
+					<definition>
+						<para>
+							<link xlink:href="ddee8d40-d92d-34d0-2be3-5f5d65f36f31"/>
+						</para>
+					</definition>
+				
+				
+					<definedTerm>
+						<para>Source</para>
+					</definedTerm>
+					<definition>
+						<para>
+							c:\Rendition\Rendition.Core\js\admin\UI\Ajax.js
+						</para>
+					</definition>
+				
+			</definitionTable>
+		</para>
+	<!-- ============================== Examples ========================== -->	
+		
+			<section address="examples">
+				<title>Examples</title>
+				<sections>
+					
+						<section>
+							<title>
+								
+									 Fetch some HTML data from the default.aspx page and fill the dialog with the data. 
+
+								
+							</title>
+							<content>
+								<para>
+									<code language="javascript">
+var foo = Rendition.UI.Dialog();
+var URL = '/default.aspx'
+var bar = Rendition.UI.Ajax(URL, function (e) {
+	foo.content.innerHTML = e.responseText;
+}, this);</code>
+								</para>
+							</content>
+						</section>
+					
+						<section>
+							<title>
+								
+									 Fetch some JSON data from the Rendition responder. 
+
+								
+							</title>
+							<content>
+								<para>
+									<code language="javascript">
+// Create a dialog //
+var foo = Rendition.UI.Dialog();
+// Create a request for the JSON C# Rendition responder //
+var req = [
+	// for more information on the SystemInfo method //
+	// check out the help topic:                     //
+	// Rendition Namespace > admin > SystemInfo      //
+	'SystemInfo', []
+];
+var URL = '/admin/responder?method1=' + JSON.stringify(req).toURI();
+// Create the AJAX request //
+var bar = Rendition.UI.Ajax(URL, function (e) {
+	// parse the data returned //
+	var a = JSON.parse(e.responseText);
+	// show the name of the worker process //
+	foo.content.innerHTML = a.method1.SystemInfo.process.ProcessName;
+}, this);</code>
+								</para>
+							</content>
+						</section>
+					
+				</sections>
+			</section>
+		
+	<!-- ============================== parameters ========================== -->
+		
+			<section address="parameters">
+				<title>Constructor Parameters</title>
+				<content>
+					<table>
+						<tableHeader>
+							<row>
+								<entry><para> </para></entry>
+								<entry><para>Name</para></entry>
+								<entry><para>Type</para></entry>
+								<entry><para>Description</para></entry>
+							</row>
+						</tableHeader>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										f_url 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The complete URL with query string.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										proc 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="ef3d2310-dfdb-431e-8330-0d339049abff"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The function to apply when the server returns code 200 OK.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										context 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The scope to execute in.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										async 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										When true the function will execute asynchronously.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										delayDownloading 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Wait before starting. In miliseconds.
+									</para>
+								</entry>
+							</row>
+						
+					</table>
+				</content>
+			</section>
+		
+	<!-- ============================== fields ========================== -->
+		
+	<!-- ============================== methods ========================= -->
+		
+			<section address="methods">
+				<title>Methods</title>
+				<content>
+					<table>
+						<tableHeader>
+						<row>
+							<entry><para> </para></entry>
+							<entry><para>Name</para></entry>
+							<entry><para>Type</para></entry>
+							<entry><para>Description</para></entry>
+						</row>
+						</tableHeader>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="207b707e-f4cb-85ac-d913-0b2df928c083"/>()
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Aborts the request.
+									</para>
+								</entry>
+							</row>
+						
+					</table>
+				</content>
+			</section>
+		
+	<!-- ============================== events ========================= -->
+		
+	</developerConceptualDocument>
+</topic>

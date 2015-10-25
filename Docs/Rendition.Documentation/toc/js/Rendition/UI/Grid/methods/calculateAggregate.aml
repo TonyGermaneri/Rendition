@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="6547a9e2-d0ee-38c5-e2fc-244c9592c493" revisionNumber="1" dataAlias="Rendition.UI.Grid#Grid.calculateAggregate">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction address="Intro">
+			Rendition.UI.Grid#Grid.calculateAggregate(<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  headerIndex, <link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  aggregateFunctionName, <link xlink:href="ef3d2310-dfdb-431e-8330-0d339049abff"/>  callbackProcedure)
+			<para>Get an aggregate calculation and place it into the aggregate row at the bottom of the rowset.</para>
+		</introduction>
+		<definitionTable>
+			
+			
+				<definedTerm>
+					<para>Member Of</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="f5f5d4d4-f415-cd77-8e8f-c01e6464006a"/>
+					</para>
+				</definition>
+			
+			
+			
+				<definedTerm>
+					<para>Source</para>
+				</definedTerm>
+				<definition>
+					<para>
+						c:\Rendition\Rendition.Core\js\admin\UI\grid.js
+					</para>
+				</definition>
+			
+		</definitionTable>
+		<section address="parameters">
+		<title>Parameters</title>
+			<sections>
+				<table>
+					<tableHeader>
+					<row>
+						<entry><para> </para></entry>
+						<entry><para>Name</para></entry>
+						<entry><para>Description</para></entry>
+					</row>
+					</tableHeader>
+					
+						<row>
+							<entry>
+								<para>
+									
+									Required
+									headerIndex
+									<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>
+								</para>
+							</entry>
+							<entry>
+								<para>
+									The index of the header to preform the aggregate function from.
+								</para>
+							</entry>
+							<entry>
+								<para>
+									
+								</para>
+							</entry>
+						</row>
+					
+						<row>
+							<entry>
+								<para>
+									
+									Required
+									aggregateFunctionName
+									<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+								</para>
+							</entry>
+							<entry>
+								<para>
+									The name of the aggregate function, for example: SUM, MIN, MAX, AVG.
+								</para>
+							</entry>
+							<entry>
+								<para>
+									
+								</para>
+							</entry>
+						</row>
+					
+						<row>
+							<entry>
+								<para>
+									Optional
+									
+									callbackProcedure
+									<link xlink:href="ef3d2310-dfdb-431e-8330-0d339049abff"/>
+								</para>
+							</entry>
+							<entry>
+								<para>
+									The function to execute after server has returned from calculating the aggregate.
+								</para>
+							</entry>
+							<entry>
+								<para>
+									
+								</para>
+							</entry>
+						</row>
+					
+				</table>
+			</sections>
+		</section>
+	</developerConceptualDocument>
+</topic>

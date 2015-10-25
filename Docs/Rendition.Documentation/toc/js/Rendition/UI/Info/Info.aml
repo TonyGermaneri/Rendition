@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<topic id="4b391fe3-74bc-6c38-4e17-2ed6eef18295" revisionNumber="1" dataAlias="Rendition.UI.Info">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction address="Intro">
+			Class Rendition.UI.Info
+			<para>Creates a DHTML info bubble that is absolutly positioned and z-indexed above everything.</para>
+		</introduction>
+		<para>
+			<definitionTable>
+				
+				
+					<definedTerm>
+						<para>Member Of</para>
+					</definedTerm>
+					<definition>
+						<para>
+							<link xlink:href="ddee8d40-d92d-34d0-2be3-5f5d65f36f31"/>
+						</para>
+					</definition>
+				
+				
+					<definedTerm>
+						<para>Source</para>
+					</definedTerm>
+					<definition>
+						<para>
+							c:\Rendition\Rendition.Core\js\admin\UI\info.js
+						</para>
+					</definition>
+				
+			</definitionTable>
+		</para>
+	<!-- ============================== Examples ========================== -->	
+		
+			<section address="examples">
+				<title>Examples</title>
+				<sections>
+					
+						<section>
+							<title>
+								
+									 Open an info bubble in the top left corner that dissapears after 1.5 seconds. 
+
+								
+							</title>
+							<content>
+								<para>
+									<code language="javascript">
+var foo = Rendition.UI.Info({
+	timeout: 1500,
+	position: {x:10,y:10},
+	title: 'Lorem ipsum.',
+	message: 'Duis autem vel eum iriure dolor.'
+});</code>
+								</para>
+							</content>
+						</section>
+					
+						<section>
+							<title>
+								
+									 Create a dialog, create an input in the dialog and attach an info bubble to it explaining the field.
+
+								
+							</title>
+							<content>
+								<para>
+									<code language="javascript">
+var foo = Rendition.UI.Dialog();
+var input = document.createElement('input');
+foo.content.appendChild(input);
+var bar = Rendition.UI.Info({
+	timeout: 1500,
+	hover: input,
+	title: 'Lorem ipsum.',
+	message: 'Duis autem vel eum iriure dolor.'
+});</code>
+								</para>
+							</content>
+						</section>
+					
+				</sections>
+			</section>
+		
+	<!-- ============================== parameters ========================== -->
+		
+			<section address="parameters">
+				<title>Constructor Parameters</title>
+				<content>
+					<table>
+						<tableHeader>
+							<row>
+								<entry><para> </para></entry>
+								<entry><para>Name</para></entry>
+								<entry><para>Type</para></entry>
+								<entry><para>Description</para></entry>
+							</row>
+						</tableHeader>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Parameters for the info bubble.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.hoverTimeout 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										How long the info bubble will stay on screen if the user hovers their mouse over it.  In miliseconds.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.timeout 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										How long the info bubble will stay on screen.  In miliseconds.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.hover 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="46169281-4b27-a561-db31-85041946bc42"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										When defined, when the user hovers over this object the info bubble will appear.  Events are appends to this object to facilitate this.  This value will cause [args.position] to not work.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.position 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										When defined the info bubble will appear in this position.  This value is not used when [args.hover] is defined.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.title 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The title of the info message.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.message 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The content of the info message.
+									</para>
+								</entry>
+							</row>
+						
+					</table>
+				</content>
+			</section>
+		
+	<!-- ============================== fields ========================== -->
+		
+	<!-- ============================== methods ========================= -->
+		
+	<!-- ============================== events ========================= -->
+		
+	</developerConceptualDocument>
+</topic>

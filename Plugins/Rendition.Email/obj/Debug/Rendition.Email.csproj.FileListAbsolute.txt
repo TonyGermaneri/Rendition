@@ -1,0 +1,10 @@
+C:\Rendition\rendition.standardPlugins.email\bin\Debug\Rendition.Email.dll
+C:\Rendition\rendition.standardPlugins.email\bin\Debug\Rendition.Email.pdb
+C:\Rendition\rendition.standardPlugins.email\obj\Debug\ResolveAssemblyReference.cache
+C:\Rendition\rendition.standardPlugins.email\obj\Debug\Rendition.Email.dll
+C:\Rendition\rendition.standardPlugins.email\obj\Debug\Rendition.Email.pdb
+C:\Rendition\Plugins\Rendition.Email\bin\Debug\Rendition.Email.dll
+C:\Rendition\Plugins\Rendition.Email\bin\Debug\Rendition.Email.pdb
+C:\Rendition\Plugins\Rendition.Email\obj\Debug\ResolveAssemblyReference.cache
+C:\Rendition\Plugins\Rendition.Email\obj\Debug\Rendition.Email.dll
+C:\Rendition\Plugins\Rendition.Email\obj\Debug\Rendition.Email.pdb

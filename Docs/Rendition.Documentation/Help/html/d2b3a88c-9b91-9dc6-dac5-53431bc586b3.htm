@@ -1,0 +1,1856 @@
+﻿<html xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+  <head>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8" />
+    <META NAME="save" CONTENT="history" />
+    <title>Rendition Namespace</title>
+    <meta name="Language" content="en-us" />
+    <meta name="System.Keywords" content="Rendition namespace" />
+    <meta name="Microsoft.Help.F1" content="Rendition" />
+    <meta name="Microsoft.Help.Id" content="N:Rendition" />
+    <meta name="Description" content="Rendition HttpModule plugs into any .NET 4.0 website via your Web.Config file. You need an instance of the Rendtion database." />
+    <meta name="Microsoft.Help.ContentType" content="Reference" />
+    <link rel="stylesheet" type="text/css" href="../styles/Presentation.css" />
+    <link rel="stylesheet" type="text/css" href="ms-help://Hx/HxRuntime/HxLink.css" />
+    <script type="text/javascript" src="../scripts/EventUtilities.js"> </script>
+    <script type="text/javascript" src="../scripts/SplitScreen.js"> </script>
+    <script type="text/javascript" src="../scripts/Dropdown.js"> </script>
+    <script type="text/javascript" src="../scripts/script_manifold.js"> </script>
+    <script type="text/javascript" src="../scripts/script_feedBack.js"> </script>
+    <script type="text/javascript" src="../scripts/CheckboxMenu.js"> </script>
+    <script type="text/javascript" src="../scripts/CommonUtilities.js"> </script>
+    <meta name="container" content="Rendition" />
+    <meta name="file" content="d2b3a88c-9b91-9dc6-dac5-53431bc586b3" />
+    <meta name="guid" content="d2b3a88c-9b91-9dc6-dac5-53431bc586b3" />
+    <xml>
+      <MSHelp:Attr Name="AssetID" Value="N:Rendition" />
+      <MSHelp:TOCTitle Title="Rendition Namespace" />
+      <MSHelp:RLTitle Title="Rendition Namespace ()" />
+      <MSHelp:Keyword Index="A" Term="N:Rendition" />
+      <MSHelp:Keyword Index="A" Term="frlrfRendition" />
+      <MSHelp:Keyword Index="K" Term="Rendition namespace" />
+      <MSHelp:Keyword Index="F" Term="Rendition" />
+      <MSHelp:Attr Name="HelpPriority" Value="1" />
+      <MSHelp:Attr Name="DevLang" Value="CSharp" />
+      <MSHelp:Attr Name="Locale" Value="en-us" />
+      <MSHelp:Attr Name="TopicType" Value="kbSyntax" />
+      <MSHelp:Attr Name="TopicType" Value="apiref" />
+      <MSHelp:Attr Name="Abstract" Value="Rendition HttpModule plugs into any .NET 4.0 website via your Web.Config file. You need an instance of the Rendtion database. And to do any sort of file interaction you'll need an account on the server that ha ..." />
+    </xml>
+    <link type="text/css" rel="stylesheet" href="../styles/highlight.css" />
+    <script type="text/javascript" src="../scripts/highlight.js"> </script>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <input type="hidden" id="hiddenScrollOffset" />
+    <img id="collapseImage" style="display:none; height:0; width:0;" src="../icons/collapse_all.gif" alt="Collapse image" title="Collapse image" />
+    <img id="expandImage" style="display:none; height:0; width:0;" src="../icons/expand_all.gif" alt="Expand Image" title="Expand Image" />
+    <img id="collapseAllImage" style="display:none; height:0; width:0;" src="../icons/collapse_all.gif" />
+    <img id="expandAllImage" style="display:none; height:0; width:0;" src="../icons/expand_all.gif" />
+    <img id="dropDownImage" style="display:none; height:0; width:0;" src="../icons/dropdown.gif" />
+    <img id="dropDownHoverImage" style="display:none; height:0; width:0;" src="../icons/dropdownHover.gif" />
+    <img id="copyImage" style="display:none; height:0; width:0;" src="../icons/copycode.gif" alt="Copy image" title="Copy image" />
+    <img id="copyHoverImage" style="display:none; height:0; width:0;" src="../icons/copycodeHighlight.gif" alt="CopyHover image" title="CopyHover image" />
+    <div id="header">
+      <table id="topTable" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <span onclick="ExpandCollapseAll(toggleAllImage)" style="cursor:default;" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage, event)" tabindex="0">
+              <img ID="toggleAllImage" class="toggleAll" src="../icons/collapse_all.gif" /> <label id="collapseAllLabel" for="toggleAllImage" style="display: none;">Collapse All</label><label id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand All</label> </span>
+            <span>    </span>
+            <span id="devlangsDropdown" class="filter" tabindex="0">
+              <img id="devlangsDropdownImage" src="../icons/dropdown.gif" /> <label id="devlangsMenuAllLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: All </nobr></label><label id="devlangsMenuMultipleLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: Multiple </nobr></label><label id="devlangsMenuCSharpLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: C# </nobr></label><label id="devlangsMenuJavaScriptLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: JavaScript </nobr></label></span>
+          </td>
+        </tr>
+      </table>
+      <div id="devlangsMenu">
+        <input id="CSharpCheckbox" type="checkbox" data="CSharp,cs,'persist'" value="on" onClick="SetLanguage(this)" />
+        <label class="checkboxLabel" for="CSharpCheckbox">C#</label>
+        <br />
+        <input id="JavaScriptCheckbox" type="checkbox" data="JavaScript,cs,'persist'" value="on" onClick="SetLanguage(this)" />
+        <label class="checkboxLabel" for="JavaScriptCheckbox">JavaScript</label>
+        <br />
+      </div>
+      <table id="bottomTable" cellpadding="0" cellspacing="0">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">Rendition E-Commerce Framework</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">Rendition Namespace</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td align="left">
+            <span id="headfeedbackarea" class="feedbackhead">
+              <a href="javascript:SubmitFeedback('tonygermaneri@gmail.com','Rendition E-Commerce Framework','','','','%0\dYour%20feedback%20is%20used%20to%20improve%20the%20documentation%20and%20the%20product.%20Your%20e-mail%20address%20will%20not%20be%20used%20for%20any%20other%20purpose%20and%20is%20disposed%20of%20after%20the%20issue%20you%20report%20is%20resolved.%20%20While%20working%20to%20resolve%20the%20issue%20that%20you%20report,%20you%20may%20be%20contacted%20via%20e-mail%20to%20get%20further%20details%20or%20clarification%20on%20the%20feedback%20you%20sent.%20After%20the%20issue%20you%20report%20has%20been%20addressed,%20you%20may%20receive%20an%20e-mail%20to%20let%20you%20know%20that%20your%20feedback%20has%20been%20addressed.%0\A%0\d','Customer%20Feedback');">Send Feedback</a>
+            </span>
+          </td>
+        </tr>
+      </table>
+      <table id="gradientTable">
+        <tr>
+          <td class="nsrBottom" background="../icons/gradient.gif" />
+        </tr>
+      </table>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" />
+        <span style="color: DarkGray">
+          <p style="color: #dc143c; font-size: 8.5pt; font-weight: bold;">[This is preliminary documentation and is subject to change.]</p>
+        </span>
+        <div class="summary">
+          <p>
+            Rendition HttpModule plugs into any .NET 4.0 website via your Web.Config file.
+            You need an instance of the Rendtion database. 
+            And to do any sort of file interaction you'll need an account on the server that has
+            rights to write files into your web directory.
+            </p>
+          <p>
+            Once setup, Rendition subscribes to the iHttpModule events and listens for
+            certain requests and will replace or agument the data coming back from the
+            server when specific requests take place.
+            </p>
+          <p>
+            What requests does Rendition listen for?
+            Requests made to the responder URL in your Web.Config file.
+            Requests made to the Admin responder URL in your Web.Config file.
+            Requests made to the adminDirectory URL in your Web.Config file.
+            </p>
+          <p>
+            When a request is made any keys with the name matching 
+            the pattern method[0-9]+ will be treated as JSON strings
+            in the following pattern:
+            </p>
+          <span id="cbc_1" x-lang="JavaScript" codeLanguage="JavaScript">
+            <div class="highlight-title">
+              <span class="highlight-copycode" onkeypress="javascript:CopyColorizedCodeCheckKey(this.parentNode, event);" tabindex="0" onmouseover="CopyCodeChangeIcon(this)" onmouseout="CopyCodeChangeIcon(this)" onclick="javascript:CopyColorizedCode(this.parentNode);">
+                <img style="margin-right: 5px;" src="../icons/CopyCode.gif" />Copy</span>JavaScript</div>
+            <div class="code">
+              <pre xml:space="preserve">{
+    &lt;&lt;i&gt;Method Name&lt;/i&gt;&gt;,
+    [
+        &lt;&lt;i&gt;Argument <span class="highlight-number">1</span>&lt;/i&gt;&gt;,
+        &lt;&lt;i&gt;Argument <span class="highlight-number">2</span>&lt;/i&gt;&gt;,
+        &lt;i&gt;...etc.&lt;/i&gt;
+    ]
+}</pre>
+            </div>
+          </span>
+            Example (in JSON):
+            {"init",[]}
+            <p>
+            Example (raw URL):
+            	<p>
+            		method1=%7B%22init%22%2C%5B%5D%7D
+            	</p></p>
+            Returns: (in JSON)
+            <span id="cbc_2" x-lang="JavaScript" codeLanguage="JavaScript"><div class="highlight-title"><span class="highlight-copycode" onkeypress="javascript:CopyColorizedCodeCheckKey(this.parentNode, event);" tabindex="0" onmouseover="CopyCodeChangeIcon(this)" onmouseout="CopyCodeChangeIcon(this)" onclick="javascript:CopyColorizedCode(this.parentNode);"><img style="margin-right: 5px;" src="../icons/CopyCode.gif" />Copy</span>JavaScript</div><div class="code"><pre xml:space="preserve">{
+    <span class="highlight-literal">"method1"</span>: {
+        <span class="highlight-literal">"init"</span>: {
+            <span class="highlight-literal">"site"</span>: {
+                <span class="highlight-literal">"metaKeywords"</span>: <span class="highlight-literal">""</span>,
+                ....etc.
+            }
+        }
+    }
+}</pre></div></span><p>
+            All responses will return a JSON string, even errors.
+            Using the browsers JSON.parse() function you can then see the result
+            of the JSON string you sent to the server.  JSON string are returned
+            in the following format:
+            </p><p><b>method1%3d;</b>%7B;%22;methodName1%22;%2C;%5B;%5D;%7D;<b>&amp;method2%3d;</b>%7B;%22;methodName2%22;%2C;%5B;%5D;%7D;
+            </p><p>
+            The return values will have the "method" name you used to call it
+            so you can reassociate the methods you called after the AJAX callback.
+            </p><p>
+            The methods are also call synchonously so you can create chains of commands
+            that rely upon eachother.  The numbers used after the word method are
+            not considered, only the order you send the key/pair values in matters.
+            </p><p>
+            Some methods will not return a JSON string.  These methods return somthing
+            else such as a binary image or a binary file.
+            </p><p>
+            You can use POST or GET to access these methods.  This is very useful for
+            the methods that return image data. You can make the SRC attribute
+            of your image contain your "method" and the server will spit an
+            image out.
+            </p><p>Administative Responder vs. Public Responder
+            There are two responder URLs you can send requests to.  The public
+            responder will only allow you to access static methods in the 
+            Rendition.Merchant class.   The Admin responder URL will only allow you
+            to access static methods in the Rendition.Admin class.
+            </p><p>
+            You can only access the Admin responder URL once you have logged in
+            as an administrator.
+            </p><p>
+            The last interaction Rendition makes is the Admin directory URL.
+            </p><p>
+            Requets for the /Admin directory will bring you to the
+            administrative JS suite, the core of this program.
+            </p><p>
+            The Admin directory, and the files inside of it
+            do not exist.  When a request for the Admin
+            directory is detected the server will search a resource file inside
+            of Renditon.Core.dll for a resource matching that name.  When a resource
+            is found it is delivered to the browser as if it were a file in the
+            file system.  The entire Admin JS suite works this way.  This way
+            updates for the JS suite can be packaged with the DLL and there are
+            fewer files to move around.  You can get access to most of the files
+            in the resource.res by visiting /admin/debug.html.
+            </p><p>
+            Due to these three directories being used by the HttpModule
+            directories you create with the same names will not be
+            accessable over the web.
+            </p></div>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(classToggle)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(classToggle, event)" tabindex="0">
+            <img id="classToggle" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Classes</span>
+        </h1>
+        <div id="classSection" class="section" name="collapseableSection" style="">
+          <table id="typeList" class="members" frame="lhs" cellpadding="2">
+            <col width="10%" />
+            <tr>
+              <th class="iconColumn">
+           
+       </th>
+              <th class="nameColumn">Class</th>
+              <th class="descriptionColumn">Description</th>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="e66c19c3-8fca-a017-d02d-57ddf1869ea3.htm">AddToCartArguments</a>
+              </td>
+              <td>
+                <div class="summary">
+            Adding to the cart requires that you have at least the keys "qty" and "itemNumber".
+            Any keys associated with the items form should be sent in the dictionary.
+            Obviously the form cannot contain the keys that the base item contains.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="7f690eb2-dcd4-a88c-c6d6-694069881191.htm">AddToCartEventArgs</a>
+              </td>
+              <td>
+                <div class="summary">
+            This event is raised when an item is added to the cart.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="3bde1bc7-34f7-d1fe-5c4c-73b14c554972.htm">Admin</a>
+              </td>
+              <td>
+                <div class="summary">
+            This contains all the private Admin interaction with the site
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="3ccacaa5-1666-45cf-1f34-0d9ae7ee9f68.htm">Admin<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>BarOptions</a>
+              </td>
+              <td>
+                <div class="summary">
+            Options for the bar code.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="4062100f-f9c9-5eec-cf4b-7d2491abce9e.htm">Admin<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>Conversation</a>
+              </td>
+              <td>
+                <div class="summary">
+            A Conversation between one or more users.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="a0c38aa5-ec81-ec8e-bfeb-fd4c62662067.htm">Admin<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>ConversationMessage</a>
+              </td>
+              <td>
+                <div class="summary">
+            A message in a Conversation.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="3a8ebc73-4db8-7e68-4e6b-2df84513e0ac.htm">Admin<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>FillOptions</a>
+              </td>
+              <td>
+                <div class="summary">
+            For converting JSON object into a set of options for the zedChart object
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="a71d6da4-acc7-b485-7743-59c0fb91959d.htm">Admin<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>GraphOptions</a>
+              </td>
+              <td>
+                <div class="summary">
+            For converting JSON object into a set of options for the zedChart object
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="4ced4161-60f5-6aa1-da02-9d2824bd8001.htm">Admin<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>PieChartPiece</a>
+              </td>
+              <td>
+                <div class="summary">
+            For converting JSON object into a set of options for the zedChart object
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="802994a8-ebbd-4309-cc96-d61a1fa5558a.htm">Admin<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>Timer</a>
+              </td>
+              <td>
+                <div class="summary">
+            A Timer that simplifies the class System.Timers.Timer
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="0d49b4bf-69ba-4e0b-d758-d08eeb42b0f9.htm">AfterAuthenticationEventArgs</a>
+              </td>
+              <td>
+                <div class="summary">
+            At the begining of each request this event is raised after the user has created a session.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="652be510-2384-cb8f-59bd-a3e406af3b86.htm">AfterPlaceOrderEventArgs</a>
+              </td>
+              <td>
+                <div class="summary">
+            This event is raised after an order has been placed.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="6cc62fa0-007b-2b9c-68d2-2d0f6dd64dee.htm">BeforeAddToCartEventArgs</a>
+              </td>
+              <td>
+                <div class="summary">
+            This event occurs just before the item is added to the cart
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="ff57dff1-6cac-4919-4291-fee76d02b339.htm">BeginRequestEventArgs</a>
+              </td>
+              <td>
+                <div class="summary">
+            At the begining of each request this event is raised.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="a3ce936c-76b2-d7ba-1d81-f37a4f800ec7.htm">CalculateDiscountEventArgs</a>
+              </td>
+              <td>
+                <div class="summary">
+            Allows you to create a discount on an order.  Examine the vairables passed to you such
+            as cart, user or order and return an amount in discount to set the discount amount on the order.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="f369201a-1c80-a2e6-f8c1-430bb03f3eac.htm">Commerce</a>
+              </td>
+              <td>
+                <div class="summary">
+            Rendition.Commerce
+            
+            This class contains static methods used indirectly by the JSON responder and adminResponder
+            and internally by other methods.
+            
+            The classes Rendition.merchant and Rendition.Admin use System.Reflection to expose
+            Their static methods to the JSON responder and adminResponder and wrap some of the
+            methods in this class.  Class Rendition.Admin contains all the dangerous CRUD methods
+            that should only be avaliable to administrators while Rendition.merchant contains only methods
+            that should be avaliable to anonomyous internet users.  
+            
+            Rendition.Commerce (this class) contains methods that 
+            both Rendition.Admin and Rendition.merchant wrap to 
+            make these methods accessable to the reflection methods
+            used in the JSON response mapper JSONToMethod
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="3c6309b8-8505-3850-8310-68fdd7530391.htm">Commerce<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>Address</a>
+              </td>
+              <td>
+                <div class="summary">
+            An Address with shipping information, potential rates and shipping cost estimates.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="1e38232d-9235-fd43-c4a1-aa427b6bc5e1.htm">Commerce<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>BillOfMaterial</a>
+              </td>
+              <td>
+                <div class="summary">
+            A single bill of material link.
+            This class describes how one item is related to another.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="ea6f3c95-e585-a689-73ea-c45d09623b71.htm">Commerce<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>BillOfMaterials</a>
+              </td>
+              <td>
+                <div class="summary">
+            Collection of all the bill of material links.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="45ed0f13-4039-af1f-d9ab-c66ce3ea2265.htm">Commerce<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>Carrier</a>
+              </td>
+              <td>
+                <div class="summary">
+            Shipping Carrier.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="7c8a2a2c-e2e9-8286-9502-af75a7d1ea90.htm">Commerce<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>Cart</a>
+              </td>
+              <td>
+                <div class="summary">
+            This class creates a cart with items drawn from the database
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="cf26f168-00c4-233f-becb-00800a4e9591.htm">Commerce<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>CartItem</a>
+              </td>
+              <td>
+                <div class="summary">
+            This class represents an item in the cart class
+            This class contains the item that is in the cart
+            as well as quantity, Address and other information.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="0c8b57c5-bc4f-6c31-d296-d27d758e78f3.htm">Commerce<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>Cash</a>
+              </td>
+              <td>
+                <div class="summary">
+            this class represents a payment of cash for an order
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="8c380b74-1ba6-ca00-838c-6c45e9cbdedc.htm">Commerce<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>Category</a>
+              </td>
+              <td>
+                <div class="summary">
+            A category consists of a list of items.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="8395eebf-d232-2ace-b1a0-3a84721c0ef3.htm">Commerce<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>Check</a>
+              </td>
+              <td>
+                <div class="summary">
+            repersents a payment of a check for an order
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="f0e0f05e-4dae-b502-25e9-49b9fe5d75e6.htm">Commerce<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>Country</a>
+              </td>
+              <td>
+                <div class="summary">
+            A country in the list of countries.  Like tears in the rain.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="fe6acf7e-8bf7-cd26-ead3-1fbc007a72ca.htm">Commerce<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>CreditCard</a>
+              </td>
+              <td>
+                <div class="summary">
+            represents a payment using a credit card, also includes methods for charging the instatiated card via xhttp request 
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="06aa1500-07ee-8aea-dfa8-62ce99e9594d.htm">Commerce<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>Discount</a>
+              </td>
+              <td>
+                <div class="summary">
+            Discount drawn from the table dbo.discount
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="d5792b85-c3a4-1030-c02e-d1ab796431d1.htm">Commerce<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>Flag</a>
+              </td>
+              <td>
+                <div class="summary">
+            A flag, also called a status change.  A flag can be placed on one of:
+            order, line, shipment to determine the status of the order, line or shipment.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="b9a02ab9-db93-a48a-c565-3786b36af936.htm">Commerce<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>FlagTypes</a>
+              </td>
+              <td>
+                <div class="summary">
+            Collection of flags for the site to hold in its cache.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="45ef298b-a415-d6af-2065-700b28080081.htm">Commerce<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>Form</a>
+              </td>
+              <td>
+                <div class="summary">
+            This class is a form that attaches to the _item class
+            An instance of rendtion._site must exist to use this class
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="78525134-da5d-8d95-0479-3ac7fe124d31.htm">Commerce<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>Image</a>
+              </td>
+              <td>
+                <div class="summary">
+            An image associated with an item or gallery.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="7bee5155-d06f-a1e8-d4a6-97333cce746f.htm">Commerce<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>Input</a>
+              </td>
+              <td>
+                <div class="summary">
+            This class creates a single input for the _form class
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="8ae2b077-09af-1ecc-6c2c-21af84df45ec.htm">Commerce<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>InputOption</a>
+              </td>
+              <td>
+                <div class="summary">
+            Select, radio or other multi option inputs.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="9bbb6601-3920-4030-6221-f7cf7969aa9d.htm">Commerce<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>Item</a>
+              </td>
+              <td>
+                <div class="summary">
+            This class creates a single item.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="b5354ae1-a132-79ca-1d11-de20efaee5f8.htm">Commerce<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>Line</a>
+              </td>
+              <td>
+                <div class="summary">
+            Represents a single line item in a order.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="29d9fa7e-cb67-d449-8dad-bae8ff8c16af.htm">Commerce<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>LineDetail</a>
+              </td>
+              <td>
+                <div class="summary">
+            The customization fields and assembily item selections.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="0443c7e1-0b82-1585-1a04-87543d7896fc.htm">Commerce<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>MakePayment</a>
+              </td>
+              <td>
+                <div class="summary">
+            Allows you to pay off orders (purchase/work orders)
+            This is the only way to enter payments (credit records)
+            Payments are not posted until you post them to the GL
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="81c153c7-3121-409d-1325-a52661bc4360.htm">Commerce<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>Menu</a>
+              </td>
+              <td>
+                <div class="summary">
+            This class creates a single menu for use with the menus class
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="f0ca08fd-5b17-9595-e9e6-d886d7cf9ef4.htm">Commerce<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>Order</a>
+              </td>
+              <td>
+                <div class="summary">
+            This class represents an order
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="2cc72a26-0bf3-dc21-d774-6e827ff33ddc.htm">Commerce<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>Payment</a>
+              </td>
+              <td>
+                <div class="summary">
+            An existing payment and the orders the payment is related to related to.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="91bb6dd8-c378-cf31-4d03-ed350aabb402.htm">Commerce<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>PaymentReference</a>
+              </td>
+              <td>
+                <div class="summary">
+            A refrence to an order associated with a payment.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="e62da7f6-7e63-1509-9ea6-85043e4e6bbe.htm">Commerce<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>PayPal</a>
+              </td>
+              <td>
+                <div class="summary">
+            PayPal.  Not Implemented.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="6f5843bc-1510-f43f-4775-785d5f848461.htm">Commerce<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>Pdf</a>
+              </td>
+              <td>
+                <div class="summary">
+            PDF template rendering class
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/privclass.gif" alt="Private class" title="Private class" />
+              </td>
+              <td>
+                <a href="5371e6d3-3b99-1eab-9b67-fb9bb104855d.htm">Commerce<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>Pdf<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>AField</a>
+              </td>
+              <td>
+                <div class="summary">
+            field variable in PDF rendering system.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="7f14de73-3698-08cf-3587-879c32de8572.htm">Commerce<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>PromiseToPay</a>
+              </td>
+              <td>
+                <div class="summary">
+            This class represents the validation of an accrued payment.  This system is setup using a set of checks and balances.
+            In order for an order to be placed, there must be a matching payment method, even if the ammount = 0
+            So a payment must be made before an order can be placed.  This class is a promise to pay based on the terms of the order 
+            as specified in the placeOrder procedure or the users account settings.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="a99c8dab-b457-da21-b755-2ff693c3491e.htm">Commerce<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>Property</a>
+              </td>
+              <td>
+                <div class="summary">
+            This represents a single physical or metaphysical property of the item.
+            For example. height:30" or manufacture:Jim's Cogs
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="55034588-7abb-c41f-763c-c41a27f7f9c9.htm">Commerce<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>Rate</a>
+              </td>
+              <td>
+                <div class="summary">
+            Shipping rate.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="430145dc-a95c-657b-bbf7-8f78f174a10d.htm">Commerce<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>Redirector</a>
+              </td>
+              <td>
+                <div class="summary">
+            A directive for redirecting/rewriting URLs
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="242ef7e7-fc29-ca62-f026-38135daed218.htm">Commerce<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>Reply</a>
+              </td>
+              <td>
+                <div class="summary">
+            A single reply to a Blog or reply.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="5251cf04-2d8f-8318-591e-936181099474.htm">Commerce<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>Review</a>
+              </td>
+              <td>
+                <div class="summary">
+            This class creates a single review made of an item
+            An instance of rendtion._site must exist to use this class
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="c50ab56e-e6dd-e2ab-5244-e42f55009041.htm">Commerce<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>Reviews</a>
+              </td>
+              <td>
+                <div class="summary">
+            This is a list of all reviews on the site.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="f8a0e57c-4dab-eb3a-5c03-e569b72f2afa.htm">Commerce<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>SeoListMetaUtility</a>
+              </td>
+              <td>
+                <div class="summary">
+            Search Engine Optimization utitliy for setting the  title/keywords/descripton of item listing pages.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="48e34719-88a0-1aad-0b6d-db9978748be1.htm">Commerce<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>Shipment</a>
+              </td>
+              <td>
+                <div class="summary">
+            Represents a shipment.  One box with a tracking number, date shipped etc.
+            Orders have a list of shipments that have occured for that order.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="ef631ac1-e5a5-c4a1-cb4f-6a7fea2cd933.htm">Commerce<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>SiteSection</a>
+              </td>
+              <td>
+                <div class="summary">
+            A section is a container of section entries.  One one entry can be the 'active'
+            entry at a time.  Entries have dates to help tell them apart.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="e223fb2a-588d-d3d0-5db2-df429f91aa5d.htm">Commerce<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>SiteSectionEntry</a>
+              </td>
+              <td>
+                <div class="summary">
+            An entry in a site section.  Sections are made up of one or more entries.
+            Only one entry can be 'active' at a time.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="38399498-1f9d-686a-af42-0a6f397899b3.htm">Commerce<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>Size</a>
+              </td>
+              <td>
+                <div class="summary">
+            The size of an item.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="b65f6fb9-4254-f1d6-c43c-f860dfe44eea.htm">Commerce<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>Swatch</a>
+              </td>
+              <td>
+                <div class="summary">
+            The color or pattern of an item.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="ab2785b1-9d09-1c30-b694-4844fd399eba.htm">Commerce<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>Term</a>
+              </td>
+              <td>
+                <div class="summary">
+            Terms of payment for purchase orders and work orders.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="a1345b39-4aea-e652-96eb-c3d7fea215f1.htm">Commerce<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>User</a>
+              </td>
+              <td>
+                <div class="summary">
+            This class represents the user once they have logged on to the site
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="e12bf999-bc64-be98-2d3e-c8d84ee85771.htm">Commerce<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>ValidationRule</a>
+              </td>
+              <td>
+                <div class="summary">
+            This class represents a rule that was created to validate Requests going into inputs.
+            This class is not implemented.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="04aa1350-dd51-1786-a7b7-a07143c21689.htm">Commerce<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>VirtualTerminal</a>
+              </td>
+              <td>
+                <div class="summary">
+            This class is used for charging credit cards via HTTPWebRequest obejct.
+            This class can be overridden using the onpaymentgateway event handler
+            The table site_configration contains
+            merchant_message_match - &gt; the Regex pattern that matches the 
+            merchant_message_match_index
+            merchant_sucsess_match
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="d37d0967-21b5-1bf0-7dfa-3b3737be85be.htm">Commerce<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>Warning</a>
+              </td>
+              <td>
+                <div class="summary">
+            This class represents a warning generated by the validation class. 
+            This class is not implemented.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="8bf85c02-9b4a-2b7f-15ce-30660ca3e4c1.htm">Commerce<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>Warnings</a>
+              </td>
+              <td>
+                <div class="summary">
+            This class creates a list of warnings raised from the Request submission of a client (not implemented)
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="e12806d3-8bbf-d8ee-8c9a-0cb04ebd97fc.htm">Commerce<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>Wire</a>
+              </td>
+              <td>
+                <div class="summary">
+            represents a payment using a wire transfer
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="1fd4ddcc-53c2-f461-719b-7e098589b5a7.htm">Commerce<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>ZipToZone</a>
+              </td>
+              <td>
+                <div class="summary">
+            Zip to zone table.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="dae9860c-e4ec-d6e4-20f5-f3618c8bffb7.htm">Commerce<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>Zone</a>
+              </td>
+              <td>
+                <div class="summary">
+            Represents a zone to ship to in a shipping rate.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="966ae299-44ae-28c7-31b3-7e2e15bdc28b.htm">CreateEmailEventArgs</a>
+              </td>
+              <td>
+                <div class="summary">
+            Allows you to take over the email creation process.  By defaul the site sends a very simplistic
+            email to customers.  You can crate more elaborate emails by subscribing to this event and
+            changing the event arguments.  It is also possible to abort emails using this event.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="2db3945d-0a65-d52d-505a-17b7a65a9dc1.htm">CreateItemEventArgs</a>
+              </td>
+              <td>
+                <div class="summary">
+            When an item is created this event is raised.  You can subscribe to this even to watch it happen.
+            You cannot interact in any meaningful way other than to execute code related to the event.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="788c8b8d-a0a7-b7f6-cc21-2c6d1463b4ea.htm">CreateUserEventArgs</a>
+              </td>
+              <td>
+                <div class="summary">
+            When a user is created this event is raised.  You can subscribe to this even to watch it happen.
+            You cannot interact in any meaningful way other than to execute code related to the event.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="a529c3c2-4f95-347d-d316-b2d49fa1c073.htm">DefaultEmails</a>
+              </td>
+              <td>
+                <div class="summary">
+            Default emails
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="444eb470-6e4b-67eb-0d9c-5782eb8d579d.htm">DisposeEventArgs</a>
+              </td>
+              <td>
+                <div class="summary">
+            This event is raised when the site is going down.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="5f341b6a-6503-d884-220f-3e5e62459dba.htm">EmailClient</a>
+              </td>
+              <td>
+                <div class="summary">
+            Low level email com (as low as this program goes)
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="58e5b836-9fbc-14ea-7332-55fbda436ba0.htm">EndRequestEventArgs</a>
+              </td>
+              <td>
+                <div class="summary">
+            At the end of HTTP request this event is raised.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="b5cc3d56-430c-79c2-75f5-0a55c3d0e426.htm">FieldTitle</a>
+              </td>
+              <td>
+                <div class="summary">
+            Localization Field for use in /Admin JS API
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="5f84f449-2b6c-425c-bd99-136f70c99b46.htm">FieldTitleLocalization</a>
+              </td>
+              <td>
+                <div class="summary">
+            All the fields used in the program
+            Customizable for language or use.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="4f0702c6-cd92-eb75-ccf3-d02ed037b27f.htm">Impersonation</a>
+              </td>
+              <td>
+                <div class="summary">
+            Impersonates another user briefly
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="83dd2a37-b525-0e29-a10e-aed61d656910.htm">InitEventArgs</a>
+              </td>
+              <td>
+                <div class="summary">
+            This event is raised when the site starts up.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="94e48277-cd3c-15b0-f6d8-8237683a5c97.htm">LineUpdateEventArgs</a>
+              </td>
+              <td>
+                <div class="summary">
+            Occurs when a line item is updated in an order.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="9f45522b-9b03-2b82-e197-dc665c3959ed.htm">List</a>
+              </td>
+              <td>
+                <div class="summary">
+            Utility for creating item lists in HTML pages.
+            Creates a list object based on HttpContext Request variables.  
+            Used to create item lists from categories and searches.
+            Provides items, category data, search data, filters,
+            price filters and other utilities. 
+            You don't have to use this class or list to
+            create item lists.  It is just a utility
+            to help lessen the amount of tedious tasks
+            you may encounter when setting up your web
+            site.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="2869e94a-4fba-6e42-dd1c-6d325ce976aa.htm">ListOptions</a>
+              </td>
+              <td>
+                <div class="summary">
+            Options used for creating the listing page.
+            You don't have to use this class or list to
+            create item lists.  They are just a utility
+            to help lessen the amount of tedious tasks
+            you may encounter when setting up your web
+            site.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="54ebb3b5-2616-4d7e-07d5-3dea53d562c5.htm">LogOffEventArgs</a>
+              </td>
+              <td>
+                <div class="summary">
+            When a user logs off this event is raised. 
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="cb5974c9-304b-408a-ed74-e71129c4dd7d.htm">LogOnEventArgs</a>
+              </td>
+              <td>
+                <div class="summary">
+            This event is raised when a user logs on to the system.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="ae12a1d4-2ab3-8907-7d76-f08b961e665a.htm">MenuCollectionCode</a>
+              </td>
+              <td>
+                <div class="summary">
+            Collection of strings that describe a herarchial menu structure in xHTML.
+            An instance of this class is passed to an instance of
+            Commerce menu's menuHierarchy method to create an HTML menu
+            that uses the site's database menu system.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="14840aba-cbbf-8190-a2d8-eca21b54782d.htm">Merchant</a>
+              </td>
+              <td>
+                <div class="summary">
+            This contains all the public retail interaction with the site
+            such as add to cart, place order and calculate lines
+            Each method is designed to accept data from a JSON source using generic types
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="1dee3a7a-232a-84b7-806d-1d581e9bc18d.htm">OrderArguments</a>
+              </td>
+              <td>
+                <div class="summary">
+            Fill out as many keys as you can.  If no sessionId key is provided the current session will be used.
+            Defaults will be attempted, but without the correct information you cannot place an order.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="62b39dce-bd3a-e889-54b5-6e96d019e562.htm">PaymentGatewayEventArgs</a>
+              </td>
+              <td>
+                <div class="summary">
+            Allows you to intercept, abort and replace credit card payments with your own method.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="85578752-ccd7-4c76-87cc-9750b02da04d.htm">PlaceOrderEventArgs</a>
+              </td>
+              <td>
+                <div class="summary">
+            This event occurs directly before an order is placed.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="d95e8f15-92f9-418a-d600-786c5c2c1649.htm">Plugin</a>
+              </td>
+              <td>
+                <div class="summary">
+            This class allows other DLLs to attach to event handlers in this DLL.
+            This is the basis for the plugin system.  All plugins must inherit this class.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="2919b309-e428-15fd-1a0c-00230b3f555b.htm">Plugin<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>Admin</a>
+              </td>
+              <td>
+                <div class="summary">
+            Overrides and addons for Admin JSON Responder
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="1c551518-cdf4-0377-c57b-9b09e816188c.htm">Plugin<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>Merchant</a>
+              </td>
+              <td>
+                <div class="summary">
+            Overrides and addons for Public JSON Responder
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="6a788717-80d7-86bd-ec0a-99d6a70bc2be.htm">PluginInfo</a>
+              </td>
+              <td>
+                <div class="summary">
+            Info about the author of the plugin, publish date etc.  Data is
+            pulled from the assembly into these files by default but can be overwritten.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="c257e94e-b14d-4cf0-4301-ff596f02b51d.htm">ProgressInfo</a>
+              </td>
+              <td>
+                <div class="summary">
+            This class hold information about file transfer
+            to display on the user's upload dialog.
+            A circular AJAX script is used on the client
+            to interogate the server for this information.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="b6193722-6f5c-7795-9567-37063558de21.htm">RecalculateCartEventArgs</a>
+              </td>
+              <td>
+                <div class="summary">
+            This event is raised when the cart/quote is recalculated.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="56525a3f-667c-a9a2-cc85-935e21ef4a8a.htm">RecalculateOrderEventArgs</a>
+              </td>
+              <td>
+                <div class="summary">
+            This event is raised when the confirmed order is recalculated.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="09a8c094-ec11-fde5-fe4d-a5847c9feb29.htm">RefreshEventArgs</a>
+              </td>
+              <td>
+                <div class="summary">
+            This event is raised when the site finishes refreshing.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="43a30a85-7ff2-045c-6987-dee7d133771a.htm">RenderItemImageEventArgs</a>
+              </td>
+              <td>
+                <div class="summary">
+            When an item renders this event is raised.  You can subscribe to this event and modify the image
+            and return the image to the system in its modified state.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="8613478c-6294-31e4-33e5-6c3bcf7ffbec.htm">RewriteHtml</a>
+              </td>
+              <td>
+                <div class="summary">
+            A response filter used with the URL rewrite directives.  Any 'error=0' directives will be treated as a response filter.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="b8cb7060-6488-8b02-9b4f-97f9c259162d.htm">Session</a>
+              </td>
+              <td>
+                <div class="summary">
+            This class represents a session on the site
+            the sessions cart and if the session logs on the user object.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="9bee26d3-d06e-377f-21b0-b5e83eb36600.htm">ShipmentUpdateArgs</a>
+              </td>
+              <td>
+                <div class="summary">
+            Shipment updated event occurs when a status of shipped occurs.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="4b419928-1bb1-8849-be70-c9d5c49d00d9.htm">Site</a>
+              </td>
+              <td>
+                <div class="summary">
+            Base site cache and the basis for interaction with the SQL connection and database.
+            Authentication and cryptography methods
+            Database driven event handling
+            Methods for rasing events for the ISiteInterface
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="b13890a4-1e8f-4fe6-740a-4e6f6d30abba.htm">Site<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>SiteConfiguration</a>
+              </td>
+              <td>
+                <div class="summary">
+            Variables for the site usually drawn from web.config or config.xml.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="af2c5961-8209-7c70-a0e1-dd0f1596dfc8.htm">Site<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>SiteDefaults</a>
+              </td>
+              <td>
+                <div class="summary">
+            The defaults for the site as defined in dbo.siteConfiguration.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="b8514bb3-bfb2-ed26-bca5-03f65765c24d.htm">SiteImagePlaceholder</a>
+              </td>
+              <td>
+                <div class="summary">
+            This class represents the differnet types of images that can be placed on any given item.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="a63f1aa6-b0eb-d172-7ed9-e8f0045c78d6.htm">StateObject</a>
+              </td>
+              <td>
+                <div class="summary">
+            State object for reading client data asynchronously
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="286aee64-7943-a04f-0d4b-772ffaa54d82.htm">StatusChangeEventArgs</a>
+              </td>
+              <td>
+                <div class="summary">
+            This event is raised when a status change occurs in an order, shipment order line.
+            You can subscribe to this event to make other things happen when this status change occurs.
+            Fire off emails make other status changes and everything.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="91218335-0fee-aed3-b0e6-f0f667420edf.htm">TelnetServer</a>
+              </td>
+              <td>
+                <div class="summary">
+            Telnet server - used to output log files to.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="1d5f4eb8-1371-13a7-51df-5869326c54d5.htm">TimerEventArgs</a>
+              </td>
+              <td>
+                <div class="summary">
+            This class allows you to create a timed event that will execute every x miliseconds.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="1b3d96f4-cf79-3a5a-1aad-a5c4a1fb7d76.htm">UIInitArgs</a>
+              </td>
+              <td>
+                <div class="summary">
+            Occurs when a users starts the JavaScript user interface.
+            </div>
+              </td>
+            </tr>
+            <tr data="class; public">
+              <td>
+                <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+              </td>
+              <td>
+                <a href="6e103835-92f4-d89a-c40f-499670d44cb1.htm">Utilities</a>
+              </td>
+              <td>
+                <div class="summary">
+            Utitlites and extentions for standard objects.
+            </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(interfaceToggle)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(interfaceToggle, event)" tabindex="0">
+            <img id="interfaceToggle" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Interfaces</span>
+        </h1>
+        <div id="interfaceSection" class="section" name="collapseableSection" style="">
+          <table id="typeList" class="members" frame="lhs" cellpadding="2">
+            <col width="10%" />
+            <tr>
+              <th class="iconColumn">
+           
+       </th>
+              <th class="nameColumn">Interface</th>
+              <th class="descriptionColumn">Description</th>
+            </tr>
+            <tr data="interface; public">
+              <td>
+                <img src="../icons/pubinterface.gif" alt="Public interface" title="Public interface" />
+              </td>
+              <td>
+                <a href="66ad5cec-fd52-7a4d-cf6c-e84a2732f73e.htm">ISiteInterface</a>
+              </td>
+              <td>
+                <div class="summary">
+            All events in this program are enumerated here.
+            </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(enumerationToggle)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(enumerationToggle, event)" tabindex="0">
+            <img id="enumerationToggle" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Enumerations</span>
+        </h1>
+        <div id="enumerationSection" class="section" name="collapseableSection" style="">
+          <table id="typeList" class="members" frame="lhs" cellpadding="2">
+            <col width="10%" />
+            <tr>
+              <th class="iconColumn">
+           
+       </th>
+              <th class="nameColumn">Enumeration</th>
+              <th class="descriptionColumn">Description</th>
+            </tr>
+            <tr data="enumeration; public">
+              <td>
+                <img src="../icons/pubenumeration.gif" alt="Public enumeration" title="Public enumeration" />
+              </td>
+              <td>
+                <a href="2fd38e44-a79e-9929-e665-69b937cc2159.htm">FileSystemAccess</a>
+              </td>
+              <td>
+                <div class="summary">
+            File System access mode
+            </div>
+              </td>
+            </tr>
+            <tr data="enumeration; public">
+              <td>
+                <img src="../icons/pubenumeration.gif" alt="Public enumeration" title="Public enumeration" />
+              </td>
+              <td>
+                <a href="db8e29ac-6215-8dcd-8acc-f72adc9fe2a3.htm">ImageType</a>
+              </td>
+              <td>
+                <div class="summary">
+            Item image types.  For example, list, cart, detail, thumbnail, full size etc.
+            </div>
+              </td>
+            </tr>
+            <tr data="enumeration; public">
+              <td>
+                <img src="../icons/pubenumeration.gif" alt="Public enumeration" title="Public enumeration" />
+              </td>
+              <td>
+                <a href="9315768d-40ab-053f-1119-77734b611064.htm">PluginTypes</a>
+              </td>
+              <td>
+                <div class="summary">
+            What type of plugins are acceptable in this system.
+            </div>
+              </td>
+            </tr>
+            <tr data="enumeration; public">
+              <td>
+                <img src="../icons/pubenumeration.gif" alt="Public enumeration" title="Public enumeration" />
+              </td>
+              <td>
+                <a href="b82afd0f-3e94-77a5-51d4-6ed740a285a4.htm">RedirectorTypes</a>
+              </td>
+              <td>
+                <div class="summary">
+            What type of plugins are acceptable in this system.
+            </div>
+              </td>
+            </tr>
+            <tr data="enumeration; public">
+              <td>
+                <img src="../icons/pubenumeration.gif" alt="Public enumeration" title="Public enumeration" />
+              </td>
+              <td>
+                <a href="339973d5-2546-7312-e155-60ecf42abf94.htm">SiteState</a>
+              </td>
+              <td>
+                <div class="summary">
+            The state of the site.
+            </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div id="footer">
+        <div class="footerLine">
+          <img width="100%" height="3px" src="../icons/footer.gif" alt="Footer image" title="Footer image" />
+        </div>
+        <A NAME="feedback"></A>
+        <span id="fb" class="feedbackcss"></span>
+        <p />Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:tonygermaneri%40gmail.com?Subject=Rendition E-Commerce Framework">Tony Germaneri</a><script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        var HT_mailLinkText = HT_mailLink.innerHTML;
+        HT_mailLink.href += ": " + document.title;
+        HT_mailLink.innerHTML = HT_mailLinkText;
+        </script><p />Copyright © Tony Germaneri 2011</div>
+    </div>
+  </body>
+</html>

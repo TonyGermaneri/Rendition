@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="a9a6b1ed-7c22-761e-e6d6-fe480b3c0a04" revisionNumber="1" dataAlias="Rendition#Rendition.UI.autocompleteURL">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction address="Intro">
+			Rendition#Rendition.UI.autocompleteURL()
+			<para>The URL <link xlink:href="c3297b0d-9e44-0956-efe9-aba03ac86241"/> class uses to select data.The function's signature is: Function(objectName, suffix, from,to, searchSuffix, aggregateColumns, selectedRows, outputType, includeSchema,checksum, del, orderBy, orderDirection, autoComplete).The result will be sent to the Rendition.UI.autocompleteCallback procedure whichmust return a <link xlink:href="de0fdb88-125a-3606-d0af-83173204d97b"/>.The default function calls the C# Rendition.admin.dataSet method.</para>
+		</introduction>
+		<definitionTable>
+			
+			
+				<definedTerm>
+					<para>Member Of</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="6aa67830-fc7a-c3eb-719a-722fb4fb312e"/>
+					</para>
+				</definition>
+			
+			
+				<definedTerm>
+					<para>Type</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="ef3d2310-dfdb-431e-8330-0d339049abff"/>
+					</para>
+				</definition>
+			
+			
+				<definedTerm>
+					<para>Source</para>
+				</definedTerm>
+				<definition>
+					<para>
+						c:\Rendition\Rendition.Core\js\admin\UI\Init.js
+					</para>
+				</definition>
+			
+		</definitionTable>
+	</developerConceptualDocument>
+</topic>

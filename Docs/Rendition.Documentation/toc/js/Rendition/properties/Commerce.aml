@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="2896c8f9-0029-93dd-3d58-5d56b94ded8b" revisionNumber="1" dataAlias="Rendition.Commerce">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction address="Intro">
+			Rendition.Commerce()
+			<para>Rendition commerce applications.  
+This includes constructors like item editor, order editor, category editor etc..</para>
+		</introduction>
+		<definitionTable>
+			
+			
+			
+			
+				<definedTerm>
+					<para>Source</para>
+				</definedTerm>
+				<definition>
+					<para>
+						c:\Rendition\Rendition.Core\js\admin\Commerce\Commerce.js
+					</para>
+				</definition>
+			
+		</definitionTable>
+	</developerConceptualDocument>
+</topic>

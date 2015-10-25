@@ -1,0 +1,1973 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<topic id="ddee8d40-d92d-34d0-2be3-5f5d65f36f31" revisionNumber="1" dataAlias="Rendition.UI">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction address="Intro">
+			Namespace Rendition.UI
+			<para>Rendition UI framework</para>
+		</introduction>
+		<para>
+			<definitionTable>
+				
+				
+					<definedTerm>
+						<para>Member Of</para>
+					</definedTerm>
+					<definition>
+						<para>
+							<link xlink:href="4e4d1c40-6170-f41c-0ca7-87912430cd3d"/>
+						</para>
+					</definition>
+				
+				
+					<definedTerm>
+						<para>Source</para>
+					</definedTerm>
+					<definition>
+						<para>
+							c:\Rendition\Rendition.Core\js\admin\UI\UI.js
+						</para>
+					</definition>
+				
+			</definitionTable>
+		</para>
+	<!-- ============================== Examples ========================== -->	
+		
+	<!-- ============================== parameters ========================== -->
+		
+	<!-- ============================== fields ========================== -->
+		
+	<!-- ============================== methods ========================= -->
+		
+			<section address="methods">
+				<title>Methods</title>
+				<content>
+					<table>
+						<tableHeader>
+						<row>
+							<entry><para> </para></entry>
+							<entry><para>Name</para></entry>
+							<entry><para>Type</para></entry>
+							<entry><para>Description</para></entry>
+						</row>
+						</tableHeader>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+											<mediaLinkInline><image xlink:href="static"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="27273efa-c92a-1e2c-0319-a9ef80f43769"/>(<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  value)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Adds comma grouping to a number.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+											<mediaLinkInline><image xlink:href="static"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="4e475e54-76c2-f6d8-88f9-f2d06caf0652"/>(<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  cssCode)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="044fcb55-0c5f-d88f-619c-455ffb8b2600"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Attaches CSS code to the body of the document after the page is loaded.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+											<mediaLinkInline><image xlink:href="static"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="33ba872f-5f8d-a7bb-d0e3-5b543fec9af5"/>(<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  scriptPath, <link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  callbackProcedure)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="044fcb55-0c5f-d88f-619c-455ffb8b2600"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Attaches JavaScript code to the body of the document after the page is loaded.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+											<mediaLinkInline><image xlink:href="static"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="610c308c-a111-10d8-346d-3f148ac7770f"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="044fcb55-0c5f-d88f-619c-455ffb8b2600"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Prevents moving the cursor from an input or textarea when tab is pressedand adds a tab charater to the field at the cursor position.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+											<mediaLinkInline><image xlink:href="static"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="62455f5c-9c4d-9db9-d56a-82b28ed8e01e"/>(<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  type, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  listener, <link xlink:href="ef3d2310-dfdb-431e-8330-0d339049abff"/>  appendedFunction, <link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>  capture)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="044fcb55-0c5f-d88f-619c-455ffb8b2600"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Cross browser append event.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+											<mediaLinkInline><image xlink:href="static"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="9f5732f2-7e30-4a72-a4d6-a57b2d5340f5"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  args)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Creates a HTML button, quick and easy way.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+											<mediaLinkInline><image xlink:href="static"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="742dfd98-496f-222e-2848-09b6b0933bd0"/>(<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  strBool)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Converts string 'on' and 'off' (or '') to an Integer 1 or 0. 1=on and 0=off (or '').
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+											<mediaLinkInline><image xlink:href="static"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="3963c3ae-ef3b-40ca-e0b2-88322544c2b8"/>(<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  strBool)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Convert the string 'true' or 'false' into a boolean or a string  '1' or '0' into a boolean.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+											<mediaLinkInline><image xlink:href="static"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="5e0e8ff4-ea48-dc36-c6cd-fbe2c3d269a9"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="044fcb55-0c5f-d88f-619c-455ffb8b2600"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										closes all context menus except the ansestors of the menu passed as the parameter.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+											<mediaLinkInline><image xlink:href="static"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="5f860b63-c1c3-c317-8d2c-917b688e0016"/>()
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Creates a GUID by using Rendition.UI.createUUID.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+											<mediaLinkInline><image xlink:href="static"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="831bbed1-bd26-6854-9dcd-974bd1e587a2"/>()
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="044fcb55-0c5f-d88f-619c-455ffb8b2600"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Creates an auto incrementing number to identifiy each widget.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+											<mediaLinkInline><image xlink:href="static"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="21ec2b19-2258-7eef-aef4-cca5d5e7cb75"/>()
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Creates a UUID.  http://www.rfc-archive.org/getrfc.php?rfc=4122 4.4.  Algorithms for Creating a UUID from Truly Random or Pseudo-Random Numbers
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+											<mediaLinkInline><image xlink:href="static"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="4893a8c4-45bd-0e2a-3102-47b737394726"/>()
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Finds the best AJAX object across many browsers.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+											<mediaLinkInline><image xlink:href="static"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="47d0b50b-3e31-b9b2-b494-963f9441d908"/>(<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  day1, <link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  day2)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Accepts two date strings in this format '1/1/2009' and returns the int difference in days.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+											<mediaLinkInline><image xlink:href="static"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="56e42484-b159-2a86-f671-c6a3853a9369"/>()
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Default items in the panel.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+											<mediaLinkInline><image xlink:href="static"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="3dc0c73e-7e53-da5c-098b-7280b4a6aa7c"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="044fcb55-0c5f-d88f-619c-455ffb8b2600"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Turns a UUID into a JavaScript or XML safe id by adding a 'd' to the front of it,removing the curly braces and replacing the hyphens with underscores.and adds a tab charater to the field at the cursor position.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+											<mediaLinkInline><image xlink:href="static"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="d543a465-6dd1-ce0c-e1be-d918c8a888c9"/>(<link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  selectElement, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  twoDimArray, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  varOrd, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  textOrd, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  selectedValue)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Fills a DHTML select element with the values in an array.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+											<mediaLinkInline><image xlink:href="static"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="33d6f4d7-dfdb-676f-96fb-adca617fd235"/>(<link xlink:href="ff5e4aac-f374-fc24-dfc2-7e9d046490a4"/>  formatDate, <link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  formatString)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Turns a DateTime object into a string and formats it following the provided pattern.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+											<mediaLinkInline><image xlink:href="static"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="f1de497a-1892-50e8-8688-631d2cd4022d"/>(<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  text, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  maxWidth, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  fontsize)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Gets the aproximate width of the text content of a cell. Shows how much over the max width the input text was at a given font size.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+											<mediaLinkInline><image xlink:href="static"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="73f785dc-f38b-c343-9e8d-9a71868ba40a"/>(<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  fullPath)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Gets the directory name from a physical path.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+											<mediaLinkInline><image xlink:href="static"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="e36838c8-be1d-c50e-0cc1-0e1e6c9424c7"/>(<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  attribute, <link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  value, <link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  tagName, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  parentElement)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										An array of object that have the specified attribute and value starting from a common parent.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+											<mediaLinkInline><image xlink:href="static"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="886c709e-ada4-fac1-e12f-1fa569391025"/>(<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  selClass)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Gets an array of objects that have the specified className attribute.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+											<mediaLinkInline><image xlink:href="static"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="672a9c52-227d-30f6-2922-3d53362af22c"/>(<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  uniqueFieldName)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Gets the field info object { name: 'Blah', message: 'All About Blah' }.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+											<mediaLinkInline><image xlink:href="static"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="5d4fc623-b584-8af2-0f38-b95a3683bd61"/>(<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  fullPath)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Gets the file name from a physical path.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+											<mediaLinkInline><image xlink:href="static"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="0ad80f6e-b68a-ff77-d053-c87506b61826"/>(<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  seed, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  width, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  base)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Gets a random fixed width integer.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+											<mediaLinkInline><image xlink:href="static"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="98c66fdb-eb9e-6747-9b88-b4788b26f09b"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  obj)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="044fcb55-0c5f-d88f-619c-455ffb8b2600"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Finds all DHTML input types within a given DHTML elementand returns a JSON string representing them.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+											<mediaLinkInline><image xlink:href="static"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="f2f98ad9-d8e6-0795-a30a-c3556434cbdb"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  target, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  ev)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Get the mouse offset reletive to an object
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+											<mediaLinkInline><image xlink:href="static"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="d97c035f-378d-c3c9-24d3-7d3463411387"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  obj)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="044fcb55-0c5f-d88f-619c-455ffb8b2600"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Finds all the DHTML input types within a given DHTML element and returns an array of inputs.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+											<mediaLinkInline><image xlink:href="static"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="6d302692-eac4-f199-40a9-2c965697c491"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  obj)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="044fcb55-0c5f-d88f-619c-455ffb8b2600"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Gets all the form elements (input,select,textarea) within an object and returns them as a URI ready string
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+											<mediaLinkInline><image xlink:href="static"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="9826b281-13ce-e61c-90b5-ea320e781635"/>(<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  fullPath)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Gets a path from the full path (path+file).
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+											<mediaLinkInline><image xlink:href="static"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="577f03a0-82ab-aac2-29c0-5eb179e57586"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  obj)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Gets the position of an element.  Return the offset position + scroll position for position:absolute elements.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+											<mediaLinkInline><image xlink:href="static"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="7aa70b16-735c-c2a2-32a2-3dcfb6bab496"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="044fcb55-0c5f-d88f-619c-455ffb8b2600"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Gets the absolute position of an element within an absolutely or fixed positioned element.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+											<mediaLinkInline><image xlink:href="static"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="5b346be0-fe4f-4ce2-2b37-42da0e20aee7"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  obj)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Gets the offset rect of a DHTML object using offsetTop, offsetWidth etc..
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+											<mediaLinkInline><image xlink:href="static"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="bea07792-4399-640c-34a6-6d72a39b238f"/>(<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  query)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Sync fetch a SQL query and return a 2D array.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+											<mediaLinkInline><image xlink:href="static"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="f8ab8fd9-9bfe-a7fd-1479-705a391d8256"/>(<link xlink:href="89f0508f-dccd-8863-9d09-b323af88a667"/>  args)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										helpBox returns a little yellow help DIV that you can pass a string or a function toto fill with text/HTML.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+											<mediaLinkInline><image xlink:href="static"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="51f933d9-5a1b-a5bc-9b23-7df10766d2e7"/>(<link xlink:href="0c7e7de5-e5cc-8e47-144b-f225672aefc7"/>  The, <link xlink:href="0c7e7de5-e5cc-8e47-144b-f225672aefc7"/>  The, <link xlink:href="0c7e7de5-e5cc-8e47-144b-f225672aefc7"/>  The)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Get a hex value from RGB color.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+											<mediaLinkInline><image xlink:href="static"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="95ba68e8-8b36-5079-067a-7ad1da5c4339"/>(<link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  obj)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="044fcb55-0c5f-d88f-619c-455ffb8b2600"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Global hover function for some widgets.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+											<mediaLinkInline><image xlink:href="static"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="83908e53-8211-8e03-21e1-4eab6676d95e"/>(<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  s)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Makes a string safe for input into an HTML input.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+											<mediaLinkInline><image xlink:href="static"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="396f7e04-f101-415e-2b7a-f4cb0ddb6b99"/>(<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>  cond, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  ret, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  elseRet)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										IIF. Just like var foo = 1>2?3:4; but with a lot more typing.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+											<mediaLinkInline><image xlink:href="static"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="c02fc4ad-a4f2-22bd-d320-51875803862d"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  inputStruct)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Creates an array of DHTML inputs based on a generic object.  Boolean values get turned into checkboxes, object gets turned into arrays of inputs. This is a reciprocal function.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+											<mediaLinkInline><image xlink:href="static"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="c7760bbb-2532-e7c3-0c42-6f264ec0bf45"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  testObject)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Checks if an object is an array.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+											<mediaLinkInline><image xlink:href="static"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="3526489c-d237-4691-8841-2fd2492faad9"/>(<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  value)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Checks if the object is a date.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+											<mediaLinkInline><image xlink:href="static"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="9030fcc5-615c-1dba-7578-c792669c6f21"/>(<link xlink:href="46169281-4b27-a561-db31-85041946bc42"/>  e)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Check if the DHTML element is in the body.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+											<mediaLinkInline><image xlink:href="static"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="0e58e73d-99e3-136e-ced2-90aab5434503"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  x)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Check if an object is a integer.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+											<mediaLinkInline><image xlink:href="static"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="dc68e349-3e4e-f182-b04d-2671aa67730f"/>(<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  keyCode)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Check if the keyCode is a valid key in an numeric input field.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+											<mediaLinkInline><image xlink:href="static"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="4d57d5f8-da2c-f03f-5150-0aa57446b202"/>(<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  value)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="044fcb55-0c5f-d88f-619c-455ffb8b2600"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Creates or appends to a <link xlink:href="dc990744-70f0-25bd-d971-be960b7764b6"/> to hold log data for debugging.  Value is trimmed to the first 1000 characters.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+											<mediaLinkInline><image xlink:href="static"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="3de9a67a-7e0b-d7b8-cdeb-2b3137bc7a42"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  obj)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Sets an element's text ect unselectable for use in dragging elements.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+											<mediaLinkInline><image xlink:href="static"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="ec72c8b0-79e6-a7ae-7b98-3ff1693228f0"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  args, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  parentNode, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  type)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Creates a <link xlink:href="2e5cd548-e114-bc7b-38d1-14306fb354b0"/> and usesa more simplistic and shorter method of creating the <link xlink:href="2e5cd548-e114-bc7b-38d1-14306fb354b0"/>.The args object looks like<code language="JavaScript">	var foo = [		{			text:'blah',			mousedown:Function,			click:Function,			mouseover:Function,		}	]</code>
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+											<mediaLinkInline><image xlink:href="static"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="f4f04f68-a2ad-c45c-8efb-6c2a910a99be"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  ev)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Gets the mouse coordinates from the browser event.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+											<mediaLinkInline><image xlink:href="static"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="d5f6513e-bd50-492d-64b9-bd65f9a6718b"/>()
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Creates a simple 1 or 2 column table from an array of values.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+											<mediaLinkInline><image xlink:href="static"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="c4ad8e0e-97fd-ea72-0ef3-5a3caba635ea"/>(<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  urlWithPram, <link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  targetBlank)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="044fcb55-0c5f-d88f-619c-455ffb8b2600"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Takes a URL with query string and sends it using the POST method to anew window.  Mostly used for downloading files that are the result ofan invocation.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+											<mediaLinkInline><image xlink:href="static"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="2cac1d40-3688-ec86-7451-3174d7afd519"/>(<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  max)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Gets a random number.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+											<mediaLinkInline><image xlink:href="static"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="063ef433-293e-44c4-436c-c008f91687f4"/>()
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="044fcb55-0c5f-d88f-619c-455ffb8b2600"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Redraw the task bar.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+											<mediaLinkInline><image xlink:href="static"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="652ca5fe-9fe5-4491-b265-cf2ea918d463"/>(<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  type, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  listener, <link xlink:href="ef3d2310-dfdb-431e-8330-0d339049abff"/>  removedFunction, <link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>  capture)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="044fcb55-0c5f-d88f-619c-455ffb8b2600"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Cross browser remove event.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="64f79700-3092-f502-a32f-384d37012c15"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  element, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Context menu for attchment grids.  This allows a person to download the file listed in the context menu.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+											<mediaLinkInline><image xlink:href="static"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="8678027b-673b-8c9e-263c-3bba63b5fbbc"/>(<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  Hex)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Get a RGB color from hex color.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+											<mediaLinkInline><image xlink:href="static"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="bb69adc9-61aa-6357-e531-f1cbd3f56f9d"/>()
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Pre JSON.Stringify stringify object.  Accepts an object containing DHTML input elements that will be turned into a string of JSON data
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+											<mediaLinkInline><image xlink:href="static"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="a4c53337-974c-3f9b-e45a-033d3d825a44"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  obj, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  scope, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  args)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										When sent a function it will execute the fuction in the scope and with the arguments provided,if anything else is sent it will return was was sent.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+											<mediaLinkInline><image xlink:href="static"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="e876ac49-97c4-e792-a9ea-7b7705bcc636"/>(<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  value)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Truncates text to a certain width.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+											<mediaLinkInline><image xlink:href="static"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="e8ad8357-7344-da30-a9d8-5a59b150f254"/>(<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  text)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Creates a text node.
+									</para>
+								</entry>
+							</row>
+						
+					</table>
+				</content>
+			</section>
+		
+	<!-- ============================== events ========================= -->
+		
+			<section address="events">
+				<title>Events</title>
+				<content>
+					<table>
+						<tableHeader>
+						<row>
+							<entry><para> </para></entry>
+							<entry><para>Name</para></entry>
+							<entry><para>Description</para></entry>
+						</row>
+						</tableHeader>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="f363cf2f-3725-748b-0ca1-fa9150529b27"/>()
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when Rendition has started loading.
+									</para>
+								</entry>
+							</row>
+						
+					</table>
+					<alert class="tip">
+						<para>There are two ways to add event listeners.</para>
+					</alert>
+					<para>
+						1. You can attach to events as a parameter when you create the object.
+						<code language="javascript">
+							var foo = new object({
+								event:function(signature){
+									/* event procedure */
+								}
+							});
+						</code>
+						2. Or you can add the event after the object has been instantiated.
+						<code language="javascript">
+							var foo = new object();
+							foo.addEventListener('event',function(signature){
+								/* event procedure */
+							}, false);
+						</code>
+					</para>
+				</content>
+			</section>
+		
+	</developerConceptualDocument>
+</topic>

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<emails>
+	<email type="emailAFriend" source="~/plugins/email/emailAFriend.cs"/>
+	<email type="shipmentUpdate" source="~/plugins/email/shipmentUpdate.cs"/>
+	<email type="lostPassword" source="~/plugins/email/lostPassword.cs"/>
+	<email type="orderConfirm" source="~/plugins/email/orderConfirm.cs"/>
+	<email type="commentAdded" source="~/plugins/email/commentAdded.cs"/>
+</emails>

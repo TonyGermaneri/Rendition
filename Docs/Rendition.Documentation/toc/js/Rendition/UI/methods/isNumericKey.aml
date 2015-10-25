@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="24dccb43-9222-91d8-796e-42d34dfb85f2" revisionNumber="1" dataAlias="Rendition.UI.isNumericKey">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction address="Intro">
+			Rendition.UI.isNumericKey(<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  keyCode)
+			<para>Check if the keyCode is a valid key in an numeric input field.</para>
+		</introduction>
+		<definitionTable>
+			
+			
+				<definedTerm>
+					<para>Member Of</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="b584e6c6-2f5a-6c97-4e57-2ad4afa995cc"/>
+					</para>
+				</definition>
+			
+			
+				<definedTerm>
+					<para>Return Type</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+					</para>
+				</definition>
+			
+			
+				<definedTerm>
+					<para>Source</para>
+				</definedTerm>
+				<definition>
+					<para>
+						c:\Rendition\Rendition.Core\js\admin\UI\Events.js
+					</para>
+				</definition>
+			
+		</definitionTable>
+		<section address="parameters">
+		<title>Parameters</title>
+			<sections>
+				<table>
+					<tableHeader>
+					<row>
+						<entry><para> </para></entry>
+						<entry><para>Name</para></entry>
+						<entry><para>Description</para></entry>
+					</row>
+					</tableHeader>
+					
+						<row>
+							<entry>
+								<para>
+									
+									Required
+									keyCode
+									<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>
+								</para>
+							</entry>
+							<entry>
+								<para>
+									the keyCode of the key event.
+								</para>
+							</entry>
+							<entry>
+								<para>
+									
+								</para>
+							</entry>
+						</row>
+					
+				</table>
+			</sections>
+		</section>
+	</developerConceptualDocument>
+</topic>

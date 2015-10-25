@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<topic id="dda95951-4377-a22c-0059-1aae4b45cd94" revisionNumber="1" dataAlias="Rendition.UI.ResizeableBox">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction address="Intro">
+			Class Rendition.UI.ResizeableBox
+			<para>Creates a DHTML based resizeable box with a resizer in the lower right corner.Ever want to have a DHTML DIV element that can be resized by the user?This widget doesn't work correctly.</para>
+		</introduction>
+		<para>
+			<definitionTable>
+				
+				
+					<definedTerm>
+						<para>Member Of</para>
+					</definedTerm>
+					<definition>
+						<para>
+							<link xlink:href="ddee8d40-d92d-34d0-2be3-5f5d65f36f31"/>
+						</para>
+					</definition>
+				
+				
+					<definedTerm>
+						<para>Source</para>
+					</definedTerm>
+					<definition>
+						<para>
+							c:\Rendition\Rendition.Core\js\admin\UI\resizeableBox.js
+						</para>
+					</definition>
+				
+			</definitionTable>
+		</para>
+	<!-- ============================== Examples ========================== -->	
+		
+			<section address="examples">
+				<title>Examples</title>
+				<sections>
+					
+						<section>
+							<title>
+								
+									 Create a resizeable box 
+
+								
+							</title>
+							<content>
+								<para>
+									<code language="javascript">
+var bar = Rendition.UI.ResizeableBox({
+	resize: function () {
+		bar.box.style.background = '#'+Rendition.UI.getFixedWidthRandomInt(10,6,16);
+	}
+});
+
+bar.box.style.background = 'teal';
+
+document.body.appendChild(bar.box);</code>
+								</para>
+							</content>
+						</section>
+					
+				</sections>
+			</section>
+		
+	<!-- ============================== parameters ========================== -->
+		
+			<section address="parameters">
+				<title>Constructor Parameters</title>
+				<content>
+					<table>
+						<tableHeader>
+							<row>
+								<entry><para> </para></entry>
+								<entry><para>Name</para></entry>
+								<entry><para>Type</para></entry>
+								<entry><para>Description</para></entry>
+							</row>
+						</tableHeader>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Parameters for the <link xlink:href="dda95951-4377-a22c-0059-1aae4b45cd94"/>.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.height 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The height of the box.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.marginTop 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The margin-top property in PX.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.marginRight 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The margin-right property in PX.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.marginLeft 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The margin-left property in PX.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.marginBottom 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The margin-bottom property in PX.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.verticalOnly 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Only allow vertical resizing.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.horizontalOnly 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Only allow horizontal resizing.
+									</para>
+								</entry>
+							</row>
+						
+					</table>
+				</content>
+			</section>
+		
+	<!-- ============================== fields ========================== -->
+		
+			<section address="fields">
+				<title>Properties</title>
+				<content>
+					<table>
+						<tableHeader>
+							<row>
+								<entry><para> </para></entry>
+								<entry><para>Name</para></entry>
+								<entry><para>Type</para></entry>
+								<entry><para>Description</para></entry>
+							</row>
+						</tableHeader>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="2b0375b4-74e8-2144-11a7-44a57e44ec2a"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The DHTML DIV box.  This box should be appended to other DHTML elements or havechild DHTML elements appended to it.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="37f0ab53-9dbd-da8e-252b-6642e3932f06"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The unique id of this instance.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="6b122dc0-c4e9-53fd-85f9-ee134fdd1947"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The type of widget. Returns RenditionResizeableBox.
+									</para>
+								</entry>
+							</row>
+						
+					</table>
+				</content>
+			</section>
+		
+	<!-- ============================== methods ========================= -->
+		
+			<section address="methods">
+				<title>Methods</title>
+				<content>
+					<table>
+						<tableHeader>
+						<row>
+							<entry><para> </para></entry>
+							<entry><para>Name</para></entry>
+							<entry><para>Type</para></entry>
+							<entry><para>Description</para></entry>
+						</row>
+						</tableHeader>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="a01d9159-ac87-34fb-a237-07d4a5d51807"/>(<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  type, <link xlink:href="ef3d2310-dfdb-431e-8330-0d339049abff"/>  proc, <link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>  capture)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="044fcb55-0c5f-d88f-619c-455ffb8b2600"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Attach a procedure to an event.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="29b90e66-ed47-b748-0016-7ef05cca6305"/>(<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  type, <link xlink:href="ef3d2310-dfdb-431e-8330-0d339049abff"/>  proc, <link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>  capture)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="044fcb55-0c5f-d88f-619c-455ffb8b2600"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Removes an event from subscription list.  The [proc] must match exactly the [proc] subscribed with.
+									</para>
+								</entry>
+							</row>
+						
+					</table>
+				</content>
+			</section>
+		
+	<!-- ============================== events ========================= -->
+		
+	</developerConceptualDocument>
+</topic>

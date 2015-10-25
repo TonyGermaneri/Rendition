@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="{!var AMLID = generateAMLIDHASH(data.alias); if(JSDOC.AMLIDS[AMLID]!==undefined){print('Conflict '+data.alias+' = '+JSDOC.AMLIDS[AMLID]+" => "+AMLID)}else{ JSDOC.AMLIDS[AMLID] = data.alias } output+=AMLID !}" revisionNumber="1" dataAlias="{+data.alias+}">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction address="Intro">
+			{+data.alias+}{+makeSignature(data.params)+}
+			<para>{+resolveLinks(data.desc)+}</para>
+		</introduction>
+		<definitionTable>
+			<if test="data.author">
+				<definedTerm>
+					<para>Author</para>
+				</definedTerm>
+				<definition>
+					<para>
+						{+data.author+}
+					</para>
+				</definition>
+			</if>
+			<if test="data.type">
+				<definedTerm>
+					<para>Member Of</para>
+				</definedTerm>
+				<definition>
+					<para>
+						{+resolveLinks('<link xlink:href="'+data.memberOf+'"/>')+}
+					</para>
+				</definition>
+			</if>
+			<if test="data.type">
+				<definedTerm>
+					<para>Type</para>
+				</definedTerm>
+				<definition>
+					<para>
+						{+resolveLinks('<link xlink:href="'+data.type+'"/>')+}
+					</para>
+				</definition>
+			</if>
+			<if test="data.srcFile">
+				<definedTerm>
+					<para>Source</para>
+				</definedTerm>
+				<definition>
+					<para>
+						{+pathSrcFile(data.srcFile)+}
+					</para>
+				</definition>
+			</if>
+		</definitionTable>
+	</developerConceptualDocument>
+</topic>

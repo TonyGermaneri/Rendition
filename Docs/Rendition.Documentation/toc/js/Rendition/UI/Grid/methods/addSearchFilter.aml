@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="06446ffa-1d1f-7c31-c36e-b60f127fcbad" revisionNumber="1" dataAlias="Rendition.UI.Grid#Grid.addSearchFilter">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction address="Intro">
+			Rendition.UI.Grid#Grid.addSearchFilter(<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  columnIndex, <link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  operator, <link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  value, <link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  value2, <link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  group, <link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  linkOperator)
+			<para>Adds a search filter to the grid.</para>
+		</introduction>
+		<definitionTable>
+			
+			
+				<definedTerm>
+					<para>Member Of</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="f5f5d4d4-f415-cd77-8e8f-c01e6464006a"/>
+					</para>
+				</definition>
+			
+			
+				<definedTerm>
+					<para>Return Type</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+					</para>
+				</definition>
+			
+			
+				<definedTerm>
+					<para>Source</para>
+				</definedTerm>
+				<definition>
+					<para>
+						c:\Rendition\Rendition.Core\js\admin\UI\grid.js
+					</para>
+				</definition>
+			
+		</definitionTable>
+		<section address="parameters">
+		<title>Parameters</title>
+			<sections>
+				<table>
+					<tableHeader>
+					<row>
+						<entry><para> </para></entry>
+						<entry><para>Name</para></entry>
+						<entry><para>Description</para></entry>
+					</row>
+					</tableHeader>
+					
+						<row>
+							<entry>
+								<para>
+									
+									Required
+									columnIndex
+									<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>
+								</para>
+							</entry>
+							<entry>
+								<para>
+									The column index to search.
+								</para>
+							</entry>
+							<entry>
+								<para>
+									
+								</para>
+							</entry>
+						</row>
+					
+						<row>
+							<entry>
+								<para>
+									Optional
+									
+									operator
+									<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+								</para>
+							</entry>
+							<entry>
+								<para>
+									The search operator.  Possible values are '=', '&gt;', '&lt;', etc.. See MS SQL documentaion for a complete list of column comparison operators.
+								</para>
+							</entry>
+							<entry>
+								<para>
+									'='
+								</para>
+							</entry>
+						</row>
+					
+						<row>
+							<entry>
+								<para>
+									Optional
+									
+									value
+									<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+								</para>
+							</entry>
+							<entry>
+								<para>
+									The first match value of the search.
+								</para>
+							</entry>
+							<entry>
+								<para>
+									
+								</para>
+							</entry>
+						</row>
+					
+						<row>
+							<entry>
+								<para>
+									Optional
+									
+									value2
+									<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+								</para>
+							</entry>
+							<entry>
+								<para>
+									The second match value of the search.
+								</para>
+							</entry>
+							<entry>
+								<para>
+									
+								</para>
+							</entry>
+						</row>
+					
+						<row>
+							<entry>
+								<para>
+									Optional
+									
+									group
+									<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+								</para>
+							</entry>
+							<entry>
+								<para>
+									The id of the groupping of the search filter.  Filters are grouped by their group id.  This has an impact on the way link operators work. E.g.: where Group 0 -> (this=this or this=that) __Last link operator of group 0__ -> and __Group 1 ->__ (this=that and that=there).
+								</para>
+							</entry>
+							<entry>
+								<para>
+									0
+								</para>
+							</entry>
+						</row>
+					
+						<row>
+							<entry>
+								<para>
+									Optional
+									
+									linkOperator
+									<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+								</para>
+							</entry>
+							<entry>
+								<para>
+									The link operator.  Can be 'and' or 'or'.
+								</para>
+							</entry>
+							<entry>
+								<para>
+									'or'
+								</para>
+							</entry>
+						</row>
+					
+				</table>
+			</sections>
+		</section>
+	</developerConceptualDocument>
+</topic>

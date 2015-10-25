@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="e605ae15-af97-7262-9da2-14d4cf1fe6f8" revisionNumber="1" dataAlias="Rendition.UI.Chart">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		
+		<definitionTable>
+			
+				<definedTerm>
+					<para>Member Of</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="b584e6c6-2f5a-6c97-4e57-2ad4afa995cc"/>
+					</para>
+				</definition>
+			
+		</definitionTable>
+		
+			<section address="events">
+				<title>Rendition.UI.Chart Events</title>
+				<content>
+					<table>
+						<tableHeader>
+						<row>
+							<entry><para> </para></entry>
+							<entry><para>Name</para></entry>
+							<entry><para>Description</para></entry>
+						</row>
+						</tableHeader>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="e58edc8c-0407-9f10-deba-e6293f6a5b5a"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  chart)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when the image is resized.
+									</para>
+								</entry>
+							</row>
+						
+					</table>
+					<alert class="tip">
+						<para>There are two ways to add event listeners.</para>
+					</alert>
+					<para>
+						1. You can attach to events as a parameter when you create the object.
+						<code language="javascript">
+							var foo = new object({
+								event:function(signature){
+									/* event procedure */
+								}
+							});
+						</code>
+						2. Or you can add the event after the object has been instantiated.
+						<code language="javascript">
+							var foo = new object();
+							foo.addEventListener('event',function(signature){
+								/* event procedure */
+							}, false);
+						</code>
+					</para>
+				</content>
+			</section>
+		
+	</developerConceptualDocument>
+</topic>

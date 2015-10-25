@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="e8e620f7-334f-fb99-9b90-40cd0a28d628" revisionNumber="1" dataAlias="Rendition.UI.MenuOptionElement">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		
+		<definitionTable>
+			
+				<definedTerm>
+					<para>Member Of</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="b584e6c6-2f5a-6c97-4e57-2ad4afa995cc"/>
+					</para>
+				</definition>
+			
+		</definitionTable>
+		
+			<section address="fields">
+				<title>Rendition.UI.MenuOptionElement Properties</title>
+				<content>
+					<table>
+						<tableHeader>
+							<row>
+								<entry><para> </para></entry>
+								<entry><para>Type</para></entry>
+								<entry><para>Name</para></entry>
+								<entry><para>Description</para></entry>
+							</row>
+						</tableHeader>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="37d780ff-ee06-fff5-496f-a3af43acdee2"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The unique id of this instance.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="e68d4343-640f-5e93-2b01-f8aefce017a2"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The type of widget.  Returns RenditionMenuOption.
+									</para>
+								</entry>
+							</row>
+						
+					</table>
+				</content>
+			</section>
+		
+
+	</developerConceptualDocument>
+</topic>

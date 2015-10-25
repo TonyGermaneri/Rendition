@@ -1,0 +1,1127 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<topic id="c3297b0d-9e44-0956-efe9-aba03ac86241" revisionNumber="1" dataAlias="Rendition.UI.AutoComplete">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction address="Intro">
+			Class Rendition.UI.AutoComplete
+			<para>Creates a DHTML based autocomplete.  This class implements Rendition.UI.ContextMenu to create a drop down menu when [args.autoComplete] is true.It also provides methods for validating user input against Regular Expresions and database records.Most all validation in Rendition is done using this class.</para>
+		</introduction>
+		<para>
+			<definitionTable>
+				
+				
+					<definedTerm>
+						<para>Member Of</para>
+					</definedTerm>
+					<definition>
+						<para>
+							<link xlink:href="ddee8d40-d92d-34d0-2be3-5f5d65f36f31"/>
+						</para>
+					</definition>
+				
+				
+					<definedTerm>
+						<para>Source</para>
+					</definedTerm>
+					<definition>
+						<para>
+							c:\Rendition\Rendition.Core\js\admin\UI\autocomplete.js
+						</para>
+					</definition>
+				
+			</definitionTable>
+		</para>
+	<!-- ============================== Examples ========================== -->	
+		
+			<section address="examples">
+				<title>Examples</title>
+				<sections>
+					
+						<section>
+							<title>
+								
+									Bind autocomplete to an input and prevent invalid input.
+
+								
+							</title>
+							<content>
+								<para>
+									<code language="javascript">
+var foo = Rendition.UI.Dialog();
+var input = document.createElement('input');
+var submit = document.createElement('button');
+var bar = Rendition.UI.AutoComplete({
+	mustMatchPattern: /^.+$/,
+	patternMismatchMessage: 'This field cannot be blank.',
+	patternMismatchTitle: 'Invalid Value.',
+	input: input
+});
+submit.innerHTML = 'Check validation';
+foo.content.appendChild(input);
+foo.content.appendChild(submit);
+submit.onclick = function () {
+	alert(bar.isValid());
+}
+});</code>
+								</para>
+							</content>
+						</section>
+					
+						<section>
+							<title>
+								
+									Bind autocomplete to an input.  Require the value to be present in the result of the query matching the object + suffix and require the value to match a pattern.
+
+								
+							</title>
+							<content>
+								<para>
+									<code language="javascript">
+var foo = Rendition.UI.Dialog();
+var input = document.createElement('input');
+var submit = document.createElement('button');
+var bar = Rendition.UI.AutoComplete({
+	mustMatchPattern: /[0-9]+|^$/i,
+	patternMismatchMessage: 'This field can only contain the numbers 0-9.',
+	patternMismatchTitle: 'Invalid value.',
+	objectName: 'shortUserList',
+	suffix: "where userId like '%&lt;value&gt;%' or handle like '%&lt;value&gt;%' or email like '%&lt;value&gt;%'",
+	mustMatchRecord: true,
+	matchSuffix: "where userId = '&lt;value&gt;'",
+	autoComplete: true,
+	optionDisplayValue: '&lt;column0&gt; &lt;column1&gt;',
+	optionValue: '&lt;column0&gt;',
+	input: input
+});
+submit.innerHTML = 'Check validation';
+foo.content.appendChild(input);
+foo.content.appendChild(submit);
+submit.onclick = function () {
+	alert(bar.isValid());
+}</code>
+								</para>
+							</content>
+						</section>
+					
+				</sections>
+			</section>
+		
+	<!-- ============================== parameters ========================== -->
+		
+			<section address="parameters">
+				<title>Constructor Parameters</title>
+				<content>
+					<table>
+						<tableHeader>
+							<row>
+								<entry><para> </para></entry>
+								<entry><para>Name</para></entry>
+								<entry><para>Type</para></entry>
+								<entry><para>Description</para></entry>
+							</row>
+						</tableHeader>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Parameters for the widget.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.input 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The DHTML element input to attach to
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.objectName 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The object to scan
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.optionDisplayValue 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="89f0508f-dccd-8863-9d09-b323af88a667"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Value that shows up on the drop down menu, &lt;column0&gt; will be replaced by the first column value etc.   When a function is passed, the function must return a string and will be evaluated after each request.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.optionValue 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="89f0508f-dccd-8863-9d09-b323af88a667"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Value that is returned to the field when an option is selected.  &lt;column0&gt; will be replaced by the first column value etc..   When a function is passed, the function must return a string and will be evaluated after each request.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.matchCase 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										When true, match the input value with the case of the recordset result.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.matchPart 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Is the substring match matching the begining of the string (left) or any part of the string. 0=match begining (left), 1=match any (left or right).
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.max 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Maximum number of rows to show.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.autoComplete 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										When true use the autocomplete function, or just use the validation procedures.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.mustMatchRecord 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										When true force focus /w msg until value matches with a record.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.cantMatchRecord 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										When true force focus /w msg until value does not match any records.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.mustMatchPattern 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="89f0508f-dccd-8863-9d09-b323af88a667"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The Regular Expression the input value must match to be valid.   When a function is passed, the function must return a string and will be evaluated after each request.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.recordMismatchMessage 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="89f0508f-dccd-8863-9d09-b323af88a667"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Message that appears when mustMatchRecord or cantMatchRecord is true and the valid condition is not met.   When a function is passed, the function must return a string and will be evaluated after each request.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.recordMismatchTitle 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="89f0508f-dccd-8863-9d09-b323af88a667"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Title that appears when mustMatchRecord or cantMatchRecord is true and the valid condition is not met.   When a function is passed, the function must return a string and will be evaluated after each request.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.patternMismatchMessage 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="89f0508f-dccd-8863-9d09-b323af88a667"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Message that appears when mustMatchPattern is true and the valid condition is not met.   When a function is passed, the function must return a string and will be evaluated after each request.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.patternMismatchTitle 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="89f0508f-dccd-8863-9d09-b323af88a667"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Title that appears when mustMatchPattern is true and the valid condition is not met.  When a function is passed, the function must return a string and will be evaluated after each request.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.forceValidation 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Keep user on the field even if the field is blank when it fails validation.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.supressBlur 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Stops the blur function on the input from validating the field onblur, still validates on isValid().
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.suffix 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The suffix (where clause) used to produce the close match list in the context menu.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.matchSuffix 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The suffix (where clause) used check if the value is an acceptable match to a value in the database.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.selectURL 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="ef3d2310-dfdb-431e-8330-0d339049abff"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The URL the autocomplete class uses.  The function's signature isfunction(objectName, suffix, from, to, selectedRows,checksum, outputType, searchSuffix, includeSchema, orderBy, orderDirection, aggregateColumns).The result will be sent to the Rendition.UI.autocompleteCallback procedure whichmust return a <link xlink:href="de0fdb88-125a-3606-d0af-83173204d97b"/>.The default function calls the C# Rendition.Admin.DataSet method.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.callback 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="ef3d2310-dfdb-431e-8330-0d339049abff"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										This function processes the data returned from the server when the Rendition.UI.autocompleteURLis sent.  The type returned by this function must be a <link xlink:href="de0fdb88-125a-3606-d0af-83173204d97b"/>.The signature of the function is Function(XMLHttpRequest e, <link xlink:href="c3297b0d-9e44-0956-efe9-aba03ac86241"/> autoComplete).The default function uses the C# Rendition.Admin.DataSet method.
+									</para>
+								</entry>
+							</row>
+						
+					</table>
+				</content>
+			</section>
+		
+	<!-- ============================== fields ========================== -->
+		
+			<section address="fields">
+				<title>Properties</title>
+				<content>
+					<table>
+						<tableHeader>
+							<row>
+								<entry><para> </para></entry>
+								<entry><para>Name</para></entry>
+								<entry><para>Type</para></entry>
+								<entry><para>Description</para></entry>
+							</row>
+						</tableHeader>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="256161e7-acc7-ed65-3959-c397a23153aa"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The info message that appears when the state is invalid. An instance of <link xlink:href="4b391fe3-74bc-6c38-4e17-2ed6eef18295"/>.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="d78de93b-f0cc-4a6a-1128-0e407e77c0d9"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Value matches the pattern.  This is only updated after isValid() is run.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="82f2333d-6826-1c91-4869-879f193fb2a6"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Value matches a record.  This is only updated after isValid() is run.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="af48f856-c39c-6aef-01df-8ed9622f4b75"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The value in the context menu selected.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="49a2762a-2728-8c0c-3d26-e90effdb58d7"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The type of object. Returns RenditionAutoComplete.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="80ee4ed3-67fb-529a-f0e4-3d8bab3cf8af"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The value is valid.  This is only updated after isValid() is run.
+									</para>
+								</entry>
+							</row>
+						
+					</table>
+				</content>
+			</section>
+		
+	<!-- ============================== methods ========================= -->
+		
+			<section address="methods">
+				<title>Methods</title>
+				<content>
+					<table>
+						<tableHeader>
+						<row>
+							<entry><para> </para></entry>
+							<entry><para>Name</para></entry>
+							<entry><para>Type</para></entry>
+							<entry><para>Description</para></entry>
+						</row>
+						</tableHeader>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="40d69eb3-c975-b572-54a6-0b0ce947ff37"/>()
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Force close the info message.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="2f56615e-7de5-27bf-8f44-1e43e3ecc8ed"/>()
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Force close the context menu.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="c3abe6ea-df85-fc23-308e-9caa9286fc0d"/>()
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Used internally to handle the target field keyup event.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="cfeacfc9-d005-0a1f-15d9-adeeb6ec9fb4"/>()
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Use this method to check if the value in the field has passed all validation tests.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="f70c8293-8ccb-8b9e-50a9-4745a6346129"/>()
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Used internally to handle the target field keyup event.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="8d3707a4-55d0-4bd7-20d8-984b28325728"/>()
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Show the validation message if the value is invalid.  Update the validation state against the local pattern match and remote dataset.
+									</para>
+								</entry>
+							</row>
+						
+					</table>
+				</content>
+			</section>
+		
+	<!-- ============================== events ========================= -->
+		
+	</developerConceptualDocument>
+</topic>

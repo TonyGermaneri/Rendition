@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<topic id="2e5cd548-e114-bc7b-38d1-14306fb354b0" revisionNumber="1" dataAlias="Rendition.UI.MenuBar">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction address="Intro">
+			Class Rendition.UI.MenuBar
+			<para>Creates a DHTML based menu bar that contains an array of <link xlink:href="c23506a6-bcff-4f46-d152-a61f618f064b"/> elements.</para>
+		</introduction>
+		<para>
+			<definitionTable>
+				
+				
+					<definedTerm>
+						<para>Member Of</para>
+					</definedTerm>
+					<definition>
+						<para>
+							<link xlink:href="ddee8d40-d92d-34d0-2be3-5f5d65f36f31"/>
+						</para>
+					</definition>
+				
+				
+					<definedTerm>
+						<para>Source</para>
+					</definedTerm>
+					<definition>
+						<para>
+							c:\Rendition\Rendition.Core\js\admin\UI\menuBar.js
+						</para>
+					</definition>
+				
+			</definitionTable>
+		</para>
+	<!-- ============================== Examples ========================== -->	
+		
+			<section address="examples">
+				<title>Examples</title>
+				<sections>
+					
+						<section>
+							<title>
+								
+									 Create a menu bar with a context menu.
+
+								
+							</title>
+							<content>
+								<para>
+									<code language="javascript">
+var foo = Rendition.UI.Dialog();
+var bar = Rendition.UI.Grid({
+	objectName: 'items',
+	parentNode: foo.content
+});</code>
+								</para>
+							</content>
+						</section>
+					
+						<section>
+							<title>
+								
+									 Create a menu bar with multiple options and context menus. 
+
+								
+							</title>
+							<content>
+								<para>
+									<code language="javascript">
+
+// Create a dialog //
+
+var foo = Rendition.UI.Dialog();
+
+foo.maximize();
+
+// Create an array of elements for the context sub menu		//
+
+var conSubOptions = [];
+
+for (var x = 0; 10 > x; x++) {
+
+	conSubOptions[x] = Rendition.UI.MenuOption;
+
+	conSubOptions[x].text = 'Option ' + x;
+
+	conSubOptions[x].addEventListener('mousedown', function (e) {
+
+		alert(this.option.text);
+
+	}, false);
+
+}
+
+// Create an array of elements for the context menu			//
+
+var conOptions = [];
+
+for (var x = 0; 10 > x; x++) {
+
+	conOptions[x] = Rendition.UI.MenuOption;
+
+	conOptions[x].text = 'Option ' + x;
+
+	conOptions[x].hasChildren = true;
+
+	// when the mouse moves over this element, show the context menu //
+
+	conOptions[x].addEventListener('mouseover', function (e) {
+
+		// Rendition.UI.closeContextMenus closes all context				//
+
+		// menus that are not related to the menu passed as a parameter //
+
+		// In this case we're passing the new menu as the parameter     //
+
+		Rendition.UI.closeContextMenus(new Rendition.UI.ContextMenu(e, {
+
+			elements: conSubOptions,
+
+			caller: this,
+
+			// by changing the type, you can control where the	//
+
+			// context menu appears. 'RenditionContextMenu'		//
+
+			// means appear to the right of the caller element.	//
+
+			type: 'RenditionContextMenu'
+
+		}));
+
+	}, false);
+
+}
+
+// Create an array of elements for the menu bar //
+
+var menuOptions = [];
+
+for (var x = 0; 10 > x; x++) {
+
+	menuOptions[x] = Rendition.UI.MenuOption;
+
+	menuOptions[x].text = 'Option ' + x;
+
+	// When the user clicks the element, display the menu //
+
+	menuOptions[x].addEventListener('mousedown', function (e) {
+
+		new Rendition.UI.ContextMenu(e, {
+
+			elements: conOptions,
+
+			caller: this,
+
+			// by changing the type, you can control where the	//
+
+			// context menu appears. 'RenditionContextMenu'		//
+
+			// means appear below the caller element.			//
+
+			type: 'RenditionMenuBar'
+
+		});
+
+	}, false);
+
+	menuOptions[x].addEventListener('mouseover', function (e) {
+
+		// When a user mouses over an element and a  //
+
+		// context menu is open, create context menu //
+
+		// and close all context menus unrelated to  //
+
+		// the new menu we created using the method  //
+
+		// Rendition.UI.closeContextMenus               //
+
+		if (Rendition.UI.contextMenus.length > 0) {
+
+			Rendition.UI.closeContextMenus(new Rendition.UI.ContextMenu(e, {
+
+				elements: conOptions,
+
+				caller: this,
+
+				type: 'RenditionMenuBar'
+
+			}));
+
+		}
+
+	}, false);
+
+}
+
+// Create the menu bar and add it to the dialog 'foo' //
+
+var bar = Rendition.UI.MenuBar({
+
+	options: menuOptions,
+
+	parentNode: foo.content
+
+});</code>
+								</para>
+							</content>
+						</section>
+					
+				</sections>
+			</section>
+		
+	<!-- ============================== parameters ========================== -->
+		
+	<!-- ============================== fields ========================== -->
+		
+			<section address="fields">
+				<title>Properties</title>
+				<content>
+					<table>
+						<tableHeader>
+							<row>
+								<entry><para> </para></entry>
+								<entry><para>Name</para></entry>
+								<entry><para>Type</para></entry>
+								<entry><para>Description</para></entry>
+							</row>
+						</tableHeader>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="f24594b2-fed4-b41e-02a8-1afcd876d71e"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The unique id of this instance.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="c8d784d8-631e-1713-93d4-2e443df7efaa"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The type of widget.  Returns RenditionMenuBar.
+									</para>
+								</entry>
+							</row>
+						
+					</table>
+				</content>
+			</section>
+		
+	<!-- ============================== methods ========================= -->
+		
+			<section address="methods">
+				<title>Methods</title>
+				<content>
+					<table>
+						<tableHeader>
+						<row>
+							<entry><para> </para></entry>
+							<entry><para>Name</para></entry>
+							<entry><para>Type</para></entry>
+							<entry><para>Description</para></entry>
+						</row>
+						</tableHeader>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="d8fa01ea-bd91-6ccd-9934-22428c87f51f"/>()
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Adds a <link xlink:href="c807995d-75de-b263-6de4-c0f04686a0bb"/> to the <link xlink:href="c807995d-75de-b263-6de4-c0f04686a0bb"/> arrayThis is the only way to add <link xlink:href="c807995d-75de-b263-6de4-c0f04686a0bb"/> elements after instantiation.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="b220b4f8-50fc-09f6-6369-b57e0a936f91"/>()
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Appends this widget to a DHTML element.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="52c684a5-36dc-d62b-e17e-d8f684e2b839"/>()
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Starts the <link xlink:href="2e5cd548-e114-bc7b-38d1-14306fb354b0"/>.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="4cc8c53b-7385-2ba7-92da-87acc6f54356"/>()
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Updates all the menu elements by removing the elements and redrawing them from the<link xlink:href="c807995d-75de-b263-6de4-c0f04686a0bb"/> array.
+									</para>
+								</entry>
+							</row>
+						
+					</table>
+				</content>
+			</section>
+		
+	<!-- ============================== events ========================= -->
+		
+	</developerConceptualDocument>
+</topic>

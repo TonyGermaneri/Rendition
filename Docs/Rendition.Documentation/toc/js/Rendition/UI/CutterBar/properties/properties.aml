@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="d909479c-19f8-ef7d-2f86-ac088a245feb" revisionNumber="1" dataAlias="Rendition.UI.CutterBar">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		
+		<definitionTable>
+			
+				<definedTerm>
+					<para>Member Of</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="b584e6c6-2f5a-6c97-4e57-2ad4afa995cc"/>
+					</para>
+				</definition>
+			
+		</definitionTable>
+		
+			<section address="fields">
+				<title>Rendition.UI.CutterBar Properties</title>
+				<content>
+					<table>
+						<tableHeader>
+							<row>
+								<entry><para> </para></entry>
+								<entry><para>Type</para></entry>
+								<entry><para>Name</para></entry>
+								<entry><para>Description</para></entry>
+							</row>
+						</tableHeader>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="3d0c2148-761a-b014-1897-5a583571ac5d"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The orientation of the cutter. 0 = Vertical, 1 = Horizontal.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="563f202d-7a5e-0ddc-1003-07ecd9bdf06d"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The array of DIV DHTML elements that make up the cutter. Index 0 = left or top, Index 1 = right or bottom.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="807709d4-25ab-0ff6-3089-f48974a0f63c"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The total size of the cutterBar looks like: { x: 0, y: 0, h: 0, w: 0 }.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="6c1ef171-504b-9d65-1270-e3b3570f5bae"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The type of object. Returns RenditionCutterBar.
+									</para>
+								</entry>
+							</row>
+						
+					</table>
+				</content>
+			</section>
+		
+
+	</developerConceptualDocument>
+</topic>

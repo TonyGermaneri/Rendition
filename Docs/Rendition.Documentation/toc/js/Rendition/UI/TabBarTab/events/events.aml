@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="a1393158-55ca-c434-ace4-c2e5538e19e4" revisionNumber="1" dataAlias="Rendition.UI.TabBarTab">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		
+		<definitionTable>
+			
+				<definedTerm>
+					<para>Member Of</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="b584e6c6-2f5a-6c97-4e57-2ad4afa995cc"/>
+					</para>
+				</definition>
+			
+		</definitionTable>
+		
+			<section address="events">
+				<title>Rendition.UI.TabBarTab Events</title>
+				<content>
+					<table>
+						<tableHeader>
+						<row>
+							<entry><para> </para></entry>
+							<entry><para>Name</para></entry>
+							<entry><para>Description</para></entry>
+						</row>
+						</tableHeader>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="4c2344ec-8070-dc62-22ef-bee41c01fc65"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  tab, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  tabBar, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  content)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs after the remote procdure call has returned.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="ee864500-437e-2461-53f3-8ab38c738bf9"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  tab, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  tabBar, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  content)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when the user clicks on the <link xlink:href="c3a7e221-c590-1249-dbbc-f9d5507a8365"/>.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="6d294e9d-c7ce-6c34-c57b-3326ed2137c7"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  tab, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  tabBar, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  content)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when the <link xlink:href="c3a7e221-c590-1249-dbbc-f9d5507a8365"/> is finished loading and is ready to accept content.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="1fd408c4-cb6f-aa09-13bb-a24cf5bc6d24"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  tab, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  tabBar, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  content)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when the mouse button is pressed down on the <link xlink:href="c3a7e221-c590-1249-dbbc-f9d5507a8365"/>.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="27082343-3448-7551-8983-e3a11ff7421c"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  tab, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  tabBar, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  content)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when the mouse moves out of the <link xlink:href="c3a7e221-c590-1249-dbbc-f9d5507a8365"/>.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="b43a133c-d519-7fa1-2d7d-cabbfb772c1c"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  tab, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  tabBar, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  content)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when the mouse moves over of the <link xlink:href="c3a7e221-c590-1249-dbbc-f9d5507a8365"/>.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="4be4f789-a4e6-965e-59ab-f5dbea8583cb"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  tab, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  tabBar, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  content)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when the mouse button is released on the <link xlink:href="c3a7e221-c590-1249-dbbc-f9d5507a8365"/>.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="9dddccd2-705d-dea6-bbbc-95972d2a8b2f"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  tab, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  tabBar, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  content)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when the parent <link xlink:href="889dd046-9a0f-5ce0-7b0e-20041ca87b95"/> is resized.
+									</para>
+								</entry>
+							</row>
+						
+					</table>
+					<alert class="tip">
+						<para>There are two ways to add event listeners.</para>
+					</alert>
+					<para>
+						1. You can attach to events as a parameter when you create the object.
+						<code language="javascript">
+							var foo = new object({
+								event:function(signature){
+									/* event procedure */
+								}
+							});
+						</code>
+						2. Or you can add the event after the object has been instantiated.
+						<code language="javascript">
+							var foo = new object();
+							foo.addEventListener('event',function(signature){
+								/* event procedure */
+							}, false);
+						</code>
+					</para>
+				</content>
+			</section>
+		
+	</developerConceptualDocument>
+</topic>

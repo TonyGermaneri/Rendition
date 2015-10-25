@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="84a375b8-7007-2f33-25be-2000655b99e6" revisionNumber="1" dataAlias="Rendition.UI.Grid#Grid.getRecord">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction address="Intro">
+			Rendition.UI.Grid#Grid.getRecord(<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  rowIndex, <link xlink:href="0c7e7de5-e5cc-8e47-144b-f225672aefc7"/>  columnIndex)
+			<para>Synchronously fetches a row or a cell from the rowset data.  GetRecord will first try and fetch the value using the local record cache, if the data is missing a synchronous request will be made.</para>
+		</introduction>
+		<definitionTable>
+			
+			
+				<definedTerm>
+					<para>Member Of</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="f5f5d4d4-f415-cd77-8e8f-c01e6464006a"/>
+					</para>
+				</definition>
+			
+			
+				<definedTerm>
+					<para>Return Type</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="e9f830f9-393a-b713-63ef-237cfc61afa1"/>
+					</para>
+				</definition>
+			
+			
+				<definedTerm>
+					<para>Source</para>
+				</definedTerm>
+				<definition>
+					<para>
+						c:\Rendition\Rendition.Core\js\admin\UI\grid.js
+					</para>
+				</definition>
+			
+		</definitionTable>
+		<section address="parameters">
+		<title>Parameters</title>
+			<sections>
+				<table>
+					<tableHeader>
+					<row>
+						<entry><para> </para></entry>
+						<entry><para>Name</para></entry>
+						<entry><para>Description</para></entry>
+					</row>
+					</tableHeader>
+					
+						<row>
+							<entry>
+								<para>
+									
+									Required
+									rowIndex
+									<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>
+								</para>
+							</entry>
+							<entry>
+								<para>
+									The number of the row desired.
+								</para>
+							</entry>
+							<entry>
+								<para>
+									
+								</para>
+							</entry>
+						</row>
+					
+						<row>
+							<entry>
+								<para>
+									Optional
+									
+									columnIndex
+									<link xlink:href="0c7e7de5-e5cc-8e47-144b-f225672aefc7"/>
+								</para>
+							</entry>
+							<entry>
+								<para>
+									Can be a String matching one of the column names or a Integer representing a column index.
+								</para>
+							</entry>
+							<entry>
+								<para>
+									
+								</para>
+							</entry>
+						</row>
+					
+				</table>
+			</sections>
+		</section>
+	</developerConceptualDocument>
+</topic>

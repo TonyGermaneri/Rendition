@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<topic id="b6679c58-2336-61d4-273e-95bc23b9bfcb" revisionNumber="1" dataAlias="Rendition.UI.Rect">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction address="Intro">
+			Class Rendition.UI.Rect
+			<para>Used to represent the height, width, horizontal (x) position and vertical (y) position of a generic object.</para>
+		</introduction>
+		<para>
+			<definitionTable>
+				
+				
+					<definedTerm>
+						<para>Member Of</para>
+					</definedTerm>
+					<definition>
+						<para>
+							<link xlink:href="ddee8d40-d92d-34d0-2be3-5f5d65f36f31"/>
+						</para>
+					</definition>
+				
+				
+					<definedTerm>
+						<para>Source</para>
+					</definedTerm>
+					<definition>
+						<para>
+							c:\Rendition\Rendition.Core\js\admin\UI\Rect.js
+						</para>
+					</definition>
+				
+			</definitionTable>
+		</para>
+	<!-- ============================== Examples ========================== -->	
+		
+	<!-- ============================== parameters ========================== -->
+		
+	<!-- ============================== fields ========================== -->
+		
+	<!-- ============================== methods ========================= -->
+		
+	<!-- ============================== events ========================= -->
+		
+	</developerConceptualDocument>
+</topic>

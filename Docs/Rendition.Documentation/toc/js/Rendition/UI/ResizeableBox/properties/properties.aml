@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="ad093d20-dfd3-a01c-7420-c3350af2ec2a" revisionNumber="1" dataAlias="Rendition.UI.ResizeableBox">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		
+		<definitionTable>
+			
+				<definedTerm>
+					<para>Member Of</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="b584e6c6-2f5a-6c97-4e57-2ad4afa995cc"/>
+					</para>
+				</definition>
+			
+		</definitionTable>
+		
+			<section address="fields">
+				<title>Rendition.UI.ResizeableBox Properties</title>
+				<content>
+					<table>
+						<tableHeader>
+							<row>
+								<entry><para> </para></entry>
+								<entry><para>Type</para></entry>
+								<entry><para>Name</para></entry>
+								<entry><para>Description</para></entry>
+							</row>
+						</tableHeader>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="2b0375b4-74e8-2144-11a7-44a57e44ec2a"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The DHTML DIV box.  This box should be appended to other DHTML elements or havechild DHTML elements appended to it.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="37f0ab53-9dbd-da8e-252b-6642e3932f06"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The unique id of this instance.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="6b122dc0-c4e9-53fd-85f9-ee134fdd1947"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The type of widget. Returns RenditionResizeableBox.
+									</para>
+								</entry>
+							</row>
+						
+					</table>
+				</content>
+			</section>
+		
+
+	</developerConceptualDocument>
+</topic>

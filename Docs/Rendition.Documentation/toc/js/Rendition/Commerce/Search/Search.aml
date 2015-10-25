@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<topic id="8b75b2c7-79e8-2bb2-0b43-6ca4e53da072" revisionNumber="1" dataAlias="Rendition.Commerce.Search">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction address="Intro">
+			Class Rendition.Commerce.Search
+			<para>Search program.</para>
+		</introduction>
+		<para>
+			<definitionTable>
+				
+				
+					<definedTerm>
+						<para>Member Of</para>
+					</definedTerm>
+					<definition>
+						<para>
+							<link xlink:href="00f206b5-a552-c0d6-2eda-bf2a6496a96d"/>
+						</para>
+					</definition>
+				
+				
+					<definedTerm>
+						<para>Source</para>
+					</definedTerm>
+					<definition>
+						<para>
+							c:\Rendition\Rendition.Core\js\admin\Commerce\search.js
+						</para>
+					</definition>
+				
+			</definitionTable>
+		</para>
+	<!-- ============================== Examples ========================== -->	
+		
+	<!-- ============================== parameters ========================== -->
+		
+	<!-- ============================== fields ========================== -->
+		
+	<!-- ============================== methods ========================= -->
+		
+	<!-- ============================== events ========================= -->
+		
+	</developerConceptualDocument>
+</topic>

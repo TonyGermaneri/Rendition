@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="ed783620-e4d8-efe5-8299-af648f519342" revisionNumber="1" dataAlias="Rendition#Rendition.UI.gridUpdateCallback">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction address="Intro">
+			Rendition#Rendition.UI.gridUpdateCallback()
+			<para>This function processes the data returned from the server when the Rendition.UI.gridSelectURLis sent.  The object returned by this function must look like this:{error: &lt;Integer&gt;, description: &lt;String&gt;, primaryKey: &lt;String&gt;,verCol: &lt;Integer&gt; }.<para>The parameter [primaryKey] should be the primaryKey of the row updated.</para><para>The parameter [verCol] should be the new verCol of the row.</para><para>The parameter [error] can return one of the following values:</para>	<table>		<tableHeader>			<row>				<entry>					<para>						Error					</para>				</entry>				<entry>					<para>						Description					</para>				</entry>			</row>		</tableHeader>		<row>			<entry>				<para>					0				</para>			</entry>			<entry>				<para>					No error occured.				</para>			</entry>		</row>		<row>			<entry>				<para>					-1				</para>			</entry>			<entry>				<para>					Row value has changed on the server (verCol mismatch).				</para>			</entry>		</row>		<row>			<entry>				<para>					-2				</para>			</entry>			<entry>				<para>					Row has been deleted and cannot be updated or deleted.				</para>			</entry>		</row>		<row>			<entry>				<para>					Any other Integer				</para>			</entry>			<entry>				<para>					Custom error.  The [description] parameter will be displayed.				</para>			</entry>		</row>	</table>The signature of the function is Function(XMLHttpRequest e, <link xlink:href="f5f5d4d4-f415-cd77-8e8f-c01e6464006a"/> grid).The default function uses the C# Rendition.admin.dataSet method.</para>
+		</introduction>
+		<definitionTable>
+			
+			
+				<definedTerm>
+					<para>Member Of</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="6aa67830-fc7a-c3eb-719a-722fb4fb312e"/>
+					</para>
+				</definition>
+			
+			
+				<definedTerm>
+					<para>Type</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="ef3d2310-dfdb-431e-8330-0d339049abff"/>
+					</para>
+				</definition>
+			
+			
+				<definedTerm>
+					<para>Source</para>
+				</definedTerm>
+				<definition>
+					<para>
+						c:\Rendition\Rendition.Core\js\admin\UI\Init.js
+					</para>
+				</definition>
+			
+		</definitionTable>
+	</developerConceptualDocument>
+</topic>

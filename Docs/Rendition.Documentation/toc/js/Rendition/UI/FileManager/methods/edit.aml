@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="ebdc8a7c-92b8-f737-b2fa-b97991899a79" revisionNumber="1" dataAlias="Rendition.UI.FileManager#FileManager.edit">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction address="Intro">
+			Rendition.UI.FileManager#FileManager.edit(<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  path, <link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>  newFile, <link xlink:href="ef3d2310-dfdb-431e-8330-0d339049abff"/>  saveCallbackProcedure)
+			<para>Edit's the file on the server by loading the file text into an instance of Rendition.UI.CodeEditor.</para>
+		</introduction>
+		<definitionTable>
+			
+			
+				<definedTerm>
+					<para>Member Of</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="e8654d57-f3d5-7bae-3ce6-fe5ab69563c9"/>
+					</para>
+				</definition>
+			
+			
+				<definedTerm>
+					<para>Return Type</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+					</para>
+				</definition>
+			
+			
+				<definedTerm>
+					<para>Source</para>
+				</definedTerm>
+				<definition>
+					<para>
+						c:\Rendition\Rendition.Core\js\admin\UI\fileManager.js
+					</para>
+				</definition>
+			
+		</definitionTable>
+		<section address="parameters">
+		<title>Parameters</title>
+			<sections>
+				<table>
+					<tableHeader>
+					<row>
+						<entry><para> </para></entry>
+						<entry><para>Name</para></entry>
+						<entry><para>Description</para></entry>
+					</row>
+					</tableHeader>
+					
+						<row>
+							<entry>
+								<para>
+									
+									Required
+									path
+									<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+								</para>
+							</entry>
+							<entry>
+								<para>
+									Path to edit.
+								</para>
+							</entry>
+							<entry>
+								<para>
+									
+								</para>
+							</entry>
+						</row>
+					
+						<row>
+							<entry>
+								<para>
+									
+									Required
+									newFile
+									<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+								</para>
+							</entry>
+							<entry>
+								<para>
+									When true, a new file will be created.
+								</para>
+							</entry>
+							<entry>
+								<para>
+									
+								</para>
+							</entry>
+						</row>
+					
+						<row>
+							<entry>
+								<para>
+									
+									Required
+									saveCallbackProcedure
+									<link xlink:href="ef3d2310-dfdb-431e-8330-0d339049abff"/>
+								</para>
+							</entry>
+							<entry>
+								<para>
+									Procedure to run when save is complete.This can be left undefined.
+								</para>
+							</entry>
+							<entry>
+								<para>
+									
+								</para>
+							</entry>
+						</row>
+					
+				</table>
+			</sections>
+		</section>
+	</developerConceptualDocument>
+</topic>

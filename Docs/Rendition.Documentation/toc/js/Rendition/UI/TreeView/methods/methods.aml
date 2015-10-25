@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="e2677244-dddc-a95f-a74d-a41f0d426f2e" revisionNumber="1" dataAlias="Rendition.UI.TreeView">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		
+		<definitionTable>
+			
+				<definedTerm>
+					<para>Member Of</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="b584e6c6-2f5a-6c97-4e57-2ad4afa995cc"/>
+					</para>
+				</definition>
+			
+		</definitionTable>
+		
+			<section address="methods">
+				<title>Rendition.UI.TreeView Methods</title>
+				<content>
+					<table>
+						<tableHeader>
+						<row>
+							<entry><para> </para></entry>
+							<entry><para>Name</para></entry>
+							<entry><para>Type</para></entry>
+							<entry><para>Description</para></entry>
+						</row>
+						</tableHeader>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="6dcf2713-d55e-9963-0a9d-43391932b328"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  treeNode, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  parentNode)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Adds a treeNode to the selected treeNode.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="fdb4d2ca-a00e-eaf4-4e74-dbefd74aeebf"/>(<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  type, <link xlink:href="ef3d2310-dfdb-431e-8330-0d339049abff"/>  proc, <link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>  capture)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="044fcb55-0c5f-d88f-619c-455ffb8b2600"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Attach a procedure to an event.  Usage treeView.addEventListener('labelclick',function(e, treeView, node, labelText, treeNode, parentNode){/*your procedure code},false)
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="b6b20d82-5cc5-1297-01a2-58587517d8db"/>()
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="b4909cfa-da78-c794-ec3d-c84bc598274e"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Gets a node by its id.  By default, tree nodes do not have an id attribute, you must assign it.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="b6b01817-69bb-b368-a010-11e2cd8d80df"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  propertyName, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  propertyValue)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="b4909cfa-da78-c794-ec3d-c84bc598274e"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Gets a node by a specified treeNode property value.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="9efa6db0-4123-7a77-372a-d9414509ecf6"/>()
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="b4909cfa-da78-c794-ec3d-c84bc598274e"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Gets a node by its treeNodeId number.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="37023ecc-ee4a-69bf-502e-7e20101ca1e0"/>()
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="b4909cfa-da78-c794-ec3d-c84bc598274e"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Gets a node by its treeNode.value.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="e047ba93-e5ca-0fa0-a90f-84bae93b64e5"/>(<link xlink:href="b4909cfa-da78-c794-ec3d-c84bc598274e"/>  treeNode)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Checks if the tree node has child members.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="7ff52958-c43b-1d2a-b626-7bf9841b7fb6"/>(<link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  labelText)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="044fcb55-0c5f-d88f-619c-455ffb8b2600"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Highlights a label.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="b09f0594-b69f-75a6-2813-6721d831ef6a"/>()
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="044fcb55-0c5f-d88f-619c-455ffb8b2600"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Prevent the default event from occuring.  For use within an event handler.  For example, when used in within a function subscribed to the labelclick event, running treeView.preventDefault() will prevent the treeView from highlighting the treeNode.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="aacbe3e7-e9dc-b59a-8b57-c8595b676407"/>(<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  type, <link xlink:href="ef3d2310-dfdb-431e-8330-0d339049abff"/>  proc, <link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>  capture)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="044fcb55-0c5f-d88f-619c-455ffb8b2600"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Removes an event from subscription list.  The [proc] must match exactly the [proc] subscribed with.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="6eab4ae7-f376-55e9-195c-49c4140ced2f"/>(<link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  labelText)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="044fcb55-0c5f-d88f-619c-455ffb8b2600"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										removes the selected node.  This method is depreciated.  Use treeNode.remove() or removeNodeById(id) instead.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="99567b3c-f7b9-d33b-89b5-dc7cbff82d9e"/>()
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="044fcb55-0c5f-d88f-619c-455ffb8b2600"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Removes a node by its treeNodeId number.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="ff7b9ad8-df62-bfe9-b951-23781f3b85a3"/>(<link xlink:href="b4909cfa-da78-c794-ec3d-c84bc598274e"/>  node)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="044fcb55-0c5f-d88f-619c-455ffb8b2600"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Adds a treeNode as a child of this treeNode.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="36c3693a-4b54-f58a-7044-8a24cd001e84"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  testNode)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Checks if this tree node contains a child matching the parameter [testNode] by comparing testNode.value with other node values in this treeNode's list of child elements.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="609a93a2-f0e1-fad5-ffa4-fa642b4ddc5e"/>()
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="044fcb55-0c5f-d88f-619c-455ffb8b2600"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Refreshes the children of this treeNode.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="bb1dec26-1132-10f2-5d87-52736c297e76"/>()
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="044fcb55-0c5f-d88f-619c-455ffb8b2600"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Refreshes the children of this treeNode's parent. Viz. this node and all of this nodes sibling nodes.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="71e0c5d2-106c-a60d-e4db-a6a93328091d"/>()
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="044fcb55-0c5f-d88f-619c-455ffb8b2600"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Removes this node.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="90fcbc46-851a-8507-f4b2-78fcc7adb111"/>()
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="044fcb55-0c5f-d88f-619c-455ffb8b2600"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Removes all the child treeNode elements from this treeNode.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="7082cf20-ae0a-5be5-6830-7555f8abdd30"/>()
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="044fcb55-0c5f-d88f-619c-455ffb8b2600"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Toggles the node open or closed.  This only works if the node has children and will return without error if no children are present.
+									</para>
+								</entry>
+							</row>
+						
+					</table>
+				</content>
+			</section>
+		
+
+	</developerConceptualDocument>
+</topic>

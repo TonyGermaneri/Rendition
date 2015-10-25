@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="3d64a27c-0add-317c-0b40-e566f618c87b" revisionNumber="1" dataAlias="Rendition">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		
+		<definitionTable>
+			
+		</definitionTable>
+		
+			<section address="methods">
+				<title>Rendition Methods</title>
+				<content>
+					<table>
+						<tableHeader>
+						<row>
+							<entry><para> </para></entry>
+							<entry><para>Name</para></entry>
+							<entry><para>Type</para></entry>
+							<entry><para>Description</para></entry>
+						</row>
+						</tableHeader>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="4fb8609a-4a25-c00b-b2a6-e72af798b2bd"/>(<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  type, <link xlink:href="ef3d2310-dfdb-431e-8330-0d339049abff"/>  proc, <link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>  capture)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="044fcb55-0c5f-d88f-619c-455ffb8b2600"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Attach a procedure to an event.
+									</para>
+								</entry>
+							</row>
+						
+					</table>
+				</content>
+			</section>
+		
+
+	</developerConceptualDocument>
+</topic>

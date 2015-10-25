@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Fields[
+  <!ELEMENT Fields ANY>
+  <!ELEMENT Field ANY>
+  <!ATTLIST Field Id ID #REQUIRED>
+  <!ATTLIST Field Title CDATA #REQUIRED>
+  <!ATTLIST Field Hidden CDATA #IMPLIED>
+  <!ATTLIST Field DefaultValue CDATA #IMPLIED>
+]>
+<Fields>
+  <Field Id="Form_items_itemNumber" Title="Product Number" DefaultValue="" Hidden="1">Unique Id for each product.</Field>
+</Fields>

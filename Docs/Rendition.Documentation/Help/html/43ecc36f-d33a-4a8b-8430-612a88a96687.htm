@@ -1,0 +1,290 @@
+﻿<html xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+  <head>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8" />
+    <META NAME="save" CONTENT="history" />
+    <title>Installation</title>
+    <meta name="Language" content="en-us" />
+    <meta name="Microsoft.Help.Id" content="43ecc36f-d33a-4a8b-8430-612a88a96687" />
+    <meta name="Description" content="Rendition.dll requires IIS AspNetHostingPermissionLevel High or Full. Many inexpensive hosting providers do not offer this permission level on shared server plans." />
+    <meta name="Microsoft.Help.ContentType" content="Concepts" />
+    <link rel="stylesheet" type="text/css" href="../styles/Presentation.css" />
+    <link rel="stylesheet" type="text/css" href="ms-help://Hx/HxRuntime/HxLink.css" />
+    <script type="text/javascript" src="../scripts/EventUtilities.js"> </script>
+    <script type="text/javascript" src="../scripts/SplitScreen.js"> </script>
+    <script type="text/javascript" src="../scripts/Dropdown.js"> </script>
+    <script type="text/javascript" src="../scripts/script_manifold.js"> </script>
+    <script type="text/javascript" src="../scripts/script_feedBack.js"> </script>
+    <script type="text/javascript" src="../scripts/CheckboxMenu.js"> </script>
+    <script type="text/javascript" src="../scripts/CommonUtilities.js"> </script>
+    <xml>
+      <MSHelp:Keyword Index="A" Term="43ecc36f-d33a-4a8b-8430-612a88a96687" />
+      <MSHelp:Attr Name="RevisionNumber" Value="1" />
+      <MSHelp:Attr Name="AssetID" Value="43ecc36f-d33a-4a8b-8430-612a88a96687" />
+      <MSHelp:Attr Name="Abstract" Value="Rendition.dll requires IIS AspNetHostingPermissionLevel High or Full. Many inexpensive hosting providers do not offer this permission level on shared server plans." />
+      <MSHelp:Attr Name="TopicType" Value="kbArticle" />
+      <MSHelp:Attr Name="Locale" Value="en-us" />
+    </xml>
+    <link type="text/css" rel="stylesheet" href="../styles/highlight.css" />
+    <script type="text/javascript" src="../scripts/highlight.js"> </script>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <input type="hidden" id="hiddenScrollOffset" />
+    <img id="collapseImage" style="display:none; height:0; width:0;" src="../icons/collapse_all.gif" alt="Collapse image" title="Collapse image" />
+    <img id="expandImage" style="display:none; height:0; width:0;" src="../icons/expand_all.gif" alt="Expand Image" title="Expand Image" />
+    <img id="collapseAllImage" style="display:none; height:0; width:0;" src="../icons/collapse_all.gif" />
+    <img id="expandAllImage" style="display:none; height:0; width:0;" src="../icons/expand_all.gif" />
+    <img id="dropDownImage" style="display:none; height:0; width:0;" src="../icons/dropdown.gif" />
+    <img id="dropDownHoverImage" style="display:none; height:0; width:0;" src="../icons/dropdownHover.gif" />
+    <img id="copyImage" style="display:none; height:0; width:0;" src="../icons/copycode.gif" alt="Copy image" title="Copy image" />
+    <img id="copyHoverImage" style="display:none; height:0; width:0;" src="../icons/copycodeHighlight.gif" alt="CopyHover image" title="CopyHover image" />
+    <div id="header">
+      <table id="topTable" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <span onclick="ExpandCollapseAll(toggleAllImage)" style="cursor:default;" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage, event)" tabindex="0">
+              <img ID="toggleAllImage" class="toggleAll" src="../icons/collapse_all.gif" /> <label id="collapseAllLabel" for="toggleAllImage" style="display: none;">Collapse All</label><label id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand All</label> </span>
+            <span>    </span>
+            <span id="devlangsDropdown" class="filter" tabindex="0">
+              <img id="devlangsDropdownImage" src="../icons/dropdown.gif" /> <label id="devlangsMenuAllLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: All </nobr></label><label id="devlangsMenuMultipleLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: Multiple </nobr></label><label id="devlangsMenuCSharpLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: C# </nobr></label><label id="devlangsMenuJavaScriptLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: JavaScript </nobr></label></span>
+          </td>
+        </tr>
+      </table>
+      <div id="devlangsMenu">
+        <input id="CSharpCheckbox" type="checkbox" data="CSharp,cs,'persist'" value="on" onClick="SetLanguage(this)" />
+        <label class="checkboxLabel" for="CSharpCheckbox">C#</label>
+        <br />
+        <input id="JavaScriptCheckbox" type="checkbox" data="JavaScript,cs,'persist'" value="on" onClick="SetLanguage(this)" />
+        <label class="checkboxLabel" for="JavaScriptCheckbox">JavaScript</label>
+        <br />
+      </div>
+      <table id="bottomTable" cellpadding="0" cellspacing="0">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">Rendition E-Commerce Framework</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">Installation</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td align="left">
+            <span id="headfeedbackarea" class="feedbackhead">
+              <a href="javascript:SubmitFeedback('tonygermaneri@gmail.com','Rendition E-Commerce Framework','','1.0.0.0','','%0\dYour%20feedback%20is%20used%20to%20improve%20the%20documentation%20and%20the%20product.%20Your%20e-mail%20address%20will%20not%20be%20used%20for%20any%20other%20purpose%20and%20is%20disposed%20of%20after%20the%20issue%20you%20report%20is%20resolved.%20%20While%20working%20to%20resolve%20the%20issue%20that%20you%20report,%20you%20may%20be%20contacted%20via%20e-mail%20to%20get%20further%20details%20or%20clarification%20on%20the%20feedback%20you%20sent.%20After%20the%20issue%20you%20report%20has%20been%20addressed,%20you%20may%20receive%20an%20e-mail%20to%20let%20you%20know%20that%20your%20feedback%20has%20been%20addressed.%0\A%0\d','Customer%20Feedback');">Send Feedback</a>
+            </span>
+          </td>
+        </tr>
+      </table>
+      <table id="gradientTable">
+        <tr>
+          <td class="nsrBottom" background="../icons/gradient.gif" />
+        </tr>
+      </table>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" />
+        <span style="color: DarkGray">
+          <p style="color: #dc143c; font-size: 8.5pt; font-weight: bold;">[This is preliminary documentation and is subject to change.]</p>
+        </span>
+        <div class="introduction">
+          <p>
+            <div class="alert">
+              <table>
+                <tr>
+                  <th>
+                    <img src="../icons/alert_note.gif" title="Note" /> <b>Note</b></th>
+                </tr>
+                <tr>
+                  <td>
+                    <p> Rendition.dll requires IIS AspNetHostingPermissionLevel High or Full.
+		  Many inexpensive hosting providers do not offer this permission level on
+		  shared server plans.
+		  </p>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </p>
+        </div>
+        <a name="Section1"> </a>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(sectionToggleID0ECAAA)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(sectionToggleID0ECAAA, event)" tabindex="0">
+            <img id="sectionToggleID0ECAAA" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Requirements</span>
+        </h1>
+        <div id="sectionSectionID0ECAAA" class="section" name="collapseableSection" style="">
+          <p>
+            <ul>
+              <li>Windows Server 2003 (Standard, Web or Enterprise), Windows Vista Ultimate, Windows 7 Ultimate.</li>
+              <li>IIS 6, 7 or 7.5</li>
+              <li>SQL 2005, 2008, 2008 Express or LocalDB</li>
+              <li>IE9, Firefox, Chrome or Safari</li>
+              <li>Visual Studio 2010 (for development)</li>
+            </ul>
+          </p>
+        </div>
+        <a name="Section2"> </a>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(sectionToggleID0EBAAA)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(sectionToggleID0EBAAA, event)" tabindex="0">
+            <img id="sectionToggleID0EBAAA" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Installation Instructions</span>
+        </h1>
+        <div id="sectionSectionID0EBAAA" class="section" name="collapseableSection" style="">
+          <p>To install you'll need to download the following from 
+	        <a href="http://www.antidote12.com/" title="www.antidote12.com" target="a12">Antidote 12</a>.
+		</p>
+          <ol>
+            <li>
+              <p>Rendition.dll E-Commerce library (Rendition.Core.dll).</p>
+            </li>
+            <li>
+              <p>Rendition SQL Database Install Script (Install.sql).</p>
+            </li>
+          </ol>
+          <p>Once you have the required files follow the following steps.</p>
+          <ol>
+            <li>
+              <p>Create a web site on your IIS server.
+	            
+<div class="alert"><table><tr><th><img src="../icons/alert_note.gif" title="Note" /> <b>Note</b></th></tr><tr><td><p>When using IIS6 you must add the following line to
+	            the "Wildcard application maps" in the "Configuration..."
+	            dialog on the "Home Directory" tab of your new web site's Property
+	            dialog.  The "Verify that file exists" checkbox should be unchecked.
+	            <span><div class="highlight-title"><span class="highlight-copycode" onkeypress="javascript:CopyColorizedCodeCheckKey(this.parentNode, event);" tabindex="0" onmouseover="CopyCodeChangeIcon(this)" onmouseout="CopyCodeChangeIcon(this)" onclick="javascript:CopyColorizedCode(this.parentNode);"><img style="margin-right: 5px;" src="../icons/CopyCode.gif" />Copy</span> </div><div class="code"><pre xml:space="preserve">%systemroot%\microsoft.net\framework\v4.0.30319\aspnet_isapi.dll</pre></div></span></p></td></tr></table></div></p>
+            </li>
+            <li>
+              <p>Copy Rendition.Core.dll into your new ASP.NET web site
+	            in the "bin" folder.  If the "bin" folder does not exist, create it.</p>
+            </li>
+            <li>
+              <p>
+	            Create a new database if you haven't done so already.
+	            The database's recovery model should be set to basic or simple
+	            if applicable.</p>
+            </li>
+            <li>
+              <p>
+	            Open the SQL Install script (downloadable from <a href="http://www.antidote12.com/" title="www.antidote12.com" target="a12">Antidote 12</a>)
+	            and read the instructions in the script.  After the database is installed
+	            continue to the next step.
+	            </p>
+            </li>
+            <li>
+              <p>Modify or create your Web.Config file in the root
+	            directory of your web site.  Below are two
+	            example web.config files.  The first example is for IIS6
+	            and the second example is for IIS7.
+	            A full list of the application setting avaliable
+	            in Web.Config for Rendition can be found in the 
+	            topic <span sdata="link"><a href="052c987a-0d07-45f3-8607-b8cced056d98.htm">Web.Config</a></span>.
+	            </p>
+              <p>IIS 6 web.config</p>
+              <span>
+                <div class="highlight-title">
+                  <span class="highlight-copycode" onkeypress="javascript:CopyColorizedCodeCheckKey(this.parentNode, event);" tabindex="0" onmouseover="CopyCodeChangeIcon(this)" onmouseout="CopyCodeChangeIcon(this)" onclick="javascript:CopyColorizedCode(this.parentNode);">
+                    <img style="margin-right: 5px;" src="../icons/CopyCode.gif" />Copy</span> </div>
+                <div class="code">
+                  <pre xml:space="preserve">&lt;?xml version="1.0"?&gt;
+&lt;configuration&gt;
+        &lt;connectionStrings&gt;
+                &lt;add name="sql" connectionString="Data Source=127.0.0.1,1433;Initial Catalog=MyDatabase;User ID=MyUserName;Pwd=MyPassword;Asynchronous Processing=true;MultipleActiveResultSets=true;"/&gt;
+        &lt;/connectionStrings&gt;
+        &lt;appSettings&gt;
+                &lt;add key="connectionName" value="sql"/&gt;
+                &lt;add key="ElevatedSecurityUser" value="Rendition"/&gt;
+                &lt;add key="ElevatedSecurityPassword" value="000000000000"/&gt;
+                &lt;add key="ElevatedSecurityDomain" value="127.0.0.1"/&gt;
+        &lt;/appSettings&gt;
+        &lt;system.web&gt;
+            &lt;httpRuntime maxRequestLength="4194302" maxQueryStringLength="20000" requestValidationMode="2.0" requestPathInvalidCharacters="" /&gt;
+                &lt;httpModules&gt;
+                        &lt;clear/&gt;
+                        &lt;add type="Rendition.Main" name="Rendition.Main"/&gt;
+                &lt;/httpModules&gt;
+                &lt;compilation debug="true"/&gt;
+  &lt;/system.web&gt;
+&lt;/configuration&gt;</pre>
+                </div>
+              </span>
+              <p>IIS 7 web.config</p>
+              <span>
+                <div class="highlight-title">
+                  <span class="highlight-copycode" onkeypress="javascript:CopyColorizedCodeCheckKey(this.parentNode, event);" tabindex="0" onmouseover="CopyCodeChangeIcon(this)" onmouseout="CopyCodeChangeIcon(this)" onclick="javascript:CopyColorizedCode(this.parentNode);">
+                    <img style="margin-right: 5px;" src="../icons/CopyCode.gif" />Copy</span> </div>
+                <div class="code">
+                  <pre xml:space="preserve">&lt;?xml version="1.0"?&gt;
+&lt;configuration&gt;
+        &lt;connectionStrings&gt;
+                &lt;add name="sql" connectionString="Data Source=127.0.0.1,1433;Initial Catalog=MyDatabase;User ID=MyUserName;Pwd=MyPassword;Asynchronous Processing=true;MultipleActiveResultSets=true;"/&gt;
+        &lt;/connectionStrings&gt;
+        &lt;appSettings&gt;
+                &lt;add key="connectionName" value="sql"/&gt;
+                &lt;add key="ElevatedSecurityUser" value="Rendition"/&gt;
+                &lt;add key="ElevatedSecurityPassword" value="000000000000"/&gt;
+                &lt;add key="ElevatedSecurityDomain" value="127.0.0.1"/&gt;
+        &lt;/appSettings&gt;
+        &lt;system.web&gt;
+            &lt;httpRuntime maxRequestLength="4194302" maxQueryStringLength="20000" requestValidationMode="2.0" requestPathInvalidCharacters="" /&gt;
+    &lt;system.web&gt;
+        &lt;system.webServer&gt;
+                &lt;modules&gt;
+                        &lt;add name="Rendition.main" type="Rendition.Main" /&gt;
+                &lt;/modules&gt;
+                &lt;handlers&gt;
+                        &lt;add name="aspnet_isapi 32-bit" path="*" verb="*" modules="IsapiModule" scriptProcessor="%windir%\Microsoft.NET\Framework\v4.0.30319\aspnet_isapi.dll" resourceType="Unspecified" requireAccess="Script" preCondition="classicMode,runtimeVersionv4.0,bitness32" /&gt;
+                        &lt;add name="aspnet_isapi 64-bit" path="*" verb="*" modules="IsapiModule" scriptProcessor="%windir%\Microsoft.NET\Framework64\v4.0.30319\aspnet_isapi.dll" resourceType="Unspecified" requireAccess="Script" preCondition="classicMode,runtimeVersionv4.0,bitness64" /&gt;
+                &lt;/handlers&gt;
+        &lt;/system.webServer&gt;
+&lt;/configuration&gt;</pre>
+                </div>
+              </span>
+            </li>
+            <li>
+              <p>Rendition is now installed.  To access the administrative tools
+	            navigate to the /admin subdirectory of your new web site.
+					The default administrator's logon is:
+					<div class="tableSection"><table width="50%" cellspacing="2" cellpadding="5" frame="lhs"><tr><th>Name</th><th>Password</th></tr><tr><td>admin</td><td>password
+					    </td></tr></table></div></p>
+            </li>
+            <li>
+              <p>The first thing you should do before you start
+	            using Rendition is open the administrator's account
+	            by clicking "Edit Existing Account", click browse
+	            double click on the administrator's account (Admin)
+	            and change the password of the administrator then press save.
+	            </p>
+              <p>
+	            Don't lose the password!
+	            </p>
+            </li>
+            <li>
+              <p>
+	            Next click the "Settings" link and fill out as many
+	            of the fields as you feel like filling out.  For a 
+	            complete summary of what each field means visit the
+	            topic <span sdata="link"><a href="07a77302-0597-421b-952f-175f649228f0.htm">Settings</a></span>.
+	            </p>
+              <p>
+	            Don't lose the password!
+	            </p>
+            </li>
+          </ol>
+        </div>
+      </div>
+      <div id="footer">
+        <div class="footerLine">
+          <img width="100%" height="3px" src="../icons/footer.gif" alt="Footer image" title="Footer image" />
+        </div>
+        <A NAME="feedback"></A>
+        <span id="fb" class="feedbackcss"></span>
+        <p />Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:tonygermaneri%40gmail.com?Subject=Rendition E-Commerce Framework">Tony Germaneri</a><script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        var HT_mailLinkText = HT_mailLink.innerHTML;
+        HT_mailLink.href += ": " + document.title;
+        HT_mailLink.innerHTML = HT_mailLinkText;
+        </script><p />Copyright © Tony Germaneri 2011</div>
+    </div>
+  </body>
+</html>

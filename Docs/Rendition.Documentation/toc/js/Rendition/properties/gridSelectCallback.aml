@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="7000fedd-b455-8be4-ed68-202f69b5a5a8" revisionNumber="1" dataAlias="Rendition#Rendition.UI.gridSelectCallback">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction address="Intro">
+			Rendition#Rendition.UI.gridSelectCallback()
+			<para>This function processes the data returned from the server when the Rendition.UI.gridSelectURLis sent.  The type returned by this function must be a <link xlink:href="de0fdb88-125a-3606-d0af-83173204d97b"/>.The signature of the function is Function(XMLHttpRequest e, <link xlink:href="f5f5d4d4-f415-cd77-8e8f-c01e6464006a"/> grid).The default function uses the C# Rendition.admin.dataSet method.</para>
+		</introduction>
+		<definitionTable>
+			
+			
+				<definedTerm>
+					<para>Member Of</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="6aa67830-fc7a-c3eb-719a-722fb4fb312e"/>
+					</para>
+				</definition>
+			
+			
+				<definedTerm>
+					<para>Type</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="ef3d2310-dfdb-431e-8330-0d339049abff"/>
+					</para>
+				</definition>
+			
+			
+				<definedTerm>
+					<para>Source</para>
+				</definedTerm>
+				<definition>
+					<para>
+						c:\Rendition\Rendition.Core\js\admin\UI\Init.js
+					</para>
+				</definition>
+			
+		</definitionTable>
+	</developerConceptualDocument>
+</topic>

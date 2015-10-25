@@ -1,0 +1,5 @@
+C:\Rendition\Plugins\Rendition.Quickbooks10Export\bin\Debug\Rendition.Quickbooks10Export.dll
+C:\Rendition\Plugins\Rendition.Quickbooks10Export\bin\Debug\Rendition.Quickbooks10Export.pdb
+C:\Rendition\Plugins\Rendition.Quickbooks10Export\obj\Debug\ResolveAssemblyReference.cache
+C:\Rendition\Plugins\Rendition.Quickbooks10Export\obj\Debug\Rendition.Quickbooks10Export.dll
+C:\Rendition\Plugins\Rendition.Quickbooks10Export\obj\Debug\Rendition.Quickbooks10Export.pdb

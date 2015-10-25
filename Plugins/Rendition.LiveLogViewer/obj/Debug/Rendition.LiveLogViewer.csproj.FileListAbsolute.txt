@@ -1,0 +1,5 @@
+C:\Rendition\Plugins\Rendition.LiveLogViewer\bin\Debug\Rendition.LiveLogViewer.dll
+C:\Rendition\Plugins\Rendition.LiveLogViewer\bin\Debug\Rendition.LiveLogViewer.pdb
+C:\Rendition\Plugins\Rendition.LiveLogViewer\obj\Debug\ResolveAssemblyReference.cache
+C:\Rendition\Plugins\Rendition.LiveLogViewer\obj\Debug\Rendition.LiveLogViewer.dll
+C:\Rendition\Plugins\Rendition.LiveLogViewer\obj\Debug\Rendition.LiveLogViewer.pdb

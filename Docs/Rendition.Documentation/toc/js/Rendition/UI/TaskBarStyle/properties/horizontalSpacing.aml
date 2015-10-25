@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="a9014eeb-8a69-1fa4-c3e9-ef85566728b2" revisionNumber="1" dataAlias="Rendition.UI.TaskBarStyle#TaskBarStyle.horizontalSpacing">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction address="Intro">
+			Rendition.UI.TaskBarStyle#TaskBarStyle.horizontalSpacing()
+			<para>The horizontal spacing in PX between <link xlink:href="7a2226b4-a53b-bdc8-2b33-a5f6c7c615ac"/> elements.</para>
+		</introduction>
+		<definitionTable>
+			
+			
+				<definedTerm>
+					<para>Member Of</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="57ef9840-ef6b-362d-f04c-5bfb1dec81ad"/>
+					</para>
+				</definition>
+			
+			
+				<definedTerm>
+					<para>Type</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>
+					</para>
+				</definition>
+			
+			
+				<definedTerm>
+					<para>Source</para>
+				</definedTerm>
+				<definition>
+					<para>
+						c:\Rendition\Rendition.Core\js\admin\UI\taskbar.js
+					</para>
+				</definition>
+			
+		</definitionTable>
+	</developerConceptualDocument>
+</topic>

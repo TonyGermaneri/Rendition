@@ -1,0 +1,344 @@
+﻿<html xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+  <head>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8" />
+    <META NAME="save" CONTENT="history" />
+    <title>Plugin Authoring</title>
+    <meta name="Language" content="en-us" />
+    <meta name="Microsoft.Help.Id" content="d3c829cd-215d-430a-a9ae-bfeab6458ba1" />
+    <meta name="Description" content="Plugins allow you to create your own libraries that get loaded into Rendition when the site starts up. This topic will show you how to create a simple plugin that attaches to the update cart even and a simple plugin that implements a timer event." />
+    <meta name="Microsoft.Help.ContentType" content="Concepts" />
+    <link rel="stylesheet" type="text/css" href="../styles/Presentation.css" />
+    <link rel="stylesheet" type="text/css" href="ms-help://Hx/HxRuntime/HxLink.css" />
+    <script type="text/javascript" src="../scripts/EventUtilities.js"> </script>
+    <script type="text/javascript" src="../scripts/SplitScreen.js"> </script>
+    <script type="text/javascript" src="../scripts/Dropdown.js"> </script>
+    <script type="text/javascript" src="../scripts/script_manifold.js"> </script>
+    <script type="text/javascript" src="../scripts/script_feedBack.js"> </script>
+    <script type="text/javascript" src="../scripts/CheckboxMenu.js"> </script>
+    <script type="text/javascript" src="../scripts/CommonUtilities.js"> </script>
+    <xml>
+      <MSHelp:Keyword Index="A" Term="d3c829cd-215d-430a-a9ae-bfeab6458ba1" />
+      <MSHelp:Attr Name="RevisionNumber" Value="1" />
+      <MSHelp:Attr Name="AssetID" Value="d3c829cd-215d-430a-a9ae-bfeab6458ba1" />
+      <MSHelp:Attr Name="Abstract" Value="Plugins allow you to create your own libraries that get loaded into Rendition when the site starts up. This topic will show you how to create a simple plugin that attaches to the update cart even and a simple plugin that implements a timer event." />
+      <MSHelp:Attr Name="TopicType" Value="kbArticle" />
+      <MSHelp:Attr Name="Locale" Value="en-us" />
+    </xml>
+    <link type="text/css" rel="stylesheet" href="../styles/highlight.css" />
+    <script type="text/javascript" src="../scripts/highlight.js"> </script>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <input type="hidden" id="hiddenScrollOffset" />
+    <img id="collapseImage" style="display:none; height:0; width:0;" src="../icons/collapse_all.gif" alt="Collapse image" title="Collapse image" />
+    <img id="expandImage" style="display:none; height:0; width:0;" src="../icons/expand_all.gif" alt="Expand Image" title="Expand Image" />
+    <img id="collapseAllImage" style="display:none; height:0; width:0;" src="../icons/collapse_all.gif" />
+    <img id="expandAllImage" style="display:none; height:0; width:0;" src="../icons/expand_all.gif" />
+    <img id="dropDownImage" style="display:none; height:0; width:0;" src="../icons/dropdown.gif" />
+    <img id="dropDownHoverImage" style="display:none; height:0; width:0;" src="../icons/dropdownHover.gif" />
+    <img id="copyImage" style="display:none; height:0; width:0;" src="../icons/copycode.gif" alt="Copy image" title="Copy image" />
+    <img id="copyHoverImage" style="display:none; height:0; width:0;" src="../icons/copycodeHighlight.gif" alt="CopyHover image" title="CopyHover image" />
+    <div id="header">
+      <table id="topTable" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <span onclick="ExpandCollapseAll(toggleAllImage)" style="cursor:default;" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage, event)" tabindex="0">
+              <img ID="toggleAllImage" class="toggleAll" src="../icons/collapse_all.gif" /> <label id="collapseAllLabel" for="toggleAllImage" style="display: none;">Collapse All</label><label id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand All</label> </span>
+            <span>    </span>
+            <span id="devlangsDropdown" class="filter" tabindex="0">
+              <img id="devlangsDropdownImage" src="../icons/dropdown.gif" /> <label id="devlangsMenuAllLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: All </nobr></label><label id="devlangsMenuMultipleLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: Multiple </nobr></label><label id="devlangsMenuCSharpLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: C# </nobr></label><label id="devlangsMenuJavaScriptLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: JavaScript </nobr></label></span>
+          </td>
+        </tr>
+      </table>
+      <div id="devlangsMenu">
+        <input id="CSharpCheckbox" type="checkbox" data="CSharp,cs,'persist'" value="on" onClick="SetLanguage(this)" />
+        <label class="checkboxLabel" for="CSharpCheckbox">C#</label>
+        <br />
+        <input id="JavaScriptCheckbox" type="checkbox" data="JavaScript,cs,'persist'" value="on" onClick="SetLanguage(this)" />
+        <label class="checkboxLabel" for="JavaScriptCheckbox">JavaScript</label>
+        <br />
+      </div>
+      <table id="bottomTable" cellpadding="0" cellspacing="0">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">Rendition E-Commerce Framework</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">Plugin Authoring</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td align="left">
+            <a href="#seeAlsoToggle" onclick="OpenSection(seeAlsoToggle)">See Also</a> <span id="headfeedbackarea" class="feedbackhead"><a href="javascript:SubmitFeedback('tonygermaneri@gmail.com','Rendition E-Commerce Framework','','1.0.0.0','','%0\dYour%20feedback%20is%20used%20to%20improve%20the%20documentation%20and%20the%20product.%20Your%20e-mail%20address%20will%20not%20be%20used%20for%20any%20other%20purpose%20and%20is%20disposed%20of%20after%20the%20issue%20you%20report%20is%20resolved.%20%20While%20working%20to%20resolve%20the%20issue%20that%20you%20report,%20you%20may%20be%20contacted%20via%20e-mail%20to%20get%20further%20details%20or%20clarification%20on%20the%20feedback%20you%20sent.%20After%20the%20issue%20you%20report%20has%20been%20addressed,%20you%20may%20receive%20an%20e-mail%20to%20let%20you%20know%20that%20your%20feedback%20has%20been%20addressed.%0\A%0\d','Customer%20Feedback');">Send Feedback</a></span></td>
+        </tr>
+      </table>
+      <table id="gradientTable">
+        <tr>
+          <td class="nsrBottom" background="../icons/gradient.gif" />
+        </tr>
+      </table>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" />
+        <span style="color: DarkGray">
+          <p style="color: #dc143c; font-size: 8.5pt; font-weight: bold;">[This is preliminary documentation and is subject to change.]</p>
+        </span>
+        <div class="introduction">
+          <p>Plugins allow you to create your own libraries that get loaded
+      into Rendition when the site starts up.  This topic will
+      show you how to create a simple plugin that attaches to the update
+      cart even and a simple plugin that implements a timer event.
+      </p>
+          <p>
+            <div class="alert">
+              <table>
+                <tr>
+                  <th>
+                    <img src="../icons/alert_note.gif" title="Note" /> <b>Note</b></th>
+                </tr>
+                <tr>
+                  <td>
+                    <p>      	A full list of events can be found int the Rendition Namespace topic
+      	Rendition.Site.Events.</p>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </p>
+          <p>
+      	A plugin must be a library that contains a class that
+      	implements the virtual class Rendition.Plugin.  The compiled library
+      	(a .dll file) must then be placed in the plugins directory 
+      	( default: /plugins ).
+      </p>
+          <p>
+      
+      To get started:
+<ol><li>Create a new .NET Library.</li><li>Add a reference to Rendition.dll.</li><li>add the text ": Plugin " to the end of your
+      class name to inherit the Rendition.Plugin virtual class.
+      </li><li>When you're done, add your compiled dll to the /plugins directory.</li><li>Restart the site to load new plugins.  </li></ol><div class="alert"><table><tr><th><img src="../icons/alert_note.gif" title="Note" /> <b>Note</b></th></tr><tr><td><p>The site can be restarted
+  via the Site Configuration application in the administrative tools page
+  or by restarting the worker process on the IIS server.</p></td></tr></table></div><div class="alert"><table><tr><th><img src="../icons/alert_note.gif" title="Note" /> <b>Note</b></th></tr><tr><td><p>If you're unsure how to do this check the examples below.</p></td></tr></table></div></p>
+        </div>
+        <a name="example1"> </a>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(sectionToggleID0ECAAA)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(sectionToggleID0ECAAA, event)" tabindex="0">
+            <img id="sectionToggleID0ECAAA" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Cart Discount Plugin</span>
+        </h1>
+        <div id="sectionSectionID0ECAAA" class="section" name="collapseableSection" style="">
+          <p>
+        	Upon instantiation this plugin subscribes to the 
+            Site.CalculatingDiscount event.  It checks the session's
+            properties for a key called "discountCode" and matches that
+            to a discount code in Site.Discounts.
+        	<span id="cbc_1" x-lang="CSharp" codeLanguage="CSharp"><div class="highlight-title"><span class="highlight-copycode" onkeypress="javascript:CopyColorizedCodeCheckKey(this.parentNode, event);" tabindex="0" onmouseover="CopyCodeChangeIcon(this)" onmouseout="CopyCodeChangeIcon(this)" onclick="javascript:CopyColorizedCode(this.parentNode);"><img style="margin-right: 5px;" src="../icons/CopyCode.gif" />Copy</span>C#</div><div class="code"><pre xml:space="preserve"><span class="highlight-keyword">using</span> System;
+<span class="highlight-keyword">using</span> System.Collections.Generic;
+<span class="highlight-keyword">using</span> System.Linq;
+<span class="highlight-keyword">using</span> System.Text;
+<span class="highlight-keyword">using</span> Rendition;
+<span class="highlight-keyword">namespace</span> Rendition.standardPlugins.discountCodes {
+    <span class="highlight-keyword">public</span> <span class="highlight-keyword">class</span> discountCodes:Plugin {
+        <span class="highlight-keyword">public</span> discountCodes() {
+            Site.CurrentSite.CalculatingDiscount+=<span class="highlight-keyword">new</span> EventHandler(site_oncalculatediscount);
+        }
+        <span class="highlight-keyword">public</span> <span class="highlight-keyword">void</span> site_oncalculatediscount(<span class="highlight-keyword">object</span> sender, EventArgs e){
+            CalculateDiscountEventArgs args = (CalculateDiscountEventArgs)e;
+            <span class="highlight-keyword">string</span> discountCode = <span class="highlight-literal">""</span>;
+            <span class="highlight-keyword">decimal</span> discountAmount = <span class="highlight-number">0</span>;
+            <span class="highlight-keyword">if</span>(args.Session.Properties.ContainsKey(<span class="highlight-literal">"discountCode"</span>)){
+                discountCode = (<span class="highlight-keyword">string</span>)args.Session.GetProperty(<span class="highlight-literal">"discountCode"</span>);
+                Commerce.Discount discount = Commerce.Discount.All.Find(<span class="highlight-keyword">delegate</span>(Commerce.Discount d){
+                    <span class="highlight-keyword">return</span> d.Code.MaxLength(<span class="highlight-number">25</span>,<span class="highlight-keyword">true</span>,<span class="highlight-keyword">true</span>) == discountCode.MaxLength(<span class="highlight-number">25</span>,<span class="highlight-keyword">true</span>,<span class="highlight-keyword">true</span>);
+                });
+                <span class="highlight-keyword">if</span>(discount!=<span class="highlight-keyword">null</span>){
+                    discountAmount = args.Cart.SubTotal * <span class="highlight-keyword">decimal</span>.Parse(discount.Percent.ToString());
+                }
+            }
+            <span class="highlight-keyword">if</span>( discountAmount != <span class="highlight-number">0</span>) {
+                args.Discount = <span class="highlight-keyword">decimal</span>.Round(discountAmount,<span class="highlight-number">2</span>,MidpointRounding.ToEven);
+            }
+            <span class="highlight-keyword">return</span>;
+        }
+    }
+}</pre></div></span></p>
+        </div>
+        <a name="example2"> </a>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(sectionToggleID0EBAAA)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(sectionToggleID0EBAAA, event)" tabindex="0">
+            <img id="sectionToggleID0EBAAA" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Timed Event</span>
+        </h1>
+        <div id="sectionSectionID0EBAAA" class="section" name="collapseableSection" style="">
+          <p>Upon instantiation this function creates a timer that elapses
+        every 30 seconds and resets itself to run again.  It checks a directory
+        for image files or directories that match an item number in the system.
+        When it finds an image it adds it to the given item.
+        <span id="cbc_2" x-lang="CSharp" codeLanguage="CSharp"><div class="highlight-title"><span class="highlight-copycode" onkeypress="javascript:CopyColorizedCodeCheckKey(this.parentNode, event);" tabindex="0" onmouseover="CopyCodeChangeIcon(this)" onmouseout="CopyCodeChangeIcon(this)" onclick="javascript:CopyColorizedCode(this.parentNode);"><img style="margin-right: 5px;" src="../icons/CopyCode.gif" />Copy</span>C#</div><div class="code"><pre xml:space="preserve"><span class="highlight-keyword">using</span> System;
+<span class="highlight-keyword">using</span> System.Collections.Generic;
+<span class="highlight-keyword">using</span> System.Linq;
+<span class="highlight-keyword">using</span> System.Text;
+<span class="highlight-keyword">using</span> Rendition;
+<span class="highlight-keyword">using</span> System.IO;
+<span class="highlight-keyword">using</span> System.Web;
+<span class="highlight-keyword">namespace</span> Rendition.standardPlugins.imageImport {
+    <span class="highlight-keyword">public</span> <span class="highlight-keyword">class</span> imageImport:Plugin {
+        <span class="highlight-keyword">private</span> <span class="highlight-keyword">static</span> <span class="highlight-keyword">int</span> interval = <span class="highlight-number">30000</span>;
+        <span class="highlight-keyword">private</span> <span class="highlight-keyword">static</span> <span class="highlight-keyword">string</span> importDirectory=Rendition.Admin.GetApplicationPath()+<span class="highlight-literal">"import\\items\\img\\"</span>;
+        <span class="highlight-keyword">private</span> <span class="highlight-keyword">static</span> <span class="highlight-keyword">string</span> importRepository=importDirectory+<span class="highlight-literal">"repository\\"</span>;
+        <span class="highlight-keyword">private</span> <span class="highlight-keyword">static</span> <span class="highlight-keyword">string</span> importErrors=importDirectory+<span class="highlight-literal">"errors\\"</span>;
+        <span class="highlight-keyword">public</span> imageImport(){
+            Admin.Timer importItemImages = <span class="highlight-keyword">new</span> Admin.Timer();
+            importItemImages.Name = <span class="highlight-literal">"Auto Image Import"</span>;
+            importItemImages.Interval = interval;
+            importItemImages.elapsed+=<span class="highlight-keyword">new</span> EventHandler(importItemImages_elapsed);
+            importItemImages.AutoReset=<span class="highlight-keyword">false</span>;
+            importItemImages.Start();
+            <span class="highlight-keyword">this</span>.Message=<span class="highlight-literal">"Loaded"</span>;
+        }
+        <span class="highlight-keyword">void</span> importImage(<span class="highlight-keyword">string</span> itemNumber, <span class="highlight-keyword">string</span> pathToFileToImport){
+            <span class="highlight-keyword">string</span> fileName = Path.GetFileName( pathToFileToImport );
+            Dictionary&lt;<span class="highlight-keyword">string</span>, <span class="highlight-keyword">object</span>&gt; j = Admin.AddItemImage( itemNumber, pathToFileToImport );
+            <span class="highlight-keyword">if</span>( ( <span class="highlight-keyword">int</span> )j[ <span class="highlight-literal">"error"</span> ] != <span class="highlight-number">0</span> ) {
+                Error = <span class="highlight-number">2</span>;
+                ( <span class="highlight-literal">"Auto import item image error -&gt; "</span> + fileName + <span class="highlight-literal">" - "</span> + ( <span class="highlight-keyword">string</span> )j[ <span class="highlight-literal">"desc"</span> ] ).Debug( <span class="highlight-number">3</span> );
+            } <span class="highlight-keyword">else</span> {
+                ( <span class="highlight-literal">"Auto import item imported -&gt; "</span> + fileName ).Debug( <span class="highlight-number">3</span> );
+            }
+        }
+        <span class="highlight-keyword">void</span> importDirectoryImages(<span class="highlight-keyword">string</span> directoryPath, Admin.Timer t){
+            <span class="highlight-keyword">string</span>[] files = Directory.GetFiles( importDirectory );
+            <span class="highlight-keyword">string</span>[] dirs = Directory.GetDirectories( importDirectory );
+            <span class="highlight-keyword">foreach</span>( <span class="highlight-keyword">string</span> dir <span class="highlight-keyword">in</span> dirs ) {
+                <span class="highlight-keyword">if</span>( dir.ToLower().EndsWith( <span class="highlight-literal">"\\repository"</span> ) || dir.ToLower().EndsWith( <span class="highlight-literal">"\\error"</span> ) ) { <span class="highlight-keyword">continue</span>; };
+                <span class="highlight-keyword">foreach</span>(Commerce.Item item <span class="highlight-keyword">in</span> Main.Site.Items.List){
+                    <span class="highlight-comment">/* if the directory is the same as the 
+                     * item number then import all images in the directory */</span>
+                    <span class="highlight-keyword">if</span>( dir.EndsWith( <span class="highlight-literal">"\\"</span> + item.Number.ToLower().Trim() ) ) {
+                        <span class="highlight-keyword">string</span>[] innerFiles = Directory.GetFiles( dir );
+                        <span class="highlight-keyword">foreach</span>(<span class="highlight-keyword">string</span> f <span class="highlight-keyword">in</span> innerFiles){
+                            <span class="highlight-comment">/* import all image files in this directory becuase 
+                             * the directory name matched the item number */</span>
+                            importImage( item.Number, f );
+                            <span class="highlight-comment">/* move the file to the Repository (make sure the target directory exists first */</span>
+                            <span class="highlight-keyword">string</span> repTarget = importRepository + item.Number;
+                            <span class="highlight-keyword">if</span>( !Directory.Exists( repTarget ) ) {
+                                Directory.CreateDirectory( repTarget );
+                            }
+                            File.Move(
+                                Path.Combine( dir, Path.GetFileName( f ) ),
+                                Path.Combine( repTarget, Path.GetFileName( f ) )
+                            );
+                        }
+                    }
+                }
+                <span class="highlight-keyword">if</span>( Directory.GetDirectories(dir).Length == <span class="highlight-number">0</span> ) {
+                    Directory.Delete( dir );
+                }
+            }
+            <span class="highlight-keyword">foreach</span>(<span class="highlight-keyword">string</span> file <span class="highlight-keyword">in</span> files){
+                <span class="highlight-keyword">int</span> error = <span class="highlight-number">0</span>;
+                <span class="highlight-keyword">bool</span> itemExists = <span class="highlight-keyword">false</span>;
+                <span class="highlight-keyword">string</span> importItemNo = Path.GetFileNameWithoutExtension( file );
+                <span class="highlight-keyword">foreach</span>(Commerce.Item item <span class="highlight-keyword">in</span> Main.Site.Items.List){
+                    <span class="highlight-comment">/* import image file if any part 
+                     * of the file contains the item number */</span>
+                    <span class="highlight-keyword">if</span>(importItemNo.ToLower().Trim().Contains(item.Number.ToLower().Trim())) {
+                        importImage(item.Number,file);
+                    }
+                    <span class="highlight-comment">/* move the file to the 
+                     * Repository even if it doesn't match */</span>
+                    File.Move(
+                        Path.Combine( importDirectory, Path.GetFileName( file ) ),
+                        Path.Combine( importRepository, Path.GetFileName( file ) )
+                    );
+                }
+                <span class="highlight-keyword">if</span>(!Directory.Exists(importErrors)) {
+                    Directory.CreateDirectory(importErrors);
+                }
+
+                <span class="highlight-keyword">if</span>(itemExists) {
+                    <span class="highlight-comment">/* matches an item */</span>
+
+                }<span class="highlight-keyword">else</span>{
+                    error = <span class="highlight-number">3</span>;
+                    (<span class="highlight-literal">"Could not match this file to an item number (case does not matter) -&gt; "</span>+file).Debug(<span class="highlight-number">3</span>);
+                }
+                <span class="highlight-keyword">if</span>(error!=<span class="highlight-number">0</span>){
+                    <span class="highlight-keyword">if</span>(!Directory.Exists(importErrors)) {
+                        Directory.CreateDirectory(importErrors);
+                    }
+                    File.Move(
+                        Path.Combine(importRepository,Path.GetFileName(file)),
+                        Path.Combine(importErrors,Path.GetFileName(file))
+                    );
+                    t.Message=<span class="highlight-literal">"Importing Images:"</span>+file;
+                }
+            }
+        }
+        <span class="highlight-keyword">void</span> importItemImages_elapsed(<span class="highlight-keyword">object</span> sender,EventArgs e) {
+            Admin.Timer t=(Admin.Timer)sender;
+            <span class="highlight-keyword">if</span>(!Directory.Exists(importDirectory)) {
+                Directory.CreateDirectory(importDirectory);
+            }
+            <span class="highlight-keyword">if</span>(!Directory.Exists(importRepository)) {
+                Directory.CreateDirectory(importRepository);
+            }
+            <span class="highlight-keyword">bool</span> error = <span class="highlight-keyword">false</span>;
+            <span class="highlight-keyword">string</span> errorMessage = <span class="highlight-literal">""</span>;
+            <span class="highlight-keyword">try</span>{
+                <span class="highlight-comment">/* import files in the root that contain a part of the item number */</span>
+                importDirectoryImages(importDirectory,t);
+                <span class="highlight-comment">/* import files in directories matching item numbers exactly */</span>
+                <span class="highlight-keyword">string</span>[] directories = Directory.GetDirectories(importDirectory);
+                <span class="highlight-keyword">foreach</span>(<span class="highlight-keyword">string</span> directory <span class="highlight-keyword">in</span> directories){
+                    <span class="highlight-keyword">foreach</span>(Commerce.Item item <span class="highlight-keyword">in</span> Main.Site.Items.List){
+                        <span class="highlight-keyword">if</span>(directory.ToLower().Trim() == item.Number.ToLower().Trim()) {
+                            importDirectoryImages(directory,t);
+                        }
+                    }
+                }
+            }<span class="highlight-keyword">catch</span>(Exception ex){
+                error = <span class="highlight-keyword">true</span>;
+                errorMessage = ex.Message;
+            }
+            <span class="highlight-keyword">if</span>(error){
+                errorMessage.Debug(<span class="highlight-number">0</span>);
+            }
+
+            t.Message=<span class="highlight-literal">"Idle"</span>;
+            t.Start();
+        }
+    }
+}</pre></div></span></p>
+        </div>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(seeAlsoToggle)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(seeAlsoToggle, event)" tabindex="0">
+            <img id="seeAlsoToggle" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />See Also</span>
+        </h1>
+        <div id="seeAlsoSection" class="section" name="collapseableSection" style="">
+          <h4 class="subHeading">Reference</h4>
+          <div class="seeAlsoStyle">
+            <span sdata="cer" target="T:Rendition.Site">
+              <a href="4b419928-1bb1-8849-be70-c9d5c49d00d9.htm">Site</a>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div id="footer">
+        <div class="footerLine">
+          <img width="100%" height="3px" src="../icons/footer.gif" alt="Footer image" title="Footer image" />
+        </div>
+        <A NAME="feedback"></A>
+        <span id="fb" class="feedbackcss"></span>
+        <p />Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:tonygermaneri%40gmail.com?Subject=Rendition E-Commerce Framework">Tony Germaneri</a><script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        var HT_mailLinkText = HT_mailLink.innerHTML;
+        HT_mailLink.href += ": " + document.title;
+        HT_mailLink.innerHTML = HT_mailLinkText;
+        </script><p />Copyright © Tony Germaneri 2011</div>
+    </div>
+  </body>
+</html>

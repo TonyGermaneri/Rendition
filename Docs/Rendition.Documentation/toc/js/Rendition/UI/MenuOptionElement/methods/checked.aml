@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="e4055688-0d25-a03a-987b-f9e7a3503447" revisionNumber="1" dataAlias="Rendition.UI.MenuOptionElement#MenuOptionElement.checked">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction address="Intro">
+			Rendition.UI.MenuOptionElement#MenuOptionElement.checked(<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>  f_bolCheck)
+			<para>Gets or sets the checked state of .</para>
+		</introduction>
+		<definitionTable>
+			
+			
+				<definedTerm>
+					<para>Member Of</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="c807995d-75de-b263-6de4-c0f04686a0bb"/>
+					</para>
+				</definition>
+			
+			
+				<definedTerm>
+					<para>Return Type</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+					</para>
+				</definition>
+			
+			
+				<definedTerm>
+					<para>Source</para>
+				</definedTerm>
+				<definition>
+					<para>
+						c:\Rendition\Rendition.Core\js\admin\UI\menuOptionElement.js
+					</para>
+				</definition>
+			
+		</definitionTable>
+		<section address="parameters">
+		<title>Parameters</title>
+			<sections>
+				<table>
+					<tableHeader>
+					<row>
+						<entry><para> </para></entry>
+						<entry><para>Name</para></entry>
+						<entry><para>Description</para></entry>
+					</row>
+					</tableHeader>
+					
+						<row>
+							<entry>
+								<para>
+									
+									Required
+									f_bolCheck
+									<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+								</para>
+							</entry>
+							<entry>
+								<para>
+									When a value is provided the check state will be set.when a value is not provided
+								</para>
+							</entry>
+							<entry>
+								<para>
+									
+								</para>
+							</entry>
+						</row>
+					
+				</table>
+			</sections>
+		</section>
+	</developerConceptualDocument>
+</topic>

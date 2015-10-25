@@ -1,0 +1,12 @@
+C:\Rendition\rendition.standardPlugins.discountCodes\rendition.standardPlugins.discountCodes\bin\Debug\rendition.standardPlugins.discountCodes.dll
+C:\Rendition\rendition.standardPlugins.discountCodes\rendition.standardPlugins.discountCodes\bin\Debug\rendition.standardPlugins.discountCodes.pdb
+C:\Rendition\rendition.standardPlugins.discountCodes\rendition.standardPlugins.discountCodes\bin\Debug\rendition.dll
+C:\Rendition\rendition.standardPlugins.discountCodes\rendition.standardPlugins.discountCodes\bin\Debug\itextsharp.dll
+C:\Rendition\rendition.standardPlugins.discountCodes\rendition.standardPlugins.discountCodes\bin\Debug\Newtonsoft.Json.dll
+C:\Rendition\rendition.standardPlugins.discountCodes\rendition.standardPlugins.discountCodes\bin\Debug\ZedGraph.dll
+C:\Rendition\rendition.standardPlugins.discountCodes\rendition.standardPlugins.discountCodes\bin\Debug\rendition.pdb
+C:\Rendition\rendition.standardPlugins.discountCodes\rendition.standardPlugins.discountCodes\bin\Debug\rendition.xml
+C:\Rendition\rendition.standardPlugins.discountCodes\rendition.standardPlugins.discountCodes\obj\Debug\ResolveAssemblyReference.cache
+C:\Rendition\rendition.standardPlugins.discountCodes\rendition.standardPlugins.discountCodes\obj\Debug\rendition.standardPlugins.discountCodes.dll
+C:\Rendition\rendition.standardPlugins.discountCodes\rendition.standardPlugins.discountCodes\obj\Debug\rendition.standardPlugins.discountCodes.pdb
+C:\Rendition\rendition.standardPlugins.discountCodes\rendition.standardPlugins.discountCodes\bin\Debug\HtmlAgilityPack.dll

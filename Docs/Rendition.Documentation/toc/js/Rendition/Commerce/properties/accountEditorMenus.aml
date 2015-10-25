@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="d552a80f-dcf2-034f-d976-c84cd7237093" revisionNumber="1" dataAlias="Rendition.Commerce#accountEditorMenus">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction address="Intro">
+			Rendition.Commerce#accountEditorMenus()
+			<para>Menus to add to the account editor program.  Should be an array of {Native.Function}s that return {Rendition.UI.menuOption} elements.Function arguments: AccountEditor, Menus</para>
+		</introduction>
+		<definitionTable>
+			
+			
+				<definedTerm>
+					<para>Member Of</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="2896c8f9-0029-93dd-3d58-5d56b94ded8b"/>
+					</para>
+				</definition>
+			
+			
+				<definedTerm>
+					<para>Type</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+					</para>
+				</definition>
+			
+			
+				<definedTerm>
+					<para>Source</para>
+				</definedTerm>
+				<definition>
+					<para>
+						c:\Rendition\Rendition.Core\js\admin\Commerce\Commerce.js
+					</para>
+				</definition>
+			
+		</definitionTable>
+	</developerConceptualDocument>
+</topic>

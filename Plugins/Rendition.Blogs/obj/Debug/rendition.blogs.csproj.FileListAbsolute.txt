@@ -1,0 +1,15 @@
+C:\Rendition\rendition.commerce.blogs\rendition.commerce.blogs\bin\Debug\Rendition.Blogs.dll
+C:\Rendition\rendition.commerce.blogs\rendition.commerce.blogs\bin\Debug\Rendition.Blogs.pdb
+C:\Rendition\rendition.commerce.blogs\rendition.commerce.blogs\bin\Debug\Rendition.dll
+C:\Rendition\rendition.commerce.blogs\rendition.commerce.blogs\bin\Debug\Rendition.pdb
+C:\Rendition\rendition.commerce.blogs\rendition.commerce.blogs\bin\Debug\Rendition.xml
+C:\Rendition\rendition.commerce.blogs\rendition.commerce.blogs\obj\Debug\ResolveAssemblyReference.cache
+C:\Rendition\rendition.commerce.blogs\rendition.commerce.blogs\obj\Debug\Rendition.Blogs.dll
+C:\Rendition\rendition.commerce.blogs\rendition.commerce.blogs\obj\Debug\Rendition.Blogs.pdb
+C:\Rendition\Plugins\Rendition.Blogs\bin\Debug\Rendition.Blogs.dll
+C:\Rendition\Plugins\Rendition.Blogs\bin\Debug\Rendition.Blogs.pdb
+C:\Rendition\Plugins\Rendition.Blogs\obj\Debug\ResolveAssemblyReference.cache
+C:\Rendition\Plugins\Rendition.Blogs\obj\Debug\Rendition.Blogs.dll
+C:\Rendition\Plugins\Rendition.Blogs\obj\Debug\Rendition.Blogs.pdb
+C:\Rendition\Plugins\Rendition.Blogs\bin\Debug\RazorEngine.dll
+C:\Rendition\Plugins\Rendition.Blogs\bin\Debug\Newtonsoft.Json.dll

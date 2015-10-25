@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+	<html lang="en">
+    <head>
+        <title>Administrative Tools</title>
+		<script type="text/javascript" src="/admin/rendition.js"></script>
+        <meta name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+        <link rel="stylesheet" href="/admin/js/jquery/css/base/jquery-ui.css" type="text/css" media="all" />
+		<link rel="stylesheet" href="/admin/css/admin.css" type="text/css" media="all" />
+		<link rel="shortcut icon" type="image/x-icon" href="/admin/img/favicon.ico" />
+        <script type="text/javascript">
+            $(function () {
+                Rendition.UI.parameters.finishedLoading = function () {
+                    Rendition.Commerce.LogOn({
+                        callbackProcedure: function (e) {
+                            try {
+                                var rdr = (window.location.search.split("?")[1]).split("=")[1];
+                            } catch (ex) {
+                                var rdr = "";
+                            }
+                            if (rdr.length > 0) {
+                                window.location = window.location.protocol + '//' + window.location.host + '/' + decodeURIComponent(rdr).replace("~/", "");
+                            } else {
+                                history.go(-1);
+                            }
+                        }
+                    });
+                    return;
+                }
+            });
+        </script>
+	</head>
+	<body style="background:black;">
+        <h1 style="font-size:517px;color:#222;font-family:stencil;margin-top:-100px;moz-user-select:-moz-none;user-select:-moz-none;" onselect="return false;">Logon</h1>
+	</body>
+</html>
+

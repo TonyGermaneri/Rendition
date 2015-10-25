@@ -1,0 +1,352 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="59e1df95-276f-413c-83a0-0254c505c35f" revisionNumber="1">
+  <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <introduction>
+      <para>All About URLs.</para>
+    </introduction>
+    <sections>
+    	<section address="Section1">
+    		<content>
+	   		<title>
+	   			URLs: Addresses on the internet
+	   		</title>
+	   		<para>
+	   		A URL (Uniform Resource Locator) is an address on the internet.
+	   		This is what you type into the address bar in your browser to go to a web site.
+	   		For example http://www.google.com/ is a URL.  Now let's examine the
+	   		different parts of the URL.
+	   		</para>
+    		</content>
+    	</section>
+    	<section address="Section2">
+    		<content>
+	   		<title>
+	   			URLs are (most of the time) URIs
+	   		</title>
+	   		<para>
+				Most of the time when people say "URL" they maybe should be saying
+				URI.  A URI (Uniform Resource Identifier) is a URL that contains
+				a question mark "?".  The question mark delineates the two parts of the URI.
+				</para>
+				<para>
+				The text to the left of the question mark is called the URL, while
+				the text to the right of the question mark is called the URN
+				(Uniform Resource Name).  
+				<alert class="note">
+				  <para>				
+					Throughout the topics in this documentation
+					the URN will also be referred to as the QueryString [sic].
+				</para>
+				</alert>
+	   		</para>
+			</content>
+    	</section>
+    	<section address="Section3">
+		    <title>
+    			URL + URN = URI
+    		</title>
+    		<content>
+	   		<para>
+	   			<section address="Section3A">
+	   				<title>
+	   					URL
+	   				</title>
+		   			<content>
+				   		<para>
+				   			The URI is the URL plus the URN.  Below is a URI.  
+				   			We'll take it apart and describe the pieces.
+					   		<code lang="none">
+					   			http://www.mysite.com/list.aspx?category=plectrums&amp;recordsPerPage=10
+					   		</code>
+					   		Remember, the text to the left of the question mark is called the URL.
+					   		Below is the URL isolated from the rest of the URI.
+					   		<code lang="none">
+					   			http://www.mysite.com/list.aspx
+					   		</code>
+					   		The URL describes the location of a document on your web site.
+					   		This URL is "pointing" to a file called list.aspx in the root directory.
+							</para>
+							<alert class="note">
+							  <para>    		
+							 A directory is a folder and the root directory is the folder that
+							  all other folders are in.</para>
+							</alert>
+							<para>
+								The URL consists of three parts.  The first part is called the
+								protocol.  The protocol describes how the file will be accessed.
+								HTTP (Hyper Text Transfer Protocol) is the protocol used to access
+								web pages.  Other common protocols are FTP (File Transfer Protocol),
+								HTTPS (Hyper Text Transfer Protocol Secure) and FILE (local file system).
+						   		<code lang="none">
+						   			http://
+						   		</code>
+				   			</para>
+							<para>
+								The second part is the domain "www.mysite.com" is the domain.
+								For more on domains see 
+								<link xlink:href="http://en.wikipedia.org/wiki/Domain_Name_System">
+									Domain Name System on Wikipedia
+								</link>
+					   		<code lang="none">
+					   			www.mysite.com
+					   		</code>
+					   		</para>
+					   		<para>
+				   			The third part of the URL is the path.  The path starts
+				   			at your web site's root directory.  Shown as "/" In our example the
+				   			path is "/list.aspx".  This path targets a file called
+				   			list.aspx in the root directory.
+					   		<code lang="none">
+					   			/list.aspx
+					   		</code>
+					   		To target a file in a subdirectory, the subdirectory name
+					   		must be added to the path.  In the following example
+					   		the target is a file called "arrow.jpg" in the "img"
+					   		directory.
+					   		<code lang="none">
+					   			http://www.mysite.com/img/arrow.jpg
+					   		</code>					   		
+								<alert class="note">
+								  <para>Don't forget!  A folder is a directory.  Just another name for the same thing.</para>
+								</alert>
+								
+								<alert class="warning">
+								  <para>When a URL specifies a directory instead of a file, a default file within that directory
+								  is provided.  For IIS	servers, this default file is called "default.aspx".  
+								  Each directory can have its own default file called "default.aspx".  No default file
+								  will result in the error "Directory listing forbidden."</para>
+								</alert>
+				   			</para>
+						</content>
+			   	</section>
+					<section address="Section3B">
+	   				<title>
+	   					URN
+	   				</title>
+		   			<content>
+				   		<para>
+				   			The URN (Uniform Resource Name) describes the parameter or parameters
+				   			being submitted to the URL.  This is also called the QueryString [sic].
+				   			The URN begins after the first question mark in the URI.
+							</para>
+							<para>
+								The QueryString is a ampersand "&amp;" separated
+								collection of key/value pairs.  The key/value pairs are
+								themselves separated by a equal sign "=".  Think of
+								key/value pairs as a dictionary.  The key is the name
+								of the word and the value is the definition.
+							</para>
+							<para>
+								Consider the following URI.
+								<code lang="none">
+									http://www.mysite.com/list.aspx?category=plectrums&amp;recordsPerPage=10
+								</code>
+								The URN begins after the first question mark.
+								The following is the URN isolated from the rest of the URI.
+								<code lang="none">
+									category=plectrums&amp;recordsPerPage=10
+								</code>
+								<alert class="note">
+								  <para>The question mark is not part of the URI.  
+								  It only delineates the beginning of the URI.</para>
+								</alert>
+								<para>Next, we need to separate each key/value pair
+								by separating each key/value pair.  Each pair
+								is separated by the ampersand sign "&amp;".  So in the
+								example above there are two key/value pairs.</para>
+								<table>
+								  <tableHeader>
+								    <row>
+								      <entry>Key Value Pairs</entry>
+								    </row>
+								  </tableHeader>
+								  <row>
+								    <entry>category=plectrums</entry>
+								  </row>
+								  <row>
+								    <entry>recordsPerPage=10</entry>
+								  </row>
+								</table>
+								Next, each key/value pair is separated by
+								the equal sign resulting in the following.
+								<table>
+								  <tableHeader>
+								    <row>
+								      <entry>Key</entry>
+								      <entry>Value</entry>
+								    </row>
+								  </tableHeader>
+								  <row>
+								    <entry>category</entry>
+								    <entry>plectrums</entry>
+								  </row>
+								  <row>
+								    <entry>recordsPerPage</entry>
+								    <entry>10</entry>
+								  </row>
+								</table>
+								<alert class="note">
+								  <para>The equal sign is not part of the key or the value.
+								  It only delineates	the key from the value.</para>
+								</alert>
+							</para>
+						</content>
+			   	</section>	
+	   		</para>
+			</content>
+    	</section>
+		<section address="Section4">
+		    <title>
+				Fragment Identifier
+			</title>
+			<content>
+	   		<para>
+		   		A fragment identifier is an optional piece of the URL
+		   		that describes the location of an anchor on the document by the
+		   		anchor's name attribute.  The fragment comes after the URL and URN.
+		   		A fragment always starts with the number sign "#" and is followed
+		   		by the name of the anchor on the page to scroll to.
+				<alert class="note">
+				  <para>An anchor is a link on a web page.</para>
+				</alert>
+				Below is an example of a URL with a fragment identifier.
+				<code lang="none">
+					http://www.mysite.com/list.aspx?category=plectrums&amp;recordsPerPage=10#top
+				</code>
+				In the above example the fragment is called "top".  When
+				this page is visited, the web browser will look for an anchor
+				with the name "top" and scroll to it.
+				<alert class="note">
+				  <para>Fragments are not sent to the server, so they cannot be used in server side code (C#, etc.)</para>
+				</alert>
+	   		</para>
+	   		</content>
+	   	</section>
+		<section address="Section5">
+		    <title>
+				Absolute and Relative URIs
+			</title>
+			<content>
+	   		<para>
+		   		The difference between an absolute and relative URI is the
+		   		presence of the protocol and domain of the URI.
+		   		Relative URIs do not contain the protocol or domain. 
+	   		</para>
+	   		<para>
+				A relative URI uses the protocol and domain of the page it is being
+				displayed on.  Below is an example of a relative URI.
+				<code lang="none">
+					/list.aspx
+				</code>
+				And this is the same URI as an absolute URI.
+				<code lang="none">
+					http://www.mysite.com/list.aspx
+				</code>
+				<alert class="warning">
+	  				<para>
+		  				A relative URI makes a big assumption, that the missing
+			   			portions of the URI can be found in the address bar of the 
+			   			browser.  If this isn't the case, your relative URI will not work.
+			   			<legacyItalic>Relative URIs should be avoided.</legacyItalic>
+		   			</para>
+				</alert>
+	   		</para>
+	   		</content>
+	   	</section>
+		<section address="Section5">
+		    <title>
+				URL Encoding
+			</title>
+			<content>
+	   		<para>
+	   			Because the URI contains characters in it that describe
+	   			directories, key/value pairs and other data there are some
+	   			characters that cannot be used in the URI except in these
+	   			predefined roles.  For example, if one of your values in
+	   			your URN (QueryString [sic]) contained a ampersand "&amp;"
+	   			it would be impossible to tell the value's ampersand from the
+	   			key/value pair delineator.  
+	   		</para>
+	   		<para>
+	   			To deal with this conflict, some
+	   			characters should be "encoded" to let the server receiving the
+	   			request know that the encoded data is not part of the URI's
+	   			syntax, but rather the value of a key or key name in the URN.
+	   		</para>
+	   		<para>
+	   			Consider this URL.
+	   			<code lang="none">
+	   				http://www.mysite.com/list.aspx?category=home&amp;decor&amp;recordsPerPage=10
+	   			</code>
+	   			The key "category" contains the value "home&amp;decor" but
+	   			it will appear to the server that the category is called "home"
+	   			and that a new key/value pair begins with the "decor" and has no value.
+	   			So to tell the server that the ampersand is part of the 
+	   			value we need to encode it.  Below is an example of the correctly
+	   			incoded URL.
+	   			<code lang="none">
+	   				http://www.mysite.com/list.aspx?category=home%26decor&amp;recordsPerPage=10
+	   			</code>
+	   			Notice that the ampersand has been replaced by %27.  This is
+	   			the encoded version of the ampersand.
+	   		</para>
+	   		<para>
+	   			Here are some of the most common encoded characters.  This
+	   			is not an exhaustive list.  	
+				<table>
+				  <tableHeader>
+				    <row>
+				      <entry>Character</entry>
+				      <entry>Encoded Character</entry>
+				    </row>
+				  </tableHeader>
+				  <row>
+				    <entry>Space</entry>
+				 	<entry>%20</entry>
+				  </row>
+				  <row>
+				    <entry>&amp;</entry>
+				 	<entry>%26</entry>
+				  </row>
+				  <row>
+				    <entry>?</entry>
+				 	<entry>%3F</entry>
+				  </row>
+				  <row>
+				    <entry>=</entry>
+				 	<entry>%3D</entry>
+				  </row>
+				  <row>
+				    <entry>+</entry>
+				 	<entry>%2B</entry>
+				  </row>
+				  <row>
+				    <entry>%</entry>
+				 	<entry>%25</entry>
+				  </row>
+				  <row>
+				    <entry>#</entry>
+				 	<entry>%23</entry>
+				  </row>
+				  <row>
+				    <entry>@</entry>
+				 	<entry>%40</entry>
+				  </row>
+				</table>
+				<alert class="note">
+	  				<para>
+						For more information on URL Encoding
+						you can read this excellent tutorial at W3Schools:
+						<link href="http://www.w3schools.com/tags/ref_urlencode.asp">
+						http://www.w3schools.com/tags/ref_urlencode.asp</link>
+					</para>
+				</alert>
+
+	   			</para>
+	   		</content>
+	    </section>
+    </sections>
+    <relatedTopics>
+    </relatedTopics>
+  </developerConceptualDocument>
+</topic>

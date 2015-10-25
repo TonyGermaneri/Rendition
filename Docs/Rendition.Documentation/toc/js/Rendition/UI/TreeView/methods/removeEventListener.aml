@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="aacbe3e7-e9dc-b59a-8b57-c8595b676407" revisionNumber="1" dataAlias="Rendition.UI.TreeView#TreeView.removeEventListener">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction address="Intro">
+			Rendition.UI.TreeView#TreeView.removeEventListener(<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  type, <link xlink:href="ef3d2310-dfdb-431e-8330-0d339049abff"/>  proc, <link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>  capture)
+			<para>Removes an event from subscription list.  The [proc] must match exactly the [proc] subscribed with.</para>
+		</introduction>
+		<definitionTable>
+			
+			
+				<definedTerm>
+					<para>Member Of</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="c6d834b2-5b8e-e096-55cf-f1a02dbc88bf"/>
+					</para>
+				</definition>
+			
+			
+				<definedTerm>
+					<para>Return Type</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="044fcb55-0c5f-d88f-619c-455ffb8b2600"/>
+					</para>
+				</definition>
+			
+			
+				<definedTerm>
+					<para>Source</para>
+				</definedTerm>
+				<definition>
+					<para>
+						c:\Rendition\Rendition.Core\js\admin\UI\treeView.js
+					</para>
+				</definition>
+			
+		</definitionTable>
+		<section address="parameters">
+		<title>Parameters</title>
+			<sections>
+				<table>
+					<tableHeader>
+					<row>
+						<entry><para> </para></entry>
+						<entry><para>Name</para></entry>
+						<entry><para>Description</para></entry>
+					</row>
+					</tableHeader>
+					
+						<row>
+							<entry>
+								<para>
+									
+									Required
+									type
+									<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+								</para>
+							</entry>
+							<entry>
+								<para>
+									The type of event to subscribe to.
+								</para>
+							</entry>
+							<entry>
+								<para>
+									
+								</para>
+							</entry>
+						</row>
+					
+						<row>
+							<entry>
+								<para>
+									
+									Required
+									proc
+									<link xlink:href="ef3d2310-dfdb-431e-8330-0d339049abff"/>
+								</para>
+							</entry>
+							<entry>
+								<para>
+									The function to call when the event is fired.
+								</para>
+							</entry>
+							<entry>
+								<para>
+									
+								</para>
+							</entry>
+						</row>
+					
+						<row>
+							<entry>
+								<para>
+									Optional
+									
+									capture
+									<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+								</para>
+							</entry>
+							<entry>
+								<para>
+									What phase of the event will occur on.  This is not used.
+								</para>
+							</entry>
+							<entry>
+								<para>
+									false
+								</para>
+							</entry>
+						</row>
+					
+				</table>
+			</sections>
+		</section>
+	</developerConceptualDocument>
+</topic>

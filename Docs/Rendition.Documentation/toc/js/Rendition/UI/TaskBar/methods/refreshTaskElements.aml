@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="fb2daa0b-b0ce-9858-a125-11f18c5265e1" revisionNumber="1" dataAlias="Rendition.UI.TaskBar#TaskBar.refreshTaskElements">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction address="Intro">
+			Rendition.UI.TaskBar#TaskBar.refreshTaskElements()
+			<para>Refreshes all the <link xlink:href="7a2226b4-a53b-bdc8-2b33-a5f6c7c615ac"/> entries in the task bar.</para>
+		</introduction>
+		<definitionTable>
+			
+			
+				<definedTerm>
+					<para>Member Of</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="12f42c4e-04bb-e9a8-fe9f-49f0d39ec86f"/>
+					</para>
+				</definition>
+			
+			
+				<definedTerm>
+					<para>Return Type</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+					</para>
+				</definition>
+			
+			
+				<definedTerm>
+					<para>Source</para>
+				</definedTerm>
+				<definition>
+					<para>
+						c:\Rendition\Rendition.Core\js\admin\UI\taskbar.js
+					</para>
+				</definition>
+			
+		</definitionTable>
+		<section address="parameters">
+		<title>Parameters</title>
+			<sections>
+				<table>
+					<tableHeader>
+					<row>
+						<entry><para> </para></entry>
+						<entry><para>Name</para></entry>
+						<entry><para>Description</para></entry>
+					</row>
+					</tableHeader>
+					
+				</table>
+			</sections>
+		</section>
+	</developerConceptualDocument>
+</topic>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="08744a00-a1ab-863d-3731-034f17847e6b" revisionNumber="1" dataAlias="Rendition.UI.Form#Form.save">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction address="Intro">
+			Rendition.UI.Form#Form.save(<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>  overwrite, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  commandType, <link xlink:href="ef3d2310-dfdb-431e-8330-0d339049abff"/>  callbackProcedure, <link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>  async)
+			<para>Saves the local form to the remote dataset.  A comfermation dialog will appear if the form data has changed on the server allowing the user to cancel out of the save function.</para>
+		</introduction>
+		<definitionTable>
+			
+			
+				<definedTerm>
+					<para>Member Of</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="58f9dd64-bc8f-48d7-464d-d999bfb87210"/>
+					</para>
+				</definition>
+			
+			
+				<definedTerm>
+					<para>Return Type</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+					</para>
+				</definition>
+			
+			
+				<definedTerm>
+					<para>Source</para>
+				</definedTerm>
+				<definition>
+					<para>
+						c:\Rendition\Rendition.Core\js\admin\UI\Form.js
+					</para>
+				</definition>
+			
+		</definitionTable>
+		<section address="parameters">
+		<title>Parameters</title>
+			<sections>
+				<table>
+					<tableHeader>
+					<row>
+						<entry><para> </para></entry>
+						<entry><para>Name</para></entry>
+						<entry><para>Description</para></entry>
+					</row>
+					</tableHeader>
+					
+						<row>
+							<entry>
+								<para>
+									Optional
+									
+									overwrite
+									<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+								</para>
+							</entry>
+							<entry>
+								<para>
+									When true, existing records will be overwritten without prompting.
+								</para>
+							</entry>
+							<entry>
+								<para>
+									false
+								</para>
+							</entry>
+						</row>
+					
+						<row>
+							<entry>
+								<para>
+									Optional
+									
+									commandType
+									<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>
+								</para>
+							</entry>
+							<entry>
+								<para>
+									The type of save command. 0 = update, 1 = insert, 2 = delete.
+								</para>
+							</entry>
+							<entry>
+								<para>
+									0
+								</para>
+							</entry>
+						</row>
+					
+						<row>
+							<entry>
+								<para>
+									Optional
+									
+									callbackProcedure
+									<link xlink:href="ef3d2310-dfdb-431e-8330-0d339049abff"/>
+								</para>
+							</entry>
+							<entry>
+								<para>
+									The procedure to execute when the save function is successful.
+								</para>
+							</entry>
+							<entry>
+								<para>
+									
+								</para>
+							</entry>
+						</row>
+					
+						<row>
+							<entry>
+								<para>
+									Optional
+									
+									async
+									<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+								</para>
+							</entry>
+							<entry>
+								<para>
+									When true the save function will execute asynchronously.  When false the save function will execute synchronously.
+								</para>
+							</entry>
+							<entry>
+								<para>
+									true
+								</para>
+							</entry>
+						</row>
+					
+				</table>
+			</sections>
+		</section>
+	</developerConceptualDocument>
+</topic>

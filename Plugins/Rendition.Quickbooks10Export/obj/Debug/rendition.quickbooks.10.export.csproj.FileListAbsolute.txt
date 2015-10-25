@@ -1,0 +1,5 @@
+C:\Rendition\rendition.quickbooks.10.export\rendition.quickbooks.10.export\bin\Debug\rendition.quickbooks.10.export.dll
+C:\Rendition\rendition.quickbooks.10.export\rendition.quickbooks.10.export\bin\Debug\rendition.quickbooks.10.export.pdb
+C:\Rendition\rendition.quickbooks.10.export\rendition.quickbooks.10.export\obj\Debug\ResolveAssemblyReference.cache
+C:\Rendition\rendition.quickbooks.10.export\rendition.quickbooks.10.export\obj\Debug\rendition.quickbooks.10.export.dll
+C:\Rendition\rendition.quickbooks.10.export\rendition.quickbooks.10.export\obj\Debug\rendition.quickbooks.10.export.pdb

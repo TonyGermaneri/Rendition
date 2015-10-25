@@ -1,0 +1,5108 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<topic id="f5f5d4d4-f415-cd77-8e8f-c01e6464006a" revisionNumber="1" dataAlias="Rendition.UI.Grid">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction address="Intro">
+			Class Rendition.UI.Grid
+			<para><para>Creates a DHTML based data grid.</para><para>Grid can synchronously or asynchronously read from a recordset you provide at runtime or it can read directly from a MS-SQL Database.  Grid provides default functionality like edit,search and export.  </para><para> Grid also provides events you can subscribe to so you can extend the functionality of the grid. When used on a table or view that implements the VerCol timestamp column records are tracked for their edit state.This means if someone edits the record that you're editing you'll be warned that the data on the server has changed.</para><para>Grid can also work as a recordset fetching tool.  You can use grid to search through a large table and return reliventrecords, create, update, delete and read records synchronously or asynchronously.</para><para>Full pramatization and strong typing for MS SQL databases supported.By default grid streams in data as you scroll.  Only when you have scrolled past the page does the data stream in from the servervia asynchronous requests to the server that return JSON data.</para></para>
+		</introduction>
+		<para>
+			<definitionTable>
+				
+				
+					<definedTerm>
+						<para>Member Of</para>
+					</definedTerm>
+					<definition>
+						<para>
+							<link xlink:href="ddee8d40-d92d-34d0-2be3-5f5d65f36f31"/>
+						</para>
+					</definition>
+				
+				
+					<definedTerm>
+						<para>Source</para>
+					</definedTerm>
+					<definition>
+						<para>
+							c:\Rendition\Rendition.Core\js\admin\UI\grid.js
+						</para>
+					</definition>
+				
+			</definitionTable>
+		</para>
+	<!-- ============================== Examples ========================== -->	
+		
+			<section address="examples">
+				<title>Examples</title>
+				<sections>
+					
+						<section>
+							<title>
+								
+									Create a new dialog.  Create a new grid and attach it to the dialog.
+
+								
+							</title>
+							<content>
+								<para>
+									<code language="javascript">
+var foo = Rendition.UI.Dialog();
+var bar = Rendition.UI.Grid({
+	objectName: 'items',
+	parentNode: foo.content
+});</code>
+								</para>
+							</content>
+						</section>
+					
+						<section>
+							<title>
+								
+									Create a new grid and attaches a cellclick event to it that sets the title of the foo dialog to the value of the cell clicked.
+
+								
+							</title>
+							<content>
+								<para>
+									<code language="javascript">
+var foo = Rendition.UI.Dialog();
+var bar = Rendition.UI.Grid({
+	objectName: 'items',
+	parentNode: foo.content,
+	cellclick: function (e, grid, element, row, column, selection, data, header) {
+		foo.title(grid.getRecord(row, column));
+		return;
+	}
+});</code>
+								</para>
+							</content>
+						</section>
+					
+						<section>
+							<title>
+								
+									Create a dialog, add a grid that uses the generic editor <link xlink:href="Rendition.UI.GenericEditor"/> instead of the inline editor. 
+
+								
+							</title>
+							<content>
+								<para>
+									<code language="javascript">
+var foo = Rendition.UI.Dialog();
+var bar = Rendition.UI.Grid({
+	editMode:3,
+	genericEditor: true,
+	objectName: 'items',
+	parentNode: foo.content
+});</code>
+								</para>
+							</content>
+						</section>
+					
+						<section>
+							<title>
+								
+									 Creates a grid for use as a recordset handling class.  After the grid loads a record from the recordset is displayed. 
+
+								
+							</title>
+							<content>
+								<para>
+									<code language="javascript">
+var foo = Rendition.UI.Dialog();
+var foo = Rendition.UI.Grid({
+	objectName: 'users',
+	afterloadcallback: function(e, grid, element, row, column, selection, data, header){
+		alert(bar.getRecord(1,'handle'));
+	}
+});</code>
+								</para>
+							</content>
+						</section>
+					
+				</sections>
+			</section>
+		
+	<!-- ============================== parameters ========================== -->
+		
+			<section address="parameters">
+				<title>Constructor Parameters</title>
+				<content>
+					<table>
+						<tableHeader>
+							<row>
+								<entry><para> </para></entry>
+								<entry><para>Name</para></entry>
+								<entry><para>Type</para></entry>
+								<entry><para>Description</para></entry>
+							</row>
+						</tableHeader>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Parameters for the grid.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.parentNode 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The DOM node this grid will be appended to.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.operators 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Two dimentional list of operators that will appear in the search dialog.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.selectionMethod 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Method for selecting columns and rows.0 = Single Row, 1 = Single Cell, 2 = Single Column, 3 = Multipule Rows, 4 = Multiple Cells, 5 = Multiple Columns
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.ignoreTableChanges 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Don't warn that the table/row content has changed.  Also, don't dump local cache after each 'dirty' request.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.detailsPaneVisible 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										When true the detail pane is visible.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.suffix 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="89f0508f-dccd-8863-9d09-b323af88a667"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The value to append to the end of the query.  For example " where myColumn = 'Some value' ".  This can be a String or a Function.  Pass the value &gt;columnX&lt; where X is the column number to return name of column X.  When a function is used the function will be evaluated before each asynchronous request.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.orderBy 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="c796032e-d720-88a2-984b-1d0e90b153a0"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The column to order this recordset by.  This prevents the user from reordering the recordset.This can be a String, Integer or a function that returns a String or an Integer. When a function is used the function will be evaluated before each asynchronous request.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.orderDirection 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The direction to order this recordset by. 0 = Descending, 1 = Ascending.    This prevents the user from reordering the recordset.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.searchMatchRowOffset 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The number of rows the search match is offset from the top by.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.searchFilters 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Search filters object generated by the search function.  Looks like [{ column:'TheColumnName',operator:'=',value:'blah',value2:'',type:'VarChar(50)',group:'1',linkOperator:'or'}].  For more information about searchFilters see <link xlink:href="e3c22d92-4586-759a-a34f-3b27aba63ec9"/>.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.rowCountColumn 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										If true the first column is a row counter.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.preventReorder 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										When true the grid cannot be reordered.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.preventHeaderResize 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										When true the grid columns cannot be resized.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.preventHeaderReposition 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										When true the grid columns cannot be repositioned.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.editMode 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										How edit commands will behave.  0 = Read Only,  1 = Update only, 2 = Update + Create, 3 = Create + Read + Update + Delete.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.dateFormat 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										How to format date/datetime data in the grid. See <link xlink:href="f7f7a2a5-4dcf-4a68-7c50-5ccc3a49f1aa"/>.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.editorParameters 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										When using the grid in generic editor mode,editorParameters will override the default editor paramaters for the generic editor.  For more information about the generic editor paramaters see <link xlink:href="e3c22d92-4586-759a-a34f-3b27aba63ec9"/>.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.style 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										When supplied this value will override the default grid style (Rendition.UI.defaultGridStyle).  For more information about grid style see the gridStyle object.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.objectName 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The name of the view or table this grid is bound to.  This option is required when in MS-SQL mode.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.data 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Grid data.  This option is required when in local data mode.  See gridData object for more informaiton.When a function is used the function will be evaluated before each asynchronous request.  See client server sync help topic on the construction of this URL.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.offsetRect 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										rect object that looks like this {x:Integer,y:Integer,h:Integer,w:Integer}.  This object will offest the size and position of the main container of the grid.  This is the best way to distort the size and shape of the grid.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.hideNewRow 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										When true, the 'new row' row will not be visible.  Note, when edit mode is in editMode=0 (read), or editMode=1 (read+update) mode the new row is not visible.  The new row is only visible in editMode=2 (read+update+create) or editMode=3 (create+read+update+delete).
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.preventHeaderEvents 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Prevents the execution of default events in the header, where the column names are.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.newRecord 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Object used to replace the default new data drawn from the header object (if remote, then from the default value column of the SQL object).  Looks like: {columnName:data,columnName2:data2}
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.contextMenuOptions 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										An array of menuOptions objects that will be appended to the default context menu when a context menu is called on row cells.  See the menuOption object for more information.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.noRefresh 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Prevents the option 'Refresh' from appearing on the default context menu.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.headerContextMenuOptions 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										An array of menuOptions objects that will be appended to the default context menu when a context menu is called on the headers.  See the menuOption object for more information.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.noRefresh 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Prevents the option 'Refresh' from appearing on the default context menu.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.genericEditor 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Use the genericEditor class to edit rows instead of the inline editor.  Paramaters can be changed from the default using the args.editorParameters parameter.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.selectURL 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="ef3d2310-dfdb-431e-8330-0d339049abff"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										See <link xlink:href="7c8784d9-803c-70e3-674c-546d154da01b"/>.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.selectCallback 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="ef3d2310-dfdb-431e-8330-0d339049abff"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										See <link xlink:href="ed73ca5b-798f-8d6f-b29d-7da0e569cd32"/>.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.deleteURL 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="ef3d2310-dfdb-431e-8330-0d339049abff"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										See <link xlink:href="8d7abbd7-b080-aef7-daa5-0a0ccad9f3a4"/>.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.deleteCallback 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="ef3d2310-dfdb-431e-8330-0d339049abff"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										See <link xlink:href="52d27b50-beee-bada-5aa1-5f996dd6a75a"/>.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.updateURL 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="ef3d2310-dfdb-431e-8330-0d339049abff"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										See <link xlink:href="9db57d48-6947-3913-316d-677b0a72304e"/>.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.updateCallback 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="ef3d2310-dfdb-431e-8330-0d339049abff"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										See <link xlink:href="87b3ca7f-47a3-dca3-4d33-380bd3ccc6f8"/>.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.insertURL 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="ef3d2310-dfdb-431e-8330-0d339049abff"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										See <link xlink:href="63c0fe6d-bcb6-85e3-019f-7be02f9827b1"/>.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.insertCallback 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="ef3d2310-dfdb-431e-8330-0d339049abff"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										See <link xlink:href="2ddebce5-6f6b-4f28-4ad9-c2b7685ccc9d"/>.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.schemaUpdateURL 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="ef3d2310-dfdb-431e-8330-0d339049abff"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										See <link xlink:href="c8f207ec-60d5-79a8-dc0f-2b46a53a5f5c"/>.
+									</para>
+								</entry>
+							</row>
+						
+					</table>
+				</content>
+			</section>
+		
+	<!-- ============================== fields ========================== -->
+		
+			<section address="fields">
+				<title>Properties</title>
+				<content>
+					<table>
+						<tableHeader>
+							<row>
+								<entry><para> </para></entry>
+								<entry><para>Name</para></entry>
+								<entry><para>Type</para></entry>
+								<entry><para>Description</para></entry>
+							</row>
+						</tableHeader>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="85752436-9e9d-5177-ff29-44a0b074f9c5"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The number of columns in this recordset.  This will be 0 when there are no records or the inital recordset has not yet returned.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="78c9d364-9f5b-b23f-6f7e-3bbd8853660f"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The dialog the grid belongs to if no parent node was defined and the grid paramaters contained dialog = true
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="2a487ed3-249f-bb25-335e-ae2d11ab8eed"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										List of the column data in this grid.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="85fec0f0-94cf-8eca-2069-fc176fccd2bf"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										unique id of this object.  Assigned automatcilly in this reg format /uid_UUID/
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="443422f5-d7c5-8596-d15e-857cae2c44f0"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The local recordset array.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="bec5912d-cd09-08b8-a1f9-3bd9ebbd9113"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										List of operators that appear in the search function.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="02973d1d-fd79-0345-2511-8decaa51500d"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The column to order this recordset by.  This can be a String, Integer or a function that returns a String or an Integer. When a function is used the function will be evaluated before each asynchronous request.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="35e65ad0-237d-66cd-0d79-f5354b8c86c9"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The direction to order this recordset by. 0 = Descending, 1 = Ascending.  Can be an Integer or a function that returns an Integer. When a function is used the function will be evaluated before each asynchronous request.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="56b30288-e107-d7ba-f87d-52c0cfa2d129"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The parent node of the grid.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="09cc457f-035d-f13c-c65b-8abefb974857"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The number of records in this recordset.  This will be 0 when there are no records or the inital recordset has not yet returned.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="916839e1-49ea-5566-795b-0e75a365f0a3"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										If true the first column is a row counter.  Cannot be changed at runtime.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="8ea6626d-afae-0825-51c9-081028342f68"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Search filters object generated by the search function.  Looks like [{ column:'TheColumnName',operator:'=',value:'blah',value2:'',type:'VarChar(50)',group:'1',linkOperator:'or'}].  For more information about searchFilters see the commerce search object.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="92865a5a-faff-abd8-f692-906424d0ee9e"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Matching rows returned from the search function.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="ab90b8e9-abac-ada5-22db-4c33526ac4d8"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										List of selected cells.  E.g.: [[1,1],[1,2],[1,3],[2,1],[2,2],[2,3]] menas select row 1,2,3 and columns 1,2,3.   This array is not populated unless the grid is in cell select mode.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="f40c27fd-25bf-0f94-f96c-faf804235e77"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										List of selected columns.  E.g.: [1,2,3,5,6].  This array is not populated unless the grid is in column select mode.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="dfd7af79-a09d-efd1-ef64-afe388f73aea"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										List of selected rows.  E.g.: [1,2,3,5,6].  This array is not populated unless the grid is in row select mode.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="e00888d4-6787-e85d-edcb-aac75dca94b4"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The value to append to the end of the query.  For example " where myColumn = 'Some value' ".  This can be a String or a Function.  Pass the value &gt;columnX&lt; where X is the column number to return name of column X.  When a function is used the function will be evaluated before each asynchronous request.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="50dd3ffb-f9c6-d288-e01b-5814f335fd95"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The type of object.  returns 'RenditionGrid'
+									</para>
+								</entry>
+							</row>
+						
+					</table>
+				</content>
+			</section>
+		
+	<!-- ============================== methods ========================= -->
+		
+			<section address="methods">
+				<title>Methods</title>
+				<content>
+					<table>
+						<tableHeader>
+						<row>
+							<entry><para> </para></entry>
+							<entry><para>Name</para></entry>
+							<entry><para>Type</para></entry>
+							<entry><para>Description</para></entry>
+						</row>
+						</tableHeader>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="629d6917-cf5f-710d-966d-a05294781a8e"/>(<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  type, <link xlink:href="ef3d2310-dfdb-431e-8330-0d339049abff"/>  proc, <link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>  capture)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="044fcb55-0c5f-d88f-619c-455ffb8b2600"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Attach a procedure to an event.  Usage grid.addEventListener('cellmousedown',function(e,grid,element,row,column,selection,data,header){/*your procedure code},false)
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="caa5a2de-8e86-2042-339f-6167cd4ab8e0"/>()
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="044fcb55-0c5f-d88f-619c-455ffb8b2600"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Prevent the default event from occuring.  For use within an event handler.  For example, when used in within a function subscribed to the editfinish event, running grid.preventDefault() will prevent the grid from updating the recordset.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="0a5e3a3c-ab86-de3d-9d36-a7a8e11cfa68"/>(<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  type, <link xlink:href="ef3d2310-dfdb-431e-8330-0d339049abff"/>  proc, <link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>  capture)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="044fcb55-0c5f-d88f-619c-455ffb8b2600"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Removes an event from subscription list.  The [proc] must match exactly the [proc] subscribed with.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="0d1cb115-5116-b663-6543-6d96348619ca"/>()
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Abort the edit procedure and return to read mode.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="0eda8355-c5b7-42c4-5a77-f0c8042710ea"/>(<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  columnIndex, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  rowIndex, <link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>  shift, <link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>  shift)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Adds a cell to the selection.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="e8d78ccd-b079-7d8f-86b9-087b631c1d3a"/>(<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  columnIndex, <link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>  shift, <link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>  shift)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Adds a column to the selection.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="75032adf-08a3-6158-1d9a-df3cde70bb25"/>(<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  type, <link xlink:href="ef3d2310-dfdb-431e-8330-0d339049abff"/>  proc, <link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>  capture)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="044fcb55-0c5f-d88f-619c-455ffb8b2600"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Attach a procedure to an event.  Usage grid.addEventListener('cellmousedown',function(e,grid,element,row,column,selection,data,header){/*your procedure code},false)
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="ea0aca5a-7ad9-b485-a90f-24f6058d772a"/>()
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Add the find results to the selection.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="206d4fca-4f52-2f5b-4661-65608593a2bf"/>(<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  rowIndex, <link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>  shift, <link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>  shift)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Adds row to the selection.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="06446ffa-1d1f-7c31-c36e-b60f127fcbad"/>(<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  columnIndex, <link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  operator, <link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  value, <link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  value2, <link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  group, <link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  linkOperator)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Adds a search filter to the grid.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="5fb5f3c7-7b05-5a04-d78f-45130964233b"/>(<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  startWithRowSelected)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Creates a dialog that the user can select their choice of aggregate functions against a column they select or one you predefine.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="ba62aee6-e6dd-d7a6-105a-6f3942f795d8"/>(<link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  node)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Appends the grid to a DHTML object.  This is used to append the grid after initilization or move the grid from one element to another.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="67a67edf-eb8d-0fbd-7aad-ebbdb2112e83"/>()
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										If the selection arrays have changed, use this function to update the appearance of the grid.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="d5e5ca2e-f09f-c794-f670-a9f6a8fb50fa"/>(<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  rowIndex)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Used interally to apply the selection style.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="204a7859-d46f-1782-73a5-6312c3b820b5"/>()
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Updates all DHTML elements.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="6547a9e2-d0ee-38c5-e2fc-244c9592c493"/>(<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  headerIndex, <link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  aggregateFunctionName, <link xlink:href="ef3d2310-dfdb-431e-8330-0d339049abff"/>  callbackProcedure)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Get an aggregate calculation and place it into the aggregate row at the bottom of the rowset.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="c6e2c322-f5bc-47ac-f208-d240d7d182c0"/>()
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Clears the search filters loaded into this grid.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="8a4ebeed-27a4-2874-6a96-83f4ca4f7db0"/>(<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  rowIndex)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Click on a row.  This will fire any events associated with clicking on a row and select the row as if someone had clicked on it.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="bba50328-fbc8-45e5-930e-3777bd980fe0"/>()
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Deletes the selected rows.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="f6c60ffe-d42c-7ea6-14f6-c8b9e2517d92"/>()
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Downloads all records.  If the number of records meets or exceeds manyRecordsThreshold a message will be displayed and a progress meter will appear with a cancel button.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="96d40009-ead7-7380-6e6c-3bbeafac11da"/>(<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  from, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  to, <link xlink:href="ef3d2310-dfdb-431e-8330-0d339049abff"/>  callbackProcedure, <link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>  async)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Download a range of records.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="ad027999-a528-53f2-9c40-5c4eab1985c9"/>(<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>  abort, <link xlink:href="ef3d2310-dfdb-431e-8330-0d339049abff"/>  callbackprocedure, <link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>  overwrite)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										End the edit procedure and commit changes to the recordset.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="5a3e599b-ec80-d686-c8e5-0056eab92a90"/>(<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>  next)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Finds the next or the previous search result and selects the row.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="a0fb36d7-ce22-ddd5-b3fd-01a973fc0e0b"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  rowIndex, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  Formparams, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  newRecordRowData)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Creates a generic editor to edit a row using the genericEditor class.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="3dbc6cb0-0fb9-d449-5698-1822d4349a5b"/>(<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  columnName, <link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  The, <link xlink:href="ef3d2310-dfdb-431e-8330-0d339049abff"/>  callbackProcedure)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Get the result of an aggregate function on a particualr column from the SQL database and return it to the aggregate row.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="95b9c5e6-98b7-9c6b-7449-24f30d71fefa"/>(<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  columnIndex)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Gets a column as an array of DHTML elements.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="5bd09137-b958-201a-9166-b18483797f30"/>()
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Gets a list of the column names in a array.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="72cd0c7f-cb1e-8e07-48bf-6b90d5902c28"/>()
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Gets all the data in the local record cache.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="0b825f02-7525-b5fd-db84-65669829b74d"/>(<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  ordinal)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Gets one of the header (column) objects by its order number (used defined column order).
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="79296467-cc45-0ec0-fb03-f1d5de9f9b3f"/>(<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  ordinal)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Gets one of the header (column) objects by its index number.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="25834b9e-6c47-2bb3-b2fe-d5fea0b59ba5"/>(<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  name)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Gets a header object by its column name.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="285aa683-583f-caf9-0309-3581bb19114d"/>()
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Gets the header that is defined as the primary key.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="84a375b8-7007-2f33-25be-2000655b99e6"/>(<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  rowIndex, <link xlink:href="0c7e7de5-e5cc-8e47-144b-f225672aefc7"/>  columnIndex)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="e9f830f9-393a-b713-63ef-237cfc61afa1"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Synchronously fetches a row or a cell from the rowset data.  GetRecord will first try and fetch the value using the local record cache, if the data is missing a synchronous request will be made.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="9fe537c4-ca0f-9225-5c45-f42f8ba90b11"/>(<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  primaryKey)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="e9f830f9-393a-b713-63ef-237cfc61afa1"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Finds a record based on the tables primary key.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="7ac40946-ea97-3090-667a-4b20a4bc3b87"/>()
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Gets the highest and lowest number in the selection.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="4bee0572-78ac-35ae-0c7a-8bcb0993a36e"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  rowIndex)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Goto a row and select it.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="9e284b37-6eb4-37e2-cf46-d8f9c3f43b8e"/>()
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Initializes the grid.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="78183e29-c01e-7e3d-2728-97096ca1a3e5"/>()
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Inverts the selection.  All that is selected becomes unselected and all that isn't selected becomes selected.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="d031e547-0d14-e4c8-c399-4b7b37727c62"/>(<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  cellIndex)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Checks if a cell is in the selection.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="9a036cf7-9407-b851-2acb-b307fd872269"/>(<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  columnIndex)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Checks if a column is in the selection.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="81296754-bd42-2110-9a0c-74386d0807e6"/>(<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  rowIndex)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Checks if a row is in the selection.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="872ec930-50a0-c900-2a25-5336640c0820"/>()
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Creates a dialog that allows the user to output selected grid data to a file.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="9622915a-d218-9245-c279-c195d11d4306"/>()
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="044fcb55-0c5f-d88f-619c-455ffb8b2600"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Prevent the default event from occuring.  For use within an event handler.  For example, when used in within a function subscribed to the editfinish event, running grid.preventDefault() will prevent the grid from updating the recordset.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="d462767f-5d4c-b5da-0907-ff7c743212ca"/>(<link xlink:href="ef3d2310-dfdb-431e-8330-0d339049abff"/>  callbackProcedure)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Redraws the grid firing all related events and recreating or updating DHTML elements.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="d225ea7a-f3b2-0d71-a5be-c9cb8b5afbd7"/>(<link xlink:href="ef3d2310-dfdb-431e-8330-0d339049abff"/>  callbackProcedure)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Refresh the data and schema information from the remote recordset.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="e75e4be3-656c-72d8-9b0f-bd024b5a9f78"/>(<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  cellIndex)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Removes a cell from the selection.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="7289e6ad-b9f2-4c69-c866-07caebab494e"/>(<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  columnIndex)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Removes a column from the selection.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="0d74c329-d757-5007-c905-5f9f2866ac3e"/>(<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  type, <link xlink:href="ef3d2310-dfdb-431e-8330-0d339049abff"/>  proc, <link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>  capture)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="044fcb55-0c5f-d88f-619c-455ffb8b2600"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Removes an event from subscription list.  The [proc] must match exactly the [proc] subscribed with.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="edf82a8b-1e22-2b13-f669-94e49194ec6e"/>()
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Removes any previous cell selections.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="54651597-71d6-9589-1a3e-ab4b613b392a"/>()
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Removes any previous column selections.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="65b77e7c-29ac-554c-261a-f2875947cd70"/>()
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Removes any previous column selections.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="9ff37dc0-5656-b9a9-a2d9-49a9770d525f"/>(<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  rowIndex)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Removes a row from the selection.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="f2fdfbdc-4086-6962-dbe7-0378b586b2e2"/>()
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Remove the selection.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="0538e0aa-3602-a7ff-b244-8b54c0c4ac07"/>()
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Redraw the grid, reapply the style.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="0c068dde-aa78-3b5e-ad09-baf35829f0f5"/>()
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Starts the search defined in the search filters.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="9ac08ad0-0449-ab39-625b-579b92b2c9d0"/>(<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  startWithRowSelected)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Creates a dialog the user can use to search for row data.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="00b397d9-df2e-50b0-28cd-dcb6993e8466"/>()
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Selects all rows and columns.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="640047db-0265-1b54-e809-8e2b30187b99"/>(<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>  singleRowOnly)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Returns the row data from the selected elements as a two dimentional array of data. If the row data is not loaded a synchronous request is made to load the data before the return.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="ecb2fc9b-7a1e-9239-20c5-32f0da5df924"/>(<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>  singleRowOnly)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Returns the select row data as DHTML elements.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="f39df6ac-b471-e780-39e1-fc723faa42e8"/>()
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Returns true if there is a selection.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="7888cff3-e869-44c8-c498-8e946df6d7ef"/>()
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Returns the load state of a row.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="bfad4d45-483a-f89d-c4c3-0ed5ef9226bd"/>(<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  visibility, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  columnIndex)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Sets the visibiliy of a column.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="4d998e9f-23c6-aa74-d9d2-ac1829090117"/>(<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  columnIndex, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  direction)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Set the order by property of the grid.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="729b620c-8491-3619-74b1-1c8a54d92cb0"/>(<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  from, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  to)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Synchronously download a range of records.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="3b8dfbc4-e1c4-337c-6c27-945fbc05645d"/>(<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>  singleRowOnly, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  rowIndex)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Synchronously download the selected records.
+									</para>
+								</entry>
+							</row>
+						
+					</table>
+				</content>
+			</section>
+		
+	<!-- ============================== events ========================= -->
+		
+			<section address="events">
+				<title>Events</title>
+				<content>
+					<table>
+						<tableHeader>
+						<row>
+							<entry><para> </para></entry>
+							<entry><para>Name</para></entry>
+							<entry><para>Description</para></entry>
+						</row>
+						</tableHeader>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="3758dfec-ca45-3040-09c9-ab86b7244278"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  element, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  row, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  column, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  selection, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  data, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  header)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs after inline editing begins.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="06c9b607-bfcf-c560-aa8a-e488ec77f3d2"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  JSON)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs before the row is loaded into the DOM after data is read in.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="ab6b0750-68ae-59de-a38a-f64b630ed93e"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  element, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  row, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  column, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  selection, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  data, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  header)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs after the search is complete.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="55fa23ca-7f30-64e8-b34e-b9b8a6ff89f7"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs before the grid is initalized.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="60baf550-5ae2-d39b-2aeb-fa0503be630d"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  element, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  row, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  column, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  selection, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  data, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  header)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs before the selection has changed.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="ebbec742-7a8d-fd38-4806-700e8bbb7589"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  element, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  row, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  column, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  selection, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  data, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  header)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when the mouse clicks on a cell in the rowset.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="c0370ec3-7fec-babf-6f8e-fb6a1772bdd3"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  element, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  row, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  column, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  selection, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  data, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  header)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when a context menu is called on a cell.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="dd7e8ba9-dff9-7bea-08c3-a2d4c4bbc720"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  element, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  row, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  column, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  selection, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  data, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  header)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when the mouse double clicks on a cell in the rowset.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="2e27b4de-142d-0282-921a-7c9dc28b88fb"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  element, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  row, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  column, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  selection, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  data, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  header)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when a mouse button is depresed on a cell in the rowset.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="bb486949-9e4b-7c01-b116-1e926f9a26be"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  element, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  row, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  column, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  selection, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  data, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  header)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when the mouse moves while in a cell in the rowset.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="98e72699-c42d-6869-b7c2-8472e73d7aca"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  element, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  row, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  column, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  selection, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  data, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  header)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when the mouse moves out of a cell in the rowset.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="84ac7f9c-9abe-0df9-00d1-7ff8b95f614e"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  element, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  row, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  column, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  selection, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  data, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  header)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when the mouse moves over a cell in the rowset.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="83c6e4fa-b21b-71f5-bbb1-895cf2f60b56"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  element, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  row, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  column, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  selection, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  data, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  header)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when a mouse button is released on a cell in the rowset.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="cd346e4b-7d13-ee14-7be0-ea2c5b987cdc"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  element, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  data, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  header)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when each cell is stylized giving you a chance to change the appeance of the cell.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="1f0aeccb-3081-d5de-28da-f6c8b6d06e28"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  element, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  row, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  column, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  selection, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  data, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  header)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when a row is deleted.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="340b46ea-75ea-c3bf-47a2-fb50f567c228"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  element, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  row, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  column, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  selection, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  data, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  header)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs after a row is deleted.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="75dd5ca5-715a-7b89-d9f0-93b0fa76f57c"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  element, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  row, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  column, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  selection, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  data, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  header)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs before a row is deleted.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="f347d05d-5521-f7a1-3928-e0f790678162"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  element, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  row, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  column, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  selection, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  data, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  header)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when the detail pane is being redrawn.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="339e6bd3-e033-08f5-8aab-b842a977e5e7"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  element, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  row, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  column, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  selection, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  data, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  header)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs whent the DOM is being redrawn from local data.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="f5f4715b-5062-40e0-3e87-8776274f97d8"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  element, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  row, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  column, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  selection, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  data, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  header)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs the a mouse button is clicked in an inline editor cell.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="c6ed3ef1-c3ac-ffff-ff9e-a8c524a17b70"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  element, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  row, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  column, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  selection, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  data, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  header)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs the a context menu is called on an editor cell.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="fff43c78-d775-b9f0-9c3d-91aa6782b1c3"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  element, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  row, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  column, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  selection, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  data, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  header)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs the a mouse button is double clicked in an inline editor cell.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="0d6e0c2a-3d04-8d2c-39ba-59cf79e54aee"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  element, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  row, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  column, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  selection, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  data, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  header)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when the inline editor values are commited.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="66a323cc-c27c-ee8a-c15f-84a594b6a197"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  element, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  row, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  column, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  selection, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  data, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  header)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when a key is depressed in an inline edit cell.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="356cc193-c0a3-230d-02a8-d636ac567faf"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  element, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  row, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  column, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  selection, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  data, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  header)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when a key is pressed in an inline edit cell.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="c05d29d7-4ee9-f950-73a9-69f2baf57a90"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  element, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  row, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  column, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  selection, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  data, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  header)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when a key is released in an inline edit cell.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="88638042-4997-cd4b-3a51-656f295f5d7f"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  element, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  row, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  column, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  selection, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  data, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  header)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs the a mouse button is depressed in an inline editor cell.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="22355cae-ecd3-fc02-9587-c909fd79722b"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  element, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  row, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  column, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  selection, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  data, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  header)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs the a mouse moves within an inline editor cell.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="b8d482aa-aed3-533d-be74-764fa59e861b"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  element, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  row, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  column, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  selection, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  data, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  header)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs the a mouse moves out of an inline editor cell.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="a959633c-6104-f501-918c-9427c198c0ff"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  element, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  row, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  column, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  selection, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  data, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  header)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs the a mouse moves over an inline editor cell.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="00274e7d-d4a9-f081-2c7c-f99067f40a41"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  element, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  row, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  column, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  selection, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  data, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  header)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs the a mouse button is released in an inline editor cell.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="06f67d86-f9dd-5227-a40b-7eb874a1da1b"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  element, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  row, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  column, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  selection, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  data, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  header)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs before inline editing begins.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="40f7c4d6-eedf-ddba-f7dc-aaf3bf4cdc9a"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  element, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  row, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  column, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  selection, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  data, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  header)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when a mouse button is clicked on a header cell.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="d04bdad3-acdf-76eb-f4a4-47772e8f8022"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  element, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  row, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  column, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  selection, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  data, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  header)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when a context menu is called on a header.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="2ac2692c-eeee-b388-bc20-19d0011b0ffa"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  element, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  row, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  column, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  selection, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  data, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  header)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when a mouse button is double clicked on a header cell.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="623695ea-4f07-eb1a-59a0-2bccfd6cd7fc"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  element, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  row, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  column, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  selection, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  data, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  header)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when a mouse button is depresed on a header cell.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="eeff25a9-2491-6756-f521-8bb4aed3d945"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  element, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  row, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  column, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  selection, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  data, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  header)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when the mouse moves within a header cell.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="c3664e33-995c-f7f1-1e0c-fcc94c3fd2ab"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  element, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  row, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  column, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  selection, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  data, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  header)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when the mouse moves out of a header cell.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="4e0a7bb6-07be-cd0f-92ee-f3f568b585f4"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  element, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  row, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  column, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  selection, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  data, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  header)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when the mouse moves over a header cell.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="80455fcd-0c82-295b-0c6e-600b13d26ff9"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  element, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  row, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  column, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  selection, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  data, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  header)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when a mouse button is released on a header cell.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="5bc36e75-459b-f387-aaef-620251d75893"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  element, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  row, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  column, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  selection, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  data, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  header)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs the grid is initalized.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="d9021528-01ab-40dc-8d0e-8a980368514c"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  element, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  row, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  column, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  selection, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  data, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  header)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when a row is inserted.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="50e8e1ab-8ccc-838d-4be9-21b764e8d7c6"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  element, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  row, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  column, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  selection, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  data, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  header)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs after a row is inserted.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="8ee39192-b5be-f346-15c0-d56587ad4693"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  element, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  row, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  column, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  selection, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  data, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  header)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs before a row is inserted.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="392c1787-54e5-2aac-ced4-d3dfcbe3a51f"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  element, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  row, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  column, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  selection, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  data, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  header)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs after the callback for data request.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="98baa8d8-6619-500b-9ed3-bd47d2e007d5"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  element, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  row, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  column, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  selection, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  data, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  header)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when the data is being submitted to the rowset provider.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="e48cd393-caba-ec0f-e987-5c578e1f9173"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  element, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  row, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  column, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  selection, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  data, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  header)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs the grid is being resized.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="bac26799-d8ee-9037-4760-46506a86802f"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  element, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  row, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  column, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  selection, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  data, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  header)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when a mouse button is clicked on a row in the rowset.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="272f750c-ea15-db86-edb3-8d2c2972e9b0"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  element, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  row, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  column, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  selection, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  data, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  header)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when a context menu is called on a row.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="5440080a-d0e3-fafc-2f3c-7e8813b3f81a"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  element, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  row, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  column, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  selection, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  data, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  header)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when a mouse button is double clicked on a row in the rowset.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="0d9042a9-5834-0a00-a4da-655f6cfa24c6"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  element, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  row, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  column, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  selection, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  data, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  header)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs after the row is loaded into the DOM after data is read in.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="55a46427-b55a-ee42-9c2b-545f694ccc5d"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  element, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  row, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  column, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  selection, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  data, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  header)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when a mouse button is depresed on a row in the rowset.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="858bd325-27c1-c5ee-39db-612afe39bf1d"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  element, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  row, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  column, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  selection, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  data, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  header)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when the mouse moves within a row in the rowset.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="3c80b465-dc63-5ccf-22cf-97ef83fdc801"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  element, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  row, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  column, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  selection, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  data, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  header)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when the mouse moves out of a row in the rowset.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="50f208cc-d3a2-4ee7-7e18-bf792d2026ae"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  element, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  row, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  column, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  selection, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  data, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  header)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when the mouse moves over a row in the rowset.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="6dcb90b0-2f59-4b69-527c-428696cbbbaa"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  element, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  row, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  column, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  selection, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  data, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  header)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when a mouse button is released on a row in the rowset.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="d860215b-a1cc-461b-aad0-86e0783ded4f"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  element, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  data, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  header)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when each row is stylized giving you a chance to change the appeance of the row.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="d795a90a-b9f5-fdd9-bd2d-90a34dbf64a6"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  element, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  row, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  column, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  selection, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  data, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  header)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs the grid is scrolling.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="28385343-a5d6-237c-8e17-66754bd909b9"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  element, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  row, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  column, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  selection, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  data, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  header)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when the selection has changed.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="fbcaaf53-496d-c44a-c61a-8c30a39e017f"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  element, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  data, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  header)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when each selected row is stylized giving you a chance to change the appeance of the row.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="0a1533b8-586e-b7d0-ce0b-66ef6283816d"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  element, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  row, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  column, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  selection, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  data, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  header)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when a mouse button is clicked anywhere on the grid.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="583e2761-1030-e540-979f-41c3b74feadd"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  element, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  row, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  column, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  selection, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  data, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  header)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when a context menu is called anywhere on the grid.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="302fdf3f-5a64-e027-e638-0e520af4fdad"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  element, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  row, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  column, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  selection, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  data, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  header)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when a mouse button is double clicked anywhere on the grid.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="a2a4844a-1960-d9f0-3e6b-3b5ad4419f7c"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  element, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  row, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  column, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  selection, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  data, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  header)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when a mouse button is depressed anywhere on the grid.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="c3b07d8f-0c76-b63d-b59b-cdc5150d0676"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  element, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  row, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  column, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  selection, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  data, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  header)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when the mouse moves within the grid.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="fcd1768e-88ed-9055-f4f0-95a22ae68193"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  element, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  row, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  column, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  selection, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  data, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  header)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when the mouse moves out of the grid.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="ed382e73-d205-309e-8799-8296eb525318"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  element, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  row, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  column, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  selection, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  data, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  header)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when the mouse moves out of a header cell.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="0e101c6a-895c-574d-a75a-8e32016767e4"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  element, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  row, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  column, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  selection, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  data, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  header)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when a mouse button is released anywhere on the grid.
+									</para>
+								</entry>
+							</row>
+						
+					</table>
+					<alert class="tip">
+						<para>There are two ways to add event listeners.</para>
+					</alert>
+					<para>
+						1. You can attach to events as a parameter when you create the object.
+						<code language="javascript">
+							var foo = new object({
+								event:function(signature){
+									/* event procedure */
+								}
+							});
+						</code>
+						2. Or you can add the event after the object has been instantiated.
+						<code language="javascript">
+							var foo = new object();
+							foo.addEventListener('event',function(signature){
+								/* event procedure */
+							}, false);
+						</code>
+					</para>
+				</content>
+			</section>
+		
+	</developerConceptualDocument>
+</topic>

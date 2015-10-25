@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="d3c829cd-215d-430a-a9ae-bfeab6458ba1" revisionNumber="1">
+  <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <introduction>
+      <para>Plugins allow you to create your own libraries that get loaded
+      into Rendition when the site starts up.  This topic will
+      show you how to create a simple plugin that attaches to the update
+      cart even and a simple plugin that implements a timer event.
+      </para>
+      <para>
+
+<alert class="note">
+  <para>      	A full list of events can be found int the Rendition Namespace topic
+      	Rendition.Site.Events.</para>
+</alert>
+
+      </para>
+        <para>
+      	A plugin must be a library that contains a class that
+      	implements the virtual class Rendition.Plugin.  The compiled library
+      	(a .dll file) must then be placed in the plugins directory 
+      	( default: /plugins ).
+      </para>
+      <para>
+      
+      To get started:
+<list class="ordered">
+  <listItem>Create a new .NET Library.</listItem>
+  <listItem>Add a reference to Rendition.dll.</listItem>
+  <listItem>add the text ": Plugin " to the end of your
+      class name to inherit the Rendition.Plugin virtual class.
+      </listItem>
+  <listItem>When you're done, add your compiled dll to the /plugins directory.</listItem>
+  <listItem>Restart the site to load new plugins.  </listItem>
+</list>
+	  
+<alert class="note">
+  <para>The site can be restarted
+  via the Site Configuration application in the administrative tools page
+  or by restarting the worker process on the IIS server.</para>
+</alert>
+
+<alert class="note">
+  <para>If you're unsure how to do this check the examples below.</para>
+</alert>
+
+      </para>
+    </introduction>
+    <section address="example1">
+      <title>Cart Discount Plugin</title>
+      <content>
+        <para>
+        	Upon instantiation this plugin subscribes to the 
+            Site.CalculatingDiscount event.  It checks the session's
+            properties for a key called "discountCode" and matches that
+            to a discount code in Site.Discounts.
+        	<code lang="csharp">
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using Rendition;
+namespace Rendition.standardPlugins.discountCodes {
+	public class discountCodes:Plugin {
+		public discountCodes() {
+			Site.CurrentSite.CalculatingDiscount+=new EventHandler(site_oncalculatediscount);
+		}
+		public void site_oncalculatediscount(object sender, EventArgs e){
+            CalculateDiscountEventArgs args = (CalculateDiscountEventArgs)e;
+			string discountCode = &quot;&quot;;
+			decimal discountAmount = 0;
+			if(args.Session.Properties.ContainsKey(&quot;discountCode&quot;)){
+				discountCode = (string)args.Session.GetProperty(&quot;discountCode&quot;);
+				Commerce.Discount discount = Commerce.Discount.All.Find(delegate(Commerce.Discount d){
+					return d.Code.MaxLength(25,true,true) == discountCode.MaxLength(25,true,true);
+				});
+				if(discount!=null){
+					discountAmount = args.Cart.SubTotal * decimal.Parse(discount.Percent.ToString());
+				}
+			}
+			if( discountAmount != 0) {
+				args.Discount = decimal.Round(discountAmount,2,MidpointRounding.ToEven);
+			}
+			return;
+		}
+	}
+}
+        	</code>
+        </para>
+      </content>
+    </section>
+    
+	<section address="example2">
+      <title>Timed Event</title>
+      <content>
+        <para>Upon instantiation this function creates a timer that elapses
+        every 30 seconds and resets itself to run again.  It checks a directory
+        for image files or directories that match an item number in the system.
+        When it finds an image it adds it to the given item.
+        <code lang="csharp">
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using Rendition;
+using System.IO;
+using System.Web;
+namespace Rendition.standardPlugins.imageImport {
+	public class imageImport:Plugin {
+		private static int interval = 30000;
+		private static string importDirectory=Rendition.Admin.GetApplicationPath()+&quot;import\\items\\img\\&quot;;
+		private static string importRepository=importDirectory+&quot;repository\\&quot;;
+		private static string importErrors=importDirectory+&quot;errors\\&quot;;
+		public imageImport(){
+			Admin.Timer importItemImages = new Admin.Timer();
+			importItemImages.Name = &quot;Auto Image Import&quot;;
+			importItemImages.Interval = interval;
+			importItemImages.elapsed+=new EventHandler(importItemImages_elapsed);
+			importItemImages.AutoReset=false;
+			importItemImages.Start();
+			this.Message=&quot;Loaded&quot;;
+		}
+		void importImage(string itemNumber, string pathToFileToImport){
+			string fileName = Path.GetFileName( pathToFileToImport );
+			Dictionary&lt;string, object&gt; j = Admin.AddItemImage( itemNumber, pathToFileToImport );
+			if( ( int )j[ &quot;error&quot; ] != 0 ) {
+				Error = 2;
+				( &quot;Auto import item image error -&gt; &quot; + fileName + &quot; - &quot; + ( string )j[ &quot;desc&quot; ] ).Debug( 3 );
+			} else {
+				( &quot;Auto import item imported -&gt; &quot; + fileName ).Debug( 3 );
+			}
+		}
+		void importDirectoryImages(string directoryPath, Admin.Timer t){
+			string[] files = Directory.GetFiles( importDirectory );
+			string[] dirs = Directory.GetDirectories( importDirectory );
+			foreach( string dir in dirs ) {
+				if( dir.ToLower().EndsWith( &quot;\\repository&quot; ) || dir.ToLower().EndsWith( &quot;\\error&quot; ) ) { continue; };
+				foreach(Commerce.Item item in Main.Site.Items.List){
+					/* if the directory is the same as the 
+					 * item number then import all images in the directory */
+					if( dir.EndsWith( &quot;\\&quot; + item.Number.ToLower().Trim() ) ) {
+						string[] innerFiles = Directory.GetFiles( dir );
+						foreach(string f in innerFiles){
+							/* import all image files in this directory becuase 
+							 * the directory name matched the item number */
+							importImage( item.Number, f );
+							/* move the file to the Repository (make sure the target directory exists first */
+							string repTarget = importRepository + item.Number;
+							if( !Directory.Exists( repTarget ) ) {
+								Directory.CreateDirectory( repTarget );
+							}
+							File.Move(
+								Path.Combine( dir, Path.GetFileName( f ) ),
+								Path.Combine( repTarget, Path.GetFileName( f ) )
+							);
+						}
+					}
+				}
+				if( Directory.GetDirectories(dir).Length == 0 ) {
+					Directory.Delete( dir );
+				}
+			}
+			foreach(string file in files){
+				int error = 0;
+				bool itemExists = false;
+				string importItemNo = Path.GetFileNameWithoutExtension( file );
+				foreach(Commerce.Item item in Main.Site.Items.List){
+					/* import image file if any part 
+					 * of the file contains the item number */
+					if(importItemNo.ToLower().Trim().Contains(item.Number.ToLower().Trim())) {
+						importImage(item.Number,file);
+					}
+					/* move the file to the 
+					 * Repository even if it doesn't match */
+					File.Move(
+						Path.Combine( importDirectory, Path.GetFileName( file ) ),
+						Path.Combine( importRepository, Path.GetFileName( file ) )
+					);
+				}
+				if(!Directory.Exists(importErrors)) {
+					Directory.CreateDirectory(importErrors);
+				}
+				
+				if(itemExists) {
+					/* matches an item */
+					
+				}else{
+					error = 3;
+					(&quot;Could not match this file to an item number (case does not matter) -&gt; &quot;+file).Debug(3);
+				}
+				if(error!=0){
+					if(!Directory.Exists(importErrors)) {
+						Directory.CreateDirectory(importErrors);
+					}
+					File.Move(
+						Path.Combine(importRepository,Path.GetFileName(file)),
+						Path.Combine(importErrors,Path.GetFileName(file))
+					);
+					t.Message=&quot;Importing Images:&quot;+file;
+				}
+			}
+		}
+		void importItemImages_elapsed(object sender,EventArgs e) {
+			Admin.Timer t=(Admin.Timer)sender;
+			if(!Directory.Exists(importDirectory)) {
+				Directory.CreateDirectory(importDirectory);
+			}
+			if(!Directory.Exists(importRepository)) {
+				Directory.CreateDirectory(importRepository);
+			}
+			bool error = false;
+			string errorMessage = &quot;&quot;;
+			try{
+				/* import files in the root that contain a part of the item number */
+				importDirectoryImages(importDirectory,t);
+				/* import files in directories matching item numbers exactly */
+				string[] directories = Directory.GetDirectories(importDirectory);
+				foreach(string directory in directories){
+					foreach(Commerce.Item item in Main.Site.Items.List){
+						if(directory.ToLower().Trim() == item.Number.ToLower().Trim()) {
+							importDirectoryImages(directory,t);
+						}
+					}
+				}
+			}catch(Exception ex){
+				error = true;
+				errorMessage = ex.Message;
+			}
+			if(error){
+				errorMessage.Debug(0);
+			}
+
+			t.Message=&quot;Idle&quot;;
+			t.Start();
+		}
+	}
+}
+
+        </code>
+        </para>
+      </content>
+    </section>
+	    
+	    
+    <relatedTopics>
+      <codeEntityReference>T:Rendition.Site</codeEntityReference>
+    </relatedTopics>
+  </developerConceptualDocument>
+</topic>

@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="f02c4833-b783-30e1-cee1-de90551edb1e" revisionNumber="1" dataAlias="Rendition.Commerce">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		
+		<definitionTable>
+			
+				<definedTerm>
+					<para>Member Of</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="6aa67830-fc7a-c3eb-719a-722fb4fb312e"/>
+					</para>
+				</definition>
+			
+		</definitionTable>
+		
+			<section address="fields">
+				<title>Rendition.Commerce Properties</title>
+				<content>
+					<table>
+						<tableHeader>
+							<row>
+								<entry><para> </para></entry>
+								<entry><para>Type</para></entry>
+								<entry><para>Name</para></entry>
+								<entry><para>Description</para></entry>
+							</row>
+						</tableHeader>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="d5d99a1c-7db5-bca5-fb83-ec71386b4ab7"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Procedures (functions) to execute when the item editor program starts. Function arguments: AccountEditor
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="d552a80f-dcf2-034f-d976-c84cd7237093"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Menus to add to the account editor program.  Should be an array of {Native.Function}s that return {Rendition.UI.menuOption} elements.Function arguments: AccountEditor, Menus
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="f6290c61-87b5-958b-e6c1-08a39f27035d"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Tabs to add to the account editor program stats tab section.  Should be an array of {Native.Function}s that return {Rendition.UI.Tab}s.Function arguments: AccountEditor, Tabs
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="a027623e-a839-0220-53d6-7843cf08b896"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Tabs to add to the account editor program.  Should be an array of {Native.Function}s that return {Rendition.UI.Tab}s.Function arguments: AccountEditor, Tabs
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="efb4fd67-5b49-ff53-8cb7-5b264134025c"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Procedures (functions) to execute when the item editor program starts. Function arguments: ItemEditor
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="9f675aaa-01b5-d60c-6274-443748b2f0a7"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Menus to add to the item editor program.  Should be an array of {Native.Function}s that return {Rendition.UI.menuOption} elements.Function arguments: ItemEditor, Menus
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="e35ec6aa-eb27-b1d5-e789-4854060cf3f0"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Tabs to add to the item editor program.  Should be an array of {Native.Function}s that return {Rendition.UI.Tab}s. Function arguments: ItemEditor, Tabs
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="ef3d2310-dfdb-431e-8330-0d339049abff"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="5446ba95-4ad3-bb3a-deef-119d4a9ec36c"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Logs the user off.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="0eacf333-f75d-7f43-f40d-f3740710e2b4"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Procedures (functions) to execute when the item editor program starts. Function arguments: OrderEditor
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="2ef484a5-ac78-88a3-c123-5037b5e33216"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Menus to add to the order editor item section.  Should be an array of {Native.Function}s that return {Rendition.UI.menu} arguments.Function arguments: OrderEditor, ItemMenus
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="783a0bc8-24ac-2c32-a827-afe2c543a2bb"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Menus to add to the order editor program.  Should be an array of {Native.Function}s that return {Rendition.UI.menu} arguments.Function arguments: OrderEditor, Menus
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="895c38c4-f3b4-8df7-bbe8-bb84438764b3"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Tabs to add to the order editor program.  Should be an array of {Native.Function}s that return {Rendition.UI.Tab}s.Function arguments: OrderEditor, Tabs
+									</para>
+								</entry>
+							</row>
+						
+					</table>
+				</content>
+			</section>
+		
+
+	</developerConceptualDocument>
+</topic>

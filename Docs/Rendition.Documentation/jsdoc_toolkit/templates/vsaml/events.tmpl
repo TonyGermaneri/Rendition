@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="{!var AMLID = generateAMLIDHASH("ES"+data.alias); if(JSDOC.AMLIDS[AMLID]!==undefined){print('Conflict '+data.alias+' = '+JSDOC.AMLIDS[AMLID]+" => "+AMLID)}else{ JSDOC.AMLIDS[AMLID] = data.alias } output+=AMLID !}" revisionNumber="1" dataAlias="{+data.alias+}">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		{!
+			var classType = "";
+			if (data.isBuiltin()) {
+				classType += "Built-In ";
+			}
+			if (data.isNamespace) {
+				if (data.is('FUNCTION')) {
+					classType += "Function ";
+				}
+				classType += "Namespace ";
+			} else {
+				classType += "Class ";
+			}
+			var ownEvents = data.events.filter(function($){return $.memberOf == data.alias  && !$.isNamespace}).sort(makeSortby("name"));
+		!}
+		<definitionTable>
+			<if test="data.memberOf">
+				<definedTerm>
+					<para>Member Of</para>
+				</definedTerm>
+				<definition>
+					<para>
+						{+resolveLinks('<link xlink:href="'+data.memberOf+'"/>')+}
+					</para>
+				</definition>
+			</if>
+		</definitionTable>
+		<if test="defined(ownEvents) && ownEvents.length">
+			<section address="events">
+				<title>{+data.alias+} Events</title>
+				<content>
+					<table>
+						<tableHeader>
+						<row>
+							<entry><para> </para></entry>
+							<entry><para>Name</para></entry>
+							<entry><para>Description</para></entry>
+						</row>
+						</tableHeader>
+						<for each="member" in="ownEvents">
+							<row>
+								<entry>
+									<para>
+										<if test="member.isPrivate">
+											<mediaLinkInline><image xlink:href="privateevent"/></mediaLinkInline>
+										</if>
+										<if test="!member.isPrivate">
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										</if>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										{+resolveLinks('<link xlink:href="'+'E'+data.alias+'#'+member.name+'"/>')+}{+makeSignature(member.params)+}
+									</para>
+								</entry>
+								<entry>
+									<para>
+										{+resolveLinks(member.desc)+}
+									</para>
+								</entry>
+							</row>
+						</for>
+					</table>
+					<alert class="tip">
+						<para>There are two ways to add event listeners.</para>
+					</alert>
+					<para>
+						1. You can attach to events as a parameter when you create the object.
+						<code language="javascript">
+							var foo = new object({
+								event:function(signature){
+									/* event procedure */
+								}
+							});
+						</code>
+						2. Or you can add the event after the object has been instantiated.
+						<code language="javascript">
+							var foo = new object();
+							foo.addEventListener('event',function(signature){
+								/* event procedure */
+							}, false);
+						</code>
+					</para>
+				</content>
+			</section>
+		</if>
+	</developerConceptualDocument>
+</topic>

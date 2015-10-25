@@ -1,0 +1,2112 @@
+﻿<html xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+  <head>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8" />
+    <META NAME="save" CONTENT="history" />
+    <title>GridStyle</title>
+    <meta name="Language" content="en-us" />
+    <meta name="Microsoft.Help.Id" content="2508e2c4-ff9f-64fe-86b1-364162eaeba9" />
+    <meta name="Description" content="This class holds all grid styling. The default grid style is Rendition.UI.defaultGridStyle, an instance of this class. You can replace it by replacing this property with a new instance of this class or you can use $.extend to make a copy Rendition.UI." />
+    <meta name="Microsoft.Help.ContentType" content="Concepts" />
+    <link rel="stylesheet" type="text/css" href="../styles/Presentation.css" />
+    <link rel="stylesheet" type="text/css" href="ms-help://Hx/HxRuntime/HxLink.css" />
+    <script type="text/javascript" src="../scripts/EventUtilities.js"> </script>
+    <script type="text/javascript" src="../scripts/SplitScreen.js"> </script>
+    <script type="text/javascript" src="../scripts/Dropdown.js"> </script>
+    <script type="text/javascript" src="../scripts/script_manifold.js"> </script>
+    <script type="text/javascript" src="../scripts/script_feedBack.js"> </script>
+    <script type="text/javascript" src="../scripts/CheckboxMenu.js"> </script>
+    <script type="text/javascript" src="../scripts/CommonUtilities.js"> </script>
+    <xml>
+      <MSHelp:Keyword Index="A" Term="2508e2c4-ff9f-64fe-86b1-364162eaeba9" />
+      <MSHelp:Attr Name="RevisionNumber" Value="1" />
+      <MSHelp:Attr Name="AssetID" Value="2508e2c4-ff9f-64fe-86b1-364162eaeba9" />
+      <MSHelp:Attr Name="Abstract" Value="This class holds all grid styling. The default grid style is Rendition.UI.defaultGridStyle, an instance of this class. You can replace it by replacing this property with a new instance of this class or you can use $.extend to make a copy Rendition.UI ..." />
+      <MSHelp:Attr Name="TopicType" Value="kbArticle" />
+      <MSHelp:Attr Name="Locale" Value="en-us" />
+    </xml>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <input type="hidden" id="hiddenScrollOffset" />
+    <img id="collapseImage" style="display:none; height:0; width:0;" src="../icons/collapse_all.gif" alt="Collapse image" title="Collapse image" />
+    <img id="expandImage" style="display:none; height:0; width:0;" src="../icons/expand_all.gif" alt="Expand Image" title="Expand Image" />
+    <img id="collapseAllImage" style="display:none; height:0; width:0;" src="../icons/collapse_all.gif" />
+    <img id="expandAllImage" style="display:none; height:0; width:0;" src="../icons/expand_all.gif" />
+    <img id="dropDownImage" style="display:none; height:0; width:0;" src="../icons/dropdown.gif" />
+    <img id="dropDownHoverImage" style="display:none; height:0; width:0;" src="../icons/dropdownHover.gif" />
+    <img id="copyImage" style="display:none; height:0; width:0;" src="../icons/copycode.gif" alt="Copy image" title="Copy image" />
+    <img id="copyHoverImage" style="display:none; height:0; width:0;" src="../icons/copycodeHighlight.gif" alt="CopyHover image" title="CopyHover image" />
+    <div id="header">
+      <table id="topTable" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <span onclick="ExpandCollapseAll(toggleAllImage)" style="cursor:default;" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage, event)" tabindex="0">
+              <img ID="toggleAllImage" class="toggleAll" src="../icons/collapse_all.gif" /> <label id="collapseAllLabel" for="toggleAllImage" style="display: none;">Collapse All</label><label id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand All</label> </span>
+            <span>    </span>
+            <span id="devlangsDropdown" class="filter" tabindex="0">
+              <img id="devlangsDropdownImage" src="../icons/dropdown.gif" /> <label id="devlangsMenuAllLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: All </nobr></label><label id="devlangsMenuMultipleLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: Multiple </nobr></label><label id="devlangsMenuCSharpLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: C# </nobr></label><label id="devlangsMenuJavaScriptLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: JavaScript </nobr></label></span>
+          </td>
+        </tr>
+      </table>
+      <div id="devlangsMenu">
+        <input id="CSharpCheckbox" type="checkbox" data="CSharp,cs,'persist'" value="on" onClick="SetLanguage(this)" />
+        <label class="checkboxLabel" for="CSharpCheckbox">C#</label>
+        <br />
+        <input id="JavaScriptCheckbox" type="checkbox" data="JavaScript,cs,'persist'" value="on" onClick="SetLanguage(this)" />
+        <label class="checkboxLabel" for="JavaScriptCheckbox">JavaScript</label>
+        <br />
+      </div>
+      <table id="bottomTable" cellpadding="0" cellspacing="0">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">Rendition E-Commerce Framework</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">GridStyle</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td align="left">
+            <span id="headfeedbackarea" class="feedbackhead">
+              <a href="javascript:SubmitFeedback('tonygermaneri@gmail.com','Rendition E-Commerce Framework','','1.0.0.0','','%0\dYour%20feedback%20is%20used%20to%20improve%20the%20documentation%20and%20the%20product.%20Your%20e-mail%20address%20will%20not%20be%20used%20for%20any%20other%20purpose%20and%20is%20disposed%20of%20after%20the%20issue%20you%20report%20is%20resolved.%20%20While%20working%20to%20resolve%20the%20issue%20that%20you%20report,%20you%20may%20be%20contacted%20via%20e-mail%20to%20get%20further%20details%20or%20clarification%20on%20the%20feedback%20you%20sent.%20After%20the%20issue%20you%20report%20has%20been%20addressed,%20you%20may%20receive%20an%20e-mail%20to%20let%20you%20know%20that%20your%20feedback%20has%20been%20addressed.%0\A%0\d','Customer%20Feedback');">Send Feedback</a>
+            </span>
+          </td>
+        </tr>
+      </table>
+      <table id="gradientTable">
+        <tr>
+          <td class="nsrBottom" background="../icons/gradient.gif" />
+        </tr>
+      </table>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" />
+        <span style="color: DarkGray">
+          <p style="color: #dc143c; font-size: 8.5pt; font-weight: bold;">[This is preliminary documentation and is subject to change.]</p>
+        </span>
+        <a name="Intro"> </a>
+        <div class="introduction">
+			Class Rendition.UI.GridStyle
+			<p>This class holds all grid styling.  The default grid style is
+  Rendition.UI.defaultGridStyle, an instance of this class.
+  You can replace it by replacing this property with a 
+	new instance of this class <span sdata="link"><a href="2508e2c4-ff9f-64fe-86b1-364162eaeba9.htm">GridStyle</a></span> or 
+  you can use $.extend to make a copy Rendition.UI.defaultGridStyle 
+  and use it as a parameter in a single instance of <span sdata="link"><a href="f5f5d4d4-f415-cd77-8e8f-c01e6464006a.htm">Grid</a></span>.</p></div>
+        <p>
+          <dl class="authored">
+            <dt>
+              <p>Member Of</p>
+            </dt>
+            <dd>
+              <p>
+                <span sdata="link">
+                  <a href="ddee8d40-d92d-34d0-2be3-5f5d65f36f31.htm">UI</a>
+                </span>
+              </p>
+            </dd>
+            <dt>
+              <p>Source</p>
+            </dt>
+            <dd>
+              <p>
+							c:\Rendition\Rendition.Core\js\admin\UI\grid.js
+						</p>
+            </dd>
+          </dl>
+        </p>
+        <a name="fields"> </a>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(sectionToggleID0ECAAA)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(sectionToggleID0ECAAA, event)" tabindex="0">
+            <img id="sectionToggleID0ECAAA" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Properties</span>
+        </h1>
+        <div id="sectionSectionID0ECAAA" class="section" name="collapseableSection" style="">
+          <div class="tableSection">
+            <table width="50%" cellspacing="2" cellpadding="5" frame="lhs">
+              <tr>
+                <th>
+                  <p />
+                </th>
+                <th>
+                  <p>Name</p>
+                </th>
+                <th>
+                  <p>Type</p>
+                </th>
+                <th>
+                  <p>Description</p>
+                </th>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="fdd8675a-ee68-8ec4-25ed-12e93d05d3b5.htm">aggregateCellLoading</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The text that appears in the row header while the aggregate results load.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="f86863a8-d859-0bf2-334f-6ed50c3ce986.htm">aggregateRowTitle</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The text that appears in the row header for aggregate results.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="87848b06-c944-cf7d-e6b1-cb757cf8a825.htm">cellBackground</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										the CSS background property of the cells.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="e8217ae2-9e18-6768-8e2e-f0a097b20eb6.htm">cellBorder</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										the CSS border property of the cells.  
+<b>Note: borders must be 1px wide even if transparent.</b></p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="c144b065-1182-354a-eb8c-f065daed8e15.htm">cellFont</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										the CSS font property (text color) of the grid cells.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="8e5c40ca-3bf8-ffa7-ba66-b2548a9c2559.htm">cellFontColor</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										the CSS color property (text color) of the cells.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="b1ff3a9a-1155-b02b-47d8-545ff73c3dbe.htm">cellHoverBackground</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										the CSS background property of the cell when the user hovers over it.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="97918753-3c19-6f2e-593d-aa2eb5bf22f6.htm">cellHoverFontColor</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										the CSS color property (text color) of the cell when the user hovers over it.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="b9188d12-6af5-b29f-d253-23a0f9cb88e1.htm">cellPadding</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The padding within the cells.  <b>This is not CSS.</b>
+Looks like: { t: 0, r: 0, b: 0, l: 5 }.  Stands for top, right, bottom, left.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="3b6b66c8-d8fd-5cd9-810c-ea47c430c7c1.htm">cellRect</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The offset <span sdata="link"><a href="b6679c58-2336-61d4-273e-95bc23b9bfcb.htm">Rect</a></span> of each cell.  This changes the overall size 
+of the cell from its default.  Looks like: { x: 0, y: 0, h: 18, w: -2 }
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="b9b9771a-9e4d-b19e-b434-5bc2bd00cdf2.htm">cellSelectBackground</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										the CSS background property of the cell when the cell is selected.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="f2a793df-5b2e-5eb7-5a54-ce25e7acb181.htm">cellSelectFontColor</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										the CSS color property (text color) of the cells when selected.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="a305c733-082f-ff6c-3487-42fd67a840a0.htm">detailsPaneBackground</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The CSS background property of the deails pane.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="549b9723-5d47-ce56-5c34-42c0651e142b.htm">detailsPaneBorder</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The border of the details pane.  
+<b>Note: borders must be 1px wide even if transparent.</b></p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="2d7070a0-5ffa-c720-3ce2-5a2f1cc5ac98.htm">detailsPaneColor</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The CSS color property (text color) of the deails pane.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="22662d92-3890-396a-446f-19013d7810f7.htm">detailsPaneFont</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										the CSS font property (text color) of the details pane.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="5b470721-7e43-67c1-592c-53af0796f23b.htm">detailsPaneHeadingFont</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										the CSS font property (text color) of the heading of the details pane.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="bd42e8c3-e560-8c02-9534-dcd0e48f92ee.htm">detailsPaneRect</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The height and offset x, y and width of the deails pane as a <span sdata="link"><a href="b6679c58-2336-61d4-273e-95bc23b9bfcb.htm">Rect</a></span>.
+Looks like: { x: 0, y: 0, h: 75, w: 0 }.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="8bd23266-d6ce-f6ec-32eb-75f74a1fef1e.htm">editCellBackground</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The background of the cell while it is being edited. Standard CSS.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="95dc237c-55ea-ace9-fd58-d1f1f521b406.htm">editCellColor</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The CSS color property (text color) of the cell while it is being edited.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="a6caad09-78a3-d825-5b24-fffbe12dc0a0.htm">editCellFont</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The CSS font property of the edit input.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="e3fad9bb-0b8b-166a-b8c1-b926912a2639.htm">editingRecordBackground</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Background of the editing row while the row is being edited.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="2bc9682d-f6f7-12ce-8ccb-88e93ba014da.htm">gridBackground</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										CSS Background property of the scrolling area.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="355b2e87-1bb1-0572-461b-e7de499d1b6b.htm">gridRect</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The offset <span sdata="link"><a href="b6679c58-2336-61d4-273e-95bc23b9bfcb.htm">Rect</a></span> of the scrolling grid area within the viewport.
+Looks like: { x: 4, y: 0, h: 0, w: 0 }.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="05d6fda4-7bbb-efae-e925-84887d23a4ef.htm">headerBackground</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										CSS Background property header background.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="9e78db45-5b69-a09f-46ba-eaaea44a843e.htm">headerBorder</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The border of the header.  
+<b>Note: borders must be 1px wide even if transparent.</b></p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="f30efb99-fa0b-ea0e-5a78-2d71be5f6a7b.htm">headerCellAlignment</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										the CSS text-align property of the header cells.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="c5c50e5f-e0a6-8f60-5620-b8143331689c.htm">headerCellBackground</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										CSS Background property header background.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="ab75846e-f9d4-115a-4fb0-59bbd948d62a.htm">headerCellFont</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The CSS font property of the header cells.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="8908a1b1-1b0d-4ebd-1cc0-1ae05cff35a3.htm">headerCellFontColor</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The CSS color property (text color) of the header cells.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="959f0fd0-2352-ef52-5269-b5b7908795b7.htm">headerCellPadding</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The padding within the header cells.  <b>This is not CSS.</b>
+Looks like: { t: 0, r: 0, b: 0, l: 5 }.  Stands for top, right, bottom, left.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="653dd7e9-0230-df26-95a8-09af0a4ff837.htm">headerCellRect</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The offset <span sdata="link"><a href="b6679c58-2336-61d4-273e-95bc23b9bfcb.htm">Rect</a></span> of each header cell.  This changes the overall size 
+of the cell from its default.  Looks like: { x: 0, y: 0, h: 18, w: 2 }
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="a30658d0-92df-bfac-476e-24dfac76a2e5.htm">headerCellSelectBackground</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										the CSS background property of cells when selected.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="62a6d0e9-d9f7-0cae-e992-5be9dbe9470a.htm">headerCellSelectFontColor</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										the CSS color property (text color) of cells when selected.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="67df2304-e248-fadb-ec00-30cb650b5c23.htm">headerRect</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The offset <span sdata="link"><a href="b6679c58-2336-61d4-273e-95bc23b9bfcb.htm">Rect</a></span> of the entire header.  This changes the total size of the header 
+clip box from its default.  Looks like: { x: 0, y: 0, h: 18, w: 0 }
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="f23cc0bc-852d-c979-792f-0d278d73ed72.htm">id</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The unique id of this instance.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="fc048bfb-03d2-780e-f08a-fc11b66af77f.htm">insertrowBackground</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Background of the 'new' row at the bottom of the gird if the edit mode supports it.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="750677fc-ca6c-bcfd-468e-3309c74e277b.htm">newRowTitle</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The text that appears in the row header for the 'new' row.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="6d6abf82-c255-0720-6156-553d2ee77fe9.htm">orderArrowAlign</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The alignment of the 'order by' arrow.  Valid values are center, left, right.  This is not CSS.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="a0bff575-59e4-6952-4750-26556667b36b.htm">orderArrowAscBackground</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The CSS background property of the 'order by' arrow when the
+column is in ascending mode.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="405ccea6-2611-2cf0-a76c-b48306e140d5.htm">orderArrowDescBackground</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The CSS background property of the 'order by' arrow when the
+column is in descending mode.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="1eef9e3b-d56b-b1be-0990-f24744f06457.htm">orderArrowRect</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The size of the order by arrow as a <span sdata="link"><a href="b6679c58-2336-61d4-273e-95bc23b9bfcb.htm">Rect</a></span>.  Looks like: { x: 0, y: 9, h: 8, w: 8 }.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="faf3359c-34c1-4afa-8f6d-34b21a7145a3.htm">previewBackground</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										the CSS background property of the row preview bubble.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="4dce02e4-aff9-796a-67f8-dde64e62d71b.htm">previewBorder</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										the CSS border property of the row preview bubble.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="233f7ff8-6348-b0d2-c523-353cbad5c7a2.htm">previewFontColor</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										the CSS color property (text color) of the row preview bubble.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="24eea045-19fe-3831-b47b-eff04a91ad7c.htm">previewPaddingRect</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The padding within preview.  <b>This is not CSS.</b>
+Looks like: { t: 0, r: 0, b: 0, l: 5 }.  Stands for top, right, bottom, left.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="d005fe5b-ab43-b59a-6692-68cf0b0cd652.htm">previewRect</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The offset <span sdata="link"><a href="b6679c58-2336-61d4-273e-95bc23b9bfcb.htm">Rect</a></span> of the row preview bubble.
+Looks like: { x: 15, y: 0, h: 0, w: 0 }
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="991b2ccf-0d43-a226-f990-45ed32522b5d.htm">rect</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Offset <span sdata="link"><a href="b6679c58-2336-61d4-273e-95bc23b9bfcb.htm">Rect</a></span>.  The grid will be drawn offset by the values provided.
+Looks like { x: 0, y: 0, h: 0, w: 0 }.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="74c29e23-3326-bca3-daf8-3823a76bb80e.htm">rowHeaderBackground</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										the CSS background property of the row header (row count column).
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="35cf6666-7d69-8367-53f6-80ff499e0858.htm">rowHeaderBorder</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										the CSS border property of the row header (row count column).  
+<b>Note: borders must be 1px wide even if transparent.</b></p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="f8746a7d-7663-52b8-f9f6-5b5203113b2d.htm">rowHeaderFont</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										the CSS font property (text color) of the row header (row count column).
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="357c49f0-e2aa-bcf2-a871-79fcee76a5f0.htm">rowHeaderFontColor</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										the CSS color property (text color) of the row header (row count column).
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="0bcfec94-c9bc-a231-56de-7ddc96ddada2.htm">rowHeaderHoverBackground</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										the CSS background property of the row header (row count column)
+when the user hovers over the cell.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="57acfbec-5704-8924-9add-775acf2d3dbc.htm">rowHeaderHoverFontColor</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										the CSS color property (text color) of the row header (row count column)
+when the user hovers over the cell.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="eb2ed2da-e354-ef38-4de3-7765e47f949b.htm">rowHeaderRect</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The height and width of the header row (the row count column) as a <span sdata="link"><a href="b6679c58-2336-61d4-273e-95bc23b9bfcb.htm">Rect</a></span>.
+Looks like: { h: 18, w: 33 }.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="0edb5396-499a-20c9-a777-e606a28d404c.htm">rowHeaderSearchBackground</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										the CSS background property of the row headers of search results.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="09f2ef2d-9204-ca21-13db-ff9b356f498b.htm">rowHeaderSearchRowFontColor</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										the CSS color property (text color) of the row headers of search results.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="5d627d3f-0fd6-bab6-acff-c7041ae2662a.htm">rowHeaderSelectBackground</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										the CSS background property of the row header (row count column)
+when the row is selected.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="ee6e6bdc-df56-9870-22d9-340288e14b58.htm">rowHeaderSelectFontColor</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										the CSS color property (text color) of the row header (row count column)
+when the row is selected.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="dadc9075-46b3-29d2-fae4-5a66d4ddc74b.htm">rowHeaderTextAlign</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										the CSS text-align property of the row header (row count column).
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="3994e468-9698-94b7-d867-4c51fae8195b.htm">rowRect</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Height of the row as a <span sdata="link"><a href="b6679c58-2336-61d4-273e-95bc23b9bfcb.htm">Rect</a></span>.
+Looks like: { h: 18 }.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="c70fbc75-350d-844d-2022-c90437e4626f.htm">rowSelectedBackground</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										the CSS background property of the row when the row is selected.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="f5c95869-b809-6f00-f5f4-235ae9759645.htm">rowSelectedFontColor</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										the CSS color property (text color) of the row when the row is selected.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="5810a2cd-7653-b423-2b7d-933929069bd2.htm">scrollBarWidth</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The width allocated for the scrollbar.  This should be 17.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="fea3bbdc-d336-6f07-3377-4d90c250a04b.htm">searchBackground</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										the CSS background property of search result cells.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="87502a4c-b5cf-9f55-ea33-dec5894af671.htm">searchFontColor</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										the CSS color property (text color) of search result cells.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="2a2237d6-1e7f-0941-3816-855fd5065bd9.htm">type</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The type of widget.  Returns RenditionGridStyle.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="b2623b98-9908-370c-8b85-5c58dfc65792.htm">viewPortBackground</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The CSS background property of the viewport, the grid background.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="d2725f76-8a04-f942-682c-7537c92a000a.htm">viewPortBorder</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The border of the viewport.  
+<b>Note: borders must be 1px wide even if transparent.</b></p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div id="footer">
+        <div class="footerLine">
+          <img width="100%" height="3px" src="../icons/footer.gif" alt="Footer image" title="Footer image" />
+        </div>
+        <A NAME="feedback"></A>
+        <span id="fb" class="feedbackcss"></span>
+        <p />Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:tonygermaneri%40gmail.com?Subject=Rendition E-Commerce Framework">Tony Germaneri</a><script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        var HT_mailLinkText = HT_mailLink.innerHTML;
+        HT_mailLink.href += ": " + document.title;
+        HT_mailLink.innerHTML = HT_mailLinkText;
+        </script><p />Copyright © Tony Germaneri 2011</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Fields[
+  <!ELEMENT Fields ANY>
+  <!ELEMENT Field ANY>
+  <!ATTLIST Field Id ID #REQUIRED>
+  <!ATTLIST Field Title CDATA #REQUIRED>
+  <!ATTLIST Field Hidden CDATA #IMPLIED>
+  <!ATTLIST Field DefaultValue CDATA #IMPLIED>
+]>
+<Fields>
+  <Field Id="Grid_blogs_blogId" Title="blogId" Hidden="1" DefaultValue=""></Field>
+  <Field Id="Grid_blogs_subject" Title="Subject" Hidden="0" DefaultValue="">The subject of the blog.</Field>
+  <Field Id="Grid_blogs_message" Title="Message" Hidden="0" DefaultValue="">The body of the blog.</Field>
+  <Field Id="Grid_blogs_comments" Title="Comments" Hidden="0" DefaultValue="">The comments of the blog.</Field>
+  <Field Id="Grid_blogs_tags" Title="Tags" Hidden="0" DefaultValue="">Comma seperated list of the different key words associated with this blog entry.</Field>
+  <Field Id="Grid_blogs_editor" Title="Editor" Hidden="0" DefaultValue="">The person responsible for the content of the blog.</Field>
+  <Field Id="Grid_blogs_author" Title="Author" Hidden="0" DefaultValue="">The person who wrote the blog.</Field>
+  <Field Id="Grid_blogs_addDate" Title="Add Date" Hidden="0" DefaultValue="">The date this blog enty was added.</Field>
+  <Field Id="Grid_blogs_dateChanged" Title="Date Changed" Hidden="0" DefaultValue="">The date this blog entry was last modified.</Field>
+  <Field Id="Grid_blogs_lastEditor" Title="Last Editor" Hidden="0" DefaultValue="">The last person to edit this blog.</Field>
+  <Field Id="Grid_blogs_annotations" Title="Annotations" Hidden="0" DefaultValue="">The notes of this blog.</Field>
+  <Field Id="Grid_blogs_enabled" Title="Enabled" Hidden="0" DefaultValue="">When selected the blog will appear to the public.</Field>
+  <Field Id="Grid_blogs_auditComments" Title="Audit Comments" Hidden="0" DefaultValue="">When selected comments submitted by users will be audited by the author.</Field>
+  <Field Id="Grid_blogs_allowComments" Title="Allow Comments" Hidden="0" DefaultValue="">When selected the public will be allowed to selected.</Field>
+  <Field Id="Grid_blogs_emailUpdates" Title="Email Updates" Hidden="0" DefaultValue="">When selected, author will receive notification via email for comments added.</Field>
+  <Field Id="Grid_blogs_blogImage" Title="Blog Image" Hidden="0" DefaultValue="">This image appears next to the blog in a blog listing.</Field>
+  <Field Id="Grid_blogs_blogCategoryId" Title="blogCategoryId" Hidden="1" DefaultValue=""></Field>
+  <Field Id="Grid_blogs_publicBlog" Title="Public Blog" Hidden="0" DefaultValue="">When selected, this blog can be edited by anyone.</Field>
+  <Field Id="Grid_blogs_listOrder" Title="List Order" Hidden="0" DefaultValue="">The order in which the blogs appear.</Field>
+  <Field Id="Grid_blogs_archive" Title="Archive" Hidden="0" DefaultValue="">When selected, this blog will be placed in the archive. When in the archive, this blog will not show up in any listings.</Field>
+  <Field Id="Grid_blogs_galleryId" Title="galleryId" Hidden="1" DefaultValue=""></Field>
+  <Field Id="Grid_blogs_VerCol" Title="VerCol" Hidden="0" DefaultValue=""></Field>
+  <Field Id="Grid_blogCategories_blogCategoryId" Title="blogCategoryId" Hidden="1" DefaultValue=""></Field>
+  <Field Id="Grid_blogCategories_categoryName" Title="Category Name" Hidden="0" DefaultValue="">The name of the blog category.</Field>
+  <Field Id="Grid_blogCategories_publicCategory" Title="Public Category" Hidden="0" DefaultValue="">Whether or not the category is visible to the public.</Field>
+  <Field Id="Grid_blogCategories_author" Title="Author" Hidden="0" DefaultValue="">The author of the category.</Field>
+  <Field Id="Grid_blogCategories_showInTicker" Title="Show In Ticker" Hidden="0" DefaultValue="">The category shows up in front of a blog ticker.</Field>
+  <Field Id="Grid_blogCategories_blogPage" Title="Blog Page" Hidden="0" DefaultValue="">The page that this blog shows up on.</Field>
+  <Field Id="Grid_blogCategories_VerCol" Title="VerCol" Hidden="0" DefaultValue=""></Field>
+  <Field Id="Grid_replies_replyId" Title="replyId" Hidden="1" DefaultValue=""></Field>
+  <Field Id="Grid_replies_email" Title="Email" Hidden="0" DefaultValue="">Email of the user if they don't have an account on this system.</Field>
+  <Field Id="Grid_replies_subject" Title="Subject" Hidden="0" DefaultValue="">Subject of the message.</Field>
+  <Field Id="Grid_replies_rating" Title="Rating" Hidden="0" DefaultValue="">Rating the user gave.</Field>
+  <Field Id="Grid_replies_userId" Title="Account No." Hidden="0" DefaultValue="">Account Number of the user.</Field>
+  <Field Id="Grid_replies_comment" Title="comment" Hidden="1" DefaultValue=""></Field>
+  <Field Id="Grid_replies_addedOn" Title="Date" Hidden="0" DefaultValue="">Date the message was added.</Field>
+  <Field Id="Grid_replies_parentId" Title="parentId" Hidden="1" DefaultValue=""></Field>
+  <Field Id="Grid_replies_reference" Title="reference" Hidden="1" DefaultValue=""></Field>
+  <Field Id="Grid_replies_disabled" Title="Disabled" Hidden="0" DefaultValue="">If this message is disabled.</Field>
+  <Field Id="Grid_replies_approves" Title="Approves" Hidden="0" DefaultValue="">Number of approves for this message.</Field>
+  <Field Id="Grid_replies_disapproves" Title="Disapproves" Hidden="0" DefaultValue="">Number of disapproves for this message.</Field>
+  <Field Id="Grid_replies_flaggedInappropriate" Title="Flagged Inappropriate." Hidden="0" DefaultValue="">Number of times this message was flagged inappropriate.</Field>
+  <Field Id="Grid_replies_flaggedOk" Title="Flagged Ok" Hidden="0" DefaultValue="">Flagged ok by an administrator.</Field>
+  <Field Id="Grid_replies_VerCol" Title="VerCol" Hidden="0" DefaultValue=""></Field>
+  <Field Id="Form_blogCategories_categoryName" Title="Category Name" DefaultValue="Category Name" Hidden="0">The name of the blog category.</Field>
+  <Field Id="Form_blogCategories_publicCategory" Title="Public Category" DefaultValue="Public Category" Hidden="0">Whether or not the category is visible to the public.</Field>
+  <Field Id="Form_blogCategories_author" Title="Author" DefaultValue="Author" Hidden="0">The author of the category.</Field>
+  <Field Id="Form_blogCategories_showInTicker" Title="Show In Ticker" DefaultValue="Show In Ticker" Hidden="0">The category shows up in front of a blog ticker.</Field>
+  <Field Id="Form_blogCategories_blogPage" Title="Blog Page" DefaultValue="Blog Page" Hidden="0">The page that this blog shows up on.</Field>
+  <Field Id="Form_blogs_subject" Title="Subject" DefaultValue="Subject" Hidden="0">The subject of the blog.</Field>
+  <Field Id="Form_blogs_enabled" Title="Enabled" DefaultValue="Enabled" Hidden="0">When selected the blog will appear to the public.</Field>
+  <Field Id="Form_blogs_auditComments" Title="Audit Comments" DefaultValue="Audit Comments" Hidden="0">When selected comments submitted by users will be audited by the author.</Field>
+  <Field Id="Form_blogs_allowComments" Title="Allow Comments" DefaultValue="Allow Comments" Hidden="0">When selected the public will be allowed to selected.</Field>
+  <Field Id="Form_blogs_emailUpdates" Title="Email Updates" DefaultValue="Email Updates" Hidden="0">When selected, author will receive notification via email for comments added.</Field>
+  <Field Id="Form_blogs_archive" Title="Archive" DefaultValue="Archive" Hidden="0">When selected, this blog will be placed in the archive. When in the archive, this blog will not show up in any listings.</Field>
+  <Field Id="Form_blogs_comments" Title="Comments" DefaultValue="Comments" Hidden="0">The comments of the blog.</Field>
+  <Field Id="Form_blogs_addDate" Title="Add Date" DefaultValue="Add Date" Hidden="0">The date this blog enty was added.</Field>
+  <Field Id="Form_blogs_dateChanged" Title="Date Changed" DefaultValue="Date Changed" Hidden="0">The date this blog entry was last modified.</Field>
+  <Field Id="Form_blogs_editor" Title="Editor" DefaultValue="Editor" Hidden="0">The person responsible for the content of the blog.</Field>
+  <Field Id="Form_blogs_author" Title="Author" DefaultValue="Author" Hidden="0">The person who wrote the blog.</Field>
+  <Field Id="Form_blogs_lastEditor" Title="Last Editor" DefaultValue="Last Editor" Hidden="0">The last person to edit this blog.</Field>
+  <Field Id="Form_blogs_tags" Title="Tags" DefaultValue="Tags" Hidden="0">Comma seperated list of the different key words associated with this blog entry.</Field>
+  <Field Id="Form_blogs_annotations" Title="Annotations" DefaultValue="Annotations" Hidden="0">The notes of this blog.</Field>
+  <Field Id="Form_blogs_blogImage" Title="Blog Image" DefaultValue="Blog Image" Hidden="0">This image appears next to the blog in a blog listing.</Field>
+  <Field Id="Form_blogs_message" Title="Message" DefaultValue="Message" Hidden="0">The body of the blog.</Field>
+  <Field Id="Grid_imageRotatorCategories_imageRotatorCategoryId" Title="imageRotatorCategoryId" Hidden="1" DefaultValue=""></Field>
+  <Field Id="Grid_imageRotatorCategories_categoryName" Title="Name" Hidden="0" DefaultValue="">Name of the gallery.</Field>
+  <Field Id="Grid_imageRotatorCategories_height" Title="Gallery Height" Hidden="0" DefaultValue="">Height of the gallery in pixles.</Field>
+  <Field Id="Grid_imageRotatorCategories_width" Title="Width" Hidden="0" DefaultValue="">Width of the gallery in pixles.</Field>
+  <Field Id="Grid_imageRotatorCategories_resizeMethod" Title="resizeMethod" Hidden="1" DefaultValue=""></Field>
+  <Field Id="Grid_imageRotatorCategories_rotatorTemplate" Title="Cropping Template" Hidden="0" DefaultValue="">The template applied after cropping the rotating gallery image.</Field>
+  <Field Id="Grid_imageRotatorCategories_thumbTemplate" Title="Thumbnail Template" Hidden="0" DefaultValue="">The template applied to the thumbnail images.</Field>
+  <Field Id="Grid_imageRotatorCategories_fullsizeTemplate" Title="Full Size Template" Hidden="0" DefaultValue="">The template applied to the full size images.</Field>
+  <Field Id="Grid_imageRotatorCategories_portfolioTemplate" Title="Portfolio Template" Hidden="0" DefaultValue="">The template applied to the portfolio images.</Field>
+  <Field Id="Grid_imageRotatorCategories_blogTemplate" Title="Blog Template" Hidden="0" DefaultValue="">The template applied to blog images.</Field>
+  <Field Id="Grid_imageRotatorCategories_gallery" Title="gallery" Hidden="1" DefaultValue=""></Field>
+  <Field Id="Grid_imageRotatorCategories_gallery_description" Title="Description" Hidden="0" DefaultValue="">Description of this gallery.</Field>
+  <Field Id="Grid_imageRotatorCategories_gallery_order" Title="gallery_order" Hidden="1" DefaultValue=""></Field>
+  <Field Id="Grid_imageRotatorCategories_tags" Title="Tags" Hidden="0" DefaultValue="">A comma seperated list of keywords that identifiy this gallery.</Field>
+  <Field Id="Grid_imageRotatorCategories_VerCol" Title="VerCol" Hidden="0" DefaultValue=""></Field>
+  <Field Id="Grid_imageRotatorDetail_imageRotatorDetailId" Title="imageRotatorDetailId" Hidden="1" DefaultValue=""></Field>
+  <Field Id="Grid_imageRotatorDetail_imageRotatorCategoryId" Title="imageRotatorCategoryId" Hidden="1" DefaultValue=""></Field>
+  <Field Id="Grid_imageRotatorDetail_path" Title="Image Path" Hidden="0" DefaultValue="">Path to the image on the server.</Field>
+  <Field Id="Grid_imageRotatorDetail_link" Title="Link" Hidden="0" DefaultValue="">URL where this image will go when you click on it.</Field>
+  <Field Id="Grid_imageRotatorDetail_title" Title="Title" Hidden="0" DefaultValue="">Title of the image.</Field>
+  <Field Id="Grid_imageRotatorDetail_cropX" Title="cropX" Hidden="0" DefaultValue=""></Field>
+  <Field Id="Grid_imageRotatorDetail_cropY" Title="cropY" Hidden="1" DefaultValue=""></Field>
+  <Field Id="Grid_imageRotatorDetail_cropH" Title="cropH" Hidden="1" DefaultValue=""></Field>
+  <Field Id="Grid_imageRotatorDetail_cropW" Title="cropW" Hidden="1" DefaultValue=""></Field>  <Field Id="Grid_imageRotatorDetail_x" Title="x" Hidden="1" DefaultValue=""></Field>  <Field Id="Grid_imageRotatorDetail_y" Title="y" Hidden="1" DefaultValue=""></Field>  <Field Id="Grid_imageRotatorDetail_height" Title="height" Hidden="1" DefaultValue=""></Field>  <Field Id="Grid_imageRotatorDetail_width" Title="width" Hidden="1" DefaultValue=""></Field>  <Field Id="Grid_imageRotatorDetail_comments" Title="Comments" Hidden="0" DefaultValue="">Comments about the image.</Field>  <Field Id="Grid_imageRotatorDetail_description" Title="Description" Hidden="0" DefaultValue="">Description of the image.</Field>  <Field Id="Grid_imageRotatorDetail_enabled" Title="Enabled" Hidden="0" DefaultValue="">When selecteed the image will show up in the listing.</Field>  <Field Id="Grid_imageRotatorDetail_rotator_order" Title="rotator_order" Hidden="1" DefaultValue=""></Field>  <Field Id="Grid_imageRotatorDetail_thumb_order" Title="thumb_order" Hidden="1" DefaultValue=""></Field>  <Field Id="Grid_imageRotatorDetail_rotatorHeight" Title="rotatorHeight" Hidden="1" DefaultValue=""></Field>  <Field Id="Grid_imageRotatorDetail_rotatorWidth" Title="rotatorWidth" Hidden="1" DefaultValue=""></Field>  <Field Id="Grid_imageRotatorDetail_thumbHeight" Title="thumbHeight" Hidden="1" DefaultValue=""></Field>  <Field Id="Grid_imageRotatorDetail_thumbWidth" Title="thumbWidth" Hidden="1" DefaultValue=""></Field>  <Field Id="Grid_imageRotatorDetail_userId" Title="userId" Hidden="1" DefaultValue=""></Field>  <Field Id="Grid_imageRotatorDetail_addDate" Title="Date" Hidden="0" DefaultValue="">Date the image was added.</Field>  <Field Id="Grid_imageRotatorDetail_blogHeight" Title="blogHeight" Hidden="1" DefaultValue=""></Field>  <Field Id="Grid_imageRotatorDetail_blogWidth" Title="blogWidth" Hidden="1" DefaultValue=""></Field>  <Field Id="Grid_imageRotatorDetail_portfolioHeight" Title="portfolioHeight" Hidden="1" DefaultValue=""></Field>  <Field Id="Grid_imageRotatorDetail_portfolioWidth" Title="portfolioWidth" Hidden="1" DefaultValue=""></Field>  <Field Id="Grid_imageRotatorDetail_tags" Title="Tags" Hidden="0" DefaultValue="">Tags for this image, seperated by commas.</Field>  <Field Id="Grid_imageRotatorDetail_tagsToSearchFor" Title="Related Tags" Hidden="0" DefaultValue="">A list of tags, seperated by commas, that are related to this image, so when the user clicks on this image, another set of images will appear.</Field>  <Field Id="Grid_imageRotatorDetail_exif" Title="exif" Hidden="1" DefaultValue=""></Field>  <Field Id="Grid_imageRotatorDetail_VerCol" Title="VerCol" Hidden="0" DefaultValue=""></Field>
+  <Field Id="Form_imageRotatorCategories_categoryName" Title="Name" DefaultValue="Name" Hidden="0">Name of the gallery.</Field>  <Field Id="Form_imageRotatorCategories_gallery_description" Title="Description" DefaultValue="Description" Hidden="0">Description of this gallery.</Field>  <Field Id="Form_imageRotatorCategories_height" Title="Crop Height" DefaultValue="Crop Height" Hidden="0">Height of the gallery in pixles.</Field>  <Field Id="Form_imageRotatorCategories_width" Title="Crop Width" DefaultValue="Crop Width" Hidden="0">Width of the gallery in pixles.</Field>  <Field Id="Form_imageRotatorCategories_rotatorTemplate" Title="Cropping Template" DefaultValue="Cropping Template" Hidden="0">The template applied after cropping the rotating gallery image.</Field>  <Field Id="Form_imageRotatorCategories_thumbTemplate" Title="Thumbnail Template" DefaultValue="Thumbnail Template" Hidden="0">The template applied to the thumbnail images.</Field>  <Field Id="Form_imageRotatorCategories_fullsizeTemplate" Title="Full Size Template" DefaultValue="Full Size Template" Hidden="0">The template applied to the full size images.</Field>  <Field Id="Form_imageRotatorCategories_portfolioTemplate" Title="Portfolio Template" DefaultValue="Portfolio Template" Hidden="0">The template applied to the portfolio images.</Field>  <Field Id="Form_imageRotatorCategories_blogTemplate" Title="Blog Template" DefaultValue="Blog Template" Hidden="0">The template applied to blog images.</Field>  <Field Id="Form_imageRotatorCategories_tags" Title="Tags" DefaultValue="Tags" Hidden="0">A comma seperated list of keywords that identifiy this gallery.</Field>  <Field Id="Form_imageRotatorDetail_title" Title="Title" DefaultValue="Title" Hidden="0">Title of the image.</Field>  <Field Id="Form_imageRotatorDetail_path" Title="Image Path" DefaultValue="Image Path" Hidden="0">Path to the image on the server.</Field>  <Field Id="Form_imageRotatorDetail_description" Title="Description" DefaultValue="Description" Hidden="0">Description of the image.</Field>  <Field Id="Form_imageRotatorDetail_enabled" Title="Enabled" DefaultValue="Enabled" Hidden="0">When selecteed the image will show up in the listing.</Field>  <Field Id="Form_imageRotatorDetail_link" Title="Link" DefaultValue="Link" Hidden="0">URL where this image will go when you click on it.</Field>  <Field Id="Form_imageRotatorDetail_comments" Title="Comments" DefaultValue="Comments" Hidden="0">Comments about the image.</Field>  <Field Id="Form_imageRotatorDetail_tagsToSearchFor" Title="Related Tags" DefaultValue="Related Tags" Hidden="0">A list of tags, seperated by commas, that are related to this image, so when the user clicks on this image, another set of images will appear.</Field>  <Field Id="Form_imageRotatorDetail_exif" Title="exif" DefaultValue="exif" Hidden="1"></Field>  <Field Id="Form_imageRotatorDetail_x" Title="x" DefaultValue="x" Hidden="1"></Field>  <Field Id="Form_imageRotatorDetail_y" Title="y" DefaultValue="y" Hidden="1"></Field>  <Field Id="Form_imageRotatorDetail_height" Title="height" DefaultValue="height" Hidden="1"></Field>  <Field Id="Form_imageRotatorDetail_width" Title="width" DefaultValue="width" Hidden="1"></Field>  <Field Id="Form_imageRotatorDetail_cropX" Title="cropX" DefaultValue="cropX" Hidden="0"></Field>  <Field Id="Form_imageRotatorDetail_cropY" Title="cropY" DefaultValue="cropY" Hidden="1"></Field>  <Field Id="Form_imageRotatorDetail_cropH" Title="cropH" DefaultValue="cropH" Hidden="1"></Field>  <Field Id="Form_imageRotatorDetail_cropW" Title="cropW" DefaultValue="cropW" Hidden="1"></Field>
+</Fields>

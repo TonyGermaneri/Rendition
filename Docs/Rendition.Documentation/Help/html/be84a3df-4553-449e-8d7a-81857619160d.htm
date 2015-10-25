@@ -1,0 +1,261 @@
+﻿<html xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+  <head>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8" />
+    <META NAME="save" CONTENT="history" />
+    <title>Site Template Design</title>
+    <meta name="Language" content="en-us" />
+    <meta name="Microsoft.Help.Id" content="be84a3df-4553-449e-8d7a-81857619160d" />
+    <meta name="Description" content="Required introduction" />
+    <meta name="Microsoft.Help.ContentType" content="Concepts" />
+    <link rel="stylesheet" type="text/css" href="../styles/Presentation.css" />
+    <link rel="stylesheet" type="text/css" href="ms-help://Hx/HxRuntime/HxLink.css" />
+    <script type="text/javascript" src="../scripts/EventUtilities.js"> </script>
+    <script type="text/javascript" src="../scripts/SplitScreen.js"> </script>
+    <script type="text/javascript" src="../scripts/Dropdown.js"> </script>
+    <script type="text/javascript" src="../scripts/script_manifold.js"> </script>
+    <script type="text/javascript" src="../scripts/script_feedBack.js"> </script>
+    <script type="text/javascript" src="../scripts/CheckboxMenu.js"> </script>
+    <script type="text/javascript" src="../scripts/CommonUtilities.js"> </script>
+    <xml>
+      <MSHelp:Keyword Index="A" Term="be84a3df-4553-449e-8d7a-81857619160d" />
+      <MSHelp:Attr Name="RevisionNumber" Value="1" />
+      <MSHelp:Attr Name="AssetID" Value="be84a3df-4553-449e-8d7a-81857619160d" />
+      <MSHelp:Attr Name="Abstract" Value="Required introduction" />
+      <MSHelp:Attr Name="TopicType" Value="kbArticle" />
+      <MSHelp:Attr Name="Locale" Value="en-us" />
+    </xml>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <input type="hidden" id="hiddenScrollOffset" />
+    <img id="collapseImage" style="display:none; height:0; width:0;" src="../icons/collapse_all.gif" alt="Collapse image" title="Collapse image" />
+    <img id="expandImage" style="display:none; height:0; width:0;" src="../icons/expand_all.gif" alt="Expand Image" title="Expand Image" />
+    <img id="collapseAllImage" style="display:none; height:0; width:0;" src="../icons/collapse_all.gif" />
+    <img id="expandAllImage" style="display:none; height:0; width:0;" src="../icons/expand_all.gif" />
+    <img id="dropDownImage" style="display:none; height:0; width:0;" src="../icons/dropdown.gif" />
+    <img id="dropDownHoverImage" style="display:none; height:0; width:0;" src="../icons/dropdownHover.gif" />
+    <img id="copyImage" style="display:none; height:0; width:0;" src="../icons/copycode.gif" alt="Copy image" title="Copy image" />
+    <img id="copyHoverImage" style="display:none; height:0; width:0;" src="../icons/copycodeHighlight.gif" alt="CopyHover image" title="CopyHover image" />
+    <div id="header">
+      <table id="topTable" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <span onclick="ExpandCollapseAll(toggleAllImage)" style="cursor:default;" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage, event)" tabindex="0">
+              <img ID="toggleAllImage" class="toggleAll" src="../icons/collapse_all.gif" /> <label id="collapseAllLabel" for="toggleAllImage" style="display: none;">Collapse All</label><label id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand All</label> </span>
+            <span>    </span>
+            <span id="devlangsDropdown" class="filter" tabindex="0">
+              <img id="devlangsDropdownImage" src="../icons/dropdown.gif" /> <label id="devlangsMenuAllLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: All </nobr></label><label id="devlangsMenuMultipleLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: Multiple </nobr></label><label id="devlangsMenuCSharpLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: C# </nobr></label><label id="devlangsMenuJavaScriptLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: JavaScript </nobr></label></span>
+          </td>
+        </tr>
+      </table>
+      <div id="devlangsMenu">
+        <input id="CSharpCheckbox" type="checkbox" data="CSharp,cs,'persist'" value="on" onClick="SetLanguage(this)" />
+        <label class="checkboxLabel" for="CSharpCheckbox">C#</label>
+        <br />
+        <input id="JavaScriptCheckbox" type="checkbox" data="JavaScript,cs,'persist'" value="on" onClick="SetLanguage(this)" />
+        <label class="checkboxLabel" for="JavaScriptCheckbox">JavaScript</label>
+        <br />
+      </div>
+      <table id="bottomTable" cellpadding="0" cellspacing="0">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">Rendition E-Commerce Framework</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">Site Template Design</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td align="left">
+            <span id="headfeedbackarea" class="feedbackhead">
+              <a href="javascript:SubmitFeedback('tonygermaneri@gmail.com','Rendition E-Commerce Framework','','1.0.0.0','','%0\dYour%20feedback%20is%20used%20to%20improve%20the%20documentation%20and%20the%20product.%20Your%20e-mail%20address%20will%20not%20be%20used%20for%20any%20other%20purpose%20and%20is%20disposed%20of%20after%20the%20issue%20you%20report%20is%20resolved.%20%20While%20working%20to%20resolve%20the%20issue%20that%20you%20report,%20you%20may%20be%20contacted%20via%20e-mail%20to%20get%20further%20details%20or%20clarification%20on%20the%20feedback%20you%20sent.%20After%20the%20issue%20you%20report%20has%20been%20addressed,%20you%20may%20receive%20an%20e-mail%20to%20let%20you%20know%20that%20your%20feedback%20has%20been%20addressed.%0\A%0\d','Customer%20Feedback');">Send Feedback</a>
+            </span>
+          </td>
+        </tr>
+      </table>
+      <table id="gradientTable">
+        <tr>
+          <td class="nsrBottom" background="../icons/gradient.gif" />
+        </tr>
+      </table>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" />
+        <span style="color: DarkGray">
+          <p style="color: #dc143c; font-size: 8.5pt; font-weight: bold;">[This is preliminary documentation and is subject to change.]</p>
+        </span>
+        <div class="introduction">
+          <p>
+            <p>This topic contains the following sections.</p>
+          </p>
+          <ul>
+            <li class="outlineSectionEntry">
+              <a href="#siteTemplateDesign">Site Template Design</a>
+            </li>
+          </ul>
+          <p>Required introduction</p>
+        </div>
+        <a name="siteTemplateDesign"> </a>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(sectionToggleID0EBAAA)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(sectionToggleID0EBAAA, event)" tabindex="0">
+            <img id="sectionToggleID0EBAAA" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Site Template Design</span>
+        </h1>
+        <div id="sectionSectionID0EBAAA" class="section" name="collapseableSection" style="">
+          <p>
+        This topic and subtopics in this section will help you
+        design a front facing retail web site from scratch,
+        explaining the content of each page and how to implement
+        the rendition namespace to create an interactive web site.
+        </p>
+          <p>
+        	The pages are listed in alphabetical order.
+        	Becuase Rendition is an HTTPModule you don't
+        	need to call on it with special commands to
+        	make it run.  So long as Rendition is refrenced
+        	in your web.config it will run.  
+        	See <span sdata="link"><a href="43ecc36f-d33a-4a8b-8430-612a88a96687.htm">Installation</a></span> for more information.
+        </p>
+          <a name="specialURLs"> </a>
+          <h3 class="subHeading">Special URLs</h3>
+          <div class="subsection">
+            <p>The following Urls are special.  They
+                  are intercepted by Rendition and replaced
+                  by either speical html pages or respond
+                  to JSON commands issued from 
+                  your JavaScript commands on 
+                  your front end site.  These URLs are defaults,
+                  you can change the defaults by modifying your
+                  web.config. Becuase these URLs are used by 
+                  Rendition, you cannot create URLs with the same name.
+                  See <span sdata="link"><a href="43ecc36f-d33a-4a8b-8430-612a88a96687.htm">Installation</a></span>
+                  for more information.</p>
+            <ul>
+              <li>/responder</li>
+              <li>/admin</li>
+              <li>/admin/responder</li>
+            </ul>
+          </div>
+          <a name="blogaspx"> </a>
+          <h3 class="subHeading">blog.aspx</h3>
+          <div class="subsection">
+            <p>This topic covers how to
+                  create a reference to a blog,
+                  loop through your blog, create
+                  a blog paging function, managing
+                  replies and censoring user
+                  created content.</p>
+          </div>
+          <a name="cartaspx"> </a>
+          <h3 class="subHeading">cart.aspx</h3>
+          <div class="subsection">
+            <p>This topic covers how to
+                  list the contents of the users
+                  cart, update the cart
+                  and manipulate the wishlist.</p>
+          </div>
+          <a name="checkoutaspx"> </a>
+          <h3 class="subHeading">checkout.aspx</h3>
+          <div class="subsection">
+            <p>This topic covers how to
+                  collect information and submit
+                  it as a new order, handle the
+                  result of the new order, send an
+                  email and print a sales receipt.</p>
+          </div>
+          <a name="defaultaspx"> </a>
+          <h3 class="subHeading">default.aspx</h3>
+          <div class="subsection">
+            <p>This topic covers how to
+                  use the site sections class
+                  to create sections of your site
+                  that can be targeted by content authors.</p>
+          </div>
+          <a name="defaultaspx"> </a>
+          <h3 class="subHeading">detail.aspx</h3>
+          <div class="subsection">
+            <p>This topic show you how to
+                  display detail infrmation about 
+                  an item, add to cart, add to wishlist
+                  loop through item images and more.</p>
+          </div>
+          <a name="fileNotFoundaspx"> </a>
+          <h3 class="subHeading">fileNotFound.aspx</h3>
+          <div class="subsection">
+            <p>This topic covers the
+                  use of the item listings,
+                  filtering item property,
+                  paging items, site search,
+                  and search engeine optimization.</p>
+          </div>
+          <a name="headermaster"> </a>
+          <h3 class="subHeading">header.master</h3>
+          <div class="subsection">
+            <p>This topic covers how
+                  to create a master page all
+                  your other pages will use.
+                  </p>
+          </div>
+          <a name="listaspx"> </a>
+          <h3 class="subHeading">list.aspx</h3>
+          <div class="subsection">
+            <p>This topic covers the
+                  use of the item listings,
+                  filtering item property,
+                  paging items, site search,
+                  and search engeine optimization.
+                  </p>
+          </div>
+          <a name="myAccountaspx"> </a>
+          <h3 class="subHeading">myAccount.aspx</h3>
+          <div class="subsection">
+            <p>This topic covers how
+                  to show a user their orders,
+                  account details and other user
+                  related information.
+                  </p>
+          </div>
+          <a name="replyaspx"> </a>
+          <h3 class="subHeading">reply.aspx</h3>
+          <div class="subsection">
+            <p>This topic covers how
+                  create a reply AJAX responder page
+                  for replies.
+                  </p>
+          </div>
+          <a name="replyaspx"> </a>
+          <h3 class="subHeading">web.config</h3>
+          <div class="subsection">
+            <p>This topic covers how
+                  modify the web.config file
+                  and describes the various
+                  fields in the file.
+                  </p>
+          </div>
+          <a name="replyaspx"> </a>
+          <h3 class="subHeading">robots.txt</h3>
+          <div class="subsection">
+            <p>This topic covers
+                  the use of the robots.txt file.
+                  </p>
+          </div>
+        </div>
+      </div>
+      <div id="footer">
+        <div class="footerLine">
+          <img width="100%" height="3px" src="../icons/footer.gif" alt="Footer image" title="Footer image" />
+        </div>
+        <A NAME="feedback"></A>
+        <span id="fb" class="feedbackcss"></span>
+        <p />Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:tonygermaneri%40gmail.com?Subject=Rendition E-Commerce Framework">Tony Germaneri</a><script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        var HT_mailLinkText = HT_mailLink.innerHTML;
+        HT_mailLink.href += ": " + document.title;
+        HT_mailLink.innerHTML = HT_mailLinkText;
+        </script><p />Copyright © Tony Germaneri 2011</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="95da45a8-982e-4cf9-b484-330a5f57371b" revisionNumber="1">
+  <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <introduction>
+      <para>
+	      How to create a basic web site using Rendition
+	      E-Commerce library.
+      </para>
+      <para>
+	      If you're not familar with editing ASP.NET Web Forms a great set of 
+	      tutorials can be found at http://www.w3schools.com/aspnet/.
+      </para>
+      <para>
+	      All examples use C#, HTML 5, jQuery 1.7 and CSS 3. 
+	      A good understanding of ASP.NET Web Forms is a good idea before you
+	      get started using Rendition.
+      </para>
+    </introduction>
+    <section address="Section1">
+      <title>detail.aspx</title>
+      <content>
+        <para>
+	        Detail.aspx is the page that shows the detail of an item on your
+	        site.  The example below looks for a URN key called "item".
+			<alert class="note">
+			  <para>        To find out what a URN key is, read the topic 
+			        <link xlink:href="59e1df95-276f-413c-83a0-0254c505c35f"/></para>
+			</alert>
+			To access the key, you need to use the built in Request object.  In the example
+			below, the Request object is used to fetch a key value from the URI and
+			use that value to lookup an item in the Rendition item database.
+			
+	
+			<alert class="note">
+			  	<para>		
+			  		It would help to have an item in your database, so if you haven't already
+					created an item, now would be a good time to do so.
+					See <link xlink:href="9097cbc1-c3b1-4ae3-a9b4-7b0773658af0"/> for
+					more info on creating items.
+				</para>
+			</alert>
+			
+			
+			<code lang="none">
+			
+			</code>
+			
+			
+        </para>
+      </content>
+    </section>
+    <relatedTopics>
+    </relatedTopics>
+  </developerConceptualDocument>
+</topic>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="976f2b2d-b62e-494b-e903-fda9c364437f" revisionNumber="1" dataAlias="Rendition.UI.TaskBarElement#TaskBarElement.updatetitle">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction address="Intro">
+			Rendition.UI.TaskBarElement#TaskBarElement.updatetitle()
+			<para>updates the title, clipping and redrawing the text.</para>
+		</introduction>
+		<definitionTable>
+			
+			
+				<definedTerm>
+					<para>Member Of</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="7a2226b4-a53b-bdc8-2b33-a5f6c7c615ac"/>
+					</para>
+				</definition>
+			
+			
+			
+				<definedTerm>
+					<para>Source</para>
+				</definedTerm>
+				<definition>
+					<para>
+						c:\Rendition\Rendition.Core\js\admin\UI\taskbarElement.js
+					</para>
+				</definition>
+			
+		</definitionTable>
+		<section address="parameters">
+		<title>Parameters</title>
+			<sections>
+				<table>
+					<tableHeader>
+					<row>
+						<entry><para> </para></entry>
+						<entry><para>Name</para></entry>
+						<entry><para>Description</para></entry>
+					</row>
+					</tableHeader>
+					
+				</table>
+			</sections>
+		</section>
+	</developerConceptualDocument>
+</topic>

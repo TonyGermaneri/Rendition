@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="a2cf2633-b94e-a2f1-50aa-fca0e8411d47" revisionNumber="1" dataAlias="Rendition.UI.ContextMenuStyle">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		
+		<definitionTable>
+			
+				<definedTerm>
+					<para>Member Of</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="b584e6c6-2f5a-6c97-4e57-2ad4afa995cc"/>
+					</para>
+				</definition>
+			
+		</definitionTable>
+		
+			<section address="fields">
+				<title>Rendition.UI.ContextMenuStyle Properties</title>
+				<content>
+					<table>
+						<tableHeader>
+							<row>
+								<entry><para> </para></entry>
+								<entry><para>Type</para></entry>
+								<entry><para>Name</para></entry>
+								<entry><para>Description</para></entry>
+							</row>
+						</tableHeader>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="97beacf6-8c51-effe-5f02-f6ecbcc26bc1"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Offset <link xlink:href="b6679c58-2336-61d4-273e-95bc23b9bfcb"/> of the child <link xlink:href="b6679c58-2336-61d4-273e-95bc23b9bfcb"/>.Looks like { x: 0, y: 0, h: 0, w: 0 }.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="3acf1861-e92d-4096-f9c3-46d1f259e300"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Offset of the contentRect as a <link xlink:href="b6679c58-2336-61d4-273e-95bc23b9bfcb"/>.Looks like { x: 0, y: 0, h: 0, w: 0 }.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="63890450-47d8-9af9-b16e-fc253d694d06"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Down arrow <link xlink:href="b6679c58-2336-61d4-273e-95bc23b9bfcb"/>.Looks like { x: 0, y: 0, h: 0, w: 0 }.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="fef06c0c-234e-a9d6-62a8-9533c4909c1f"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Offset and size of the east <link xlink:href="b6679c58-2336-61d4-273e-95bc23b9bfcb"/>.Looks like { x: 0, y: 0, h: 0, w: 0 }.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="27a9aee3-e68f-4b1b-c1a4-cc61786b8c0d"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The unique id of this instance.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="fccbcb38-b636-4ef7-5831-1b179448e6b3"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Size of the maxRect as a <link xlink:href="b6679c58-2336-61d4-273e-95bc23b9bfcb"/>.Looks like { x: 0, y: 0, h: 0, w: 0 }.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="7fbeabeb-954c-43ea-8d47-697e5ad89be3"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Size of the minRect as a <link xlink:href="b6679c58-2336-61d4-273e-95bc23b9bfcb"/>.Looks like { x: 0, y: 0, h: 0, w: 0 }.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="973532d8-0757-2936-285d-ba3b6a5c71c3"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Offset and size of the north east <link xlink:href="b6679c58-2336-61d4-273e-95bc23b9bfcb"/>.Looks like { x: 0, y: 0, h: 0, w: 0 }.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="ef8939d0-6fc0-250d-a44d-bde9579ad7f6"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Offset and size of the north <link xlink:href="b6679c58-2336-61d4-273e-95bc23b9bfcb"/>.Looks like { x: 0, y: 0, h: 0, w: 0 }.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="40d72bcf-b8c9-bdc8-5a24-adc3eba96bed"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Offset and size of the north west <link xlink:href="b6679c58-2336-61d4-273e-95bc23b9bfcb"/>.Looks like { x: 0, y: 0, h: 0, w: 0 }.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="fb6c8b8c-6aeb-da71-1073-01401f00af3f"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Offset <link xlink:href="b6679c58-2336-61d4-273e-95bc23b9bfcb"/>.  The widget will be drawn offset by the values provided.Looks like { x: 0, y: 0, h: 0, w: 0 }.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="98d82458-07e7-e7ae-c4d4-ca2f8831af48"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Amount to reduce from the top or bottom of the context menu as a <link xlink:href="b6679c58-2336-61d4-273e-95bc23b9bfcb"/>.Looks like { x: 0, y: 0, h: 0, w: 0 }.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="caa532e5-7eb1-9f44-aaf5-94c94de1457e"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Offset and size of the south east <link xlink:href="b6679c58-2336-61d4-273e-95bc23b9bfcb"/>.Looks like { x: 0, y: 0, h: 0, w: 0 }.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="52d1074b-38c4-85b2-abae-b1ba75473749"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Offset and size of the south <link xlink:href="b6679c58-2336-61d4-273e-95bc23b9bfcb"/>.Looks like { x: 0, y: 0, h: 0, w: 0 }.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="2e4c388c-68af-977f-2209-016eb7d61a5b"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Offset and size of the south west <link xlink:href="b6679c58-2336-61d4-273e-95bc23b9bfcb"/>.Looks like { x: 0, y: 0, h: 0, w: 0 }.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="83c04390-528b-7a20-cd56-a493c784bf8c"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The type of widget.  Returns RenditionContextMenuStyle.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="ad26e0d4-91e6-e719-bfb9-8ebbb0f9ac48"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Up arrow <link xlink:href="b6679c58-2336-61d4-273e-95bc23b9bfcb"/>.Looks like { x: 0, y: 0, h: 0, w: 0 }.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="a4527a8b-f9d5-3e56-0b97-6e8a88a6dad9"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Offset and size of the west <link xlink:href="b6679c58-2336-61d4-273e-95bc23b9bfcb"/>.Looks like { x: 0, y: 0, h: 0, w: 0 }.
+									</para>
+								</entry>
+							</row>
+						
+					</table>
+				</content>
+			</section>
+		
+
+	</developerConceptualDocument>
+</topic>

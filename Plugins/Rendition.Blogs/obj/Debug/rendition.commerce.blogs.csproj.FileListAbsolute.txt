@@ -1,0 +1,8 @@
+C:\Rendition\rendition.commerce.blogs\rendition.commerce.blogs\bin\Debug\Rendition.dll
+C:\Rendition\rendition.commerce.blogs\rendition.commerce.blogs\bin\Debug\Rendition.pdb
+C:\Rendition\rendition.commerce.blogs\rendition.commerce.blogs\bin\Debug\Rendition.xml
+C:\Rendition\rendition.commerce.blogs\rendition.commerce.blogs\obj\Debug\ResolveAssemblyReference.cache
+C:\Rendition\rendition.commerce.blogs\rendition.commerce.blogs\bin\Debug\Rendition.Plugins.Blogs.dll
+C:\Rendition\rendition.commerce.blogs\rendition.commerce.blogs\bin\Debug\Rendition.Plugins.Blogs.pdb
+C:\Rendition\rendition.commerce.blogs\rendition.commerce.blogs\obj\Debug\Rendition.Plugins.Blogs.dll
+C:\Rendition\rendition.commerce.blogs\rendition.commerce.blogs\obj\Debug\Rendition.Plugins.Blogs.pdb

@@ -1,0 +1,2192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="6c2a186c-427b-34e9-03d5-5138cbc99cd1" revisionNumber="1" dataAlias="Rendition">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		
+		<definitionTable>
+			
+		</definitionTable>
+		
+			<section address="fields">
+				<title>Rendition Properties</title>
+				<content>
+					<table>
+						<tableHeader>
+							<row>
+								<entry><para> </para></entry>
+								<entry><para>Type</para></entry>
+								<entry><para>Name</para></entry>
+								<entry><para>Description</para></entry>
+							</row>
+						</tableHeader>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="472b7ba4-e5e3-1f30-82ee-1fb5a1239eec"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="cc02892a-c85a-7c1a-173b-54a9708e2743"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Associative array of ace themes.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="cf1fc5df-32af-0ec2-cb8d-5d0a6e3d1834"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Numbmer of ms to wait between checking the AJAX reqest queue
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="12ce4367-6b61-f3aa-1ae4-91313636d1e6"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Array of pending AJAX requests.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="472b7ba4-e5e3-1f30-82ee-1fb5a1239eec"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="faba4a41-b525-313f-cf91-27ae8a1ecf84"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Array of character to px size converstions for the truncate text procedure.  Each member looks like ['a',7].
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="9cd16695-d8d2-716a-35d3-5a9f01568867"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Detects android within the user agent string.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="ef3d2310-dfdb-431e-8330-0d339049abff"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="e94d6c4d-f3ba-6ffd-fc75-5ee2ab9fae52"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										This function processes the data returned from the server when the Rendition.UI.autocompleteURLis sent.  The type returned by this function must be a <link xlink:href="de0fdb88-125a-3606-d0af-83173204d97b"/>.The signature of the function is Function(XMLHttpRequest e, <link xlink:href="c3297b0d-9e44-0956-efe9-aba03ac86241"/> autoComplete).The default function uses the C# Rendition.admin.dataSet method.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="ef3d2310-dfdb-431e-8330-0d339049abff"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="a9a6b1ed-7c22-761e-e6d6-fe480b3c0a04"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The URL <link xlink:href="c3297b0d-9e44-0956-efe9-aba03ac86241"/> class uses to select data.The function's signature is: Function(objectName, suffix, from,to, searchSuffix, aggregateColumns, selectedRows, outputType, includeSchema,checksum, del, orderBy, orderDirection, autoComplete).The result will be sent to the Rendition.UI.autocompleteCallback procedure whichmust return a <link xlink:href="de0fdb88-125a-3606-d0af-83173204d97b"/>.The default function calls the C# Rendition.admin.dataSet method.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="472b7ba4-e5e3-1f30-82ee-1fb5a1239eec"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="7d6ad427-8055-3df8-aebe-f6a354651d41"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										List of axis values. ['horizontal','Horizontal'], ['vertical','Vertical'].
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="0e8a37ee-ae3e-7745-0603-2477ad30e1d0"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										List of <link xlink:href="fce458ca-7a4b-caad-c699-ee63d754ab9a"/> widgets.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="b1c209c1-90fb-5fa4-1c61-44a90a7d165e"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										List of <link xlink:href="580bee40-6e91-84ad-dd13-8d53bfcccfc6"/> elements.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="d088b717-bf30-5410-3da3-5b4d8bbd0eb0"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Detects Chrome within the user agent string.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="444082d8-5616-59ca-a0a7-f355f708b840"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Client server sync delay.  How long between update intervals.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="6b43d0ed-6ca6-8e71-249e-72b373b6d275"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Computed URI from Rendition.UI.clientServerSyncPublicURL. ( URL+"?" )
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="cd498e54-df36-4ecf-a025-9f2cd252c4de"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The base URL to the public responder page.  Defaults to /responder.This responder should respond to sessions that have yet to logon as administrators.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="d455485f-2324-5307-5f97-2bb2bc9323be"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Computed URI from Rendition.UI.clientServerSyncURL. ( URL+"?" )
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="9574e956-6efe-75da-765a-2f436f0b4c3e"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The base URL to the admin responder page.  Defaults to /admin/responder.This responder should only respond to users who authenticate as administrators.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="d075fcd3-0adf-424f-0abe-d5b0b2e01e65"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Default <link xlink:href="4e4ffaac-14fa-34ce-e801-bc0c5adfb424"/> for <link xlink:href="a5e7dfb3-38c2-2bd7-2b10-296236596828"/> <link xlink:href="c807995d-75de-b263-6de4-c0f04686a0bb"/> elements.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="c6924bb7-dcd9-33a4-3bb7-25e4e3814732"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										List of <link xlink:href="a5e7dfb3-38c2-2bd7-2b10-296236596828"/> widgets.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="429e5f84-d647-20b2-2793-c042fc6e333c"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Default <link xlink:href="99f3223b-7968-fc9f-5485-ac052ac77c84"/>.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="f82e7d77-c673-7130-8258-c18e3555277b"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Master key control input.  Used for shortcut keys.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="035c27b3-d343-29a9-8437-ee8eee0fd85a"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										List of <link xlink:href="fab5a013-d39a-f9f0-2198-075dc2427351"/> widgets.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="a843e647-c964-0503-b6e0-54e2fd8193fa"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Default <link xlink:href="07fe8af3-eda5-dfad-9ce9-6bfe56d71486"/>.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="0e75107c-7256-d3b9-002e-9a129956fafb"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="2be54271-770c-e57c-84f7-60549d312bc5"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Regular Expression for dates between 1900-2199 in this format mm/dd/yyyy.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="f39b08f7-2fdd-1b07-6f61-18538c7bc2f5"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Default <link xlink:href="2508e2c4-ff9f-64fe-86b1-364162eaeba9"/>.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="f30d855d-4fc2-e0b6-008d-f74f5eb0d349"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Default <link xlink:href="480c7573-b0f0-a628-7032-fb06ee0b65ab"/>.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="98af0ae8-c0d5-3875-96ff-e15f2f4b7a38"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										List of <link xlink:href="47c9ab93-fa61-2ae9-8378-29aa24933041"/> widgets.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="3bb0a567-39a6-692a-f550-8f606b11932b"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The default X Y position of dialogs in applications.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="74008723-0bcf-c844-ee35-c1d4da98362e"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										List of <link xlink:href="dc990744-70f0-25bd-d971-be960b7764b6"/> widgets.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="e7f64495-488d-d8cc-d2a6-fe974d6706eb"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										An empty UUID. Looks like: 00000000-0000-0000-0000-000000000000.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="206f6ee5-eb07-ae07-cabe-b186a871fb9b"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Detects Firefox within the user agent string.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="ef3d2310-dfdb-431e-8330-0d339049abff"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="05268fef-f819-b392-cd31-363d1f071211"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										This function processes the data returned from the server when the Rendition.UI.gridDeleteURLis sent.  The object returned by this function must look like this:{error: &lt;Integer&gt;, description: &lt;String&gt; }.<para>The parameter [error] can return one of the following values:</para>	<table>		<tableHeader>			<row>				<entry>					<para>						Error					</para>				</entry>				<entry>					<para>						Description					</para>				</entry>			</row>		</tableHeader>		<row>			<entry>				<para>					0				</para>			</entry>			<entry>				<para>					No error occured.				</para>			</entry>		</row>		<row>			<entry>				<para>					-1				</para>			</entry>			<entry>				<para>					Row value has changed on the server (verCol mismatch).				</para>			</entry>		</row>		<row>			<entry>				<para>					-2				</para>			</entry>			<entry>				<para>					Row has been deleted and cannot be updated or deleted.				</para>			</entry>		</row>		<row>			<entry>				<para>					Any other Integer				</para>			</entry>			<entry>				<para>					Custom error.  The [description] parameter will be displayed.				</para>			</entry>		</row>	</table>Function(XMLHttpRequest e, <link xlink:href="f5f5d4d4-f415-cd77-8e8f-c01e6464006a"/> grid).
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="ef3d2310-dfdb-431e-8330-0d339049abff"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="aebacbdd-da65-9a3e-6fe6-7788d5d3a2a7"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The URL <link xlink:href="f5f5d4d4-f415-cd77-8e8f-c01e6464006a"/> class uses to delete data.  The function's signature isFunction(objectName, suffix, from,to, searchSuffix, aggregateColumns, selectedRows, outputType, includeSchema,checksum, del, orderBy, orderDirection, grid).The result will be sent to the Rendition.UI.gridDeleteCallback procedure.The default function uses the C# Rendition.admin.dataSet method.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="ef3d2310-dfdb-431e-8330-0d339049abff"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="582bfed7-7a57-cff8-3bb2-da47d0e1d431"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										This function processes the data returned from the server when the Rendition.UI.gridSelectURLis sent.  The object returned by this function must look like this:{error: &lt;Integer&gt;, description: &lt;String&gt;, primaryKey: &lt;String&gt;,verCol: &lt;Integer&gt; }.<para>The parameter [primaryKey] should be the primaryKey of the row inserted.</para><para>The parameter [verCol] should be the new verCol of the row.</para><para>The parameter [error] can return one of the following values:</para>	<table>		<tableHeader>			<row>				<entry>					<para>						Error					</para>				</entry>				<entry>					<para>						Description					</para>				</entry>			</row>		</tableHeader>		<row>			<entry>				<para>					0				</para>			</entry>			<entry>				<para>					No error occured.				</para>			</entry>		</row>		<row>			<entry>				<para>					Any other Integer				</para>			</entry>			<entry>				<para>					Custom error.  The [description] parameter will be displayed.				</para>			</entry>		</row>	</table>The signature of the function is Function(XMLHttpRequest e, <link xlink:href="f5f5d4d4-f415-cd77-8e8f-c01e6464006a"/> grid).The default function uses the C# Rendition.admin.dataSet method.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="90bb03e5-dadd-441a-9b93-400713faa6c4"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										This function should return the URL the grid class uses to insert into tables.The function's signature isFunction(objectName, data, overwrite, grid).The server side function should insert the row in the table matchingthe [objectName] parameter.The result will be sent to the Rendition.UI.gridInsertCallback procedure whichmust return a an object that looks like this:{error: &lt;Integer&gt;, description: &lt;String&gt;, primaryKey: &lt;String&gt;,verCol: &lt;Integer&gt; }.The default function calls the C# Rendition.admin.Crud method.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="c3cade3e-b3a7-7025-86a8-ab9f5ef82f2c"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The URL the grid class uses for updating personal schema size data (column size, position etc.).The signature of the function is Function(objectId, headers, grid).This URL should update the data that is returned when the schema data is requestedin the Rendition.UI.gridSelectURL or the Rendition.gridAutocompleteURL.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="ef3d2310-dfdb-431e-8330-0d339049abff"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="7000fedd-b455-8be4-ed68-202f69b5a5a8"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										This function processes the data returned from the server when the Rendition.UI.gridSelectURLis sent.  The type returned by this function must be a <link xlink:href="de0fdb88-125a-3606-d0af-83173204d97b"/>.The signature of the function is Function(XMLHttpRequest e, <link xlink:href="f5f5d4d4-f415-cd77-8e8f-c01e6464006a"/> grid).The default function uses the C# Rendition.admin.dataSet method.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="ef3d2310-dfdb-431e-8330-0d339049abff"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="fb028478-d662-2d28-20ee-e090961b027e"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The URL <link xlink:href="f5f5d4d4-f415-cd77-8e8f-c01e6464006a"/> class uses to select data.  The function's signature isFunction(objectName, suffix, from,to, searchSuffix, aggregateColumns, selectedRows, outputType, includeSchema,checksum, del, orderBy, orderDirection, grid).The result will be sent to the Rendition.UI.gridSelectCallback procedure whichmust return a <link xlink:href="de0fdb88-125a-3606-d0af-83173204d97b"/>.The default function calls the C# Rendition.admin.dataSet method.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="b4914f7b-4498-0050-aaa1-3515a2a4b7e6"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Used globally by <link xlink:href="f5f5d4d4-f415-cd77-8e8f-c01e6464006a"/> show the dynamic grid CSS is missing until it's loaded later.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="ef3d2310-dfdb-431e-8330-0d339049abff"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="ed783620-e4d8-efe5-8299-af648f519342"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										This function processes the data returned from the server when the Rendition.UI.gridSelectURLis sent.  The object returned by this function must look like this:{error: &lt;Integer&gt;, description: &lt;String&gt;, primaryKey: &lt;String&gt;,verCol: &lt;Integer&gt; }.<para>The parameter [primaryKey] should be the primaryKey of the row updated.</para><para>The parameter [verCol] should be the new verCol of the row.</para><para>The parameter [error] can return one of the following values:</para>	<table>		<tableHeader>			<row>				<entry>					<para>						Error					</para>				</entry>				<entry>					<para>						Description					</para>				</entry>			</row>		</tableHeader>		<row>			<entry>				<para>					0				</para>			</entry>			<entry>				<para>					No error occured.				</para>			</entry>		</row>		<row>			<entry>				<para>					-1				</para>			</entry>			<entry>				<para>					Row value has changed on the server (verCol mismatch).				</para>			</entry>		</row>		<row>			<entry>				<para>					-2				</para>			</entry>			<entry>				<para>					Row has been deleted and cannot be updated or deleted.				</para>			</entry>		</row>		<row>			<entry>				<para>					Any other Integer				</para>			</entry>			<entry>				<para>					Custom error.  The [description] parameter will be displayed.				</para>			</entry>		</row>	</table>The signature of the function is Function(XMLHttpRequest e, <link xlink:href="f5f5d4d4-f415-cd77-8e8f-c01e6464006a"/> grid).The default function uses the C# Rendition.admin.dataSet method.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="ef3d2310-dfdb-431e-8330-0d339049abff"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="2372a9d4-df81-0b58-1385-4892704140ca"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										This function should return the URL the grid class uses to update tables.The function's signature isFunction(objectName, data, overwrite, grid).The server side function should update the row in the table matchingthe [objectName] parameter where the primary key equals the [primaryKey] parameter.When the boolean value [overwrite] is true, the user has requested tooverwrite existings values even if the row has changed since last update (verCol mismatch).If the [overwrite] parameter is false, than the user does not want to overwriteany records that have changed on the server since the last update (verCol mismatch).When this occurs, error -1 should be returned in the gridUpdateCallback object.When the record is deleted and cannot be updated error -2 should be returned.For more information see the Rendition.UI.gridUpdateCallback function documentation.The result will be sent to the Rendition.UI.gridUpdateCallback procedure whichmust return a an object that looks like this:{error: &lt;Integer&gt;, description: &lt;String&gt;, primaryKey: &lt;String&gt;,verCol: &lt;Integer&gt; }.The default function calls the C# Rendition.admin.Crud method.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="c55502fc-a58e-5bf7-671c-10a14949f484"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										List of <link xlink:href="ff420866-3fc0-36b6-2931-86efdaa6f297"/> elements.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="472b7ba4-e5e3-1f30-82ee-1fb5a1239eec"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="aff0140f-4732-4e27-0b14-8f90624c79ae"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Colors for the plot program and other color driven functions.  Each member looks like ['AliceBlue','#F0F8FF'].
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="fb480619-c8c6-b96f-03c5-8362684b35ad"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										List of icons.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="2435fb25-1cda-334a-1481-6fed5335fcd2"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										A random Id for this instance of Rendition UI.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="9598fad0-2d44-0273-0f8c-2f9342367987"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Detects IE within the user agent string.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="472b7ba4-e5e3-1f30-82ee-1fb5a1239eec"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="f496a6c0-d0bf-8df1-efc4-2d7301cb326d"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										List of image extentions for use in file manage as deafult double click behaviour.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="ef3d2310-dfdb-431e-8330-0d339049abff"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="9b1ab887-f42f-862d-4cc7-a615f349a503"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										URL to the init function on the server.  This JSON method, on callback starts the UI.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="8263596f-9372-da6c-c74b-039c2f94745d"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Detects iPhone within the user agent string.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="752335b2-ce60-7553-b398-40ef4d15e1c9"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The path the file explorer program will display by default.  Each time the path in the fileExplorer changes, it will update this path.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="b3ff4240-3271-1ec1-35ba-dac91f45ca67"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Log window.  Instance of <link xlink:href="dc990744-70f0-25bd-d971-be960b7764b6"/>.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="525d0064-1309-f55e-a6a8-fff69f5a1a09"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Maximum number of simultaneous ajax requests (to prevent the server from choking)
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="9ac227e3-5fde-118f-71f0-4815e402e185"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Default <link xlink:href="4e4ffaac-14fa-34ce-e801-bc0c5adfb424"/> for <link xlink:href="2e5cd548-e114-bc7b-38d1-14306fb354b0"/> <link xlink:href="c807995d-75de-b263-6de4-c0f04686a0bb"/> elements.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="fc351c03-a06f-c43b-45d7-2a4d2d0edc42"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										List of <link xlink:href="2e5cd548-e114-bc7b-38d1-14306fb354b0"/> widgets.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="a3460d7d-c0b9-31c2-d4d0-01a09f1b6636"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Ideal maximum width for all mobile devices.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="79635be3-8552-855f-5b70-744096f83acc"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Used globaly by all instances of <link xlink:href="c3297b0d-9e44-0956-efe9-aba03ac86241"/> to prevent validation looping.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="a7f3acb0-224b-8909-6eb3-cd48aa53d267"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Detects Opera within the user agent string.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="91bc5ebf-dc16-c081-3eff-659b35363ea6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="4e90e051-28c5-900e-773b-fa9e1c31bb73"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Startup parameters for the main Rendition class.  Altering the parametersof this property will change the startup behaviour of Rendition class.Parameters include: events: startedloading, finishedLoading, initURL, initCallbackboolean: preventDefaultStylecollection: icons e.g.: 
+{
+	text: 'Go to Admin Page',
+	src: '/admin/img/icons/cog.png',
+	message: 'Naviage to the admin',
+	proc: function (e) {
+		window.location = '/admin';
+	}
+}
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="472b7ba4-e5e3-1f30-82ee-1fb5a1239eec"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="6990338a-35c3-6a0b-93f2-b4a1dc04906d"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Colors for the plot program and other color driven functions.  Each entry looks like '#edc240'.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="8c93f27f-0303-cbf1-6966-a443eed7431b"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The key name used for the responder JSON program.  The default is "method".
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="7878ed9f-09d6-e44c-7d59-347663d11296"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										List of <link xlink:href="0a9e842e-a778-a2eb-5eac-ce7f79d23bbf"/> widgets.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="98d00a54-92b9-b4c6-c957-80c1a76e4e08"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Detects Safari within the user agent string.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="472b7ba4-e5e3-1f30-82ee-1fb5a1239eec"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="d5c7b9c9-f976-8eff-9a14-a787e623f9e4"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Status colors from green 0 to red 4.  For use with anything that might have a color status (level of importance).each member looks like like {background:'#00ff36',color:'#000'}.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="472b7ba4-e5e3-1f30-82ee-1fb5a1239eec"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="b6bb7d92-4a3a-ed57-3b5e-8e308fdcc672"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Associative array of extentions and default languages for use in ACE as default syntax type.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="aa380c71-3a03-3af0-9136-8f26c5d4188f"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										List of <link xlink:href="889dd046-9a0f-5ce0-7b0e-20041ca87b95"/> widgets.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="ff22099a-18a2-b585-38df-2f8ec460717c"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										List of <link xlink:href="c3a7e221-c590-1249-dbbc-f9d5507a8365"/> widgets.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="92f54a28-aa46-514b-136d-3506e86b0668"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Default <link xlink:href="aeb332a5-83ed-4ca6-3b0e-9066f318ddf7"/>.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="c77defa5-d079-2bb0-839d-01a6c0642952"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Default <link xlink:href="be66cff8-aea9-db6f-433c-4dd7a057d2a2"/>.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="bf54c2a8-a0b2-cd55-3c95-5bd343fac5e2"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										List of <link xlink:href="12f42c4e-04bb-e9a8-fe9f-49f0d39ec86f"/> widgets.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="4fc68276-ef6c-9fc8-aa42-0ac737461e4c"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Default <link xlink:href="c345e4c0-d66f-c868-d06f-7c2052d18186"/>.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="80be7a8a-4962-f3d6-00d8-f43bc23f5f3c"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Default <link xlink:href="57ef9840-ef6b-362d-f04c-5bfb1dec81ad"/>.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="472b7ba4-e5e3-1f30-82ee-1fb5a1239eec"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="e74777fe-604b-3a38-a6cc-4c7eed29465f"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										List of text extentions for use in file manage as deafult double click behaviour.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="28947d7a-d028-dd7f-45ba-78d6a1cd8f09"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Base ID number to start creating ID using the createId function.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="297357d2-2430-fb51-1045-b2a6ced13cab"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Z index to start stacking modal windows from.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="2949eec7-440b-96be-7706-a8b2988ddaf3"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Z index to start stacking windows from.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="9d4966b9-01fd-0739-79cf-5fd2824fa302"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The type of object.  Returns 'Rendition'.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="40edb45b-da3c-f432-ea0b-f35bfdc3e2c2"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The user agent string.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="0e75107c-7256-d3b9-002e-9a129956fafb"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="4d99f40f-8cda-9a5d-382b-1e97d67eb708"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Regular Expression for US ZIP codes.
+									</para>
+								</entry>
+							</row>
+						
+					</table>
+				</content>
+			</section>
+		
+
+	</developerConceptualDocument>
+</topic>

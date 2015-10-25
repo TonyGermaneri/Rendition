@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="36c3693a-4b54-f58a-7044-8a24cd001e84" revisionNumber="1" dataAlias="Rendition.UI.TreeView#TreeView.treeNode.containsNode">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction address="Intro">
+			Rendition.UI.TreeView#TreeView.treeNode.containsNode(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  testNode)
+			<para>Checks if this tree node contains a child matching the parameter [testNode] by comparing testNode.value with other node values in this treeNode's list of child elements.</para>
+		</introduction>
+		<definitionTable>
+			
+			
+				<definedTerm>
+					<para>Member Of</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="c6d834b2-5b8e-e096-55cf-f1a02dbc88bf"/>
+					</para>
+				</definition>
+			
+			
+				<definedTerm>
+					<para>Return Type</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+					</para>
+				</definition>
+			
+			
+				<definedTerm>
+					<para>Source</para>
+				</definedTerm>
+				<definition>
+					<para>
+						c:\Rendition\Rendition.Core\js\admin\UI\treeView.js
+					</para>
+				</definition>
+			
+		</definitionTable>
+		<section address="parameters">
+		<title>Parameters</title>
+			<sections>
+				<table>
+					<tableHeader>
+					<row>
+						<entry><para> </para></entry>
+						<entry><para>Name</para></entry>
+						<entry><para>Description</para></entry>
+					</row>
+					</tableHeader>
+					
+						<row>
+							<entry>
+								<para>
+									
+									Required
+									testNode
+									<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+								</para>
+							</entry>
+							<entry>
+								<para>
+									The treeNode Object you want check the existance of.
+								</para>
+							</entry>
+							<entry>
+								<para>
+									
+								</para>
+							</entry>
+						</row>
+					
+				</table>
+			</sections>
+		</section>
+	</developerConceptualDocument>
+</topic>

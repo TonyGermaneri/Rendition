@@ -1,0 +1,756 @@
+﻿<html xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+  <head>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8" />
+    <META NAME="save" CONTENT="history" />
+    <title>GroupBox</title>
+    <meta name="Language" content="en-us" />
+    <meta name="Microsoft.Help.Id" content="ff420866-3fc0-36b6-2931-86efdaa6f297" />
+    <meta name="Description" content="Creates a group box that opens and closes." />
+    <meta name="Microsoft.Help.ContentType" content="Concepts" />
+    <link rel="stylesheet" type="text/css" href="../styles/Presentation.css" />
+    <link rel="stylesheet" type="text/css" href="ms-help://Hx/HxRuntime/HxLink.css" />
+    <script type="text/javascript" src="../scripts/EventUtilities.js"> </script>
+    <script type="text/javascript" src="../scripts/SplitScreen.js"> </script>
+    <script type="text/javascript" src="../scripts/Dropdown.js"> </script>
+    <script type="text/javascript" src="../scripts/script_manifold.js"> </script>
+    <script type="text/javascript" src="../scripts/script_feedBack.js"> </script>
+    <script type="text/javascript" src="../scripts/CheckboxMenu.js"> </script>
+    <script type="text/javascript" src="../scripts/CommonUtilities.js"> </script>
+    <xml>
+      <MSHelp:Keyword Index="A" Term="ff420866-3fc0-36b6-2931-86efdaa6f297" />
+      <MSHelp:Attr Name="RevisionNumber" Value="1" />
+      <MSHelp:Attr Name="AssetID" Value="ff420866-3fc0-36b6-2931-86efdaa6f297" />
+      <MSHelp:Attr Name="Abstract" Value="Creates a group box that opens and closes." />
+      <MSHelp:Attr Name="TopicType" Value="kbArticle" />
+      <MSHelp:Attr Name="Locale" Value="en-us" />
+    </xml>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <input type="hidden" id="hiddenScrollOffset" />
+    <img id="collapseImage" style="display:none; height:0; width:0;" src="../icons/collapse_all.gif" alt="Collapse image" title="Collapse image" />
+    <img id="expandImage" style="display:none; height:0; width:0;" src="../icons/expand_all.gif" alt="Expand Image" title="Expand Image" />
+    <img id="collapseAllImage" style="display:none; height:0; width:0;" src="../icons/collapse_all.gif" />
+    <img id="expandAllImage" style="display:none; height:0; width:0;" src="../icons/expand_all.gif" />
+    <img id="dropDownImage" style="display:none; height:0; width:0;" src="../icons/dropdown.gif" />
+    <img id="dropDownHoverImage" style="display:none; height:0; width:0;" src="../icons/dropdownHover.gif" />
+    <img id="copyImage" style="display:none; height:0; width:0;" src="../icons/copycode.gif" alt="Copy image" title="Copy image" />
+    <img id="copyHoverImage" style="display:none; height:0; width:0;" src="../icons/copycodeHighlight.gif" alt="CopyHover image" title="CopyHover image" />
+    <div id="header">
+      <table id="topTable" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <span onclick="ExpandCollapseAll(toggleAllImage)" style="cursor:default;" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage, event)" tabindex="0">
+              <img ID="toggleAllImage" class="toggleAll" src="../icons/collapse_all.gif" /> <label id="collapseAllLabel" for="toggleAllImage" style="display: none;">Collapse All</label><label id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand All</label> </span>
+            <span>    </span>
+            <span id="devlangsDropdown" class="filter" tabindex="0">
+              <img id="devlangsDropdownImage" src="../icons/dropdown.gif" /> <label id="devlangsMenuAllLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: All </nobr></label><label id="devlangsMenuMultipleLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: Multiple </nobr></label><label id="devlangsMenuCSharpLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: C# </nobr></label><label id="devlangsMenuJavaScriptLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: JavaScript </nobr></label></span>
+          </td>
+        </tr>
+      </table>
+      <div id="devlangsMenu">
+        <input id="CSharpCheckbox" type="checkbox" data="CSharp,cs,'persist'" value="on" onClick="SetLanguage(this)" />
+        <label class="checkboxLabel" for="CSharpCheckbox">C#</label>
+        <br />
+        <input id="JavaScriptCheckbox" type="checkbox" data="JavaScript,cs,'persist'" value="on" onClick="SetLanguage(this)" />
+        <label class="checkboxLabel" for="JavaScriptCheckbox">JavaScript</label>
+        <br />
+      </div>
+      <table id="bottomTable" cellpadding="0" cellspacing="0">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">Rendition E-Commerce Framework</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">GroupBox</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td align="left">
+            <span id="headfeedbackarea" class="feedbackhead">
+              <a href="javascript:SubmitFeedback('tonygermaneri@gmail.com','Rendition E-Commerce Framework','','1.0.0.0','','%0\dYour%20feedback%20is%20used%20to%20improve%20the%20documentation%20and%20the%20product.%20Your%20e-mail%20address%20will%20not%20be%20used%20for%20any%20other%20purpose%20and%20is%20disposed%20of%20after%20the%20issue%20you%20report%20is%20resolved.%20%20While%20working%20to%20resolve%20the%20issue%20that%20you%20report,%20you%20may%20be%20contacted%20via%20e-mail%20to%20get%20further%20details%20or%20clarification%20on%20the%20feedback%20you%20sent.%20After%20the%20issue%20you%20report%20has%20been%20addressed,%20you%20may%20receive%20an%20e-mail%20to%20let%20you%20know%20that%20your%20feedback%20has%20been%20addressed.%0\A%0\d','Customer%20Feedback');">Send Feedback</a>
+            </span>
+          </td>
+        </tr>
+      </table>
+      <table id="gradientTable">
+        <tr>
+          <td class="nsrBottom" background="../icons/gradient.gif" />
+        </tr>
+      </table>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" />
+        <span style="color: DarkGray">
+          <p style="color: #dc143c; font-size: 8.5pt; font-weight: bold;">[This is preliminary documentation and is subject to change.]</p>
+        </span>
+        <a name="Intro"> </a>
+        <div class="introduction">
+			Class Rendition.UI.GroupBox
+			<p>Creates a group box that opens and closes.</p></div>
+        <p>
+          <dl class="authored">
+            <dt>
+              <p>Member Of</p>
+            </dt>
+            <dd>
+              <p>
+                <span sdata="link">
+                  <a href="ddee8d40-d92d-34d0-2be3-5f5d65f36f31.htm">UI</a>
+                </span>
+              </p>
+            </dd>
+            <dt>
+              <p>Source</p>
+            </dt>
+            <dd>
+              <p>
+							c:\Rendition\Rendition.Core\js\admin\UI\GroupBox.js
+						</p>
+            </dd>
+          </dl>
+        </p>
+        <a name="parameters"> </a>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(sectionToggleID0EFAAA)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(sectionToggleID0EFAAA, event)" tabindex="0">
+            <img id="sectionToggleID0EFAAA" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Constructor Parameters</span>
+        </h1>
+        <div id="sectionSectionID0EFAAA" class="section" name="collapseableSection" style="">
+          <div class="tableSection">
+            <table width="50%" cellspacing="2" cellpadding="5" frame="lhs">
+              <tr>
+                <th>
+                  <p />
+                </th>
+                <th>
+                  <p>Name</p>
+                </th>
+                <th>
+                  <p>Type</p>
+                </th>
+                <th>
+                  <p>Description</p>
+                </th>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Private Field" src="../media/privatefield.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										args 
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Parameters for the widget.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Private Field" src="../media/privatefield.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										args.alwaysExpanded 
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="feb87a09-e36a-9baa-3c23-409ea79458a9.htm">Boolean</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The groupBox will appear always expanded and cannot be closed.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Private Field" src="../media/privatefield.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										args.childNodes 
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536.htm">Array</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Array of child elements to append to the groupBox.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Private Field" src="../media/privatefield.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										args.title 
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <span class="nolink">[89f0508f-dccd-8863-9d09-b323af88a667]</span>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The title of the groupBox.  When a function is passed the function must return a string.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Private Field" src="../media/privatefield.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										args.parentNode 
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0.htm">DHTMLElement</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The parent DHTML element to append this groupBox to.
+									</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <a name="fields"> </a>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(sectionToggleID0EDAAA)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(sectionToggleID0EDAAA, event)" tabindex="0">
+            <img id="sectionToggleID0EDAAA" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Properties</span>
+        </h1>
+        <div id="sectionSectionID0EDAAA" class="section" name="collapseableSection" style="">
+          <div class="tableSection">
+            <table width="50%" cellspacing="2" cellpadding="5" frame="lhs">
+              <tr>
+                <th>
+                  <p />
+                </th>
+                <th>
+                  <p>Name</p>
+                </th>
+                <th>
+                  <p>Type</p>
+                </th>
+                <th>
+                  <p>Description</p>
+                </th>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="2b0dc8a9-b93b-bf84-3e6f-65a970ef483e.htm">childNodes</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="36802977-faa0-b394-beea-eebbbc3b2d5a.htm">Integer</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										List of child elements in this widget.
+<div class="alert"><table><tr><th><img src="../icons/alert_note.gif" title="Note" /> <b>Note</b></th></tr><tr><td>This only works if you add elements via groupBox.appendChild to add child nodes
+or child nodes are passed during instantiation.</td></tr></table></div></p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="c7ffc4d3-bb49-c66c-7808-eaf557c6dcdd.htm">expander</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0.htm">DHTMLElement</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The expander control arrow that points right or down depending on the toggled state.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="dd449987-0d25-0643-82a4-97048c97da1a.htm">id</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Unique id of this widget.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="3fd2452a-12e2-2276-0600-c39f03e906a0.htm">index</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="36802977-faa0-b394-beea-eebbbc3b2d5a.htm">Integer</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Index of this groupBox in the Rendition.UI.groupBoxes array
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="6ecdc5b2-cffe-970a-e2ab-ce6476536077.htm">inner</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0.htm">DHTMLElement</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The inner most DIV, this DIV holds the content of the groupBox.
+You should use the groupBox.appendChild method to append child element.
+Don't use this node directly or risk breaking some functionality.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="a096cf84-aefa-799c-7cbb-36c86bc9b952.htm">outer</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0.htm">DHTMLElement</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The DIV that holds everything in the group box.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="de7aa0fb-6a27-8dfc-fe22-ed5d575d976f.htm">tspan</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0.htm">DHTMLElement</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The DIV that holds the title text.
+									</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <a name="methods"> </a>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(sectionToggleID0EBAAA)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(sectionToggleID0EBAAA, event)" tabindex="0">
+            <img id="sectionToggleID0EBAAA" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Methods</span>
+        </h1>
+        <div id="sectionSectionID0EBAAA" class="section" name="collapseableSection" style="">
+          <div class="tableSection">
+            <table width="50%" cellspacing="2" cellpadding="5" frame="lhs">
+              <tr>
+                <th>
+                  <p />
+                </th>
+                <th>
+                  <p>Name</p>
+                </th>
+                <th>
+                  <p>Type</p>
+                </th>
+                <th>
+                  <p>Description</p>
+                </th>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Method" src="../media/publicmethod.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="124d4765-977e-0176-3749-2173354c2451.htm">addEventListener</a>
+                    </span>(<span sdata="link"><a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a></span>  type, <span sdata="link"><a href="ef3d2310-dfdb-431e-8330-0d339049abff.htm">Function</a></span>  proc, <span sdata="link"><a href="feb87a09-e36a-9baa-3c23-409ea79458a9.htm">Boolean</a></span>  capture)
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="044fcb55-0c5f-d88f-619c-455ffb8b2600.htm">undefined</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Attach a procedure to an event.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Method" src="../media/publicmethod.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="a0b2c1d0-adba-f5cd-4fa1-d2f54d91a8c7.htm">appendChild</a>
+                    </span>()
+									</p>
+                </td>
+                <td>
+                  <p />
+                </td>
+                <td>
+                  <p>
+										Appends a DHTML element to the group box.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Method" src="../media/publicmethod.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="87e8517a-5cdc-49b2-8fa0-aa6ebf7f88d4.htm">appendTo</a>
+                    </span>()
+									</p>
+                </td>
+                <td>
+                  <p />
+                </td>
+                <td>
+                  <p>
+										Appends the groupBox to a parentElement and wires up resize events.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Method" src="../media/publicmethod.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="c3d4dcb3-0e9a-8a58-b26f-ecb8ebcd19d8.htm">expand</a>
+                    </span>()
+									</p>
+                </td>
+                <td>
+                  <p />
+                </td>
+                <td>
+                  <p>
+										Opens/Closes the group box by setting the 'inner' DIV from hidden/none to visible/block.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Method" src="../media/publicmethod.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="a335f3c9-4cdd-2db9-fd16-6bdffee39266.htm">hide</a>
+                    </span>()
+									</p>
+                </td>
+                <td>
+                  <p />
+                </td>
+                <td>
+                  <p>
+										Hides the group box.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Method" src="../media/publicmethod.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="a8ab5952-6deb-c987-b0c8-7d96f67a7695.htm">resize</a>
+                    </span>()
+									</p>
+                </td>
+                <td>
+                  <p />
+                </td>
+                <td>
+                  <p>
+										Redraw the group box, reapply the style.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Method" src="../media/publicmethod.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="f8f360ba-bab2-4d8d-37ae-6fffd57f4354.htm">show</a>
+                    </span>()
+									</p>
+                </td>
+                <td>
+                  <p />
+                </td>
+                <td>
+                  <p>
+										Show (unhide) the group box.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Method" src="../media/publicmethod.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="9c7c4345-a8f5-e7d0-9f23-7ef086f66cbb.htm">title</a>
+                    </span>()
+									</p>
+                </td>
+                <td>
+                  <p />
+                </td>
+                <td>
+                  <p>
+										Sets the title of the groupBox.  This can be a string or a function that returns a string.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Method" src="../media/publicmethod.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="929996aa-0158-fc82-e2fc-5c36290f18a0.htm">toggleVisibility</a>
+                    </span>()
+									</p>
+                </td>
+                <td>
+                  <p />
+                </td>
+                <td>
+                  <p>
+										Toggle the visibility of the groupBox.
+									</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div id="footer">
+        <div class="footerLine">
+          <img width="100%" height="3px" src="../icons/footer.gif" alt="Footer image" title="Footer image" />
+        </div>
+        <A NAME="feedback"></A>
+        <span id="fb" class="feedbackcss"></span>
+        <p />Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:tonygermaneri%40gmail.com?Subject=Rendition E-Commerce Framework">Tony Germaneri</a><script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        var HT_mailLinkText = HT_mailLink.innerHTML;
+        HT_mailLink.href += ": " + document.title;
+        HT_mailLink.innerHTML = HT_mailLinkText;
+        </script><p />Copyright © Tony Germaneri 2011</div>
+    </div>
+  </body>
+</html>

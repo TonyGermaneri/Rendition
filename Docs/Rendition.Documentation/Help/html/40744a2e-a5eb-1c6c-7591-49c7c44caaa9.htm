@@ -1,0 +1,718 @@
+﻿<html xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+  <head>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8" />
+    <META NAME="save" CONTENT="history" />
+    <title>GraphOptions</title>
+    <meta name="Language" content="en-us" />
+    <meta name="Microsoft.Help.Id" content="40744a2e-a5eb-1c6c-7591-49c7c44caaa9" />
+    <meta name="Description" content="Options for a object. Some properties only work for certain graph types." />
+    <meta name="Microsoft.Help.ContentType" content="Concepts" />
+    <link rel="stylesheet" type="text/css" href="../styles/Presentation.css" />
+    <link rel="stylesheet" type="text/css" href="ms-help://Hx/HxRuntime/HxLink.css" />
+    <script type="text/javascript" src="../scripts/EventUtilities.js"> </script>
+    <script type="text/javascript" src="../scripts/SplitScreen.js"> </script>
+    <script type="text/javascript" src="../scripts/Dropdown.js"> </script>
+    <script type="text/javascript" src="../scripts/script_manifold.js"> </script>
+    <script type="text/javascript" src="../scripts/script_feedBack.js"> </script>
+    <script type="text/javascript" src="../scripts/CheckboxMenu.js"> </script>
+    <script type="text/javascript" src="../scripts/CommonUtilities.js"> </script>
+    <xml>
+      <MSHelp:Keyword Index="A" Term="40744a2e-a5eb-1c6c-7591-49c7c44caaa9" />
+      <MSHelp:Attr Name="RevisionNumber" Value="1" />
+      <MSHelp:Attr Name="AssetID" Value="40744a2e-a5eb-1c6c-7591-49c7c44caaa9" />
+      <MSHelp:Attr Name="Abstract" Value="Options for a object. Some properties only work for certain graph types." />
+      <MSHelp:Attr Name="TopicType" Value="kbArticle" />
+      <MSHelp:Attr Name="Locale" Value="en-us" />
+    </xml>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <input type="hidden" id="hiddenScrollOffset" />
+    <img id="collapseImage" style="display:none; height:0; width:0;" src="../icons/collapse_all.gif" alt="Collapse image" title="Collapse image" />
+    <img id="expandImage" style="display:none; height:0; width:0;" src="../icons/expand_all.gif" alt="Expand Image" title="Expand Image" />
+    <img id="collapseAllImage" style="display:none; height:0; width:0;" src="../icons/collapse_all.gif" />
+    <img id="expandAllImage" style="display:none; height:0; width:0;" src="../icons/expand_all.gif" />
+    <img id="dropDownImage" style="display:none; height:0; width:0;" src="../icons/dropdown.gif" />
+    <img id="dropDownHoverImage" style="display:none; height:0; width:0;" src="../icons/dropdownHover.gif" />
+    <img id="copyImage" style="display:none; height:0; width:0;" src="../icons/copycode.gif" alt="Copy image" title="Copy image" />
+    <img id="copyHoverImage" style="display:none; height:0; width:0;" src="../icons/copycodeHighlight.gif" alt="CopyHover image" title="CopyHover image" />
+    <div id="header">
+      <table id="topTable" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <span onclick="ExpandCollapseAll(toggleAllImage)" style="cursor:default;" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage, event)" tabindex="0">
+              <img ID="toggleAllImage" class="toggleAll" src="../icons/collapse_all.gif" /> <label id="collapseAllLabel" for="toggleAllImage" style="display: none;">Collapse All</label><label id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand All</label> </span>
+            <span>    </span>
+            <span id="devlangsDropdown" class="filter" tabindex="0">
+              <img id="devlangsDropdownImage" src="../icons/dropdown.gif" /> <label id="devlangsMenuAllLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: All </nobr></label><label id="devlangsMenuMultipleLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: Multiple </nobr></label><label id="devlangsMenuCSharpLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: C# </nobr></label><label id="devlangsMenuJavaScriptLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: JavaScript </nobr></label></span>
+          </td>
+        </tr>
+      </table>
+      <div id="devlangsMenu">
+        <input id="CSharpCheckbox" type="checkbox" data="CSharp,cs,'persist'" value="on" onClick="SetLanguage(this)" />
+        <label class="checkboxLabel" for="CSharpCheckbox">C#</label>
+        <br />
+        <input id="JavaScriptCheckbox" type="checkbox" data="JavaScript,cs,'persist'" value="on" onClick="SetLanguage(this)" />
+        <label class="checkboxLabel" for="JavaScriptCheckbox">JavaScript</label>
+        <br />
+      </div>
+      <table id="bottomTable" cellpadding="0" cellspacing="0">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">Rendition E-Commerce Framework</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">GraphOptions</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td align="left">
+            <span id="headfeedbackarea" class="feedbackhead">
+              <a href="javascript:SubmitFeedback('tonygermaneri@gmail.com','Rendition E-Commerce Framework','','1.0.0.0','','%0\dYour%20feedback%20is%20used%20to%20improve%20the%20documentation%20and%20the%20product.%20Your%20e-mail%20address%20will%20not%20be%20used%20for%20any%20other%20purpose%20and%20is%20disposed%20of%20after%20the%20issue%20you%20report%20is%20resolved.%20%20While%20working%20to%20resolve%20the%20issue%20that%20you%20report,%20you%20may%20be%20contacted%20via%20e-mail%20to%20get%20further%20details%20or%20clarification%20on%20the%20feedback%20you%20sent.%20After%20the%20issue%20you%20report%20has%20been%20addressed,%20you%20may%20receive%20an%20e-mail%20to%20let%20you%20know%20that%20your%20feedback%20has%20been%20addressed.%0\A%0\d','Customer%20Feedback');">Send Feedback</a>
+            </span>
+          </td>
+        </tr>
+      </table>
+      <table id="gradientTable">
+        <tr>
+          <td class="nsrBottom" background="../icons/gradient.gif" />
+        </tr>
+      </table>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" />
+        <span style="color: DarkGray">
+          <p style="color: #dc143c; font-size: 8.5pt; font-weight: bold;">[This is preliminary documentation and is subject to change.]</p>
+        </span>
+        <a name="Intro"> </a>
+        <div class="introduction">
+			Class Rendition.UI.GraphOptions
+			<p>Options for a <span sdata="link"><a href="fce458ca-7a4b-caad-c699-ee63d754ab9a.htm">Chart</a></span> object.  Some properties only work for certain graph types.</p></div>
+        <p>
+          <dl class="authored">
+            <dt>
+              <p>Member Of</p>
+            </dt>
+            <dd>
+              <p>
+                <span sdata="link">
+                  <a href="ddee8d40-d92d-34d0-2be3-5f5d65f36f31.htm">UI</a>
+                </span>
+              </p>
+            </dd>
+            <dt>
+              <p>Source</p>
+            </dt>
+            <dd>
+              <p>
+							c:\Rendition\Rendition.Core\js\admin\UI\chart.js
+						</p>
+            </dd>
+          </dl>
+        </p>
+        <a name="fields"> </a>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(sectionToggleID0ECAAA)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(sectionToggleID0ECAAA, event)" tabindex="0">
+            <img id="sectionToggleID0ECAAA" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Properties</span>
+        </h1>
+        <div id="sectionSectionID0ECAAA" class="section" name="collapseableSection" style="">
+          <div class="tableSection">
+            <table width="50%" cellspacing="2" cellpadding="5" frame="lhs">
+              <tr>
+                <th>
+                  <p />
+                </th>
+                <th>
+                  <p>Name</p>
+                </th>
+                <th>
+                  <p>Type</p>
+                </th>
+                <th>
+                  <p>Description</p>
+                </th>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="24c9a518-06bc-1982-7b47-a125bd30cd7d.htm">barSpacing</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="a3e3dbd9-fd59-d646-7e80-9dbb7fc58a69.htm">Float</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Spacing between bars
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="dedf87ce-fafb-ab86-5c75-ff5a4152a672.htm">fill</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Bar fill options.  And instance of <span sdata="link"><a href="975f2436-f4b9-865b-b463-f6a84bd7cda9.htm">FillOptions</a></span></p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="d6ddc6eb-c98c-5807-dd63-87663a188e66.htm">fontFamily</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Font family
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="5e9a2aa7-fd00-b7d4-7d0d-cf59ccb872c4.htm">height</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="36802977-faa0-b394-beea-eebbbc3b2d5a.htm">Integer</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Height of the image
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="7dc338ba-1973-63e9-4f50-0e919f058b69.htm">isItalic</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="feb87a09-e36a-9baa-3c23-409ea79458a9.htm">Boolean</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										if true then font is italic
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="b506e842-e3f0-4ed1-f76e-617045dde8e6.htm">noDataMessage</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="a3e3dbd9-fd59-d646-7e80-9dbb7fc58a69.htm">Float</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Message to show when no data is present.  
+This error message uses <span sdata="link"><span class="nolink">[688f5cab-9f8f-c2de-0bc7-833e91e11820]</span></span> and
+<span sdata="link"><span class="nolink">[28c3034e-5d32-70a3-f2d2-ce5ddf4bce69]</span></span> for error text formating.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="bd36123f-4962-7926-0b54-21e49687c725.htm">nodeLabel</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="feb87a09-e36a-9baa-3c23-409ea79458a9.htm">Boolean</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										if true, node label will be drawn
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="27125723-2284-bd16-0366-3eee1992e3ec.htm">nodeLabelFontSize</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="a3e3dbd9-fd59-d646-7e80-9dbb7fc58a69.htm">Float</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Font size of the label
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="f0258e90-d77a-5d49-5d7f-491c8031e704.htm">nodeLabelFormat</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Format of the node label.  See http://msdn.microsoft.com/en-us/library/kfsatb94.aspx for doubles (currency).
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="ab8ceb6c-3df3-be79-a9bc-e87f247c8324.htm">nodeLabelRotation</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="a3e3dbd9-fd59-d646-7e80-9dbb7fc58a69.htm">Float</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Angle of the node lables
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="bdac3ce9-6ae7-9ab7-7ed4-bc585c6d6a69.htm">orientation</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="feb87a09-e36a-9baa-3c23-409ea79458a9.htm">Boolean</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										orientation of the bars
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="e5997683-d9c7-2233-1edc-c9048b3a3444.htm">showLegend</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="feb87a09-e36a-9baa-3c23-409ea79458a9.htm">Boolean</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										if true, the legend will be drawn
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="652d5238-c9a2-e94a-3218-bac8f9d47e24.htm">title</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										title of the graph
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="0c66a8ed-da69-c9cd-5f54-627335fb2b19.htm">titleFontSize</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="a3e3dbd9-fd59-d646-7e80-9dbb7fc58a69.htm">Float</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										title font size
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="a139fa63-8307-5933-0a50-076639926b07.htm">width</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="36802977-faa0-b394-beea-eebbbc3b2d5a.htm">Integer</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Width of the image
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="cb4f3e66-bb55-9df7-b2f3-e90aacb2b878.htm">xAxisFontAngle</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="a3e3dbd9-fd59-d646-7e80-9dbb7fc58a69.htm">Float</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										xAxis font angle
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="883d6a6e-b5fd-535a-c77c-e72a322fde6e.htm">xAxisFontSize</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="a3e3dbd9-fd59-d646-7e80-9dbb7fc58a69.htm">Float</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										xAxis font size
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="0f6bb654-1fbc-35dd-8c1c-e6418ed69fcf.htm">xAxisFormat</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Format of the xAxis
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="f2fc318b-b296-c305-452b-9e4f083d94a6.htm">xAxisTitle</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										xAxis title
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="4191760f-9780-35f9-3225-32378ff091f4.htm">yAxisTitle</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										yAxis title
+									</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div id="footer">
+        <div class="footerLine">
+          <img width="100%" height="3px" src="../icons/footer.gif" alt="Footer image" title="Footer image" />
+        </div>
+        <A NAME="feedback"></A>
+        <span id="fb" class="feedbackcss"></span>
+        <p />Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:tonygermaneri%40gmail.com?Subject=Rendition E-Commerce Framework">Tony Germaneri</a><script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        var HT_mailLinkText = HT_mailLink.innerHTML;
+        HT_mailLink.href += ": " + document.title;
+        HT_mailLink.innerHTML = HT_mailLinkText;
+        </script><p />Copyright © Tony Germaneri 2011</div>
+    </div>
+  </body>
+</html>

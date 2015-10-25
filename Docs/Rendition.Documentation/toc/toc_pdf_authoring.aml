@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="f606c1c6-d79b-45df-a036-a4dbbba979c8" revisionNumber="1">
+  <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <introduction>
+      <autoOutline />
+      <para>PDFs are authored using Acrobat Pro or Open Office.
+      As of the writing of this document Open Office cannot
+      import static vector graphics so it is recommended you use
+      Acrobat Pro.  Rendition reads the PDFs you create using
+      the aforementioned programs and creates new PDFs with dynamic
+      information based on the PDFs you created.  Within the PDF
+      you can execute C# methods, read SQL data sources,
+      read in request variables from the URL, set the data source,
+      loop through records, and display binary images and vectors from C# methods.
+      At the end of this topic is a description of example documents that can be found in the 
+      Rendition reference site in the PDFs directory.</para>
+       <para>
+       There are always two PDFs involved in any PDF creation procedure.
+       The PDF you create and the PDF that is created by the system
+       by reading your PDF.  The PDF you create is called the PDF template
+       and the PDF that is created by the system is called the output PDF.
+       </para>
+    </introduction>  
+    <section address="security">
+      <title>PDF Security Mode ( Administrative or Public )</title>
+      <content>
+       <para>
+       There are two security modes that the PDF rendering procedure can be
+       run in.  You can determine which mode is used by the URL you use to call
+       the PDF.  If you use the administrative responder URL 
+       ( default: /admin/responder ) a low security mode is used.  In this mode
+       SQL interjection is allowed, and methods from the Rendition.Admin class
+       can be used.  If you use the public responder URL ( default: /responder )
+       a hardened security mode will be used that prevents SQL interjeciton
+       and only allows methods from Rendition.Merchant to be executed.
+       </para>
+      </content>
+    </section>
+    <section address="dynamicData">
+      <title>About Dynamic Data.</title>
+      <content>
+       <para>The template PDF can be in one of two modes:  Query mode or
+       Procedureal mode.
+       </para>
+       <para>In query mode one or two SQL queries are
+       inserted into the one or three page PDF (more on how to later).
+       Each of the three pages represents the first, middle pages, and
+       last page of the output PDF.  You will be able to determine
+       the number of records per page or allow Rendition to detect
+       how many records will fit on your PDF template.  One or Three template
+       pages are required to deal with outputting a variable number of records.
+       </para>
+       <para>
+       If a PDF template only displays a single record, for example an item
+       brocure PDF, only a single query is required.  For PDF templates 
+       that display multiple records, for example an invoice, 
+       two queries are required, the first query is the "header" query that
+       should return a single record, the second query is the "detail" query
+       should contain one or more records.
+       </para>
+       <para>Data from the submitted form or querystring can be used anywhere
+       just as if were typing into the PDF.  Anytime &lt;#keyname#&gt; is encountered
+       the PDF program will turn this into the matching key's value.  For example
+       if I went to the URL 
+       http://www.mysite.com/responder?method1={Print,['Invoice']}&amp;orderNumber=21
+       I would be able to use the key value "orderNumber" by entering
+       &lt;#orderNumber#&gt; into the property name or default value field of
+       any PDF text element.
+       
+<alert class="note">
+  <para>When in public security mode, only method parameters can be filled using this method.
+  When in administrative security mode you can use this method to write entire SQL queries
+  or invoke entire methods dynamically.  In both security modes, the System.Data.SqlClient.SqlCommand
+  only works in select mode, so inserts, updates and deletes are not possible.
+  </para>
+</alert>
+
+       </para>
+       <para>
+       The following table describes common page output scenarios varried
+       depending on how many pages are required to hold the number of records
+       returned in the detail SQL query.
+       </para>
+		<table>
+		  <tableHeader>
+		    <row>
+		      <entry>Number of pages</entry>
+		      <entry>Template Pages Ouput</entry>
+		    </row>
+		  </tableHeader>
+		  <row>
+		    <entry>1</entry>
+		    <entry>First template page</entry>
+		  </row>
+		  <row>
+		    <entry>2</entry>
+		    <entry>First template page 1x, Last template Page 1x</entry>
+		  </row>
+		  <row>
+		    <entry>3</entry>
+		    <entry>First template page 1x, Middle template page 1x, Last template Page 1x</entry>
+		  </row>
+		  <row>
+		    <entry>4 or more</entry>
+		    <entry>First template page 1x, Middle template page 2x or more, Last template Page 1x</entry>
+		  </row>
+		</table>
+		
+       <para>
+       If a PDF template has only a single page, that page will be used
+       as the first, middle and last page.
+       </para>
+       
+       <para>
+       PDF templates in Procedural mode contain no SQL queries and can only
+       display information from the Url or execute C# methods.
+       </para>
+       
+      </content>
+    </section>
+    <section address="pdfElements">
+      <title>Dynamic Content PDF Elements</title>
+      <content>
+       <para>There are two types of Dynamic Content PDF Elements.
+       Document Property elements and Output Elements.
+       </para>
+       <para>
+       These elements are nothing more than PDF Form Text Fields with specific
+       names and properties.  The properties of the text fields
+       will determine font size, color, alignment etc..  When a
+       C# method is called and and a System.Drawing.Image object is returned
+       the image will be rendered into the bounding box of the text field.
+       Property elements are predefined by Rendition and controls
+       PDF template behaviour.
+       </para>
+       <para>
+       Below is a list of the different Property elements.  The value of
+       each of these properties should be inserted into the "Default Value"
+	   field of the element.
+       </para>
+		<table>
+		  <tableHeader>
+		    <row>
+		      <entry>Name</entry>
+		      <entry>Description</entry>
+		      <entry>PDF Template Mode</entry>
+		    </row>
+		  </tableHeader>
+		  <row>
+		    <entry>_header</entry>
+		    <entry>This element defines the header SQL query.
+		    Form and Querystrings can be called upon
+		    within the query using this format: 
+		    <code lang="none">&lt;#keyName#&gt;</code>
+		    keyName should be replaced by the form or querystring keyname
+		    you are expecting.  All injected values are sanitised
+		    prior to insertion. ( via: Replace("'","''") )
+		    </entry>
+		    <entry>Query</entry>
+		  </row>
+		  <row>
+		    <entry>_body</entry>
+		    <entry>This element defines the detail SQL query.
+		    Form and Querystrings can be called upon
+		    within the query using this format: 
+		    <code lang="none">&lt;#keyName#&gt;</code>
+		    keyName should be replaced by the form or querystring keyname
+		    you are expecting.  All injected values are sanitised
+		    prior to insertion. ( via: Replace("'","''") )
+		    </entry>
+		    <entry>Query</entry>
+		  </row>
+		  <row>
+		    <entry>_verticalSpacing</entry>
+		    <entry>The vertical spacing of records in points.
+		    </entry>
+		    <entry>Query</entry>
+		  </row>
+		  <row>
+		    <entry>_recordsPerPage</entry>
+		    <entry>The number of records per page 
+		    </entry>
+		    <entry>Query</entry>
+		  </row>
+		  <row>
+		    <entry>_fileName</entry>
+		    <entry>
+		    File name of the resulting PDF.
+		    Form and Querystrings can be called upon
+		    using this format: <code lang="none">&lt;#keyName#&gt;</code>
+		    keyName should be replaced by the form or querystring keyname
+		    you are expecting.
+		    </entry>
+		    <entry>Query, Procedureal</entry>
+		  </row>
+		  <row>
+		    <entry>_pages</entry>
+		    <entry>Displays the value "Page x of x"
+		    using the display properties of the element
+		    (font, color, etc.).
+		    </entry>
+		    <entry>Query</entry>
+		  </row>
+		</table>
+		
+       <para>
+       All other dynamic PDF elements are defined by either
+       querystring/form parameters or by the SQL query (for PDF Templates in
+       query mode only).  To display dynamic data your field name must
+       begin with the &gt; (greater than) sign then be followed by
+       a name.  When using a PDF in query mode, when the field name
+       matches a SQL column name the field will be replaced by the
+       value of the first record.  To create a repeating area,
+       prefix your field name with &gt;&gt; (doube greater than).
+       These repeating area fields will output one per record
+       found in the detail SQL query (above).  Each row is seperated by
+       the vertical spacing attribute of the document (above).
+       </para>
+       <para>
+       Setting the font size, family, color alignment and more for the
+       text field will cause the output data to inherit these style properties.
+       </para>
+       <para>
+       Any field with the name &gt;Image will try and cast the returned data
+       as a binary image of the type System.Drawing.Image.  The syntax for the
+       image field is in JSON format:
+       <code lang="none">
+       		&gt;Image["METHOD_NAME",["ARGUMENT_1","ARGUMENT_2",..etc.]]
+       </code>
+       Because of the JSON format only data valid in JSON can be passed to the
+       C# method.  So only numbers, strings, dates and boolean data types
+       can be passed from the PDF template.  The method called must return
+       a type that can be cast as System.Drawing.Image.
+<alert class="note">
+  <para>Any errors that occur in image generating field will be displayed
+  in very small vector text in the field itself, so you may need to zoom
+  into the output PDF to see the error description.</para>
+</alert>
+       </para>
+       <para>
+       Below are a few examples of text field names.
+       </para>
+       <table>
+         <tableHeader>
+		    <row>
+		      <entry>Example name</entry>
+		      <entry>Description</entry>
+		    </row>
+		  </tableHeader>
+		  <row>
+		    <entry>&gt;ordernumber</entry>
+		    <entry>This field would display a SQL column called "ordernumber"
+		    from the header SQL query.
+		    </entry>
+		  </row>
+		  <row>
+		    <entry>&gt;&gt;itemNumber</entry>
+		    <entry>This field would display a SQL column called "itemnumber"
+		    from the detail SQL query.  This field will repeat once for each
+		    record, the value changing to each record respectivly.  The distance
+		    between each field can be set by using the vertical spacing attribute
+		    found above in the Property elements section.
+		    </entry>
+		  </row>
+		  <row>
+		    <entry>&gt;image[&quot;BarCode&quot;,[&quot;CODE 128&quot;,&quot;&gt;orderNumber;&quot;,{}]]</entry>
+		    <entry>This text element will be replaced by an image generated by
+		    the BarCode method in either the Rendition.Admin class or the
+		    Rendition.Merchant class (it exists in both classes).  The BarCode
+		    method's second argument is the value of the bar code.  A SQL
+		    column name (prefixed with &gt;) is used as the value.  
+<alert class="note">
+  <para>Notice the quotes around the &gt;columnName.  If your SQL variable is
+a string, quotes are required.</para>
+</alert>
+		    </entry>
+		  </row>
+		 </table>
+      </content>
+    </section>
+	<section address="salesreceipt">
+      <title>Sales Receipt</title>
+      <content>
+       <para>This is an example sales receipt, selecting
+        a header recordset based on a request querystring and
+        loops through a detail recordset overlaying the 
+        recordset data on a vector background.</para>
+      </content>
+    </section>
+    <section address="examples">
+      <title>Example Documents</title>
+      <content>
+       <para>Below is a descripton of the example documents provided in the
+       reference web site downloadable from http://www.antidote12.com/. 
+	    <section address="salesreceipt">
+	      <title>Sales Receipt</title>
+	      <content>
+	       <para>This is an example sales receipt, selecting
+	        a header recordset based on a request querystring and
+	        loops through a detail recordset overlaying the 
+	        recordset data on a vector background.</para>
+	      </content>
+	    </section>
+		<section address="packingslip">
+	      <title>Packing Slip</title>
+	      <content>
+	        <para>This is an example packing slip, selecting
+	        a header recordset based on a request querystring and
+	        loops through a detail recordset overlaying the 
+	        recordset data on a vector background.</para>
+	      </content>
+	    </section>
+		<section address="packingslip">
+	      <title>Chart</title>
+	      <content>
+	        <para>This is an example chart, an image
+	        called from a request querystring and executed
+	        from a c# method that creates chart images.</para>
+	      </content>
+	    </section>
+	        
+        
+        </para>
+      </content>
+    </section>
+    <relatedTopics>
+      <codeEntityReference>M:Rendition.Admin.Print</codeEntityReference>
+      <codeEntityReference>M:Rendition.Commerce.Print</codeEntityReference>
+    </relatedTopics>
+  </developerConceptualDocument>
+</topic>

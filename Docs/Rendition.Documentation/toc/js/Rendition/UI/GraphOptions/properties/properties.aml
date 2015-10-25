@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="4d0334a6-b469-04a0-b998-10d1a1827ca4" revisionNumber="1" dataAlias="Rendition.UI.GraphOptions">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		
+		<definitionTable>
+			
+				<definedTerm>
+					<para>Member Of</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="b584e6c6-2f5a-6c97-4e57-2ad4afa995cc"/>
+					</para>
+				</definition>
+			
+		</definitionTable>
+		
+			<section address="fields">
+				<title>Rendition.UI.GraphOptions Properties</title>
+				<content>
+					<table>
+						<tableHeader>
+							<row>
+								<entry><para> </para></entry>
+								<entry><para>Type</para></entry>
+								<entry><para>Name</para></entry>
+								<entry><para>Description</para></entry>
+							</row>
+						</tableHeader>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="a3e3dbd9-fd59-d646-7e80-9dbb7fc58a69"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="24c9a518-06bc-1982-7b47-a125bd30cd7d"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Spacing between bars
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="dedf87ce-fafb-ab86-5c75-ff5a4152a672"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Bar fill options.  And instance of <link xlink:href="975f2436-f4b9-865b-b463-f6a84bd7cda9"/>
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="d6ddc6eb-c98c-5807-dd63-87663a188e66"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Font family
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="5e9a2aa7-fd00-b7d4-7d0d-cf59ccb872c4"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Height of the image
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="7dc338ba-1973-63e9-4f50-0e919f058b69"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										if true then font is italic
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="a3e3dbd9-fd59-d646-7e80-9dbb7fc58a69"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="b506e842-e3f0-4ed1-f76e-617045dde8e6"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Message to show when no data is present.  This error message uses <link xlink:href="688f5cab-9f8f-c2de-0bc7-833e91e11820"/> and<link xlink:href="28c3034e-5d32-70a3-f2d2-ce5ddf4bce69"/> for error text formating.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="bd36123f-4962-7926-0b54-21e49687c725"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										if true, node label will be drawn
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="a3e3dbd9-fd59-d646-7e80-9dbb7fc58a69"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="27125723-2284-bd16-0366-3eee1992e3ec"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Font size of the label
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="f0258e90-d77a-5d49-5d7f-491c8031e704"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Format of the node label.  See http://msdn.microsoft.com/en-us/library/kfsatb94.aspx for doubles (currency).
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="a3e3dbd9-fd59-d646-7e80-9dbb7fc58a69"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="ab8ceb6c-3df3-be79-a9bc-e87f247c8324"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Angle of the node lables
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="bdac3ce9-6ae7-9ab7-7ed4-bc585c6d6a69"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										orientation of the bars
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="e5997683-d9c7-2233-1edc-c9048b3a3444"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										if true, the legend will be drawn
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="652d5238-c9a2-e94a-3218-bac8f9d47e24"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										title of the graph
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="a3e3dbd9-fd59-d646-7e80-9dbb7fc58a69"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="0c66a8ed-da69-c9cd-5f54-627335fb2b19"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										title font size
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="a139fa63-8307-5933-0a50-076639926b07"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Width of the image
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="a3e3dbd9-fd59-d646-7e80-9dbb7fc58a69"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="cb4f3e66-bb55-9df7-b2f3-e90aacb2b878"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										xAxis font angle
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="a3e3dbd9-fd59-d646-7e80-9dbb7fc58a69"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="883d6a6e-b5fd-535a-c77c-e72a322fde6e"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										xAxis font size
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="0f6bb654-1fbc-35dd-8c1c-e6418ed69fcf"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Format of the xAxis
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="f2fc318b-b296-c305-452b-9e4f083d94a6"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										xAxis title
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="4191760f-9780-35f9-3225-32378ff091f4"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										yAxis title
+									</para>
+								</entry>
+							</row>
+						
+					</table>
+				</content>
+			</section>
+		
+
+	</developerConceptualDocument>
+</topic>

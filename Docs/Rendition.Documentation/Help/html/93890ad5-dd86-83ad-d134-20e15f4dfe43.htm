@@ -1,0 +1,524 @@
+﻿<html xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+  <head>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8" />
+    <META NAME="save" CONTENT="history" />
+    <title>ListOptions Fields</title>
+    <meta name="Language" content="en-us" />
+    <meta name="System.Keywords" content="ListOptions class, fields" />
+    <meta name="Microsoft.Help.Id" content="Fields.T:Rendition.ListOptions" />
+    <meta name="Microsoft.Help.ContentType" content="Reference" />
+    <link rel="stylesheet" type="text/css" href="../styles/Presentation.css" />
+    <link rel="stylesheet" type="text/css" href="ms-help://Hx/HxRuntime/HxLink.css" />
+    <script type="text/javascript" src="../scripts/EventUtilities.js"> </script>
+    <script type="text/javascript" src="../scripts/SplitScreen.js"> </script>
+    <script type="text/javascript" src="../scripts/Dropdown.js"> </script>
+    <script type="text/javascript" src="../scripts/script_manifold.js"> </script>
+    <script type="text/javascript" src="../scripts/script_feedBack.js"> </script>
+    <script type="text/javascript" src="../scripts/CheckboxMenu.js"> </script>
+    <script type="text/javascript" src="../scripts/CommonUtilities.js"> </script>
+    <meta name="container" content="Rendition" />
+    <meta name="file" content="93890ad5-dd86-83ad-d134-20e15f4dfe43" />
+    <meta name="guid" content="93890ad5-dd86-83ad-d134-20e15f4dfe43" />
+    <xml>
+      <MSHelp:Attr Name="AssetID" Value="Fields.T:Rendition.ListOptions" />
+      <MSHelp:TOCTitle Title="ListOptions Fields" />
+      <MSHelp:RLTitle Title="ListOptions Fields (Rendition)" />
+      <MSHelp:Keyword Index="A" Term="Fields.T:Rendition.ListOptions" />
+      <MSHelp:Keyword Index="A" Term="frlrfRenditionListOptionsFieldsTopic" />
+      <MSHelp:Keyword Index="K" Term="ListOptions class, fields" />
+      <MSHelp:Attr Name="DevLang" Value="CSharp" />
+      <MSHelp:Attr Name="Locale" Value="en-us" />
+      <MSHelp:Attr Name="TopicType" Value="kbSyntax" />
+      <MSHelp:Attr Name="TopicType" Value="apiref" />
+      <MSHelp:Attr Name="AssemblyVersion" Value="0.2.0.0" />
+    </xml>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <input type="hidden" id="hiddenScrollOffset" />
+    <img id="collapseImage" style="display:none; height:0; width:0;" src="../icons/collapse_all.gif" alt="Collapse image" title="Collapse image" />
+    <img id="expandImage" style="display:none; height:0; width:0;" src="../icons/expand_all.gif" alt="Expand Image" title="Expand Image" />
+    <img id="collapseAllImage" style="display:none; height:0; width:0;" src="../icons/collapse_all.gif" />
+    <img id="expandAllImage" style="display:none; height:0; width:0;" src="../icons/expand_all.gif" />
+    <img id="dropDownImage" style="display:none; height:0; width:0;" src="../icons/dropdown.gif" />
+    <img id="dropDownHoverImage" style="display:none; height:0; width:0;" src="../icons/dropdownHover.gif" />
+    <img id="copyImage" style="display:none; height:0; width:0;" src="../icons/copycode.gif" alt="Copy image" title="Copy image" />
+    <img id="copyHoverImage" style="display:none; height:0; width:0;" src="../icons/copycodeHighlight.gif" alt="CopyHover image" title="CopyHover image" />
+    <div id="header">
+      <table id="topTable" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <span onclick="ExpandCollapseAll(toggleAllImage)" style="cursor:default;" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage, event)" tabindex="0">
+              <img ID="toggleAllImage" class="toggleAll" src="../icons/collapse_all.gif" /> <label id="collapseAllLabel" for="toggleAllImage" style="display: none;">Collapse All</label><label id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand All</label> </span>
+            <span>    </span>
+            <span id="devlangsDropdown" class="filter" tabindex="0">
+              <img id="devlangsDropdownImage" src="../icons/dropdown.gif" /> <label id="devlangsMenuAllLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: All </nobr></label><label id="devlangsMenuMultipleLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: Multiple </nobr></label><label id="devlangsMenuCSharpLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: C# </nobr></label><label id="devlangsMenuJavaScriptLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: JavaScript </nobr></label></span>
+            <span>    </span>
+            <span id="memberOptionsDropdown" class="filter" tabindex="0">
+              <img id="memberOptionsDropdownImage" src="../icons/dropdown.gif" /> <label id="memberOptionsMenuAllLabel" for="memberOptionsDropdownImage" style="display: none;"><nobr>Members: Show All </nobr></label><label id="memberOptionsMenuMultipleLabel" for="memberOptionsDropdownImage" style="display: none;"><nobr>Members: Filtered </nobr></label><label id="memberOptionsMenuProtectedLabel" for="memberOptionsDropdownImage" style="display: none;"><nobr>Members: Filtered </nobr></label><label id="memberOptionsMenuInheritedLabel" for="memberOptionsDropdownImage" style="display: none;"><nobr>Members: Filtered </nobr></label></span>
+          </td>
+        </tr>
+      </table>
+      <div id="devlangsMenu">
+        <input id="CSharpCheckbox" type="checkbox" data="CSharp,cs,'persist'" value="on" onClick="SetLanguage(this)" />
+        <label class="checkboxLabel" for="CSharpCheckbox">C#</label>
+        <br />
+        <input id="JavaScriptCheckbox" type="checkbox" data="JavaScript,cs,'persist'" value="on" onClick="SetLanguage(this)" />
+        <label class="checkboxLabel" for="JavaScriptCheckbox">JavaScript</label>
+        <br />
+      </div>
+      <div id="memberOptionsMenu">
+        <input id="ProtectedCheckbox" type="checkbox" data="Protected" value="on" onClick="SetMemberOptions(this, 'vis')" />
+        <label class="checkboxLabel" for="ProtectedCheckbox">Include Protected Members</label>
+        <br />
+        <input id="InheritedCheckbox" type="checkbox" data="Inherited" value="on" onClick="SetMemberOptions(this, 'decl')" />
+        <label class="checkboxLabel" for="InheritedCheckbox">Include Inherited Members</label>
+        <br />
+      </div>
+      <table id="bottomTable" cellpadding="0" cellspacing="0">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">Rendition E-Commerce Framework</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">ListOptions Fields</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td align="left">
+            <a href="2869e94a-4fba-6e42-dd1c-6d325ce976aa.htm">ListOptions Class</a> <a href="#seeAlsoToggle" onclick="OpenSection(seeAlsoToggle)">See Also</a> <span id="headfeedbackarea" class="feedbackhead"><a href="javascript:SubmitFeedback('tonygermaneri@gmail.com','Rendition E-Commerce Framework','','','','%0\dYour%20feedback%20is%20used%20to%20improve%20the%20documentation%20and%20the%20product.%20Your%20e-mail%20address%20will%20not%20be%20used%20for%20any%20other%20purpose%20and%20is%20disposed%20of%20after%20the%20issue%20you%20report%20is%20resolved.%20%20While%20working%20to%20resolve%20the%20issue%20that%20you%20report,%20you%20may%20be%20contacted%20via%20e-mail%20to%20get%20further%20details%20or%20clarification%20on%20the%20feedback%20you%20sent.%20After%20the%20issue%20you%20report%20has%20been%20addressed,%20you%20may%20receive%20an%20e-mail%20to%20let%20you%20know%20that%20your%20feedback%20has%20been%20addressed.%0\A%0\d','Customer%20Feedback');">Send Feedback</a></span></td>
+        </tr>
+      </table>
+      <table id="gradientTable">
+        <tr>
+          <td class="nsrBottom" background="../icons/gradient.gif" />
+        </tr>
+      </table>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" />
+        <span style="color: DarkGray">
+          <p style="color: #dc143c; font-size: 8.5pt; font-weight: bold;">[This is preliminary documentation and is subject to change.]</p>
+        </span>
+        <p>The <a href="2869e94a-4fba-6e42-dd1c-6d325ce976aa.htm">ListOptions</a> type exposes the following members.</p>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(fieldTableToggle)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(fieldTableToggle, event)" tabindex="0">
+            <img id="fieldTableToggle" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Fields</span>
+        </h1>
+        <div id="fieldTableSection" class="section" name="collapseableSection" style="">
+          <table id="memberList" class="members" frame="lhs" cellpadding="2">
+            <col width="10%" />
+            <tr>
+              <th class="iconColumn">
+               
+            </th>
+              <th class="nameColumn">Name</th>
+              <th class="descriptionColumn">Description</th>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubfield.gif" alt="Public field" title="Public field" />
+              </td>
+              <td>
+                <a href="2b1d1b62-2bf6-b3f5-ce38-f9cfef0b5a1d.htm">CategoryNameRegEx</a>
+              </td>
+              <td>
+                <div class="summary">
+            The string to find in the category name
+            in order to make the URL more human readable.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubfield.gif" alt="Public field" title="Public field" />
+              </td>
+              <td>
+                <a href="82e5eea2-3e2a-1edb-4109-6524ba4e0bca.htm">CategoryNameRegExReplace</a>
+              </td>
+              <td>
+                <div class="summary">
+            The string to replace with in the category name
+            in order to make the URL more human readable.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubfield.gif" alt="Public field" title="Public field" />
+              </td>
+              <td>
+                <a href="08807d1f-cb42-22d7-63c9-d9b4d7385af7.htm">NoItemsFoundRedirect</a>
+              </td>
+              <td>
+                <div class="summary">
+            The URL to direct to when no items are present in the list.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubfield.gif" alt="Public field" title="Public field" />
+              </td>
+              <td>
+                <a href="443056aa-2a70-de75-3547-d013f21ae42e.htm">OrderMessageFeaturedItem</a>
+              </td>
+              <td>
+                <div class="summary">
+            The text to appear for "Featured Items".
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubfield.gif" alt="Public field" title="Public field" />
+              </td>
+              <td>
+                <a href="1ebea523-8210-1654-d8c4-45cc3e42f65c.htm">OrderMessagePriceHighToLow</a>
+              </td>
+              <td>
+                <div class="summary">
+            The text to appear for "Order By Price High to Low".
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubfield.gif" alt="Public field" title="Public field" />
+              </td>
+              <td>
+                <a href="7f4dbde5-049a-6d0a-1613-8cd790b8926a.htm">OrderMessagePriceLowToHigh</a>
+              </td>
+              <td>
+                <div class="summary">
+            The text to appear for "Order By Price Low to High".
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubfield.gif" alt="Public field" title="Public field" />
+              </td>
+              <td>
+                <a href="027f08d0-ac87-962a-b320-49f7ab7d27aa.htm">OrderMessageShortDescAtoZ</a>
+              </td>
+              <td>
+                <div class="summary">
+            The text to appear for "Order By Description A-Z".
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubfield.gif" alt="Public field" title="Public field" />
+              </td>
+              <td>
+                <a href="78a25e25-93a5-b05b-39f8-fef8618db2db.htm">OrderMessageShortDescZtoA</a>
+              </td>
+              <td>
+                <div class="summary">
+            The text to appear for "Order By Description Z-A".
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubfield.gif" alt="Public field" title="Public field" />
+              </td>
+              <td>
+                <a href="29a03add-de48-05f7-68df-c98f63781122.htm">PriceFilterFormat</a>
+              </td>
+              <td>
+                <div class="summary">
+            String to place in the price filter
+            {0} = low, {1} = high, {2} = count.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubfield.gif" alt="Public field" title="Public field" />
+              </td>
+              <td>
+                <a href="523ec3ef-66e3-87fe-0589-b787fb3ee39b.htm">PriceFilterHighestFormat</a>
+              </td>
+              <td>
+                <div class="summary">
+            String to place in the
+            last, highest price filter
+            {0} = low, {1} = high, {2} = count.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubfield.gif" alt="Public field" title="Public field" />
+              </td>
+              <td>
+                <a href="7f63a978-e4fe-45df-eadd-148a731cd762.htm">PriceFilterLowestFormat</a>
+              </td>
+              <td>
+                <div class="summary">
+            String to place in the
+            first, lowest price filter
+            {0} = low, {1} = high, {2} = count.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubfield.gif" alt="Public field" title="Public field" />
+              </td>
+              <td>
+                <a href="d3be2129-83d7-5ad5-cc26-1003d9bbd9c4.htm">PriceRanges</a>
+              </td>
+              <td>
+                <div class="summary">
+            The range of prices 
+            that will appear in 
+            the price filter.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubfield.gif" alt="Public field" title="Public field" />
+              </td>
+              <td>
+                <a href="35aa74f5-8373-59b8-ff85-af33d47f269d.htm">PropertyFilterFormat</a>
+              </td>
+              <td>
+                <div class="summary">
+            The string to place in the
+            'filter for' link text.
+            {0} will be replaced by the value.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubfield.gif" alt="Public field" title="Public field" />
+              </td>
+              <td>
+                <a href="7dec6ece-5c3b-fe96-e4ab-e8f1e9b49d68.htm">PropertyFilterFormatTitle</a>
+              </td>
+              <td>
+                <div class="summary">
+            The string to place in the
+            'filter for' link title.
+            {0} will be replaced by the value.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubfield.gif" alt="Public field" title="Public field" />
+              </td>
+              <td>
+                <a href="36a66b02-e22a-366b-d32a-08732cf64950.htm">PropertyFilterRemoveFormat</a>
+              </td>
+              <td>
+                <div class="summary">
+            The string to place in the
+            'remove filter' link text.
+            {0} will be replaced by
+            the value.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubfield.gif" alt="Public field" title="Public field" />
+              </td>
+              <td>
+                <a href="249541a5-b2d1-bd68-ccb7-dc8cd83c9daf.htm">PropertyFilterRemovePrice</a>
+              </td>
+              <td>
+                <div class="summary">
+            The string to place in the
+            'remove price filter' link.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubfield.gif" alt="Public field" title="Public field" />
+              </td>
+              <td>
+                <a href="418d4ea3-1eac-c5aa-af33-796b9ac21f1a.htm">PropertyFilterRemoveTitle</a>
+              </td>
+              <td>
+                <div class="summary">
+            The string to place in the
+            'remove filter' link title.
+            {0} will be replaced by
+            the value.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubfield.gif" alt="Public field" title="Public field" />
+              </td>
+              <td>
+                <a href="a4198003-fc03-1cf8-0e8a-43db5980262d.htm">PropertyFilterValueRemoveFormat</a>
+              </td>
+              <td>
+                <div class="summary">
+            The string to place in the
+            'remove filter' link.
+            {0} will be replaced by the value.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubfield.gif" alt="Public field" title="Public field" />
+              </td>
+              <td>
+                <a href="943d23f8-5421-4373-c3d4-084adc0add2b.htm">RequestCategory</a>
+              </td>
+              <td>
+                <div class="summary">
+            The request key for the category name.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubfield.gif" alt="Public field" title="Public field" />
+              </td>
+              <td>
+                <a href="2515127b-9fbd-efa0-0ab8-75bd81f63645.htm">RequestFilter</a>
+              </td>
+              <td>
+                <div class="summary">
+            The request key for the filter.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubfield.gif" alt="Public field" title="Public field" />
+              </td>
+              <td>
+                <a href="ef69f192-86e2-44f2-2127-d74f0a9d8a29.htm">RequestListMode</a>
+              </td>
+              <td>
+                <div class="summary">
+            The listing mode request key.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubfield.gif" alt="Public field" title="Public field" />
+              </td>
+              <td>
+                <a href="95caf8cf-e012-b3c5-088b-bfb0d3d6c369.htm">RequestOrderBy</a>
+              </td>
+              <td>
+                <div class="summary">
+            The order by mode request key.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubfield.gif" alt="Public field" title="Public field" />
+              </td>
+              <td>
+                <a href="e29111fc-1f69-10ed-1d63-d8d8771ffb5d.htm">RequestPage</a>
+              </td>
+              <td>
+                <div class="summary">
+            The request key for the page selector.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubfield.gif" alt="Public field" title="Public field" />
+              </td>
+              <td>
+                <a href="2dab5e28-f7b1-aac9-c7ab-7f00e8190274.htm">RequestPrice</a>
+              </td>
+              <td>
+                <div class="summary">
+            The request key for the price filter.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubfield.gif" alt="Public field" title="Public field" />
+              </td>
+              <td>
+                <a href="e948d4ba-d943-5a25-e629-ab437db843b8.htm">RequestRecordsPerPage</a>
+              </td>
+              <td>
+                <div class="summary">
+            the request key for records per page.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubfield.gif" alt="Public field" title="Public field" />
+              </td>
+              <td>
+                <a href="13fba830-c933-3b5f-50c3-658b6bef0d10.htm">RequestSearch</a>
+              </td>
+              <td>
+                <div class="summary">
+            The request key search
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubfield.gif" alt="Public field" title="Public field" />
+              </td>
+              <td>
+                <a href="11c36108-f2f7-c80d-0c5a-dc58ba6b5a1a.htm">ScriptName</a>
+              </td>
+              <td>
+                <div class="summary">
+            The script name to use in the links.
+            </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(seeAlsoToggle)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(seeAlsoToggle, event)" tabindex="0">
+            <img id="seeAlsoToggle" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />See Also</span>
+        </h1>
+        <div id="seeAlsoSection" class="section" name="collapseableSection" style="">
+          <div class="seeAlsoStyle">
+            <a href="2869e94a-4fba-6e42-dd1c-6d325ce976aa.htm">ListOptions Class</a>
+          </div>
+          <div class="seeAlsoStyle">
+            <a href="d2b3a88c-9b91-9dc6-dac5-53431bc586b3.htm">Rendition Namespace</a>
+          </div>
+        </div>
+      </div>
+      <div id="footer">
+        <div class="footerLine">
+          <img width="100%" height="3px" src="../icons/footer.gif" alt="Footer image" title="Footer image" />
+        </div>
+        <A NAME="feedback"></A>
+        <span id="fb" class="feedbackcss"></span>
+        <p />Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:tonygermaneri%40gmail.com?Subject=Rendition E-Commerce Framework">Tony Germaneri</a><script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        var HT_mailLinkText = HT_mailLink.innerHTML;
+        HT_mailLink.href += ": " + document.title;
+        HT_mailLink.innerHTML = HT_mailLinkText;
+        </script><p />Copyright © Tony Germaneri 2011</div>
+    </div>
+  </body>
+</html>

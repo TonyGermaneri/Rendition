@@ -1,0 +1,5 @@
+C:\Rendition\rendition.example.fileEmbedding\bin\Debug\rendition.example.fileEmbedding.dll
+C:\Rendition\rendition.example.fileEmbedding\bin\Debug\rendition.example.fileEmbedding.pdb
+C:\Rendition\rendition.example.fileEmbedding\obj\Debug\ResolveAssemblyReference.cache
+C:\Rendition\rendition.example.fileEmbedding\obj\Debug\rendition.example.fileEmbedding.dll
+C:\Rendition\rendition.example.fileEmbedding\obj\Debug\rendition.example.fileEmbedding.pdb

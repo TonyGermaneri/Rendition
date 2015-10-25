@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="bd5b50a9-d299-ecca-72a3-ed0e23bed126" revisionNumber="1" dataAlias="Rendition.UI.DataSet">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		
+		<definitionTable>
+			
+				<definedTerm>
+					<para>Member Of</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="b584e6c6-2f5a-6c97-4e57-2ad4afa995cc"/>
+					</para>
+				</definition>
+			
+		</definitionTable>
+		
+			<section address="fields">
+				<title>Rendition.UI.DataSet Properties</title>
+				<content>
+					<table>
+						<tableHeader>
+							<row>
+								<entry><para> </para></entry>
+								<entry><para>Type</para></entry>
+								<entry><para>Name</para></entry>
+								<entry><para>Description</para></entry>
+							</row>
+						</tableHeader>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="b4460eee-7ab0-fc28-40f6-6da49eaaff78"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Two dimentional array of data.  Example:<code language="JavaScript">	[		['Column 1 Row 1','Column 2 Row 1'],		['Column 1 Row 2','Column 2 Row 2']	]</code>
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="f5a59b1b-9a7b-04ee-1d66-3f01029b6925"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Description of the error returned if any.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="2ba5e66f-a0fc-235f-a1b6-1024ef854517"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The error the remote record set provider returned.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="e4d53be8-2237-9c1a-d650-8fcc225e3ea3"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Array of <link xlink:href="a5797363-8075-a19f-0dc7-0c9667754930"/> objects.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="6cc5d251-674c-11dd-a1ff-c3fbd54001aa"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The range of records in this recordset. An instance of <link xlink:href="63729290-3285-7dac-fb6e-30551575d527"/>.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="fca6fbe6-31c8-6d23-c80b-b4d395f87607"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The schema of this recordset. An instance of <link xlink:href="bac81343-e755-536a-ef6b-5499152f8e26"/>.
+									</para>
+								</entry>
+							</row>
+						
+					</table>
+				</content>
+			</section>
+		
+
+	</developerConceptualDocument>
+</topic>

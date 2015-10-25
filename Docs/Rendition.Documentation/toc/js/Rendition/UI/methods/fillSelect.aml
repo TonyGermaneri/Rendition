@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="e8c66d0b-374f-03cf-903f-6bd711a4a4d5" revisionNumber="1" dataAlias="Rendition.UI.fillSelect">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction address="Intro">
+			Rendition.UI.fillSelect(<link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  selectElement, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  twoDimArray, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  varOrd, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  textOrd, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  selectedValue)
+			<para>Fills a DHTML select element with the values in an array.</para>
+		</introduction>
+		<definitionTable>
+			
+			
+				<definedTerm>
+					<para>Member Of</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="b584e6c6-2f5a-6c97-4e57-2ad4afa995cc"/>
+					</para>
+				</definition>
+			
+			
+				<definedTerm>
+					<para>Return Type</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>
+					</para>
+				</definition>
+			
+			
+				<definedTerm>
+					<para>Source</para>
+				</definedTerm>
+				<definition>
+					<para>
+						c:\Rendition\Rendition.Core\js\admin\UI\DomHelpers.js
+					</para>
+				</definition>
+			
+		</definitionTable>
+		<section address="parameters">
+		<title>Parameters</title>
+			<sections>
+				<table>
+					<tableHeader>
+					<row>
+						<entry><para> </para></entry>
+						<entry><para>Name</para></entry>
+						<entry><para>Description</para></entry>
+					</row>
+					</tableHeader>
+					
+						<row>
+							<entry>
+								<para>
+									
+									Required
+									selectElement
+									<link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>
+								</para>
+							</entry>
+							<entry>
+								<para>
+									The DHTML select element.
+								</para>
+							</entry>
+							<entry>
+								<para>
+									
+								</para>
+							</entry>
+						</row>
+					
+						<row>
+							<entry>
+								<para>
+									
+									Required
+									twoDimArray
+									<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+								</para>
+							</entry>
+							<entry>
+								<para>
+									Two dimentional array contaning the option value and the option inner text.  Looks like:<code language="JavaScript">	var foo = [		[1,'Value 1'],		[2,'Value 2'],		[3,'Value 3']	];</code>
+								</para>
+							</entry>
+							<entry>
+								<para>
+									
+								</para>
+							</entry>
+						</row>
+					
+						<row>
+							<entry>
+								<para>
+									
+									Required
+									varOrd
+									<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>
+								</para>
+							</entry>
+							<entry>
+								<para>
+									The index containing the value.
+								</para>
+							</entry>
+							<entry>
+								<para>
+									
+								</para>
+							</entry>
+						</row>
+					
+						<row>
+							<entry>
+								<para>
+									
+									Required
+									textOrd
+									<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>
+								</para>
+							</entry>
+							<entry>
+								<para>
+									The index containing the inner text.
+								</para>
+							</entry>
+							<entry>
+								<para>
+									
+								</para>
+							</entry>
+						</row>
+					
+						<row>
+							<entry>
+								<para>
+									
+									Required
+									selectedValue
+									<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+								</para>
+							</entry>
+							<entry>
+								<para>
+									The selected value.  When this value matches any value in the option listit will have its 'selected' attribute set to true (i.e. It will be the selected value).
+								</para>
+							</entry>
+							<entry>
+								<para>
+									
+								</para>
+							</entry>
+						</row>
+					
+				</table>
+			</sections>
+		</section>
+	</developerConceptualDocument>
+</topic>

@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="6a5f5257-9f3b-f6a0-ae0d-cb3b82a5dedb" revisionNumber="1" dataAlias="Rendition.UI.Dialog">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		
+		<definitionTable>
+			
+				<definedTerm>
+					<para>Member Of</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="b584e6c6-2f5a-6c97-4e57-2ad4afa995cc"/>
+					</para>
+				</definition>
+			
+		</definitionTable>
+		
+			<section address="events">
+				<title>Rendition.UI.Dialog Events</title>
+				<content>
+					<table>
+						<tableHeader>
+						<row>
+							<entry><para> </para></entry>
+							<entry><para>Name</para></entry>
+							<entry><para>Description</para></entry>
+						</row>
+						</tableHeader>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="2ddef304-2b42-4ca1-324d-795a0137c9c9"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  dialog)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when the is dialog is activated.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="e3db66b7-fbc5-4e4e-806c-6e789a397dce"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  dialog)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when the dialog is closed.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="b7063988-7978-77c8-c008-05a2253be6ae"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  dialog)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when the is dialog is finished moving.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="718c9a5e-99e4-a276-2eff-159ead981ce1"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  dialog)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when the is dialog is finished resizing.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="605167cb-3497-6506-d516-d9acc5db3e79"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  dialog)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when the is dialog is hidden.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="a6f9570a-35eb-7839-299d-24fb5767544c"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  dialog)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when the dialog is maximized.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="c04b48e3-9c87-262e-d5c3-74b700244d78"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  dialog)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when the dialog is minimized.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="6fcc497f-829e-ded9-8ee4-4fc256391210"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  dialog)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when the dialog is moving.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="c56579df-8de4-c597-6e40-6a9027ee8886"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  dialog)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when the dialog is being resized.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="fcd0d55c-e88f-b644-74f3-06c7070e0d99"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  dialog)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when the dialog is restored.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="7e675ed6-839b-5147-0918-d5d35bfaa374"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  dialog)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when the is dialog is shown.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="bd923547-4596-70a3-2a2d-79f83943b61d"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  dialog)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when the is starting to be moved.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="eb88f254-5526-3a8e-e26f-683fc552e99a"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  dialog)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when the is starting to be resized.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="94e37e2b-7241-3010-4772-3e4a6d1cc0ff"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  dialog)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when the is dialog's title has changed.
+									</para>
+								</entry>
+							</row>
+						
+					</table>
+					<alert class="tip">
+						<para>There are two ways to add event listeners.</para>
+					</alert>
+					<para>
+						1. You can attach to events as a parameter when you create the object.
+						<code language="javascript">
+							var foo = new object({
+								event:function(signature){
+									/* event procedure */
+								}
+							});
+						</code>
+						2. Or you can add the event after the object has been instantiated.
+						<code language="javascript">
+							var foo = new object();
+							foo.addEventListener('event',function(signature){
+								/* event procedure */
+							}, false);
+						</code>
+					</para>
+				</content>
+			</section>
+		
+	</developerConceptualDocument>
+</topic>

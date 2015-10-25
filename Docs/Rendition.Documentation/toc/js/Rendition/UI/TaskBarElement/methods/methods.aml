@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="c5a97f3d-bdc2-8e59-e0a6-56040d239720" revisionNumber="1" dataAlias="Rendition.UI.TaskBarElement">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		
+		<definitionTable>
+			
+				<definedTerm>
+					<para>Member Of</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="b584e6c6-2f5a-6c97-4e57-2ad4afa995cc"/>
+					</para>
+				</definition>
+			
+		</definitionTable>
+		
+			<section address="methods">
+				<title>Rendition.UI.TaskBarElement Methods</title>
+				<content>
+					<table>
+						<tableHeader>
+						<row>
+							<entry><para> </para></entry>
+							<entry><para>Name</para></entry>
+							<entry><para>Type</para></entry>
+							<entry><para>Description</para></entry>
+						</row>
+						</tableHeader>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="91da25f4-d24e-a029-a137-6fc13dfac550"/>()
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Activates the element, bringing its <link xlink:href="dc990744-70f0-25bd-d971-be960b7764b6"/> to the front.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="976f2b2d-b62e-494b-e903-fda9c364437f"/>()
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										updates the title, clipping and redrawing the text.
+									</para>
+								</entry>
+							</row>
+						
+					</table>
+				</content>
+			</section>
+		
+
+	</developerConceptualDocument>
+</topic>

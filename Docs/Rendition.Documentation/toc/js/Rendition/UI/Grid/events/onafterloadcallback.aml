@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="06c9b607-bfcf-c560-aa8a-e488ec77f3d2" revisionNumber="1" dataAlias="Rendition.UI.Grid#Grid.onafterloadcallback">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction address="Intro">
+			Rendition.UI.Grid#Grid.onafterloadcallback(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  grid, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  JSON)	
+			<para>Occurs before the row is loaded into the DOM after data is read in.</para>
+		</introduction>
+		<definitionTable>
+			
+			
+				<definedTerm>
+					<para>Member Of</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="f5f5d4d4-f415-cd77-8e8f-c01e6464006a"/>
+					</para>
+				</definition>
+			
+			
+				<definedTerm>
+					<para>Source</para>
+				</definedTerm>
+				<definition>
+					<para>
+						c:\Rendition\Rendition.Core\js\admin\UI\grid.js
+					</para>
+				</definition>
+			
+		</definitionTable>
+		<section address="parameters">
+		<title>Event Signature</title>
+			<sections>
+				<table>
+					<tableHeader>
+					<row>
+						<entry><para> </para></entry>
+						<entry><para>Name</para></entry>
+						<entry><para>Description</para></entry>
+					</row>
+					</tableHeader>
+					
+						<row>
+							<entry>
+								<para>
+									
+									Required
+									e
+									<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+								</para>
+							</entry>
+							<entry>
+								<para>
+									Browser event object.
+								</para>
+							</entry>
+							<entry>
+								<para>
+									
+								</para>
+							</entry>
+						</row>
+					
+						<row>
+							<entry>
+								<para>
+									
+									Required
+									grid
+									<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+								</para>
+							</entry>
+							<entry>
+								<para>
+									The grid instance firing the event.
+								</para>
+							</entry>
+							<entry>
+								<para>
+									
+								</para>
+							</entry>
+						</row>
+					
+						<row>
+							<entry>
+								<para>
+									
+									Required
+									JSON
+									<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+								</para>
+							</entry>
+							<entry>
+								<para>
+									Data.
+								</para>
+							</entry>
+							<entry>
+								<para>
+									
+								</para>
+							</entry>
+						</row>
+					
+				</table>
+			</sections>
+		</section>
+		<alert class="tip">
+			<para>There are two ways to add event listeners.</para>
+		</alert>
+		<para>
+			1. You can attach to events as a parameter when you create the object.
+			<code language="javascript">
+				var foo = new object({
+					event:function(signature){
+						/* event procedure */
+					}
+				});
+			</code>
+			2. Or you can add the event after the object has been instantiated.
+			<code language="javascript">
+				var foo = new object();
+				foo.addEventListener('event',function(signature){
+					/* event procedure */
+				}, false);
+			</code>
+		</para>
+	</developerConceptualDocument>
+</topic>

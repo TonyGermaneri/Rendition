@@ -1,0 +1,13 @@
+C:\Rendition\rendition.standardPlugins.inventory\rendition.standardPlugins.inventory\bin\Debug\Rendition.Inventory.dll
+C:\Rendition\rendition.standardPlugins.inventory\rendition.standardPlugins.inventory\bin\Debug\Rendition.Inventory.pdb
+C:\Rendition\rendition.standardPlugins.inventory\rendition.standardPlugins.inventory\bin\Debug\Rendition.dll
+C:\Rendition\rendition.standardPlugins.inventory\rendition.standardPlugins.inventory\bin\Debug\Rendition.pdb
+C:\Rendition\rendition.standardPlugins.inventory\rendition.standardPlugins.inventory\bin\Debug\Rendition.xml
+C:\Rendition\rendition.standardPlugins.inventory\rendition.standardPlugins.inventory\obj\Debug\ResolveAssemblyReference.cache
+C:\Rendition\rendition.standardPlugins.inventory\rendition.standardPlugins.inventory\obj\Debug\Rendition.Inventory.dll
+C:\Rendition\rendition.standardPlugins.inventory\rendition.standardPlugins.inventory\obj\Debug\Rendition.Inventory.pdb
+C:\Rendition\Plugins\Rendition.Inventory\bin\Debug\Rendition.Inventory.dll
+C:\Rendition\Plugins\Rendition.Inventory\bin\Debug\Rendition.Inventory.pdb
+C:\Rendition\Plugins\Rendition.Inventory\obj\Debug\ResolveAssemblyReference.cache
+C:\Rendition\Plugins\Rendition.Inventory\obj\Debug\Rendition.Inventory.dll
+C:\Rendition\Plugins\Rendition.Inventory\obj\Debug\Rendition.Inventory.pdb

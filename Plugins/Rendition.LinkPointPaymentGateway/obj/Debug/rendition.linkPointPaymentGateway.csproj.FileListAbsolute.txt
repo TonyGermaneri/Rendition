@@ -1,0 +1,17 @@
+C:\Rendition\rendition.linkPointPaymentGateway\rendition.linkPointPaymentGateway\obj\Debug\ResolveAssemblyReference.cache
+C:\Rendition\rendition.linkPointPaymentGateway\rendition.linkPointPaymentGateway\bin\Debug\rendition.linkPointPaymentGateway.dll
+C:\Rendition\rendition.linkPointPaymentGateway\rendition.linkPointPaymentGateway\bin\Debug\rendition.linkPointPaymentGateway.pdb
+C:\Rendition\rendition.linkPointPaymentGateway\rendition.linkPointPaymentGateway\bin\Debug\LinkPointTransaction.dll
+C:\Rendition\rendition.linkPointPaymentGateway\rendition.linkPointPaymentGateway\bin\Debug\rendition.dll
+C:\Rendition\rendition.linkPointPaymentGateway\rendition.linkPointPaymentGateway\bin\Debug\rendition.pdb
+C:\Rendition\rendition.linkPointPaymentGateway\rendition.linkPointPaymentGateway\bin\Debug\rendition.xml
+C:\Rendition\rendition.linkPointPaymentGateway\rendition.linkPointPaymentGateway\obj\Debug\rendition.linkPointPaymentGateway.dll
+C:\Rendition\rendition.linkPointPaymentGateway\rendition.linkPointPaymentGateway\obj\Debug\rendition.linkPointPaymentGateway.pdb
+C:\Rendition\rendition.linkPointPaymentGateway\rendition.linkPointPaymentGateway\bin\Debug\Newtonsoft.Json.dll
+C:\Rendition\rendition.linkPointPaymentGateway\rendition.linkPointPaymentGateway\bin\Debug\HtmlAgilityPack.dll
+C:\Rendition\Plugins\Rendition.LinkPointPaymentGateway\obj\Debug\ResolveAssemblyReference.cache
+C:\Rendition\Plugins\Rendition.LinkPointPaymentGateway\bin\Debug\Rendition.LinkPointPaymentGateway.dll
+C:\Rendition\Plugins\Rendition.LinkPointPaymentGateway\bin\Debug\Rendition.LinkPointPaymentGateway.pdb
+C:\Rendition\Plugins\Rendition.LinkPointPaymentGateway\bin\Debug\LinkPointTransaction.dll
+C:\Rendition\Plugins\Rendition.LinkPointPaymentGateway\obj\Debug\Rendition.LinkPointPaymentGateway.dll
+C:\Rendition\Plugins\Rendition.LinkPointPaymentGateway\obj\Debug\Rendition.LinkPointPaymentGateway.pdb

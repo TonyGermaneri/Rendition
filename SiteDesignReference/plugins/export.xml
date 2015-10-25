@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<export>
+	<quickbooks_10_iif
+	outputPath="C:\export\"
+	discountRevenueAccount="47900"
+	taxRevenueAccount="25501"
+	shippingRevenueAccount="51100"
+	anonymousExportToAccount="Web Site User"
+	/>
+</export>

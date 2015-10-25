@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="f6ec9039-c001-40ca-8d71-898375e44aee"
+  name="Sockets"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="e3060023-9045-4906-a80d-a08394ae6269"
+      handle="viewcode://./CodeSchema_Namespace?Namespace=System.Net.Sockets"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="894bcc95-0d35-4d33-a28b-369796830316"
+        name="Socket"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="f5746ab4-7fda-4b9b-8abf-ff8688180215"
+            handle="viewcode://./CodeSchema_Class?Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.dll&quot; Namespace=System.Net.Sockets Type=Socket"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="386d3a5d-c084-415e-912b-ff90fde95c30"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c9ad3583-62cd-4291-8f6a-9f1f1568e8bf">
+                <propertyInstance
+                  Id="98ba60f3-718e-434f-b85a-7e506af68b41"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ff5fda08-ee11-4280-bdd9-e92cd68cb789">
+                <propertyInstance
+                  Id="243b7c1c-403f-41e3-84a3-a892485837c7"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1f9e4186-0cd9-408f-9941-51b25ae77e6d">
+                <propertyInstance
+                  Id="5bd00ce0-b5ac-46a9-bfe8-5c767874fbd9"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e977b7a7-780b-45d6-ba9a-5dad688b9889">
+                <propertyInstance
+                  Id="4c76f5d8-99b7-48ee-9cbe-28b22b612b3a"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="717fa711-9e88-474e-9c42-3dc9c1fbbab0">
+                <propertyInstance
+                  Id="cb270aef-c61f-4f94-bdca-88405993f4b2"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="35c8395e-776d-45d8-b38f-43daacd08af4">
+            <interfaceMoniker
+              Id="83bae8d2-022c-4a6c-ab61-a8929c80a6c5"
+              LastKnownName="IDisposable"
+              LastKnownLocation="Package1_2322.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

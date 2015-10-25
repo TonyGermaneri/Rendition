@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+{!
+	var AMLIDAdd = "";
+	var classType = "";
+	if (data.isBuiltin()) {
+		classType += "Built-In ";
+	}
+	if (data.isNamespace) {
+		if (data.is('FUNCTION')) {
+			classType += "Function ";
+		}
+		classType += "Namespace ";
+		AMLIDAdd = "N";
+	} else {
+		classType += "Class ";
+	}
+	var ownEvents = data.events.filter(function($){return $.memberOf == data.alias  && !$.isNamespace}).sort(makeSortby("name"));
+	var ownMethods = data.methods.filter(function($){return $.memberOf == data.alias  && !$.isNamespace}).sort(makeSortby("name")); 
+	var ownProperties = data.properties.filter(function($){return $.memberOf == data.alias && !$.isNamespace}).sort(makeSortby("name"));
+!}
+<topic id="{!var AMLID = generateAMLIDHASH(AMLIDAdd+data.alias); if(JSDOC.AMLIDS[AMLID]!==undefined){print('Conflict '+data.alias+' = '+JSDOC.AMLIDS[AMLID]+" => "+AMLID)}else{ JSDOC.AMLIDS[AMLID] = data.alias } output+=AMLID !}" revisionNumber="1" dataAlias="{+data.alias+}">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction address="Intro">
+			{+classType+}{+data.alias+}
+			<para>{+resolveLinks(data.desc)+}</para>
+		</introduction>
+		<para>
+			<definitionTable>
+				<if test="data.author">
+					<definedTerm>
+						<para>Author</para>
+					</definedTerm>
+					<definition>
+						<para>
+							{+data.author+}
+						</para>
+					</definition>
+				</if>
+				<if test="data.memberOf">
+					<definedTerm>
+						<para>Member Of</para>
+					</definedTerm>
+					<definition>
+						<para>
+							{+resolveLinks('<link xlink:href="N'+data.memberOf+'"/>')+}
+						</para>
+					</definition>
+				</if>
+				<if test="data.srcFile">
+					<definedTerm>
+						<para>Source</para>
+					</definedTerm>
+					<definition>
+						<para>
+							{+pathSrcFile(data.srcFile)+}
+						</para>
+					</definition>
+				</if>
+			</definitionTable>
+		</para>
+	<!-- ============================== Examples ========================== -->	
+		<if test="data.example.length">
+			<section address="examples">
+				<title>Examples</title>
+				<sections>
+					<for each="example" in="data.example">
+						<section>
+							<title>
+								<if test="String(example).substring(0, 3) == '///'">
+									{+String(example).substring(3,String(example).indexOf('///', 3))+'\r\n'+}
+								</if>
+							</title>
+							<content>
+								<para>
+									<code language="javascript"><if test="String(example).substring(0, 3) == '///'">{+String(example).substring(String(example).indexOf('///',3)+3).replace(/\r/g,'\r\n')+}</if><if test="String(example).substring(0, 3) != '///'">{+example.replace(/\/\n/g,'\r\n')+}</if></code>
+								</para>
+							</content>
+						</section>
+					</for>
+				</sections>
+			</section>
+		</if>
+	<!-- ============================== parameters ========================== -->
+		<if test="data.params.length">
+			<section address="parameters">
+				<title>Constructor Parameters</title>
+				<content>
+					<table>
+						<tableHeader>
+							<row>
+								<entry><para> </para></entry>
+								<entry><para>Name</para></entry>
+								<entry><para>Type</para></entry>
+								<entry><para>Description</para></entry>
+							</row>
+						</tableHeader>
+						<for each="member" in="data.params">
+							<row>
+								<entry>
+									<para>
+										<if test="member.isPrivate">
+											<mediaLinkInline><image xlink:href="publicfield"/></mediaLinkInline>
+										</if>
+										<if test="!member.isPrivate">
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										</if>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										{+member.name+} 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<if test="member.type">
+											{+resolveLinks('<link xlink:href="'+member.type+'"/>')+}
+										</if>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										{+resolveLinks(member.desc)+}
+									</para>
+								</entry>
+							</row>
+						</for>
+					</table>
+				</content>
+			</section>
+		</if>
+	<!-- ============================== fields ========================== -->
+		<if test="defined(ownProperties) && ownProperties.length">
+			<section address="fields">
+				<title>Properties</title>
+				<content>
+					<table>
+						<tableHeader>
+							<row>
+								<entry><para> </para></entry>
+								<entry><para>Name</para></entry>
+								<entry><para>Type</para></entry>
+								<entry><para>Description</para></entry>
+							</row>
+						</tableHeader>
+						<for each="member" in="ownProperties">
+							<row>
+								<entry>
+									<para>
+										<if test="member.isPrivate">
+											<mediaLinkInline><image xlink:href="privateproperty"/></mediaLinkInline>
+										</if>
+										<if test="!member.isPrivate">
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										</if>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										{+resolveLinks('<link xlink:href="'+data.alias+'#'+member.name+'"/>')+}
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<if test="member.type">
+											{+resolveLinks('<link xlink:href="'+member.type+'"/>')+}
+										</if>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										{+resolveLinks(member.desc)+}
+									</para>
+								</entry>
+							</row>
+						</for>
+					</table>
+				</content>
+			</section>
+		</if>
+	<!-- ============================== methods ========================= -->
+		<if test="defined(ownMethods) && ownMethods.length">
+			<section address="methods">
+				<title>Methods</title>
+				<content>
+					<table>
+						<tableHeader>
+						<row>
+							<entry><para> </para></entry>
+							<entry><para>Name</para></entry>
+							<entry><para>Type</para></entry>
+							<entry><para>Description</para></entry>
+						</row>
+						</tableHeader>
+						<for each="member" in="ownMethods">
+							<row>
+								<entry>
+									<para>
+										<if test="member.isPrivate">
+											<mediaLinkInline><image xlink:href="privatemethod"/></mediaLinkInline>
+										</if>
+										<if test="!member.isPrivate">
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										</if>
+										<if test="member.isStatic">
+											<mediaLinkInline><image xlink:href="static"/></mediaLinkInline>
+										</if>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										{+resolveLinks('<link xlink:href="'+data.alias+'#'+member.name+'"/>')+}{+makeSignature(member.params)+}
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<if test="member.type">
+											{+resolveLinks('<link xlink:href="'+member.type+'"/>')+}
+										</if>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										{+resolveLinks(member.desc)+}
+									</para>
+								</entry>
+							</row>
+						</for>
+					</table>
+				</content>
+			</section>
+		</if>
+	<!-- ============================== events ========================= -->
+		<if test="defined(ownEvents) && ownEvents.length">
+			<section address="events">
+				<title>Events</title>
+				<content>
+					<table>
+						<tableHeader>
+						<row>
+							<entry><para> </para></entry>
+							<entry><para>Name</para></entry>
+							<entry><para>Description</para></entry>
+						</row>
+						</tableHeader>
+						<for each="member" in="ownEvents">
+							<row>
+								<entry>
+									<para>
+										<if test="member.isPrivate">
+											<mediaLinkInline><image xlink:href="privateevent"/></mediaLinkInline>
+										</if>
+										<if test="!member.isPrivate">
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										</if>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										{+resolveLinks('<link xlink:href="'+data.alias+'#'+member.name+'"/>')+}{+makeSignature(member.params)+}
+									</para>
+								</entry>
+								<entry>
+									<para>
+										{+resolveLinks(member.desc)+}
+									</para>
+								</entry>
+							</row>
+						</for>
+					</table>
+					<alert class="tip">
+						<para>There are two ways to add event listeners.</para>
+					</alert>
+					<para>
+						1. You can attach to events as a parameter when you create the object.
+						<code language="javascript">
+							var foo = new object({
+								event:function(signature){
+									/* event procedure */
+								}
+							});
+						</code>
+						2. Or you can add the event after the object has been instantiated.
+						<code language="javascript">
+							var foo = new object();
+							foo.addEventListener('event',function(signature){
+								/* event procedure */
+							}, false);
+						</code>
+					</para>
+				</content>
+			</section>
+		</if>
+	</developerConceptualDocument>
+</topic>

@@ -1,0 +1,1667 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<topic id="a739f999-2c2d-baa9-1e25-5c0a74113044" revisionNumber="1" dataAlias="Rendition.UI.CreateForm">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction address="Intro">
+			Class Rendition.UI.CreateForm
+			<para><para>Creates one or more groups of editable controls.  This is the main function for editing single records in your MS SQL database.</para><para>createForm uses many other Rendition classes to produce a featureful form, such as autoComplete, grid, groupBox, info, fileManager and many more. </para><para>createForm can use a local dataset with schema (data description) or it can connect to a MS SQL database andread schema information directly from the database.</para><para>createForm can read schema data from the MS SQL server and automatically create a form layout.But you can also define a layout that will use the schema data provided by the database.</para><para>For createForm to work with your custom object (table/view/procedure) your object must supportthe following:</para><list class="bullet">	<listItem><para>Defines a Primary Key</para></listItem>	<listItem><para>Column named VerCol with the data type Timestamp. (A.K.A. Row Versioning or Timestamping)</para></listItem></list><p>Your object's columns can optionally have the following:</p><list class="bullet">	<listItem><para>Extended Property: MS_Description.  Extended description of this column.</para></listItem>	<listItem><para>Extended Property: hidden.  0 = visible, 1 = hidden.  This default can be overridden at runtime. </para></listItem>	<listItem><para>Extended Property: displayName.  Human readable column title.  When this property is not present the column name will be used instead.</para></listItem>	<listItem><para>Column named VerCol with the data type Timestamp.</para></listItem></list><p>Your object can optionally have the following:</p><list class="bullet">	<listItem><para>Extended Property: displayName.  This value will appear in place of the table name on the form.</para></listItem></list><para>createForm supplies methods for createing new records and reading and updaing existing records.  You can also use createForm to create formsthat are not connected to record sources, for example, to supply the arguments to a static function.  When used with a MS SQL data sourcecreateForm can detect when the record has been updated on the server since last time createForm  loaded the row data and givea warning dialog allwing the user to cancel out of the save procedure.</para><para>The validation is handled by the Rendition.UI.AutoComplete class that can check against regular expressions or the presence of matching records on remote rowsets.  Even remote validation occurs synchronously so there is no need for complex callback procedures.</para><para>Reading data from the form is done using the [createForm.getInputByName] method to get an input or [createForm.getInputValue] method to return a value.  You can validate the form using the [createForm.isValid] method which returns a boolean.</para></para>
+		</introduction>
+		<para>
+			<definitionTable>
+				
+				
+					<definedTerm>
+						<para>Member Of</para>
+					</definedTerm>
+					<definition>
+						<para>
+							<link xlink:href="ddee8d40-d92d-34d0-2be3-5f5d65f36f31"/>
+						</para>
+					</definition>
+				
+				
+					<definedTerm>
+						<para>Source</para>
+					</definedTerm>
+					<definition>
+						<para>
+							c:\Rendition\Rendition.Core\js\admin\UI\createForm.js
+						</para>
+					</definition>
+				
+			</definitionTable>
+		</para>
+	<!-- ============================== Examples ========================== -->	
+		
+			<section address="examples">
+				<title>Examples</title>
+				<sections>
+					
+						<section>
+							<title>
+								
+									Create a dialog.  Create the form.  Add a simple save button.  Append the button to the dialog before the form
+
+								
+							</title>
+							<content>
+								<para>
+									<code language="javascript">
+var foo = Rendition.UI.Dialog();
+var gen = Rendition.UI.CreateForm({
+	object: 'users',
+	suffix: "where userId = 0",
+	parentNode: foo.content,
+	scroll: true
+});
+var sen = document.createElement('button');
+sen.innerHTML = 'Save';
+sen.onclick = function () {
+	gen.save();
+}
+foo.content.insertBefore(sen, gen.form);</code>
+								</para>
+							</content>
+						</section>
+					
+						<section>
+							<title>
+								
+									Create a dialog. Create a layout that alters the default layout. Create the form with the new layout.  Add a simple save button.  Append the button to the dialog before the form.
+
+								
+							</title>
+							<content>
+								<para>
+									<code language="javascript">
+var foo = Rendition.UI.Dialog();
+var bar = [
+	{
+		name: 'User Base Info',
+		expanded: true,
+		inputs: [
+			{
+				columnName: 'userId'
+			},
+			{
+				columnName: 'handle'
+			}
+		]
+	},
+	{
+		name: 'Additional Info',
+		expanded: true,
+		inputs: [
+			{
+				columnName: 'lastVisit',
+				inputType: 'datePicker'
+			},
+			{
+				columnName: 'wouldLikeEmail'
+			},
+			{
+				columnName: 'comments',
+				inputType: 'rte'
+			}
+		]
+	}
+];
+var gen = Rendition.UI.CreateForm({
+	object: 'users',
+	suffix: "where userId = 0",
+	parentNode: foo.content,
+	scroll: true,
+	groups: bar
+});
+var sen = document.createElement('button');
+sen.onclick = function () {
+	gen.save();
+}
+sen.innerHTML = 'Save';
+foo.content.insertBefore(sen, gen.form);</code>
+								</para>
+							</content>
+						</section>
+					
+						<section>
+							<title>
+								
+									Create a dialog. Create a layout without a database schema, add some Regular Expresion validation. Create the form with the new layout.  Add a simple save button that reads from the form.  Append the button to the dialog before the form. 
+
+								
+							</title>
+							<content>
+								<para>
+									<code language="javascript">
+var foo = Rendition.UI.Dialog();
+var bar = [{
+	name: 'Claritas est etiam processus',
+	expanded: true,
+	inputs: [
+		{
+			name: 'loremIpsum',
+			displayName: 'Lorem Ipsum',
+			autoComplete: {
+				mustMatchPattern: /.+/,
+				patternMismatchMessage: 'This field cannot be blank'
+			}
+		},
+		{
+			name: 'dolorSit',
+			displayName: 'Dolor Sit',
+			fileManager: {
+				path: undefined
+			}
+		},
+		{
+			name: 'diamNonummy',
+			displayName: 'Diam Nonummy',
+			inputType: 'checkbox'
+		},
+		{
+			name: 'quiBlandit',
+			displayName: 'Qui Blandit',
+			inputType: 'select',
+			options: [
+				['option1value', 'Option 1 Text'],
+				['option2value', 'Option 2 Text']
+			]
+		}
+	]
+}];
+var gen = Rendition.UI.CreateForm({
+	layout: bar,
+	parentNode: foo.content
+});
+gen.getInputByName('loremIpsum').value = 'Eodem modo typi, qui nunc nobis.';
+var sen = document.createElement('button');
+sen.innerHTML = 'Save';
+sen.onclick = function () {
+	if (!gen.isValid()) {
+		alert('Not Valid');
+		return;
+	}
+	var out = '';
+	out += gen.getInputByName('loremIpsum').value + '\n' +
+	gen.getInputByName('diamNonummy').checked + '\n' +
+	gen.getInputByName('quiBlandit').selectedIndex;
+	alert(out);
+}
+foo.content.insertBefore(sen, gen.form);</code>
+								</para>
+							</content>
+						</section>
+					
+				</sections>
+			</section>
+		
+	<!-- ============================== parameters ========================== -->
+		
+			<section address="parameters">
+				<title>Constructor Parameters</title>
+				<content>
+					<table>
+						<tableHeader>
+							<row>
+								<entry><para> </para></entry>
+								<entry><para>Name</para></entry>
+								<entry><para>Type</para></entry>
+								<entry><para>Description</para></entry>
+							</row>
+						</tableHeader>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Parameters for the widget.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.validationMessage 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Message that appears above the list of invalid input messages.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.scroll 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										When true, a vertical scroll bar is added to the parent node when the form is appended.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.quiet 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										When true, info bubbles showing "Save Successful" will not appear when the form saves.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.object 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The MS SQL object (tabe/view/stored procedure) that is read from to get data and schema from.  If this value is not supplied the Object [createForm.header] will no be populated with header schema information unless you use the [createForm.dataSet] parameter, an object used interally to the <link xlink:href="f5f5d4d4-f415-cd77-8e8f-c01e6464006a"/>, <link xlink:href="c6d834b2-5b8e-e096-55cf-f1a02dbc88bf"/> and <link xlink:href="a739f999-2c2d-baa9-1e25-5c0a74113044"/> classes.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.dataSet 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										This object is used internally by the <link xlink:href="f5f5d4d4-f415-cd77-8e8f-c01e6464006a"/>, <link xlink:href="c6d834b2-5b8e-e096-55cf-f1a02dbc88bf"/> and <link xlink:href="a739f999-2c2d-baa9-1e25-5c0a74113044"/> classes and can be passed back and forth between the classes to avoid making multiple requests or re-paramitizing functions.  You proabably shouldn't use this object unless you <legacyItalic>really</legacyItalic> know what you're doing.  You're better off using the [createForm.object] paramater and/or the [createForm.layout] parameter.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.dataSetIndex 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The record index, by row, in the provided dataSet to load in the editor.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.suffix 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										A value that will be appended to the end of the select statement generated in the request for data.  This is the best way to select which record you want to edit in the form.  For instance, if I had a table called users with the primary key userId I could add the suffix "where userId = 0" to select the user 0.  This suffix cannot execute insert, update, exec or delete commands for security reasons.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.smallTitles 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										When true, the input titles will be as smaller.  When false the input titles will be displayed normally.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.noTitles 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										When true, column holding the input titles will not be drawn.  When false the input titles will be displayed normally.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.titleWidth 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										You can set the width of the title column.  Setting this value on one input will cause all inputs to draw at this width due to the way DHTML table elements are drawn.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.parentNode 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The DHTML element this form will append to when it is instantiated.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="privatefield"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										args.layout 
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The layout of the form.  The layout is an array of expandable boxes (<link xlink:href="ff420866-3fc0-36b6-2931-86efdaa6f297"/>) elements that contain input elements.   *<legacyItalic>n</legacyItalic> indicates a special note defined below this code section.<code language="JavaScript">[	{		name: &lt;String&gt;,		expanded: &lt;Boolean&gt;,		alwaysExpanded: &lt;Boolean&gt;		[			{				columnName: &lt;String&gt;, *1				inputType: &lt;String&gt;, *2,				language: &lt;String&gt; *6,				theme: &lt;String&gt; *7,				saveProcedure: &lt;Function&gt; *8,				name: &lt;String&gt;, *3				displayName &lt;String&gt;, *3				defaultValue: &lt;String&gt;, *3				isNullable: &lt;Boolean&gt;, *3				dataLength: &lt;Integer&gt;, *3				primaryKey: &lt;Boolean&gt;, *3				dataType: &lt;String&gt;, *3				value: &lt;String&gt;, *3				grid: &lt;Object&gt;, *4				rte: &lt;Object&gt;, *4				datePicker: &lt;Object&gt;, *4				fileManager: &lt;Object&gt;, *4				numericupdown: &lt;Object&gt;, *4				inputSelectButton: &lt;Object&gt;, *4				autoComplete: &lt;Object&gt;, *4				info: &lt;Object&gt;, *4				HTML: &lt;String|Function|DHTMLElement&gt; *5			},...		]	},...]</code><alert class="note"><p> This object is generated automatically when you are connecting to a MS SQL database rowset, but you can override it.  Any inputs existing in a database schema already have at least inputType, dataType, dataLength, primaryKey, isNullable, defaultValue defined in the database schema.</p><p><superscript>1</superscript> The form must have a remote record set (defined the [args.object] parameter) to use this key and the [columnName] key must match a column in the remote schema.</p><p><superscript>2</superscript> Can be any one of: checkbox, select, calendar, datePicker, fileManager, numericUpDown, numeric, textarea, text, hidden, password, title, rte, codearea.  This will use defaults for these classes when the inputType paramater is used.  For more functionality use the class name directly. Viz. grid: {paramaters}.</p><p><superscript>3</superscript> This key cannot be used on an input from a remote recordset.</p><p><superscript>4</superscript> This key can accept any parameters the specified class can accept.  The parentNode will be overridden by the createForm class to attach the object to the form.  All other parameters are passed to the specified class instance.</p><p><superscript>5</superscript> This key can be a string, function or DHTML element.  If a function is passed the function must return a string or a DHTML element.  The function has no signature.</p><p><superscript>6</superscript> This is for the syntax highlighting when inputType:codeArea is selected.  Can be csharp, css, html, javascript, svg or xml.</p><p><superscript>7</superscript> This is the theme for the syntax highlighting.  Can be any one of: clouds, clouds_midnight, cobalt, dawn, eclipse, idle_fingers, kr_theme, merbivore, merbivore_soft, mono_industrial, monokai, pastel_on_dark, twilight, vibrant_ink.</p><p><superscript>8</superscript> When defined a button will appear in the codearea full screen mode that says 'save' and when clicked will run this procedure.</p></alert>
+									</para>
+								</entry>
+							</row>
+						
+					</table>
+				</content>
+			</section>
+		
+	<!-- ============================== fields ========================== -->
+		
+			<section address="fields">
+				<title>Properties</title>
+				<content>
+					<table>
+						<tableHeader>
+							<row>
+								<entry><para> </para></entry>
+								<entry><para>Name</para></entry>
+								<entry><para>Type</para></entry>
+								<entry><para>Description</para></entry>
+							</row>
+						</tableHeader>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="056c828c-d35b-2a14-5f02-39a294ebcdd8"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										List of autoCompletes in this form.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="6e691839-12b3-d1e0-6d73-a3f5c2b19a23"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										List of codeareas in this form. Note: do not use this array to assign or get values from the form, use the [createForm.getInputByName()] method instead.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="3df242fd-a599-5496-b067-99663f0254d9"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										List of datePickers in this form. Note: do not use this array to assign or get values from the form, use the [createForm.getInputByName()] method instead.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="d24dad3e-7d67-2e09-4a57-3dfe36cdb838"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										List of fileManagers in this form.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="5c05e808-91c8-cf56-12f1-a9d55fc30b58"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="7889c38c-9918-6fd2-caa1-b266f996bfdb"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The main container DIV element.  This is the element that is appended to the [args.parentNode] DHTML element.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="583bf239-0099-3736-6e38-32178b0ef710"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										List of grids in this form.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="22c3865f-39c3-126d-589b-21e8dba98594"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										List of group boxes in this form.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="277bdd00-7d81-8789-e93a-95fa1c12d139"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										List of infos in this form.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="403dd650-b6e4-fe3a-58e8-4ab15af328a3"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										List of inputs in this form.  Note: do not use this array to assign or get values from the form, use the [createForm.getInputByName()] method instead.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="3085a2de-7806-b40e-def9-8228e3123d58"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										List of inputSelectButtons in this form. Note: do not use this array to assign or get values from the form, use the [createForm.getInputByName()] method instead.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="9c94ebac-4241-6c36-52ec-e25220379c62"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										List of invalid inputs in this form.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="15b4927e-565d-9ae2-344f-24d22af168c5"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										List of numericupdowns in this form. Note: do not use this array to assign or get values from the form, use the [createForm.getInputByName()] method instead.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="54bac25c-7a04-6a50-1433-8424b54aada7"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										List of pair tables in this form.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="c966e5b5-298a-3325-d2a0-4a69ef4dfd03"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										List of resizeableBoxes in this form.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="87287bba-7c94-ce60-784f-9c15b9197f28"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										List of rtes (Rich Text Editors) in this form. Note: do not use this array to assign or get values from the form, use the [createForm.getInputByName()] method instead.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="00459af8-335a-a4f9-0a1c-e1702d4f127c"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										List of selects in this form. Note: do not use this array to assign or get values from the form, use the [createForm.getInputByName()] method instead.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="4d2b3e08-ab41-5255-0dff-620beca03db6"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										List of textareas in this form. Note: do not use this array to assign or get values from the form, use the [createForm.getInputByName()] method instead.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="28f29646-45bb-559e-51e1-eeb274d0756b"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The type of object. Returns RenditionCreateForm.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="3e04dc83-f35d-4f98-6699-49240134a6b0"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Message that appears when a record is trying to be commited but there is an invalid field.
+									</para>
+								</entry>
+							</row>
+						
+					</table>
+				</content>
+			</section>
+		
+	<!-- ============================== methods ========================= -->
+		
+			<section address="methods">
+				<title>Methods</title>
+				<content>
+					<table>
+						<tableHeader>
+						<row>
+							<entry><para> </para></entry>
+							<entry><para>Name</para></entry>
+							<entry><para>Type</para></entry>
+							<entry><para>Description</para></entry>
+						</row>
+						</tableHeader>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="722b6d9d-ade2-2038-3521-395eae1099b6"/>(<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  type, <link xlink:href="ef3d2310-dfdb-431e-8330-0d339049abff"/>  proc, <link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>  capture)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="044fcb55-0c5f-d88f-619c-455ffb8b2600"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Attach a procedure to an event.  Usage foo.addEventListener('resize',function(e,foo){/*your procedure code},false)
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="b7fd7523-90fa-7eee-8aff-9d4a7e7ac46e"/>(<link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  parentNode)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Appends the form to a DHTML element.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="2e0c4bfb-6812-c878-90b0-d119722607ef"/>()
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Checks the form to see if the original values are the same as the current values.  false = The input values match the original data, true = The inputs do not match the original data.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="cde4cb8b-9ba0-26b7-7021-6b23cc8079eb"/>()
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="044fcb55-0c5f-d88f-619c-455ffb8b2600"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Removes any refrences for this instance.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="534cd37c-63a7-8254-9204-a217b8541263"/>(<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  headerName)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Gets the header object by its name if the header object exists.  If no header matches the [headerName] parameter then [undefined] is returned.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="2e0cb3fe-a5f7-3579-436e-62796abf009b"/>(<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  columnName)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Returns DHTML element matching the parameter [inputName].
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="ec971bab-82d5-6971-e205-65a4c6bed460"/>(<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  inputName)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Gets the value of the input matching the [inputName] parameter.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="d49d74fe-e5cf-f0ce-bc20-4b56bac508e4"/>()
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Returns an array of all the invalid inputs.  Viz. inputs who's autocomplete function returns invalid.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="3263d784-9837-d4d5-cd93-48c8f7150508"/>(<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  columnName)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Gets the value data (last saved) values matching the parameter [columnName].  If no input is found then [null] is returned.  This is not the input value, to get the input value use getInputValue.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="a5285a8e-25b6-1662-ead5-6ffa15a98a26"/>()
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Initalizes the form.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="b3767290-f897-c9df-e5a0-171edd99c904"/>()
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Checks each input containing an autocomplete to see if the input is valid.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="bf49f1f1-1196-4bab-55b3-3d7ae7b6ce14"/>()
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="044fcb55-0c5f-d88f-619c-455ffb8b2600"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Prevent the default event from occuring.  For use within an event handler.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="d65b458b-96dd-e5b9-3c2f-9aab8f487ec8"/>(<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  type, <link xlink:href="ef3d2310-dfdb-431e-8330-0d339049abff"/>  proc, <link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>  capture)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="044fcb55-0c5f-d88f-619c-455ffb8b2600"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Removes an event from subscription list.  The [proc] must match exactly the [proc] subscribed with.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="b577beec-3ac7-704c-769d-d62c68cefcd1"/>(<link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>  overwrite, <link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>  commandType, <link xlink:href="ef3d2310-dfdb-431e-8330-0d339049abff"/>  callbackProcedure, <link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>  async)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Saves the local form to the remote dataset.  A comfermation dialog will appear if the form data has changed on the server allowing the user to cancel out of the save function.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="09d33aa6-33cd-b4bf-31c1-1a56af32cde3"/>()
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Show a message with a list of invalid inputs. Viz. inputs who's autocomplete function returns invalid) and their validation messages.
+									</para>
+								</entry>
+							</row>
+						
+					</table>
+				</content>
+			</section>
+		
+	<!-- ============================== events ========================= -->
+		
+			<section address="events">
+				<title>Events</title>
+				<content>
+					<table>
+						<tableHeader>
+						<row>
+							<entry><para> </para></entry>
+							<entry><para>Name</para></entry>
+							<entry><para>Description</para></entry>
+						</row>
+						</tableHeader>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="4e3ab362-0252-cc0e-ec09-ab27efc77512"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  form)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when the widget is being disposed.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="5a78b760-b9f1-d08b-7224-ec2b221aa54e"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  form)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when the widget is being disposed.
+									</para>
+								</entry>
+							</row>
+						
+					</table>
+					<alert class="tip">
+						<para>There are two ways to add event listeners.</para>
+					</alert>
+					<para>
+						1. You can attach to events as a parameter when you create the object.
+						<code language="javascript">
+							var foo = new object({
+								event:function(signature){
+									/* event procedure */
+								}
+							});
+						</code>
+						2. Or you can add the event after the object has been instantiated.
+						<code language="javascript">
+							var foo = new object();
+							foo.addEventListener('event',function(signature){
+								/* event procedure */
+							}, false);
+						</code>
+					</para>
+				</content>
+			</section>
+		
+	</developerConceptualDocument>
+</topic>

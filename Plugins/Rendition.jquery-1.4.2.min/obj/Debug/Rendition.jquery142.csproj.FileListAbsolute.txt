@@ -1,0 +1,13 @@
+C:\Rendition\Rendition.jquery-1.4.2.min\bin\Debug\Rendition.jquery142.dll
+C:\Rendition\Rendition.jquery-1.4.2.min\bin\Debug\Rendition.jquery142.pdb
+C:\Rendition\Rendition.jquery-1.4.2.min\bin\Debug\Rendition.Core.dll
+C:\Rendition\Rendition.jquery-1.4.2.min\bin\Debug\Rendition.Core.pdb
+C:\Rendition\Rendition.jquery-1.4.2.min\bin\Debug\Rendition.Core.xml
+C:\Rendition\Rendition.jquery-1.4.2.min\obj\Debug\ResolveAssemblyReference.cache
+C:\Rendition\Rendition.jquery-1.4.2.min\obj\Debug\Rendition.jquery142.dll
+C:\Rendition\Rendition.jquery-1.4.2.min\obj\Debug\Rendition.jquery142.pdb
+C:\Rendition\Plugins\Rendition.jquery-1.4.2.min\bin\Debug\Rendition.jquery142.dll
+C:\Rendition\Plugins\Rendition.jquery-1.4.2.min\bin\Debug\Rendition.jquery142.pdb
+C:\Rendition\Plugins\Rendition.jquery-1.4.2.min\obj\Debug\ResolveAssemblyReference.cache
+C:\Rendition\Plugins\Rendition.jquery-1.4.2.min\obj\Debug\Rendition.jquery142.dll
+C:\Rendition\Plugins\Rendition.jquery-1.4.2.min\obj\Debug\Rendition.jquery142.pdb

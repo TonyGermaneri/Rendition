@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="b853a081-5a0a-a87a-5c1d-a1a2560be230" revisionNumber="1" dataAlias="Rendition.UI.MenuBarStyle">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		
+		<definitionTable>
+			
+				<definedTerm>
+					<para>Member Of</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="b584e6c6-2f5a-6c97-4e57-2ad4afa995cc"/>
+					</para>
+				</definition>
+			
+		</definitionTable>
+		
+			<section address="fields">
+				<title>Rendition.UI.MenuBarStyle Properties</title>
+				<content>
+					<table>
+						<tableHeader>
+							<row>
+								<entry><para> </para></entry>
+								<entry><para>Type</para></entry>
+								<entry><para>Name</para></entry>
+								<entry><para>Description</para></entry>
+							</row>
+						</tableHeader>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="b9ad5dd7-481b-6fb4-071d-753ffc9245e8"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										the CSS background property of the menu background.when the user hovers over the cell.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="6c70e233-5929-bab4-738d-1bc64c3b0ba4"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The horizontal spacing of the <link xlink:href="c807995d-75de-b263-6de4-c0f04686a0bb"/> elements.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="7a89d739-7140-4def-44c0-b0c3e5ce0dd4"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										unique id of this object.  Assigned automatcilly in this reg format /uid_UUID/
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="ed36b74d-dc9d-c4c2-0fc9-28bccde17ae8"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The minimum size of the <link xlink:href="2e5cd548-e114-bc7b-38d1-14306fb354b0"/> as a <link xlink:href="b6679c58-2336-61d4-273e-95bc23b9bfcb"/>.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="f72e2563-bc9e-1fd2-75f4-7f0506e9de0f"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The orientation of the menu, vertical or horizontal.  Not implemented.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="b8a5ddf9-7938-d340-9ff4-f2739ec185e6"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The height of the <link xlink:href="2e5cd548-e114-bc7b-38d1-14306fb354b0"/> as a <link xlink:href="b6679c58-2336-61d4-273e-95bc23b9bfcb"/>.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="526bd3f3-1fc8-f52f-2109-3812b546b5c9"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The type of object.  returns 'RenditionMenuBarStyle'
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="13437a68-2719-b767-ba3f-66acab16b9cc"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The vertical spacing of the <link xlink:href="c807995d-75de-b263-6de4-c0f04686a0bb"/> elements.  Not implemented.
+									</para>
+								</entry>
+							</row>
+						
+					</table>
+				</content>
+			</section>
+		
+
+	</developerConceptualDocument>
+</topic>

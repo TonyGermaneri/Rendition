@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="6a3f6267-4a7e-49ab-b610-626965ceacad" revisionNumber="1">
+  <developerOrientationDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <introduction>
+      <para>Rendition E-Commerce</para>
+    </introduction>
+    <alert class="note">
+	  <para>
+	  This documentation is mostly incomplete.
+	  Monthly updates are made, check <externalLink>
+				<linkText>Antidote 12</linkText>
+				<linkAlternateText>www.antidote12.com</linkAlternateText>
+				<linkUri>http://www.antidote12.com/</linkUri>
+				<linkTarget>a12</linkTarget>
+			</externalLink>
+	  for new versions.
+	  </para>
+	  <para>
+	  What's in here?
+	<list class="bullet">
+		<listItem>Installation help.</listItem>
+		<listItem>Site Template Design (10%).</listItem>
+		<listItem>Dynamic PDF Template Authoring.</listItem>
+		<listItem>Plugin Authoring.</listItem>
+		<listItem>Rendition JavaScript Namespace, documentation and examples.</listItem>
+		<listItem>Rendition .NET Namespace, documentation.</listItem>
+	</list>
+		What still isn't done?
+	<list class="bullet">
+		<listItem>Topics on built in commerce, 
+		content and site tools on the /admin page.</listItem>
+		<listItem>Most of the site template design section is unfinished.</listItem>
+	</list>
+	  </para>
+	  <para>
+	  Visit http://help.antidote12.com/help.zip for a
+	  CHM (Compiled HTML Help File) version of this document.
+	  </para>
+	</alert>
+
+    <para>Welcome to Rendition help.</para>
+    	<para>This help document is written for both end users
+    	and developers.  If you're an end user you'll be most intrested
+    	in the following topics.</para>
+	<list class="bullet">
+		<listItem>Commerce Management.</listItem>
+		<listItem>Content Management.</listItem>
+		<listItem>Content Management.</listItem>
+		<listItem>Site Management.</listItem>
+	</list>
+	<para>
+		If you're a developer, you would be intrested in the above as well
+		as everything else.
+	</para>
+    <relatedTopics>
+    </relatedTopics>
+  </developerOrientationDocument>
+</topic>

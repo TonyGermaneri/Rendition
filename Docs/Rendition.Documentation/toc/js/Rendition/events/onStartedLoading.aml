@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="ae6ec8b4-8a07-1e42-746f-026d6eb7e1ad" revisionNumber="1" dataAlias="Rendition#Rendition.onStartedLoading">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction address="Intro">
+			Rendition#Rendition.onStartedLoading()	
+			<para>Occurs when Rendition has started loading.</para>
+		</introduction>
+		<definitionTable>
+			
+			
+				<definedTerm>
+					<para>Member Of</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="6aa67830-fc7a-c3eb-719a-722fb4fb312e"/>
+					</para>
+				</definition>
+			
+			
+				<definedTerm>
+					<para>Source</para>
+				</definedTerm>
+				<definition>
+					<para>
+						c:\Rendition\Rendition.Core\js\admin\UI\UI.js
+					</para>
+				</definition>
+			
+		</definitionTable>
+		<section address="parameters">
+		<title>Event Signature</title>
+			<sections>
+				<table>
+					<tableHeader>
+					<row>
+						<entry><para> </para></entry>
+						<entry><para>Name</para></entry>
+						<entry><para>Description</para></entry>
+					</row>
+					</tableHeader>
+					
+						<row>
+							<entry>
+								<para>
+									
+									Required
+									Rendition.
+									<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+								</para>
+							</entry>
+							<entry>
+								<para>
+									
+								</para>
+							</entry>
+							<entry>
+								<para>
+									
+								</para>
+							</entry>
+						</row>
+					
+				</table>
+			</sections>
+		</section>
+		<alert class="tip">
+			<para>There are two ways to add event listeners.</para>
+		</alert>
+		<para>
+			1. You can attach to events as a parameter when you create the object.
+			<code language="javascript">
+				var foo = new object({
+					event:function(signature){
+						/* event procedure */
+					}
+				});
+			</code>
+			2. Or you can add the event after the object has been instantiated.
+			<code language="javascript">
+				var foo = new object();
+				foo.addEventListener('event',function(signature){
+					/* event procedure */
+				}, false);
+			</code>
+		</para>
+	</developerConceptualDocument>
+</topic>

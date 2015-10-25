@@ -1,0 +1,5 @@
+C:\Rendition\Plugins\Rendition.ImageImport\bin\Debug\Rendition.ImageImport.dll
+C:\Rendition\Plugins\Rendition.ImageImport\bin\Debug\Rendition.ImageImport.pdb
+C:\Rendition\Plugins\Rendition.ImageImport\obj\Debug\ResolveAssemblyReference.cache
+C:\Rendition\Plugins\Rendition.ImageImport\obj\Debug\Rendition.ImageImport.dll
+C:\Rendition\Plugins\Rendition.ImageImport\obj\Debug\Rendition.ImageImport.pdb

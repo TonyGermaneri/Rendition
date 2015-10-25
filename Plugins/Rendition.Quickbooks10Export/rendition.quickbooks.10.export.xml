@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<quickBooksDatabase
+	outputPath="c:\"
+	discountRevenueAccount="Sales Discounts"
+	taxRevenueAccount="Sales Tax Payable"
+	shippingRevenueAccount="Shipping Revenue"
+	anonymousExportToAccount="Anonymous Customer"
+/>

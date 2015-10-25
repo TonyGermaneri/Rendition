@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="47084688-6830-6639-e5dc-b170f485db48" revisionNumber="1" dataAlias="Rendition.UI.TreeView">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		
+		<definitionTable>
+			
+				<definedTerm>
+					<para>Member Of</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="b584e6c6-2f5a-6c97-4e57-2ad4afa995cc"/>
+					</para>
+				</definition>
+			
+		</definitionTable>
+		
+			<section address="events">
+				<title>Rendition.UI.TreeView Events</title>
+				<content>
+					<table>
+						<tableHeader>
+						<row>
+							<entry><para> </para></entry>
+							<entry><para>Name</para></entry>
+							<entry><para>Description</para></entry>
+						</row>
+						</tableHeader>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="c2158aaf-b49d-a83e-fc19-48ea0726d30d"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="c6d834b2-5b8e-e096-55cf-f1a02dbc88bf"/>  treeView, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  node, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  labelText, <link xlink:href="b4909cfa-da78-c794-ec3d-c84bc598274e"/>  treeNode, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  parentNode)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when a tree node is toggled closed to hide its child nodes.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="ff27f24b-e36c-d049-eaa2-26468dd29770"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="c6d834b2-5b8e-e096-55cf-f1a02dbc88bf"/>  treeView, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  node, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  labelText, <link xlink:href="b4909cfa-da78-c794-ec3d-c84bc598274e"/>  treeNode, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  parentNode)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when a node is being moved.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="36e27318-ee67-f4b3-0cd8-1b90d918efd9"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="c6d834b2-5b8e-e096-55cf-f1a02dbc88bf"/>  treeView, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  dragSource, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  dragTarget)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when a node is being moved over another node.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="895984fc-8d2a-5fa0-60fc-3c4e9e53f3cf"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="c6d834b2-5b8e-e096-55cf-f1a02dbc88bf"/>  treeView, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  dragSource, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  dragTarget)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when a node is being moved.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="df6be4b3-f7f5-3f4f-f20b-a9a208f19655"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="c6d834b2-5b8e-e096-55cf-f1a02dbc88bf"/>  treeView, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  node, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  labelText, <link xlink:href="b4909cfa-da78-c794-ec3d-c84bc598274e"/>  treeNode, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  parentNode)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when a tree node's label is clicked on.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="514e53ca-5c44-b9a4-8b7e-989c16914778"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="c6d834b2-5b8e-e096-55cf-f1a02dbc88bf"/>  treeView, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  node, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  labelText, <link xlink:href="b4909cfa-da78-c794-ec3d-c84bc598274e"/>  treeNode, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  parentNode)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when a tree node's label's context menu is triggered.   This usualy due to a right mouse button click (or Command+click for Mac users).<alert class="note"><para>It is important you use the method e.preventDefault when subscribing to this event.   Failure to do so will cause the system's context menu to appear.</para></alert>
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="6099d4cb-b747-9410-a829-279c5aeb915a"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="c6d834b2-5b8e-e096-55cf-f1a02dbc88bf"/>  treeView, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  node, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  labelText, <link xlink:href="b4909cfa-da78-c794-ec3d-c84bc598274e"/>  treeNode, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  parentNode)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Not implemented.  Occurs when a tree node's label is being edited.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="34fc80b3-098f-4d08-9544-9c75a3325de5"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="c6d834b2-5b8e-e096-55cf-f1a02dbc88bf"/>  treeView, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  node, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  labelText, <link xlink:href="b4909cfa-da78-c794-ec3d-c84bc598274e"/>  treeNode, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  parentNode)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Not implemented.  Occurs when a tree node's label is exiting edit mode.  treeView.preventDefault will prevent the exit from edit mode.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="fd80f073-d662-7fef-a977-b1715e871792"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="c6d834b2-5b8e-e096-55cf-f1a02dbc88bf"/>  treeView, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  node, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  labelText, <link xlink:href="b4909cfa-da78-c794-ec3d-c84bc598274e"/>  treeNode, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  parentNode)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Not implemented.  Occurs when a tree node's label's edit input keydownevent occurs.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="9e5fd564-56c5-9bc1-9756-2abdfebdadce"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="c6d834b2-5b8e-e096-55cf-f1a02dbc88bf"/>  treeView, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  node, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  labelText, <link xlink:href="b4909cfa-da78-c794-ec3d-c84bc598274e"/>  treeNode, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  parentNode)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Not implemented.  Occurs when a tree node's label's edit input keypress occurs.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="bfc5ce0b-6db6-266d-5162-fac9778d62ba"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="c6d834b2-5b8e-e096-55cf-f1a02dbc88bf"/>  treeView, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  node, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  labelText, <link xlink:href="b4909cfa-da78-c794-ec3d-c84bc598274e"/>  treeNode, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  parentNode)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Not implemented.  Occurs when a tree node's label's edit input keyup occurs.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="6a8dd573-6bca-0628-ed09-cced11ad3019"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="c6d834b2-5b8e-e096-55cf-f1a02dbc88bf"/>  treeView, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  node, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  labelText, <link xlink:href="b4909cfa-da78-c794-ec3d-c84bc598274e"/>  treeNode, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  parentNode)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Not implemented.  Occurs when a tree node's label is entering edit mode.  treeView.preventDefault will prevent entering edit mode.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="0282d62d-3e9e-f962-4765-301e444fc2da"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="c6d834b2-5b8e-e096-55cf-f1a02dbc88bf"/>  treeView, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  node, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  labelText, <link xlink:href="b4909cfa-da78-c794-ec3d-c84bc598274e"/>  treeNode, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  parentNode)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when a tree node is toggled open to reveal its child nodes.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="4d99aa68-e8f7-eeed-da23-5c37b6bf2f35"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="c6d834b2-5b8e-e096-55cf-f1a02dbc88bf"/>  treeView)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when the tree is being reinitalized from the original parameters.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="0da03169-a563-2218-46b8-447a9cce7541"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="c6d834b2-5b8e-e096-55cf-f1a02dbc88bf"/>  treeView, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  node, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  labelText, <link xlink:href="b4909cfa-da78-c794-ec3d-c84bc598274e"/>  treeNode, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  parentNode)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when the treeview is being resized.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="ba644875-cf05-ac4f-dc02-c001d6503db2"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="c6d834b2-5b8e-e096-55cf-f1a02dbc88bf"/>  treeView, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  node, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  labelText, <link xlink:href="b4909cfa-da78-c794-ec3d-c84bc598274e"/>  treeNode, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  parentNode)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when a node has been started to drag.
+									</para>
+								</entry>
+							</row>
+						
+					</table>
+					<alert class="tip">
+						<para>There are two ways to add event listeners.</para>
+					</alert>
+					<para>
+						1. You can attach to events as a parameter when you create the object.
+						<code language="javascript">
+							var foo = new object({
+								event:function(signature){
+									/* event procedure */
+								}
+							});
+						</code>
+						2. Or you can add the event after the object has been instantiated.
+						<code language="javascript">
+							var foo = new object();
+							foo.addEventListener('event',function(signature){
+								/* event procedure */
+							}, false);
+						</code>
+					</para>
+				</content>
+			</section>
+		
+	</developerConceptualDocument>
+</topic>

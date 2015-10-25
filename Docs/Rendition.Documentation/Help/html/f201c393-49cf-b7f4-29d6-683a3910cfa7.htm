@@ -1,0 +1,506 @@
+﻿<html xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+  <head>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8" />
+    <META NAME="save" CONTENT="history" />
+    <title>List Fields</title>
+    <meta name="Language" content="en-us" />
+    <meta name="System.Keywords" content="List class, fields" />
+    <meta name="Microsoft.Help.Id" content="Fields.T:Rendition.List" />
+    <meta name="Microsoft.Help.ContentType" content="Reference" />
+    <link rel="stylesheet" type="text/css" href="../styles/Presentation.css" />
+    <link rel="stylesheet" type="text/css" href="ms-help://Hx/HxRuntime/HxLink.css" />
+    <script type="text/javascript" src="../scripts/EventUtilities.js"> </script>
+    <script type="text/javascript" src="../scripts/SplitScreen.js"> </script>
+    <script type="text/javascript" src="../scripts/Dropdown.js"> </script>
+    <script type="text/javascript" src="../scripts/script_manifold.js"> </script>
+    <script type="text/javascript" src="../scripts/script_feedBack.js"> </script>
+    <script type="text/javascript" src="../scripts/CheckboxMenu.js"> </script>
+    <script type="text/javascript" src="../scripts/CommonUtilities.js"> </script>
+    <meta name="container" content="Rendition" />
+    <meta name="file" content="f201c393-49cf-b7f4-29d6-683a3910cfa7" />
+    <meta name="guid" content="f201c393-49cf-b7f4-29d6-683a3910cfa7" />
+    <xml>
+      <MSHelp:Attr Name="AssetID" Value="Fields.T:Rendition.List" />
+      <MSHelp:TOCTitle Title="List Fields" />
+      <MSHelp:RLTitle Title="List Fields (Rendition)" />
+      <MSHelp:Keyword Index="A" Term="Fields.T:Rendition.List" />
+      <MSHelp:Keyword Index="A" Term="frlrfRenditionListFieldsTopic" />
+      <MSHelp:Keyword Index="K" Term="List class, fields" />
+      <MSHelp:Attr Name="DevLang" Value="CSharp" />
+      <MSHelp:Attr Name="Locale" Value="en-us" />
+      <MSHelp:Attr Name="TopicType" Value="kbSyntax" />
+      <MSHelp:Attr Name="TopicType" Value="apiref" />
+      <MSHelp:Attr Name="AssemblyVersion" Value="0.2.0.0" />
+    </xml>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <input type="hidden" id="hiddenScrollOffset" />
+    <img id="collapseImage" style="display:none; height:0; width:0;" src="../icons/collapse_all.gif" alt="Collapse image" title="Collapse image" />
+    <img id="expandImage" style="display:none; height:0; width:0;" src="../icons/expand_all.gif" alt="Expand Image" title="Expand Image" />
+    <img id="collapseAllImage" style="display:none; height:0; width:0;" src="../icons/collapse_all.gif" />
+    <img id="expandAllImage" style="display:none; height:0; width:0;" src="../icons/expand_all.gif" />
+    <img id="dropDownImage" style="display:none; height:0; width:0;" src="../icons/dropdown.gif" />
+    <img id="dropDownHoverImage" style="display:none; height:0; width:0;" src="../icons/dropdownHover.gif" />
+    <img id="copyImage" style="display:none; height:0; width:0;" src="../icons/copycode.gif" alt="Copy image" title="Copy image" />
+    <img id="copyHoverImage" style="display:none; height:0; width:0;" src="../icons/copycodeHighlight.gif" alt="CopyHover image" title="CopyHover image" />
+    <div id="header">
+      <table id="topTable" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <span onclick="ExpandCollapseAll(toggleAllImage)" style="cursor:default;" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage, event)" tabindex="0">
+              <img ID="toggleAllImage" class="toggleAll" src="../icons/collapse_all.gif" /> <label id="collapseAllLabel" for="toggleAllImage" style="display: none;">Collapse All</label><label id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand All</label> </span>
+            <span>    </span>
+            <span id="devlangsDropdown" class="filter" tabindex="0">
+              <img id="devlangsDropdownImage" src="../icons/dropdown.gif" /> <label id="devlangsMenuAllLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: All </nobr></label><label id="devlangsMenuMultipleLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: Multiple </nobr></label><label id="devlangsMenuCSharpLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: C# </nobr></label><label id="devlangsMenuJavaScriptLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: JavaScript </nobr></label></span>
+            <span>    </span>
+            <span id="memberOptionsDropdown" class="filter" tabindex="0">
+              <img id="memberOptionsDropdownImage" src="../icons/dropdown.gif" /> <label id="memberOptionsMenuAllLabel" for="memberOptionsDropdownImage" style="display: none;"><nobr>Members: Show All </nobr></label><label id="memberOptionsMenuMultipleLabel" for="memberOptionsDropdownImage" style="display: none;"><nobr>Members: Filtered </nobr></label><label id="memberOptionsMenuProtectedLabel" for="memberOptionsDropdownImage" style="display: none;"><nobr>Members: Filtered </nobr></label><label id="memberOptionsMenuInheritedLabel" for="memberOptionsDropdownImage" style="display: none;"><nobr>Members: Filtered </nobr></label></span>
+          </td>
+        </tr>
+      </table>
+      <div id="devlangsMenu">
+        <input id="CSharpCheckbox" type="checkbox" data="CSharp,cs,'persist'" value="on" onClick="SetLanguage(this)" />
+        <label class="checkboxLabel" for="CSharpCheckbox">C#</label>
+        <br />
+        <input id="JavaScriptCheckbox" type="checkbox" data="JavaScript,cs,'persist'" value="on" onClick="SetLanguage(this)" />
+        <label class="checkboxLabel" for="JavaScriptCheckbox">JavaScript</label>
+        <br />
+      </div>
+      <div id="memberOptionsMenu">
+        <input id="ProtectedCheckbox" type="checkbox" data="Protected" value="on" onClick="SetMemberOptions(this, 'vis')" />
+        <label class="checkboxLabel" for="ProtectedCheckbox">Include Protected Members</label>
+        <br />
+        <input id="InheritedCheckbox" type="checkbox" data="Inherited" value="on" onClick="SetMemberOptions(this, 'decl')" />
+        <label class="checkboxLabel" for="InheritedCheckbox">Include Inherited Members</label>
+        <br />
+      </div>
+      <table id="bottomTable" cellpadding="0" cellspacing="0">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">Rendition E-Commerce Framework</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">List Fields</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td align="left">
+            <a href="9f45522b-9b03-2b82-e197-dc665c3959ed.htm">List Class</a> <a href="#seeAlsoToggle" onclick="OpenSection(seeAlsoToggle)">See Also</a> <span id="headfeedbackarea" class="feedbackhead"><a href="javascript:SubmitFeedback('tonygermaneri@gmail.com','Rendition E-Commerce Framework','','','','%0\dYour%20feedback%20is%20used%20to%20improve%20the%20documentation%20and%20the%20product.%20Your%20e-mail%20address%20will%20not%20be%20used%20for%20any%20other%20purpose%20and%20is%20disposed%20of%20after%20the%20issue%20you%20report%20is%20resolved.%20%20While%20working%20to%20resolve%20the%20issue%20that%20you%20report,%20you%20may%20be%20contacted%20via%20e-mail%20to%20get%20further%20details%20or%20clarification%20on%20the%20feedback%20you%20sent.%20After%20the%20issue%20you%20report%20has%20been%20addressed,%20you%20may%20receive%20an%20e-mail%20to%20let%20you%20know%20that%20your%20feedback%20has%20been%20addressed.%0\A%0\d','Customer%20Feedback');">Send Feedback</a></span></td>
+        </tr>
+      </table>
+      <table id="gradientTable">
+        <tr>
+          <td class="nsrBottom" background="../icons/gradient.gif" />
+        </tr>
+      </table>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" />
+        <span style="color: DarkGray">
+          <p style="color: #dc143c; font-size: 8.5pt; font-weight: bold;">[This is preliminary documentation and is subject to change.]</p>
+        </span>
+        <p>The <a href="9f45522b-9b03-2b82-e197-dc665c3959ed.htm">List</a> type exposes the following members.</p>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(fieldTableToggle)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(fieldTableToggle, event)" tabindex="0">
+            <img id="fieldTableToggle" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Fields</span>
+        </h1>
+        <div id="fieldTableSection" class="section" name="collapseableSection" style="">
+          <table id="memberList" class="members" frame="lhs" cellpadding="2">
+            <col width="10%" />
+            <tr>
+              <th class="iconColumn">
+               
+            </th>
+              <th class="nameColumn">Name</th>
+              <th class="descriptionColumn">Description</th>
+            </tr>
+            <tr data="private;declared;notNetfw;">
+              <td>
+                <img src="../icons/privfield.gif" alt="Private field" title="Private field" />
+              </td>
+              <td>
+                <a href="7276547e-0b0f-2acf-80c0-ff93d235dca2.htm">_fltTable</a>
+              </td>
+              <td />
+            </tr>
+            <tr data="private;declared;notNetfw;">
+              <td>
+                <img src="../icons/privfield.gif" alt="Private field" title="Private field" />
+              </td>
+              <td>
+                <a href="2ca626c2-fff7-d3b5-37a0-589e8e4750cb.htm">_menu</a>
+              </td>
+              <td />
+            </tr>
+            <tr data="private;declared;notNetfw;">
+              <td>
+                <img src="../icons/privfield.gif" alt="Private field" title="Private field" />
+              </td>
+              <td>
+                <a href="d2aa3484-518e-db6f-227c-80a7e97473e5.htm">_meta</a>
+              </td>
+              <td />
+            </tr>
+            <tr data="private;declared;notNetfw;">
+              <td>
+                <img src="../icons/privfield.gif" alt="Private field" title="Private field" />
+              </td>
+              <td>
+                <a href="d8318fa7-ae54-7300-b3b7-543968daf3a6.htm">_pfltTable</a>
+              </td>
+              <td />
+            </tr>
+            <tr data="private;declared;notNetfw;">
+              <td>
+                <img src="../icons/privfield.gif" alt="Private field" title="Private field" />
+              </td>
+              <td>
+                <a href="06a869d0-ef27-b0b7-ded0-6d1b1654d831.htm">_rfltTable</a>
+              </td>
+              <td />
+            </tr>
+            <tr data="private;declared;notNetfw;">
+              <td>
+                <img src="../icons/privfield.gif" alt="Private field" title="Private field" />
+              </td>
+              <td>
+                <a href="035a907d-574c-9cd5-f4c9-775010a5c205.htm">_section</a>
+              </td>
+              <td />
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubfield.gif" alt="Public field" title="Public field" />
+              </td>
+              <td>
+                <a href="fa071772-68d6-9000-725f-e6d0f10a72f1.htm">CategoryName</a>
+              </td>
+              <td>
+                <div class="summary">
+            The category selected  (e.g.: Missile parts)
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubfield.gif" alt="Public field" title="Public field" />
+              </td>
+              <td>
+                <a href="5c70af55-61a8-b404-3ca2-852bec843659.htm">Filter</a>
+              </td>
+              <td>
+                <div class="summary">
+            Filter string in this list
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubfield.gif" alt="Public field" title="Public field" />
+              </td>
+              <td>
+                <a href="7eff4d43-a2d2-47fd-7d80-87eb0706fd2d.htm">FilterLinks</a>
+              </td>
+              <td>
+                <div class="summary">
+            List of filters avalible in this list.
+            </div>
+              </td>
+            </tr>
+            <tr data="private;declared;notNetfw;">
+              <td>
+                <img src="../icons/privfield.gif" alt="Private field" title="Private field" />
+              </td>
+              <td>
+                <a href="29bd1e33-0c3d-32c4-391f-c041e16dde47.htm">fltBuilder</a>
+              </td>
+              <td />
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubfield.gif" alt="Public field" title="Public field" />
+              </td>
+              <td>
+                <a href="b7229943-df7e-b428-a69e-363b42f2c13b.htm">From</a>
+              </td>
+              <td>
+                <div class="summary">
+            Range of items from
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubfield.gif" alt="Public field" title="Public field" />
+              </td>
+              <td>
+                <a href="f787d983-2074-6658-5c8c-b3c9cb5461ef.htm">HasFilters</a>
+              </td>
+              <td>
+                <div class="summary">
+            When true, this list has filters that can filter items in the list.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubfield.gif" alt="Public field" title="Public field" />
+              </td>
+              <td>
+                <a href="9aae7192-9966-5cdb-2537-0a7ef75ca0a2.htm">HasPriceFilters</a>
+              </td>
+              <td>
+                <div class="summary">
+            When true, this list has price filters that can filter items in the list.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubfield.gif" alt="Public field" title="Public field" />
+              </td>
+              <td>
+                <a href="454cf02d-11f8-3eb6-ac26-324eac757311.htm">HasRemoveFilters</a>
+              </td>
+              <td>
+                <div class="summary">
+            When true, this list has filters that have been selected.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubfield.gif" alt="Public field" title="Public field" />
+              </td>
+              <td>
+                <a href="5bb4d2ca-9da2-c3a3-bd7e-9661e96c991b.htm">ItemList</a>
+              </td>
+              <td>
+                <div class="summary">
+            list of items in this category
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubfield.gif" alt="Public field" title="Public field" />
+              </td>
+              <td>
+                <a href="ed15d405-b4bf-9ae0-3df4-c36be6b8b1b0.htm">ListType</a>
+              </td>
+              <td>
+                <div class="summary">
+            Name of listing selected (search or category )
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubfield.gif" alt="Public field" title="Public field" />
+              </td>
+              <td>
+                <a href="ec9aabe2-426a-c65b-eb59-e499d4aef02a.htm">ListTypeValue</a>
+              </td>
+              <td>
+                <div class="summary">
+            The value of the listing critera (e.g.: category name or search terms)
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubfield.gif" alt="Public field" title="Public field" />
+              </td>
+              <td>
+                <a href="e99667d5-9379-a267-6593-b645f8d0782b.htm">NextPage</a>
+              </td>
+              <td>
+                <div class="summary">
+            The next page
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubfield.gif" alt="Public field" title="Public field" />
+              </td>
+              <td>
+                <a href="4a605e39-33ff-e5c7-80d5-81b7f4133cd5.htm">OrderByName</a>
+              </td>
+              <td>
+                <div class="summary">
+            Name of the order by method
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubfield.gif" alt="Public field" title="Public field" />
+              </td>
+              <td>
+                <a href="0667127e-06d8-6a35-09c7-1d61fb52ae7b.htm">Page</a>
+              </td>
+              <td>
+                <div class="summary">
+            Page currently on.
+            </div>
+              </td>
+            </tr>
+            <tr data="private;declared;notNetfw;">
+              <td>
+                <img src="../icons/privfield.gif" alt="Private field" title="Private field" />
+              </td>
+              <td>
+                <a href="875201d0-ed5f-4aa6-c6f4-99d1cbd14000.htm">pfltBuilder</a>
+              </td>
+              <td />
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubfield.gif" alt="Public field" title="Public field" />
+              </td>
+              <td>
+                <a href="7975a5eb-d442-de2c-1193-317d534108d2.htm">PrevPage</a>
+              </td>
+              <td>
+                <div class="summary">
+            The previous page
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubfield.gif" alt="Public field" title="Public field" />
+              </td>
+              <td>
+                <a href="bc313712-0e4f-6b83-24eb-5c8a8521ca5f.htm">PriceFilterLinks</a>
+              </td>
+              <td>
+                <div class="summary">
+            List of price filters in this list.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubfield.gif" alt="Public field" title="Public field" />
+              </td>
+              <td>
+                <a href="5724d711-1f60-48ac-d732-8c3e39981659.htm">Properties</a>
+              </td>
+              <td>
+                <div class="summary">
+            List of Properties in this category
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubfield.gif" alt="Public field" title="Public field" />
+              </td>
+              <td>
+                <a href="b124675e-5058-ad79-8ad4-3551a372a378.htm">RemoveFilterLinks</a>
+              </td>
+              <td>
+                <div class="summary">
+            List of selected filters in this list.
+            </div>
+              </td>
+            </tr>
+            <tr data="private;declared;notNetfw;">
+              <td>
+                <img src="../icons/privfield.gif" alt="Private field" title="Private field" />
+              </td>
+              <td>
+                <a href="e0dffd06-e3d7-a506-21c6-fd74215fc01a.htm">rfltBuilder</a>
+              </td>
+              <td />
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubfield.gif" alt="Public field" title="Public field" />
+              </td>
+              <td>
+                <a href="e5577303-2523-0a38-0493-5dcdc012125d.htm">Search</a>
+              </td>
+              <td>
+                <div class="summary">
+            The string being searched for if any.
+            </div>
+              </td>
+            </tr>
+            <tr data="private;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/privfield.gif" alt="Private field" title="Private field" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="4a46d72a-04e1-1ff5-33e3-a8d9c19ba269.htm">super_secret_key_name</a>
+              </td>
+              <td>
+                <div class="summary">
+            Key name used to store list object in the HttpContext.Items list.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubfield.gif" alt="Public field" title="Public field" />
+              </td>
+              <td>
+                <a href="e275d96b-e25e-8164-0910-65faec632c9c.htm">To</a>
+              </td>
+              <td>
+                <div class="summary">
+            Rage of items to
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubfield.gif" alt="Public field" title="Public field" />
+              </td>
+              <td>
+                <a href="cae1807c-dd51-89bb-5a83-e3bd57b0d8a9.htm">TotalPages</a>
+              </td>
+              <td>
+                <div class="summary">
+            Total pages in this category
+            </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(seeAlsoToggle)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(seeAlsoToggle, event)" tabindex="0">
+            <img id="seeAlsoToggle" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />See Also</span>
+        </h1>
+        <div id="seeAlsoSection" class="section" name="collapseableSection" style="">
+          <div class="seeAlsoStyle">
+            <a href="9f45522b-9b03-2b82-e197-dc665c3959ed.htm">List Class</a>
+          </div>
+          <div class="seeAlsoStyle">
+            <a href="d2b3a88c-9b91-9dc6-dac5-53431bc586b3.htm">Rendition Namespace</a>
+          </div>
+        </div>
+      </div>
+      <div id="footer">
+        <div class="footerLine">
+          <img width="100%" height="3px" src="../icons/footer.gif" alt="Footer image" title="Footer image" />
+        </div>
+        <A NAME="feedback"></A>
+        <span id="fb" class="feedbackcss"></span>
+        <p />Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:tonygermaneri%40gmail.com?Subject=Rendition E-Commerce Framework">Tony Germaneri</a><script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        var HT_mailLinkText = HT_mailLink.innerHTML;
+        HT_mailLink.href += ": " + document.title;
+        HT_mailLink.innerHTML = HT_mailLinkText;
+        </script><p />Copyright © Tony Germaneri 2011</div>
+    </div>
+  </body>
+</html>

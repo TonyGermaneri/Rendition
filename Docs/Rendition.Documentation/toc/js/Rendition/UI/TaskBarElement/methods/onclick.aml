@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="91da25f4-d24e-a029-a137-6fc13dfac550" revisionNumber="1" dataAlias="Rendition.UI.TaskBarElement#TaskBarElement.onclick">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction address="Intro">
+			Rendition.UI.TaskBarElement#TaskBarElement.onclick()
+			<para>Activates the element, bringing its <link xlink:href="dc990744-70f0-25bd-d971-be960b7764b6"/> to the front.</para>
+		</introduction>
+		<definitionTable>
+			
+			
+				<definedTerm>
+					<para>Member Of</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="7a2226b4-a53b-bdc8-2b33-a5f6c7c615ac"/>
+					</para>
+				</definition>
+			
+			
+			
+				<definedTerm>
+					<para>Source</para>
+				</definedTerm>
+				<definition>
+					<para>
+						c:\Rendition\Rendition.Core\js\admin\UI\taskbarElement.js
+					</para>
+				</definition>
+			
+		</definitionTable>
+		<section address="parameters">
+		<title>Parameters</title>
+			<sections>
+				<table>
+					<tableHeader>
+					<row>
+						<entry><para> </para></entry>
+						<entry><para>Name</para></entry>
+						<entry><para>Description</para></entry>
+					</row>
+					</tableHeader>
+					
+				</table>
+			</sections>
+		</section>
+	</developerConceptualDocument>
+</topic>

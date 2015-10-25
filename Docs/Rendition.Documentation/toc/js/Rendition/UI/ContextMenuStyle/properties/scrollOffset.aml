@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="98d82458-07e7-e7ae-c4d4-ca2f8831af48" revisionNumber="1" dataAlias="Rendition.UI.ContextMenuStyle#ContextMenuStyle.scrollOffset">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction address="Intro">
+			Rendition.UI.ContextMenuStyle#ContextMenuStyle.scrollOffset()
+			<para>Amount to reduce from the top or bottom of the context menu as a <link xlink:href="b6679c58-2336-61d4-273e-95bc23b9bfcb"/>.Looks like { x: 0, y: 0, h: 0, w: 0 }.</para>
+		</introduction>
+		<definitionTable>
+			
+			
+				<definedTerm>
+					<para>Member Of</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="99f3223b-7968-fc9f-5485-ac052ac77c84"/>
+					</para>
+				</definition>
+			
+			
+				<definedTerm>
+					<para>Type</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+					</para>
+				</definition>
+			
+			
+				<definedTerm>
+					<para>Source</para>
+				</definedTerm>
+				<definition>
+					<para>
+						c:\Rendition\Rendition.Core\js\admin\UI\contextMenu.js
+					</para>
+				</definition>
+			
+		</definitionTable>
+	</developerConceptualDocument>
+</topic>

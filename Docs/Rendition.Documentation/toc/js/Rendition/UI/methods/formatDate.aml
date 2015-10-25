@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="f7f7a2a5-4dcf-4a68-7c50-5ccc3a49f1aa" revisionNumber="1" dataAlias="Rendition.UI.formatDate">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction address="Intro">
+			Rendition.UI.formatDate(<link xlink:href="ff5e4aac-f374-fc24-dfc2-7e9d046490a4"/>  formatDate, <link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  formatString)
+			<para>Turns a DateTime object into a string and formats it following the provided pattern.</para>
+		</introduction>
+		<definitionTable>
+			
+			
+				<definedTerm>
+					<para>Member Of</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="b584e6c6-2f5a-6c97-4e57-2ad4afa995cc"/>
+					</para>
+				</definition>
+			
+			
+				<definedTerm>
+					<para>Return Type</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+					</para>
+				</definition>
+			
+			
+				<definedTerm>
+					<para>Source</para>
+				</definedTerm>
+				<definition>
+					<para>
+						c:\Rendition\Rendition.Core\js\admin\UI\FormatDate.js
+					</para>
+				</definition>
+			
+		</definitionTable>
+		<section address="parameters">
+		<title>Parameters</title>
+			<sections>
+				<table>
+					<tableHeader>
+					<row>
+						<entry><para> </para></entry>
+						<entry><para>Name</para></entry>
+						<entry><para>Description</para></entry>
+					</row>
+					</tableHeader>
+					
+						<row>
+							<entry>
+								<para>
+									
+									Required
+									formatDate
+									<link xlink:href="ff5e4aac-f374-fc24-dfc2-7e9d046490a4"/>
+								</para>
+							</entry>
+							<entry>
+								<para>
+									The DateTime object to convert.
+								</para>
+							</entry>
+							<entry>
+								<para>
+									
+								</para>
+							</entry>
+						</row>
+					
+						<row>
+							<entry>
+								<para>
+									
+									Required
+									formatString
+									<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+								</para>
+							</entry>
+							<entry>
+								<para>
+									The pattern to convert the DateTime object to.<table>	<tableHeader>		<row>			<entry>				<para>					Pattern				</para>			</entry>			<entry>				<para>					Description				</para>			</entry>		</row>	</tableHeader>	<row>		<entry>			<para>				yyyy			</para>		</entry>		<entry>			<para>				Four digit year			</para>		</entry>	</row>	<row>		<entry>			<para>				yy			</para>		</entry>		<entry>			<para>				Two digit year			</para>		</entry>	</row>	<row>		<entry>			<para>				mmm			</para>		</entry>		<entry>			<para>				Month name			</para>		</entry>	</row>	<row>		<entry>			<para>				mm			</para>		</entry>		<entry>			<para>				Two digit month with leading zero			</para>		</entry>	</row>	<row>		<entry>			<para>				m			</para>		</entry>		<entry>			<para>				Two digit month without leading zero			</para>		</entry>	</row>	<row>		<entry>			<para>				dd			</para>		</entry>		<entry>			<para>				Two digit day with leading zero			</para>		</entry>	</row>	<row>		<entry>			<para>				d			</para>		</entry>		<entry>			<para>				Two digit day without leading zero			</para>		</entry>	</row>	<row>		<entry>			<para>				hh			</para>		</entry>		<entry>			<para>				Two digit hour with leading zero			</para>		</entry>	</row>	<row>		<entry>			<para>				h			</para>		</entry>		<entry>			<para>				Two digit hour without leading zero			</para>		</entry>	</row>	<row>		<entry>			<para>				HH			</para>		</entry>		<entry>			<para>				Two digit 12 hour with leading zero			</para>		</entry>	</row>	<row>		<entry>			<para>				H			</para>		</entry>		<entry>			<para>				Two digit 12 hour without leading zero			</para>		</entry>	</row>	<row>		<entry>			<para>				nn			</para>		</entry>		<entry>			<para>				Two digit minute with leading zero			</para>		</entry>	</row>	<row>		<entry>			<para>				n			</para>		</entry>		<entry>			<para>				Two digit minute without leading zero			</para>		</entry>	</row>	<row>		<entry>			<para>				ss			</para>		</entry>		<entry>			<para>				Two digit second with leading zero			</para>		</entry>	</row>	<row>		<entry>			<para>				s			</para>		</entry>		<entry>			<para>				Two digit second without leading zero			</para>		</entry>	</row>	<row>		<entry>			<para>				a			</para>		</entry>		<entry>			<para>				AM / PM			</para>		</entry>	</row></table>
+								</para>
+							</entry>
+							<entry>
+								<para>
+									
+								</para>
+							</entry>
+						</row>
+					
+				</table>
+			</sections>
+		</section>
+	</developerConceptualDocument>
+</topic>

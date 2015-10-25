@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="0e492c1a-4b53-4ec4-8689-c41a4e04cb87"
+  name="pdf"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="c4b218e1-e3a4-4f4f-a893-a7a09ae17439"
+      handle="viewcode://./CodeSchema_Namespace?Namespace=iTextSharp.text.pdf"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="99dbf586-0e0a-4b56-82cb-d3ee72bbd8e1"
+        name="PdfStamper"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="cee6daa3-03fd-442e-9eb4-e0302c2ac5ef"
+            handle="viewcode://./CodeSchema_Class?Assembly=file:///C:/Rendition/Rendition.Core/lib/itextsharp.dll Namespace=iTextSharp.text.pdf Type=PdfStamper"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="a6d5742a-8ef2-470e-9f34-7731b8212bf1"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ac09080d-97c7-4ee0-87a7-ac4a0c5752c3">
+                <propertyInstance
+                  Id="b5c8258a-925e-4136-abeb-80029d2bc106"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="42ce277d-66f8-4cb4-b8b5-b49ab198b854">
+                <propertyInstance
+                  Id="f568fcfa-2935-4ace-b45c-3c43c3996843"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9c0e8640-e761-4278-afc5-a70f64650a17">
+                <propertyInstance
+                  Id="77d11ed8-0929-4acc-a371-29f53ce8ca85"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ccac2a9a-109d-49ab-9871-5720efea0296">
+                <propertyInstance
+                  Id="550807e2-d8d7-4c53-970d-38ae3d1f62c8"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0cc8c571-9a65-4cf3-a74b-acceb3944ad2">
+                <propertyInstance
+                  Id="ced6bc3c-8e5b-4fd4-a114-3194154cdaab"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

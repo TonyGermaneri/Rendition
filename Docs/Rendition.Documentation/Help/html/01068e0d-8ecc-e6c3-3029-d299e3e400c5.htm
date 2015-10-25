@@ -1,0 +1,312 @@
+﻿<html xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+  <head>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8" />
+    <META NAME="save" CONTENT="history" />
+    <title>Barcode Fields</title>
+    <meta name="Language" content="en-us" />
+    <meta name="System.Keywords" content="Barcode class, fields" />
+    <meta name="Microsoft.Help.Id" content="Fields.T:BarcodeLib.Barcode" />
+    <meta name="Microsoft.Help.ContentType" content="Reference" />
+    <link rel="stylesheet" type="text/css" href="../styles/Presentation.css" />
+    <link rel="stylesheet" type="text/css" href="ms-help://Hx/HxRuntime/HxLink.css" />
+    <script type="text/javascript" src="../scripts/EventUtilities.js"> </script>
+    <script type="text/javascript" src="../scripts/SplitScreen.js"> </script>
+    <script type="text/javascript" src="../scripts/Dropdown.js"> </script>
+    <script type="text/javascript" src="../scripts/script_manifold.js"> </script>
+    <script type="text/javascript" src="../scripts/script_feedBack.js"> </script>
+    <script type="text/javascript" src="../scripts/CheckboxMenu.js"> </script>
+    <script type="text/javascript" src="../scripts/CommonUtilities.js"> </script>
+    <meta name="container" content="BarcodeLib" />
+    <meta name="file" content="01068e0d-8ecc-e6c3-3029-d299e3e400c5" />
+    <meta name="guid" content="01068e0d-8ecc-e6c3-3029-d299e3e400c5" />
+    <xml>
+      <MSHelp:Attr Name="AssetID" Value="Fields.T:BarcodeLib.Barcode" />
+      <MSHelp:TOCTitle Title="Barcode Fields" />
+      <MSHelp:RLTitle Title="Barcode Fields (BarcodeLib)" />
+      <MSHelp:Keyword Index="A" Term="Fields.T:BarcodeLib.Barcode" />
+      <MSHelp:Keyword Index="A" Term="frlrfBarcodeLibBarcodeFieldsTopic" />
+      <MSHelp:Keyword Index="K" Term="Barcode class, fields" />
+      <MSHelp:Attr Name="DevLang" Value="CSharp" />
+      <MSHelp:Attr Name="Locale" Value="en-us" />
+      <MSHelp:Attr Name="TopicType" Value="kbSyntax" />
+      <MSHelp:Attr Name="TopicType" Value="apiref" />
+      <MSHelp:Attr Name="AssemblyVersion" Value="0.2.0.0" />
+    </xml>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <input type="hidden" id="hiddenScrollOffset" />
+    <img id="collapseImage" style="display:none; height:0; width:0;" src="../icons/collapse_all.gif" alt="Collapse image" title="Collapse image" />
+    <img id="expandImage" style="display:none; height:0; width:0;" src="../icons/expand_all.gif" alt="Expand Image" title="Expand Image" />
+    <img id="collapseAllImage" style="display:none; height:0; width:0;" src="../icons/collapse_all.gif" />
+    <img id="expandAllImage" style="display:none; height:0; width:0;" src="../icons/expand_all.gif" />
+    <img id="dropDownImage" style="display:none; height:0; width:0;" src="../icons/dropdown.gif" />
+    <img id="dropDownHoverImage" style="display:none; height:0; width:0;" src="../icons/dropdownHover.gif" />
+    <img id="copyImage" style="display:none; height:0; width:0;" src="../icons/copycode.gif" alt="Copy image" title="Copy image" />
+    <img id="copyHoverImage" style="display:none; height:0; width:0;" src="../icons/copycodeHighlight.gif" alt="CopyHover image" title="CopyHover image" />
+    <div id="header">
+      <table id="topTable" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <span onclick="ExpandCollapseAll(toggleAllImage)" style="cursor:default;" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage, event)" tabindex="0">
+              <img ID="toggleAllImage" class="toggleAll" src="../icons/collapse_all.gif" /> <label id="collapseAllLabel" for="toggleAllImage" style="display: none;">Collapse All</label><label id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand All</label> </span>
+            <span>    </span>
+            <span id="devlangsDropdown" class="filter" tabindex="0">
+              <img id="devlangsDropdownImage" src="../icons/dropdown.gif" /> <label id="devlangsMenuAllLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: All </nobr></label><label id="devlangsMenuMultipleLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: Multiple </nobr></label><label id="devlangsMenuCSharpLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: C# </nobr></label><label id="devlangsMenuJavaScriptLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: JavaScript </nobr></label></span>
+            <span>    </span>
+            <span id="memberOptionsDropdown" class="filter" tabindex="0">
+              <img id="memberOptionsDropdownImage" src="../icons/dropdown.gif" /> <label id="memberOptionsMenuAllLabel" for="memberOptionsDropdownImage" style="display: none;"><nobr>Members: Show All </nobr></label><label id="memberOptionsMenuMultipleLabel" for="memberOptionsDropdownImage" style="display: none;"><nobr>Members: Filtered </nobr></label><label id="memberOptionsMenuProtectedLabel" for="memberOptionsDropdownImage" style="display: none;"><nobr>Members: Filtered </nobr></label><label id="memberOptionsMenuInheritedLabel" for="memberOptionsDropdownImage" style="display: none;"><nobr>Members: Filtered </nobr></label></span>
+          </td>
+        </tr>
+      </table>
+      <div id="devlangsMenu">
+        <input id="CSharpCheckbox" type="checkbox" data="CSharp,cs,'persist'" value="on" onClick="SetLanguage(this)" />
+        <label class="checkboxLabel" for="CSharpCheckbox">C#</label>
+        <br />
+        <input id="JavaScriptCheckbox" type="checkbox" data="JavaScript,cs,'persist'" value="on" onClick="SetLanguage(this)" />
+        <label class="checkboxLabel" for="JavaScriptCheckbox">JavaScript</label>
+        <br />
+      </div>
+      <div id="memberOptionsMenu">
+        <input id="ProtectedCheckbox" type="checkbox" data="Protected" value="on" onClick="SetMemberOptions(this, 'vis')" />
+        <label class="checkboxLabel" for="ProtectedCheckbox">Include Protected Members</label>
+        <br />
+        <input id="InheritedCheckbox" type="checkbox" data="Inherited" value="on" onClick="SetMemberOptions(this, 'decl')" />
+        <label class="checkboxLabel" for="InheritedCheckbox">Include Inherited Members</label>
+        <br />
+      </div>
+      <table id="bottomTable" cellpadding="0" cellspacing="0">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">Rendition E-Commerce Framework</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">Barcode Fields</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td align="left">
+            <a href="e7bb0ac2-3c3c-255e-3c74-d7c33f20bc8a.htm">Barcode Class</a> <a href="#seeAlsoToggle" onclick="OpenSection(seeAlsoToggle)">See Also</a> <span id="headfeedbackarea" class="feedbackhead"><a href="javascript:SubmitFeedback('tonygermaneri@gmail.com','Rendition E-Commerce Framework','','','','%0\dYour%20feedback%20is%20used%20to%20improve%20the%20documentation%20and%20the%20product.%20Your%20e-mail%20address%20will%20not%20be%20used%20for%20any%20other%20purpose%20and%20is%20disposed%20of%20after%20the%20issue%20you%20report%20is%20resolved.%20%20While%20working%20to%20resolve%20the%20issue%20that%20you%20report,%20you%20may%20be%20contacted%20via%20e-mail%20to%20get%20further%20details%20or%20clarification%20on%20the%20feedback%20you%20sent.%20After%20the%20issue%20you%20report%20has%20been%20addressed,%20you%20may%20receive%20an%20e-mail%20to%20let%20you%20know%20that%20your%20feedback%20has%20been%20addressed.%0\A%0\d','Customer%20Feedback');">Send Feedback</a></span></td>
+        </tr>
+      </table>
+      <table id="gradientTable">
+        <tr>
+          <td class="nsrBottom" background="../icons/gradient.gif" />
+        </tr>
+      </table>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" />
+        <span style="color: DarkGray">
+          <p style="color: #dc143c; font-size: 8.5pt; font-weight: bold;">[This is preliminary documentation and is subject to change.]</p>
+        </span>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(fieldTableToggle)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(fieldTableToggle, event)" tabindex="0">
+            <img id="fieldTableToggle" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Fields</span>
+        </h1>
+        <div id="fieldTableSection" class="section" name="collapseableSection" style="">
+          <table id="memberList" class="members" frame="lhs" cellpadding="2">
+            <col width="10%" />
+            <tr>
+              <th class="iconColumn">
+               
+            </th>
+              <th class="nameColumn">Name</th>
+              <th class="descriptionColumn">Description</th>
+            </tr>
+            <tr data="private;declared;notNetfw;">
+              <td>
+                <img src="../icons/privfield.gif" alt="Private field" title="Private field" />
+              </td>
+              <td>
+                <a href="76c2bc10-4131-8734-8dc1-04112c25b27d.htm">_Alignment</a>
+              </td>
+              <td />
+            </tr>
+            <tr data="private;declared;notNetfw;">
+              <td>
+                <img src="../icons/privfield.gif" alt="Private field" title="Private field" />
+              </td>
+              <td>
+                <a href="34de97c6-75de-8af7-6661-bc068770da10.htm">_BackColor</a>
+              </td>
+              <td />
+            </tr>
+            <tr data="private;declared;notNetfw;">
+              <td>
+                <img src="../icons/privfield.gif" alt="Private field" title="Private field" />
+              </td>
+              <td>
+                <a href="cfda80b4-4db5-95fa-96a3-62164d711cee.htm">_Country_Assigning_Manufacturer_Code</a>
+              </td>
+              <td />
+            </tr>
+            <tr data="private;declared;notNetfw;">
+              <td>
+                <img src="../icons/privfield.gif" alt="Private field" title="Private field" />
+              </td>
+              <td>
+                <a href="53f8ae19-5749-2157-973a-e00828d6d2fc.htm">_Encoded_Image</a>
+              </td>
+              <td />
+            </tr>
+            <tr data="private;declared;notNetfw;">
+              <td>
+                <img src="../icons/privfield.gif" alt="Private field" title="Private field" />
+              </td>
+              <td>
+                <a href="3a664080-1284-16ba-b642-9aa14e9eacf4.htm">_EncodingTime</a>
+              </td>
+              <td />
+            </tr>
+            <tr data="private;declared;notNetfw;">
+              <td>
+                <img src="../icons/privfield.gif" alt="Private field" title="Private field" />
+              </td>
+              <td>
+                <a href="53a1bbcd-76fc-0aeb-5477-e7cb50c9ad68.htm">_ForeColor</a>
+              </td>
+              <td />
+            </tr>
+            <tr data="private;declared;notNetfw;">
+              <td>
+                <img src="../icons/privfield.gif" alt="Private field" title="Private field" />
+              </td>
+              <td>
+                <a href="29cbc2d3-6714-4edb-4d2e-405d92440d24.htm">_Height</a>
+              </td>
+              <td />
+            </tr>
+            <tr data="private;declared;notNetfw;">
+              <td>
+                <img src="../icons/privfield.gif" alt="Private field" title="Private field" />
+              </td>
+              <td>
+                <a href="475eef2d-932a-6d49-0c6a-ffc16a1a63a2.htm">_ImageFormat</a>
+              </td>
+              <td />
+            </tr>
+            <tr data="private;declared;notNetfw;">
+              <td>
+                <img src="../icons/privfield.gif" alt="Private field" title="Private field" />
+              </td>
+              <td>
+                <a href="e86cda34-0888-debe-d746-37921c26d775.htm">_IncludeLabel</a>
+              </td>
+              <td />
+            </tr>
+            <tr data="private;declared;notNetfw;">
+              <td>
+                <img src="../icons/privfield.gif" alt="Private field" title="Private field" />
+              </td>
+              <td>
+                <a href="9bc1f0cd-c7b5-166e-9e77-a0aecf6f8159.htm">_LabelFont</a>
+              </td>
+              <td />
+            </tr>
+            <tr data="private;declared;notNetfw;">
+              <td>
+                <img src="../icons/privfield.gif" alt="Private field" title="Private field" />
+              </td>
+              <td>
+                <a href="d12cdccb-242c-4031-9c1f-6f1db7caf15c.htm">_LabelPosition</a>
+              </td>
+              <td />
+            </tr>
+            <tr data="private;declared;notNetfw;">
+              <td>
+                <img src="../icons/privfield.gif" alt="Private field" title="Private field" />
+              </td>
+              <td>
+                <a href="ec4cfaaf-6bb2-6193-858b-6fbcf1443303.htm">_RotateFlipType</a>
+              </td>
+              <td />
+            </tr>
+            <tr data="private;declared;notNetfw;">
+              <td>
+                <img src="../icons/privfield.gif" alt="Private field" title="Private field" />
+              </td>
+              <td>
+                <a href="f5b74d99-260e-1fed-a1c5-607061884de2.htm">_Width</a>
+              </td>
+              <td />
+            </tr>
+            <tr data="private;declared;notNetfw;">
+              <td>
+                <img src="../icons/privfield.gif" alt="Private field" title="Private field" />
+              </td>
+              <td>
+                <a href="fb7ef730-8ba7-b174-f788-e22f0359b45f.htm">_XML</a>
+              </td>
+              <td />
+            </tr>
+            <tr data="private;declared;notNetfw;">
+              <td>
+                <img src="../icons/privfield.gif" alt="Private field" title="Private field" />
+              </td>
+              <td>
+                <a href="03e3ba90-9225-6569-a154-ebe9eb57e1f3.htm">Encoded_Type</a>
+              </td>
+              <td />
+            </tr>
+            <tr data="private;declared;notNetfw;">
+              <td>
+                <img src="../icons/privfield.gif" alt="Private field" title="Private field" />
+              </td>
+              <td>
+                <a href="d0d167ad-1cf3-55c5-0535-114905d546b1.htm">Encoded_Value</a>
+              </td>
+              <td />
+            </tr>
+            <tr data="private;declared;notNetfw;">
+              <td>
+                <img src="../icons/privfield.gif" alt="Private field" title="Private field" />
+              </td>
+              <td>
+                <a href="ff995585-a738-8be0-006a-ac82675f5939.htm">ibarcode</a>
+              </td>
+              <td />
+            </tr>
+            <tr data="private;declared;notNetfw;">
+              <td>
+                <img src="../icons/privfield.gif" alt="Private field" title="Private field" />
+              </td>
+              <td>
+                <a href="2992c2b5-6d3f-074c-1654-e2f565d7951e.htm">Raw_Data</a>
+              </td>
+              <td />
+            </tr>
+          </table>
+        </div>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(seeAlsoToggle)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(seeAlsoToggle, event)" tabindex="0">
+            <img id="seeAlsoToggle" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />See Also</span>
+        </h1>
+        <div id="seeAlsoSection" class="section" name="collapseableSection" style="">
+          <div class="seeAlsoStyle">
+            <a href="e7bb0ac2-3c3c-255e-3c74-d7c33f20bc8a.htm">Barcode Class</a>
+          </div>
+          <div class="seeAlsoStyle">
+            <a href="0435bf55-e8f6-b107-c122-d0737c3e3df1.htm">BarcodeLib Namespace</a>
+          </div>
+        </div>
+      </div>
+      <div id="footer">
+        <div class="footerLine">
+          <img width="100%" height="3px" src="../icons/footer.gif" alt="Footer image" title="Footer image" />
+        </div>
+        <A NAME="feedback"></A>
+        <span id="fb" class="feedbackcss"></span>
+        <p />Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:tonygermaneri%40gmail.com?Subject=Rendition E-Commerce Framework">Tony Germaneri</a><script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        var HT_mailLinkText = HT_mailLink.innerHTML;
+        HT_mailLink.href += ": " + document.title;
+        HT_mailLink.innerHTML = HT_mailLinkText;
+        </script><p />Copyright © Tony Germaneri 2011</div>
+    </div>
+  </body>
+</html>

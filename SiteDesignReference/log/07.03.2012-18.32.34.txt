@@ -1,0 +1,31 @@
+7/3/2012 6:21:58 PM:Disney Import Exception on Read Config ==>Could not find file 'C:\Rendition\SiteDesignReference\plugins\automation.xml'.
+7/3/2012 6:21:58 PM:A Plugin threw an exception on Assembly.GetTypes(). 
+This is probably due to a version mismatch.  Make sure your plugin is compiled using
+the version of Rendition this site is running (0.2 Build 0).  If your plugin is used in .aspx pages make sure
+the plugin is added to the Global Assembly Cache.
+Source: claydesign_freeShipping, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Error: Error during free shipping plugin ini: Could not find file 'C:\Rendition\SiteDesignReference\plugins\freeShipping.xml'..  Free Shipping XML Doc in ~/plugins/freeShipping.xml should look like this: <pluginInfo>
+	<freeShipping threshold="100.00"/>
+</pluginInfo> 
+7/3/2012 6:21:58 PM:Gumps Import Exception on Read Config ==>Could not find file 'C:\Rendition\SiteDesignReference\plugins\automation.xml'.
+7/3/2012 6:21:58 PM:FutureMemories Import Exception on Read Config ==>Could not find file 'C:\Rendition\SiteDesignReference\plugins\automation.xml'.
+7/3/2012 6:21:58 PM:GreatAmerican Import Exception on Read Config ==>Could not find file 'C:\Rendition\SiteDesignReference\plugins\automation.xml'.
+7/3/2012 6:21:58 PM:LillianVernon Import Exception on Read Config ==>Could not find file 'C:\Rendition\SiteDesignReference\plugins\automation.xml'.
+7/3/2012 6:21:58 PM:Marketday Import Exception on Read Config ==>Could not find file 'C:\Rendition\SiteDesignReference\plugins\automation.xml'.
+7/3/2012 6:21:58 PM:Solutions Import Exception on Read Config ==>Could not find file 'C:\Rendition\SiteDesignReference\plugins\automation.xml'.
+7/3/2012 6:21:58 PM:USToy Import Exception on Read Config ==>Could not find file 'C:\Rendition\SiteDesignReference\plugins\automation.xml'.
+7/3/2012 6:21:58 PM:VermontCountryStore Import Exception on Read Config ==>Could not find file 'C:\Rendition\SiteDesignReference\plugins\automation.xml'.
+7/3/2012 6:21:58 PM:A Plugin threw an exception on Assembly.GetTypes(). 
+This is probably due to a version mismatch.  Make sure your plugin is compiled using
+the version of Rendition this site is running (0.2 Build 0).  If your plugin is used in .aspx pages make sure
+the plugin is added to the Global Assembly Cache.
+Source: Rendition.LinkPointPaymentGateway, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Error: Object reference not set to an instance of an object. 
+7/3/2012 6:21:58 PM:The path 'C:\export\' specified in ~/plugins/export.xml in the export.xml file ( @ export > quickbooks_10_iif : outputPath ) does not exist.   Output directory set to application root.
+7/3/2012 6:22:28 PM:Disney Import Exception on Read Config ==>Could not find file 'C:\Rendition\SiteDesignReference\plugins\automation.xml'.
+7/3/2012 6:22:28 PM:claydesign_disney_shipment_update, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null:An error occuredCould not find file 'C:\Rendition\SiteDesignReference\plugins\automation.xml'.
+7/3/2012 6:22:28 PM:LillianVernon Import Exception on Read Config ==>Could not find file 'C:\Rendition\SiteDesignReference\plugins\automation.xml'.
+7/3/2012 6:22:28 PM:Solutions Import Exception on Read Config ==>Could not find file 'C:\Rendition\SiteDesignReference\plugins\automation.xml'.
+7/3/2012 6:22:28 PM:USToy Import Exception on Read Config ==>Could not find file 'C:\Rendition\SiteDesignReference\plugins\automation.xml'.
+7/3/2012 6:22:28 PM:claydesign_vendor_net_ship_update, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null:An error occuredCould not find file 'C:\Rendition\SiteDesignReference\plugins\automation.xml'.
+7/3/2012 6:22:28 PM:VermontCountryStore Import Exception on Read Config ==>Could not find file 'C:\Rendition\SiteDesignReference\plugins\automation.xml'.

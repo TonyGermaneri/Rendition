@@ -1,0 +1,9 @@
+C:\Rendition\rendition.dll\obj\Release\ResolveAssemblyReference.cache
+C:\Rendition\rendition.dll\obj\Release\rendition.Properties.Admin_Resources.resources
+C:\Rendition\rendition.dll\obj\Release\rendition.Properties.Setup_Resources.resources
+C:\Rendition\rendition.dll\obj\Release\GenerateResource.read.1.tlog
+C:\Rendition\rendition.dll\obj\Release\GenerateResource.write.1.tlog
+C:\Rendition\rendition.dll\bin\Release\rendition.dll
+C:\Rendition\rendition.dll\bin\Release\rendition.pdb
+C:\Rendition\rendition.dll\obj\Release\rendition.dll
+C:\Rendition\rendition.dll\obj\Release\rendition.pdb

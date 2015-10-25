@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="e94d6c4d-f3ba-6ffd-fc75-5ee2ab9fae52" revisionNumber="1" dataAlias="Rendition#Rendition.UI.autocompleteCallback">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction address="Intro">
+			Rendition#Rendition.UI.autocompleteCallback()
+			<para>This function processes the data returned from the server when the Rendition.UI.autocompleteURLis sent.  The type returned by this function must be a <link xlink:href="de0fdb88-125a-3606-d0af-83173204d97b"/>.The signature of the function is Function(XMLHttpRequest e, <link xlink:href="c3297b0d-9e44-0956-efe9-aba03ac86241"/> autoComplete).The default function uses the C# Rendition.admin.dataSet method.</para>
+		</introduction>
+		<definitionTable>
+			
+			
+				<definedTerm>
+					<para>Member Of</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="6aa67830-fc7a-c3eb-719a-722fb4fb312e"/>
+					</para>
+				</definition>
+			
+			
+				<definedTerm>
+					<para>Type</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="ef3d2310-dfdb-431e-8330-0d339049abff"/>
+					</para>
+				</definition>
+			
+			
+				<definedTerm>
+					<para>Source</para>
+				</definedTerm>
+				<definition>
+					<para>
+						c:\Rendition\Rendition.Core\js\admin\UI\Init.js
+					</para>
+				</definition>
+			
+		</definitionTable>
+	</developerConceptualDocument>
+</topic>

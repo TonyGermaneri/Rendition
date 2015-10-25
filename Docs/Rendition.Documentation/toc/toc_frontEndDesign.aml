@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="be84a3df-4553-449e-8d7a-81857619160d" revisionNumber="1">
+  <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!--
+    <summary>
+      <para>Optional summary abstract</para>
+    </summary>
+    -->
+    <introduction>
+      <!-- Uncomment this to generate an outline of the section and sub-section
+           titles.  Specify a numeric value as the inner text to limit it to
+           a specific number of sub-topics when creating the outline.  Specify
+           zero (0) to limit it to top-level sections only.  -->
+      <autoOutline />
+      <para>Required introduction</para>
+    </introduction>
+    <!-- Add one or more top-level section elements.  These are collapsible.
+         If using <autoOutline />, add an address attribute to identify it
+         and specify a title so that it can be jumped to with a hyperlink. -->
+    <section address="siteTemplateDesign">
+      <title>Site Template Design</title>
+      <content>
+        <!-- Uncomment this to create a sub-section outline
+        <autoOutline /> -->
+        <para>
+        This topic and subtopics in this section will help you
+        design a front facing retail web site from scratch,
+        explaining the content of each page and how to implement
+        the rendition namespace to create an interactive web site.
+        </para>
+        <para>
+        	The pages are listed in alphabetical order.
+        	Becuase Rendition is an HTTPModule you don't
+        	need to call on it with special commands to
+        	make it run.  So long as Rendition is refrenced
+        	in your web.config it will run.  
+        	See <link xlink:href="43ecc36f-d33a-4a8b-8430-612a88a96687"/> for more information.
+        </para>
+      </content>
+      
+      <!-- If a section contains a sections element, its content creates
+           sub-sections.  These are not collapsible. -->
+      
+      <sections>
+          <section address="specialURLs">
+              <title>Special URLs</title>
+              <content>
+                  <para>The following Urls are special.  They
+                  are intercepted by Rendition and replaced
+                  by either speical html pages or respond
+                  to JSON commands issued from 
+                  your JavaScript commands on 
+                  your front end site.  These URLs are defaults,
+                  you can change the defaults by modifying your
+                  web.config. Becuase these URLs are used by 
+                  Rendition, you cannot create URLs with the same name.
+                  See <link xlink:href="43ecc36f-d33a-4a8b-8430-612a88a96687"/>
+                  for more information.</para>
+				<list class="bullet">
+					<listItem>/responder</listItem>
+					<listItem>/admin</listItem>
+					<listItem>/admin/responder</listItem>
+				</list>
+              </content>
+          </section>
+          <section address="blogaspx">
+              <title>blog.aspx</title>
+              <content>
+                  <para>This topic covers how to
+                  create a reference to a blog,
+                  loop through your blog, create
+                  a blog paging function, managing
+                  replies and censoring user
+                  created content.</para>
+              </content>
+          </section>
+          <section address="cartaspx">
+              <title>cart.aspx</title>
+              <content>
+                  <para>This topic covers how to
+                  list the contents of the users
+                  cart, update the cart
+                  and manipulate the wishlist.</para>
+              </content>
+          </section>
+          <section address="checkoutaspx">
+              <title>checkout.aspx</title>
+              <content>
+                  <para>This topic covers how to
+                  collect information and submit
+                  it as a new order, handle the
+                  result of the new order, send an
+                  email and print a sales receipt.</para>
+              </content>
+          </section>
+          <section address="defaultaspx">
+              <title>default.aspx</title>
+              <content>
+                  <para>This topic covers how to
+                  use the site sections class
+                  to create sections of your site
+                  that can be targeted by content authors.</para>
+              </content>
+          </section>
+          <section address="defaultaspx">
+              <title>detail.aspx</title>
+              <content>
+                  <para>This topic show you how to
+                  display detail infrmation about 
+                  an item, add to cart, add to wishlist
+                  loop through item images and more.</para>
+              </content>
+          </section>
+          <section address="fileNotFoundaspx">
+              <title>fileNotFound.aspx</title>
+              <content>
+                  <para>This topic covers the
+                  use of the item listings,
+                  filtering item property,
+                  paging items, site search,
+                  and search engeine optimization.</para>
+              </content>
+          </section>
+          <section address="headermaster">
+              <title>header.master</title>
+              <content>
+                  <para>This topic covers how
+                  to create a master page all
+                  your other pages will use.
+                  </para>
+              </content>
+          </section>
+          <section address="listaspx">
+              <title>list.aspx</title>
+              <content>
+                  <para>This topic covers the
+                  use of the item listings,
+                  filtering item property,
+                  paging items, site search,
+                  and search engeine optimization.
+                  </para>
+              </content>
+          </section>
+          <section address="myAccountaspx">
+              <title>myAccount.aspx</title>
+              <content>
+                  <para>This topic covers how
+                  to show a user their orders,
+                  account details and other user
+                  related information.
+                  </para>
+              </content>
+          </section>
+          <section address="replyaspx">
+              <title>reply.aspx</title>
+              <content>
+                  <para>This topic covers how
+                  create a reply AJAX responder page
+                  for replies.
+                  </para>
+              </content>
+          </section>
+          <section address="replyaspx">
+              <title>web.config</title>
+              <content>
+                  <para>This topic covers how
+                  modify the web.config file
+                  and describes the various
+                  fields in the file.
+                  </para>
+              </content>
+          </section>
+          <section address="replyaspx">
+              <title>robots.txt</title>
+              <content>
+                  <para>This topic covers
+                  the use of the robots.txt file.
+                  </para>
+              </content>
+          </section>
+      </sections>
+    </section>
+    <relatedTopics>
+    </relatedTopics>
+  </developerConceptualDocument>
+</topic>

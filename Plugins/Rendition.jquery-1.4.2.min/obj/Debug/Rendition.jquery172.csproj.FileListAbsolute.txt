@@ -1,0 +1,5 @@
+C:\Rendition\Plugins\Rendition.jquery-1.4.2.min\bin\Debug\Rendition.jquery172.dll
+C:\Rendition\Plugins\Rendition.jquery-1.4.2.min\bin\Debug\Rendition.jquery172.pdb
+C:\Rendition\Plugins\Rendition.jquery-1.4.2.min\obj\Debug\ResolveAssemblyReference.cache
+C:\Rendition\Plugins\Rendition.jquery-1.4.2.min\obj\Debug\Rendition.jquery172.dll
+C:\Rendition\Plugins\Rendition.jquery-1.4.2.min\obj\Debug\Rendition.jquery172.pdb

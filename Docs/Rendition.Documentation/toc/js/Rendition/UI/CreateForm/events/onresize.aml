@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="5a78b760-b9f1-d08b-7224-ec2b221aa54e" revisionNumber="1" dataAlias="Rendition.UI.CreateForm#CreateForm.onresize">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction address="Intro">
+			Rendition.UI.CreateForm#CreateForm.onresize(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  form)	
+			<para>Occurs when the widget is being disposed.</para>
+		</introduction>
+		<definitionTable>
+			
+			
+				<definedTerm>
+					<para>Member Of</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="a739f999-2c2d-baa9-1e25-5c0a74113044"/>
+					</para>
+				</definition>
+			
+			
+				<definedTerm>
+					<para>Source</para>
+				</definedTerm>
+				<definition>
+					<para>
+						c:\Rendition\Rendition.Core\js\admin\UI\createForm.js
+					</para>
+				</definition>
+			
+		</definitionTable>
+		<section address="parameters">
+		<title>Event Signature</title>
+			<sections>
+				<table>
+					<tableHeader>
+					<row>
+						<entry><para> </para></entry>
+						<entry><para>Name</para></entry>
+						<entry><para>Description</para></entry>
+					</row>
+					</tableHeader>
+					
+						<row>
+							<entry>
+								<para>
+									
+									Required
+									e
+									<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+								</para>
+							</entry>
+							<entry>
+								<para>
+									Browser event object.
+								</para>
+							</entry>
+							<entry>
+								<para>
+									
+								</para>
+							</entry>
+						</row>
+					
+						<row>
+							<entry>
+								<para>
+									
+									Required
+									form
+									<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+								</para>
+							</entry>
+							<entry>
+								<para>
+									The createForm firing the event.
+								</para>
+							</entry>
+							<entry>
+								<para>
+									
+								</para>
+							</entry>
+						</row>
+					
+				</table>
+			</sections>
+		</section>
+		<alert class="tip">
+			<para>There are two ways to add event listeners.</para>
+		</alert>
+		<para>
+			1. You can attach to events as a parameter when you create the object.
+			<code language="javascript">
+				var foo = new object({
+					event:function(signature){
+						/* event procedure */
+					}
+				});
+			</code>
+			2. Or you can add the event after the object has been instantiated.
+			<code language="javascript">
+				var foo = new object();
+				foo.addEventListener('event',function(signature){
+					/* event procedure */
+				}, false);
+			</code>
+		</para>
+	</developerConceptualDocument>
+</topic>

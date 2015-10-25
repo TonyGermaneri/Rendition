@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="36e27318-ee67-f4b3-0cd8-1b90d918efd9" revisionNumber="1" dataAlias="Rendition.UI.TreeView#TreeView.ondragover">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction address="Intro">
+			Rendition.UI.TreeView#TreeView.ondragover(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="c6d834b2-5b8e-e096-55cf-f1a02dbc88bf"/>  treeView, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  dragSource, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  dragTarget)	
+			<para>Occurs when a node is being moved over another node.</para>
+		</introduction>
+		<definitionTable>
+			
+			
+				<definedTerm>
+					<para>Member Of</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="c6d834b2-5b8e-e096-55cf-f1a02dbc88bf"/>
+					</para>
+				</definition>
+			
+			
+				<definedTerm>
+					<para>Source</para>
+				</definedTerm>
+				<definition>
+					<para>
+						c:\Rendition\Rendition.Core\js\admin\UI\treeView.js
+					</para>
+				</definition>
+			
+		</definitionTable>
+		<section address="parameters">
+		<title>Event Signature</title>
+			<sections>
+				<table>
+					<tableHeader>
+					<row>
+						<entry><para> </para></entry>
+						<entry><para>Name</para></entry>
+						<entry><para>Description</para></entry>
+					</row>
+					</tableHeader>
+					
+						<row>
+							<entry>
+								<para>
+									
+									Required
+									e
+									<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+								</para>
+							</entry>
+							<entry>
+								<para>
+									Browser event object.
+								</para>
+							</entry>
+							<entry>
+								<para>
+									
+								</para>
+							</entry>
+						</row>
+					
+						<row>
+							<entry>
+								<para>
+									
+									Required
+									treeView
+									<link xlink:href="c6d834b2-5b8e-e096-55cf-f1a02dbc88bf"/>
+								</para>
+							</entry>
+							<entry>
+								<para>
+									The treeView instance firing the event.
+								</para>
+							</entry>
+							<entry>
+								<para>
+									
+								</para>
+							</entry>
+						</row>
+					
+						<row>
+							<entry>
+								<para>
+									
+									Required
+									dragSource
+									<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+								</para>
+							</entry>
+							<entry>
+								<para>
+									The source of the drag. Looks like: { node, labelText, treeNode }.
+								</para>
+							</entry>
+							<entry>
+								<para>
+									
+								</para>
+							</entry>
+						</row>
+					
+						<row>
+							<entry>
+								<para>
+									
+									Required
+									dragTarget
+									<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+								</para>
+							</entry>
+							<entry>
+								<para>
+									The target of the drag. Looks like: { node, labelText, treeNode }.
+								</para>
+							</entry>
+							<entry>
+								<para>
+									
+								</para>
+							</entry>
+						</row>
+					
+				</table>
+			</sections>
+		</section>
+		<alert class="tip">
+			<para>There are two ways to add event listeners.</para>
+		</alert>
+		<para>
+			1. You can attach to events as a parameter when you create the object.
+			<code language="javascript">
+				var foo = new object({
+					event:function(signature){
+						/* event procedure */
+					}
+				});
+			</code>
+			2. Or you can add the event after the object has been instantiated.
+			<code language="javascript">
+				var foo = new object();
+				foo.addEventListener('event',function(signature){
+					/* event procedure */
+				}, false);
+			</code>
+		</para>
+	</developerConceptualDocument>
+</topic>

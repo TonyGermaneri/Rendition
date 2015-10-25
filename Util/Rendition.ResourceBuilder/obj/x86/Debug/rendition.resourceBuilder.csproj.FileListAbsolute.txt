@@ -1,0 +1,10 @@
+C:\Rendition\rendition.resourceBuilder\bin\Debug\rendition.resourceBuilder.exe
+C:\Rendition\rendition.resourceBuilder\bin\Debug\rendition.resourceBuilder.pdb
+C:\Rendition\rendition.resourceBuilder\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Rendition\rendition.resourceBuilder\obj\x86\Debug\rendition.resourceBuilder.exe
+C:\Rendition\rendition.resourceBuilder\obj\x86\Debug\rendition.resourceBuilder.pdb
+C:\Rendition\Util\Rendition.ResourceBuilder\bin\Debug\Rendition.ResourceBuilder.exe
+C:\Rendition\Util\Rendition.ResourceBuilder\bin\Debug\Rendition.ResourceBuilder.pdb
+C:\Rendition\Util\Rendition.ResourceBuilder\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Rendition\Util\Rendition.ResourceBuilder\obj\x86\Debug\Rendition.ResourceBuilder.exe
+C:\Rendition\Util\Rendition.ResourceBuilder\obj\x86\Debug\Rendition.ResourceBuilder.pdb

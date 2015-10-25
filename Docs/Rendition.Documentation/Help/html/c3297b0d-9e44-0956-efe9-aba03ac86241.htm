@@ -1,0 +1,1210 @@
+﻿<html xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+  <head>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8" />
+    <META NAME="save" CONTENT="history" />
+    <title>AutoComplete</title>
+    <meta name="Language" content="en-us" />
+    <meta name="Microsoft.Help.Id" content="c3297b0d-9e44-0956-efe9-aba03ac86241" />
+    <meta name="Description" content="Creates a DHTML based autocomplete. This class implements Rendition.UI.ContextMenu to create a drop down menu when [args.autoComplete] is true. It also provides methods for validating user input against Regular Expresions and database records." />
+    <meta name="Microsoft.Help.ContentType" content="Concepts" />
+    <link rel="stylesheet" type="text/css" href="../styles/Presentation.css" />
+    <link rel="stylesheet" type="text/css" href="ms-help://Hx/HxRuntime/HxLink.css" />
+    <script type="text/javascript" src="../scripts/EventUtilities.js"> </script>
+    <script type="text/javascript" src="../scripts/SplitScreen.js"> </script>
+    <script type="text/javascript" src="../scripts/Dropdown.js"> </script>
+    <script type="text/javascript" src="../scripts/script_manifold.js"> </script>
+    <script type="text/javascript" src="../scripts/script_feedBack.js"> </script>
+    <script type="text/javascript" src="../scripts/CheckboxMenu.js"> </script>
+    <script type="text/javascript" src="../scripts/CommonUtilities.js"> </script>
+    <xml>
+      <MSHelp:Keyword Index="A" Term="c3297b0d-9e44-0956-efe9-aba03ac86241" />
+      <MSHelp:Attr Name="RevisionNumber" Value="1" />
+      <MSHelp:Attr Name="AssetID" Value="c3297b0d-9e44-0956-efe9-aba03ac86241" />
+      <MSHelp:Attr Name="Abstract" Value="Creates a DHTML based autocomplete. This class implements Rendition.UI.ContextMenu to create a drop down menu when [args.autoComplete] is true. It also provides methods for validating user input against Regular Expresions and database records. Most a ..." />
+      <MSHelp:Attr Name="TopicType" Value="kbArticle" />
+      <MSHelp:Attr Name="Locale" Value="en-us" />
+    </xml>
+    <link type="text/css" rel="stylesheet" href="../styles/highlight.css" />
+    <script type="text/javascript" src="../scripts/highlight.js"> </script>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <input type="hidden" id="hiddenScrollOffset" />
+    <img id="collapseImage" style="display:none; height:0; width:0;" src="../icons/collapse_all.gif" alt="Collapse image" title="Collapse image" />
+    <img id="expandImage" style="display:none; height:0; width:0;" src="../icons/expand_all.gif" alt="Expand Image" title="Expand Image" />
+    <img id="collapseAllImage" style="display:none; height:0; width:0;" src="../icons/collapse_all.gif" />
+    <img id="expandAllImage" style="display:none; height:0; width:0;" src="../icons/expand_all.gif" />
+    <img id="dropDownImage" style="display:none; height:0; width:0;" src="../icons/dropdown.gif" />
+    <img id="dropDownHoverImage" style="display:none; height:0; width:0;" src="../icons/dropdownHover.gif" />
+    <img id="copyImage" style="display:none; height:0; width:0;" src="../icons/copycode.gif" alt="Copy image" title="Copy image" />
+    <img id="copyHoverImage" style="display:none; height:0; width:0;" src="../icons/copycodeHighlight.gif" alt="CopyHover image" title="CopyHover image" />
+    <div id="header">
+      <table id="topTable" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <span onclick="ExpandCollapseAll(toggleAllImage)" style="cursor:default;" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage, event)" tabindex="0">
+              <img ID="toggleAllImage" class="toggleAll" src="../icons/collapse_all.gif" /> <label id="collapseAllLabel" for="toggleAllImage" style="display: none;">Collapse All</label><label id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand All</label> </span>
+            <span>    </span>
+            <span id="devlangsDropdown" class="filter" tabindex="0">
+              <img id="devlangsDropdownImage" src="../icons/dropdown.gif" /> <label id="devlangsMenuAllLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: All </nobr></label><label id="devlangsMenuMultipleLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: Multiple </nobr></label><label id="devlangsMenuCSharpLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: C# </nobr></label><label id="devlangsMenuJavaScriptLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: JavaScript </nobr></label></span>
+          </td>
+        </tr>
+      </table>
+      <div id="devlangsMenu">
+        <input id="CSharpCheckbox" type="checkbox" data="CSharp,cs,'persist'" value="on" onClick="SetLanguage(this)" />
+        <label class="checkboxLabel" for="CSharpCheckbox">C#</label>
+        <br />
+        <input id="JavaScriptCheckbox" type="checkbox" data="JavaScript,cs,'persist'" value="on" onClick="SetLanguage(this)" />
+        <label class="checkboxLabel" for="JavaScriptCheckbox">JavaScript</label>
+        <br />
+      </div>
+      <table id="bottomTable" cellpadding="0" cellspacing="0">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">Rendition E-Commerce Framework</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">AutoComplete</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td align="left">
+            <span id="headfeedbackarea" class="feedbackhead">
+              <a href="javascript:SubmitFeedback('tonygermaneri@gmail.com','Rendition E-Commerce Framework','','1.0.0.0','','%0\dYour%20feedback%20is%20used%20to%20improve%20the%20documentation%20and%20the%20product.%20Your%20e-mail%20address%20will%20not%20be%20used%20for%20any%20other%20purpose%20and%20is%20disposed%20of%20after%20the%20issue%20you%20report%20is%20resolved.%20%20While%20working%20to%20resolve%20the%20issue%20that%20you%20report,%20you%20may%20be%20contacted%20via%20e-mail%20to%20get%20further%20details%20or%20clarification%20on%20the%20feedback%20you%20sent.%20After%20the%20issue%20you%20report%20has%20been%20addressed,%20you%20may%20receive%20an%20e-mail%20to%20let%20you%20know%20that%20your%20feedback%20has%20been%20addressed.%0\A%0\d','Customer%20Feedback');">Send Feedback</a>
+            </span>
+          </td>
+        </tr>
+      </table>
+      <table id="gradientTable">
+        <tr>
+          <td class="nsrBottom" background="../icons/gradient.gif" />
+        </tr>
+      </table>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" />
+        <span style="color: DarkGray">
+          <p style="color: #dc143c; font-size: 8.5pt; font-weight: bold;">[This is preliminary documentation and is subject to change.]</p>
+        </span>
+        <a name="Intro"> </a>
+        <div class="introduction">
+			Class Rendition.UI.AutoComplete
+			<p>Creates a DHTML based autocomplete.  This class implements Rendition.UI.ContextMenu 
+to create a drop down menu when [args.autoComplete] is true.
+It also provides methods for validating user input against Regular Expresions and database records.
+Most all validation in Rendition is done using this class.</p></div>
+        <p>
+          <dl class="authored">
+            <dt>
+              <p>Member Of</p>
+            </dt>
+            <dd>
+              <p>
+                <span sdata="link">
+                  <a href="ddee8d40-d92d-34d0-2be3-5f5d65f36f31.htm">UI</a>
+                </span>
+              </p>
+            </dd>
+            <dt>
+              <p>Source</p>
+            </dt>
+            <dd>
+              <p>
+							c:\Rendition\Rendition.Core\js\admin\UI\autocomplete.js
+						</p>
+            </dd>
+          </dl>
+        </p>
+        <a name="examples"> </a>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(sectionToggleID0EHAAA)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(sectionToggleID0EHAAA, event)" tabindex="0">
+            <img id="sectionToggleID0EHAAA" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Examples</span>
+        </h1>
+        <div id="sectionSectionID0EHAAA" class="section" name="collapseableSection" style="">
+          <h3 class="subHeading">
+								
+									Bind autocomplete to an input and prevent invalid input.
+
+								
+							</h3>
+          <div class="subsection">
+            <p>
+              <span id="cbc_1" x-lang="JavaScript" codeLanguage="JavaScript">
+                <div class="highlight-title">
+                  <span class="highlight-copycode" onkeypress="javascript:CopyColorizedCodeCheckKey(this.parentNode, event);" tabindex="0" onmouseover="CopyCodeChangeIcon(this)" onmouseout="CopyCodeChangeIcon(this)" onclick="javascript:CopyColorizedCode(this.parentNode);">
+                    <img style="margin-right: 5px;" src="../icons/CopyCode.gif" />Copy</span>JavaScript</div>
+                <div class="code">
+                  <pre xml:space="preserve">
+                    <span class="highlight-keyword">var</span> foo = Rendition.UI.Dialog();
+<span class="highlight-keyword">var</span> input = document.createElement(<span class="highlight-literal">'input'</span>);
+<span class="highlight-keyword">var</span> submit = document.createElement(<span class="highlight-literal">'button'</span>);
+<span class="highlight-keyword">var</span> bar = Rendition.UI.AutoComplete({
+    mustMatchPattern: <span class="highlight-literal">/^.+$/</span>,
+    patternMismatchMessage: <span class="highlight-literal">'This field cannot be blank.'</span>,
+    patternMismatchTitle: <span class="highlight-literal">'Invalid Value.'</span>,
+    input: input
+});
+submit.innerHTML = <span class="highlight-literal">'Check validation'</span>;
+foo.content.appendChild(input);
+foo.content.appendChild(submit);
+submit.onclick = <span class="highlight-keyword">function</span> () {
+    alert(bar.isValid());
+}
+});</pre>
+                </div>
+              </span>
+            </p>
+          </div>
+          <h3 class="subHeading">
+								
+									Bind autocomplete to an input.  Require the value to be present in the result of the query matching the object + suffix and require the value to match a pattern.
+
+								
+							</h3>
+          <div class="subsection">
+            <p>
+              <span id="cbc_2" x-lang="JavaScript" codeLanguage="JavaScript">
+                <div class="highlight-title">
+                  <span class="highlight-copycode" onkeypress="javascript:CopyColorizedCodeCheckKey(this.parentNode, event);" tabindex="0" onmouseover="CopyCodeChangeIcon(this)" onmouseout="CopyCodeChangeIcon(this)" onclick="javascript:CopyColorizedCode(this.parentNode);">
+                    <img style="margin-right: 5px;" src="../icons/CopyCode.gif" />Copy</span>JavaScript</div>
+                <div class="code">
+                  <pre xml:space="preserve">
+                    <span class="highlight-keyword">var</span> foo = Rendition.UI.Dialog();
+<span class="highlight-keyword">var</span> input = document.createElement(<span class="highlight-literal">'input'</span>);
+<span class="highlight-keyword">var</span> submit = document.createElement(<span class="highlight-literal">'button'</span>);
+<span class="highlight-keyword">var</span> bar = Rendition.UI.AutoComplete({
+    mustMatchPattern: <span class="highlight-literal">/[0-9]+|^$/i</span>,
+    patternMismatchMessage: <span class="highlight-literal">'This field can only contain the numbers 0-9.'</span>,
+    patternMismatchTitle: <span class="highlight-literal">'Invalid value.'</span>,
+    objectName: <span class="highlight-literal">'shortUserList'</span>,
+    suffix: <span class="highlight-literal">"where userId like '%&lt;value&gt;%' or handle like '%&lt;value&gt;%' or email like '%&lt;value&gt;%'"</span>,
+    mustMatchRecord: <span class="highlight-keyword">true</span>,
+    matchSuffix: <span class="highlight-literal">"where userId = '&lt;value&gt;'"</span>,
+    autoComplete: <span class="highlight-keyword">true</span>,
+    optionDisplayValue: <span class="highlight-literal">'&lt;column0&gt; &lt;column1&gt;'</span>,
+    optionValue: <span class="highlight-literal">'&lt;column0&gt;'</span>,
+    input: input
+});
+submit.innerHTML = <span class="highlight-literal">'Check validation'</span>;
+foo.content.appendChild(input);
+foo.content.appendChild(submit);
+submit.onclick = <span class="highlight-keyword">function</span> () {
+    alert(bar.isValid());
+}</pre>
+                </div>
+              </span>
+            </p>
+          </div>
+        </div>
+        <a name="parameters"> </a>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(sectionToggleID0EFAAA)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(sectionToggleID0EFAAA, event)" tabindex="0">
+            <img id="sectionToggleID0EFAAA" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Constructor Parameters</span>
+        </h1>
+        <div id="sectionSectionID0EFAAA" class="section" name="collapseableSection" style="">
+          <div class="tableSection">
+            <table width="50%" cellspacing="2" cellpadding="5" frame="lhs">
+              <tr>
+                <th>
+                  <p />
+                </th>
+                <th>
+                  <p>Name</p>
+                </th>
+                <th>
+                  <p>Type</p>
+                </th>
+                <th>
+                  <p>Description</p>
+                </th>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Private Field" src="../media/privatefield.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										args 
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Parameters for the widget.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Private Field" src="../media/privatefield.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										args.input 
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0.htm">DHTMLElement</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The DHTML element input to attach to
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Private Field" src="../media/privatefield.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										args.objectName 
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The object to scan
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Private Field" src="../media/privatefield.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										args.optionDisplayValue 
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <span class="nolink">[89f0508f-dccd-8863-9d09-b323af88a667]</span>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Value that shows up on the drop down menu, &lt;column0&gt; will be replaced by the first column value etc.   When a function is passed, the function must return a string and will be evaluated after each request.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Private Field" src="../media/privatefield.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										args.optionValue 
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <span class="nolink">[89f0508f-dccd-8863-9d09-b323af88a667]</span>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Value that is returned to the field when an option is selected.  &lt;column0&gt; will be replaced by the first column value etc..   When a function is passed, the function must return a string and will be evaluated after each request.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Private Field" src="../media/privatefield.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										args.matchCase 
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="feb87a09-e36a-9baa-3c23-409ea79458a9.htm">Boolean</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										When true, match the input value with the case of the recordset result.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Private Field" src="../media/privatefield.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										args.matchPart 
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="36802977-faa0-b394-beea-eebbbc3b2d5a.htm">Integer</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Is the substring match matching the begining of the string (left) or any part of the string. 0=match begining (left), 1=match any (left or right).
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Private Field" src="../media/privatefield.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										args.max 
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="36802977-faa0-b394-beea-eebbbc3b2d5a.htm">Integer</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Maximum number of rows to show.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Private Field" src="../media/privatefield.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										args.autoComplete 
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="feb87a09-e36a-9baa-3c23-409ea79458a9.htm">Boolean</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										When true use the autocomplete function, or just use the validation procedures.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Private Field" src="../media/privatefield.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										args.mustMatchRecord 
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="feb87a09-e36a-9baa-3c23-409ea79458a9.htm">Boolean</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										When true force focus /w msg until value matches with a record.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Private Field" src="../media/privatefield.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										args.cantMatchRecord 
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="feb87a09-e36a-9baa-3c23-409ea79458a9.htm">Boolean</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										When true force focus /w msg until value does not match any records.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Private Field" src="../media/privatefield.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										args.mustMatchPattern 
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <span class="nolink">[89f0508f-dccd-8863-9d09-b323af88a667]</span>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The Regular Expression the input value must match to be valid.   When a function is passed, the function must return a string and will be evaluated after each request.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Private Field" src="../media/privatefield.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										args.recordMismatchMessage 
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <span class="nolink">[89f0508f-dccd-8863-9d09-b323af88a667]</span>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Message that appears when mustMatchRecord or cantMatchRecord is true and the valid condition is not met.   When a function is passed, the function must return a string and will be evaluated after each request.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Private Field" src="../media/privatefield.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										args.recordMismatchTitle 
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <span class="nolink">[89f0508f-dccd-8863-9d09-b323af88a667]</span>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Title that appears when mustMatchRecord or cantMatchRecord is true and the valid condition is not met.   When a function is passed, the function must return a string and will be evaluated after each request.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Private Field" src="../media/privatefield.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										args.patternMismatchMessage 
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <span class="nolink">[89f0508f-dccd-8863-9d09-b323af88a667]</span>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Message that appears when mustMatchPattern is true and the valid condition is not met.   When a function is passed, the function must return a string and will be evaluated after each request.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Private Field" src="../media/privatefield.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										args.patternMismatchTitle 
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <span class="nolink">[89f0508f-dccd-8863-9d09-b323af88a667]</span>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Title that appears when mustMatchPattern is true and the valid condition is not met.  When a function is passed, the function must return a string and will be evaluated after each request.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Private Field" src="../media/privatefield.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										args.forceValidation 
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="feb87a09-e36a-9baa-3c23-409ea79458a9.htm">Boolean</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Keep user on the field even if the field is blank when it fails validation.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Private Field" src="../media/privatefield.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										args.supressBlur 
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="feb87a09-e36a-9baa-3c23-409ea79458a9.htm">Boolean</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Stops the blur function on the input from validating the field onblur, still validates on isValid().
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Private Field" src="../media/privatefield.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										args.suffix 
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The suffix (where clause) used to produce the close match list in the context menu.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Private Field" src="../media/privatefield.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										args.matchSuffix 
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The suffix (where clause) used check if the value is an acceptable match to a value in the database.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Private Field" src="../media/privatefield.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										args.selectURL 
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="ef3d2310-dfdb-431e-8330-0d339049abff.htm">Function</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The URL the autocomplete class uses.  The function's signature is
+function(objectName, suffix, from, to, selectedRows,
+checksum, outputType, searchSuffix, includeSchema, orderBy, orderDirection, aggregateColumns).
+The result will be sent to the Rendition.UI.autocompleteCallback procedure which
+must return a <span sdata="link"><a href="de0fdb88-125a-3606-d0af-83173204d97b.htm">DataSet</a></span>.
+The default function calls the C# Rendition.Admin.DataSet method.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Private Field" src="../media/privatefield.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										args.callback 
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="ef3d2310-dfdb-431e-8330-0d339049abff.htm">Function</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										This function processes the data returned from the server when the Rendition.UI.autocompleteURL
+is sent.  The type returned by this function must be a <span sdata="link"><a href="de0fdb88-125a-3606-d0af-83173204d97b.htm">DataSet</a></span>.
+The signature of the function is 
+Function(XMLHttpRequest e, <span sdata="link"><a href="c3297b0d-9e44-0956-efe9-aba03ac86241.htm">AutoComplete</a></span> autoComplete).
+The default function uses the C# Rendition.Admin.DataSet method.
+									</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <a name="fields"> </a>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(sectionToggleID0EDAAA)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(sectionToggleID0EDAAA, event)" tabindex="0">
+            <img id="sectionToggleID0EDAAA" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Properties</span>
+        </h1>
+        <div id="sectionSectionID0EDAAA" class="section" name="collapseableSection" style="">
+          <div class="tableSection">
+            <table width="50%" cellspacing="2" cellpadding="5" frame="lhs">
+              <tr>
+                <th>
+                  <p />
+                </th>
+                <th>
+                  <p>Name</p>
+                </th>
+                <th>
+                  <p>Type</p>
+                </th>
+                <th>
+                  <p>Description</p>
+                </th>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="256161e7-acc7-ed65-3959-c397a23153aa.htm">info</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The info message that appears when the state is invalid. An instance of <span sdata="link"><a href="4b391fe3-74bc-6c38-4e17-2ed6eef18295.htm">Info</a></span>.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="d78de93b-f0cc-4a6a-1128-0e407e77c0d9.htm">patternMatches</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="feb87a09-e36a-9baa-3c23-409ea79458a9.htm">Boolean</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Value matches the pattern.  This is only updated after isValid() is run.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="82f2333d-6826-1c91-4869-879f193fb2a6.htm">recordMatches</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="feb87a09-e36a-9baa-3c23-409ea79458a9.htm">Boolean</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Value matches a record.  This is only updated after isValid() is run.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="af48f856-c39c-6aef-01df-8ed9622f4b75.htm">selectedValue</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The value in the context menu selected.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="49a2762a-2728-8c0c-3d26-e90effdb58d7.htm">type</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The type of object. Returns RenditionAutoComplete.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="80ee4ed3-67fb-529a-f0e4-3d8bab3cf8af.htm">valid</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="feb87a09-e36a-9baa-3c23-409ea79458a9.htm">Boolean</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The value is valid.  This is only updated after isValid() is run.
+									</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <a name="methods"> </a>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(sectionToggleID0EBAAA)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(sectionToggleID0EBAAA, event)" tabindex="0">
+            <img id="sectionToggleID0EBAAA" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Methods</span>
+        </h1>
+        <div id="sectionSectionID0EBAAA" class="section" name="collapseableSection" style="">
+          <div class="tableSection">
+            <table width="50%" cellspacing="2" cellpadding="5" frame="lhs">
+              <tr>
+                <th>
+                  <p />
+                </th>
+                <th>
+                  <p>Name</p>
+                </th>
+                <th>
+                  <p>Type</p>
+                </th>
+                <th>
+                  <p>Description</p>
+                </th>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Method" src="../media/publicmethod.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="40d69eb3-c975-b572-54a6-0b0ce947ff37.htm">close</a>
+                    </span>()
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Force close the info message.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Method" src="../media/publicmethod.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="2f56615e-7de5-27bf-8f44-1e43e3ecc8ed.htm">disposeContextMenu</a>
+                    </span>()
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Force close the context menu.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Method" src="../media/publicmethod.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="c3abe6ea-df85-fc23-308e-9caa9286fc0d.htm">init</a>
+                    </span>()
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Used internally to handle the target field keyup event.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Method" src="../media/publicmethod.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="cfeacfc9-d005-0a1f-15d9-adeeb6ec9fb4.htm">isValid</a>
+                    </span>()
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="feb87a09-e36a-9baa-3c23-409ea79458a9.htm">Boolean</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Use this method to check if the value in the field has passed all validation tests.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Method" src="../media/publicmethod.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="f70c8293-8ccb-8b9e-50a9-4745a6346129.htm">keyup</a>
+                    </span>()
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Used internally to handle the target field keyup event.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Method" src="../media/publicmethod.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="8d3707a4-55d0-4bd7-20d8-984b28325728.htm">showValidationMessage</a>
+                    </span>()
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="feb87a09-e36a-9baa-3c23-409ea79458a9.htm">Boolean</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Show the validation message if the value is invalid.  Update the validation state against the local pattern match and remote dataset.
+									</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div id="footer">
+        <div class="footerLine">
+          <img width="100%" height="3px" src="../icons/footer.gif" alt="Footer image" title="Footer image" />
+        </div>
+        <A NAME="feedback"></A>
+        <span id="fb" class="feedbackcss"></span>
+        <p />Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:tonygermaneri%40gmail.com?Subject=Rendition E-Commerce Framework">Tony Germaneri</a><script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        var HT_mailLinkText = HT_mailLink.innerHTML;
+        HT_mailLink.href += ": " + document.title;
+        HT_mailLink.innerHTML = HT_mailLinkText;
+        </script><p />Copyright © Tony Germaneri 2011</div>
+    </div>
+  </body>
+</html>

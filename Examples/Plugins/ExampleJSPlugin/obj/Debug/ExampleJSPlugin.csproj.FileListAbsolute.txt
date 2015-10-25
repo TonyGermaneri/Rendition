@@ -1,0 +1,13 @@
+C:\Rendition\ExampleJSPlugin\ExampleJSPlugin\bin\Debug\ExampleJSPlugin.dll
+C:\Rendition\ExampleJSPlugin\ExampleJSPlugin\bin\Debug\ExampleJSPlugin.pdb
+C:\Rendition\ExampleJSPlugin\ExampleJSPlugin\obj\Debug\ResolveAssemblyReference.cache
+C:\Rendition\ExampleJSPlugin\ExampleJSPlugin\obj\Debug\ExampleJSPlugin.dll
+C:\Rendition\ExampleJSPlugin\ExampleJSPlugin\obj\Debug\ExampleJSPlugin.pdb
+C:\Rendition\ExampleJSPlugin\ExampleJSPlugin\bin\Debug\Rendition.dll
+C:\Rendition\ExampleJSPlugin\ExampleJSPlugin\bin\Debug\Rendition.pdb
+C:\Rendition\ExampleJSPlugin\ExampleJSPlugin\bin\Debug\Rendition.xml
+C:\Rendition\Examples\Plugins\ExampleJSPlugin\bin\Debug\ExampleJSPlugin.dll
+C:\Rendition\Examples\Plugins\ExampleJSPlugin\bin\Debug\ExampleJSPlugin.pdb
+C:\Rendition\Examples\Plugins\ExampleJSPlugin\obj\Debug\ResolveAssemblyReference.cache
+C:\Rendition\Examples\Plugins\ExampleJSPlugin\obj\Debug\ExampleJSPlugin.dll
+C:\Rendition\Examples\Plugins\ExampleJSPlugin\obj\Debug\ExampleJSPlugin.pdb

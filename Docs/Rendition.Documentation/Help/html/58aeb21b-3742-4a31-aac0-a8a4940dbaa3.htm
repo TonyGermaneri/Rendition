@@ -1,0 +1,295 @@
+﻿<html xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+  <head>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8" />
+    <META NAME="save" CONTENT="history" />
+    <title>Commerce Management</title>
+    <meta name="Language" content="en-us" />
+    <meta name="Microsoft.Help.Id" content="58aeb21b-3742-4a31-aac0-a8a4940dbaa3" />
+    <meta name="Description" content="Commerce applications are related to accounts, orders, items and anything else related to the buying / selling process. Just think, you're participating in one of the oldest known activities." />
+    <meta name="Microsoft.Help.ContentType" content="Concepts" />
+    <link rel="stylesheet" type="text/css" href="../styles/Presentation.css" />
+    <link rel="stylesheet" type="text/css" href="ms-help://Hx/HxRuntime/HxLink.css" />
+    <script type="text/javascript" src="../scripts/EventUtilities.js"> </script>
+    <script type="text/javascript" src="../scripts/SplitScreen.js"> </script>
+    <script type="text/javascript" src="../scripts/Dropdown.js"> </script>
+    <script type="text/javascript" src="../scripts/script_manifold.js"> </script>
+    <script type="text/javascript" src="../scripts/script_feedBack.js"> </script>
+    <script type="text/javascript" src="../scripts/CheckboxMenu.js"> </script>
+    <script type="text/javascript" src="../scripts/CommonUtilities.js"> </script>
+    <xml>
+      <MSHelp:Keyword Index="A" Term="58aeb21b-3742-4a31-aac0-a8a4940dbaa3" />
+      <MSHelp:Attr Name="RevisionNumber" Value="1" />
+      <MSHelp:Attr Name="AssetID" Value="58aeb21b-3742-4a31-aac0-a8a4940dbaa3" />
+      <MSHelp:Attr Name="Abstract" Value="Commerce applications are related to accounts, orders, items and anything else related to the buying / selling process. Just think, you're participating in one of the oldest known activities. This ties you together with ancient African tribesmen trad ..." />
+      <MSHelp:Attr Name="TopicType" Value="kbArticle" />
+      <MSHelp:Attr Name="Locale" Value="en-us" />
+    </xml>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <input type="hidden" id="hiddenScrollOffset" />
+    <img id="collapseImage" style="display:none; height:0; width:0;" src="../icons/collapse_all.gif" alt="Collapse image" title="Collapse image" />
+    <img id="expandImage" style="display:none; height:0; width:0;" src="../icons/expand_all.gif" alt="Expand Image" title="Expand Image" />
+    <img id="collapseAllImage" style="display:none; height:0; width:0;" src="../icons/collapse_all.gif" />
+    <img id="expandAllImage" style="display:none; height:0; width:0;" src="../icons/expand_all.gif" />
+    <img id="dropDownImage" style="display:none; height:0; width:0;" src="../icons/dropdown.gif" />
+    <img id="dropDownHoverImage" style="display:none; height:0; width:0;" src="../icons/dropdownHover.gif" />
+    <img id="copyImage" style="display:none; height:0; width:0;" src="../icons/copycode.gif" alt="Copy image" title="Copy image" />
+    <img id="copyHoverImage" style="display:none; height:0; width:0;" src="../icons/copycodeHighlight.gif" alt="CopyHover image" title="CopyHover image" />
+    <div id="header">
+      <table id="topTable" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <span onclick="ExpandCollapseAll(toggleAllImage)" style="cursor:default;" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage, event)" tabindex="0">
+              <img ID="toggleAllImage" class="toggleAll" src="../icons/collapse_all.gif" /> <label id="collapseAllLabel" for="toggleAllImage" style="display: none;">Collapse All</label><label id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand All</label> </span>
+            <span>    </span>
+            <span id="devlangsDropdown" class="filter" tabindex="0">
+              <img id="devlangsDropdownImage" src="../icons/dropdown.gif" /> <label id="devlangsMenuAllLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: All </nobr></label><label id="devlangsMenuMultipleLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: Multiple </nobr></label><label id="devlangsMenuCSharpLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: C# </nobr></label><label id="devlangsMenuJavaScriptLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: JavaScript </nobr></label></span>
+          </td>
+        </tr>
+      </table>
+      <div id="devlangsMenu">
+        <input id="CSharpCheckbox" type="checkbox" data="CSharp,cs,'persist'" value="on" onClick="SetLanguage(this)" />
+        <label class="checkboxLabel" for="CSharpCheckbox">C#</label>
+        <br />
+        <input id="JavaScriptCheckbox" type="checkbox" data="JavaScript,cs,'persist'" value="on" onClick="SetLanguage(this)" />
+        <label class="checkboxLabel" for="JavaScriptCheckbox">JavaScript</label>
+        <br />
+      </div>
+      <table id="bottomTable" cellpadding="0" cellspacing="0">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">Rendition E-Commerce Framework</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">Commerce Management</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td align="left">
+            <span id="headfeedbackarea" class="feedbackhead">
+              <a href="javascript:SubmitFeedback('tonygermaneri@gmail.com','Rendition E-Commerce Framework','','1.0.0.0','','%0\dYour%20feedback%20is%20used%20to%20improve%20the%20documentation%20and%20the%20product.%20Your%20e-mail%20address%20will%20not%20be%20used%20for%20any%20other%20purpose%20and%20is%20disposed%20of%20after%20the%20issue%20you%20report%20is%20resolved.%20%20While%20working%20to%20resolve%20the%20issue%20that%20you%20report,%20you%20may%20be%20contacted%20via%20e-mail%20to%20get%20further%20details%20or%20clarification%20on%20the%20feedback%20you%20sent.%20After%20the%20issue%20you%20report%20has%20been%20addressed,%20you%20may%20receive%20an%20e-mail%20to%20let%20you%20know%20that%20your%20feedback%20has%20been%20addressed.%0\A%0\d','Customer%20Feedback');">Send Feedback</a>
+            </span>
+          </td>
+        </tr>
+      </table>
+      <table id="gradientTable">
+        <tr>
+          <td class="nsrBottom" background="../icons/gradient.gif" />
+        </tr>
+      </table>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" />
+        <span style="color: DarkGray">
+          <p style="color: #dc143c; font-size: 8.5pt; font-weight: bold;">[This is preliminary documentation and is subject to change.]</p>
+        </span>
+        <div class="introduction">
+          <p>
+            <p>This topic contains the following sections.</p>
+          </p>
+          <ul>
+            <li class="outlineSectionEntry">
+              <a href="#categoryEditor">Categories</a>
+            </li>
+            <li class="outlineSectionEntry">
+              <a href="#changeStatus">Change Status</a>
+            </li>
+            <li class="outlineSectionEntry">
+              <a href="#contextMenu">Commerce Context Menu</a>
+            </li>
+            <li class="outlineSectionEntry">
+              <a href="#gl">General Ledger</a>
+            </li>
+            <li class="outlineSectionEntry">
+              <a href="#inventroy">Inventory</a>
+            </li>
+            <li class="outlineSectionEntry">
+              <a href="#itemeditor">Item Editor</a>
+            </li>
+            <li class="outlineSectionEntry">
+              <a href="#makepayment">Make Payment</a>
+            </li>
+            <li class="outlineSectionEntry">
+              <a href="#orderEditor">Order Editor</a>
+            </li>
+            <li class="outlineSectionEntry">
+              <a href="#prodAging">Production Aging</a>
+            </li>
+            <li class="outlineSectionEntry">
+              <a href="#prodPicklist">Production Picklist</a>
+            </li>
+            <li class="outlineSectionEntry">
+              <a href="#salesJournal">Sales Journal</a>
+            </li>
+            <li class="outlineSectionEntry">
+              <a href="#shipping">Shipping</a>
+            </li>
+            <li class="outlineSectionEntry">
+              <a href="#userEditor">User Editor</a>
+            </li>
+          </ul>
+          <p>Commerce applications are related to accounts, orders, items
+      and anything else related to the buying / selling process.
+      Just think, you're participating in one of the oldest
+      known activities.  This ties you together with ancient
+      African tribesmen trading seeds for
+      high occupancy time shares near the Rock of Gibraltar.
+	  </p>
+          <p>Below is a summary of the topics in this section.</p>
+        </div>
+        <a name="categoryEditor"> </a>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(sectionToggleID0ENAAA)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(sectionToggleID0ENAAA, event)" tabindex="0">
+            <img id="sectionToggleID0ENAAA" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Categories</span>
+        </h1>
+        <div id="sectionSectionID0ENAAA" class="section" name="collapseableSection" style="">
+          <p>Create categories, lists of items, to display
+        to your customers or to help manage reports
+        and purchasing.</p>
+        </div>
+        <a name="changeStatus"> </a>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(sectionToggleID0EMAAA)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(sectionToggleID0EMAAA, event)" tabindex="0">
+            <img id="sectionToggleID0EMAAA" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Change Status</span>
+        </h1>
+        <div id="sectionSectionID0EMAAA" class="section" name="collapseableSection" style="">
+          <p>Change the status of an order, shipment or line.</p>
+        </div>
+        <a name="contextMenu"> </a>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(sectionToggleID0ELAAA)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(sectionToggleID0ELAAA, event)" tabindex="0">
+            <img id="sectionToggleID0ELAAA" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Commerce Context Menu</span>
+        </h1>
+        <div id="sectionSectionID0ELAAA" class="section" name="collapseableSection" style="">
+          <p>Right (Mac: Command+Click) clicking on
+        results in a grid results in a menu when the
+        grid contains important columns, like Order Number
+        or Account Number.  Allowing quick access to 
+        these accounts, orders, etc..</p>
+        </div>
+        <a name="gl"> </a>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(sectionToggleID0EKAAA)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(sectionToggleID0EKAAA, event)" tabindex="0">
+            <img id="sectionToggleID0EKAAA" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />General Ledger</span>
+        </h1>
+        <div id="sectionSectionID0EKAAA" class="section" name="collapseableSection" style="">
+          <p>When your order has reached
+        the end of its lifecycle, post it to the
+        general ledger then you can export it to
+        an accounting system.</p>
+        </div>
+        <a name="inventroy"> </a>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(sectionToggleID0EJAAA)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(sectionToggleID0EJAAA, event)" tabindex="0">
+            <img id="sectionToggleID0EJAAA" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Inventory</span>
+        </h1>
+        <div id="sectionSectionID0EJAAA" class="section" name="collapseableSection" style="">
+          <p>Check the status of your inventory.
+        See if it's time to put somthing on sale, or buy more.</p>
+        </div>
+        <a name="itemeditor"> </a>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(sectionToggleID0EIAAA)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(sectionToggleID0EIAAA, event)" tabindex="0">
+            <img id="sectionToggleID0EIAAA" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Item Editor</span>
+        </h1>
+        <div id="sectionSectionID0EIAAA" class="section" name="collapseableSection" style="">
+          <p>Edit and create your items.  Add images,
+        properties, descriptions, pricing.  Add items
+        to categories and much more.</p>
+        </div>
+        <a name="makepayment"> </a>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(sectionToggleID0EHAAA)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(sectionToggleID0EHAAA, event)" tabindex="0">
+            <img id="sectionToggleID0EHAAA" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Make Payment</span>
+        </h1>
+        <div id="sectionSectionID0EHAAA" class="section" name="collapseableSection" style="">
+          <p>Make a payment.  Create credits, pay orders, add payments to
+        bills.  Almost all monitary transactions are handled here.</p>
+        </div>
+        <a name="orderEditor"> </a>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(sectionToggleID0EGAAA)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(sectionToggleID0EGAAA, event)" tabindex="0">
+            <img id="sectionToggleID0EGAAA" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Order Editor</span>
+        </h1>
+        <div id="sectionSectionID0EGAAA" class="section" name="collapseableSection" style="">
+          <p>Create and edit orders and purchase orders.
+        Print orders and change the status of lines, shipments and orders.
+        </p>
+        </div>
+        <a name="prodAging"> </a>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(sectionToggleID0EFAAA)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(sectionToggleID0EFAAA, event)" tabindex="0">
+            <img id="sectionToggleID0EFAAA" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Production Aging</span>
+        </h1>
+        <div id="sectionSectionID0EFAAA" class="section" name="collapseableSection" style="">
+          <p>
+        Check the status of every item or order in your production line.
+        Make sure unfilled orders don't get too old.
+        </p>
+        </div>
+        <a name="prodPicklist"> </a>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(sectionToggleID0EEAAA)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(sectionToggleID0EEAAA, event)" tabindex="0">
+            <img id="sectionToggleID0EEAAA" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Production Picklist</span>
+        </h1>
+        <div id="sectionSectionID0EEAAA" class="section" name="collapseableSection" style="">
+          <p>
+        Create lists of items to use in your ordering or
+        on the floor in your production line.
+        </p>
+        </div>
+        <a name="salesJournal"> </a>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(sectionToggleID0EDAAA)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(sectionToggleID0EDAAA, event)" tabindex="0">
+            <img id="sectionToggleID0EDAAA" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Sales Journal</span>
+        </h1>
+        <div id="sectionSectionID0EDAAA" class="section" name="collapseableSection" style="">
+          <p>
+        Get a table or chart of how much money you're making
+        and who's making it.
+        </p>
+        </div>
+        <a name="shipping"> </a>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(sectionToggleID0ECAAA)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(sectionToggleID0ECAAA, event)" tabindex="0">
+            <img id="sectionToggleID0ECAAA" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Shipping</span>
+        </h1>
+        <div id="sectionSectionID0ECAAA" class="section" name="collapseableSection" style="">
+          <p>
+       Create and edit details of shipping carriers and services.
+       Upload rate file from your carrier and show
+       your customers your rates in real time.
+        </p>
+        </div>
+        <a name="userEditor"> </a>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(sectionToggleID0EBAAA)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(sectionToggleID0EBAAA, event)" tabindex="0">
+            <img id="sectionToggleID0EBAAA" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />User Editor</span>
+        </h1>
+        <div id="sectionSectionID0EBAAA" class="section" name="collapseableSection" style="">
+          <p>
+    Create and edit users, set prices, add custom printable forms,
+    set startup options, security levels and much more.
+        </p>
+        </div>
+      </div>
+      <div id="footer">
+        <div class="footerLine">
+          <img width="100%" height="3px" src="../icons/footer.gif" alt="Footer image" title="Footer image" />
+        </div>
+        <A NAME="feedback"></A>
+        <span id="fb" class="feedbackcss"></span>
+        <p />Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:tonygermaneri%40gmail.com?Subject=Rendition E-Commerce Framework">Tony Germaneri</a><script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        var HT_mailLinkText = HT_mailLink.innerHTML;
+        HT_mailLink.href += ": " + document.title;
+        HT_mailLink.innerHTML = HT_mailLinkText;
+        </script><p />Copyright © Tony Germaneri 2011</div>
+    </div>
+  </body>
+</html>

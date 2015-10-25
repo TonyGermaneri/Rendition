@@ -1,0 +1,118 @@
+<%@ Master Language="C#" %>
+<%@ Import Namespace="Rendition" %>
+<%
+    /*This reference site shows how to use the various parts of Rendition
+     * This is not a complete reference.  See http://help.antidote12.com
+     * for more information.
+     * This example assumes you have installed the jQuery script or
+     * the Rendition jQuery plugin.
+     */
+    // Refresh the session information such as logon state user data etc..
+    Rendition.Session.CurrentSession.Refresh(); 
+    // Refresh the cart
+    Rendition.Session.CurrentSession.Cart.Refresh();
+    // below is a basic .NET Web Forms Master Page Layout in HTML 5
+    // sections that contain information related to Rendition contains comments.
+%>
+<asp:ContentPlaceHolder id="beforeHtml" runat="server"></asp:ContentPlaceHolder>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><asp:ContentPlaceHolder id="title" runat="server"></asp:ContentPlaceHolder></title>
+        <meta name="description" content="<asp:ContentPlaceHolder id="description" runat="server"></asp:ContentPlaceHolder>">
+        <meta name="keywords" content="<asp:ContentPlaceHolder id="keywords" runat="server"></asp:ContentPlaceHolder>">
+        <link rel="stylesheet" href="/css/main.css" type="text/css" media="screen">
+        <%if(Rendition.Session.CurrentSession.Administrator) {%>
+        <script type="text/javascript" src="/admin/Rendition.js"></script>
+        <script type="text/javascript">
+            window.document.addEventListener('DOMContentLoaded', function () {
+                Rendition.UI.Panel({ items: Rendition.UI.defaultPanelItems, hidden: true });
+                Rendition.UI.TaskBar();
+            }, false)
+        </script>
+        <script type="text/javascript">
+            function edit(path) {
+                var instance = {};
+                document.body.innerHTML = "<iframe style='border:none;position:absolute;top:0;left:0;'></iframe>";
+                instance.iframe = document.body.firstChild;
+                instance.resize = function () {
+                    instance.iframe.height = document.documentElement.clientHeight;
+                    instance.iframe.width = document.documentElement.clientWidth;
+                }
+                instance.refresh = function () {
+                    instance.iframe.contentDocument.location = window.location.toString();
+                    instance.resize();
+                }
+                instance.refresh();
+                Rendition.UI.appendEvent('resize', window, instance.resize, false);
+                var fm = Rendition.UI.FileManager();
+                fm.edit(path, undefined, instance.refresh);
+                fm.dialog.close();
+            }
+        </script>
+        <%}%>
+        <!-- 
+            This script is the built in Rendition client side helper script (Rendition.Merchant)
+            It contains methods and classes that can be used to logon/logoff
+            add items to your cart and many more things. Read more about it here: http://help.antidote12.com
+         -->
+        <script type="text/javascript" src="/pub/main.js"></script>
+        <script type="text/javascript">
+            function edit(path) {
+                var instance = {};
+                document.body.innerHTML = "<iframe style='border:none;position:absolute;top:0;left:0;'></iframe>";
+                instance.iframe = document.body.firstChild;
+                instance.resize = function () {
+                    instance.iframe.height = document.documentElement.clientHeight;
+                    instance.iframe.width = document.documentElement.clientWidth;
+                }
+                instance.refresh = function () {
+                    instance.iframe.contentDocument.location = window.location.toString();
+                    instance.resize();
+                }
+                instance.refresh();
+                Rendition.UI.appendEvent('resize', window, instance.resize, false);
+                var fm = Rendition.UI.FileManager();
+                fm.edit(path, undefined, instance.refresh );
+                fm.dialog.close();
+            }
+        </script>
+        <asp:ContentPlaceHolder id="head" runat="server"></asp:ContentPlaceHolder>
+    </head>
+    <body>
+        <%if(Rendition.Session.CurrentSession.Administrator) {%>
+        <div class="adminTool">
+            <button onclick="edit('~/css/main.css');">main.css</button>
+            <button onclick="edit('~/header.master');">header.master</button>
+            <asp:ContentPlaceHolder id="adminTool" runat="server"></asp:ContentPlaceHolder>
+        </div>
+        <%}%>
+        <table class="seperator">
+            <tr>
+                <td class="header" colspan="3">
+                    <asp:ContentPlaceHolder id="aboveHeader" runat="server"></asp:ContentPlaceHolder>
+                    <h1>Claritas est</h1>
+                    <%=Commerce.Menu.GetMenuByName("topNav").CreateNavigationMenu()%>
+                    <asp:ContentPlaceHolder id="header" runat="server"></asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td class="leftAside">
+                    <%=Commerce.Menu.GetMenuByName("topNav").CreateMenuHierarchy()%>
+                    <asp:ContentPlaceHolder id="leftAside" runat="server"></asp:ContentPlaceHolder>
+                </td>
+                <td class="content">
+                    <asp:ContentPlaceHolder id="content" runat="server"></asp:ContentPlaceHolder>
+                </td>
+                <td class="rightAside">
+                    <asp:ContentPlaceHolder id="rightAside" runat="server"></asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td class="footer" colspan="3">
+                    <asp:ContentPlaceHolder id="footer" runat="server"></asp:ContentPlaceHolder>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

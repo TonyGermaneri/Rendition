@@ -1,0 +1,440 @@
+﻿<html xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+  <head>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8" />
+    <META NAME="save" CONTENT="history" />
+    <title>PDF Template Authoring</title>
+    <meta name="Language" content="en-us" />
+    <meta name="Microsoft.Help.Id" content="f606c1c6-d79b-45df-a036-a4dbbba979c8" />
+    <meta name="Description" content="PDFs are authored using Acrobat Pro or Open Office. As of the writing of this document Open Office cannot import static vector graphics so it is recommended you use Acrobat Pro." />
+    <meta name="Microsoft.Help.ContentType" content="Concepts" />
+    <link rel="stylesheet" type="text/css" href="../styles/Presentation.css" />
+    <link rel="stylesheet" type="text/css" href="ms-help://Hx/HxRuntime/HxLink.css" />
+    <script type="text/javascript" src="../scripts/EventUtilities.js"> </script>
+    <script type="text/javascript" src="../scripts/SplitScreen.js"> </script>
+    <script type="text/javascript" src="../scripts/Dropdown.js"> </script>
+    <script type="text/javascript" src="../scripts/script_manifold.js"> </script>
+    <script type="text/javascript" src="../scripts/script_feedBack.js"> </script>
+    <script type="text/javascript" src="../scripts/CheckboxMenu.js"> </script>
+    <script type="text/javascript" src="../scripts/CommonUtilities.js"> </script>
+    <xml>
+      <MSHelp:Keyword Index="A" Term="f606c1c6-d79b-45df-a036-a4dbbba979c8" />
+      <MSHelp:Attr Name="RevisionNumber" Value="1" />
+      <MSHelp:Attr Name="AssetID" Value="f606c1c6-d79b-45df-a036-a4dbbba979c8" />
+      <MSHelp:Attr Name="Abstract" Value="PDFs are authored using Acrobat Pro or Open Office. As of the writing of this document Open Office cannot import static vector graphics so it is recommended you use Acrobat Pro. Rendition reads the PDFs you create using the aforementioned programs an ..." />
+      <MSHelp:Attr Name="TopicType" Value="kbArticle" />
+      <MSHelp:Attr Name="Locale" Value="en-us" />
+    </xml>
+    <link type="text/css" rel="stylesheet" href="../styles/highlight.css" />
+    <script type="text/javascript" src="../scripts/highlight.js"> </script>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <input type="hidden" id="hiddenScrollOffset" />
+    <img id="collapseImage" style="display:none; height:0; width:0;" src="../icons/collapse_all.gif" alt="Collapse image" title="Collapse image" />
+    <img id="expandImage" style="display:none; height:0; width:0;" src="../icons/expand_all.gif" alt="Expand Image" title="Expand Image" />
+    <img id="collapseAllImage" style="display:none; height:0; width:0;" src="../icons/collapse_all.gif" />
+    <img id="expandAllImage" style="display:none; height:0; width:0;" src="../icons/expand_all.gif" />
+    <img id="dropDownImage" style="display:none; height:0; width:0;" src="../icons/dropdown.gif" />
+    <img id="dropDownHoverImage" style="display:none; height:0; width:0;" src="../icons/dropdownHover.gif" />
+    <img id="copyImage" style="display:none; height:0; width:0;" src="../icons/copycode.gif" alt="Copy image" title="Copy image" />
+    <img id="copyHoverImage" style="display:none; height:0; width:0;" src="../icons/copycodeHighlight.gif" alt="CopyHover image" title="CopyHover image" />
+    <div id="header">
+      <table id="topTable" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <span onclick="ExpandCollapseAll(toggleAllImage)" style="cursor:default;" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage, event)" tabindex="0">
+              <img ID="toggleAllImage" class="toggleAll" src="../icons/collapse_all.gif" /> <label id="collapseAllLabel" for="toggleAllImage" style="display: none;">Collapse All</label><label id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand All</label> </span>
+            <span>    </span>
+            <span id="devlangsDropdown" class="filter" tabindex="0">
+              <img id="devlangsDropdownImage" src="../icons/dropdown.gif" /> <label id="devlangsMenuAllLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: All </nobr></label><label id="devlangsMenuMultipleLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: Multiple </nobr></label><label id="devlangsMenuCSharpLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: C# </nobr></label><label id="devlangsMenuJavaScriptLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: JavaScript </nobr></label></span>
+          </td>
+        </tr>
+      </table>
+      <div id="devlangsMenu">
+        <input id="CSharpCheckbox" type="checkbox" data="CSharp,cs,'persist'" value="on" onClick="SetLanguage(this)" />
+        <label class="checkboxLabel" for="CSharpCheckbox">C#</label>
+        <br />
+        <input id="JavaScriptCheckbox" type="checkbox" data="JavaScript,cs,'persist'" value="on" onClick="SetLanguage(this)" />
+        <label class="checkboxLabel" for="JavaScriptCheckbox">JavaScript</label>
+        <br />
+      </div>
+      <table id="bottomTable" cellpadding="0" cellspacing="0">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">Rendition E-Commerce Framework</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">PDF Template Authoring</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td align="left">
+            <a href="#seeAlsoToggle" onclick="OpenSection(seeAlsoToggle)">See Also</a> <span id="headfeedbackarea" class="feedbackhead"><a href="javascript:SubmitFeedback('tonygermaneri@gmail.com','Rendition E-Commerce Framework','','1.0.0.0','','%0\dYour%20feedback%20is%20used%20to%20improve%20the%20documentation%20and%20the%20product.%20Your%20e-mail%20address%20will%20not%20be%20used%20for%20any%20other%20purpose%20and%20is%20disposed%20of%20after%20the%20issue%20you%20report%20is%20resolved.%20%20While%20working%20to%20resolve%20the%20issue%20that%20you%20report,%20you%20may%20be%20contacted%20via%20e-mail%20to%20get%20further%20details%20or%20clarification%20on%20the%20feedback%20you%20sent.%20After%20the%20issue%20you%20report%20has%20been%20addressed,%20you%20may%20receive%20an%20e-mail%20to%20let%20you%20know%20that%20your%20feedback%20has%20been%20addressed.%0\A%0\d','Customer%20Feedback');">Send Feedback</a></span></td>
+        </tr>
+      </table>
+      <table id="gradientTable">
+        <tr>
+          <td class="nsrBottom" background="../icons/gradient.gif" />
+        </tr>
+      </table>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" />
+        <span style="color: DarkGray">
+          <p style="color: #dc143c; font-size: 8.5pt; font-weight: bold;">[This is preliminary documentation and is subject to change.]</p>
+        </span>
+        <div class="introduction">
+          <p>
+            <p>This topic contains the following sections.</p>
+          </p>
+          <ul>
+            <li class="outlineSectionEntry">
+              <a href="#security">PDF Security Mode ( Administrative or Public )</a>
+            </li>
+            <li class="outlineSectionEntry">
+              <a href="#dynamicData">About Dynamic Data.</a>
+            </li>
+            <li class="outlineSectionEntry">
+              <a href="#pdfElements">Dynamic Content PDF Elements</a>
+            </li>
+            <li class="outlineSectionEntry">
+              <a href="#salesreceipt">Sales Receipt</a>
+            </li>
+            <li class="outlineSectionEntry">
+              <a href="#examples">Example Documents</a>
+            </li>
+            <li>
+              <a href="#seeAlsoSection">See Also</a>
+            </li>
+          </ul>
+          <p>PDFs are authored using Acrobat Pro or Open Office.
+      As of the writing of this document Open Office cannot
+      import static vector graphics so it is recommended you use
+      Acrobat Pro.  Rendition reads the PDFs you create using
+      the aforementioned programs and creates new PDFs with dynamic
+      information based on the PDFs you created.  Within the PDF
+      you can execute C# methods, read SQL data sources,
+      read in request variables from the URL, set the data source,
+      loop through records, and display binary images and vectors from C# methods.
+      At the end of this topic is a description of example documents that can be found in the 
+      Rendition reference site in the PDFs directory.</p>
+          <p>
+       There are always two PDFs involved in any PDF creation procedure.
+       The PDF you create and the PDF that is created by the system
+       by reading your PDF.  The PDF you create is called the PDF template
+       and the PDF that is created by the system is called the output PDF.
+       </p>
+        </div>
+        <a name="security"> </a>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(sectionToggleID0EFAAA)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(sectionToggleID0EFAAA, event)" tabindex="0">
+            <img id="sectionToggleID0EFAAA" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />PDF Security Mode ( Administrative or Public )</span>
+        </h1>
+        <div id="sectionSectionID0EFAAA" class="section" name="collapseableSection" style="">
+          <p>
+       There are two security modes that the PDF rendering procedure can be
+       run in.  You can determine which mode is used by the URL you use to call
+       the PDF.  If you use the administrative responder URL 
+       ( default: /admin/responder ) a low security mode is used.  In this mode
+       SQL interjection is allowed, and methods from the Rendition.Admin class
+       can be used.  If you use the public responder URL ( default: /responder )
+       a hardened security mode will be used that prevents SQL interjeciton
+       and only allows methods from Rendition.Merchant to be executed.
+       </p>
+        </div>
+        <a name="dynamicData"> </a>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(sectionToggleID0EEAAA)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(sectionToggleID0EEAAA, event)" tabindex="0">
+            <img id="sectionToggleID0EEAAA" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />About Dynamic Data.</span>
+        </h1>
+        <div id="sectionSectionID0EEAAA" class="section" name="collapseableSection" style="">
+          <p>The template PDF can be in one of two modes:  Query mode or
+       Procedureal mode.
+       </p>
+          <p>In query mode one or two SQL queries are
+       inserted into the one or three page PDF (more on how to later).
+       Each of the three pages represents the first, middle pages, and
+       last page of the output PDF.  You will be able to determine
+       the number of records per page or allow Rendition to detect
+       how many records will fit on your PDF template.  One or Three template
+       pages are required to deal with outputting a variable number of records.
+       </p>
+          <p>
+       If a PDF template only displays a single record, for example an item
+       brocure PDF, only a single query is required.  For PDF templates 
+       that display multiple records, for example an invoice, 
+       two queries are required, the first query is the "header" query that
+       should return a single record, the second query is the "detail" query
+       should contain one or more records.
+       </p>
+          <p>Data from the submitted form or querystring can be used anywhere
+       just as if were typing into the PDF.  Anytime &lt;#keyname#&gt; is encountered
+       the PDF program will turn this into the matching key's value.  For example
+       if I went to the URL 
+       http://www.mysite.com/responder?method1={Print,['Invoice']}&amp;orderNumber=21
+       I would be able to use the key value "orderNumber" by entering
+       &lt;#orderNumber#&gt; into the property name or default value field of
+       any PDF text element.
+       
+<div class="alert"><table><tr><th><img src="../icons/alert_note.gif" title="Note" /> <b>Note</b></th></tr><tr><td><p>When in public security mode, only method parameters can be filled using this method.
+  When in administrative security mode you can use this method to write entire SQL queries
+  or invoke entire methods dynamically.  In both security modes, the System.Data.SqlClient.SqlCommand
+  only works in select mode, so inserts, updates and deletes are not possible.
+  </p></td></tr></table></div></p>
+          <p>
+       The following table describes common page output scenarios varried
+       depending on how many pages are required to hold the number of records
+       returned in the detail SQL query.
+       </p>
+          <div class="tableSection">
+            <table width="50%" cellspacing="2" cellpadding="5" frame="lhs">
+              <tr>
+                <th>Number of pages</th>
+                <th>Template Pages Ouput</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>First template page</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>First template page 1x, Last template Page 1x</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>First template page 1x, Middle template page 1x, Last template Page 1x</td>
+              </tr>
+              <tr>
+                <td>4 or more</td>
+                <td>First template page 1x, Middle template page 2x or more, Last template Page 1x</td>
+              </tr>
+            </table>
+          </div>
+          <p>
+       If a PDF template has only a single page, that page will be used
+       as the first, middle and last page.
+       </p>
+          <p>
+       PDF templates in Procedural mode contain no SQL queries and can only
+       display information from the Url or execute C# methods.
+       </p>
+        </div>
+        <a name="pdfElements"> </a>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(sectionToggleID0EDAAA)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(sectionToggleID0EDAAA, event)" tabindex="0">
+            <img id="sectionToggleID0EDAAA" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Dynamic Content PDF Elements</span>
+        </h1>
+        <div id="sectionSectionID0EDAAA" class="section" name="collapseableSection" style="">
+          <p>There are two types of Dynamic Content PDF Elements.
+       Document Property elements and Output Elements.
+       </p>
+          <p>
+       These elements are nothing more than PDF Form Text Fields with specific
+       names and properties.  The properties of the text fields
+       will determine font size, color, alignment etc..  When a
+       C# method is called and and a System.Drawing.Image object is returned
+       the image will be rendered into the bounding box of the text field.
+       Property elements are predefined by Rendition and controls
+       PDF template behaviour.
+       </p>
+          <p>
+       Below is a list of the different Property elements.  The value of
+       each of these properties should be inserted into the "Default Value"
+	   field of the element.
+       </p>
+          <div class="tableSection">
+            <table width="50%" cellspacing="2" cellpadding="5" frame="lhs">
+              <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>PDF Template Mode</th>
+              </tr>
+              <tr>
+                <td>_header</td>
+                <td>This element defines the header SQL query.
+		    Form and Querystrings can be called upon
+		    within the query using this format: 
+		    <span><div class="highlight-title"><span class="highlight-copycode" onkeypress="javascript:CopyColorizedCodeCheckKey(this.parentNode, event);" tabindex="0" onmouseover="CopyCodeChangeIcon(this)" onmouseout="CopyCodeChangeIcon(this)" onclick="javascript:CopyColorizedCode(this.parentNode);"><img style="margin-right: 5px;" src="../icons/CopyCode.gif" />Copy</span> </div><div class="code"><pre xml:space="preserve">&lt;#keyName#&gt;</pre></div></span>
+		    keyName should be replaced by the form or querystring keyname
+		    you are expecting.  All injected values are sanitised
+		    prior to insertion. ( via: Replace("'","''") )
+		    </td>
+                <td>Query</td>
+              </tr>
+              <tr>
+                <td>_body</td>
+                <td>This element defines the detail SQL query.
+		    Form and Querystrings can be called upon
+		    within the query using this format: 
+		    <span><div class="highlight-title"><span class="highlight-copycode" onkeypress="javascript:CopyColorizedCodeCheckKey(this.parentNode, event);" tabindex="0" onmouseover="CopyCodeChangeIcon(this)" onmouseout="CopyCodeChangeIcon(this)" onclick="javascript:CopyColorizedCode(this.parentNode);"><img style="margin-right: 5px;" src="../icons/CopyCode.gif" />Copy</span> </div><div class="code"><pre xml:space="preserve">&lt;#keyName#&gt;</pre></div></span>
+		    keyName should be replaced by the form or querystring keyname
+		    you are expecting.  All injected values are sanitised
+		    prior to insertion. ( via: Replace("'","''") )
+		    </td>
+                <td>Query</td>
+              </tr>
+              <tr>
+                <td>_verticalSpacing</td>
+                <td>The vertical spacing of records in points.
+		    </td>
+                <td>Query</td>
+              </tr>
+              <tr>
+                <td>_recordsPerPage</td>
+                <td>The number of records per page 
+		    </td>
+                <td>Query</td>
+              </tr>
+              <tr>
+                <td>_fileName</td>
+                <td>
+		    File name of the resulting PDF.
+		    Form and Querystrings can be called upon
+		    using this format: <span><div class="highlight-title"><span class="highlight-copycode" onkeypress="javascript:CopyColorizedCodeCheckKey(this.parentNode, event);" tabindex="0" onmouseover="CopyCodeChangeIcon(this)" onmouseout="CopyCodeChangeIcon(this)" onclick="javascript:CopyColorizedCode(this.parentNode);"><img style="margin-right: 5px;" src="../icons/CopyCode.gif" />Copy</span> </div><div class="code"><pre xml:space="preserve">&lt;#keyName#&gt;</pre></div></span>
+		    keyName should be replaced by the form or querystring keyname
+		    you are expecting.
+		    </td>
+                <td>Query, Procedureal</td>
+              </tr>
+              <tr>
+                <td>_pages</td>
+                <td>Displays the value "Page x of x"
+		    using the display properties of the element
+		    (font, color, etc.).
+		    </td>
+                <td>Query</td>
+              </tr>
+            </table>
+          </div>
+          <p>
+       All other dynamic PDF elements are defined by either
+       querystring/form parameters or by the SQL query (for PDF Templates in
+       query mode only).  To display dynamic data your field name must
+       begin with the &gt; (greater than) sign then be followed by
+       a name.  When using a PDF in query mode, when the field name
+       matches a SQL column name the field will be replaced by the
+       value of the first record.  To create a repeating area,
+       prefix your field name with &gt;&gt; (doube greater than).
+       These repeating area fields will output one per record
+       found in the detail SQL query (above).  Each row is seperated by
+       the vertical spacing attribute of the document (above).
+       </p>
+          <p>
+       Setting the font size, family, color alignment and more for the
+       text field will cause the output data to inherit these style properties.
+       </p>
+          <p>
+       Any field with the name &gt;Image will try and cast the returned data
+       as a binary image of the type System.Drawing.Image.  The syntax for the
+       image field is in JSON format:
+       <span><div class="highlight-title"><span class="highlight-copycode" onkeypress="javascript:CopyColorizedCodeCheckKey(this.parentNode, event);" tabindex="0" onmouseover="CopyCodeChangeIcon(this)" onmouseout="CopyCodeChangeIcon(this)" onclick="javascript:CopyColorizedCode(this.parentNode);"><img style="margin-right: 5px;" src="../icons/CopyCode.gif" />Copy</span> </div><div class="code"><pre xml:space="preserve">&gt;Image["METHOD_NAME",["ARGUMENT_1","ARGUMENT_2",..etc.]]</pre></div></span>
+       Because of the JSON format only data valid in JSON can be passed to the
+       C# method.  So only numbers, strings, dates and boolean data types
+       can be passed from the PDF template.  The method called must return
+       a type that can be cast as System.Drawing.Image.
+<div class="alert"><table><tr><th><img src="../icons/alert_note.gif" title="Note" /> <b>Note</b></th></tr><tr><td><p>Any errors that occur in image generating field will be displayed
+  in very small vector text in the field itself, so you may need to zoom
+  into the output PDF to see the error description.</p></td></tr></table></div></p>
+          <p>
+       Below are a few examples of text field names.
+       </p>
+          <div class="tableSection">
+            <table width="50%" cellspacing="2" cellpadding="5" frame="lhs">
+              <tr>
+                <th>Example name</th>
+                <th>Description</th>
+              </tr>
+              <tr>
+                <td>&gt;ordernumber</td>
+                <td>This field would display a SQL column called "ordernumber"
+		    from the header SQL query.
+		    </td>
+              </tr>
+              <tr>
+                <td>&gt;&gt;itemNumber</td>
+                <td>This field would display a SQL column called "itemnumber"
+		    from the detail SQL query.  This field will repeat once for each
+		    record, the value changing to each record respectivly.  The distance
+		    between each field can be set by using the vertical spacing attribute
+		    found above in the Property elements section.
+		    </td>
+              </tr>
+              <tr>
+                <td>&gt;image["BarCode",["CODE 128","&gt;orderNumber;",{}]]</td>
+                <td>This text element will be replaced by an image generated by
+		    the BarCode method in either the Rendition.Admin class or the
+		    Rendition.Merchant class (it exists in both classes).  The BarCode
+		    method's second argument is the value of the bar code.  A SQL
+		    column name (prefixed with &gt;) is used as the value.  
+<div class="alert"><table><tr><th><img src="../icons/alert_note.gif" title="Note" /> <b>Note</b></th></tr><tr><td><p>Notice the quotes around the &gt;columnName.  If your SQL variable is
+a string, quotes are required.</p></td></tr></table></div></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <a name="salesreceipt"> </a>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(sectionToggleID0ECAAA)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(sectionToggleID0ECAAA, event)" tabindex="0">
+            <img id="sectionToggleID0ECAAA" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Sales Receipt</span>
+        </h1>
+        <div id="sectionSectionID0ECAAA" class="section" name="collapseableSection" style="">
+          <p>This is an example sales receipt, selecting
+        a header recordset based on a request querystring and
+        loops through a detail recordset overlaying the 
+        recordset data on a vector background.</p>
+        </div>
+        <a name="examples"> </a>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(sectionToggleID0EBAAA)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(sectionToggleID0EBAAA, event)" tabindex="0">
+            <img id="sectionToggleID0EBAAA" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Example Documents</span>
+        </h1>
+        <div id="sectionSectionID0EBAAA" class="section" name="collapseableSection" style="">
+          <p>Below is a descripton of the example documents provided in the
+       reference web site downloadable from http://www.antidote12.com/. 
+	    <a name="salesreceipt"> </a><h3 class="subHeading">Sales Receipt</h3><div class="subsection"><p>This is an example sales receipt, selecting
+	        a header recordset based on a request querystring and
+	        loops through a detail recordset overlaying the 
+	        recordset data on a vector background.</p></div><a name="packingslip"> </a><h3 class="subHeading">Packing Slip</h3><div class="subsection"><p>This is an example packing slip, selecting
+	        a header recordset based on a request querystring and
+	        loops through a detail recordset overlaying the 
+	        recordset data on a vector background.</p></div><a name="packingslip"> </a><h3 class="subHeading">Chart</h3><div class="subsection"><p>This is an example chart, an image
+	        called from a request querystring and executed
+	        from a c# method that creates chart images.</p></div></p>
+        </div>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(seeAlsoToggle)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(seeAlsoToggle, event)" tabindex="0">
+            <img id="seeAlsoToggle" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />See Also</span>
+        </h1>
+        <div id="seeAlsoSection" class="section" name="collapseableSection" style="">
+          <h4 class="subHeading">Reference</h4>
+          <div class="seeAlsoStyle">
+            <span sdata="cer" target="M:Rendition.Admin.Print">
+              <span class="nolink">Print<span class="languageSpecificText"><span class="cs">()</span><span class="cpp">()</span><span class="nu">()</span><span class="fs">()</span></span></span>
+            </span>
+          </div>
+          <div class="seeAlsoStyle">
+            <span sdata="cer" target="M:Rendition.Commerce.Print">
+              <span class="nolink">Print<span class="languageSpecificText"><span class="cs">()</span><span class="cpp">()</span><span class="nu">()</span><span class="fs">()</span></span></span>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div id="footer">
+        <div class="footerLine">
+          <img width="100%" height="3px" src="../icons/footer.gif" alt="Footer image" title="Footer image" />
+        </div>
+        <A NAME="feedback"></A>
+        <span id="fb" class="feedbackcss"></span>
+        <p />Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:tonygermaneri%40gmail.com?Subject=Rendition E-Commerce Framework">Tony Germaneri</a><script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        var HT_mailLinkText = HT_mailLink.innerHTML;
+        HT_mailLink.href += ": " + document.title;
+        HT_mailLink.innerHTML = HT_mailLinkText;
+        </script><p />Copyright © Tony Germaneri 2011</div>
+    </div>
+  </body>
+</html>

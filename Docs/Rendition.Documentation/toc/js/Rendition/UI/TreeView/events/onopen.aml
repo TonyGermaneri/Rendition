@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="0282d62d-3e9e-f962-4765-301e444fc2da" revisionNumber="1" dataAlias="Rendition.UI.TreeView#TreeView.onopen">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction address="Intro">
+			Rendition.UI.TreeView#TreeView.onopen(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  e, <link xlink:href="c6d834b2-5b8e-e096-55cf-f1a02dbc88bf"/>  treeView, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  node, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  labelText, <link xlink:href="b4909cfa-da78-c794-ec3d-c84bc598274e"/>  treeNode, <link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  parentNode)	
+			<para>Occurs when a tree node is toggled open to reveal its child nodes.</para>
+		</introduction>
+		<definitionTable>
+			
+			
+				<definedTerm>
+					<para>Member Of</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="c6d834b2-5b8e-e096-55cf-f1a02dbc88bf"/>
+					</para>
+				</definition>
+			
+			
+				<definedTerm>
+					<para>Source</para>
+				</definedTerm>
+				<definition>
+					<para>
+						c:\Rendition\Rendition.Core\js\admin\UI\treeView.js
+					</para>
+				</definition>
+			
+		</definitionTable>
+		<section address="parameters">
+		<title>Event Signature</title>
+			<sections>
+				<table>
+					<tableHeader>
+					<row>
+						<entry><para> </para></entry>
+						<entry><para>Name</para></entry>
+						<entry><para>Description</para></entry>
+					</row>
+					</tableHeader>
+					
+						<row>
+							<entry>
+								<para>
+									
+									Required
+									e
+									<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+								</para>
+							</entry>
+							<entry>
+								<para>
+									Browser event object.
+								</para>
+							</entry>
+							<entry>
+								<para>
+									
+								</para>
+							</entry>
+						</row>
+					
+						<row>
+							<entry>
+								<para>
+									
+									Required
+									treeView
+									<link xlink:href="c6d834b2-5b8e-e096-55cf-f1a02dbc88bf"/>
+								</para>
+							</entry>
+							<entry>
+								<para>
+									The treeView instance firing the event.
+								</para>
+							</entry>
+							<entry>
+								<para>
+									
+								</para>
+							</entry>
+						</row>
+					
+						<row>
+							<entry>
+								<para>
+									
+									Required
+									node
+									<link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>
+								</para>
+							</entry>
+							<entry>
+								<para>
+									The DOM object the event belongs to.
+								</para>
+							</entry>
+							<entry>
+								<para>
+									
+								</para>
+							</entry>
+						</row>
+					
+						<row>
+							<entry>
+								<para>
+									
+									Required
+									labelText
+									<link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>
+								</para>
+							</entry>
+							<entry>
+								<para>
+									The SPAN element containing the label text.
+								</para>
+							</entry>
+							<entry>
+								<para>
+									
+								</para>
+							</entry>
+						</row>
+					
+						<row>
+							<entry>
+								<para>
+									
+									Required
+									treeNode
+									<link xlink:href="b4909cfa-da78-c794-ec3d-c84bc598274e"/>
+								</para>
+							</entry>
+							<entry>
+								<para>
+									The treeNode object defined to create this node.
+								</para>
+							</entry>
+							<entry>
+								<para>
+									
+								</para>
+							</entry>
+						</row>
+					
+						<row>
+							<entry>
+								<para>
+									
+									Required
+									parentNode
+									<link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>
+								</para>
+							</entry>
+							<entry>
+								<para>
+									The parent treeNode DHTML element.
+								</para>
+							</entry>
+							<entry>
+								<para>
+									
+								</para>
+							</entry>
+						</row>
+					
+				</table>
+			</sections>
+		</section>
+		<alert class="tip">
+			<para>There are two ways to add event listeners.</para>
+		</alert>
+		<para>
+			1. You can attach to events as a parameter when you create the object.
+			<code language="javascript">
+				var foo = new object({
+					event:function(signature){
+						/* event procedure */
+					}
+				});
+			</code>
+			2. Or you can add the event after the object has been instantiated.
+			<code language="javascript">
+				var foo = new object();
+				foo.addEventListener('event',function(signature){
+					/* event procedure */
+				}, false);
+			</code>
+		</para>
+	</developerConceptualDocument>
+</topic>

@@ -1,0 +1,1 @@
+This is really jQuery 1.7.2.  Pay no attention to folder names that state 1.4.2.

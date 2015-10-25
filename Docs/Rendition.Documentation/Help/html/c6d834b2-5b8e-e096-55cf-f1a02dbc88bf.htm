@@ -1,0 +1,1838 @@
+﻿<html xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+  <head>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8" />
+    <META NAME="save" CONTENT="history" />
+    <title>TreeView</title>
+    <meta name="Language" content="en-us" />
+    <meta name="Microsoft.Help.Id" content="c6d834b2-5b8e-e096-55cf-f1a02dbc88bf" />
+    <meta name="Description" content="Creates a DHTML based tree view. The tree view uses the natural hierarchial nature of the DOM to create a tree. Tree nodes can be a Object, a function or a URL and callback function." />
+    <meta name="Microsoft.Help.ContentType" content="Concepts" />
+    <link rel="stylesheet" type="text/css" href="../styles/Presentation.css" />
+    <link rel="stylesheet" type="text/css" href="ms-help://Hx/HxRuntime/HxLink.css" />
+    <script type="text/javascript" src="../scripts/EventUtilities.js"> </script>
+    <script type="text/javascript" src="../scripts/SplitScreen.js"> </script>
+    <script type="text/javascript" src="../scripts/Dropdown.js"> </script>
+    <script type="text/javascript" src="../scripts/script_manifold.js"> </script>
+    <script type="text/javascript" src="../scripts/script_feedBack.js"> </script>
+    <script type="text/javascript" src="../scripts/CheckboxMenu.js"> </script>
+    <script type="text/javascript" src="../scripts/CommonUtilities.js"> </script>
+    <xml>
+      <MSHelp:Keyword Index="A" Term="c6d834b2-5b8e-e096-55cf-f1a02dbc88bf" />
+      <MSHelp:Attr Name="RevisionNumber" Value="1" />
+      <MSHelp:Attr Name="AssetID" Value="c6d834b2-5b8e-e096-55cf-f1a02dbc88bf" />
+      <MSHelp:Attr Name="Abstract" Value="Creates a DHTML based tree view. The tree view uses the natural hierarchial nature of the DOM to create a tree. Tree nodes can be a Object, a function or a URL and callback function.When a object is added to a treeView it will get a few extra propert ..." />
+      <MSHelp:Attr Name="TopicType" Value="kbArticle" />
+      <MSHelp:Attr Name="Locale" Value="en-us" />
+    </xml>
+    <link type="text/css" rel="stylesheet" href="../styles/highlight.css" />
+    <script type="text/javascript" src="../scripts/highlight.js"> </script>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <input type="hidden" id="hiddenScrollOffset" />
+    <img id="collapseImage" style="display:none; height:0; width:0;" src="../icons/collapse_all.gif" alt="Collapse image" title="Collapse image" />
+    <img id="expandImage" style="display:none; height:0; width:0;" src="../icons/expand_all.gif" alt="Expand Image" title="Expand Image" />
+    <img id="collapseAllImage" style="display:none; height:0; width:0;" src="../icons/collapse_all.gif" />
+    <img id="expandAllImage" style="display:none; height:0; width:0;" src="../icons/expand_all.gif" />
+    <img id="dropDownImage" style="display:none; height:0; width:0;" src="../icons/dropdown.gif" />
+    <img id="dropDownHoverImage" style="display:none; height:0; width:0;" src="../icons/dropdownHover.gif" />
+    <img id="copyImage" style="display:none; height:0; width:0;" src="../icons/copycode.gif" alt="Copy image" title="Copy image" />
+    <img id="copyHoverImage" style="display:none; height:0; width:0;" src="../icons/copycodeHighlight.gif" alt="CopyHover image" title="CopyHover image" />
+    <div id="header">
+      <table id="topTable" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <span onclick="ExpandCollapseAll(toggleAllImage)" style="cursor:default;" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage, event)" tabindex="0">
+              <img ID="toggleAllImage" class="toggleAll" src="../icons/collapse_all.gif" /> <label id="collapseAllLabel" for="toggleAllImage" style="display: none;">Collapse All</label><label id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand All</label> </span>
+            <span>    </span>
+            <span id="devlangsDropdown" class="filter" tabindex="0">
+              <img id="devlangsDropdownImage" src="../icons/dropdown.gif" /> <label id="devlangsMenuAllLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: All </nobr></label><label id="devlangsMenuMultipleLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: Multiple </nobr></label><label id="devlangsMenuCSharpLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: C# </nobr></label><label id="devlangsMenuJavaScriptLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: JavaScript </nobr></label></span>
+          </td>
+        </tr>
+      </table>
+      <div id="devlangsMenu">
+        <input id="CSharpCheckbox" type="checkbox" data="CSharp,cs,'persist'" value="on" onClick="SetLanguage(this)" />
+        <label class="checkboxLabel" for="CSharpCheckbox">C#</label>
+        <br />
+        <input id="JavaScriptCheckbox" type="checkbox" data="JavaScript,cs,'persist'" value="on" onClick="SetLanguage(this)" />
+        <label class="checkboxLabel" for="JavaScriptCheckbox">JavaScript</label>
+        <br />
+      </div>
+      <table id="bottomTable" cellpadding="0" cellspacing="0">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">Rendition E-Commerce Framework</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">TreeView</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td align="left">
+            <span id="headfeedbackarea" class="feedbackhead">
+              <a href="javascript:SubmitFeedback('tonygermaneri@gmail.com','Rendition E-Commerce Framework','','1.0.0.0','','%0\dYour%20feedback%20is%20used%20to%20improve%20the%20documentation%20and%20the%20product.%20Your%20e-mail%20address%20will%20not%20be%20used%20for%20any%20other%20purpose%20and%20is%20disposed%20of%20after%20the%20issue%20you%20report%20is%20resolved.%20%20While%20working%20to%20resolve%20the%20issue%20that%20you%20report,%20you%20may%20be%20contacted%20via%20e-mail%20to%20get%20further%20details%20or%20clarification%20on%20the%20feedback%20you%20sent.%20After%20the%20issue%20you%20report%20has%20been%20addressed,%20you%20may%20receive%20an%20e-mail%20to%20let%20you%20know%20that%20your%20feedback%20has%20been%20addressed.%0\A%0\d','Customer%20Feedback');">Send Feedback</a>
+            </span>
+          </td>
+        </tr>
+      </table>
+      <table id="gradientTable">
+        <tr>
+          <td class="nsrBottom" background="../icons/gradient.gif" />
+        </tr>
+      </table>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" />
+        <span style="color: DarkGray">
+          <p style="color: #dc143c; font-size: 8.5pt; font-weight: bold;">[This is preliminary documentation and is subject to change.]</p>
+        </span>
+        <a name="Intro"> </a>
+        <div class="introduction">
+			Class Rendition.UI.TreeView
+			<p><p>Creates a DHTML based tree view.  The tree view uses the natural 
+hierarchial nature of the DOM to create a tree.  Tree nodes can be
+a <span sdata="link"><a href="b4909cfa-da78-c794-ec3d-c84bc598274e.htm">TreeNode</a></span> Object, a function  or a URL and callback function.</p><p>When a <span sdata="link"><a href="b4909cfa-da78-c794-ec3d-c84bc598274e.htm">TreeNode</a></span> object is added to a treeView it will get a
+ few extra properties from the treeView and will end up looking like this
+<span id="cbc_1" x-lang="JavaScript" codeLanguage="JavaScript"><div class="highlight-title"><span class="highlight-copycode" onkeypress="javascript:CopyColorizedCodeCheckKey(this.parentNode, event);" tabindex="0" onmouseover="CopyCodeChangeIcon(this)" onmouseout="CopyCodeChangeIcon(this)" onclick="javascript:CopyColorizedCode(this.parentNode);"><img style="margin-right: 5px;" src="../icons/CopyCode.gif" />Copy</span>JavaScript</div><div class="code"><pre xml:space="preserve">{
+    
+    treeNode:{
+        text: <span class="highlight-keyword">String</span>,
+        value: <span class="highlight-keyword">Object</span>,
+        childNodes: <span class="highlight-keyword">Array</span>,
+        URL: <span class="highlight-keyword">String</span>,
+        callbackArguments: <span class="highlight-keyword">Array</span>,
+        callbackProcedure: <span class="highlight-keyword">Function</span>
+    },
+    parentNode: DHTMLElement,
+    element: DHTMLElement,
+    treeNodeId: Integer,
+    parentTreeNode: <span class="highlight-keyword">Object</span>
+}</pre></div></span></p><p>If the property URL is defined in a treeNode the URL will be requested when the node's open event occurs.
+when the request is complete the Array [callbackArguments] will be <i>prefixed</i> to
+the event signature: (json, tree, siblingNodes, node).  The [callbackProcedure] will then be applied to the response
+within the context of the treeView.  The function you provide should create treeNodes when it is fired.
+An example of this can be found in the list of examples.</p><p> The treeNode object above can be found by selecting a DHTML Element in the treeView and looking at its
+treeNode property, by using the <span sdata="link"><span class="nolink">[f6625a7b-e83f-4e49-2823-564958c8aacd]</span></span> method to get the node by its treeNodeId
+or by searching through the <span sdata="link"><span class="nolink">[3e52e04c-86e5-3241-1d6a-aea297b85853]</span></span> array for the desired node.</p></p></div>
+        <p>
+          <dl class="authored">
+            <dt>
+              <p>Member Of</p>
+            </dt>
+            <dd>
+              <p>
+                <span sdata="link">
+                  <a href="ddee8d40-d92d-34d0-2be3-5f5d65f36f31.htm">UI</a>
+                </span>
+              </p>
+            </dd>
+            <dt>
+              <p>Source</p>
+            </dt>
+            <dd>
+              <p>
+							c:\Rendition\Rendition.Core\js\admin\UI\treeView.js
+						</p>
+            </dd>
+          </dl>
+        </p>
+        <a name="examples"> </a>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(sectionToggleID0EIAAA)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(sectionToggleID0EIAAA, event)" tabindex="0">
+            <img id="sectionToggleID0EIAAA" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Examples</span>
+        </h1>
+        <div id="sectionSectionID0EIAAA" class="section" name="collapseableSection" style="">
+          <h3 class="subHeading">
+								
+									Create a new dialog.  Create a treeView and attach it to the dialog.   Add a two tree nodes.
+
+								
+							</h3>
+          <div class="subsection">
+            <p>
+              <span id="cbc_2" x-lang="JavaScript" codeLanguage="JavaScript">
+                <div class="highlight-title">
+                  <span class="highlight-copycode" onkeypress="javascript:CopyColorizedCodeCheckKey(this.parentNode, event);" tabindex="0" onmouseover="CopyCodeChangeIcon(this)" onmouseout="CopyCodeChangeIcon(this)" onclick="javascript:CopyColorizedCode(this.parentNode);">
+                    <img style="margin-right: 5px;" src="../icons/CopyCode.gif" />Copy</span>JavaScript</div>
+                <div class="code">
+                  <pre xml:space="preserve">
+                    <span class="highlight-keyword">var</span> foo = Rendition.UI.Dialog();
+<span class="highlight-keyword">var</span> bar = Rendition.UI.TreeView({
+    parentNode: foo.content
+});
+<span class="highlight-keyword">var</span> unus = bar.add({
+    text: <span class="highlight-literal">'Duis autem vel.'</span>,
+    value: <span class="highlight-literal">'unus'</span>,
+    childNodes: []
+});
+<span class="highlight-keyword">var</span> duo = unus.add({
+    text: <span class="highlight-literal">'Minim veniam.'</span>,
+    value: <span class="highlight-literal">'duo'</span>,
+    childNodes: []
+});</pre>
+                </div>
+              </span>
+            </p>
+          </div>
+          <h3 class="subHeading">
+								
+									Create a new dialog.  Create a treeView and attach it to the dialog.   Add a two tree nodes another way.
+
+								
+							</h3>
+          <div class="subsection">
+            <p>
+              <span id="cbc_3" x-lang="JavaScript" codeLanguage="JavaScript">
+                <div class="highlight-title">
+                  <span class="highlight-copycode" onkeypress="javascript:CopyColorizedCodeCheckKey(this.parentNode, event);" tabindex="0" onmouseover="CopyCodeChangeIcon(this)" onmouseout="CopyCodeChangeIcon(this)" onclick="javascript:CopyColorizedCode(this.parentNode);">
+                    <img style="margin-right: 5px;" src="../icons/CopyCode.gif" />Copy</span>JavaScript</div>
+                <div class="code">
+                  <pre xml:space="preserve">
+                    <span class="highlight-keyword">var</span> foo = Rendition.UI.Dialog();
+<span class="highlight-keyword">var</span> bar = Rendition.UI.TreeView({
+    parentNode: foo.content
+});
+bar.add({
+    text: <span class="highlight-literal">'Duis autem vel.'</span>,
+    value: <span class="highlight-literal">'unus'</span>,
+    childNodes: [{
+        text: <span class="highlight-literal">'Minim veniam.'</span>,
+        value: <span class="highlight-literal">'duo'</span>,
+        childNodes: []
+    }]
+});</pre>
+                </div>
+              </span>
+            </p>
+          </div>
+          <h3 class="subHeading">
+								
+									Create a new dialog.  Create a treeView and attach it to the dialog.   Add a two tree nodes yet another way.
+
+								
+							</h3>
+          <div class="subsection">
+            <p>
+              <span id="cbc_4" x-lang="JavaScript" codeLanguage="JavaScript">
+                <div class="highlight-title">
+                  <span class="highlight-copycode" onkeypress="javascript:CopyColorizedCodeCheckKey(this.parentNode, event);" tabindex="0" onmouseover="CopyCodeChangeIcon(this)" onmouseout="CopyCodeChangeIcon(this)" onclick="javascript:CopyColorizedCode(this.parentNode);">
+                    <img style="margin-right: 5px;" src="../icons/CopyCode.gif" />Copy</span>JavaScript</div>
+                <div class="code">
+                  <pre xml:space="preserve">
+                    <span class="highlight-keyword">var</span> foo = Rendition.UI.Dialog();
+<span class="highlight-keyword">var</span> bar = Rendition.UI.TreeView({
+    parentNode: foo.content,
+    includeRoot: <span class="highlight-keyword">true</span>,
+    rootNode: {
+        text: <span class="highlight-literal">'Duis autem vel.'</span>,
+        value: <span class="highlight-literal">'unus'</span>,
+        childNodes: [{
+            text: <span class="highlight-literal">'Minim veniam.'</span>,
+            value: <span class="highlight-literal">'duo'</span>,
+            childNodes: []
+        }]
+    }
+});</pre>
+                </div>
+              </span>
+            </p>
+          </div>
+          <h3 class="subHeading">
+								
+									Create a new dialog.  Create a treeView and attach it to the dialog, hide the root node.  Add some nodes.  Allow dragging the nodes.
+
+								
+							</h3>
+          <div class="subsection">
+            <p>
+              <span id="cbc_5" x-lang="JavaScript" codeLanguage="JavaScript">
+                <div class="highlight-title">
+                  <span class="highlight-copycode" onkeypress="javascript:CopyColorizedCodeCheckKey(this.parentNode, event);" tabindex="0" onmouseover="CopyCodeChangeIcon(this)" onmouseout="CopyCodeChangeIcon(this)" onclick="javascript:CopyColorizedCode(this.parentNode);">
+                    <img style="margin-right: 5px;" src="../icons/CopyCode.gif" />Copy</span>JavaScript</div>
+                <div class="code">
+                  <pre xml:space="preserve">
+                    <span class="highlight-keyword">var</span> foo = Rendition.UI.Dialog();
+<span class="highlight-keyword">var</span> bar = Rendition.UI.TreeView({
+    parentNode: foo.content,
+    dragMode: <span class="highlight-number">0</span>,
+    rootNode: {
+        text: <span class="highlight-literal">'Unus.'</span>,
+        value: <span class="highlight-literal">'unus'</span>,
+        childNodes: [
+            {
+                text: <span class="highlight-literal">'Duo.'</span>,
+                value: <span class="highlight-literal">'duo'</span>,
+                childNodes: []
+            },
+            {
+                text: <span class="highlight-literal">'Tres.'</span>,
+                value: <span class="highlight-literal">'tres'</span>,
+                childNodes: []
+            },
+            {
+                text: <span class="highlight-literal">'Quattuor.'</span>,
+                value: <span class="highlight-literal">'quattuor'</span>,
+                childNodes: []
+            },
+            {
+                text: <span class="highlight-literal">'Quinque.'</span>,
+                value: <span class="highlight-literal">'quinque'</span>,
+                childNodes: []
+            },
+            {
+                text: <span class="highlight-literal">'Sex.'</span>,
+                value: <span class="highlight-literal">'sex'</span>,
+                childNodes: []
+            }
+        ]
+    }
+});</pre>
+                </div>
+              </span>
+            </p>
+          </div>
+          <h3 class="subHeading">
+								
+									Create a new dialog.  Create a treeView and attach it to the dialog.  Add some nodes.  Bind an event to the label click.
+
+								
+							</h3>
+          <div class="subsection">
+            <p>
+              <span id="cbc_6" x-lang="JavaScript" codeLanguage="JavaScript">
+                <div class="highlight-title">
+                  <span class="highlight-copycode" onkeypress="javascript:CopyColorizedCodeCheckKey(this.parentNode, event);" tabindex="0" onmouseover="CopyCodeChangeIcon(this)" onmouseout="CopyCodeChangeIcon(this)" onclick="javascript:CopyColorizedCode(this.parentNode);">
+                    <img style="margin-right: 5px;" src="../icons/CopyCode.gif" />Copy</span>JavaScript</div>
+                <div class="code">
+                  <pre xml:space="preserve">
+                    <span class="highlight-keyword">var</span> foo = Rendition.UI.Dialog();
+<span class="highlight-keyword">var</span> bar = Rendition.UI.TreeView({
+    parentNode: foo.content,
+    dragMode: <span class="highlight-number">0</span>,
+    includeRoot: <span class="highlight-keyword">true</span>,
+    labelclick: <span class="highlight-keyword">function</span>(e, treeView, node, labelText, treeNode, parentNode){
+        alert(labelText.textContent);
+    },
+    rootNode: {
+        text: <span class="highlight-literal">'Unus.'</span>,
+        value: <span class="highlight-literal">'unus'</span>,
+        childNodes: [
+            {
+                text: <span class="highlight-literal">'Duo.'</span>,
+                value: <span class="highlight-literal">'duo'</span>,
+                childNodes: []
+            },
+            {
+                text: <span class="highlight-literal">'Tres.'</span>,
+                value: <span class="highlight-literal">'tres'</span>,
+                childNodes: []
+            }
+        ]
+    }
+});</pre>
+                </div>
+              </span>
+            </p>
+          </div>
+          <h3 class="subHeading">
+								
+									Create a new dialog.  Create a treeView and attach it to the dialog.  Use a URL and callback procedure as a child node.  Bind an event to the label's context menu.
+
+								
+							</h3>
+          <div class="subsection">
+            <p>
+              <span id="cbc_7" x-lang="JavaScript" codeLanguage="JavaScript">
+                <div class="highlight-title">
+                  <span class="highlight-copycode" onkeypress="javascript:CopyColorizedCodeCheckKey(this.parentNode, event);" tabindex="0" onmouseover="CopyCodeChangeIcon(this)" onmouseout="CopyCodeChangeIcon(this)" onclick="javascript:CopyColorizedCode(this.parentNode);">
+                    <img style="margin-right: 5px;" src="../icons/CopyCode.gif" />Copy</span>JavaScript</div>
+                <div class="code">
+                  <pre xml:space="preserve">
+                    <span class="highlight-keyword">var</span> foo = Rendition.UI.Dialog();
+<span class="highlight-keyword">var</span> bar = Rendition.UI.TreeView({
+    parentNode: foo.content,
+    dragMode: <span class="highlight-number">0</span>,
+    includeRoot: <span class="highlight-keyword">true</span>,
+    labelcontextmenu: <span class="highlight-keyword">function</span> (e, treeView, node, labelText, treeNode, parentNode) {
+        <span class="highlight-keyword">var</span> options = [];
+        options[<span class="highlight-number">0</span>] = Rendition.UI.MenuOption();
+        options[<span class="highlight-number">0</span>].text = <span class="highlight-literal">'Remove Node'</span>;
+        options[<span class="highlight-number">0</span>].addEventListener(<span class="highlight-literal">'mousedown'</span>, <span class="highlight-keyword">function</span> () {
+            node.remove();
+        }, <span class="highlight-keyword">false</span>);
+        options[<span class="highlight-number">1</span>] = Rendition.UI.MenuOption();
+        options[<span class="highlight-number">1</span>].text = <span class="highlight-literal">'Show Node Value'</span>;
+        options[<span class="highlight-number">1</span>].addEventListener(<span class="highlight-literal">'mousedown'</span>, <span class="highlight-keyword">function</span> () {
+            alert(treeNode.value);
+        }, <span class="highlight-keyword">false</span>);
+        <span class="highlight-keyword">new</span> Rendition.UI.ContextMenu(e, {
+            elements: options,
+            caller: <span class="highlight-keyword">this</span>,
+            type: <span class="highlight-literal">'mouse'</span>
+        });
+        e.preventDefault();
+        treeView.preventDefault();
+    },
+    rootNode: {
+        text: <span class="highlight-literal">'Unus.'</span>,
+        value: <span class="highlight-literal">'unus'</span>,
+        childNodes: [
+            {
+                text: <span class="highlight-literal">'Duis vel.'</span>,
+                url: Rendition.UI.clientServerSyncURI + Rendition.UI.responderKeyName + <span class="highlight-literal">'1='</span> + JSON.stringify([<span class="highlight-literal">'GetSqlArray'</span>,
+                [{ commandText: <span class="highlight-literal">'select userId from users with (nolock)'</span>}]]),
+                callbackArguments: [],
+                callbackProcedure: <span class="highlight-keyword">function</span> (json, tree, siblingNodes, node) {
+                    <span class="highlight-keyword">var</span> a = json.method1.GetSqlArray;
+                    <span class="highlight-keyword">var</span> l = a.length;
+                    <span class="highlight-keyword">for</span> (<span class="highlight-keyword">var</span> x = <span class="highlight-number">0</span>; l &gt; x; x++) {
+                        <span class="highlight-keyword">var</span> newNode = {
+                            text: a[x][<span class="highlight-number">0</span>],
+                            value: a[x][<span class="highlight-number">0</span>]
+                        }
+                        <span class="highlight-keyword">if</span> (!node.containsNode(newNode)) {
+                            node.add(newNode);
+                        }
+                    }
+                    <span class="highlight-keyword">return</span> <span class="highlight-keyword">false</span>;
+                }
+            }
+        ]
+    }
+});</pre>
+                </div>
+              </span>
+            </p>
+          </div>
+          <h3 class="subHeading">
+								
+									Check the result of drag and drop's new node ordering.
+
+								
+							</h3>
+          <div class="subsection">
+            <p>
+              <span id="cbc_8" x-lang="JavaScript" codeLanguage="JavaScript">
+                <div class="highlight-title">
+                  <span class="highlight-copycode" onkeypress="javascript:CopyColorizedCodeCheckKey(this.parentNode, event);" tabindex="0" onmouseover="CopyCodeChangeIcon(this)" onmouseout="CopyCodeChangeIcon(this)" onclick="javascript:CopyColorizedCode(this.parentNode);">
+                    <img style="margin-right: 5px;" src="../icons/CopyCode.gif" />Copy</span>JavaScript</div>
+                <div class="code">
+                  <pre xml:space="preserve">
+                    <span class="highlight-comment">//Create a new dialog.</span>
+<span class="highlight-keyword">var</span> foo = Rendition.UI.Dialog();
+<span class="highlight-comment">// Create a treeView and attach it to the dialog.</span>
+<span class="highlight-comment">// Use a URL and callback procedure as a child node.</span>
+<span class="highlight-comment">// Check the order of the nodes after the user has reordered the nodes.</span>
+<span class="highlight-keyword">var</span> bar = Rendition.UI.TreeView({
+    parentNode: foo.content,
+    dragMode: <span class="highlight-number">0</span>,
+    rootNode: {
+        text: <span class="highlight-literal">'Unus.'</span>,
+        value: <span class="highlight-literal">'unus'</span>,
+        childNodes: [
+            {
+                text: <span class="highlight-literal">'Duis vel.'</span>,
+                url: Rendition.UI.clientServerSyncURI + Rendition.UI.responderKeyName + <span class="highlight-literal">'1='</span> + JSON.stringify([<span class="highlight-literal">'GetSqlArray'</span>,
+                [{ commandText: <span class="highlight-literal">'select userId from users with (nolock)'</span>}]]),
+                callbackArguments: [],
+                callbackProcedure: <span class="highlight-keyword">function</span> (json, tree, siblingNodes, node) {
+                    <span class="highlight-keyword">var</span> a = json.method1.GetSqlArray;
+                    <span class="highlight-keyword">var</span> l = a.length;
+                    <span class="highlight-keyword">for</span> (<span class="highlight-keyword">var</span> x = <span class="highlight-number">0</span>; l &gt; x; x++) {
+                        <span class="highlight-keyword">var</span> newNode = {
+                            text: a[x][<span class="highlight-number">0</span>],
+                            value: a[x][<span class="highlight-number">0</span>]
+                        }
+                        <span class="highlight-keyword">if</span> (!node.containsNode(newNode)) {
+                            node.add(newNode);
+                        }
+                    }
+                    <span class="highlight-keyword">return</span> <span class="highlight-keyword">false</span>;
+                }
+            }
+        ]
+    },
+    drop: <span class="highlight-keyword">function</span> (e, tree, dragSource, dragTarget) {
+        <span class="highlight-keyword">var</span> p = dragSource.parentNode;
+        <span class="highlight-keyword">var</span> l = p.childNodes.length;
+        <span class="highlight-keyword">var</span> order = [];
+        <span class="highlight-keyword">for</span> (<span class="highlight-keyword">var</span> x = <span class="highlight-number">0</span>; l &gt; x; x++) {
+            order.push({
+                value: p.childNodes[x].treeNode.value,
+                order: x
+            });
+        }
+        alert(JSON.stringify(order));
+    }
+});</pre>
+                </div>
+              </span>
+            </p>
+          </div>
+        </div>
+        <a name="parameters"> </a>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(sectionToggleID0EGAAA)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(sectionToggleID0EGAAA, event)" tabindex="0">
+            <img id="sectionToggleID0EGAAA" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Constructor Parameters</span>
+        </h1>
+        <div id="sectionSectionID0EGAAA" class="section" name="collapseableSection" style="">
+          <div class="tableSection">
+            <table width="50%" cellspacing="2" cellpadding="5" frame="lhs">
+              <tr>
+                <th>
+                  <p />
+                </th>
+                <th>
+                  <p>Name</p>
+                </th>
+                <th>
+                  <p>Type</p>
+                </th>
+                <th>
+                  <p>Description</p>
+                </th>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Private Field" src="../media/privatefield.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										args 
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Parameters for the treeView widget.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Private Field" src="../media/privatefield.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										args.parentNode 
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0.htm">DHTMLElement</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The DHTML element to append the widget to.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Private Field" src="../media/privatefield.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										args.rootNode 
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The inital treeNode to add to the treeView.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Private Field" src="../media/privatefield.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										args.dragMode 
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="36802977-faa0-b394-beea-eebbbc3b2d5a.htm">Integer</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The mode that node dragging works in.
+undefined = No dragging allowed. 0 = Stay within the same parent.  
+1 = Move from any node to any other node in the same <span sdata="link"><a href="c6d834b2-5b8e-e096-55cf-f1a02dbc88bf.htm">TreeView</a></span> instance.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Private Field" src="../media/privatefield.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										args.dragMode 
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The mode that node dragging works in.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Private Field" src="../media/privatefield.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										args.includeRoot 
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="feb87a09-e36a-9baa-3c23-409ea79458a9.htm">Boolean</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Include the root tree node.  
+All the nodes are the decendant of a single node.  
+When this parameter is true this root node will be visible.
+									</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <a name="fields"> </a>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(sectionToggleID0EEAAA)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(sectionToggleID0EEAAA, event)" tabindex="0">
+            <img id="sectionToggleID0EEAAA" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Properties</span>
+        </h1>
+        <div id="sectionSectionID0EEAAA" class="section" name="collapseableSection" style="">
+          <div class="tableSection">
+            <table width="50%" cellspacing="2" cellpadding="5" frame="lhs">
+              <tr>
+                <th>
+                  <p />
+                </th>
+                <th>
+                  <p>Name</p>
+                </th>
+                <th>
+                  <p>Type</p>
+                </th>
+                <th>
+                  <p>Description</p>
+                </th>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="b06d7f64-59ed-2816-4f08-35de96d0d449.htm">dialog</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The dialog that was created automatically when no parentNode was defined for this <span sdata="link"><a href="c6d834b2-5b8e-e096-55cf-f1a02dbc88bf.htm">TreeView</a></span> instance.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="51663e2a-ce0d-99a0-dda4-da00994a8c10.htm">dragging</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="feb87a09-e36a-9baa-3c23-409ea79458a9.htm">Boolean</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										When true, the user is dragging a treeNode in this instance.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="67c731c6-96a7-71d0-e64c-5d040ae21b2b.htm">id</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Unique id of this instance of <span sdata="link"><a href="c6d834b2-5b8e-e096-55cf-f1a02dbc88bf.htm">TreeView</a></span>.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="ee4d29cc-8ec7-0eb7-fd3b-f85a847950d6.htm">parentNode</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0.htm">DHTMLElement</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The parent DHTML element of this widget.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="a445e0f6-5835-d8d2-8b05-c3a9daa99263.htm">style</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The style of this widget.  Type of <span sdata="link"><a href="efc97fc8-34be-289f-ee3b-b9b03178d046.htm">TreeViewStyle</a></span>.  Cannot (safely) be changed after instantiation.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="92693b27-67ee-5126-1812-1f361be772d4.htm">treeNodes</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536.htm">Array</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Complete, flat list of all the treeNodes in this treeView.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="62d786b7-d827-5905-7820-eb59d37942ec.htm">type</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The type of widget.  Returns RenditionTreeView.
+									</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <a name="methods"> </a>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(sectionToggleID0ECAAA)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(sectionToggleID0ECAAA, event)" tabindex="0">
+            <img id="sectionToggleID0ECAAA" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Methods</span>
+        </h1>
+        <div id="sectionSectionID0ECAAA" class="section" name="collapseableSection" style="">
+          <div class="tableSection">
+            <table width="50%" cellspacing="2" cellpadding="5" frame="lhs">
+              <tr>
+                <th>
+                  <p />
+                </th>
+                <th>
+                  <p>Name</p>
+                </th>
+                <th>
+                  <p>Type</p>
+                </th>
+                <th>
+                  <p>Description</p>
+                </th>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Method" src="../media/publicmethod.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <span class="nolink">[6dcf2713-d55e-9963-0a9d-43391932b328]</span>
+                    </span>(<span sdata="link"><a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a></span>  treeNode, <span sdata="link"><a href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0.htm">DHTMLElement</a></span>  parentNode)
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0.htm">DHTMLElement</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Adds a treeNode to the selected treeNode.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Method" src="../media/publicmethod.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="fdb4d2ca-a00e-eaf4-4e74-dbefd74aeebf.htm">addEventListener</a>
+                    </span>(<span sdata="link"><a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a></span>  type, <span sdata="link"><a href="ef3d2310-dfdb-431e-8330-0d339049abff.htm">Function</a></span>  proc, <span sdata="link"><a href="feb87a09-e36a-9baa-3c23-409ea79458a9.htm">Boolean</a></span>  capture)
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="044fcb55-0c5f-d88f-619c-455ffb8b2600.htm">undefined</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Attach a procedure to an event.  Usage treeView.addEventListener('labelclick',function(e, treeView, node, labelText, treeNode, parentNode){/*your procedure code},false)
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Method" src="../media/publicmethod.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="b6b20d82-5cc5-1297-01a2-58587517d8db.htm">getNodeById</a>
+                    </span>()
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="b4909cfa-da78-c794-ec3d-c84bc598274e.htm">TreeNode</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Gets a node by its id.  By default, tree nodes do not have an id attribute, you must assign it.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Method" src="../media/publicmethod.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="b6b01817-69bb-b368-a010-11e2cd8d80df.htm">getNodeByProperyValue</a>
+                    </span>(<span sdata="link"><a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a></span>  propertyName, <span sdata="link"><a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a></span>  propertyValue)
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="b4909cfa-da78-c794-ec3d-c84bc598274e.htm">TreeNode</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Gets a node by a specified treeNode property value.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Method" src="../media/publicmethod.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="9efa6db0-4123-7a77-372a-d9414509ecf6.htm">getNodeByTreeNodeId</a>
+                    </span>()
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="b4909cfa-da78-c794-ec3d-c84bc598274e.htm">TreeNode</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Gets a node by its treeNodeId number.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Method" src="../media/publicmethod.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37023ecc-ee4a-69bf-502e-7e20101ca1e0.htm">getNodeByValue</a>
+                    </span>()
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="b4909cfa-da78-c794-ec3d-c84bc598274e.htm">TreeNode</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Gets a node by its treeNode.value.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Method" src="../media/publicmethod.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="e047ba93-e5ca-0fa0-a90f-84bae93b64e5.htm">hasMembers</a>
+                    </span>(<span sdata="link"><a href="b4909cfa-da78-c794-ec3d-c84bc598274e.htm">TreeNode</a></span>  treeNode)
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="feb87a09-e36a-9baa-3c23-409ea79458a9.htm">Boolean</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Checks if the tree node has child members.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Method" src="../media/publicmethod.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="7ff52958-c43b-1d2a-b626-7bf9841b7fb6.htm">highlightLabelText</a>
+                    </span>(<span sdata="link"><a href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0.htm">DHTMLElement</a></span>  labelText)
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="044fcb55-0c5f-d88f-619c-455ffb8b2600.htm">undefined</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Highlights a label.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Method" src="../media/publicmethod.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="b09f0594-b69f-75a6-2813-6721d831ef6a.htm">preventDefault</a>
+                    </span>()
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="044fcb55-0c5f-d88f-619c-455ffb8b2600.htm">undefined</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Prevent the default event from occuring.  For use within an event handler.  For example, when used in within a function subscribed to the labelclick event, running treeView.preventDefault() will prevent the treeView from highlighting the treeNode.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Method" src="../media/publicmethod.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="aacbe3e7-e9dc-b59a-8b57-c8595b676407.htm">removeEventListener</a>
+                    </span>(<span sdata="link"><a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a></span>  type, <span sdata="link"><a href="ef3d2310-dfdb-431e-8330-0d339049abff.htm">Function</a></span>  proc, <span sdata="link"><a href="feb87a09-e36a-9baa-3c23-409ea79458a9.htm">Boolean</a></span>  capture)
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="044fcb55-0c5f-d88f-619c-455ffb8b2600.htm">undefined</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Removes an event from subscription list.  The [proc] must match exactly the [proc] subscribed with.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Method" src="../media/publicmethod.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="6eab4ae7-f376-55e9-195c-49c4140ced2f.htm">removeNode</a>
+                    </span>(<span sdata="link"><a href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0.htm">DHTMLElement</a></span>  labelText)
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="044fcb55-0c5f-d88f-619c-455ffb8b2600.htm">undefined</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										removes the selected node.  This method is depreciated.  Use treeNode.remove() or removeNodeById(id) instead.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Method" src="../media/publicmethod.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="99567b3c-f7b9-d33b-89b5-dc7cbff82d9e.htm">removeNodeById</a>
+                    </span>()
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="044fcb55-0c5f-d88f-619c-455ffb8b2600.htm">undefined</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Removes a node by its treeNodeId number.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Method" src="../media/publicmethod.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="ff7b9ad8-df62-bfe9-b951-23781f3b85a3.htm">add</a>
+                    </span>(<span sdata="link"><a href="b4909cfa-da78-c794-ec3d-c84bc598274e.htm">TreeNode</a></span>  node)
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="044fcb55-0c5f-d88f-619c-455ffb8b2600.htm">undefined</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Adds a treeNode as a child of this treeNode.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Method" src="../media/publicmethod.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="36c3693a-4b54-f58a-7044-8a24cd001e84.htm">containsNode</a>
+                    </span>(<span sdata="link"><a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a></span>  testNode)
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="feb87a09-e36a-9baa-3c23-409ea79458a9.htm">Boolean</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Checks if this tree node contains a child matching the parameter [testNode] by comparing testNode.value with other node values in this treeNode's list of child elements.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Method" src="../media/publicmethod.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="609a93a2-f0e1-fad5-ffa4-fa642b4ddc5e.htm">refresh</a>
+                    </span>()
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="044fcb55-0c5f-d88f-619c-455ffb8b2600.htm">undefined</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Refreshes the children of this treeNode.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Method" src="../media/publicmethod.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="bb1dec26-1132-10f2-5d87-52736c297e76.htm">refreshParentNode</a>
+                    </span>()
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="044fcb55-0c5f-d88f-619c-455ffb8b2600.htm">undefined</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Refreshes the children of this treeNode's parent. Viz. this node and all of this nodes sibling nodes.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Method" src="../media/publicmethod.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="71e0c5d2-106c-a60d-e4db-a6a93328091d.htm">remove</a>
+                    </span>()
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="044fcb55-0c5f-d88f-619c-455ffb8b2600.htm">undefined</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Removes this node.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Method" src="../media/publicmethod.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="90fcbc46-851a-8507-f4b2-78fcc7adb111.htm">removeChildren</a>
+                    </span>()
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="044fcb55-0c5f-d88f-619c-455ffb8b2600.htm">undefined</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Removes all the child treeNode elements from this treeNode.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Method" src="../media/publicmethod.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="7082cf20-ae0a-5be5-6830-7555f8abdd30.htm">toggle</a>
+                    </span>()
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="044fcb55-0c5f-d88f-619c-455ffb8b2600.htm">undefined</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Toggles the node open or closed.  This only works if the node has children and will return without error if no children are present.
+									</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <a name="events"> </a>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(sectionToggleID0EAAAA)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(sectionToggleID0EAAAA, event)" tabindex="0">
+            <img id="sectionToggleID0EAAAA" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Events</span>
+        </h1>
+        <div id="sectionSectionID0EAAAA" class="section" name="collapseableSection" style="">
+          <div class="tableSection">
+            <table width="50%" cellspacing="2" cellpadding="5" frame="lhs">
+              <tr>
+                <th>
+                  <p />
+                </th>
+                <th>
+                  <p>Name</p>
+                </th>
+                <th>
+                  <p>Description</p>
+                </th>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Event" src="../media/publicevent.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="c2158aaf-b49d-a83e-fc19-48ea0726d30d.htm">onclose</a>
+                    </span>(<span sdata="link"><a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a></span>  e, <span sdata="link"><a href="c6d834b2-5b8e-e096-55cf-f1a02dbc88bf.htm">TreeView</a></span>  treeView, <span sdata="link"><a href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0.htm">DHTMLElement</a></span>  node, <span sdata="link"><a href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0.htm">DHTMLElement</a></span>  labelText, <span sdata="link"><a href="b4909cfa-da78-c794-ec3d-c84bc598274e.htm">TreeNode</a></span>  treeNode, <span sdata="link"><a href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0.htm">DHTMLElement</a></span>  parentNode)
+									</p>
+                </td>
+                <td>
+                  <p>
+										Occurs when a tree node is toggled closed to hide its child nodes.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Event" src="../media/publicevent.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="ff27f24b-e36c-d049-eaa2-26468dd29770.htm">ondrag</a>
+                    </span>(<span sdata="link"><a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a></span>  e, <span sdata="link"><a href="c6d834b2-5b8e-e096-55cf-f1a02dbc88bf.htm">TreeView</a></span>  treeView, <span sdata="link"><a href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0.htm">DHTMLElement</a></span>  node, <span sdata="link"><a href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0.htm">DHTMLElement</a></span>  labelText, <span sdata="link"><a href="b4909cfa-da78-c794-ec3d-c84bc598274e.htm">TreeNode</a></span>  treeNode, <span sdata="link"><a href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0.htm">DHTMLElement</a></span>  parentNode)
+									</p>
+                </td>
+                <td>
+                  <p>
+										Occurs when a node is being moved.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Event" src="../media/publicevent.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="36e27318-ee67-f4b3-0cd8-1b90d918efd9.htm">ondragover</a>
+                    </span>(<span sdata="link"><a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a></span>  e, <span sdata="link"><a href="c6d834b2-5b8e-e096-55cf-f1a02dbc88bf.htm">TreeView</a></span>  treeView, <span sdata="link"><a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a></span>  dragSource, <span sdata="link"><a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a></span>  dragTarget)
+									</p>
+                </td>
+                <td>
+                  <p>
+										Occurs when a node is being moved over another node.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Event" src="../media/publicevent.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="895984fc-8d2a-5fa0-60fc-3c4e9e53f3cf.htm">ondrop</a>
+                    </span>(<span sdata="link"><a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a></span>  e, <span sdata="link"><a href="c6d834b2-5b8e-e096-55cf-f1a02dbc88bf.htm">TreeView</a></span>  treeView, <span sdata="link"><a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a></span>  dragSource, <span sdata="link"><a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a></span>  dragTarget)
+									</p>
+                </td>
+                <td>
+                  <p>
+										Occurs when a node is being moved.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Event" src="../media/publicevent.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="df6be4b3-f7f5-3f4f-f20b-a9a208f19655.htm">onlabelclick</a>
+                    </span>(<span sdata="link"><a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a></span>  e, <span sdata="link"><a href="c6d834b2-5b8e-e096-55cf-f1a02dbc88bf.htm">TreeView</a></span>  treeView, <span sdata="link"><a href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0.htm">DHTMLElement</a></span>  node, <span sdata="link"><a href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0.htm">DHTMLElement</a></span>  labelText, <span sdata="link"><a href="b4909cfa-da78-c794-ec3d-c84bc598274e.htm">TreeNode</a></span>  treeNode, <span sdata="link"><a href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0.htm">DHTMLElement</a></span>  parentNode)
+									</p>
+                </td>
+                <td>
+                  <p>
+										Occurs when a tree node's label is clicked on.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Event" src="../media/publicevent.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="514e53ca-5c44-b9a4-8b7e-989c16914778.htm">onlabelcontextmenu</a>
+                    </span>(<span sdata="link"><a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a></span>  e, <span sdata="link"><a href="c6d834b2-5b8e-e096-55cf-f1a02dbc88bf.htm">TreeView</a></span>  treeView, <span sdata="link"><a href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0.htm">DHTMLElement</a></span>  node, <span sdata="link"><a href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0.htm">DHTMLElement</a></span>  labelText, <span sdata="link"><a href="b4909cfa-da78-c794-ec3d-c84bc598274e.htm">TreeNode</a></span>  treeNode, <span sdata="link"><a href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0.htm">DHTMLElement</a></span>  parentNode)
+									</p>
+                </td>
+                <td>
+                  <p>
+										Occurs when a tree node's label's context menu is triggered.   This usualy due to a right mouse button click (or Command+click for Mac users).
+<div class="alert"><table><tr><th><img src="../icons/alert_note.gif" title="Note" /> <b>Note</b></th></tr><tr><td><p>It is important you use the method e.preventDefault when subscribing to this event.   Failure to do so will cause the system's context menu to appear.</p></td></tr></table></div></p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Event" src="../media/publicevent.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="6099d4cb-b747-9410-a829-279c5aeb915a.htm">onlabeledit</a>
+                    </span>(<span sdata="link"><a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a></span>  e, <span sdata="link"><a href="c6d834b2-5b8e-e096-55cf-f1a02dbc88bf.htm">TreeView</a></span>  treeView, <span sdata="link"><a href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0.htm">DHTMLElement</a></span>  node, <span sdata="link"><a href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0.htm">DHTMLElement</a></span>  labelText, <span sdata="link"><a href="b4909cfa-da78-c794-ec3d-c84bc598274e.htm">TreeNode</a></span>  treeNode, <span sdata="link"><a href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0.htm">DHTMLElement</a></span>  parentNode)
+									</p>
+                </td>
+                <td>
+                  <p>
+										Not implemented.  Occurs when a tree node's label is being edited.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Event" src="../media/publicevent.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="34fc80b3-098f-4d08-9544-9c75a3325de5.htm">onlabelendedit</a>
+                    </span>(<span sdata="link"><a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a></span>  e, <span sdata="link"><a href="c6d834b2-5b8e-e096-55cf-f1a02dbc88bf.htm">TreeView</a></span>  treeView, <span sdata="link"><a href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0.htm">DHTMLElement</a></span>  node, <span sdata="link"><a href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0.htm">DHTMLElement</a></span>  labelText, <span sdata="link"><a href="b4909cfa-da78-c794-ec3d-c84bc598274e.htm">TreeNode</a></span>  treeNode, <span sdata="link"><a href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0.htm">DHTMLElement</a></span>  parentNode)
+									</p>
+                </td>
+                <td>
+                  <p>
+										Not implemented.  Occurs when a tree node's label is exiting edit mode.  treeView.preventDefault will prevent the exit from edit mode.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Event" src="../media/publicevent.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="fd80f073-d662-7fef-a977-b1715e871792.htm">onlabelkeydown</a>
+                    </span>(<span sdata="link"><a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a></span>  e, <span sdata="link"><a href="c6d834b2-5b8e-e096-55cf-f1a02dbc88bf.htm">TreeView</a></span>  treeView, <span sdata="link"><a href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0.htm">DHTMLElement</a></span>  node, <span sdata="link"><a href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0.htm">DHTMLElement</a></span>  labelText, <span sdata="link"><a href="b4909cfa-da78-c794-ec3d-c84bc598274e.htm">TreeNode</a></span>  treeNode, <span sdata="link"><a href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0.htm">DHTMLElement</a></span>  parentNode)
+									</p>
+                </td>
+                <td>
+                  <p>
+										Not implemented.  Occurs when a tree node's label's edit input keydownevent occurs.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Event" src="../media/publicevent.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="9e5fd564-56c5-9bc1-9756-2abdfebdadce.htm">onlabelkeypress</a>
+                    </span>(<span sdata="link"><a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a></span>  e, <span sdata="link"><a href="c6d834b2-5b8e-e096-55cf-f1a02dbc88bf.htm">TreeView</a></span>  treeView, <span sdata="link"><a href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0.htm">DHTMLElement</a></span>  node, <span sdata="link"><a href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0.htm">DHTMLElement</a></span>  labelText, <span sdata="link"><a href="b4909cfa-da78-c794-ec3d-c84bc598274e.htm">TreeNode</a></span>  treeNode, <span sdata="link"><a href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0.htm">DHTMLElement</a></span>  parentNode)
+									</p>
+                </td>
+                <td>
+                  <p>
+										Not implemented.  Occurs when a tree node's label's edit input keypress occurs.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Event" src="../media/publicevent.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="bfc5ce0b-6db6-266d-5162-fac9778d62ba.htm">onlabelkeyup</a>
+                    </span>(<span sdata="link"><a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a></span>  e, <span sdata="link"><a href="c6d834b2-5b8e-e096-55cf-f1a02dbc88bf.htm">TreeView</a></span>  treeView, <span sdata="link"><a href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0.htm">DHTMLElement</a></span>  node, <span sdata="link"><a href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0.htm">DHTMLElement</a></span>  labelText, <span sdata="link"><a href="b4909cfa-da78-c794-ec3d-c84bc598274e.htm">TreeNode</a></span>  treeNode, <span sdata="link"><a href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0.htm">DHTMLElement</a></span>  parentNode)
+									</p>
+                </td>
+                <td>
+                  <p>
+										Not implemented.  Occurs when a tree node's label's edit input keyup occurs.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Event" src="../media/publicevent.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="6a8dd573-6bca-0628-ed09-cced11ad3019.htm">onlabelstartedit</a>
+                    </span>(<span sdata="link"><a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a></span>  e, <span sdata="link"><a href="c6d834b2-5b8e-e096-55cf-f1a02dbc88bf.htm">TreeView</a></span>  treeView, <span sdata="link"><a href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0.htm">DHTMLElement</a></span>  node, <span sdata="link"><a href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0.htm">DHTMLElement</a></span>  labelText, <span sdata="link"><a href="b4909cfa-da78-c794-ec3d-c84bc598274e.htm">TreeNode</a></span>  treeNode, <span sdata="link"><a href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0.htm">DHTMLElement</a></span>  parentNode)
+									</p>
+                </td>
+                <td>
+                  <p>
+										Not implemented.  Occurs when a tree node's label is entering edit mode.  treeView.preventDefault will prevent entering edit mode.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Event" src="../media/publicevent.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="0282d62d-3e9e-f962-4765-301e444fc2da.htm">onopen</a>
+                    </span>(<span sdata="link"><a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a></span>  e, <span sdata="link"><a href="c6d834b2-5b8e-e096-55cf-f1a02dbc88bf.htm">TreeView</a></span>  treeView, <span sdata="link"><a href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0.htm">DHTMLElement</a></span>  node, <span sdata="link"><a href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0.htm">DHTMLElement</a></span>  labelText, <span sdata="link"><a href="b4909cfa-da78-c794-ec3d-c84bc598274e.htm">TreeNode</a></span>  treeNode, <span sdata="link"><a href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0.htm">DHTMLElement</a></span>  parentNode)
+									</p>
+                </td>
+                <td>
+                  <p>
+										Occurs when a tree node is toggled open to reveal its child nodes.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Event" src="../media/publicevent.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="4d99aa68-e8f7-eeed-da23-5c37b6bf2f35.htm">onrefresh</a>
+                    </span>(<span sdata="link"><a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a></span>  e, <span sdata="link"><a href="c6d834b2-5b8e-e096-55cf-f1a02dbc88bf.htm">TreeView</a></span>  treeView)
+									</p>
+                </td>
+                <td>
+                  <p>
+										Occurs when the tree is being reinitalized from the original parameters.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Event" src="../media/publicevent.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="0da03169-a563-2218-46b8-447a9cce7541.htm">onresize</a>
+                    </span>(<span sdata="link"><a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a></span>  e, <span sdata="link"><a href="c6d834b2-5b8e-e096-55cf-f1a02dbc88bf.htm">TreeView</a></span>  treeView, <span sdata="link"><a href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0.htm">DHTMLElement</a></span>  node, <span sdata="link"><a href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0.htm">DHTMLElement</a></span>  labelText, <span sdata="link"><a href="b4909cfa-da78-c794-ec3d-c84bc598274e.htm">TreeNode</a></span>  treeNode, <span sdata="link"><a href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0.htm">DHTMLElement</a></span>  parentNode)
+									</p>
+                </td>
+                <td>
+                  <p>
+										Occurs when the treeview is being resized.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Event" src="../media/publicevent.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="ba644875-cf05-ac4f-dc02-c001d6503db2.htm">onstartdrag</a>
+                    </span>(<span sdata="link"><a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a></span>  e, <span sdata="link"><a href="c6d834b2-5b8e-e096-55cf-f1a02dbc88bf.htm">TreeView</a></span>  treeView, <span sdata="link"><a href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0.htm">DHTMLElement</a></span>  node, <span sdata="link"><a href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0.htm">DHTMLElement</a></span>  labelText, <span sdata="link"><a href="b4909cfa-da78-c794-ec3d-c84bc598274e.htm">TreeNode</a></span>  treeNode, <span sdata="link"><a href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0.htm">DHTMLElement</a></span>  parentNode)
+									</p>
+                </td>
+                <td>
+                  <p>
+										Occurs when a node has been started to drag.
+									</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="alert">
+            <table>
+              <tr>
+                <th>
+                  <img src="../icons/alert_note.gif" title="Tip" /> <b>Tip</b></th>
+              </tr>
+              <tr>
+                <td>
+                  <p>There are two ways to add event listeners.</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <p>
+						1. You can attach to events as a parameter when you create the object.
+						<span id="cbc_9" x-lang="JavaScript" codeLanguage="JavaScript"><div class="highlight-title"><span class="highlight-copycode" onkeypress="javascript:CopyColorizedCodeCheckKey(this.parentNode, event);" tabindex="0" onmouseover="CopyCodeChangeIcon(this)" onmouseout="CopyCodeChangeIcon(this)" onclick="javascript:CopyColorizedCode(this.parentNode);"><img style="margin-right: 5px;" src="../icons/CopyCode.gif" />Copy</span>JavaScript</div><div class="code"><pre xml:space="preserve"><span class="highlight-keyword">var</span> foo = <span class="highlight-keyword">new</span> object({
+    event:<span class="highlight-keyword">function</span>(signature){
+        <span class="highlight-comment">/* event procedure */</span>
+    }
+});</pre></div></span>
+						2. Or you can add the event after the object has been instantiated.
+						<span id="cbc_10" x-lang="JavaScript" codeLanguage="JavaScript"><div class="highlight-title"><span class="highlight-copycode" onkeypress="javascript:CopyColorizedCodeCheckKey(this.parentNode, event);" tabindex="0" onmouseover="CopyCodeChangeIcon(this)" onmouseout="CopyCodeChangeIcon(this)" onclick="javascript:CopyColorizedCode(this.parentNode);"><img style="margin-right: 5px;" src="../icons/CopyCode.gif" />Copy</span>JavaScript</div><div class="code"><pre xml:space="preserve"><span class="highlight-keyword">var</span> foo = <span class="highlight-keyword">new</span> object();
+foo.addEventListener(<span class="highlight-literal">'event'</span>,<span class="highlight-keyword">function</span>(signature){
+    <span class="highlight-comment">/* event procedure */</span>
+}, <span class="highlight-keyword">false</span>);</pre></div></span></p>
+        </div>
+      </div>
+      <div id="footer">
+        <div class="footerLine">
+          <img width="100%" height="3px" src="../icons/footer.gif" alt="Footer image" title="Footer image" />
+        </div>
+        <A NAME="feedback"></A>
+        <span id="fb" class="feedbackcss"></span>
+        <p />Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:tonygermaneri%40gmail.com?Subject=Rendition E-Commerce Framework">Tony Germaneri</a><script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        var HT_mailLinkText = HT_mailLink.innerHTML;
+        HT_mailLink.href += ": " + document.title;
+        HT_mailLink.innerHTML = HT_mailLinkText;
+        </script><p />Copyright © Tony Germaneri 2011</div>
+    </div>
+  </body>
+</html>

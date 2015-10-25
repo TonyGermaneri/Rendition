@@ -1,0 +1,15 @@
+C:\Rendition\Plugins\Rendition.NullGatewayProvider\obj\Debug\ResolveAssemblyReference.cache
+C:\Rendition\Plugins\Rendition.NullGatewayProvider\bin\Debug\Rendition.NullGatewayProvider.dll
+C:\Rendition\Plugins\Rendition.NullGatewayProvider\bin\Debug\Rendition.NullGatewayProvider.pdb
+C:\Rendition\Plugins\Rendition.NullGatewayProvider\bin\Debug\Newtonsoft.Json.dll
+C:\Rendition\Plugins\Rendition.NullGatewayProvider\obj\Debug\Rendition.NullGatewayProvider.dll
+C:\Rendition\Plugins\Rendition.NullGatewayProvider\obj\Debug\Rendition.NullGatewayProvider.pdb
+C:\Users\Tony\3C5X8\Users\Tony\Documents\Projects\Rendition\Rendition\Plugins\Rendition.NullGatewayProvider\bin\Debug\Rendition.NullGatewayProvider.dll
+C:\Users\Tony\3C5X8\Users\Tony\Documents\Projects\Rendition\Rendition\Plugins\Rendition.NullGatewayProvider\bin\Debug\Rendition.NullGatewayProvider.pdb
+C:\Users\Tony\3C5X8\Users\Tony\Documents\Projects\Rendition\Rendition\Plugins\Rendition.NullGatewayProvider\bin\Debug\Rendition.Core.dll
+C:\Users\Tony\3C5X8\Users\Tony\Documents\Projects\Rendition\Rendition\Plugins\Rendition.NullGatewayProvider\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Tony\3C5X8\Users\Tony\Documents\Projects\Rendition\Rendition\Plugins\Rendition.NullGatewayProvider\bin\Debug\Rendition.Core.pdb
+C:\Users\Tony\3C5X8\Users\Tony\Documents\Projects\Rendition\Rendition\Plugins\Rendition.NullGatewayProvider\bin\Debug\Rendition.Core.xml
+C:\Users\Tony\3C5X8\Users\Tony\Documents\Projects\Rendition\Rendition\Plugins\Rendition.NullGatewayProvider\obj\Debug\Rendition.NullGatewayProvider.csprojResolveAssemblyReference.cache
+C:\Users\Tony\3C5X8\Users\Tony\Documents\Projects\Rendition\Rendition\Plugins\Rendition.NullGatewayProvider\obj\Debug\Rendition.NullGatewayProvider.dll
+C:\Users\Tony\3C5X8\Users\Tony\Documents\Projects\Rendition\Rendition\Plugins\Rendition.NullGatewayProvider\obj\Debug\Rendition.NullGatewayProvider.pdb

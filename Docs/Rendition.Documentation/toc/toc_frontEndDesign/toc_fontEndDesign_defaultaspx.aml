@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="9dbf21bf-bb58-4872-b6be-6b7e52dd47d0" revisionNumber="1">
+  <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <introduction>
+      <para>
+      How to create a basic web site using Rendition
+      E-Commerce library.
+      </para>
+      <para>
+      If you're not familar with editing ASP.NET Web Forms a great set of 
+      tutorials can be found at http://www.w3schools.com/aspnet/.
+      </para>
+      <para>
+      All examples use C#, HTML 5, jQuery 1.7 and CSS 3. 
+      A good understanding of ASP.NET Web Forms is a good idea before you
+      get started using Rendition.
+      </para>
+    </introduction>
+    <section address="Section1">
+      <title>default.aspx</title>
+      <content>
+        <para>Default.aspx is the default page that appears when a user visits
+        your site and does not define a document to view. (E.g.:http://www.mysite.com/)
+        </para>
+      </content>
+    </section>
+ 	<section address="Section2">
+      <title>@ commands</title>
+      <content>
+      	<para>
+      		The following commands take place at the very top of the page.
+      	</para>
+        <para>
+        	The following command defines this page's master page file.
+        	<code lang="none">
+        		&lt;%@ Page MasterPageFile=&quot;~/header.master&quot; Language=&quot;C#&quot; %&gt;
+        	</code>
+        	The next command includes a reference to Rendition.dll
+        	<code lang="none">
+        		&lt;%@ Import Namespace=&quot;Rendition&quot; %&gt;
+        	</code>
+        </para>
+      </content>
+    </section>
+	<section address="Section3">
+      <title>asp:ContentPlaceHolder and asp:Content Tags</title>
+      <content>
+        <para>
+        	The remainder of the page consists of &lt;asp:ContentPlaceHolder&gt;
+        	sections.  Content placed within the &lt;asp:ContentPlaceHolder&gt;
+        	section will be inserted into the master page file,
+        	header.master in this case, and then sent to the client's
+        	browser as default.aspx.  
+			<alert class="note">
+			  <para>Web Forms (.aspx files) are not required to have
+			  a master page file.</para>
+			</alert>
+        </para>
+        <para>
+        	Content you want to inject into the body section of the
+        	html document should be placed in the body &lt;asp:ContentPlaceHolder&gt;.
+        	For example:
+        	<code lang="none">
+&lt;asp:Content ID=&quot;body&quot; ContentPlaceHolderID=&quot;body&quot; Runat=&quot;Server&quot;&gt;
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut 
+    laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis
+    nisl ut aliquip ex ea commodo consequat.
+&lt;/asp:Content&gt;
+        	</code>
+        </para>
+        <para>
+        	You can inject code into any of the &lt;asp:ContentPlaceHolder&gt;s
+        	on the master page (header.master).  To select which &lt;asp:ContentPlaceHolder&gt;
+        	to inject into match the id attribute of the &lt;asp:ContentPlaceHolder&gt;
+        	with the attribute "ContentPlaceHolderID" in the &lt;asp:Content&gt; tag.
+        	For example, if you want to inject code into the "footer" section, you would type the following:
+        	<code lang="none">
+&lt;asp:Content ID=&quot;footer&quot; ContentPlaceHolderID=&quot;footer&quot; Runat=&quot;Server&quot;&gt;
+    Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat,
+    vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril 
+    delenit augue duis dolore te feugait nulla facilisi.
+&lt;/asp:Content&gt;
+        	</code>
+        </para>
+        <para>
+        
+<alert class="note">
+  <para>	You can create as many &lt;asp:ContentPlaceHolder&gt; and
+        	&lt;asp:Content&gt; as you want and the id's can be
+        	anything you dream up, these are just suggestions.</para>
+</alert>
+
+        </para>
+      </content>
+    </section>
+    <relatedTopics>
+    </relatedTopics>
+  </developerConceptualDocument>
+</topic>

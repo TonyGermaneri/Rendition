@@ -1,0 +1,2715 @@
+﻿<html xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+  <head>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8" />
+    <META NAME="save" CONTENT="history" />
+    <title>Admin Methods</title>
+    <meta name="Language" content="en-us" />
+    <meta name="System.Keywords" content="Admin class, methods" />
+    <meta name="Microsoft.Help.Id" content="Methods.T:Rendition.Admin" />
+    <meta name="Microsoft.Help.ContentType" content="Reference" />
+    <link rel="stylesheet" type="text/css" href="../styles/Presentation.css" />
+    <link rel="stylesheet" type="text/css" href="ms-help://Hx/HxRuntime/HxLink.css" />
+    <script type="text/javascript" src="../scripts/EventUtilities.js"> </script>
+    <script type="text/javascript" src="../scripts/SplitScreen.js"> </script>
+    <script type="text/javascript" src="../scripts/Dropdown.js"> </script>
+    <script type="text/javascript" src="../scripts/script_manifold.js"> </script>
+    <script type="text/javascript" src="../scripts/script_feedBack.js"> </script>
+    <script type="text/javascript" src="../scripts/CheckboxMenu.js"> </script>
+    <script type="text/javascript" src="../scripts/CommonUtilities.js"> </script>
+    <meta name="container" content="Rendition" />
+    <meta name="file" content="88f09829-ad7d-c894-0568-70ec0adadd7c" />
+    <meta name="guid" content="88f09829-ad7d-c894-0568-70ec0adadd7c" />
+    <xml>
+      <MSHelp:Attr Name="AssetID" Value="Methods.T:Rendition.Admin" />
+      <MSHelp:TOCTitle Title="Admin Methods" />
+      <MSHelp:RLTitle Title="Admin Methods (Rendition)" />
+      <MSHelp:Keyword Index="A" Term="Methods.T:Rendition.Admin" />
+      <MSHelp:Keyword Index="A" Term="frlrfRenditionAdminMethodsTopic" />
+      <MSHelp:Keyword Index="K" Term="Admin class, methods" />
+      <MSHelp:Attr Name="DevLang" Value="CSharp" />
+      <MSHelp:Attr Name="Locale" Value="en-us" />
+      <MSHelp:Attr Name="TopicType" Value="kbSyntax" />
+      <MSHelp:Attr Name="TopicType" Value="apiref" />
+      <MSHelp:Attr Name="AssemblyVersion" Value="0.2.0.0" />
+    </xml>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <input type="hidden" id="hiddenScrollOffset" />
+    <img id="collapseImage" style="display:none; height:0; width:0;" src="../icons/collapse_all.gif" alt="Collapse image" title="Collapse image" />
+    <img id="expandImage" style="display:none; height:0; width:0;" src="../icons/expand_all.gif" alt="Expand Image" title="Expand Image" />
+    <img id="collapseAllImage" style="display:none; height:0; width:0;" src="../icons/collapse_all.gif" />
+    <img id="expandAllImage" style="display:none; height:0; width:0;" src="../icons/expand_all.gif" />
+    <img id="dropDownImage" style="display:none; height:0; width:0;" src="../icons/dropdown.gif" />
+    <img id="dropDownHoverImage" style="display:none; height:0; width:0;" src="../icons/dropdownHover.gif" />
+    <img id="copyImage" style="display:none; height:0; width:0;" src="../icons/copycode.gif" alt="Copy image" title="Copy image" />
+    <img id="copyHoverImage" style="display:none; height:0; width:0;" src="../icons/copycodeHighlight.gif" alt="CopyHover image" title="CopyHover image" />
+    <div id="header">
+      <table id="topTable" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <span onclick="ExpandCollapseAll(toggleAllImage)" style="cursor:default;" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage, event)" tabindex="0">
+              <img ID="toggleAllImage" class="toggleAll" src="../icons/collapse_all.gif" /> <label id="collapseAllLabel" for="toggleAllImage" style="display: none;">Collapse All</label><label id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand All</label> </span>
+            <span>    </span>
+            <span id="devlangsDropdown" class="filter" tabindex="0">
+              <img id="devlangsDropdownImage" src="../icons/dropdown.gif" /> <label id="devlangsMenuAllLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: All </nobr></label><label id="devlangsMenuMultipleLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: Multiple </nobr></label><label id="devlangsMenuCSharpLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: C# </nobr></label><label id="devlangsMenuJavaScriptLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: JavaScript </nobr></label></span>
+            <span>    </span>
+            <span id="memberOptionsDropdown" class="filter" tabindex="0">
+              <img id="memberOptionsDropdownImage" src="../icons/dropdown.gif" /> <label id="memberOptionsMenuAllLabel" for="memberOptionsDropdownImage" style="display: none;"><nobr>Members: Show All </nobr></label><label id="memberOptionsMenuMultipleLabel" for="memberOptionsDropdownImage" style="display: none;"><nobr>Members: Filtered </nobr></label><label id="memberOptionsMenuProtectedLabel" for="memberOptionsDropdownImage" style="display: none;"><nobr>Members: Filtered </nobr></label><label id="memberOptionsMenuInheritedLabel" for="memberOptionsDropdownImage" style="display: none;"><nobr>Members: Filtered </nobr></label></span>
+          </td>
+        </tr>
+      </table>
+      <div id="devlangsMenu">
+        <input id="CSharpCheckbox" type="checkbox" data="CSharp,cs,'persist'" value="on" onClick="SetLanguage(this)" />
+        <label class="checkboxLabel" for="CSharpCheckbox">C#</label>
+        <br />
+        <input id="JavaScriptCheckbox" type="checkbox" data="JavaScript,cs,'persist'" value="on" onClick="SetLanguage(this)" />
+        <label class="checkboxLabel" for="JavaScriptCheckbox">JavaScript</label>
+        <br />
+      </div>
+      <div id="memberOptionsMenu">
+        <input id="ProtectedCheckbox" type="checkbox" data="Protected" value="on" onClick="SetMemberOptions(this, 'vis')" />
+        <label class="checkboxLabel" for="ProtectedCheckbox">Include Protected Members</label>
+        <br />
+        <input id="InheritedCheckbox" type="checkbox" data="Inherited" value="on" onClick="SetMemberOptions(this, 'decl')" />
+        <label class="checkboxLabel" for="InheritedCheckbox">Include Inherited Members</label>
+        <br />
+      </div>
+      <table id="bottomTable" cellpadding="0" cellspacing="0">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">Rendition E-Commerce Framework</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">Admin Methods</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td align="left">
+            <a href="3bde1bc7-34f7-d1fe-5c4c-73b14c554972.htm">Admin Class</a> <a href="#seeAlsoToggle" onclick="OpenSection(seeAlsoToggle)">See Also</a> <span id="headfeedbackarea" class="feedbackhead"><a href="javascript:SubmitFeedback('tonygermaneri@gmail.com','Rendition E-Commerce Framework','','','','%0\dYour%20feedback%20is%20used%20to%20improve%20the%20documentation%20and%20the%20product.%20Your%20e-mail%20address%20will%20not%20be%20used%20for%20any%20other%20purpose%20and%20is%20disposed%20of%20after%20the%20issue%20you%20report%20is%20resolved.%20%20While%20working%20to%20resolve%20the%20issue%20that%20you%20report,%20you%20may%20be%20contacted%20via%20e-mail%20to%20get%20further%20details%20or%20clarification%20on%20the%20feedback%20you%20sent.%20After%20the%20issue%20you%20report%20has%20been%20addressed,%20you%20may%20receive%20an%20e-mail%20to%20let%20you%20know%20that%20your%20feedback%20has%20been%20addressed.%0\A%0\d','Customer%20Feedback');">Send Feedback</a></span></td>
+        </tr>
+      </table>
+      <table id="gradientTable">
+        <tr>
+          <td class="nsrBottom" background="../icons/gradient.gif" />
+        </tr>
+      </table>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" />
+        <span style="color: DarkGray">
+          <p style="color: #dc143c; font-size: 8.5pt; font-weight: bold;">[This is preliminary documentation and is subject to change.]</p>
+        </span>
+        <p>The <a href="3bde1bc7-34f7-d1fe-5c4c-73b14c554972.htm">Admin</a> type exposes the following members.</p>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(methodTableToggle)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(methodTableToggle, event)" tabindex="0">
+            <img id="methodTableToggle" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Methods</span>
+        </h1>
+        <div id="methodTableSection" class="section" name="collapseableSection" style="">
+          <table id="memberList" class="members" frame="lhs" cellpadding="2">
+            <col width="10%" />
+            <tr>
+              <th class="iconColumn">
+               
+            </th>
+              <th class="nameColumn">Name</th>
+              <th class="descriptionColumn">Description</th>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="bdc1e578-c64e-c1bb-32b1-3c7b20e40644.htm">AddFlag</a>
+              </td>
+              <td>
+                <div class="summary">
+            Adds a flag.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="26635c00-8323-a52c-dafa-d556bb0dbcb8.htm">AddFlags</a>
+              </td>
+              <td>
+                <div class="summary">
+            Adds a flag to multile lines, shipments or orders.
+             line status change Ids
+            -11 = backordered/cancled line item qty
+            This uses the column "returnToStock" to determine now many qty to reduce from the order
+            and updates the inventory tables
+            -3 = allocate inventory
+            -5 = unallocate inventory
+            -2 = consume inventory
+            -4 = unconsume inventory *I don't know if this works, it should never be used anyway
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="b2f4e3cd-1990-2d1c-527c-cd0b38b4e7e0.htm">AddItemImage</a>
+              </td>
+              <td>
+                <div class="summary">
+            Adds an image from the specified path to the specified item.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="bed35a62-a72e-49d8-c468-96816fd03c7d.htm">AddMainScript</a>
+              </td>
+              <td>
+                <div class="summary">
+            Adds a script to the end of the main.js file for the public web site.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="2f2bf292-4f71-e19f-6ccc-d0e8a4fbd394.htm">AddToCart</a>
+              </td>
+              <td>
+                <div class="summary">
+            Wrapper for merchat add to cart.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="75af385d-d111-caa7-feb4-6108b06c0280.htm">AddUIScript</a>
+              </td>
+              <td>
+                <div class="summary">
+            Adds a script to the end of the Rendition.js file.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="ef49e371-f90f-6087-c7e4-5825ced9834e.htm">AddUserToConversation</a>
+              </td>
+              <td>
+                <div class="summary">
+            Adds a user Conversation.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="409440c1-e64e-3816-ba8b-f39d774ed993.htm">AllocateLines</a>
+              </td>
+              <td>
+                <div class="summary">
+            Allocates inventory for selected serialIds.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="20ff6767-b024-4631-66a0-9c671930682c.htm">AllocateOrders</a>
+              </td>
+              <td>
+                <div class="summary">
+            Allocates inventory for selected orderIds.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="341dcb78-9dd7-f6dd-38da-9dcc7640aad5.htm">ApplyImageTemplate</a>
+              </td>
+              <td>
+                <div class="summary">
+            Applies the imaging template.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="ebbea507-a394-40fc-92cc-fd9d4da71c56.htm">BackorderItems</a>
+              </td>
+              <td>
+                <div class="summary">
+            wrapper for merchant backorderItems.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="3232579b-ffe4-e0b7-c041-5cb02372320c.htm">BarChart</a>
+              </td>
+              <td>
+                <div class="summary">
+            Bar chart.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="09903dff-7017-0165-d479-fb0577404695.htm">BarCode</a>
+              </td>
+              <td>
+                <div class="summary">
+            Barcodes from http://www.codeproject.com/KB/graphics/BarcodeLibrary.aspx by Brad Barnhill
+            License: http://www.codeproject.com/info/cpol10.aspx GPL (*CPOL)
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="e7364649-06dd-1dcf-d1a1-a4b1a98c76f1.htm">CalculateShippingRate</a>
+              </td>
+              <td>
+                <div class="summary">
+            Calculates the shipping rate.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="68ca172c-2fcd-dab4-51a0-630900a74262.htm">CancelItems</a>
+              </td>
+              <td>
+                <div class="summary">
+            wrapper for merchant cancelItems.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="252cd8c7-d2d1-09ff-b6a1-095e81218320.htm">ClearSiteSectionCacheForId</a>
+              </td>
+              <td>
+                <div class="summary">
+            Clears the site section cache for an id.
+            </div>
+              </td>
+            </tr>
+            <tr data="private;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/privmethod.gif" alt="Private method" title="Private method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="718d00ee-4a80-4dff-6430-284d17a5262d.htm">CompileScript</a>
+              </td>
+              <td>
+                <div class="summary">
+            Compiles the script.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="609cf932-31d6-9c8e-596c-d1a935f30744.htm">ConsumeLines</a>
+              </td>
+              <td>
+                <div class="summary">
+            Sets inventory status to consumed by serialid.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="2b53c84a-8055-9bb4-1622-eb6aab4af94d.htm">CopyItemPropertiesToItems</a>
+              </td>
+              <td>
+                <div class="summary">
+            Copies the item Properties to items.
+            </div>
+              </td>
+            </tr>
+            <tr data="private;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/privmethod.gif" alt="Private method" title="Private method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="b5bef19a-f94d-4d65-d2e5-1804cca8c8c8.htm">CopyMenuDescendants</a>
+              </td>
+              <td>
+                <div class="summary">
+            Copies the menu descendants.  Used by pasteMenu.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="2afe7d08-5aa4-7638-418d-fafd7736ad97.htm">Cp</a>
+              </td>
+              <td>
+                <div class="summary">
+            Copies the specified file path sources.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="2197887d-fc87-89fe-03b4-5fb18238b55a.htm">Crop</a>
+              </td>
+              <td>
+                <div class="summary">
+            Crops the specified image.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="83560d24-a370-39b7-cb1f-c8a3505902c7.htm">Crud</a>
+              </td>
+              <td>
+                <div class="summary">
+            CRUD functions for grid database interaction.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="02681330-f440-29d8-0873-884b540f0e0d.htm">DataSet</a>
+              </td>
+              <td>
+                <div class="summary">
+            Auto pagination fuction for JS class Rendtion.UI.Grid
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="e9ca6791-2e10-f8ac-38d3-b68bd1ad8210.htm">DeleteCartItem</a>
+              </td>
+              <td>
+                <div class="summary">
+            wrapper for merchant deleteCartItem.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="743dda2d-0601-7040-c0f6-7f0940f808a4.htm">DeleteImage</a>
+              </td>
+              <td>
+                <div class="summary">
+            Deletes an item image.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="6c6fc39a-adf9-3e3d-2487-0c4e78a48f75.htm">DownloadFile</a>
+              </td>
+              <td>
+                <div class="summary">
+            Downloads the file.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="b1bd237d-600c-fcb7-92cc-0d93557f3a2f.htm">DuplicateItem</a>
+              </td>
+              <td>
+                <div class="summary">
+            Duplicates the specified item, creating a new item with a different number.
+            Images are not duplicated.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="http://msdn2.microsoft.com/en-us/library/bsc2ak47" target="_blank">Equals</a>
+              </td>
+              <td>
+                <div class="summary">
+                    Determines whether the specified <a href="http://msdn2.microsoft.com/en-us/library/e5kfa45b" target="_blank">Object</a> is equal to the current <a href="http://msdn2.microsoft.com/en-us/library/e5kfa45b" target="_blank">Object</a>.
+                </div> (Inherited from <a href="http://msdn2.microsoft.com/en-us/library/e5kfa45b" target="_blank">Object</a>.)</td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="e914d14d-f5c1-727c-13c9-03770f583e35.htm">ExecuteImageTemplate</a>
+              </td>
+              <td>
+                <div class="summary">
+            Executes the image template.  This is a reciprecol function.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="c84f7626-1671-b11c-c477-a806179baf28.htm">ExecuteScript</a>
+              </td>
+              <td>
+                <div class="summary">
+            Executes the script.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="c40ceda1-5c3e-d2f2-2955-64d7c4c1bedb.htm">ExportXmlTable</a>
+              </td>
+              <td>
+                <div class="summary">
+            Exports a XML table.
+            </div>
+              </td>
+            </tr>
+            <tr data="protected;inherited;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="http://msdn2.microsoft.com/en-us/library/4k87zsw7" target="_blank">Finalize</a>
+              </td>
+              <td>
+                <div class="summary">
+                    Allows an <a href="http://msdn2.microsoft.com/en-us/library/e5kfa45b" target="_blank">Object</a> to attempt to free resources and perform other cleanup operations before the <a href="http://msdn2.microsoft.com/en-us/library/e5kfa45b" target="_blank">Object</a> is reclaimed by garbage collection.
+                </div> (Inherited from <a href="http://msdn2.microsoft.com/en-us/library/e5kfa45b" target="_blank">Object</a>.)</td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="1b9766a7-21b2-14ad-aadc-4bbbc1b3f091.htm">GalleryCrop</a>
+              </td>
+              <td>
+                <div class="summary">
+            Gallery crop method.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="7072df29-2345-24c9-3a6d-eda39dfdd3b2.htm">GasGauge</a>
+              </td>
+              <td>
+                <div class="summary">
+            Gas gauge chart.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="f19d0c69-d360-ee5a-84c9-f3eb075815c1.htm">GetApplicationPath</a>
+              </td>
+              <td>
+                <div class="summary">
+            Gets the application path.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="19004ef5-c36c-8fa9-69d8-d132ea464e7b.htm">GetCategoryData</a>
+              </td>
+              <td>
+                <div class="summary">
+            Gets category data for built in category editor.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="5a8a8d81-f547-d540-325c-de677442aae9.htm">GetConversation</a>
+              </td>
+              <td>
+                <div class="summary">
+            Gets a Conversation.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="8d02f9d7-8d38-66e7-3542-ed941a758b4c.htm">GetFileText</a>
+              </td>
+              <td>
+                <div class="summary">
+            Gets the text of the file at the specified path.  As well as other information.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="6820f578-cf42-d7e2-7835-8ae242f0dd06.htm">GetFormInfo</a>
+              </td>
+              <td>
+                <div class="summary">
+            Gets the form info.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="6ec3d38a-b0c3-47d1-f4f8-84cad6703493.htm">GetGoogleChartQuery</a>
+              </td>
+              <td>
+                <div class="summary">
+            Gets the google chart query.  
+            Returns the format that google data table is expecting for direct interjection.
+            </div>
+              </td>
+            </tr>
+            <tr data="private;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/privmethod.gif" alt="Private method" title="Private method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="cc33bbba-2658-f654-9ca0-c41fb50bd716.htm">getGoogleDataType</a>
+              </td>
+              <td>
+                <div class="summary">
+            Gets the google data type string from the C# type.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="c6b0dc00-9b6a-1a78-9bbd-7fbd997e8841.htm">GetHash</a>
+              </td>
+              <td>
+                <div class="summary">
+            Generates a SHA1 hash value + salt from input string.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="http://msdn2.microsoft.com/en-us/library/zdee4b3y" target="_blank">GetHashCode</a>
+              </td>
+              <td>
+                <div class="summary">
+                    Serves as a hash function for a particular type. 
+                </div> (Inherited from <a href="http://msdn2.microsoft.com/en-us/library/e5kfa45b" target="_blank">Object</a>.)</td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="3d801201-0df5-3c91-eed4-599cdf81bf99.htm">GetImage</a>
+              </td>
+              <td>
+                <div class="summary">
+            Gets an image from a path and returns a Bitmap object from the image
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="703e6d70-5824-a1b4-09c8-349142751cdf.htm">GetImageStream</a>
+              </td>
+              <td>
+                <div class="summary">
+            Gets an image from a path and streams the content to the current HttpContext
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="06ddffe6-16ba-20d8-a15f-b8ff4dcb571a.htm">GetItem</a>
+              </td>
+              <td>
+                <div class="summary">
+            Gets most of the item's information formated for JSON.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="a20d8372-6b5b-82f0-df64-c385faf446e0.htm">GetItemImages</a>
+              </td>
+              <td>
+                <div class="summary">
+            Gets the item images for use in a backend application.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="f330c3ba-46b4-1102-018c-7e1fae00ee77.htm">GetLogicalDrives</a>
+              </td>
+              <td>
+                <div class="summary">
+            Gets the logical drives.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="47467102-6292-d1ac-44bc-dc155f04549e.htm">GetMessages</a>
+              </td>
+              <td>
+                <div class="summary">
+            Gets any system message for the current userId.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="9a72cd9e-4a07-83ee-b4cb-eda2cd6732ef.htm">GetMimeType</a>
+              </td>
+              <td>
+                <div class="summary">
+            Gets the type of the MIME.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="5e7a4939-0ac6-f949-764b-173ce5b4be73.htm">GetNewAccountNumber</a>
+              </td>
+              <td>
+                <div class="summary">
+            Gets a new account number.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="7a22871d-06aa-8e44-d064-a3b780dbb83e.htm">GetNextScannedOrderImage</a>
+              </td>
+              <td>
+                <div class="summary">
+            Gets the next scanned order image.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="5d2257d2-3332-763e-3a57-b76a4e4f0aee.htm">GetOrder</a>
+              </td>
+              <td>
+                <div class="summary">
+            Gets an order by order number.  Formated for JSON.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="3a83e713-a21c-c26d-60e2-a8d523010189.htm">GetOrdersTotal</a>
+              </td>
+              <td>
+                <div class="summary">
+            Gets aggregates from a list of orderIds.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="de25d5c1-9b53-631f-1805-ac654cd0e032.htm">GetPaymentsTotal</a>
+              </td>
+              <td>
+                <div class="summary">
+            Gets total amount remaning in a list of paymentMethodIds.
+            </div>
+              </td>
+            </tr>
+            <tr data="private;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/privmethod.gif" alt="Private method" title="Private method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="3eae459b-c00d-6fe6-6e1b-088f092713b5.htm">getSampleImage</a>
+              </td>
+              <td>
+                <div class="summary">
+            Gets the sample image provided by the user or a built in sample image.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="0d56ce37-ab8f-3733-bcca-fd699f630625.htm">GetSerial</a>
+              </td>
+              <td>
+                <div class="summary">
+            Gets an order by a serial number in the order.  Formated for JSON.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="e72ffcaf-e888-fc57-b0bc-52d86c5c390c.htm">GetShipment</a>
+              </td>
+              <td>
+                <div class="summary">
+            Gets an order by a shipment number in the order.  Formated for JSON.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="22726b05-8ecb-8cd6-7d2e-fab6835e21ca.htm">GetSqlArray</a>
+              </td>
+              <td>
+                <div class="summary">
+            Gets a SQL array.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="http://msdn2.microsoft.com/en-us/library/dfwy45w9" target="_blank">GetType</a>
+              </td>
+              <td>
+                <div class="summary">
+                    Gets the <a href="http://msdn2.microsoft.com/en-us/library/42892f65" target="_blank">Type</a> of the current instance.
+                </div> (Inherited from <a href="http://msdn2.microsoft.com/en-us/library/e5kfa45b" target="_blank">Object</a>.)</td>
+            </tr>
+            <tr data="private;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/privmethod.gif" alt="Private method" title="Private method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="d12c1256-fcd8-1a99-06e4-a69e3545f150.htm">GetWordCountCheckMatch</a>
+              </td>
+              <td>
+                <div class="summary">
+            Used in getWordCounts to scan substrings.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="7090abdc-f036-1194-63bf-d1b1f28c8074.htm">GetWordCounts</a>
+              </td>
+              <td>
+                <div class="summary">
+            Gets the number of occurances of a word in the system and returns a detailed result list.
+            This function scans:
+            Meta Descriptions
+            Meta Keywords
+            Page Titles
+            Menu Link Texts
+            Item Descriptions
+            Item Short Description
+            Item HTML
+            Site Section Name
+            Site Section Description
+            Site Section Entry
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="9e15996b-d1f9-e267-a6fe-f84a07dd1519.htm">GridSchemaUpdate</a>
+              </td>
+              <td>
+                <div class="summary">
+            updates the Grids schema for the current user.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="77fee57f-e9c0-f38f-27dc-8cd3d82c8b47.htm">Iis6Upload</a>
+              </td>
+              <td>
+                <div class="summary">
+            Handles file uploads, supplies a progress meter using class ProgressInfo.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="e4b9ae33-d8b7-e2c7-d70d-b0c7a508aa3b.htm">Iis7Upload</a>
+              </td>
+              <td>
+                <div class="summary">
+            Iis7s the upload.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="83aef256-d05e-441c-5b08-2992bd3746e9.htm">imageExceptionPicture</a>
+              </td>
+              <td>
+                <div class="summary">
+            Creates a 500 x 500 image of the exception.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="605e168c-b2f1-e04a-d2be-b156519b3409.htm">ImportCategories</a>
+              </td>
+              <td>
+                <div class="summary">
+            Imports one or more categories.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="76d4b257-77ec-e799-61e0-2f290b08285b.htm">ImportCategory</a>
+              </td>
+              <td>
+                <div class="summary">
+            Imports a category.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="f086f5fc-3619-3853-85c2-b1151c52ed2c.htm">ImportItem</a>
+              </td>
+              <td>
+                <div class="summary">
+            Imports an item.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="884a46a4-91b9-4fd7-89f8-f1159dec2034.htm">ImportItems</a>
+              </td>
+              <td>
+                <div class="summary">
+            Imports one or more items.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="70c728a6-16af-ed64-f118-153213830e05.htm">ImportProperties</a>
+              </td>
+              <td>
+                <div class="summary">
+            Imports item Properties (not implemented).
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="f27728ac-ceaf-442e-79f1-09a8fd0fc914.htm">ImportProperty</a>
+              </td>
+              <td>
+                <div class="summary">
+            Imports the item property.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="833b8781-f0ea-7095-9a83-b1ade7ec1765.htm">ImportRates</a>
+              </td>
+              <td>
+                <div class="summary">
+            Imports a rates table.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="d0c39949-bd22-0cc9-4d95-264c9869fb08.htm">ImportStatusChange</a>
+              </td>
+              <td>
+                <div class="summary">
+            Imports a status change.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="c38c9456-ffbc-63f1-2066-afc6c4aee699.htm">ImportStatusChanges</a>
+              </td>
+              <td>
+                <div class="summary">
+            Imports the status changes (not implemented).
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="cd7bae1b-54a6-fb89-aa0e-1e2608a7aea2.htm">ImportSurcharge</a>
+              </td>
+              <td>
+                <div class="summary">
+            Imports a surcharge table.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="8d3a02b4-f851-c0e3-012e-14a023668a47.htm">ImportUser</a>
+              </td>
+              <td>
+                <div class="summary">
+            Imports a user.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="b846e7e4-95fc-e649-a888-1a6d99bac33b.htm">ImportUsers</a>
+              </td>
+              <td>
+                <div class="summary">
+            Imports one or more users (not implemented).
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="9c8b6e8b-3fdb-eb65-45ba-61e27155fa41.htm">ImportWizard</a>
+              </td>
+              <td>
+                <div class="summary">
+            Parses CSV and XLS files for import.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="f16c1683-9e25-baa0-9677-0eed79d1fd11.htm">ImportZipToZone</a>
+              </td>
+              <td>
+                <div class="summary">
+            Imports a zip to zone table.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="03c699ca-ddcd-faa4-9255-80f743035ad7.htm">Init</a>
+              </td>
+              <td>
+                <div class="summary">
+            Inits values for the UI.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="886644a4-739d-6662-7cca-4a5e43be0b40.htm">InitScannedImage</a>
+              </td>
+              <td>
+                <div class="summary">
+            Starts using a scanned image for a quote.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="38744bf2-8fff-f34e-2594-6fcd0b8c02ff.htm">LineStatusChange</a>
+              </td>
+              <td>
+                <div class="summary">
+            Changes status of one or more serialIds.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="1f40a207-1b87-3fb5-f248-db858e2aad3f.htm">ListConversations</a>
+              </td>
+              <td>
+                <div class="summary">
+            Removes the user from a Conversation.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="5b361edb-62fb-14aa-7349-038e61a87d94.htm">LogOn</a>
+              </td>
+              <td>
+                <div class="summary">
+            wrapper for merchant logon.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="bd18efb9-93c7-f25c-adb4-0109671e60de.htm">Ls</a>
+              </td>
+              <td>
+                <div class="summary">
+            List the specified path.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="178c586a-8aa3-7794-e356-e0661827bd81.htm">LsRecursive</a>
+              </td>
+              <td>
+                <div class="summary">
+            List recursivly the specified path.
+            </div>
+              </td>
+            </tr>
+            <tr data="protected;inherited;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="http://msdn2.microsoft.com/en-us/library/57ctke0a" target="_blank">MemberwiseClone</a>
+              </td>
+              <td>
+                <div class="summary">
+                    Creates a shallow copy of the current <a href="http://msdn2.microsoft.com/en-us/library/e5kfa45b" target="_blank">Object</a>.
+                </div> (Inherited from <a href="http://msdn2.microsoft.com/en-us/library/e5kfa45b" target="_blank">Object</a>.)</td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="bd5bb23c-ce00-bdb2-a584-0ba230a96824.htm">MkDir</a>
+              </td>
+              <td>
+                <div class="summary">
+            creates the specified new dir path.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="4406d1b7-e332-bb57-46b8-5e7b84c53362.htm">OrderStatusChange</a>
+              </td>
+              <td>
+                <div class="summary">
+            Change the status of one or more orders.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="ee3396bf-8bcb-dcaa-6128-3b18b3e65f18.htm">OutputPNGMemoryStream</a>
+              </td>
+              <td>
+                <div class="summary">
+            Outputs a PNG memory stream to the browser.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="7048e721-2bc5-d622-d256-d5b6fd5f7128.htm">PasteMenu</a>
+              </td>
+              <td>
+                <div class="summary">
+            Copies a menu to a new menu and optionally includes the menu's children.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="fa04e6f6-9f0f-0f37-5d8c-060ccd0f14d1.htm">PayWithCash</a>
+              </td>
+              <td>
+                <div class="summary">
+            Pays with cash.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="e25219a6-598f-2d08-48a9-9cb4b956a043.htm">PayWithCheck</a>
+              </td>
+              <td>
+                <div class="summary">
+            Pays with check.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="96c48456-bafb-9fae-8c65-a7bf053555f8.htm">PayWithCreditCard</a>
+              </td>
+              <td>
+                <div class="summary">
+            Pays with credit card.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="50e7b60c-ed52-c0b4-47b0-a8ea7399aa76.htm">PayWithExistingPaymentMethods</a>
+              </td>
+              <td>
+                <div class="summary">
+            Pays with existing payment.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="723c8466-2677-9784-94b2-1ecaed3abd7e.htm">PayWithPayPal</a>
+              </td>
+              <td>
+                <div class="summary">
+            Pays with pay pal (not implemented).
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="a545e631-673e-ccf3-16e1-cc5ae05c4988.htm">PayWithWire</a>
+              </td>
+              <td>
+                <div class="summary">
+            Pays with wire.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="54480dd4-03ae-1db2-3ced-50755dfdf275.htm">PieChart</a>
+              </td>
+              <td>
+                <div class="summary">
+            Creates a pie chart from a JSON request.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="9129b82f-87d9-8938-0005-cb2ed2abfc1f.htm">PlaceOrder</a>
+              </td>
+              <td>
+                <div class="summary">
+            Wrapper for merchant.placeOrder.
+            </div>
+              </td>
+            </tr>
+            <tr data="private;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/privmethod.gif" alt="Private method" title="Private method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="03f8c5dc-f423-17b2-8196-d9ca1d135496.htm">populateGoogleRow</a>
+              </td>
+              <td>
+                <div class="summary">
+            Populates a google JSON row.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="c933a3eb-78de-7c31-6e66-aa857316d844.htm">PostJournalEntries</a>
+              </td>
+              <td>
+                <div class="summary">
+            Posts the journal entries.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="c1c79e5a-ade9-9577-0ba6-ff38d9a6fce5.htm">PostOrdersToGeneralLedger</a>
+              </td>
+              <td>
+                <div class="summary">
+            Posts the orders to general ledger. Wrapper for Commerce.postOrdersToGeneralLedger.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="aaab3709-6799-9b6b-3553-c138aab25366.htm">PostPaymentsToGeneralLedger</a>
+              </td>
+              <td>
+                <div class="summary">
+            Posts payments to general ledger.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="a4fdab0a-0850-a15e-ee42-88bbd7f442cf.htm">PreviewGalleryCropping</a>
+              </td>
+              <td>
+                <div class="summary">
+            Previews the gallery cropping.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="eeaac3dd-ea87-2227-0297-fda4d78d7be1.htm">PreviewRegexPattern</a>
+              </td>
+              <td>
+                <div class="summary">
+            Previews the regex pattern.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="54f777db-3b56-62de-c9a2-a2d890331ee5.htm">PreviewRewriteDirective</a>
+              </td>
+              <td>
+                <div class="summary">
+            Previews the rewrite directive.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="b8ece5bc-7a65-b528-0cbd-0010fc99791d.htm">PreviewScript</a>
+              </td>
+              <td>
+                <div class="summary">
+            Previews the script.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="d995a207-38d4-c115-b45e-8ff67b016992.htm">PreviewTaskScript</a>
+              </td>
+              <td>
+                <div class="summary">
+            Previews the task script.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="6fb8464e-cbe7-09dc-2f5f-df7d082dae5c.htm">PreviewTemplate</a>
+              </td>
+              <td>
+                <div class="summary">
+            Previews a template.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="85750630-e78b-c56e-c578-07b879168daa.htm">PreviewTemplateDetail</a>
+              </td>
+              <td>
+                <div class="summary">
+            Previews a single filter in a filter template.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="96908f39-10a5-b145-be20-b394d16c2bb9.htm">Print</a>
+              </td>
+              <td>
+                <div class="summary">
+            Prints the specified doc type.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="031e3c21-6744-ae52-e5de-a79fb24630f0.htm">PrintOrder</a>
+              </td>
+              <td>
+                <div class="summary">
+            Prints the order.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="b09c07ca-724a-b2db-a731-c383028701b8.htm">ProgressInfo</a>
+              </td>
+              <td>
+                <div class="summary">
+            gets progress info generated during file uploads using the upload class.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="079e5078-8d2e-cc48-1c53-bca2113ad0f2.htm">Recalculate</a>
+              </td>
+              <td>
+                <div class="summary">
+            Wrapper for merchant.reclaculate.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="192c99e9-4add-6c0c-65f4-a4a467490564.htm">RecalculateOrder</a>
+              </td>
+              <td>
+                <div class="summary">
+            Wrapper for merchant.recalculateOrder.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="66fa96a3-10d5-1cdb-1a21-72e171842ecf.htm">RecursiveCopy</a>
+              </td>
+              <td>
+                <div class="summary">
+            Recursively copy.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="4ed94289-2ad1-ff94-f38a-ac31c490b067.htm">RefreshAllItemImages</a>
+              </td>
+              <td>
+                <div class="summary">
+            Refreshes the item images.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="c73d9066-ebd3-a715-2b7c-57250a7d7d80.htm">RefreshBillOfMaterialsCache</a>
+              </td>
+              <td>
+                <div class="summary">
+            Refreshes the bill of materials cache.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="7bdfa1f2-8efb-e095-6804-8b85ebed520d.htm">RefreshCarriersCache</a>
+              </td>
+              <td>
+                <div class="summary">
+            Refreshes the Carriers cache.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="83858462-2d0b-c99d-48c5-f559ef81dddc.htm">RefreshCategoriesCache</a>
+              </td>
+              <td>
+                <div class="summary">
+            Refreshes the categories cache.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="1b915dae-6f2c-89d3-519a-4b09efc5371b.htm">RefreshCountriesCache</a>
+              </td>
+              <td>
+                <div class="summary">
+            Refreshes the countries cache.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="41687d11-21ec-0efa-e9c1-ced5832c0984.htm">RefreshDiscountsCache</a>
+              </td>
+              <td>
+                <div class="summary">
+            Refreshes the discounts cache.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="4a7d8a71-1aef-ba65-5751-2ad4d90e937c.htm">RefreshItemCache</a>
+              </td>
+              <td>
+                <div class="summary">
+            Refreshes the item cache for a single item number.  
+            This is not for adding new item, only refreshing exsiting items.
+            Use RefreshItemsCache to refresh the site cache after adding a new item to the database.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="b29af557-7466-6a9d-ee4e-0b61866b4ba2.htm">RefreshItemImages</a>
+              </td>
+              <td>
+                <div class="summary">
+            Refreshes the item images.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="94dda5ef-578c-8ced-68c9-53757e1837fd.htm">RefreshItemImagesCache</a>
+              </td>
+              <td>
+                <div class="summary">
+            Refreshes the item images cache.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="dd99361b-e443-d504-9cb0-4d2ea2e317bc.htm">RefreshItemsCache</a>
+              </td>
+              <td>
+                <div class="summary">
+            Refreshes the items cache.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="ef277876-c90a-1e87-2b76-574235d81645.htm">RefreshMenus</a>
+              </td>
+              <td>
+                <div class="summary">
+            Refreshes the menus.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="fb3d7736-741e-9dc9-3547-581b914a2ab4.htm">RefreshMenusCache</a>
+              </td>
+              <td>
+                <div class="summary">
+            Refreshes the menus cache.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="c34c736e-00d8-20ce-d03e-8bcaa5c7a060.htm">RefreshPropertiesCache</a>
+              </td>
+              <td>
+                <div class="summary">
+            Refreshes the Properties cache.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="418da679-759c-d02f-a9a1-e5d90cf25a18.htm">RefreshRatesCache</a>
+              </td>
+              <td>
+                <div class="summary">
+            Refreshes the rates cache.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="1175a7e5-3dfa-c728-d08e-5d4257f0fc31.htm">RefreshRedirectors</a>
+              </td>
+              <td>
+                <div class="summary">
+            Refreshes the redirectors.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="1f2c0f3b-10c2-8db4-097a-18b11286ab30.htm">RefreshRenderedImagesCache</a>
+              </td>
+              <td>
+                <div class="summary">
+            Refreshes the rendered images cache.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="780ebb8d-e98f-f274-faa3-6946e57d8f4f.htm">RefreshRepliesCache</a>
+              </td>
+              <td>
+                <div class="summary">
+            Refreshes the replies cache.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="9ed21f15-505f-78ef-e60a-d92321c59f42.htm">RefreshReviewsCache</a>
+              </td>
+              <td>
+                <div class="summary">
+            Refreshes the reviews cache.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="9186f5d0-a9ee-9515-f3e5-52e1de344772.htm">RefreshRewriteCache</a>
+              </td>
+              <td>
+                <div class="summary">
+            Refreshes the rewrite cache.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="03e5508e-aec2-d7f4-0496-b8ffb573e92b.htm">RefreshSiteData</a>
+              </td>
+              <td>
+                <div class="summary">
+            Refreshes the site data.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="d05a22c0-6691-d3cc-dc2d-0622ed8e6e06.htm">RefreshSiteImagePlaceholdersCache</a>
+              </td>
+              <td>
+                <div class="summary">
+            Refreshes the site image placeholders cache.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="958e0eac-43a1-b351-2cd5-8ef5f2849bf0.htm">RefreshSiteSectionsCache</a>
+              </td>
+              <td>
+                <div class="summary">
+            Refreshes the site sections cache.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="f5325714-c1e9-1364-801b-c553459f0da1.htm">RefreshThisImage</a>
+              </td>
+              <td>
+                <div class="summary">
+            Refreshes the item images.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="cfe1d5ce-a359-630b-52c2-779b08b30b90.htm">RefreshUserById</a>
+              </td>
+              <td>
+                <div class="summary">
+            Refreshes the cache for a single user.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="af400fc8-24b4-30cb-585a-42b9057b393d.htm">RefreshUsersCache</a>
+              </td>
+              <td>
+                <div class="summary">
+            Refreshes the users cache.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="a9f433e4-69a3-b28c-8dea-5ad78e68cc74.htm">RefreshZipToZonesCache</a>
+              </td>
+              <td>
+                <div class="summary">
+            Refreshes the zip to zones cache.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="8fd88ea2-21ff-e755-07b9-fd93b4f88a1a.htm">RefreshZonesCache</a>
+              </td>
+              <td>
+                <div class="summary">
+            Refreshes the zones cache.
+            </div>
+              </td>
+            </tr>
+            <tr data="private;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/privmethod.gif" alt="Private method" title="Private method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="ec14d529-a23b-b21d-61de-5bde7f5faf9d.htm">RemoveImplictSecurity</a>
+              </td>
+              <td>
+                <div class="summary">
+            Removes the implict security from a directory.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="1f658d0f-9153-db12-7fa5-b39146a9445c.htm">RemoveUserFromConversation</a>
+              </td>
+              <td>
+                <div class="summary">
+            Removes the user from a Conversation.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="642405a4-0191-48ce-a6da-675b567b8acf.htm">RenderImageGallery</a>
+              </td>
+              <td>
+                <div class="summary">
+            Renders the image gallery.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="80481cee-92b9-4311-fc8c-e3a9edd0deca.htm">RenderTemplateImages</a>
+              </td>
+              <td>
+                <div class="summary">
+            Renders the template images.  Updates an ProgressInfo matching progressInfoId parameter.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="1af151be-c419-4a4d-b09d-a295c0d50f0d.htm">ResizeHighQuality</a>
+              </td>
+              <td>
+                <div class="summary">
+            Resizes the image using the HighQualityBicubic interpolation method.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="158b35e9-79b6-2539-5c21-f69c54350318.htm">RestartWorkerProcess</a>
+              </td>
+              <td>
+                <div class="summary">
+            Restarts the worker process.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="869da882-72cc-55e3-99e1-c5c34e5b61cf.htm">ReturnScannedImage</a>
+              </td>
+              <td>
+                <div class="summary">
+            Returns the scanned image to the source repository.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="1f51b40c-39a5-ce51-e0d5-2ca9fdf8d182.htm">revokePlugin</a>
+              </td>
+              <td>
+                <div class="summary">
+            Revokes the plugin.
+            </div>
+              </td>
+            </tr>
+            <tr data="private;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/privmethod.gif" alt="Private method" title="Private method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="e8d92fc9-fff7-f305-eafa-878bdb3beaa2.htm">RewriteUrlString</a>
+              </td>
+              <td>
+                <div class="summary">
+            Rewrites the URL string.
+            This is a copy of renition.main.rewriteURL, rewritten to ouput a string[] CODE,CONTENTTYPE,URL
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="ea4b00f9-b1a4-ca0d-a230-f8af9bc80024.htm">Rm</a>
+              </td>
+              <td>
+                <div class="summary">
+            deletes the specified file paths.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="d32c4970-a135-97db-ac58-7d047f2fec37.htm">Rn</a>
+              </td>
+              <td>
+                <div class="summary">
+            Renames the specified file name.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="30975996-4484-e424-6b07-51cc98c88c1c.htm">SaveCategoryData</a>
+              </td>
+              <td>
+                <div class="summary">
+            Saves category data for built in category editor.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="477fac59-6d78-f7f8-8f1d-bdd79f1f5a71.htm">SaveFileText</a>
+              </td>
+              <td>
+                <div class="summary">
+            Saves text of a file at the specified path.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="b1e1841c-6f5b-3798-f1d9-32e1156c8d9c.htm">SetMessageRead</a>
+              </td>
+              <td>
+                <div class="summary">
+            Sets an internal email or system message as read.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="4de6464b-8eb5-dc4c-db43-f173765a4463.htm">SqlCommand</a>
+              </td>
+              <td>
+                <div class="summary">
+            SQL command.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="dbcb3149-fd8a-e569-e533-3ad2e7696380.htm">StartTelnetServer</a>
+              </td>
+              <td>
+                <div class="summary">
+            Starts the telnet logging server.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="7fbf297f-1d19-dfae-69e5-b3cc682b6555.htm">StoreScannedImage</a>
+              </td>
+              <td>
+                <div class="summary">
+            Stores the scanned image in the destination repository.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="812ec54a-eb19-f2c3-0ad5-02a8ffb28194.htm">SubmitConversationMessage</a>
+              </td>
+              <td>
+                <div class="summary">
+            Submits a Conversation message.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="dcf3ddf2-f274-02da-17f9-7ac2376682d6.htm">SystemInfo</a>
+              </td>
+              <td>
+                <div class="summary">
+            Return information about the system.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="57245fdc-1c00-b829-1fd9-95c383a74a44.htm">TicChart</a>
+              </td>
+              <td>
+                <div class="summary">
+            Creates a tic chart based on the query batch.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="http://msdn2.microsoft.com/en-us/library/7bxwbwt2" target="_blank">ToString</a>
+              </td>
+              <td>
+                <div class="summary">
+                    Returns a <a href="http://msdn2.microsoft.com/en-us/library/s1wwdcbf" target="_blank">String</a> that represents the current <a href="http://msdn2.microsoft.com/en-us/library/e5kfa45b" target="_blank">Object</a>.
+                </div> (Inherited from <a href="http://msdn2.microsoft.com/en-us/library/e5kfa45b" target="_blank">Object</a>.)</td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="05f01c45-aec7-4309-f08e-6e2b1848f753.htm">UnallocateLines</a>
+              </td>
+              <td>
+                <div class="summary">
+            Unallocates inventory for selected serialIds.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="f46b73a6-ee62-7e04-913c-7d634dc9f1ca.htm">UnallocateOrders</a>
+              </td>
+              <td>
+                <div class="summary">
+            Unallocates inventory for selected orderIds.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="e904a166-48bd-8806-a0b8-993445580e83.htm">UnconsumeLines</a>
+              </td>
+              <td>
+                <div class="summary">
+            Sets inventory status to unconsumed by serialid.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="0fa63fd2-c3e6-1348-ff55-a25423454bf7.htm">UpdateBlogOrder</a>
+              </td>
+              <td>
+                <div class="summary">
+            Updates the Blog order.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="40c23c6a-3d55-ede5-04c7-e9c419e4f458.htm">UpdateCartItem</a>
+              </td>
+              <td>
+                <div class="summary">
+            wrapper for merchant.updateCartItem.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="39d57a55-ed50-9f84-6d9a-c0d2c8070e60.htm">UpdateCategoryDetailOrder</a>
+              </td>
+              <td>
+                <div class="summary">
+            Updates the category detail order.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="370271a9-fffd-13be-3368-e1bc9ec23190.htm">UpdateGalleryOrder</a>
+              </td>
+              <td>
+                <div class="summary">
+            Updates the gallery order.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="58ce1676-67ca-6c54-caf0-d6e71b5f0afa.htm">UpdateMenuOrder</a>
+              </td>
+              <td>
+                <div class="summary">
+            Updates the menu order.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="7e70c3c2-2eef-67d3-249f-d91a2dcc645b.htm">UpdateOrderItem</a>
+              </td>
+              <td>
+                <div class="summary">
+            wrapper for merchant updateOrderItem.
+            </div>
+              </td>
+            </tr>
+            <tr data="private;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/privmethod.gif" alt="Private method" title="Private method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="7159e5c2-94d4-d68f-c7bc-fa58ac1b476d.htm">UpdateTotalWordCount</a>
+              </td>
+              <td>
+                <div class="summary">
+            Updates the total word count.  Used by getWordCounts.
+            </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(extensionMethodTableToggle)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(extensionMethodTableToggle, event)" tabindex="0">
+            <img id="extensionMethodTableToggle" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Extension Methods</span>
+        </h1>
+        <div id="extensionMethodTableSection" class="section" name="collapseableSection" style="">
+          <table id="memberList" class="members" frame="lhs" cellpadding="2">
+            <col width="10%" />
+            <tr>
+              <th class="iconColumn">
+               
+            </th>
+              <th class="nameColumn">Name</th>
+              <th class="descriptionColumn">Description</th>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="c3dfdeb0-8fbe-3682-180c-de86465155b8.htm">Debug(Int32)</a>
+              </td>
+              <td>Overloaded.  <div class="summary">
+            Sends information to the output.
+            </div> (Defined by <a href="6e103835-92f4-d89a-c40f-499670d44cb1.htm">Utilities</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="0a0e95f0-1b6c-e3e6-3971-0d5c05c0757a.htm">Debug(Int32, Boolean)</a>
+              </td>
+              <td>Overloaded.  <div class="summary">
+            Sends the object as a string to the debugging console (output,debug.log).
+            </div> (Defined by <a href="6e103835-92f4-d89a-c40f-499670d44cb1.htm">Utilities</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="76c7f58e-93a4-d371-eb25-acaa1dea1c9f.htm">JTokenToGeneric</a>
+              </td>
+              <td>
+                <div class="summary">
+            Turns JSON arrays and JSON objects into Lists and Dictionaries.
+            </div> (Defined by <a href="6e103835-92f4-d89a-c40f-499670d44cb1.htm">Utilities</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="6dfde86c-bcae-6b47-1b26-182797acc425.htm">ToJson</a>
+              </td>
+              <td>
+                <div class="summary">
+            Turns almost anything into a JSON string.
+            </div> (Defined by <a href="6e103835-92f4-d89a-c40f-499670d44cb1.htm">Utilities</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="e496b1ee-2770-a401-0768-1f7ef79840c5.htm">w<span class="languageSpecificText"><span class="cs">()</span><span class="cpp">()</span><span class="nu">()</span><span class="fs">()</span></span></a>
+              </td>
+              <td>Overloaded.  <div class="summary">
+            Wrapper for HttpContext.Current.Response.Write.
+            Writes a line to the current HTTP client.
+            </div> (Defined by <a href="6e103835-92f4-d89a-c40f-499670d44cb1.htm">Utilities</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="9d722eb5-5fb0-d0f7-b697-55252f38be67.htm">w(Boolean)</a>
+              </td>
+              <td>Overloaded.  <div class="summary">
+            Wrapper for HttpContext.Current.Response.Write.
+            Writes a line to the current HTTP client.
+            And optionaly flushes the response buffer to the HTTP client.
+            </div> (Defined by <a href="6e103835-92f4-d89a-c40f-499670d44cb1.htm">Utilities</a>.)</td>
+            </tr>
+          </table>
+        </div>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(seeAlsoToggle)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(seeAlsoToggle, event)" tabindex="0">
+            <img id="seeAlsoToggle" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />See Also</span>
+        </h1>
+        <div id="seeAlsoSection" class="section" name="collapseableSection" style="">
+          <div class="seeAlsoStyle">
+            <a href="3bde1bc7-34f7-d1fe-5c4c-73b14c554972.htm">Admin Class</a>
+          </div>
+          <div class="seeAlsoStyle">
+            <a href="d2b3a88c-9b91-9dc6-dac5-53431bc586b3.htm">Rendition Namespace</a>
+          </div>
+        </div>
+      </div>
+      <div id="footer">
+        <div class="footerLine">
+          <img width="100%" height="3px" src="../icons/footer.gif" alt="Footer image" title="Footer image" />
+        </div>
+        <A NAME="feedback"></A>
+        <span id="fb" class="feedbackcss"></span>
+        <p />Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:tonygermaneri%40gmail.com?Subject=Rendition E-Commerce Framework">Tony Germaneri</a><script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        var HT_mailLinkText = HT_mailLink.innerHTML;
+        HT_mailLink.href += ": " + document.title;
+        HT_mailLink.innerHTML = HT_mailLinkText;
+        </script><p />Copyright © Tony Germaneri 2011</div>
+    </div>
+  </body>
+</html>

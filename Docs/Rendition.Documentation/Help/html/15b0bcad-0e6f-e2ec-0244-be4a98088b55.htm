@@ -1,0 +1,867 @@
+﻿<html xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+  <head>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8" />
+    <META NAME="save" CONTENT="history" />
+    <title>Commerce.User Properties</title>
+    <meta name="Language" content="en-us" />
+    <meta name="System.Keywords" content="Commerce.User class, properties" />
+    <meta name="Microsoft.Help.Id" content="Properties.T:Rendition.Commerce.User" />
+    <meta name="Microsoft.Help.ContentType" content="Reference" />
+    <link rel="stylesheet" type="text/css" href="../styles/Presentation.css" />
+    <link rel="stylesheet" type="text/css" href="ms-help://Hx/HxRuntime/HxLink.css" />
+    <script type="text/javascript" src="../scripts/EventUtilities.js"> </script>
+    <script type="text/javascript" src="../scripts/SplitScreen.js"> </script>
+    <script type="text/javascript" src="../scripts/Dropdown.js"> </script>
+    <script type="text/javascript" src="../scripts/script_manifold.js"> </script>
+    <script type="text/javascript" src="../scripts/script_feedBack.js"> </script>
+    <script type="text/javascript" src="../scripts/CheckboxMenu.js"> </script>
+    <script type="text/javascript" src="../scripts/CommonUtilities.js"> </script>
+    <meta name="container" content="Rendition" />
+    <meta name="file" content="15b0bcad-0e6f-e2ec-0244-be4a98088b55" />
+    <meta name="guid" content="15b0bcad-0e6f-e2ec-0244-be4a98088b55" />
+    <xml>
+      <MSHelp:Attr Name="AssetID" Value="Properties.T:Rendition.Commerce.User" />
+      <MSHelp:TOCTitle Title="Commerce.User Properties" />
+      <MSHelp:RLTitle Title="Commerce.User Properties (Rendition)" />
+      <MSHelp:Keyword Index="A" Term="Properties.T:Rendition.Commerce.User" />
+      <MSHelp:Keyword Index="A" Term="frlrfRenditionCommerceUserPropertiesTopic" />
+      <MSHelp:Keyword Index="K" Term="Commerce.User class, properties" />
+      <MSHelp:Attr Name="DevLang" Value="CSharp" />
+      <MSHelp:Attr Name="Locale" Value="en-us" />
+      <MSHelp:Attr Name="TopicType" Value="kbSyntax" />
+      <MSHelp:Attr Name="TopicType" Value="apiref" />
+      <MSHelp:Attr Name="AssemblyVersion" Value="0.2.0.0" />
+    </xml>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <input type="hidden" id="hiddenScrollOffset" />
+    <img id="collapseImage" style="display:none; height:0; width:0;" src="../icons/collapse_all.gif" alt="Collapse image" title="Collapse image" />
+    <img id="expandImage" style="display:none; height:0; width:0;" src="../icons/expand_all.gif" alt="Expand Image" title="Expand Image" />
+    <img id="collapseAllImage" style="display:none; height:0; width:0;" src="../icons/collapse_all.gif" />
+    <img id="expandAllImage" style="display:none; height:0; width:0;" src="../icons/expand_all.gif" />
+    <img id="dropDownImage" style="display:none; height:0; width:0;" src="../icons/dropdown.gif" />
+    <img id="dropDownHoverImage" style="display:none; height:0; width:0;" src="../icons/dropdownHover.gif" />
+    <img id="copyImage" style="display:none; height:0; width:0;" src="../icons/copycode.gif" alt="Copy image" title="Copy image" />
+    <img id="copyHoverImage" style="display:none; height:0; width:0;" src="../icons/copycodeHighlight.gif" alt="CopyHover image" title="CopyHover image" />
+    <div id="header">
+      <table id="topTable" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <span onclick="ExpandCollapseAll(toggleAllImage)" style="cursor:default;" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage, event)" tabindex="0">
+              <img ID="toggleAllImage" class="toggleAll" src="../icons/collapse_all.gif" /> <label id="collapseAllLabel" for="toggleAllImage" style="display: none;">Collapse All</label><label id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand All</label> </span>
+            <span>    </span>
+            <span id="devlangsDropdown" class="filter" tabindex="0">
+              <img id="devlangsDropdownImage" src="../icons/dropdown.gif" /> <label id="devlangsMenuAllLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: All </nobr></label><label id="devlangsMenuMultipleLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: Multiple </nobr></label><label id="devlangsMenuCSharpLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: C# </nobr></label><label id="devlangsMenuJavaScriptLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: JavaScript </nobr></label></span>
+            <span>    </span>
+            <span id="memberOptionsDropdown" class="filter" tabindex="0">
+              <img id="memberOptionsDropdownImage" src="../icons/dropdown.gif" /> <label id="memberOptionsMenuAllLabel" for="memberOptionsDropdownImage" style="display: none;"><nobr>Members: Show All </nobr></label><label id="memberOptionsMenuMultipleLabel" for="memberOptionsDropdownImage" style="display: none;"><nobr>Members: Filtered </nobr></label><label id="memberOptionsMenuProtectedLabel" for="memberOptionsDropdownImage" style="display: none;"><nobr>Members: Filtered </nobr></label><label id="memberOptionsMenuInheritedLabel" for="memberOptionsDropdownImage" style="display: none;"><nobr>Members: Filtered </nobr></label></span>
+          </td>
+        </tr>
+      </table>
+      <div id="devlangsMenu">
+        <input id="CSharpCheckbox" type="checkbox" data="CSharp,cs,'persist'" value="on" onClick="SetLanguage(this)" />
+        <label class="checkboxLabel" for="CSharpCheckbox">C#</label>
+        <br />
+        <input id="JavaScriptCheckbox" type="checkbox" data="JavaScript,cs,'persist'" value="on" onClick="SetLanguage(this)" />
+        <label class="checkboxLabel" for="JavaScriptCheckbox">JavaScript</label>
+        <br />
+      </div>
+      <div id="memberOptionsMenu">
+        <input id="ProtectedCheckbox" type="checkbox" data="Protected" value="on" onClick="SetMemberOptions(this, 'vis')" />
+        <label class="checkboxLabel" for="ProtectedCheckbox">Include Protected Members</label>
+        <br />
+        <input id="InheritedCheckbox" type="checkbox" data="Inherited" value="on" onClick="SetMemberOptions(this, 'decl')" />
+        <label class="checkboxLabel" for="InheritedCheckbox">Include Inherited Members</label>
+        <br />
+      </div>
+      <table id="bottomTable" cellpadding="0" cellspacing="0">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">Rendition E-Commerce Framework</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">Commerce<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>User Properties</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td align="left">
+            <a href="a1345b39-4aea-e652-96eb-c3d7fea215f1.htm">Commerce<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>User Class</a> <a href="#seeAlsoToggle" onclick="OpenSection(seeAlsoToggle)">See Also</a> <span id="headfeedbackarea" class="feedbackhead"><a href="javascript:SubmitFeedback('tonygermaneri@gmail.com','Rendition E-Commerce Framework','','','','%0\dYour%20feedback%20is%20used%20to%20improve%20the%20documentation%20and%20the%20product.%20Your%20e-mail%20address%20will%20not%20be%20used%20for%20any%20other%20purpose%20and%20is%20disposed%20of%20after%20the%20issue%20you%20report%20is%20resolved.%20%20While%20working%20to%20resolve%20the%20issue%20that%20you%20report,%20you%20may%20be%20contacted%20via%20e-mail%20to%20get%20further%20details%20or%20clarification%20on%20the%20feedback%20you%20sent.%20After%20the%20issue%20you%20report%20has%20been%20addressed,%20you%20may%20receive%20an%20e-mail%20to%20let%20you%20know%20that%20your%20feedback%20has%20been%20addressed.%0\A%0\d','Customer%20Feedback');">Send Feedback</a></span></td>
+        </tr>
+      </table>
+      <table id="gradientTable">
+        <tr>
+          <td class="nsrBottom" background="../icons/gradient.gif" />
+        </tr>
+      </table>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" />
+        <span style="color: DarkGray">
+          <p style="color: #dc143c; font-size: 8.5pt; font-weight: bold;">[This is preliminary documentation and is subject to change.]</p>
+        </span>
+        <p>The <a href="a1345b39-4aea-e652-96eb-c3d7fea215f1.htm">Commerce<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>User</a> type exposes the following members.</p>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(propertyTableToggle)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(propertyTableToggle, event)" tabindex="0">
+            <img id="propertyTableToggle" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Properties</span>
+        </h1>
+        <div id="propertyTableSection" class="section" name="collapseableSection" style="">
+          <table id="memberList" class="members" frame="lhs" cellpadding="2">
+            <col width="10%" />
+            <tr>
+              <th class="iconColumn">
+               
+            </th>
+              <th class="nameColumn">Name</th>
+              <th class="descriptionColumn">Description</th>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="f890cd92-8c59-6d06-d8af-06ea7b147131.htm">AccountType</a>
+              </td>
+              <td>
+                <div class="summary">
+            Type of account 0 = AR, 1 = AP, 2 = operator.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="2a0a28f4-9e2d-9dc4-98d3-768154eac839.htm">Address1</a>
+              </td>
+              <td>
+                <div class="summary">
+            Address line 1.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="83877170-03bc-84f8-57c4-a7efd86a0623.htm">Address2</a>
+              </td>
+              <td>
+                <div class="summary">
+            Address line 2.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="7ae7ba8f-a40f-8e2e-9573-89855e829d9c.htm">Administrator</a>
+              </td>
+              <td>
+                <div class="summary">
+            Is this user an administrator?
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="3f760de6-11b8-c104-fa9c-904d817c28dc.htm">AdminScript</a>
+              </td>
+              <td>
+                <div class="summary">
+            Instead of the default Admin script use another Admin script.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="f8a36d1f-cfbc-2b43-6b74-79b1ebec8402.htm">All</a>
+              </td>
+              <td>
+                <div class="summary">
+            Gets all the users in the site.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="5186ef7d-60b2-ed58-dd0d-ffa012741195.htm">AllowPreorders</a>
+              </td>
+              <td>
+                <div class="summary">
+            Allow placing order on items that have no stock.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="dfd5720a-a95a-3966-ca70-e09fbdcd1499.htm">AssetAccount</a>
+              </td>
+              <td>
+                <div class="summary">
+            The asset account for this user.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="68e93f6f-7f2d-489f-f8ba-978f81391e91.htm">AutoFillOrderForm</a>
+              </td>
+              <td>
+                <div class="summary">
+            Use account defaults on new orders.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="0cde0a7f-092f-6e2f-c9f3-87424c00db64.htm">City</a>
+              </td>
+              <td>
+                <div class="summary">
+            City.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="d3fc52f3-7edb-d394-3134-1de43f9465ad.htm">Comments</a>
+              </td>
+              <td>
+                <div class="summary">
+            Coments about this user.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="1696e18d-7108-5cad-b946-c1318e964c3f.htm">CompanyEmail</a>
+              </td>
+              <td>
+                <div class="summary">
+            Company email.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="ca8e2da2-15cc-c510-847c-d0f03d4c2f9a.htm">Contact</a>
+              </td>
+              <td>
+                <div class="summary">
+            Contact name for this account.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="7ae2f05b-8869-9898-a9cc-6dc05aecb71a.htm">Contacts</a>
+              </td>
+              <td>
+                <div class="summary">
+            Gets the list of contacts for this user using a SQL query.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="157721e9-64a6-4315-68e7-8c2b64ad03d4.htm">Country</a>
+              </td>
+              <td>
+                <div class="summary">
+            Country.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="8c6774a6-13aa-333b-9f7f-2702b8698e72.htm">CreateDate</a>
+              </td>
+              <td>
+                <div class="summary">
+            The date this account was created.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="ee42b26c-a38b-131d-5cea-c1d4dc980ec2.htm">Credit</a>
+              </td>
+              <td>
+                <div class="summary">
+            How much non monitary credit this user has (not implemented).
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="57a2bbcd-b0d4-055c-aa6c-f6969f86b8eb.htm">CreditLimit</a>
+              </td>
+              <td>
+                <div class="summary">
+            The credit limit of this account (not implemented).
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="ad1af064-1701-fc5e-7abc-8f1bbb44b5f8.htm">Email</a>
+              </td>
+              <td>
+                <div class="summary">
+            The email Address of this user.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="9f30b12b-7510-4b9a-7a1b-2dfa6e5348bf.htm">EstLeadTime</a>
+              </td>
+              <td>
+                <div class="summary">
+            Default estimated lead time for new orders in this account.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="e169373e-52ae-6b8a-7024-598bc53a192c.htm">EstTransitTime</a>
+              </td>
+              <td>
+                <div class="summary">
+            Default estimated time in transit for orders in this account.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="cd871f44-c910-4e4c-050a-a24964758929.htm">Fax</a>
+              </td>
+              <td>
+                <div class="summary">
+            Fax.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="403f8212-474c-6461-147d-949b21060bfc.htm">FirstName</a>
+              </td>
+              <td>
+                <div class="summary">
+            First name.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="3e08e07b-ac9e-8cf9-4d2e-a1ed66bf4bc2.htm">Fob</a>
+              </td>
+              <td>
+                <div class="summary">
+            Freight on board defalut for this user.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="79c05c93-8c86-8937-a036-5e03b12a86a7.htm">Handle</a>
+              </td>
+              <td>
+                <div class="summary">
+            The account's name.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="9a9443bb-2623-72c1-8c2e-858bafb43cf5.htm">HomePhone</a>
+              </td>
+              <td>
+                <div class="summary">
+            Home phone.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="0a5737bf-f0c0-ae18-65bb-f8d6b4a45a6f.htm">Invoice</a>
+              </td>
+              <td>
+                <div class="summary">
+            Path to the custom invoice PDF.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="15d21317-c242-7370-e71c-1b70f40d475d.htm">LastName</a>
+              </td>
+              <td>
+                <div class="summary">
+            Last name.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="e3042620-6585-30d5-4441-57c2f3b8f008.htm">LastVisit</a>
+              </td>
+              <td>
+                <div class="summary">
+            The last time this user visited the site.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="6df1c746-0ab4-1b62-9cb4-ccd1372b7c69.htm">LoggedIn</a>
+              </td>
+              <td>
+                <div class="summary">
+            Is the user currently logged in (not implemented).
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="08a0f647-0ae1-877d-499e-9c75935b0050.htm">LogonRedirect</a>
+              </td>
+              <td>
+                <div class="summary">
+            When this user logs on, redirect to another location.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="2eb56d46-be99-9152-c5aa-c13f62c6d8a5.htm">NoTax</a>
+              </td>
+              <td>
+                <div class="summary">
+            Is this user exempt from taxation?
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="4d4a25f1-b502-20ac-aa1e-2cebdfc8914a.htm">PackingSlip</a>
+              </td>
+              <td>
+                <div class="summary">
+            Path to the custom packing slip PDF.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="d45901c6-36b5-3838-a943-9d711b3c4304.htm">Password</a>
+              </td>
+              <td>
+                <div class="summary">
+            The user's password.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="e2b9b500-fb40-3654-0217-c4f3a49ea73e.htm">PurchaseAccount</a>
+              </td>
+              <td>
+                <div class="summary">
+            The account number used by your vendor.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="4112a754-64ba-233a-80d3-df9d4253d96c.htm">Quota</a>
+              </td>
+              <td>
+                <div class="summary">
+            The quota that must be met (not implemented).
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="b7c70dcf-9589-88c5-39d4-dc5521cd2893.htm">QuotaComplete</a>
+              </td>
+              <td>
+                <div class="summary">
+            The quota is complete (not implemented).
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="15b1c1b4-2b46-61a6-ccb9-d3a52d336ce6.htm">QuotaWholesale</a>
+              </td>
+              <td>
+                <div class="summary">
+            The quota this user must meet to place an order (not implemented).
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="20939f6e-d102-cc29-1171-72c8ef8fa224.htm">Quote</a>
+              </td>
+              <td>
+                <div class="summary">
+            Path to the custom quote PDF.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="426044eb-8fb1-a9b4-5bc5-490e180ce165.htm">Rate</a>
+              </td>
+              <td>
+                <div class="summary">
+            The default rate id for new orders in this account.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="0a37fd45-bbd9-23d9-c944-cfa0e7beda4c.htm">RateId</a>
+              </td>
+              <td>
+                <div class="summary">
+            The default rate id for new orders in this account.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="07e9fd30-6dfe-fa38-58d9-1d141635901b.htm">SendShipmentUpdates</a>
+              </td>
+              <td>
+                <div class="summary">
+            Send shipment updates default for new orders in this account.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="a44a6e15-6ea4-8530-c8ef-1e9105e38338.htm">SessionId</a>
+              </td>
+              <td>
+                <div class="summary">
+            The last sessionId this user logged in with.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="38e2f009-0837-c671-a997-300258be3e0b.htm">State</a>
+              </td>
+              <td>
+                <div class="summary">
+            State.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="89df8f56-e621-d030-7d5d-6a93aca82e55.htm">Term</a>
+              </td>
+              <td>
+                <div class="summary">
+            Term this account uses by default.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="2a63bb52-58ad-2590-8adb-3c7dd62a798d.htm">TermId</a>
+              </td>
+              <td>
+                <div class="summary">
+            Term Id this account uses by default.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="d4bd8810-dec7-08d4-fd55-0449c9a399cc.htm">UIJson</a>
+              </td>
+              <td>
+                <div class="summary">
+            The script to run each time the UI inits
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="ff123dca-c683-f59d-ce12-a3052ce6c8b2.htm">UserId</a>
+              </td>
+              <td>
+                <div class="summary">
+            The user's account number/userId
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="fc841094-1838-1fb4-70a4-0597bca7f31c.htm">UserLevel</a>
+              </td>
+              <td>
+                <div class="summary">
+            The user's level.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="c0b97c24-7079-0582-e572-1bbe2df83b5e.htm">UsesTerms</a>
+              </td>
+              <td>
+                <div class="summary">
+            This account uses terms (not implemented).
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="a150b987-4185-968d-b56a-2bc906aaf934.htm">WholesaleDealer</a>
+              </td>
+              <td>
+                <div class="summary">
+            Does this user get wholesale price lists?
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="d3727641-dd90-4e4d-e419-cb40a213b97e.htm">WorkPhone</a>
+              </td>
+              <td>
+                <div class="summary">
+            Work phone.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="b849a7d4-deec-d9ba-f95c-ac8e2d54c073.htm">WouldLikEmail</a>
+              </td>
+              <td>
+                <div class="summary">
+            Does this user want to recieve ads in their email?
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="05dada06-ddf8-c868-a441-d8744923d4c3.htm">Www</a>
+              </td>
+              <td>
+                <div class="summary">
+            Web site.
+            </div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="63cfafce-2be0-fa54-b747-a56a4f6a86a6.htm">Zip</a>
+              </td>
+              <td>
+                <div class="summary">
+            Zip code.
+            </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(seeAlsoToggle)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(seeAlsoToggle, event)" tabindex="0">
+            <img id="seeAlsoToggle" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />See Also</span>
+        </h1>
+        <div id="seeAlsoSection" class="section" name="collapseableSection" style="">
+          <div class="seeAlsoStyle">
+            <a href="a1345b39-4aea-e652-96eb-c3d7fea215f1.htm">Commerce<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>User Class</a>
+          </div>
+          <div class="seeAlsoStyle">
+            <a href="d2b3a88c-9b91-9dc6-dac5-53431bc586b3.htm">Rendition Namespace</a>
+          </div>
+        </div>
+      </div>
+      <div id="footer">
+        <div class="footerLine">
+          <img width="100%" height="3px" src="../icons/footer.gif" alt="Footer image" title="Footer image" />
+        </div>
+        <A NAME="feedback"></A>
+        <span id="fb" class="feedbackcss"></span>
+        <p />Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:tonygermaneri%40gmail.com?Subject=Rendition E-Commerce Framework">Tony Germaneri</a><script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        var HT_mailLinkText = HT_mailLink.innerHTML;
+        HT_mailLink.href += ": " + document.title;
+        HT_mailLink.innerHTML = HT_mailLinkText;
+        </script><p />Copyright © Tony Germaneri 2011</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="2372a9d4-df81-0b58-1385-4892704140ca" revisionNumber="1" dataAlias="Rendition#Rendition.UI.gridUpdateURL">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction address="Intro">
+			Rendition#Rendition.UI.gridUpdateURL()
+			<para>This function should return the URL the grid class uses to update tables.The function's signature isFunction(objectName, data, overwrite, grid).The server side function should update the row in the table matchingthe [objectName] parameter where the primary key equals the [primaryKey] parameter.When the boolean value [overwrite] is true, the user has requested tooverwrite existings values even if the row has changed since last update (verCol mismatch).If the [overwrite] parameter is false, than the user does not want to overwriteany records that have changed on the server since the last update (verCol mismatch).When this occurs, error -1 should be returned in the gridUpdateCallback object.When the record is deleted and cannot be updated error -2 should be returned.For more information see the Rendition.UI.gridUpdateCallback function documentation.The result will be sent to the Rendition.UI.gridUpdateCallback procedure whichmust return a an object that looks like this:{error: &lt;Integer&gt;, description: &lt;String&gt;, primaryKey: &lt;String&gt;,verCol: &lt;Integer&gt; }.The default function calls the C# Rendition.admin.Crud method.</para>
+		</introduction>
+		<definitionTable>
+			
+			
+				<definedTerm>
+					<para>Member Of</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="6aa67830-fc7a-c3eb-719a-722fb4fb312e"/>
+					</para>
+				</definition>
+			
+			
+				<definedTerm>
+					<para>Type</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="ef3d2310-dfdb-431e-8330-0d339049abff"/>
+					</para>
+				</definition>
+			
+			
+				<definedTerm>
+					<para>Source</para>
+				</definedTerm>
+				<definition>
+					<para>
+						c:\Rendition\Rendition.Core\js\admin\UI\Init.js
+					</para>
+				</definition>
+			
+		</definitionTable>
+	</developerConceptualDocument>
+</topic>

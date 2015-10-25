@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="815c20c2-d9dd-4ee3-8070-b744f5664d1b" revisionNumber="1">
+  <developerHowToDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!--
+    <summary>
+      <para>Optional summary abstract</para>
+    </summary>
+    -->
+    <introduction>
+      <para>This section will guide you through the setup process explaining
+      each step and field in detail. 
+      </para>
+       <para>
+      The setup procedure is sutable for anyone who...
+      	<list class="bullet">
+			<listItem>... is running their own IIS server or virtual server.</listItem>
+			<listItem>... can access their server via a VPN.</listItem>
+			<listItem>... who knows they can access IIS metabase direcotry 
+			services, SQL server and remote or physical access to your web 
+			site's home directory.</listItem>
+			<listItem>... who can pass the authentication process in step 2.</listItem>
+		</list>
+      
+      You will need the following componets to install Rendition.   
+      You can download Rendition from www.antidote12.com.
+     </para>
+		<list class="bullet">
+			<listItem>Rendition setup.</listItem>
+			<listItem>Microsoft Windows 2003 Server.</listItem>
+			<listItem>Internet Information Services 6.</listItem>
+			<listItem>Microsoft .NET Framework 4.</listItem>
+			<listItem>Microsoft SQL Server 2008.</listItem>
+		</list>
+		<para>The following information is absolutely required to install
+		Rendition.  If any of this information is missing, talk to the
+		person responsible for running your IIS, SQL, or upload directory.
+		 *WARNING!  Setup   will overwrite your database totally deleting everything in it so make sure
+	  you don't overwrite a database you want to keep.
+	  </para>
+		<list class="bullet">
+			<listItem>Account for SQL Server that can create databases.</listItem>
+			<listItem>Account for Win2k3 server that can create IIS Websites via Directory Services.</listItem>
+			<listItem>Account that can upload to FTP, UNC or local path to the web site's home directory.</listItem>
+			<listItem>FQDN (Fully Qualified Domain Name) URL to your web site (e.g.: www.mySite.com)</listItem>
+		</list>
+		<para>Optionally you can also have on hand.</para>
+		<list class="bullet">
+			<listItem>Friendly Site Name (e.g.: My Site).</listItem>
+			<listItem>Local Zip code (if you're shipping).</listItem>
+			<listItem>Your company email address.</listItem>
+		</list>
+		<para>If you plan on using the email services of Rendition you
+		will need to provide information for your mail (SMTP) server.</para>
+		<list class="bullet">
+			<listItem>Email server IP/Host name.</listItem>
+			<listItem>Does the email server require authentication?</listItem>
+			<listItem>User name.</listItem>
+			<listItem>Password.</listItem>
+			<listItem>Port (usualy 25).</listItem>
+		</list>
+		<para>When you are satisfied you have all the required information
+		and you system meets the requesites then proceed to step 1,
+		And get ready to have your ass rocked to its core!</para>
+    </introduction>
+    <!-- Optional procedures followed by optional code example but must have
+         at least one procedure or code example -->
+    <procedure>
+      <title>Installing Rendition For the First Time</title>
+      <steps class="ordered">
+        <step>
+          <content>
+            <para>Run setup and read the introduction then click next.</para>
+          </content>
+        </step>
+        <step>
+          <content>
+            <para>Fill in all the fields.  Or stare in abject horror. 
+            Setup will not allow you to proceede
+            to step 3 until you have authenticated with SQL, IIS and the
+            directory server.  You can see the status of each of these
+            authentications at the bottom of the setup dialog in step 2.
+            Below is an explanation of each field.</para>
+            <table>
+				  <tableHeader>
+				    <row>
+				      <entry>Web Server Details Field</entry>
+				      <entry>Description</entry>
+				    </row>
+				  </tableHeader>
+				  <row>
+				    <entry>Site Name</entry>
+				    <entry>This is how your web site will appear in the
+				    IIS Managment console.  This is also the name
+				    setup will give the new web site in the IIS meta base.</entry>
+				  </row>
+				  <row>
+				    <entry>Host Header</entry>
+				    <entry>This should be the value you type in to go to your
+				    web site without the HTTP://.  For example:
+				    www.mysite.com.  You can leave the www off, setup
+				    will add host header entries for www and your
+				    root domain name (www.FQDN.TLD and FQDN.TLD)</entry>
+				  </row>
+				  <row>
+				    <entry>IIS Server IP</entry>
+				    <entry>This is the IP address of your IIS server.
+				    Setup will use Directory Services to communicate
+				    with your IIS server, so its important that
+				    this can occur.  Some servers have this port blocked
+				    so you'll have to unblock it somehow or use 
+				    the manual or web setup procedures.</entry>
+				  </row>
+				  <row>
+				    <entry>Master Password</entry>
+				    <entry>This is the password assigned
+				    to the built in administrator account
+				    during installation.  You'll use this
+				    password to logon after installation is
+				    complete.</entry>
+				  </row>
+				   <row>
+				    <entry>User Name</entry>
+				    <entry>User who can create web sites via Directory Services.</entry>
+				  </row>
+				   <row>
+				    <entry>Domain</entry>
+				    <entry>Security domain of the user.  *Not all IIS servers require this field</entry>
+				  </row>
+				  <row>
+				    <entry>Password</entry>
+				    <entry>Password of the user.</entry>
+				  </row>
+				   <row>
+				    <entry>Home Directory</entry>
+				    <entry>Directory where the website resides.
+				    Usually c:\inetpub\yourAccountName\ or c:\inetpub\www.mysite.com\
+				    this depends on your service provider.  If you have your own
+				    IIS server, you'll need to make a place on your server
+				    where you can access it via UNC shares, mapped drive or FTP.
+				    You'll define this remote connection in the 
+				    very next field "Directory/FTP".
+				    </entry>
+				  </row>
+				</table>
+				<table>
+				  <tableHeader>
+				    <row>
+				      <entry>Upload Directory Field</entry>
+				      <entry>Description</entry>
+				    </row>
+				  </tableHeader>
+				  <row>
+				    <entry>Directory / FTP </entry>
+				    <entry>This is the location of your web site's home directory.
+				    This will be how you usually access it.  If you usually
+				    use FTP, enter the FTP IP/Host name in this field.
+				    Don't forget to put FTP:// if you're using FTP.
+				    If you are connecting via UNC, mapped drive or local
+				    just type the path to your web site.  If the directory
+				    does not exist setup will offer to create one.</entry>
+				  </row>
+				  <row>
+				    <entry>User Name</entry>
+				    <entry>User who can copy files into the Directory/FTP.</entry>
+				  </row>
+				  <row>
+				    <entry>Password</entry>
+				    <entry>Password of the user.</entry>
+				  </row>
+				   <row>
+				    <entry>Domain</entry>
+				    <entry>Security domain of the user.  *Not all FTP servers require this field</entry>
+				  </row>
+				 </table>
+				 <table>
+				  <tableHeader>
+				    <row>
+				      <entry>SQL Server Details Field</entry>
+				      <entry>Description</entry>
+				    </row>
+				  </tableHeader>
+				  <row>
+				    <entry>SQL Server IP </entry>
+				    <entry>This is the location of your SQL server.
+				    Some servers have the SQL server port blocked.
+				    You'll have to figure out how to unblock it or
+				    use the manual or web setup procedures.</entry>
+				  </row>
+				  <row>
+				    <entry>User Name</entry>
+				    <entry>User who can copy files into the Directory/FTP.</entry>
+				  </row>
+				  <row>
+				    <entry>Password</entry>
+				    <entry>Password of the user.</entry>
+				  </row>
+				   <row>
+				    <entry>Domain</entry>
+				    <entry>Security domain of the user.  *Not all FTP servers require this field</entry>
+				  </row>
+				   <row>
+				    <entry>Database</entry>
+				    <entry>Name of the database you want to create or overwrite.  *WARNING!  Setup
+				    will overwrite your database totally deleting everything in it so make sure
+				    you don't overwrite anything you want to keep.</entry>
+				  </row>
+				</table>
+				<para>If setup fails to athenticate you will remain on step 2 and god will kill a kitten.
+				So make sure you get all the fields filled in correctly the first time.</para>
+          </content>
+        </step>
+        <step>
+          <content>
+            <para>Click the next button.  If setup successfully authenticates you can proceede to step 3.</para>
+          </content>
+        </step>
+      </steps>
+      <!-- <conclusion>Optional conclusion</conclusion> -->
+    </procedure>
+    <!-- <codeExample>Optional code example</codeExample> -->
+    <!-- <buildInstructions>Optional instructions for building a
+         code example.</buildInstructions> -->
+    <!-- <robustProgramming>Optional discussion of error handling and other
+         issues related to writing solid code.</robustProgramming> -->
+    <!-- <security>Optional discussion of security issues.</security> -->
+    <relatedTopics>
+      <!-- One or more of the following:
+           - A local link
+           - An external link
+           - A code entity reference
+
+      <link xlink:href="Other Topic's ID">Link text</link>
+      <externalLink>
+          <linkText>Link text</linkText>
+          <linkAlternateText>Optional alternate link text</linkAlternateText>
+          <linkUri>URI</linkUri>
+      </externalLink>
+      <codeEntityReference>API member ID</codeEntityReference>
+
+      Examples:
+
+      <link xlink:href="00e97994-e9e6-46e0-b420-5be86b2f8278">Some other topic</link>
+
+      <externalLink>
+          <linkText>SHFB on CodePlex</linkText>
+          <linkAlternateText>Go to CodePlex</linkAlternateText>
+          <linkUri>http://shfb.codeplex.com</linkUri>
+      </externalLink>
+
+      <codeEntityReference>T:TestDoc.TestClass</codeEntityReference>
+      <codeEntityReference>P:TestDoc.TestClass.SomeProperty</codeEntityReference>
+      <codeEntityReference>M:TestDoc.TestClass.#ctor</codeEntityReference>
+      <codeEntityReference>M:TestDoc.TestClass.#ctor(System.String,System.Int32)</codeEntityReference>
+      <codeEntityReference>M:TestDoc.TestClass.ToString</codeEntityReference>
+      <codeEntityReference>M:TestDoc.TestClass.FirstMethod</codeEntityReference>
+      <codeEntityReference>M:TestDoc.TestClass.SecondMethod(System.Int32,System.String)</codeEntityReference>
+      -->
+    </relatedTopics>
+  </developerHowToDocument>
+</topic>

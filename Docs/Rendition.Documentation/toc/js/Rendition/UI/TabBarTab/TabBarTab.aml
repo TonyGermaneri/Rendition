@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<topic id="c3a7e221-c590-1249-dbbc-f9d5507a8365" revisionNumber="1" dataAlias="Rendition.UI.TabBarTab">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction address="Intro">
+			Class Rendition.UI.TabBarTab
+			<para>The <link xlink:href="c3a7e221-c590-1249-dbbc-f9d5507a8365"/> is used with the <link xlink:href="889dd046-9a0f-5ce0-7b0e-20041ca87b95"/>class.  A <link xlink:href="889dd046-9a0f-5ce0-7b0e-20041ca87b95"/> is made up of an array of <link xlink:href="c3a7e221-c590-1249-dbbc-f9d5507a8365"/> objects defined before the <link xlink:href="889dd046-9a0f-5ce0-7b0e-20041ca87b95"/>is instantiated.  Each tab is a seperate DHTML DIV element whose position is controlled  by the<link xlink:href="889dd046-9a0f-5ce0-7b0e-20041ca87b95"/>.  When a tab is depressed any initialized tab'sDHTML content DIV elements, which will henceforth be referred to as content, are moved to top:-10000px, left:-10000px making them invisible to the user while still keeping them in the layout.  The active tab, if not already initialized, will then be initialized by having its onload event fired and the content area created. If the tab has previously been initialized (clicked on before) the <legacyItalic>onload event will still fire</legacyItalic>, but the content DHTML DIV element will not be recreated, any children in the content will still be in the content when it is activated. This is important if you have DHTML elements that are being generated and placed into thecontent using the onload function.  If you don't remember that the children are still in the contentyou might duplicate the child elements.  A good way to avoid this is by clearing out thecontent each time the onload event fires via content.innerHTML = ''.<alert type="note">The content area is not cleared automatically because you may want to keep the result of a longrunning function in the content between tab refreshes, allowing the user to refresh the data.It also leaves the data in the content available for other functions even when the tab is not active.</alert><alert type="note">The tab must be active a least once for the content DHTML element of thattab to be created.</alert></para>
+		</introduction>
+		<para>
+			<definitionTable>
+				
+				
+					<definedTerm>
+						<para>Member Of</para>
+					</definedTerm>
+					<definition>
+						<para>
+							<link xlink:href="ddee8d40-d92d-34d0-2be3-5f5d65f36f31"/>
+						</para>
+					</definition>
+				
+				
+					<definedTerm>
+						<para>Source</para>
+					</definedTerm>
+					<definition>
+						<para>
+							c:\Rendition\Rendition.Core\js\admin\UI\tabBarTab.js
+						</para>
+					</definition>
+				
+			</definitionTable>
+		</para>
+	<!-- ============================== Examples ========================== -->	
+		
+			<section address="examples">
+				<title>Examples</title>
+				<sections>
+					
+						<section>
+							<title>
+								
+									 Create a list of tabs. 
+
+								
+							</title>
+							<content>
+								<para>
+									<code language="javascript">
+// Create a dialog //
+var foo = Rendition.UI.Dialog();
+// Create an array to hold the tabs //
+var options = [];
+// Create a tab and add it to the array //
+	options.push(new Rendition.UI.TabBarTab({
+	title: 'Lorem ipsum',
+	load: function (tab, tabBar, content) {
+		content.innerHTML = 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut '+
+		'laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis '+
+		'nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, '+
+		'vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim.';
+	}
+}));
+// Create another tab and add it to the array //
+options.push(new Rendition.UI.TabBarTab({
+	title: 'Nam liber',
+	load: function (tab, tabBar, content) {
+		content.innerHTML = 'Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming '+
+		'id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. '+
+		'Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur '+
+		'mutationem consuetudium lectorum.';
+	}
+}));
+// Create the tab bar and bind it to the dialog //
+var bar = Rendition.UI.TabBar({
+	tabs: options,
+	activeTabIndex: 0,
+	parentNode: foo.content
+});</code>
+								</para>
+							</content>
+						</section>
+					
+				</sections>
+			</section>
+		
+	<!-- ============================== parameters ========================== -->
+		
+	<!-- ============================== fields ========================== -->
+		
+			<section address="fields">
+				<title>Properties</title>
+				<content>
+					<table>
+						<tableHeader>
+							<row>
+								<entry><para> </para></entry>
+								<entry><para>Name</para></entry>
+								<entry><para>Type</para></entry>
+								<entry><para>Description</para></entry>
+							</row>
+						</tableHeader>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="e7a76f2a-fd8f-d9db-56ae-88dcd6a00cbb"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										unique id of this object.  Assigned automatcilly in this reg format /uid_UUID/
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="5e8c2c8e-a707-589a-349e-af601e496eb8"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="36802977-faa0-b394-beea-eebbbc3b2d5a"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The index of this tabBarTab in Rendition.UI.tabBarTabs array.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="5b14eab0-8017-c9ab-0506-0334eefc1946"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The current style.  An instance of <link xlink:href="c3a7e221-c590-1249-dbbc-f9d5507a8365"/>.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="ea6be5c5-bf07-4f27-b71b-fbb771a75a0a"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The title of the tab.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicproperty"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="73d3f8c0-f307-aedf-9c17-d1770d3fa740"/>
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										The type of object.  returns 'RenditionTabBarTab'
+									</para>
+								</entry>
+							</row>
+						
+					</table>
+				</content>
+			</section>
+		
+	<!-- ============================== methods ========================= -->
+		
+			<section address="methods">
+				<title>Methods</title>
+				<content>
+					<table>
+						<tableHeader>
+						<row>
+							<entry><para> </para></entry>
+							<entry><para>Name</para></entry>
+							<entry><para>Type</para></entry>
+							<entry><para>Description</para></entry>
+						</row>
+						</tableHeader>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="43688629-485a-f6d6-b835-67afeedc4fef"/>(<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  type, <link xlink:href="ef3d2310-dfdb-431e-8330-0d339049abff"/>  proc, <link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>  capture)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="044fcb55-0c5f-d88f-619c-455ffb8b2600"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Attach a procedure to an event.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="52fabf00-f5cb-b533-f556-fcf63269add5"/>(<link xlink:href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0"/>  childElement)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="044fcb55-0c5f-d88f-619c-455ffb8b2600"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Appends content to this tab's content DHTML DIV element.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="8e3e0214-8a0b-9706-a851-a0af3e946239"/>(<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  type, <link xlink:href="ef3d2310-dfdb-431e-8330-0d339049abff"/>  proc, <link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>  capture)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="044fcb55-0c5f-d88f-619c-455ffb8b2600"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Removes an event from subscription list.  The [proc] must match exactly the [proc] subscribed with.
+									</para>
+								</entry>
+							</row>
+						
+					</table>
+				</content>
+			</section>
+		
+	<!-- ============================== events ========================= -->
+		
+			<section address="events">
+				<title>Events</title>
+				<content>
+					<table>
+						<tableHeader>
+						<row>
+							<entry><para> </para></entry>
+							<entry><para>Name</para></entry>
+							<entry><para>Description</para></entry>
+						</row>
+						</tableHeader>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="4c2344ec-8070-dc62-22ef-bee41c01fc65"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  tab, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  tabBar, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  content)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs after the remote procdure call has returned.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="ee864500-437e-2461-53f3-8ab38c738bf9"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  tab, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  tabBar, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  content)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when the user clicks on the <link xlink:href="c3a7e221-c590-1249-dbbc-f9d5507a8365"/>.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="6d294e9d-c7ce-6c34-c57b-3326ed2137c7"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  tab, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  tabBar, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  content)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when the <link xlink:href="c3a7e221-c590-1249-dbbc-f9d5507a8365"/> is finished loading and is ready to accept content.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="1fd408c4-cb6f-aa09-13bb-a24cf5bc6d24"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  tab, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  tabBar, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  content)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when the mouse button is pressed down on the <link xlink:href="c3a7e221-c590-1249-dbbc-f9d5507a8365"/>.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="27082343-3448-7551-8983-e3a11ff7421c"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  tab, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  tabBar, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  content)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when the mouse moves out of the <link xlink:href="c3a7e221-c590-1249-dbbc-f9d5507a8365"/>.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="b43a133c-d519-7fa1-2d7d-cabbfb772c1c"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  tab, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  tabBar, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  content)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when the mouse moves over of the <link xlink:href="c3a7e221-c590-1249-dbbc-f9d5507a8365"/>.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="4be4f789-a4e6-965e-59ab-f5dbea8583cb"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  tab, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  tabBar, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  content)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when the mouse button is released on the <link xlink:href="c3a7e221-c590-1249-dbbc-f9d5507a8365"/>.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicevent"/></mediaLinkInline>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="9dddccd2-705d-dea6-bbbc-95972d2a8b2f"/>(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  tab, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  tabBar, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  content)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Occurs when the parent <link xlink:href="889dd046-9a0f-5ce0-7b0e-20041ca87b95"/> is resized.
+									</para>
+								</entry>
+							</row>
+						
+					</table>
+					<alert class="tip">
+						<para>There are two ways to add event listeners.</para>
+					</alert>
+					<para>
+						1. You can attach to events as a parameter when you create the object.
+						<code language="javascript">
+							var foo = new object({
+								event:function(signature){
+									/* event procedure */
+								}
+							});
+						</code>
+						2. Or you can add the event after the object has been instantiated.
+						<code language="javascript">
+							var foo = new object();
+							foo.addEventListener('event',function(signature){
+								/* event procedure */
+							}, false);
+						</code>
+					</para>
+				</content>
+			</section>
+		
+	</developerConceptualDocument>
+</topic>

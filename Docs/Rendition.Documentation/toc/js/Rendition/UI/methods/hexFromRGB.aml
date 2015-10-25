@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="0af0c2e2-09b0-e329-dbda-c060d5f1bd3d" revisionNumber="1" dataAlias="Rendition.UI.hexFromRGB">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction address="Intro">
+			Rendition.UI.hexFromRGB(<link xlink:href="0c7e7de5-e5cc-8e47-144b-f225672aefc7"/>  The, <link xlink:href="0c7e7de5-e5cc-8e47-144b-f225672aefc7"/>  The, <link xlink:href="0c7e7de5-e5cc-8e47-144b-f225672aefc7"/>  The)
+			<para>Get a hex value from RGB color.</para>
+		</introduction>
+		<definitionTable>
+			
+			
+				<definedTerm>
+					<para>Member Of</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="b584e6c6-2f5a-6c97-4e57-2ad4afa995cc"/>
+					</para>
+				</definition>
+			
+			
+				<definedTerm>
+					<para>Return Type</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>
+					</para>
+				</definition>
+			
+			
+				<definedTerm>
+					<para>Source</para>
+				</definedTerm>
+				<definition>
+					<para>
+						c:\Rendition\Rendition.Core\js\admin\UI\Util.js
+					</para>
+				</definition>
+			
+		</definitionTable>
+		<section address="parameters">
+		<title>Parameters</title>
+			<sections>
+				<table>
+					<tableHeader>
+					<row>
+						<entry><para> </para></entry>
+						<entry><para>Name</para></entry>
+						<entry><para>Description</para></entry>
+					</row>
+					</tableHeader>
+					
+						<row>
+							<entry>
+								<para>
+									
+									Required
+									The
+									<link xlink:href="0c7e7de5-e5cc-8e47-144b-f225672aefc7"/>
+								</para>
+							</entry>
+							<entry>
+								<para>
+									red value.
+								</para>
+							</entry>
+							<entry>
+								<para>
+									
+								</para>
+							</entry>
+						</row>
+					
+						<row>
+							<entry>
+								<para>
+									
+									Required
+									The
+									<link xlink:href="0c7e7de5-e5cc-8e47-144b-f225672aefc7"/>
+								</para>
+							</entry>
+							<entry>
+								<para>
+									green value.
+								</para>
+							</entry>
+							<entry>
+								<para>
+									
+								</para>
+							</entry>
+						</row>
+					
+						<row>
+							<entry>
+								<para>
+									
+									Required
+									The
+									<link xlink:href="0c7e7de5-e5cc-8e47-144b-f225672aefc7"/>
+								</para>
+							</entry>
+							<entry>
+								<para>
+									blue value.
+								</para>
+							</entry>
+							<entry>
+								<para>
+									
+								</para>
+							</entry>
+						</row>
+					
+				</table>
+			</sections>
+		</section>
+	</developerConceptualDocument>
+</topic>

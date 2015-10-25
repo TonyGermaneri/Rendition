@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="44aead4f-501a-4afc-8045-5ef5548874c2"
+  name="Mail"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="6a1b04af-0707-4534-8cb2-e004de6a233b"
+      handle="viewcode://./CodeSchema_Namespace?Namespace=System.Net.Mail"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="b9d41f4e-9cb0-4b3d-b647-7356c0a015a7"
+        name="MailAddress"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="1987adea-eb1f-444c-83c7-b40fdacf7255"
+            handle="viewcode://./CodeSchema_Class?Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.dll&quot; Namespace=System.Net.Mail Type=MailAddress"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="872f043d-9d11-4759-bc3a-6b0793760742"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d2189ae3-7645-424b-ae40-c5f57d3dddb4">
+                <propertyInstance
+                  Id="0e7f6d20-e287-4695-bd0e-01dd382da087"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="fffebbfd-2329-421c-aaf5-910a6328a96d">
+                <propertyInstance
+                  Id="d18c58fc-4945-4999-b1db-f226a9675893"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6f1ffe22-8b30-467b-a06f-53251d4fca2f">
+                <propertyInstance
+                  Id="9c4b8451-63f0-4d77-a6aa-07a0e3821ba8"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2075b0a6-801b-4217-b984-d1bc8345cd5f">
+                <propertyInstance
+                  Id="34d15032-12d2-49ac-8754-d87bad54a368"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6e609999-414f-421d-9083-5075a343451f">
+                <propertyInstance
+                  Id="8a13b792-4b00-498b-9a37-4f6cc48b2e8b"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="bfb8988e-37dd-46eb-b15d-fa6e38482219"
+        name="MailAddressCollection"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="54fd6f4a-f533-4dbf-92f2-4e1a8c499ac0"
+            handle="viewcode://./CodeSchema_Class?Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.dll&quot; Namespace=System.Net.Mail Type=MailAddressCollection"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="418b1b2e-7069-48b4-b85a-9656f948560b"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e73ff768-8519-4cbb-a22a-63991cf6a5d2">
+                <propertyInstance
+                  Id="7a32fc33-2530-4c37-bf7e-d80512c43d49"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="bb27057d-fe2e-4dcf-8c59-f123f9fa4364">
+                <propertyInstance
+                  Id="f3f906d2-9008-460a-a328-78783fe57533"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="05d2d46e-cbb1-40ab-bfb9-cf6def4ed488">
+                <propertyInstance
+                  Id="7a18fecd-2cbe-4868-af4c-1ee381173a9a"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4e0f8d34-125b-4e2b-ac8c-513efbd8ad19">
+                <propertyInstance
+                  Id="c5eefe3f-c394-4f5d-8e8b-75a4638ec21a"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1af7e353-3c92-4230-b5dd-a487e9611c16">
+                <propertyInstance
+                  Id="bf3b8564-2749-4878-b801-5b746b11cf52"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="d7b1187c-da1b-41f4-b973-2ac2812a8fe6"
+        name="SendCompletedEventHandler"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="31d9223f-8731-4ab6-af92-211eadbd7d10"
+            handle="viewcode://./CodeSchema_Delegate?Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.dll&quot; Namespace=System.Net.Mail Type=SendCompletedEventHandler"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="610d7882-a853-4d31-bd19-bf07e0265b66"
+            name="delegate"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f7bff34b-3fd3-4eb9-ad8c-fb23b0a3fd9b">
+                <propertyInstance
+                  Id="fdceb0d0-303c-41ed-8824-3db900ff9550"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="dba63a11-68a7-4dd9-b0a7-d235731c1fb2">
+                <propertyInstance
+                  Id="b782ba1c-ae57-4933-9f4b-e5e3828734e6"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6dd6248a-feb4-46a7-a2b9-c2b68a43dc78">
+                <propertyInstance
+                  Id="ac1b48d4-ce95-4243-8d50-a1059a78fc0c"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

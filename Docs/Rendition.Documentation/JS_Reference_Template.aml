@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="5561c1e2-fc67-498f-b917-90874f9117d9" revisionNumber="1">
+  <developerConceptualDocument
+    xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <introduction>
+      <para>Required introduction</para>
+    </introduction>
+    <section address="Section1">
+      <title>Optional section 1  title</title>
+      <content>
+        <para>Add one or more sections with content</para>
+      </content>
+    </section>
+	<section address="Section2">
+      <title>Optional section 2  title</title>
+      <content>
+        <para>Add one or more sections with content</para>
+      </content>
+    </section>
+  </developerConceptualDocument>
+</topic>

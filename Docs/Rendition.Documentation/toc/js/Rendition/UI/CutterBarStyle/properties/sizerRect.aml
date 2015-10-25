@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="ed55cb73-d6c9-8ddb-273b-66337bb91b58" revisionNumber="1" dataAlias="Rendition.UI.CutterBarStyle#CutterBarStyle.sizerRect">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction address="Intro">
+			Rendition.UI.CutterBarStyle#CutterBarStyle.sizerRect()
+			<para>The size of the bar between the two elements as a <link xlink:href="b6679c58-2336-61d4-273e-95bc23b9bfcb"/>.Looks like { x: 0, y: 0, h: 3, w: 3 }.  Only the height or the widthof the rect are used.  The height during horizontal mode, the width during vertical mode.</para>
+		</introduction>
+		<definitionTable>
+			
+			
+				<definedTerm>
+					<para>Member Of</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="07fe8af3-eda5-dfad-9ce9-6bfe56d71486"/>
+					</para>
+				</definition>
+			
+			
+				<definedTerm>
+					<para>Type</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+					</para>
+				</definition>
+			
+			
+				<definedTerm>
+					<para>Source</para>
+				</definedTerm>
+				<definition>
+					<para>
+						c:\Rendition\Rendition.Core\js\admin\UI\cutterBar.js
+					</para>
+				</definition>
+			
+		</definitionTable>
+	</developerConceptualDocument>
+</topic>

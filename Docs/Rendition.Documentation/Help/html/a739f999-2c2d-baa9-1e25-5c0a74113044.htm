@@ -1,0 +1,1822 @@
+﻿<html xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+  <head>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8" />
+    <META NAME="save" CONTENT="history" />
+    <title>CreateForm</title>
+    <meta name="Language" content="en-us" />
+    <meta name="Microsoft.Help.Id" content="a739f999-2c2d-baa9-1e25-5c0a74113044" />
+    <meta name="Description" content="Creates one or more groups of editable controls. This is the main function for editing single records in your MS SQL database." />
+    <meta name="Microsoft.Help.ContentType" content="Concepts" />
+    <link rel="stylesheet" type="text/css" href="../styles/Presentation.css" />
+    <link rel="stylesheet" type="text/css" href="ms-help://Hx/HxRuntime/HxLink.css" />
+    <script type="text/javascript" src="../scripts/EventUtilities.js"> </script>
+    <script type="text/javascript" src="../scripts/SplitScreen.js"> </script>
+    <script type="text/javascript" src="../scripts/Dropdown.js"> </script>
+    <script type="text/javascript" src="../scripts/script_manifold.js"> </script>
+    <script type="text/javascript" src="../scripts/script_feedBack.js"> </script>
+    <script type="text/javascript" src="../scripts/CheckboxMenu.js"> </script>
+    <script type="text/javascript" src="../scripts/CommonUtilities.js"> </script>
+    <xml>
+      <MSHelp:Keyword Index="A" Term="a739f999-2c2d-baa9-1e25-5c0a74113044" />
+      <MSHelp:Attr Name="RevisionNumber" Value="1" />
+      <MSHelp:Attr Name="AssetID" Value="a739f999-2c2d-baa9-1e25-5c0a74113044" />
+      <MSHelp:Attr Name="Abstract" Value="Creates one or more groups of editable controls. This is the main function for editing single records in your MS SQL database.createForm uses many other Rendition classes to produce a featureful form, such as autoComplete, grid, groupBox, info, fileM ..." />
+      <MSHelp:Attr Name="TopicType" Value="kbArticle" />
+      <MSHelp:Attr Name="Locale" Value="en-us" />
+    </xml>
+    <link type="text/css" rel="stylesheet" href="../styles/highlight.css" />
+    <script type="text/javascript" src="../scripts/highlight.js"> </script>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <input type="hidden" id="hiddenScrollOffset" />
+    <img id="collapseImage" style="display:none; height:0; width:0;" src="../icons/collapse_all.gif" alt="Collapse image" title="Collapse image" />
+    <img id="expandImage" style="display:none; height:0; width:0;" src="../icons/expand_all.gif" alt="Expand Image" title="Expand Image" />
+    <img id="collapseAllImage" style="display:none; height:0; width:0;" src="../icons/collapse_all.gif" />
+    <img id="expandAllImage" style="display:none; height:0; width:0;" src="../icons/expand_all.gif" />
+    <img id="dropDownImage" style="display:none; height:0; width:0;" src="../icons/dropdown.gif" />
+    <img id="dropDownHoverImage" style="display:none; height:0; width:0;" src="../icons/dropdownHover.gif" />
+    <img id="copyImage" style="display:none; height:0; width:0;" src="../icons/copycode.gif" alt="Copy image" title="Copy image" />
+    <img id="copyHoverImage" style="display:none; height:0; width:0;" src="../icons/copycodeHighlight.gif" alt="CopyHover image" title="CopyHover image" />
+    <div id="header">
+      <table id="topTable" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <span onclick="ExpandCollapseAll(toggleAllImage)" style="cursor:default;" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage, event)" tabindex="0">
+              <img ID="toggleAllImage" class="toggleAll" src="../icons/collapse_all.gif" /> <label id="collapseAllLabel" for="toggleAllImage" style="display: none;">Collapse All</label><label id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand All</label> </span>
+            <span>    </span>
+            <span id="devlangsDropdown" class="filter" tabindex="0">
+              <img id="devlangsDropdownImage" src="../icons/dropdown.gif" /> <label id="devlangsMenuAllLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: All </nobr></label><label id="devlangsMenuMultipleLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: Multiple </nobr></label><label id="devlangsMenuCSharpLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: C# </nobr></label><label id="devlangsMenuJavaScriptLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: JavaScript </nobr></label></span>
+          </td>
+        </tr>
+      </table>
+      <div id="devlangsMenu">
+        <input id="CSharpCheckbox" type="checkbox" data="CSharp,cs,'persist'" value="on" onClick="SetLanguage(this)" />
+        <label class="checkboxLabel" for="CSharpCheckbox">C#</label>
+        <br />
+        <input id="JavaScriptCheckbox" type="checkbox" data="JavaScript,cs,'persist'" value="on" onClick="SetLanguage(this)" />
+        <label class="checkboxLabel" for="JavaScriptCheckbox">JavaScript</label>
+        <br />
+      </div>
+      <table id="bottomTable" cellpadding="0" cellspacing="0">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">Rendition E-Commerce Framework</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">CreateForm</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td align="left">
+            <span id="headfeedbackarea" class="feedbackhead">
+              <a href="javascript:SubmitFeedback('tonygermaneri@gmail.com','Rendition E-Commerce Framework','','1.0.0.0','','%0\dYour%20feedback%20is%20used%20to%20improve%20the%20documentation%20and%20the%20product.%20Your%20e-mail%20address%20will%20not%20be%20used%20for%20any%20other%20purpose%20and%20is%20disposed%20of%20after%20the%20issue%20you%20report%20is%20resolved.%20%20While%20working%20to%20resolve%20the%20issue%20that%20you%20report,%20you%20may%20be%20contacted%20via%20e-mail%20to%20get%20further%20details%20or%20clarification%20on%20the%20feedback%20you%20sent.%20After%20the%20issue%20you%20report%20has%20been%20addressed,%20you%20may%20receive%20an%20e-mail%20to%20let%20you%20know%20that%20your%20feedback%20has%20been%20addressed.%0\A%0\d','Customer%20Feedback');">Send Feedback</a>
+            </span>
+          </td>
+        </tr>
+      </table>
+      <table id="gradientTable">
+        <tr>
+          <td class="nsrBottom" background="../icons/gradient.gif" />
+        </tr>
+      </table>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" />
+        <span style="color: DarkGray">
+          <p style="color: #dc143c; font-size: 8.5pt; font-weight: bold;">[This is preliminary documentation and is subject to change.]</p>
+        </span>
+        <a name="Intro"> </a>
+        <div class="introduction">
+			Class Rendition.UI.CreateForm
+			<p><p>Creates one or more groups of editable controls.  This is the main function for editing single records in your MS SQL database.</p><p>createForm uses many other Rendition classes to produce a featureful form, such as autoComplete, grid, groupBox, info, 
+fileManager and many more. </p><p>createForm can use a local dataset with schema (data description) or it can connect to a MS SQL database and
+read schema information directly from the database.</p><p>createForm can read schema data from the MS SQL server and automatically create a form layout.
+But you can also define a layout that will use the schema data provided by the database.</p><p>For createForm to work with your custom object (table/view/procedure) your object must support
+the following:</p><ul><li><p>Defines a Primary Key</p></li><li><p>Column named VerCol with the data type Timestamp. (A.K.A. Row Versioning or Timestamping)</p></li></ul>Your object's columns can optionally have the following:<ul><li><p>Extended Property: MS_Description.  Extended description of this column.</p></li><li><p>Extended Property: hidden.  0 = visible, 1 = hidden.  This default can be overridden at runtime. </p></li><li><p>Extended Property: displayName.  Human readable column title. 
+ When this property is not present the column name will be used instead.</p></li><li><p>Column named VerCol with the data type Timestamp.</p></li></ul>Your object can optionally have the following:<ul><li><p>Extended Property: displayName.  This value will appear in place of the table name on the form.</p></li></ul><p>createForm supplies methods for createing new records and reading and updaing existing records.  You can also use createForm to create forms
+that are not connected to record sources, for example, to supply the arguments to a static function.  When used with a MS SQL data source
+createForm can detect when the record has been updated on the server since last time createForm  loaded the row data and give
+a warning dialog allwing the user to cancel out of the save procedure.</p><p>The validation is handled by the Rendition.UI.AutoComplete class that can check against regular expressions or the presence of matching records on remote rowsets.  
+Even remote validation occurs synchronously so there is no need for complex callback procedures.</p><p>Reading data from the form is done using the [createForm.getInputByName] method to get an input or [createForm.getInputValue] method to return a value.  
+You can validate the form using the [createForm.isValid] method which returns a boolean.</p></p></div>
+        <p>
+          <dl class="authored">
+            <dt>
+              <p>Member Of</p>
+            </dt>
+            <dd>
+              <p>
+                <span sdata="link">
+                  <a href="ddee8d40-d92d-34d0-2be3-5f5d65f36f31.htm">UI</a>
+                </span>
+              </p>
+            </dd>
+            <dt>
+              <p>Source</p>
+            </dt>
+            <dd>
+              <p>
+							c:\Rendition\Rendition.Core\js\admin\UI\createForm.js
+						</p>
+            </dd>
+          </dl>
+        </p>
+        <a name="examples"> </a>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(sectionToggleID0EIAAA)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(sectionToggleID0EIAAA, event)" tabindex="0">
+            <img id="sectionToggleID0EIAAA" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Examples</span>
+        </h1>
+        <div id="sectionSectionID0EIAAA" class="section" name="collapseableSection" style="">
+          <h3 class="subHeading">
+								
+									Create a dialog.  Create the form.  Add a simple save button.  Append the button to the dialog before the form
+
+								
+							</h3>
+          <div class="subsection">
+            <p>
+              <span id="cbc_1" x-lang="JavaScript" codeLanguage="JavaScript">
+                <div class="highlight-title">
+                  <span class="highlight-copycode" onkeypress="javascript:CopyColorizedCodeCheckKey(this.parentNode, event);" tabindex="0" onmouseover="CopyCodeChangeIcon(this)" onmouseout="CopyCodeChangeIcon(this)" onclick="javascript:CopyColorizedCode(this.parentNode);">
+                    <img style="margin-right: 5px;" src="../icons/CopyCode.gif" />Copy</span>JavaScript</div>
+                <div class="code">
+                  <pre xml:space="preserve">
+                    <span class="highlight-keyword">var</span> foo = Rendition.UI.Dialog();
+<span class="highlight-keyword">var</span> gen = Rendition.UI.CreateForm({
+    object: <span class="highlight-literal">'users'</span>,
+    suffix: <span class="highlight-literal">"where userId = 0"</span>,
+    parentNode: foo.content,
+    scroll: <span class="highlight-keyword">true</span>
+});
+<span class="highlight-keyword">var</span> sen = document.createElement(<span class="highlight-literal">'button'</span>);
+sen.innerHTML = <span class="highlight-literal">'Save'</span>;
+sen.onclick = <span class="highlight-keyword">function</span> () {
+    gen.save();
+}
+foo.content.insertBefore(sen, gen.form);</pre>
+                </div>
+              </span>
+            </p>
+          </div>
+          <h3 class="subHeading">
+								
+									Create a dialog. Create a layout that alters the default layout. Create the form with the new layout.  Add a simple save button.  Append the button to the dialog before the form.
+
+								
+							</h3>
+          <div class="subsection">
+            <p>
+              <span id="cbc_2" x-lang="JavaScript" codeLanguage="JavaScript">
+                <div class="highlight-title">
+                  <span class="highlight-copycode" onkeypress="javascript:CopyColorizedCodeCheckKey(this.parentNode, event);" tabindex="0" onmouseover="CopyCodeChangeIcon(this)" onmouseout="CopyCodeChangeIcon(this)" onclick="javascript:CopyColorizedCode(this.parentNode);">
+                    <img style="margin-right: 5px;" src="../icons/CopyCode.gif" />Copy</span>JavaScript</div>
+                <div class="code">
+                  <pre xml:space="preserve">
+                    <span class="highlight-keyword">var</span> foo = Rendition.UI.Dialog();
+<span class="highlight-keyword">var</span> bar = [
+    {
+        name: <span class="highlight-literal">'User Base Info'</span>,
+        expanded: <span class="highlight-keyword">true</span>,
+        inputs: [
+            {
+                columnName: <span class="highlight-literal">'userId'</span>
+            },
+            {
+                columnName: <span class="highlight-literal">'handle'</span>
+            }
+        ]
+    },
+    {
+        name: <span class="highlight-literal">'Additional Info'</span>,
+        expanded: <span class="highlight-keyword">true</span>,
+        inputs: [
+            {
+                columnName: <span class="highlight-literal">'lastVisit'</span>,
+                inputType: <span class="highlight-literal">'datePicker'</span>
+            },
+            {
+                columnName: <span class="highlight-literal">'wouldLikeEmail'</span>
+            },
+            {
+                columnName: <span class="highlight-literal">'comments'</span>,
+                inputType: <span class="highlight-literal">'rte'</span>
+            }
+        ]
+    }
+];
+<span class="highlight-keyword">var</span> gen = Rendition.UI.CreateForm({
+    object: <span class="highlight-literal">'users'</span>,
+    suffix: <span class="highlight-literal">"where userId = 0"</span>,
+    parentNode: foo.content,
+    scroll: <span class="highlight-keyword">true</span>,
+    groups: bar
+});
+<span class="highlight-keyword">var</span> sen = document.createElement(<span class="highlight-literal">'button'</span>);
+sen.onclick = <span class="highlight-keyword">function</span> () {
+    gen.save();
+}
+sen.innerHTML = <span class="highlight-literal">'Save'</span>;
+foo.content.insertBefore(sen, gen.form);</pre>
+                </div>
+              </span>
+            </p>
+          </div>
+          <h3 class="subHeading">
+								
+									Create a dialog. Create a layout without a database schema, add some Regular Expresion validation. Create the form with the new layout.  Add a simple save button that reads from the form.  Append the button to the dialog before the form. 
+
+								
+							</h3>
+          <div class="subsection">
+            <p>
+              <span id="cbc_3" x-lang="JavaScript" codeLanguage="JavaScript">
+                <div class="highlight-title">
+                  <span class="highlight-copycode" onkeypress="javascript:CopyColorizedCodeCheckKey(this.parentNode, event);" tabindex="0" onmouseover="CopyCodeChangeIcon(this)" onmouseout="CopyCodeChangeIcon(this)" onclick="javascript:CopyColorizedCode(this.parentNode);">
+                    <img style="margin-right: 5px;" src="../icons/CopyCode.gif" />Copy</span>JavaScript</div>
+                <div class="code">
+                  <pre xml:space="preserve">
+                    <span class="highlight-keyword">var</span> foo = Rendition.UI.Dialog();
+<span class="highlight-keyword">var</span> bar = [{
+    name: <span class="highlight-literal">'Claritas est etiam processus'</span>,
+    expanded: <span class="highlight-keyword">true</span>,
+    inputs: [
+        {
+            name: <span class="highlight-literal">'loremIpsum'</span>,
+            displayName: <span class="highlight-literal">'Lorem Ipsum'</span>,
+            autoComplete: {
+                mustMatchPattern: <span class="highlight-literal">/.+/</span>,
+                patternMismatchMessage: <span class="highlight-literal">'This field cannot be blank'</span>
+            }
+        },
+        {
+            name: <span class="highlight-literal">'dolorSit'</span>,
+            displayName: <span class="highlight-literal">'Dolor Sit'</span>,
+            fileManager: {
+                path: undefined
+            }
+        },
+        {
+            name: <span class="highlight-literal">'diamNonummy'</span>,
+            displayName: <span class="highlight-literal">'Diam Nonummy'</span>,
+            inputType: <span class="highlight-literal">'checkbox'</span>
+        },
+        {
+            name: <span class="highlight-literal">'quiBlandit'</span>,
+            displayName: <span class="highlight-literal">'Qui Blandit'</span>,
+            inputType: <span class="highlight-literal">'select'</span>,
+            options: [
+                [<span class="highlight-literal">'option1value'</span>, <span class="highlight-literal">'Option 1 Text'</span>],
+                [<span class="highlight-literal">'option2value'</span>, <span class="highlight-literal">'Option 2 Text'</span>]
+            ]
+        }
+    ]
+}];
+<span class="highlight-keyword">var</span> gen = Rendition.UI.CreateForm({
+    layout: bar,
+    parentNode: foo.content
+});
+gen.getInputByName(<span class="highlight-literal">'loremIpsum'</span>).value = <span class="highlight-literal">'Eodem modo typi, qui nunc nobis.'</span>;
+<span class="highlight-keyword">var</span> sen = document.createElement(<span class="highlight-literal">'button'</span>);
+sen.innerHTML = <span class="highlight-literal">'Save'</span>;
+sen.onclick = <span class="highlight-keyword">function</span> () {
+    <span class="highlight-keyword">if</span> (!gen.isValid()) {
+        alert(<span class="highlight-literal">'Not Valid'</span>);
+        <span class="highlight-keyword">return</span>;
+    }
+    <span class="highlight-keyword">var</span> out = <span class="highlight-literal">''</span>;
+    out += gen.getInputByName(<span class="highlight-literal">'loremIpsum'</span>).value + <span class="highlight-literal">'\n'</span> +
+    gen.getInputByName(<span class="highlight-literal">'diamNonummy'</span>).checked + <span class="highlight-literal">'\n'</span> +
+    gen.getInputByName(<span class="highlight-literal">'quiBlandit'</span>).selectedIndex;
+    alert(out);
+}
+foo.content.insertBefore(sen, gen.form);</pre>
+                </div>
+              </span>
+            </p>
+          </div>
+        </div>
+        <a name="parameters"> </a>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(sectionToggleID0EGAAA)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(sectionToggleID0EGAAA, event)" tabindex="0">
+            <img id="sectionToggleID0EGAAA" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Constructor Parameters</span>
+        </h1>
+        <div id="sectionSectionID0EGAAA" class="section" name="collapseableSection" style="">
+          <div class="tableSection">
+            <table width="50%" cellspacing="2" cellpadding="5" frame="lhs">
+              <tr>
+                <th>
+                  <p />
+                </th>
+                <th>
+                  <p>Name</p>
+                </th>
+                <th>
+                  <p>Type</p>
+                </th>
+                <th>
+                  <p>Description</p>
+                </th>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Private Field" src="../media/privatefield.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										args 
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Parameters for the widget.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Private Field" src="../media/privatefield.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										args.validationMessage 
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Message that appears above the list of invalid input messages.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Private Field" src="../media/privatefield.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										args.scroll 
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="feb87a09-e36a-9baa-3c23-409ea79458a9.htm">Boolean</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										When true, a vertical scroll bar is added to the parent node when the form is appended.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Private Field" src="../media/privatefield.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										args.quiet 
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="feb87a09-e36a-9baa-3c23-409ea79458a9.htm">Boolean</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										When true, info bubbles showing "Save Successful" will not appear when the form saves.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Private Field" src="../media/privatefield.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										args.object 
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The MS SQL object (tabe/view/stored procedure) that is read from to get data and schema from.  
+If this value is not supplied the Object [createForm.header] will no be populated with header schema information unless you use 
+the [createForm.dataSet] parameter, an object used interally to the <span sdata="link"><a href="f5f5d4d4-f415-cd77-8e8f-c01e6464006a.htm">Grid</a></span>, <span sdata="link"><a href="c6d834b2-5b8e-e096-55cf-f1a02dbc88bf.htm">TreeView</a></span> and <span sdata="link"><a href="a739f999-2c2d-baa9-1e25-5c0a74113044.htm">CreateForm</a></span> classes.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Private Field" src="../media/privatefield.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										args.dataSet 
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										This object is used internally by the <span sdata="link"><a href="f5f5d4d4-f415-cd77-8e8f-c01e6464006a.htm">Grid</a></span>, <span sdata="link"><a href="c6d834b2-5b8e-e096-55cf-f1a02dbc88bf.htm">TreeView</a></span> and <span sdata="link"><a href="a739f999-2c2d-baa9-1e25-5c0a74113044.htm">CreateForm</a></span> classes 
+and can be passed back and forth between the classes to avoid making multiple requests or re-paramitizing functions.  
+You proabably shouldn't use this object unless you <i>really</i> know what you're doing.  
+You're better off using the [createForm.object] paramater and/or the [createForm.layout] parameter.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Private Field" src="../media/privatefield.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										args.dataSetIndex 
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The record index, by row, in the provided dataSet to load in the editor.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Private Field" src="../media/privatefield.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										args.suffix 
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										A value that will be appended to the end of the select statement generated in the request for data.  
+This is the best way to select which record you want to edit in the form.  For instance, if I had a table called users with the primary 
+key userId I could add the suffix "where userId = 0" to select the user 0.  This suffix cannot execute insert, update, exec or delete commands for security reasons.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Private Field" src="../media/privatefield.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										args.smallTitles 
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="feb87a09-e36a-9baa-3c23-409ea79458a9.htm">Boolean</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										When true, the input titles will be as smaller.  When false the input titles will be displayed normally.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Private Field" src="../media/privatefield.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										args.noTitles 
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="feb87a09-e36a-9baa-3c23-409ea79458a9.htm">Boolean</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										When true, column holding the input titles will not be drawn.  When false the input titles will be displayed normally.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Private Field" src="../media/privatefield.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										args.titleWidth 
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="feb87a09-e36a-9baa-3c23-409ea79458a9.htm">Boolean</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										You can set the width of the title column.  Setting this value on one input will cause all 
+inputs to draw at this width due to the way DHTML table elements are drawn.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Private Field" src="../media/privatefield.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										args.parentNode 
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0.htm">DHTMLElement</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The DHTML element this form will append to when it is instantiated.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Private Field" src="../media/privatefield.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										args.layout 
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536.htm">Array</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The layout of the form.  The layout is an array of expandable boxes (<span sdata="link"><a href="ff420866-3fc0-36b6-2931-86efdaa6f297.htm">GroupBox</a></span>) elements that contain input elements.  
+ *<i>n</i> indicates a special note defined below this code section.
+<span id="cbc_4" x-lang="JavaScript" codeLanguage="JavaScript"><div class="highlight-title"><span class="highlight-copycode" onkeypress="javascript:CopyColorizedCodeCheckKey(this.parentNode, event);" tabindex="0" onmouseover="CopyCodeChangeIcon(this)" onmouseout="CopyCodeChangeIcon(this)" onclick="javascript:CopyColorizedCode(this.parentNode);"><img style="margin-right: 5px;" src="../icons/CopyCode.gif" />Copy</span>JavaScript</div><div class="code"><pre xml:space="preserve">[
+    {
+        name: &lt;<span class="highlight-keyword">String</span>&gt;,
+        expanded: &lt;<span class="highlight-keyword">Boolean</span>&gt;,
+        alwaysExpanded: &lt;<span class="highlight-keyword">Boolean</span>&gt;
+        [
+            {
+                columnName: &lt;<span class="highlight-keyword">String</span>&gt;, *<span class="highlight-number">1</span>
+                inputType: &lt;<span class="highlight-keyword">String</span>&gt;, *<span class="highlight-number">2</span>,
+                language: &lt;<span class="highlight-keyword">String</span>&gt; *<span class="highlight-number">6</span>,
+                theme: &lt;<span class="highlight-keyword">String</span>&gt; *<span class="highlight-number">7</span>,
+                saveProcedure: &lt;<span class="highlight-keyword">Function</span>&gt; *<span class="highlight-number">8</span>,
+                name: &lt;<span class="highlight-keyword">String</span>&gt;, *<span class="highlight-number">3</span>
+                displayName &lt;<span class="highlight-keyword">String</span>&gt;, *<span class="highlight-number">3</span>
+                defaultValue: &lt;<span class="highlight-keyword">String</span>&gt;, *<span class="highlight-number">3</span>
+                isNullable: &lt;<span class="highlight-keyword">Boolean</span>&gt;, *<span class="highlight-number">3</span>
+                dataLength: &lt;Integer&gt;, *<span class="highlight-number">3</span>
+                primaryKey: &lt;<span class="highlight-keyword">Boolean</span>&gt;, *<span class="highlight-number">3</span>
+                dataType: &lt;<span class="highlight-keyword">String</span>&gt;, *<span class="highlight-number">3</span>
+                value: &lt;<span class="highlight-keyword">String</span>&gt;, *<span class="highlight-number">3</span>
+                grid: &lt;<span class="highlight-keyword">Object</span>&gt;, *<span class="highlight-number">4</span>
+                rte: &lt;<span class="highlight-keyword">Object</span>&gt;, *<span class="highlight-number">4</span>
+                datePicker: &lt;<span class="highlight-keyword">Object</span>&gt;, *<span class="highlight-number">4</span>
+                fileManager: &lt;<span class="highlight-keyword">Object</span>&gt;, *<span class="highlight-number">4</span>
+                numericupdown: &lt;<span class="highlight-keyword">Object</span>&gt;, *<span class="highlight-number">4</span>
+                inputSelectButton: &lt;<span class="highlight-keyword">Object</span>&gt;, *<span class="highlight-number">4</span>
+                autoComplete: &lt;<span class="highlight-keyword">Object</span>&gt;, *<span class="highlight-number">4</span>
+                info: &lt;<span class="highlight-keyword">Object</span>&gt;, *<span class="highlight-number">4</span>
+                HTML: &lt;<span class="highlight-keyword">String</span>|<span class="highlight-keyword">Function</span>|DHTMLElement&gt; *<span class="highlight-number">5</span>
+            },...
+        ]
+    },...
+]</pre></div></span><div class="alert"><table><tr><th><img src="../icons/alert_note.gif" title="Note" /> <b>Note</b></th></tr><tr><td> This object is generated automatically when you are connecting to a MS SQL database rowset, but you can override it.  
+Any inputs existing in a database schema already have at least inputType, dataType, dataLength, primaryKey, isNullable, defaultValue defined in the 
+database schema.<sup>1</sup> The form must have a remote record set (defined the [args.object] parameter) to use this key and the [columnName] key must 
+match a column in the remote schema.<sup>2</sup> Can be any one of: checkbox, select, calendar, datePicker, fileManager, numericUpDown, numeric, textarea, text, hidden, 
+password, title, rte, codearea.  This will use defaults for these classes when the inputType paramater is used.  
+For more functionality use the class name directly. Viz. grid: {paramaters}.<sup>3</sup> This key cannot be used on an input from a remote recordset.<sup>4</sup> This key can accept any parameters the specified class can accept.  The parentNode will be overridden by the createForm class to 
+attach the object to the form.  All other parameters are passed to the specified class instance.<sup>5</sup> This key can be a string, function or DHTML element.  If a function is passed the function must return a string or a DHTML element. 
+ The function has no signature.<sup>6</sup> This is for the syntax highlighting when inputType:codeArea is selected.  Can be csharp, css, html, javascript, svg or xml.<sup>7</sup> This is the theme for the syntax highlighting.  
+Can be any one of: clouds, clouds_midnight, cobalt, dawn, eclipse, idle_fingers, kr_theme, 
+merbivore, merbivore_soft, mono_industrial, monokai, pastel_on_dark, twilight, vibrant_ink.<sup>8</sup> When defined a button will appear in the codearea full screen mode that says 'save' and when clicked will run this procedure.</td></tr></table></div></p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <a name="fields"> </a>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(sectionToggleID0EEAAA)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(sectionToggleID0EEAAA, event)" tabindex="0">
+            <img id="sectionToggleID0EEAAA" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Properties</span>
+        </h1>
+        <div id="sectionSectionID0EEAAA" class="section" name="collapseableSection" style="">
+          <div class="tableSection">
+            <table width="50%" cellspacing="2" cellpadding="5" frame="lhs">
+              <tr>
+                <th>
+                  <p />
+                </th>
+                <th>
+                  <p>Name</p>
+                </th>
+                <th>
+                  <p>Type</p>
+                </th>
+                <th>
+                  <p>Description</p>
+                </th>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="056c828c-d35b-2a14-5f02-39a294ebcdd8.htm">autoCompletes</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536.htm">Array</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										List of autoCompletes in this form.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="6e691839-12b3-d1e0-6d73-a3f5c2b19a23.htm">codeareas</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536.htm">Array</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										List of codeareas in this form. Note: do not use this array to assign or get values from the form, use the [createForm.getInputByName()] method instead.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="3df242fd-a599-5496-b067-99663f0254d9.htm">datePickers</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536.htm">Array</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										List of datePickers in this form. Note: do not use this array to assign or get values from the form, use the [createForm.getInputByName()] method instead.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="d24dad3e-7d67-2e09-4a57-3dfe36cdb838.htm">fileManagers</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536.htm">Array</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										List of fileManagers in this form.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="5c05e808-91c8-cf56-12f1-a9d55fc30b58.htm">form</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <span class="nolink">[7889c38c-9918-6fd2-caa1-b266f996bfdb]</span>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The main container DIV element.  This is the element that is appended to the [args.parentNode] DHTML element.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="583bf239-0099-3736-6e38-32178b0ef710.htm">grids</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536.htm">Array</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										List of grids in this form.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="22c3865f-39c3-126d-589b-21e8dba98594.htm">groupBoxes</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536.htm">Array</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										List of group boxes in this form.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="277bdd00-7d81-8789-e93a-95fa1c12d139.htm">infos</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536.htm">Array</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										List of infos in this form.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="403dd650-b6e4-fe3a-58e8-4ab15af328a3.htm">inputs</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536.htm">Array</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										List of inputs in this form.  Note: do not use this array to assign or get values from the form, use the [createForm.getInputByName()] method instead.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="3085a2de-7806-b40e-def9-8228e3123d58.htm">inputSelectButtons</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536.htm">Array</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										List of inputSelectButtons in this form. Note: do not use this array to assign or get values from the form, use the [createForm.getInputByName()] method instead.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="9c94ebac-4241-6c36-52ec-e25220379c62.htm">invalidAutocompletes</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536.htm">Array</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										List of invalid inputs in this form.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="15b4927e-565d-9ae2-344f-24d22af168c5.htm">numericupdowns</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536.htm">Array</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										List of numericupdowns in this form. Note: do not use this array to assign or get values from the form, use the [createForm.getInputByName()] method instead.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="54bac25c-7a04-6a50-1433-8424b54aada7.htm">pairTables</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536.htm">Array</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										List of pair tables in this form.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="c966e5b5-298a-3325-d2a0-4a69ef4dfd03.htm">resizeableBoxes</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536.htm">Array</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										List of resizeableBoxes in this form.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="87287bba-7c94-ce60-784f-9c15b9197f28.htm">rtes</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536.htm">Array</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										List of rtes (Rich Text Editors) in this form. Note: do not use this array to assign or get values from the form, use the [createForm.getInputByName()] method instead.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="00459af8-335a-a4f9-0a1c-e1702d4f127c.htm">selects</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536.htm">Array</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										List of selects in this form. Note: do not use this array to assign or get values from the form, use the [createForm.getInputByName()] method instead.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="4d2b3e08-ab41-5255-0dff-620beca03db6.htm">textareas</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536.htm">Array</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										List of textareas in this form. Note: do not use this array to assign or get values from the form, use the [createForm.getInputByName()] method instead.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="28f29646-45bb-559e-51e1-eeb274d0756b.htm">type</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										The type of object. Returns RenditionCreateForm.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Property" src="../media/publicproperty.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="3e04dc83-f35d-4f98-6699-49240134a6b0.htm">validationMessage</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Message that appears when a record is trying to be commited but there is an invalid field.
+									</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <a name="methods"> </a>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(sectionToggleID0ECAAA)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(sectionToggleID0ECAAA, event)" tabindex="0">
+            <img id="sectionToggleID0ECAAA" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Methods</span>
+        </h1>
+        <div id="sectionSectionID0ECAAA" class="section" name="collapseableSection" style="">
+          <div class="tableSection">
+            <table width="50%" cellspacing="2" cellpadding="5" frame="lhs">
+              <tr>
+                <th>
+                  <p />
+                </th>
+                <th>
+                  <p>Name</p>
+                </th>
+                <th>
+                  <p>Type</p>
+                </th>
+                <th>
+                  <p>Description</p>
+                </th>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Method" src="../media/publicmethod.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="722b6d9d-ade2-2038-3521-395eae1099b6.htm">addEventListener</a>
+                    </span>(<span sdata="link"><a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a></span>  type, <span sdata="link"><a href="ef3d2310-dfdb-431e-8330-0d339049abff.htm">Function</a></span>  proc, <span sdata="link"><a href="feb87a09-e36a-9baa-3c23-409ea79458a9.htm">Boolean</a></span>  capture)
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="044fcb55-0c5f-d88f-619c-455ffb8b2600.htm">undefined</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Attach a procedure to an event.  Usage foo.addEventListener('resize',function(e,foo){/*your procedure code},false)
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Method" src="../media/publicmethod.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="b7fd7523-90fa-7eee-8aff-9d4a7e7ac46e.htm">appendTo</a>
+                    </span>(<span sdata="link"><a href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0.htm">DHTMLElement</a></span>  parentNode)
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Appends the form to a DHTML element.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Method" src="../media/publicmethod.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="2e0c4bfb-6812-c878-90b0-d119722607ef.htm">dirty</a>
+                    </span>()
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="feb87a09-e36a-9baa-3c23-409ea79458a9.htm">Boolean</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Checks the form to see if the original values are the same as the current values.  false = The input values match the original data, true = The inputs do not match the original data.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Method" src="../media/publicmethod.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="cde4cb8b-9ba0-26b7-7021-6b23cc8079eb.htm">dispose</a>
+                    </span>()
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="044fcb55-0c5f-d88f-619c-455ffb8b2600.htm">undefined</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Removes any refrences for this instance.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Method" src="../media/publicmethod.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="534cd37c-63a7-8254-9204-a217b8541263.htm">getHeaderByName</a>
+                    </span>(<span sdata="link"><a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a></span>  headerName)
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Gets the header object by its name if the header object exists.  If no header matches the [headerName] parameter then [undefined] is returned.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Method" src="../media/publicmethod.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="2e0cb3fe-a5f7-3579-436e-62796abf009b.htm">getInputByName</a>
+                    </span>(<span sdata="link"><a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a></span>  columnName)
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0.htm">DHTMLElement</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Returns DHTML element matching the parameter [inputName].
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Method" src="../media/publicmethod.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="ec971bab-82d5-6971-e205-65a4c6bed460.htm">getInputValue</a>
+                    </span>(<span sdata="link"><a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a></span>  inputName)
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Gets the value of the input matching the [inputName] parameter.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Method" src="../media/publicmethod.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="d49d74fe-e5cf-f0ce-bc20-4b56bac508e4.htm">getInvalidInputs</a>
+                    </span>()
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536.htm">Array</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Returns an array of all the invalid inputs.  Viz. inputs who's autocomplete function returns invalid.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Method" src="../media/publicmethod.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="3263d784-9837-d4d5-cd93-48c8f7150508.htm">getValueByName</a>
+                    </span>(<span sdata="link"><a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a></span>  columnName)
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Gets the value data (last saved) values matching the parameter [columnName].  If no input is found then [null] is returned.  This is not the input value, to get the input value use getInputValue.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Method" src="../media/publicmethod.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="a5285a8e-25b6-1662-ead5-6ffa15a98a26.htm">init</a>
+                    </span>()
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Initalizes the form.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Method" src="../media/publicmethod.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="b3767290-f897-c9df-e5a0-171edd99c904.htm">isValid</a>
+                    </span>()
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="feb87a09-e36a-9baa-3c23-409ea79458a9.htm">Boolean</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Checks each input containing an autocomplete to see if the input is valid.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Method" src="../media/publicmethod.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="bf49f1f1-1196-4bab-55b3-3d7ae7b6ce14.htm">preventDefault</a>
+                    </span>()
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="044fcb55-0c5f-d88f-619c-455ffb8b2600.htm">undefined</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Prevent the default event from occuring.  For use within an event handler.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Method" src="../media/publicmethod.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="d65b458b-96dd-e5b9-3c2f-9aab8f487ec8.htm">removeEventListener</a>
+                    </span>(<span sdata="link"><a href="37159f0f-2d46-978b-f956-af8c6cb79845.htm">String</a></span>  type, <span sdata="link"><a href="ef3d2310-dfdb-431e-8330-0d339049abff.htm">Function</a></span>  proc, <span sdata="link"><a href="feb87a09-e36a-9baa-3c23-409ea79458a9.htm">Boolean</a></span>  capture)
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="044fcb55-0c5f-d88f-619c-455ffb8b2600.htm">undefined</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Removes an event from subscription list.  The [proc] must match exactly the [proc] subscribed with.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Method" src="../media/publicmethod.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="b577beec-3ac7-704c-769d-d62c68cefcd1.htm">save</a>
+                    </span>(<span sdata="link"><a href="feb87a09-e36a-9baa-3c23-409ea79458a9.htm">Boolean</a></span>  overwrite, <span sdata="link"><a href="36802977-faa0-b394-beea-eebbbc3b2d5a.htm">Integer</a></span>  commandType, <span sdata="link"><a href="ef3d2310-dfdb-431e-8330-0d339049abff.htm">Function</a></span>  callbackProcedure, <span sdata="link"><a href="feb87a09-e36a-9baa-3c23-409ea79458a9.htm">Boolean</a></span>  async)
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Saves the local form to the remote dataset.  A comfermation dialog will appear if the form data has changed on the server allowing the user to cancel out of the save function.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Method" src="../media/publicmethod.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="09d33aa6-33cd-b4bf-31c1-1a56af32cde3.htm">showValidationMessage</a>
+                    </span>()
+									</p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="ef5d1ece-3bf8-b397-2887-27bfd4aa74c0.htm">DHTMLElement</a>
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+										Show a message with a list of invalid inputs. Viz. inputs who's autocomplete function returns invalid) and their validation messages.
+									</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <a name="events"> </a>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(sectionToggleID0EAAAA)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(sectionToggleID0EAAAA, event)" tabindex="0">
+            <img id="sectionToggleID0EAAAA" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Events</span>
+        </h1>
+        <div id="sectionSectionID0EAAAA" class="section" name="collapseableSection" style="">
+          <div class="tableSection">
+            <table width="50%" cellspacing="2" cellpadding="5" frame="lhs">
+              <tr>
+                <th>
+                  <p />
+                </th>
+                <th>
+                  <p>Name</p>
+                </th>
+                <th>
+                  <p>Description</p>
+                </th>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Event" src="../media/publicevent.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="4e3ab362-0252-cc0e-ec09-ab27efc77512.htm">ondispose</a>
+                    </span>(<span sdata="link"><a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a></span>  e, <span sdata="link"><a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a></span>  form)
+									</p>
+                </td>
+                <td>
+                  <p>
+										Occurs when the widget is being disposed.
+									</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="media">
+                      <img alt="Public Event" src="../media/publicevent.gif" />
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span sdata="link">
+                      <a href="5a78b760-b9f1-d08b-7224-ec2b221aa54e.htm">onresize</a>
+                    </span>(<span sdata="link"><a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a></span>  e, <span sdata="link"><a href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6.htm">Object</a></span>  form)
+									</p>
+                </td>
+                <td>
+                  <p>
+										Occurs when the widget is being disposed.
+									</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="alert">
+            <table>
+              <tr>
+                <th>
+                  <img src="../icons/alert_note.gif" title="Tip" /> <b>Tip</b></th>
+              </tr>
+              <tr>
+                <td>
+                  <p>There are two ways to add event listeners.</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <p>
+						1. You can attach to events as a parameter when you create the object.
+						<span id="cbc_5" x-lang="JavaScript" codeLanguage="JavaScript"><div class="highlight-title"><span class="highlight-copycode" onkeypress="javascript:CopyColorizedCodeCheckKey(this.parentNode, event);" tabindex="0" onmouseover="CopyCodeChangeIcon(this)" onmouseout="CopyCodeChangeIcon(this)" onclick="javascript:CopyColorizedCode(this.parentNode);"><img style="margin-right: 5px;" src="../icons/CopyCode.gif" />Copy</span>JavaScript</div><div class="code"><pre xml:space="preserve"><span class="highlight-keyword">var</span> foo = <span class="highlight-keyword">new</span> object({
+    event:<span class="highlight-keyword">function</span>(signature){
+        <span class="highlight-comment">/* event procedure */</span>
+    }
+});</pre></div></span>
+						2. Or you can add the event after the object has been instantiated.
+						<span id="cbc_6" x-lang="JavaScript" codeLanguage="JavaScript"><div class="highlight-title"><span class="highlight-copycode" onkeypress="javascript:CopyColorizedCodeCheckKey(this.parentNode, event);" tabindex="0" onmouseover="CopyCodeChangeIcon(this)" onmouseout="CopyCodeChangeIcon(this)" onclick="javascript:CopyColorizedCode(this.parentNode);"><img style="margin-right: 5px;" src="../icons/CopyCode.gif" />Copy</span>JavaScript</div><div class="code"><pre xml:space="preserve"><span class="highlight-keyword">var</span> foo = <span class="highlight-keyword">new</span> object();
+foo.addEventListener(<span class="highlight-literal">'event'</span>,<span class="highlight-keyword">function</span>(signature){
+    <span class="highlight-comment">/* event procedure */</span>
+}, <span class="highlight-keyword">false</span>);</pre></div></span></p>
+        </div>
+      </div>
+      <div id="footer">
+        <div class="footerLine">
+          <img width="100%" height="3px" src="../icons/footer.gif" alt="Footer image" title="Footer image" />
+        </div>
+        <A NAME="feedback"></A>
+        <span id="fb" class="feedbackcss"></span>
+        <p />Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:tonygermaneri%40gmail.com?Subject=Rendition E-Commerce Framework">Tony Germaneri</a><script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        var HT_mailLinkText = HT_mailLink.innerHTML;
+        HT_mailLink.href += ": " + document.title;
+        HT_mailLink.innerHTML = HT_mailLinkText;
+        </script><p />Copyright © Tony Germaneri 2011</div>
+    </div>
+  </body>
+</html>

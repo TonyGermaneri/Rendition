@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="2807753f-7d96-4e5e-b5aa-17e981fea481" revisionNumber="1">
+  <developerHowToDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!--
+    <summary>
+      <para>Optional summary abstract</para>
+    </summary>
+    -->
+    <introduction>
+          <para>
+      This help topic will help you manually install Rendition for the first time.  Before you can setup Rendition you need the following components:
+	<list class="bullet">
+		<listItem>Rendition reference site.</listItem>
+		<listItem>Microsoft Windows 2003 Server.</listItem>
+		<listItem>Internet Information Services 6.</listItem>
+		<listItem>Microsoft .NET Framework 4.</listItem>
+		<listItem>Microsoft SQL Server 2008.</listItem>
+	</list>
+	You can download Rendition from http://www.antidote12.com
+      </para>
+    </introduction>
+    <!-- Optional procedures followed by optional code example but must have
+         at least one procedure or code example -->
+    <procedure>
+      <title>Install Rendition SQL Database</title>
+      <steps class="ordered">
+        <step>
+          <content>
+            <para>Open SQL Server Managment Studio and connect to your server.</para>
+          </content>
+        </step>
+         <step>
+          <content>
+            <para>Create a new database on your server, remember the name of the database, you'll need it later.</para>
+          </content>
+        </step>
+        <step>
+          <content>
+            <para>Locate the file setup_sql_install.sql in your reference web site and open it in SQL Server Management Studio.</para>
+          </content>
+        </step>
+        <step>
+          <content>
+            <para>Select Edit > Find and Replace > Quick Replace.</para>
+          </content>
+        </step>
+        <step>
+          <content>
+            <para>Find and replace the following values:
+				<table>
+				  <tableHeader>
+				    <row>
+				      <entry>Find What:</entry>
+				      <entry>Replace With:</entry>
+				    </row>
+				  </tableHeader>
+				  <row>
+				    <entry>#NEW_DATABASE_NAME#</entry>
+				    <entry>Name of your new database from step 2.</entry>
+				  </row>
+				  <row>
+				    <entry>#NEW_ADMINISTRATOR_PASSWORD_HASH#</entry>
+				    <entry>0a7ZRJmBz7WrHEPdxsP+DPKx9Kw=</entry>
+				  </row>
+				</table>
+            </para>
+          </content>
+        </step>
+        <step>
+          <content>
+            <para>Click execute.</para>
+          </content>
+        </step>
+      </steps>
+      <conclusion>
+     	You're Done installing the database.  Later on after you've installed the web
+     	site you'll need to know the default administrator's logon is admin/password.
+     	You should change the password as soon as you logon for the first time.
+	  </conclusion>
+    </procedure>
+    <procedure>
+      <title>Create a web site</title>
+      <steps class="ordered">
+        <step>
+          <content>
+            <para>Create web site (If you already have a web site skip to step 6)</para>
+            <para>Open Internet Information Services (IIS) Manager.</para>
+            <para>Right click on the Web Sites node and select New -> Web Site.</para>
+            <para>Click Next</para>
+          </content>
+		</step>
+        <step>
+          <content>
+            <para>Enter the name of your web site and click next.</para>
+            <para>Select the IP address your web site will run on.  Each site
+            using SSL must have a distinct IP address.</para>
+            <para>For sites that are not using SSL and use the same IP address
+            as other sites on the same server, enter the web site
+            host header in the host header box (e.g.:www.mysite.com).</para>
+            <para>Click Next</para>
+          </content>
+        </step>
+        <step>
+          <content>
+            <para>Click browse, browse to C:\inetpub\ and create a folder
+            and name it the same as your web site (e.g.:www.mysite.com) and select
+            the folder.</para>
+            <para>Click Next.</para>
+          </content>
+        </step>
+        <step>
+          <content>
+            <para>Ensure that Read and Run scripts (such as ASP) are checked and click next.</para>
+            <para>Click Finish.</para>
+          </content>
+        </step>
+		<step>
+          <content>
+            <para>Find your new web site on the list of web site in the
+            IIS Manager's Web Sites node.  If you don't see your web site
+            click refresh in the tool bar of the IIS manager.</para>
+          </content>
+        </step>
+        <step>
+          <content>
+            <para>Right click on your website and select properties.</para>
+          </content>
+        </step>
+		<step>
+          <content>
+            <para>Click the ASP.NET tab.</para>
+          </content>
+        </step>
+        <step>
+          <content>
+            <para>Select 4.0.30319 from the ASP.NET version drop down menu
+            if it's not already selected then click OK</para>
+          </content>
+        </step>
+        <step>
+          <content>
+            <para>If you had to change versions IIS will ask to be restarted,
+            restart IIS (takes a minute).</para>
+          </content>
+        </step>
+        <step>
+          <content>
+            <para>Open the rendition reference web site.  Edit the web.config
+            file and then copy it to the directory on your web server
+            you specified when you created the web site.</para>
+          </content>
+        </step>
+        <step>
+          <content>
+            <para>reference site.</para>
+            <para>Open the rendition reference web site. </para>
+          </content>
+        </step>
+        <step>
+          <content>
+            <para>
+        	(Optional) Copy
+            the rest of the files at this point if you want to.
+            </para>
+          </content>
+        </step>
+      </steps>
+
+    </procedure>
+    
+     <procedure>
+      <title>Run Rendition for the first time</title>
+      <steps class="ordered">
+        <step>
+          <content>
+            <para>Now navigate to your web site.  Visiting your web site will
+            start rendition.  If there were any errors starting you should see
+            thoes now.  Any errors you encouter will have to do with the
+            values you entered in the web.config file on step 10 of "Create a web site", or
+            you forgot to change your site to ASP.NET version 4.  Once the
+            site has started you'll want to change the default administrators
+            password so only you can access the site.</para>
+          </content>
+        </step>
+        <step>
+          <content>
+            <para>Change the default administrator's password by going to
+            http://www.yourWebSiteName.com/admin.  You should be promted
+            to enter a name and password.  The default administrator password
+            is "password" and the default administrator's user name is "admin".
+            Once you are on the administative tools page open
+            the user "Default site administrator" and change the password
+            for this user and click save.</para>
+          </content>
+        </step>
+      </steps>
+     <conclusion>
+     	You're Done!  Rendition has now been installed.
+     	You are encouraged to use
+	    the rendition reference site, along with this documentation,
+	    to create your own web site.
+	    Rendition.dll can be referenced in your Visual Studio .NET
+	    web project and published just like any other web site.
+	    Rendition also has full documentation for all public classes so
+	    making sites from scratch using Rendition is a breaze.
+	</conclusion>
+    </procedure>
+    <!-- <codeExample>Optional code example</codeExample> -->
+    <!-- <buildInstructions>Optional instructions for building a
+         code example.</buildInstructions> -->
+    <!-- <robustProgramming>Optional discussion of error handling and other
+         issues related to writing solid code.</robustProgramming> -->
+    <!-- <security>Optional discussion of security issues.</security> -->
+    <relatedTopics>
+      <!-- One or more of the following:
+           - A local link
+           - An external link
+           - A code entity reference
+
+      <link xlink:href="Other Topic's ID">Link text</link>
+      <externalLink>
+          <linkText>Link text</linkText>
+          <linkAlternateText>Optional alternate link text</linkAlternateText>
+          <linkUri>URI</linkUri>
+      </externalLink>
+      <codeEntityReference>API member ID</codeEntityReference>
+
+      Examples:
+
+      <link xlink:href="00e97994-e9e6-46e0-b420-5be86b2f8278">Some other topic</link>
+
+      <externalLink>
+          <linkText>SHFB on CodePlex</linkText>
+          <linkAlternateText>Go to CodePlex</linkAlternateText>
+          <linkUri>http://shfb.codeplex.com</linkUri>
+      </externalLink>
+
+      <codeEntityReference>T:TestDoc.TestClass</codeEntityReference>
+      <codeEntityReference>P:TestDoc.TestClass.SomeProperty</codeEntityReference>
+      <codeEntityReference>M:TestDoc.TestClass.#ctor</codeEntityReference>
+      <codeEntityReference>M:TestDoc.TestClass.#ctor(System.String,System.Int32)</codeEntityReference>
+      <codeEntityReference>M:TestDoc.TestClass.ToString</codeEntityReference>
+      <codeEntityReference>M:TestDoc.TestClass.FirstMethod</codeEntityReference>
+      <codeEntityReference>M:TestDoc.TestClass.SecondMethod(System.Int32,System.String)</codeEntityReference>
+      -->
+    </relatedTopics>
+  </developerHowToDocument>
+</topic>

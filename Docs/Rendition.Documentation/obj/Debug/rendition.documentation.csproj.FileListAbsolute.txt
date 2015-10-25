@@ -1,0 +1,5 @@
+C:\Rendition\rendition.documentation\bin\Debug\rendition.documentation.dll
+C:\Rendition\rendition.documentation\bin\Debug\rendition.documentation.pdb
+C:\Rendition\rendition.documentation\obj\Debug\ResolveAssemblyReference.cache
+C:\Rendition\rendition.documentation\obj\Debug\rendition.documentation.dll
+C:\Rendition\rendition.documentation\obj\Debug\rendition.documentation.pdb

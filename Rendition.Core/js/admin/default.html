@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+	<html lang="en">
+    <head>
+        <title>Administrative Tools</title>
+		<script type="text/javascript" src="/admin/Rendition.js"></script>
+        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+        <script type="text/javascript">
+            google.load('visualization', '1', { packages: ['corechart'] });
+            google.load('visualization', '1', { packages: ['gauge'] });
+        </script>
+		<link rel="shortcut icon" type="image/x-icon" href="/admin/img/favicon.ico" />
+        <script type="text/javascript">
+            document.onreadystatechange = function () {
+                if (document.readyState == "complete") {
+                    window.urlParams = {};
+                    (function () {
+                        var e,
+                    a = /\+/g,
+                    r = /([^&=]+)=?([^&]*)/g,
+                    d = function (s) { return decodeURIComponent(s.replace(a, " ")); },
+                    q = window.location.search.substring(1);
+                        while (e = r.exec(q))
+                            urlParams[d(e[1])] = d(e[2]);
+                    })();
+                    Rendition.UI.Panel({ items: Rendition.UI.defaultPanelItems });
+                    Rendition.UI.TaskBar();
+                    if(urlParams.itemNumber!==undefined){
+                        Rendition.Commerce.ItemEditor({ itemNumber: urlParams.itemNumber });
+                    }
+                    if(urlParams.orderNumber!==undefined){
+                        Rendition.Commerce.OrderEditor({ orderNumber: urlParams.orderNumber });
+                    }
+                    if(urlParams.userId!==undefined){
+                        Rendition.Commerce.AccountEditor({ userId: urlParams.userId });
+                    }
+                    return;
+                }  
+            } 
+        </script>
+        <style>
+            body {
+                overflow:hidden;                
+            }
+        </style>
+	</head>
+	<body>
+	</body>
+</html>

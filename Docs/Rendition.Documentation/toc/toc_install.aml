@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="43ecc36f-d33a-4a8b-8430-612a88a96687" revisionNumber="1">
+  <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <introduction>
+      <para>
+		<alert class="note">
+		  <para> Rendition.dll requires IIS AspNetHostingPermissionLevel High or Full.
+		  Many inexpensive hosting providers do not offer this permission level on
+		  shared server plans.
+		  </para>
+		</alert>
+      </para>
+    </introduction>
+    <section address="Section1">
+      <title>Requirements</title>
+      <content>
+        <para>
+			<list class="bullet">
+			  <listItem>Windows Server 2003 (Standard, Web or Enterprise), Windows Vista Ultimate, Windows 7 Ultimate.</listItem>
+			  <listItem>IIS 6, 7 or 7.5</listItem>
+			  <listItem>SQL 2005, 2008, 2008 Express or LocalDB</listItem>
+			  <listItem>IE9, Firefox, Chrome or Safari</listItem>
+			  <listItem>Visual Studio 2010 (for development)</listItem>
+			</list>
+        </para>
+      </content>
+    </section>
+    <section address="Section2">
+      <title>Installation Instructions</title>
+      <content>
+        <para>To install you'll need to download the following from 
+	        <externalLink>
+				<linkText>Antidote 12</linkText>
+				<linkAlternateText>www.antidote12.com</linkAlternateText>
+				<linkUri>http://www.antidote12.com/</linkUri>
+				<linkTarget>a12</linkTarget>
+			</externalLink>.
+		</para>
+        <steps class="ordered">
+	        <step>
+	          <content>
+	            <para>Rendition.dll E-Commerce library (Rendition.Core.dll).</para>
+	          </content>
+	        </step>
+	        <step>
+	          <content>
+	            <para>Rendition SQL Database Install Script (Install.sql).</para>
+	          </content>
+	        </step>
+        </steps>
+      </content>
+      <content>
+        <para>Once you have the required files follow the following steps.</para>
+        <steps class="ordered">
+	        <step>
+	          <content>
+	            <para>Create a web site on your IIS server.
+	            
+<alert class="note">
+  <para>When using IIS6 you must add the following line to
+	            the "Wildcard application maps" in the "Configuration..."
+	            dialog on the "Home Directory" tab of your new web site's Property
+	            dialog.  The "Verify that file exists" checkbox should be unchecked.
+	            <code lang="none">
+	            %systemroot%\microsoft.net\framework\v4.0.30319\aspnet_isapi.dll
+	            </code>
+	       </para>
+</alert>
+
+	            
+	            </para>
+	          </content>
+	        </step>
+	        <step>
+	          <content>
+	            <para>Copy Rendition.Core.dll into your new ASP.NET web site
+	            in the "bin" folder.  If the "bin" folder does not exist, create it.</para>
+	          </content>
+	        </step>
+	        <step>
+	          <content>
+	            <para>
+	            Create a new database if you haven't done so already.
+	            The database's recovery model should be set to basic or simple
+	            if applicable.</para>
+	          </content>
+	        </step>
+	        <step>
+	          <content>
+	            <para>
+	            Open the SQL Install script (downloadable from <externalLink>
+				<linkText>Antidote 12</linkText>
+				<linkAlternateText>www.antidote12.com</linkAlternateText>
+				<linkUri>http://www.antidote12.com/</linkUri>
+				<linkTarget>a12</linkTarget>
+			</externalLink>)
+	            and read the instructions in the script.  After the database is installed
+	            continue to the next step.
+	            </para>
+	          </content>
+	        </step>
+			<step>
+	          <content>
+	            <para>Modify or create your Web.Config file in the root
+	            directory of your web site.  Below are two
+	            example web.config files.  The first example is for IIS6
+	            and the second example is for IIS7.
+	            A full list of the application setting avaliable
+	            in Web.Config for Rendition can be found in the 
+	            topic <link xlink:href="052c987a-0d07-45f3-8607-b8cced056d98" />.
+	            </para>
+	            <para>IIS 6 web.config</para>
+	            
+	            <!--
+	            /* ORIGINAL WEB CONFIGS UN ENCODED
+	            
+	            
+	            
+IIS 6
+
+<?xml version="1.0"?>
+<configuration>
+	<connectionStrings>
+		<add name="sql" connectionString="Data Source=127.0.0.1,1433;Initial Catalog=MyDatabase;User ID=MyUserName;Pwd=MyPassword;Asynchronous Processing=true;MultipleActiveResultSets=true;"/>
+	</connectionStrings>
+	<appSettings>
+		<add key="connectionName" value="sql"/>
+		<add key="ElevatedSecurityUser" value="Rendition"/>
+		<add key="ElevatedSecurityPassword" value="000000000000"/>
+		<add key="ElevatedSecurityDomain" value="127.0.0.1"/>
+	</appSettings>
+	<system.web>
+    	<httpRuntime maxRequestLength="4194302" maxQueryStringLength="20000" requestValidationMode="2.0" requestPathInvalidCharacters="" />
+		<httpModules>
+			<clear/>
+			<add type="Rendition.Main" name="Rendition.Main"/>
+		</httpModules>
+		<compilation debug="true"/>
+  </system.web>
+</configuration>
+
+
+IIS 7 
+
+<?xml version="1.0"?>
+<configuration>
+	<connectionStrings>
+		<add name="sql" connectionString="Data Source=127.0.0.1,1433;Initial Catalog=MyDatabase;User ID=MyUserName;Pwd=MyPassword;Asynchronous Processing=true;MultipleActiveResultSets=true;"/>
+	</connectionStrings>
+	<appSettings>
+		<add key="connectionName" value="sql"/>
+		<add key="ElevatedSecurityUser" value="Rendition"/>
+		<add key="ElevatedSecurityPassword" value="000000000000"/>
+		<add key="ElevatedSecurityDomain" value="127.0.0.1"/>
+	</appSettings>
+	<system.web>
+    	<httpRuntime maxRequestLength="4194302" maxQueryStringLength="20000" requestValidationMode="2.0" requestPathInvalidCharacters="" />
+    <system.web>
+	<system.webServer>
+		<modules>
+			<add name="Rendition.main" type="Rendition.Main" />
+		</modules>
+		<handlers>
+			<add name="aspnet_isapi 32-bit" path="*" verb="*" modules="IsapiModule" scriptProcessor="%windir%\Microsoft.NET\Framework\v4.0.30319\aspnet_isapi.dll" resourceType="Unspecified" requireAccess="Script" preCondition="classicMode,runtimeVersionv4.0,bitness32" />
+			<add name="aspnet_isapi 64-bit" path="*" verb="*" modules="IsapiModule" scriptProcessor="%windir%\Microsoft.NET\Framework64\v4.0.30319\aspnet_isapi.dll" resourceType="Unspecified" requireAccess="Script" preCondition="classicMode,runtimeVersionv4.0,bitness64" />
+		</handlers>
+	</system.webServer>
+</configuration>
+	
+
+	            
+	            
+	            
+	            
+	            -->
+	            
+	            
+<code lang="none">
+
+&lt;?xml version=&quot;1.0&quot;?&gt;
+&lt;configuration&gt;
+	&lt;connectionStrings&gt;
+		&lt;add name=&quot;sql&quot; connectionString=&quot;Data Source=127.0.0.1,1433;Initial Catalog=MyDatabase;User ID=MyUserName;Pwd=MyPassword;Asynchronous Processing=true;MultipleActiveResultSets=true;&quot;/&gt;
+	&lt;/connectionStrings&gt;
+	&lt;appSettings&gt;
+		&lt;add key=&quot;connectionName&quot; value=&quot;sql&quot;/&gt;
+		&lt;add key=&quot;ElevatedSecurityUser&quot; value=&quot;Rendition&quot;/&gt;
+		&lt;add key=&quot;ElevatedSecurityPassword&quot; value=&quot;000000000000&quot;/&gt;
+		&lt;add key=&quot;ElevatedSecurityDomain&quot; value=&quot;127.0.0.1&quot;/&gt;
+	&lt;/appSettings&gt;
+	&lt;system.web&gt;
+    	&lt;httpRuntime maxRequestLength=&quot;4194302&quot; maxQueryStringLength=&quot;20000&quot; requestValidationMode=&quot;2.0&quot; requestPathInvalidCharacters=&quot;&quot; /&gt;
+		&lt;httpModules&gt;
+			&lt;clear/&gt;
+			&lt;add type=&quot;Rendition.Main&quot; name=&quot;Rendition.Main&quot;/&gt;
+		&lt;/httpModules&gt;
+		&lt;compilation debug=&quot;true&quot;/&gt;
+  &lt;/system.web&gt;
+&lt;/configuration&gt;
+
+</code>
+<para>IIS 7 web.config</para>
+<code lang="none">
+	
+&lt;?xml version=&quot;1.0&quot;?&gt;
+&lt;configuration&gt;
+	&lt;connectionStrings&gt;
+		&lt;add name=&quot;sql&quot; connectionString=&quot;Data Source=127.0.0.1,1433;Initial Catalog=MyDatabase;User ID=MyUserName;Pwd=MyPassword;Asynchronous Processing=true;MultipleActiveResultSets=true;&quot;/&gt;
+	&lt;/connectionStrings&gt;
+	&lt;appSettings&gt;
+		&lt;add key=&quot;connectionName&quot; value=&quot;sql&quot;/&gt;
+		&lt;add key=&quot;ElevatedSecurityUser&quot; value=&quot;Rendition&quot;/&gt;
+		&lt;add key=&quot;ElevatedSecurityPassword&quot; value=&quot;000000000000&quot;/&gt;
+		&lt;add key=&quot;ElevatedSecurityDomain&quot; value=&quot;127.0.0.1&quot;/&gt;
+	&lt;/appSettings&gt;
+	&lt;system.web&gt;
+    	&lt;httpRuntime maxRequestLength=&quot;4194302&quot; maxQueryStringLength=&quot;20000&quot; requestValidationMode=&quot;2.0&quot; requestPathInvalidCharacters=&quot;&quot; /&gt;
+    &lt;system.web&gt;
+	&lt;system.webServer&gt;
+		&lt;modules&gt;
+			&lt;add name=&quot;Rendition.main&quot; type=&quot;Rendition.Main&quot; /&gt;
+		&lt;/modules&gt;
+		&lt;handlers&gt;
+			&lt;add name=&quot;aspnet_isapi 32-bit&quot; path=&quot;*&quot; verb=&quot;*&quot; modules=&quot;IsapiModule&quot; scriptProcessor=&quot;%windir%\Microsoft.NET\Framework\v4.0.30319\aspnet_isapi.dll&quot; resourceType=&quot;Unspecified&quot; requireAccess=&quot;Script&quot; preCondition=&quot;classicMode,runtimeVersionv4.0,bitness32&quot; /&gt;
+			&lt;add name=&quot;aspnet_isapi 64-bit&quot; path=&quot;*&quot; verb=&quot;*&quot; modules=&quot;IsapiModule&quot; scriptProcessor=&quot;%windir%\Microsoft.NET\Framework64\v4.0.30319\aspnet_isapi.dll&quot; resourceType=&quot;Unspecified&quot; requireAccess=&quot;Script&quot; preCondition=&quot;classicMode,runtimeVersionv4.0,bitness64&quot; /&gt;
+		&lt;/handlers&gt;
+	&lt;/system.webServer&gt;
+&lt;/configuration&gt;	
+	
+</code>
+	          </content>
+	        </step>
+	        <step>
+	          <content>
+	            <para>Rendition is now installed.  To access the administrative tools
+	            navigate to the /admin subdirectory of your new web site.
+					The default administrator's logon is:
+					<table>
+					  <tableHeader>
+					    <row>
+					      <entry>Name</entry>
+					      <entry>Password</entry>
+					    </row>
+					  </tableHeader>
+					  <row>
+					    <entry>admin</entry>
+					    <entry>password
+					    </entry>
+					  </row>
+					</table>
+	            </para>
+	          </content>
+	        </step>
+	        <step>
+	          <content>
+	            <para>The first thing you should do before you start
+	            using Rendition is open the administrator's account
+	            by clicking "Edit Existing Account", click browse
+	            double click on the administrator's account (Admin)
+	            and change the password of the administrator then press save.
+	            </para>
+	            <para>
+	            Don't lose the password!
+	            </para>
+	          </content>
+	        </step>
+	        <step>
+	          <content>
+	            <para>
+	            Next click the "Settings" link and fill out as many
+	            of the fields as you feel like filling out.  For a 
+	            complete summary of what each field means visit the
+	            topic <link xlink:href="07a77302-0597-421b-952f-175f649228f0" />.
+	            </para>
+	            <para>
+	            Don't lose the password!
+	            </para>
+	          </content>
+	        </step>
+        </steps>
+      </content>
+    </section>
+    <relatedTopics>
+    </relatedTopics>
+  </developerConceptualDocument>
+</topic>

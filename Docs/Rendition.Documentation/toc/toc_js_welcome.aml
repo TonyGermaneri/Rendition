@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="bcbd4b7c-3a68-4edf-ac2a-5d688fbf268c" revisionNumber="1">
+  <developerOrientationDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+    
+    <introduction>
+      <para>Rendition JavaScript API</para>
+      <para>This section contains all the information you'll need to
+      get your own implementation of the Rendition JavaScript API
+      working.</para>
+      <para>Below is a sample document showing how to get Rendition
+      started, and open a dialog.
+      Copy and paste this document into a new document to begin
+      experimenting with Rendition.</para>
+      <para>There are a lot of examples avaliable inside this documentation.
+      </para>
+    </introduction>
+    <code lang="javascript">
+    
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Sample Rendition Standalone UI&lt;/title&gt;
+		&lt;script type=&quot;text/javascript&quot; src=&quot;admin/rendition.js&quot;&gt;&lt;/script&gt;
+        &lt;script type=&quot;text/javascript&quot; src=&quot;admin/js/jquery/jquery-1.4.2.min.js&quot;&gt;&lt;/script&gt;
+		&lt;link rel=&quot;stylesheet&quot; href=&quot;admin/css/admin.css&quot; type=&quot;text/css&quot; media=&quot;all&quot;&gt;
+		&lt;script&gt;
+		    function bodyLoaded() {
+		        var m = Rendition.UI.Dialog();
+		    }
+		&lt;/script&gt;
+        &lt;style&gt;
+            body {
+                background:black;
+                overflow:hidden;
+            }
+        &lt;/style&gt;
+	&lt;/head&gt;
+	&lt;body onload=&quot;bodyLoaded();&quot;&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
+
+    </code>
+  </developerOrientationDocument>
+</topic>

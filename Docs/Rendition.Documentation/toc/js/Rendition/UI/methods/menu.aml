@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="84078629-c60a-a3cf-5fff-b5d9bab1024d" revisionNumber="1" dataAlias="Rendition.UI.menu">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction address="Intro">
+			Rendition.UI.menu(<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  args, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  parentNode, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  type)
+			<para>Creates a <link xlink:href="2e5cd548-e114-bc7b-38d1-14306fb354b0"/> and usesa more simplistic and shorter method of creating the <link xlink:href="2e5cd548-e114-bc7b-38d1-14306fb354b0"/>.The args object looks like<code language="JavaScript">	var foo = [		{			text:'blah',			mousedown:Function,			click:Function,			mouseover:Function,		}	]</code></para>
+		</introduction>
+		<definitionTable>
+			
+			
+				<definedTerm>
+					<para>Member Of</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="b584e6c6-2f5a-6c97-4e57-2ad4afa995cc"/>
+					</para>
+				</definition>
+			
+			
+				<definedTerm>
+					<para>Return Type</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+					</para>
+				</definition>
+			
+			
+				<definedTerm>
+					<para>Source</para>
+				</definedTerm>
+				<definition>
+					<para>
+						c:\Rendition\Rendition.Core\js\admin\UI\UIHelpers.js
+					</para>
+				</definition>
+			
+		</definitionTable>
+		<section address="parameters">
+		<title>Parameters</title>
+			<sections>
+				<table>
+					<tableHeader>
+					<row>
+						<entry><para> </para></entry>
+						<entry><para>Name</para></entry>
+						<entry><para>Description</para></entry>
+					</row>
+					</tableHeader>
+					
+						<row>
+							<entry>
+								<para>
+									
+									Required
+									args
+									<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+								</para>
+							</entry>
+							<entry>
+								<para>
+									Arguments object for this widgit.
+								</para>
+							</entry>
+							<entry>
+								<para>
+									
+								</para>
+							</entry>
+						</row>
+					
+						<row>
+							<entry>
+								<para>
+									
+									Required
+									parentNode
+									<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+								</para>
+							</entry>
+							<entry>
+								<para>
+									The DHTML element to append to.
+								</para>
+							</entry>
+							<entry>
+								<para>
+									
+								</para>
+							</entry>
+						</row>
+					
+						<row>
+							<entry>
+								<para>
+									Optional
+									
+									type
+									<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+								</para>
+							</entry>
+							<entry>
+								<para>
+									makes the function create an array of <link xlink:href="c807995d-75de-b263-6de4-c0f04686a0bb"/> objectsor an <link xlink:href="2e5cd548-e114-bc7b-38d1-14306fb354b0"/>.
+								</para>
+							</entry>
+							<entry>
+								<para>
+									'menuBar'
+								</para>
+							</entry>
+						</row>
+					
+				</table>
+			</sections>
+		</section>
+	</developerConceptualDocument>
+</topic>

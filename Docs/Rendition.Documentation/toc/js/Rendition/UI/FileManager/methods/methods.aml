@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="ee37e9a6-ffb6-0ec3-ea4a-e269223c6977" revisionNumber="1" dataAlias="Rendition.UI.FileManager">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		
+		<definitionTable>
+			
+				<definedTerm>
+					<para>Member Of</para>
+				</definedTerm>
+				<definition>
+					<para>
+						<link xlink:href="b584e6c6-2f5a-6c97-4e57-2ad4afa995cc"/>
+					</para>
+				</definition>
+			
+		</definitionTable>
+		
+			<section address="methods">
+				<title>Rendition.UI.FileManager Methods</title>
+				<content>
+					<table>
+						<tableHeader>
+						<row>
+							<entry><para> </para></entry>
+							<entry><para>Name</para></entry>
+							<entry><para>Type</para></entry>
+							<entry><para>Description</para></entry>
+						</row>
+						</tableHeader>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="c6cdc5a5-e90c-8c6e-3983-a9a50fa8f5de"/>(<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  sourcePaths, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  targetPath, <link xlink:href="ef3d2310-dfdb-431e-8330-0d339049abff"/>  callbackProcedure, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  pane)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Copies one or more file or directory and subdirectories to another directory.  Similar to UNIX "cp" or windows "xcopy /y /e".
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="ebdc8a7c-92b8-f737-b2fa-b97991899a79"/>(<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  path, <link xlink:href="feb87a09-e36a-9baa-3c23-409ea79458a9"/>  newFile, <link xlink:href="ef3d2310-dfdb-431e-8330-0d339049abff"/>  saveCallbackProcedure)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Edit's the file on the server by loading the file text into an instance of Rendition.UI.CodeEditor.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="5abac7f6-5544-4872-a693-e6f5fc46b5eb"/>(<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  paths, <link xlink:href="ef3d2310-dfdb-431e-8330-0d339049abff"/>  callbackProcedure, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  pane)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Gets a list of files and directories in a directory.  Similar to UNIX "ls" or windows "dir".
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="1a6a6165-9cce-45de-a89d-ada616680c44"/>(<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  Path, <link xlink:href="ef3d2310-dfdb-431e-8330-0d339049abff"/>  callbackProcedure, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  pane)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Creates a directory.
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="6b7ca99d-707c-8e2b-495e-9dfddb3295f4"/>(<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  sourcePaths, <link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  targetPath, <link xlink:href="ef3d2310-dfdb-431e-8330-0d339049abff"/>  callbackProcedure, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  pane)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Moves one or more file to another directory.  "mv" or windows "move /y".
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="64a55604-76a5-a6a7-fe82-d9c789c7833c"/>(<link xlink:href="59dd0ffd-6bec-aea2-6f4d-d23f29f42536"/>  paths, <link xlink:href="ef3d2310-dfdb-431e-8330-0d339049abff"/>  callbackProcedure, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  pane)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Recursivly removes a file or directory.  Similar to UNIX "rm -r" or windows "deltree /y".
+									</para>
+								</entry>
+							</row>
+						
+							<row>
+								<entry>
+									<para>
+										
+										
+											<mediaLinkInline><image xlink:href="publicmethod"/></mediaLinkInline>
+										
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										<link xlink:href="1decd988-cef3-b08e-c62d-03d0e986d590"/>(<link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  sourcePath, <link xlink:href="37159f0f-2d46-978b-f956-af8c6cb79845"/>  targetPath, <link xlink:href="ef3d2310-dfdb-431e-8330-0d339049abff"/>  callbackProcedure, <link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>  pane)
+									</para>
+								</entry>
+								<entry>
+									<para>
+										
+											<link xlink:href="aeba2c9d-7a98-4cbe-4f38-8d69780ae3b6"/>
+										
+									</para>
+								</entry>
+								<entry>
+									<para>
+										Renames a directory or file.  Same as UNIX "mv" or windows "rename".
+									</para>
+								</entry>
+							</row>
+						
+					</table>
+				</content>
+			</section>
+		
+
+	</developerConceptualDocument>
+</topic>

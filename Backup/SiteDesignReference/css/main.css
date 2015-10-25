@@ -1,0 +1,89 @@
+/* the body element */
+body {
+    padding:15px;
+    width:900px;
+    margin:auto;
+    font-family:Trebuchet MS, Arial, Helvetica, Sans-Serif;
+}
+td {
+    vertical-align:top;
+}
+/* fix for chrome vs. firefox inputs */
+button, input {
+    margin:0;
+}
+/* the way we like it */
+table {
+    width:100%;
+}
+/* admin tools */
+.adminTool {
+    position:fixed;
+    top:0;
+    right:0;
+    border-left:solid 1px black;
+    border-bottom:solid 1px black;
+    box-shadow: 5px 5px 5px #AAA;
+    -webkit-border-bottom-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    background:white;
+    padding:3px;
+}
+/* Rendition.Commerce.Menu elements */
+.menu {
+    float:left;
+    display:inline-block;
+    padding:0 3px 0 3px;
+}
+.menu ul {
+    background:white;
+    border:solid 1px black;
+    width:300px;
+}
+.menu li ul {
+    margin-top:-21px;
+    margin-left:150px;
+}
+/* big title at the top */
+.header h1 {
+    padding:0;
+    margin:0 3px 0 3px;
+}
+/* error messages */
+.pointOutAProblem {
+    background:lightyellow;
+    border:solid  1px black;
+}
+/* update message dialog */
+.miniDialog {
+    background:white;
+    border:solid 1px black;
+    padding:5px;
+}
+/* Table that seperates header, left, right, center, footer.  */
+.seperator {
+    border-collapse:collapse;
+    border:solid 1px black;
+}
+/* top row */
+.header {
+
+}
+/* left aside */
+.leftAside {
+    width:175px;
+    border:solid 1px black;
+}
+/* content */
+.content {
+    border:solid 1px black;
+}
+/* right aside */
+.rightAside {
+    width:175px;
+    border:solid 1px black;
+}
+/* footer */
+.footer {
+    border:solid 1px black;
+}
